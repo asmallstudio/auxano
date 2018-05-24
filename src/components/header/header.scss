@@ -1,3 +1,5 @@
+@import "../globalVariables.scss";
+
 nav {
   font-family: "Helvetica Neue", Arial, sans-serif;
   font-weight: 400;
@@ -7,24 +9,45 @@ nav {
 }
 
 #header-container {
-  margin-top: 61px;
-  margin-bottom: 61px;
+  height: $header-height;
+  background-color: white;
+  position: fixed;
+  top: 0;
+  max-width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+#header-row {
+  margin: auto;
+  flex: 1;
+  max-width: 1440px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
 .list {
   display: flex;
   flex-direction: row;
   list-style-type: none;
+  align-items: center;
 }
 
 .list > li {
-  margin-left: 32px;
+  margin-left: 40px;
+  color: $dark-blue;
 }
 
 nav > ul {
   margin: 0px;
 }
 
+nav {
+  display: flex;
+  justify-content: flex-end;
+}
+
 #logo-image {
-  max-width: 304px;
+  max-width: 220px;
 }

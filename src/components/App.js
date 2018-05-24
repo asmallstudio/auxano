@@ -15,7 +15,9 @@ const App = () => (
     <Router>
       <div>
         <Header />
-        <Routes />
+        <div id="routes-container">
+          <Routes />
+        </div>
       </div>
     </Router>
   </Provider>

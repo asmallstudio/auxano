@@ -1,0 +1,11 @@
+@import "../../globalVariables.scss";
+
+#section-hero-container {
+  background-color: lightblue;
+  height: 900px;
+}
+
+.hero-header {
+  color: $light-blue;
+  margin-top: 104px;
+}

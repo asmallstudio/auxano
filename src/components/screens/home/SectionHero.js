@@ -1,22 +1,17 @@
 import React from "react";
 
+import "./sectionHero.scss";
+
 class SectionHero extends React.Component {
   render() {
     return (
       <div>
-        <div className="section">
-          <div className="container">
-            <div className="row">
-              <div className="col-xs-12 col-md-6">
-                <h1>Welcome.</h1>
-              </div>
-              <div className="col-xs-12 col-md-6">
-                <p>
-                  a small studio is a collection of creatives based in Seattle.
-                  We collaborate with community leaders to create thoughtful
-                  solutions that impact lives.
-                </p>
-              </div>
+        <div className="container" id="section-hero-container">
+          <div className="row">
+            <div className="col-xs-12">
+              <h1 className="hero-header">
+                Getting people to places when it matters most...
+              </h1>
             </div>
           </div>
         </div>

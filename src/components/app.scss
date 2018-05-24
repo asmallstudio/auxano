@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Ubuntu:300,300i,400,400i,500,500i,700,700i");
+@import "./globalVariables.scss";
 
 // Variables
 $columnNo: 12;
@@ -21,7 +22,7 @@ body {
     text-decoration: none;
   }
   a:hover {
-    text-decoration: underline;
+    text-decoration: none;
   }
 }
 
@@ -75,8 +76,8 @@ img {
     }
 
     .row {
-      padding-left: calc(10px * #{nth((1, 3, 6, 6, 6), $idx)});
-      padding-right: calc(10px * #{nth((1, 3, 6, 6, 6), $idx)});
+      padding-left: calc(10px * #{nth((1, 3, 6, 6, 10), $idx)});
+      padding-right: calc(10px * #{nth((1, 3, 6, 6, 10), $idx)});
     }
 
     h1 {
@@ -98,4 +99,13 @@ img {
       line-height: 30px;
     }
   }
+}
+
+#routes-container {
+  margin-top: $header-height;
+}
+
+h1 {
+  font-weight: 600;
+  font-size: 80px;
 }

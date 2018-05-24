@@ -6,29 +6,31 @@ import "./header.scss";
 class Header extends React.Component {
   render() {
     return (
-      <div>
-        <div className="section">
-          <div className="container" id="header-container">
-            <div className="row">
-              <div className="col-xs-8 col-md-6 col-lg-6">
-                <img
-                  src="/uploads/logo.png"
-                  alt="a small studio logo"
-                  id="logo-image"
-                />
-              </div>
-              <div className="col-xs-4 col-md-6 col-lg-6">
-                <nav className="right">
-                  <ul className="list">
-                    <li>Our Mission</li>
-                    <li>What We Do</li>
-                    <li>Out Partners</li>
-                    <li>Get Involved</li>
-                  </ul>
-                </nav>
-              </div>
-            </div>
+      <div className="container" id="header-container">
+        <div className="row" id="header-row">
+          <div className="col-xs-4">
+            <img
+              src="/uploads/logo.png"
+              alt="a small studio logo"
+              id="logo-image"
+            />
           </div>
+          <nav className="right col-xs-8">
+            <ul className="list">
+              <li>
+                <a href="#">Our Mission</a>
+              </li>
+              <li>
+                <a href="#">What We Do</a>
+              </li>
+              <li>
+                <a href="#">Out Partners</a>
+              </li>
+              <li>
+                <a href="#">Get Involved</a>
+              </li>
+            </ul>
+          </nav>
         </div>
       </div>
     );
