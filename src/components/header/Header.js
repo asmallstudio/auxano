@@ -24,7 +24,7 @@ class Header extends React.Component {
                 <a href="#">What We Do</a>
               </li>
               <li>
-                <a href="#">Out Partners</a>
+                <a href="#">Our Partners</a>
               </li>
               <li>
                 <a href="#">Get Involved</a>

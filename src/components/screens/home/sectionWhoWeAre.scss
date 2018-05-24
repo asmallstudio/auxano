@@ -1,0 +1,18 @@
+@import "../../globalVariables.scss";
+
+#section-who-we-are-container {
+  background-color: white;
+}
+
+#section-who-we-are-container .row {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+#section-who-we-are-container h4 {
+  color: $dark-orange;
+}
+
+#section-who-we-are-container h3 {
+  color: $light-blue;
+}

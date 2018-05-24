@@ -4,6 +4,7 @@ import Markdown from "react-markdown";
 import { connect } from "react-redux";
 
 import SectionHero from "./SectionHero";
+import SectionWhoWeAre from "./SectionWhoWeAre";
 
 class Home extends React.Component {
   render() {
@@ -14,6 +15,7 @@ class Home extends React.Component {
     return (
       <div>
         <SectionHero />
+        <SectionWhoWeAre />
       </div>
     );
   }
