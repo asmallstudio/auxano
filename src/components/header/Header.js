@@ -20,9 +20,10 @@ class Header extends React.Component {
               <div className="col-xs-4 col-md-6 col-lg-6">
                 <nav className="right">
                   <ul className="list">
-                    <li>Projects</li>
-                    <li>Studio</li>
-                    <li>Contact</li>
+                    <li>Our Mission</li>
+                    <li>What We Do</li>
+                    <li>Out Partners</li>
+                    <li>Get Involved</li>
                   </ul>
                 </nav>
               </div>
