@@ -64,7 +64,17 @@ export default {
               stage === "dev"
                 ? [
                     { loader: "style-loader" },
-                    { loader: "css-loader" },
+                    {
+                      loader: "css-loader",
+                      options: {
+                        modules: true,
+                        localIdentName: "[name]__[local]--[hash:base64:5]",
+                        sourceMap: true,
+                        namedExport: true,
+                        camelCase: true,
+                        minimize: false
+                      }
+                    },
                     { loader: "sass-loader" }
                   ]
                 : ExtractTextPlugin.extract({
@@ -72,9 +82,12 @@ export default {
                       {
                         loader: "css-loader",
                         options: {
-                          importLoaders: 1,
                           minimize: true,
-                          sourceMap: false
+                          sourceMap: process.env.REACT_STATIC_DEBUG,
+                          modules: true,
+                          localIdentName: process.env.REACT_STATIC_DEBUG
+                            ? "[name]__[local]--[hash:base64:5]"
+                            : undefined
                         }
                       },
                       {
