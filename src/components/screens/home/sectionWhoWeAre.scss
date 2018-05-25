@@ -8,6 +8,7 @@
 
   h3 {
     color: $light-blue;
+    font-weight: bold;
   }
   composes: container from global;
 }

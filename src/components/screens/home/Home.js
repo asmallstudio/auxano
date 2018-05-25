@@ -4,6 +4,7 @@ import Markdown from "react-markdown";
 
 import SectionHero from "./SectionHero";
 import SectionWhoWeAre from "./SectionWhoWeAre";
+import SectionTheProblem from "./SectionTheProblem";
 
 class Home extends React.Component {
   render() {
@@ -12,6 +13,7 @@ class Home extends React.Component {
       <div>
         <SectionHero />
         <SectionWhoWeAre />
+        <SectionTheProblem />
       </div>
     );
   }

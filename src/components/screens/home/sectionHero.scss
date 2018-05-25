@@ -1,12 +1,11 @@
 @import "../../globalVariables.scss";
 
 .container {
-  background-color: lightblue;
   height: 800px;
   composes: container from global;
 }
 
 .heroHeader {
   color: $light-blue;
-  margin-top: 104px;
+  margin-top: 117px;
 }
