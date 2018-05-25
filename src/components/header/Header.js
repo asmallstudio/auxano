@@ -6,7 +6,7 @@ import styles from "./header.scss";
 class Header extends React.Component {
   render() {
     return (
-      <div className={`container ${styles.container}`}>
+      <div className={styles.container}>
         <div className={`row ${styles.row}`}>
           <div className="col-xs-4">
             <img
