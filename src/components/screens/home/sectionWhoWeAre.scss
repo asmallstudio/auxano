@@ -9,12 +9,11 @@
   h3 {
     color: $light-blue;
   }
-
   composes: container from global;
 }
 
 .row {
-  padding-top: 128px;
-  padding-bottom: 128px;
+  padding-top: $section-vertical-padding;
+  padding-bottom: $section-vertical-padding;
   composes: row from global;
 }
