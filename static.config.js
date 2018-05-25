@@ -23,11 +23,10 @@ function getSingleFile(path) {
 
 export default {
   getSiteData: () => ({
-    title: "React Static with Netlify CMS"
+    title: "Transitus"
   }),
   getRoutes: async () => {
     const home = await getSingleFile("./src/data/pages/home.md");
-    const about = await getSingleFile("./src/data/pages/about.md");
     return [
       {
         path: "/",
@@ -35,18 +34,6 @@ export default {
         getData: () => ({
           home
         })
-      },
-      {
-        path: "/about",
-        component: "src/components/screens/about/About",
-        getData: () => ({
-          about
-        })
-      },
-      {
-        path: "/login",
-        component: "src/components/screens/login/Login",
-        getData: () => ({})
       },
       {
         is404: true,

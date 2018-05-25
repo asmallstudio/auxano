@@ -1,8 +1,6 @@
 import React from "react";
 import { Router, Link } from "react-static";
 import { hot } from "react-hot-loader";
-import { Provider } from "react-redux";
-import store from "../lib/redux/store";
 
 //
 import Routes from "react-static-routes";
@@ -12,16 +10,14 @@ import "./globalStyles.scss";
 import appStyles from "./app.scss";
 
 const App = () => (
-  <Provider store={store}>
-    <Router>
-      <div>
-        <Header />
-        <div className={appStyles.routesContainer}>
-          <Routes />
-        </div>
+  <Router>
+    <div>
+      <Header />
+      <div className={appStyles.routesContainer}>
+        <Routes />
       </div>
-    </Router>
-  </Provider>
+    </div>
+  </Router>
 );
 
 export default hot(module)(App);

@@ -1,17 +1,13 @@
 import React from "react";
 import { withRouteData } from "react-static";
 import Markdown from "react-markdown";
-import { connect } from "react-redux";
 
 import SectionHero from "./SectionHero";
 import SectionWhoWeAre from "./SectionWhoWeAre";
 
 class Home extends React.Component {
   render() {
-    const {
-      home,
-      userRoot: { user }
-    } = this.props;
+    const { home } = this.props;
     return (
       <div>
         <SectionHero />
@@ -21,9 +17,4 @@ class Home extends React.Component {
   }
 }
 
-const mapStateToProps = (state, ownProps) => ({
-  userRoot: state.userRoot,
-  ...ownProps
-});
-
-export default withRouteData(connect(mapStateToProps, null)(Home));
+export default withRouteData(Home);
