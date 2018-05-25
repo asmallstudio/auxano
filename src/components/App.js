@@ -8,8 +8,8 @@ import store from "../lib/redux/store";
 import Routes from "react-static-routes";
 import Header from "./header/Header";
 
-import "./app.scss";
 import appStyles from "./app.scss";
+import "./globalStyles.scss";
 
 const App = () => (
   <Provider store={store}>

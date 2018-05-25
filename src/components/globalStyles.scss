@@ -1,0 +1,91 @@
+@import url("https://fonts.googleapis.com/css?family=Ubuntu:300,300i,400,400i,500,500i,700,700i");
+@import "./globalVariables.scss";
+
+// Variables
+$columnNo: 12;
+$gutter: 35px;
+$breakpoints: (
+  xs: 0px,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+);
+
+:global {
+  *,
+  *:after,
+  *:before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
+    font-family: "Ubuntu", sans-serif;
+  }
+
+  .row:before,
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  .row {
+    padding-left: 128px;
+    padding-right: 128px;
+  }
+
+  [class*="col-"] {
+    float: left;
+    min-height: 1px;
+    width: 16.66%;
+    padding: 0 $gutter/2;
+  }
+
+  .container {
+    width: 100%;
+    max-width: 1440px;
+    margin: auto;
+  }
+
+  img {
+    width: 100%;
+  }
+
+  .right {
+    float: right;
+  }
+
+  // Responsive
+  @each $name, $breakpoint in $breakpoints {
+    @media only screen and (min-width: $breakpoint) {
+      $idx: index($breakpoints, ($name $breakpoint));
+      // Grid sizing
+      @for $i from 1 through 12 {
+        .col-#{$name}-#{$i} {
+          width: $i/$columnNo * 100%;
+        }
+      }
+    }
+  }
+}
+
+h1 {
+  font-weight: 600;
+  font-size: 80px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+h3 {
+  font-size: 40px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+h4 {
+  text-transform: uppercase;
+  font-size: 16px;
+  margin-top: 0px;
+  margin-bottom: 32px;
+}
