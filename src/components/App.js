@@ -9,13 +9,14 @@ import Routes from "react-static-routes";
 import Header from "./header/Header";
 
 import "./app.scss";
+import appStyles from "./app.scss";
 
 const App = () => (
   <Provider store={store}>
     <Router>
       <div>
         <Header />
-        <div id="routes-container">
+        <div className={appStyles["routes-container"]}>
           <Routes />
         </div>
       </div>

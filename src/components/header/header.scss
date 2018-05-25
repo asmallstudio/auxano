@@ -6,9 +6,15 @@ nav {
   font-style: normal;
   font-size: 18px;
   letter-spacing: 0.02em;
+  display: flex;
+  justify-content: flex-end;
 }
 
-#header-container {
+nav > ul {
+  margin: 0px;
+}
+
+.container {
   height: $header-height;
   background-color: white;
   position: fixed;
@@ -18,7 +24,7 @@ nav {
   flex-direction: row;
 }
 
-#header-row {
+.row {
   margin: auto;
   flex: 1;
   max-width: 1440px;
@@ -39,15 +45,6 @@ nav {
   color: $dark-blue;
 }
 
-nav > ul {
-  margin: 0px;
-}
-
-nav {
-  display: flex;
-  justify-content: flex-end;
-}
-
-#logo-image {
+.logo-image {
   width: 212.7px;
 }
