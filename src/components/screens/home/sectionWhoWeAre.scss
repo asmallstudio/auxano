@@ -2,17 +2,19 @@
 
 .container {
   background-color: white;
+  h4 {
+    color: $dark-orange;
+  }
+
+  h3 {
+    color: $light-blue;
+  }
+
+  composes: container from global;
 }
 
 .row {
   padding-top: 128px;
   padding-bottom: 128px;
-}
-
-.container h4 {
-  color: $dark-orange;
-}
-
-.container h3 {
-  color: $light-blue;
+  composes: row from global;
 }

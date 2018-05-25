@@ -7,8 +7,8 @@ class SectionWhoWeAre extends React.Component {
     return (
       <div>
         {/* TODO: call global classes "global-container" */}
-        <div className={`container ${styles.container}`}>
-          <div className={`row ${styles.row}`}>
+        <div className={styles.container}>
+          <div className={styles.row}>
             <div className="col-xs-12">
               <h4>Who We Are</h4>
               <h3>
