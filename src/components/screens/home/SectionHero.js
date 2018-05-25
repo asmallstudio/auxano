@@ -6,10 +6,10 @@ class SectionHero extends React.Component {
   render() {
     return (
       <div>
-        <div className={`container ${styles.container}`}>
+        <div className={styles.container}>
           <div className="row">
             <div className="col-xs-12">
-              <h1 className={styles["hero-header"]}>
+              <h1 className={styles.heroHeader}>
                 Getting people to places when it matters most...
               </h1>
             </div>

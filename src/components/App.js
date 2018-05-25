@@ -8,15 +8,15 @@ import store from "../lib/redux/store";
 import Routes from "react-static-routes";
 import Header from "./header/Header";
 
-import appStyles from "./app.scss";
 import "./globalStyles.scss";
+import appStyles from "./app.scss";
 
 const App = () => (
   <Provider store={store}>
     <Router>
       <div>
         <Header />
-        <div className={appStyles["routes-container"]}>
+        <div className={appStyles.routesContainer}>
           <Routes />
         </div>
       </div>

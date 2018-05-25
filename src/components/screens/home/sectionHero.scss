@@ -3,9 +3,10 @@
 .container {
   background-color: lightblue;
   height: 800px;
+  composes: container from global;
 }
 
-.hero-header {
+.heroHeader {
   color: $light-blue;
   margin-top: 104px;
 }

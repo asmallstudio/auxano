@@ -6,7 +6,6 @@ class SectionWhoWeAre extends React.Component {
   render() {
     return (
       <div>
-        {/* TODO: call global classes "global-container" */}
         <div className={styles.container}>
           <div className={styles.row}>
             <div className="col-xs-12">
