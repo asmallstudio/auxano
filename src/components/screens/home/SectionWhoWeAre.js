@@ -1,13 +1,14 @@
 import React from "react";
 
-import "./sectionWhoWeAre.scss";
+import styles from "./sectionWhoWeAre.scss";
 
 class SectionWhoWeAre extends React.Component {
   render() {
     return (
       <div>
-        <div className="container" id="section-who-we-are-container">
-          <div className="row">
+        {/* TODO: call global classes "global-container" */}
+        <div className={`container ${styles.container}`}>
+          <div className={`row ${styles.row}`}>
             <div className="col-xs-12">
               <h4>Who We Are</h4>
               <h3>
