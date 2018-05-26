@@ -1,0 +1,22 @@
+@import "../../globalVariables.scss";
+
+.container {
+  background-color: $light-blue;
+  h1 {
+    color: $sky-blue;
+  }
+  composes: container from global;
+}
+
+.row {
+  padding-top: $section-vertical-padding;
+  padding-bottom: $section-vertical-padding;
+  composes: row from global;
+}
+
+.iconContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}

@@ -7,6 +7,7 @@ import SectionWhoWeAre from "./SectionWhoWeAre";
 import SectionTheProblem from "./SectionTheProblem";
 import SectionTheSolution from "./SectionTheSolution";
 import SectionOurMission from "./SectionOurMission";
+import SectionFocusAreas from "./SectionFocusAreas";
 
 class Home extends React.Component {
   render() {
@@ -18,6 +19,7 @@ class Home extends React.Component {
         <SectionTheProblem />
         <SectionTheSolution />
         <SectionOurMission />
+        <SectionFocusAreas />
       </div>
     );
   }
