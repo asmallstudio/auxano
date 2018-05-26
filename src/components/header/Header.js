@@ -46,10 +46,22 @@ class Header extends React.Component {
                 </Link>
               </li>
               <li>
-                <a href="#">Our Partners</a>
+                <Link
+                  to="/#our-partners"
+                  activeClassName={styles.activeLink}
+                  isActive={this._determineHomeHashActive("/", "#our-partners")}
+                >
+                  Our Partners
+                </Link>
               </li>
               <li>
-                <a href="#">Get Involved</a>
+                <Link
+                  to="/#get-involved"
+                  activeClassName={styles.activeLink}
+                  isActive={this._determineHomeHashActive("/", "#get-involved")}
+                >
+                  Get Involved
+                </Link>
               </li>
             </ul>
           </nav>
