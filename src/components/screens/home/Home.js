@@ -6,6 +6,7 @@ import SectionHero from "./SectionHero";
 import SectionWhoWeAre from "./SectionWhoWeAre";
 import SectionTheProblem from "./SectionTheProblem";
 import SectionTheSolution from "./SectionTheSolution";
+import SectionOurMission from "./SectionOurMission";
 
 class Home extends React.Component {
   render() {
@@ -16,6 +17,7 @@ class Home extends React.Component {
         <SectionWhoWeAre />
         <SectionTheProblem />
         <SectionTheSolution />
+        <SectionOurMission />
       </div>
     );
   }
