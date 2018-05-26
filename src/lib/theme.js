@@ -1,4 +1,4 @@
-// Colors need to match those in the globalVariables.scss file
+// NOTE: need to match the variables in the globalVariables.scss
 const theme = {
   darkBlue: "#092e85",
   lightBlue: "#375bdd",
