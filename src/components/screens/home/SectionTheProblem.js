@@ -3,6 +3,7 @@ import React from "react";
 import styles from "./sectionTheProblem.scss";
 import Bubble from "../../ui/bubble/Bubble";
 import BubbleWithSubheading from "../../ui/bubbleWithSubheading/BubbleWithSubheading";
+import Spacer from "../../ui/spacer/Spacer";
 import theme from "../../../lib/theme";
 
 class SectionTheProblem extends React.Component {
@@ -18,6 +19,7 @@ class SectionTheProblem extends React.Component {
                 preventing underserved people from getting to the places that
                 matter.
               </h3>
+              <Spacer height={120} />
               <p className={styles.chartTitle}>
                 Percentage of annual income spent on transportation
               </p>
