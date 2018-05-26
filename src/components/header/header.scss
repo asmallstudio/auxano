@@ -43,8 +43,15 @@ nav > ul {
 .list > li {
   margin-left: 48px;
   color: $dark-blue;
+  font-size: 18px;
+  letter-spacing: normal;
 }
 
 .logo-image {
   width: 212.7px;
+}
+
+.activeLink {
+  color: $dark-orange !important;
+  font-weight: bold;
 }
