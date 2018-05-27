@@ -17,3 +17,9 @@
   padding-bottom: $section-vertical-padding;
   composes: row from global;
 }
+
+.partnerImage {
+  width: 100%;
+  margin-top: 48px;
+  margin-bottom: 48px;
+}
