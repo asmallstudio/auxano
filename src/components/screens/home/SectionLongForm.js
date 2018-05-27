@@ -34,11 +34,13 @@ class SectionLongForm extends React.Component {
               >
                 <Card title={data.food.title} text={data.food.text} />
               </div>
-              <img
-                src="/uploads/food-image.jpg"
-                width="640px"
-                className="right"
-              />
+              <div className={`${styles.imgContainer} right`}>
+                <img
+                  src="/uploads/food-image.jpg"
+                  width="100%"
+                  className="right"
+                />
+              </div>
             </div>
             <Spacer height={128} />
             <div className={`col-xs-12 ${styles.pairContainer} row`}>
@@ -47,11 +49,13 @@ class SectionLongForm extends React.Component {
               >
                 <Card title={data.jobs.title} text={data.jobs.text} />
               </div>
-              <img
-                src="/uploads/jobs-image.jpg"
-                width="640px"
-                className="left"
-              />
+              <div className={`${styles.imgContainer} left`}>
+                <img
+                  src="/uploads/jobs-image.jpg"
+                  width="100%"
+                  className="left"
+                />
+              </div>
             </div>
             <Spacer height={128} />
             <div className={`col-xs-12 ${styles.pairContainer} row`}>
@@ -63,11 +67,9 @@ class SectionLongForm extends React.Component {
                   text={data.healthcare.text}
                 />
               </div>
-              <img
-                src="/uploads/healthcare-image.jpg"
-                width="640px"
-                className="right"
-              />
+              <div className={`${styles.imgContainer} right`}>
+                <img src="/uploads/healthcare-image.jpg" width="100%" />
+              </div>
             </div>
           </div>
         </div>

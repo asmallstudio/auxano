@@ -17,7 +17,7 @@ class SectionOurPartners extends React.Component {
                 food, jobs, and healthcare through community partnerships.
               </h3>
               <div className={styles.partnerImage}>
-                <img src="/uploads/partner-logos.jpg" />
+                <img src="/uploads/partner-logos.jpg" width="100%" />
               </div>
               <Button
                 text="Become a Partner"
