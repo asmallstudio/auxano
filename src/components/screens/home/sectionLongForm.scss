@@ -2,6 +2,8 @@
 
 .container {
   background-color: $dark-orange;
+  padding-top: $section-vertical-padding;
+  padding-bottom: $section-vertical-padding;
   h3 {
     color: $light-blue;
   }
@@ -9,8 +11,6 @@
 }
 
 .row {
-  padding-top: $section-vertical-padding;
-  padding-bottom: $section-vertical-padding;
   composes: row from global;
 }
 
