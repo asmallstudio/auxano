@@ -11,6 +11,7 @@ import SectionFocusAreas from "./SectionFocusAreas";
 import SectionLongForm from "./SectionLongForm";
 import SectionWhatWeDo from "./SectionWhatWeDo";
 import SectionDiagramSolution from "./SectionDiagramSolution";
+import SectionOurPartners from "./SectionOurPartners";
 
 class Home extends React.Component {
   render() {
@@ -26,6 +27,7 @@ class Home extends React.Component {
         <SectionLongForm />
         <SectionWhatWeDo />
         <SectionDiagramSolution />
+        <SectionOurPartners />
       </div>
     );
   }
