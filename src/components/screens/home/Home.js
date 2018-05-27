@@ -9,6 +9,7 @@ import SectionTheSolution from "./SectionTheSolution";
 import SectionOurMission from "./SectionOurMission";
 import SectionFocusAreas from "./SectionFocusAreas";
 import SectionLongForm from "./SectionLongForm";
+import SectionWhatWeDo from "./SectionWhatWeDo";
 
 class Home extends React.Component {
   render() {
@@ -22,6 +23,7 @@ class Home extends React.Component {
         <SectionOurMission />
         <SectionFocusAreas />
         <SectionLongForm />
+        <SectionWhatWeDo />
       </div>
     );
   }
