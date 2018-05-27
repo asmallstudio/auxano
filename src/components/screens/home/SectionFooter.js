@@ -21,7 +21,20 @@ class SectionFooter extends React.Component {
               <p className={styles.columnText}>contact@transitus.org</p>
             </ThirdColumn>
             <ThirdColumn title="Stay In Touch">
-              <p className={styles.columnText}>aaa</p>
+              <div className={styles.socialContainer}>
+                <a href="#">
+                  <img src="/uploads/facebook-copy.svg" width="36px" />
+                </a>
+                <a href="#">
+                  <img src="/uploads/twitter-copy.svg" width="36px" />
+                </a>
+                <a href="#">
+                  <img src="/uploads/instagram-copy.svg" width="36px" />
+                </a>
+                <a href="#">
+                  <img src="/uploads/linked-in-copy.svg" width="36px" />
+                </a>
+              </div>
             </ThirdColumn>
           </div>
         </div>

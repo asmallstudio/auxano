@@ -21,3 +21,10 @@
 .columnText {
   color: white;
 }
+
+.socialContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
