@@ -53,6 +53,10 @@ $breakpoints: (
     float: right;
   }
 
+  .left {
+    float: left;
+  }
+
   // Responsive
   @each $name, $breakpoint in $breakpoints {
     @media only screen and (min-width: $breakpoint) {
@@ -115,5 +119,14 @@ h5 {
   font-style: normal;
   font-stretch: normal;
   line-height: 1.2;
+  letter-spacing: normal;
+}
+
+p {
+  font-size: 18px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.62;
   letter-spacing: normal;
 }

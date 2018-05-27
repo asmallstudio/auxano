@@ -1,0 +1,33 @@
+@import "../../globalVariables.scss";
+
+.container {
+  background-color: $dark-orange;
+  h3 {
+    color: $light-blue;
+  }
+  composes: container from global;
+}
+
+.row {
+  padding-top: $section-vertical-padding;
+  padding-bottom: $section-vertical-padding;
+  composes: row from global;
+}
+
+.pairContainer {
+  position: relative;
+}
+
+.itemVerticalCenter {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.itemLeft {
+  left: 0;
+}
+
+.itemRight {
+  right: 0;
+}

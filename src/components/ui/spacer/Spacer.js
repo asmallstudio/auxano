@@ -5,7 +5,7 @@ import styles from "./spacer.scss";
 class Spacer extends React.Component {
   render() {
     const { height } = this.props;
-    return <div style={{ height: `${height}px` }} />;
+    return <div className={styles.clear} style={{ height: `${height}px` }} />;
   }
 }
 

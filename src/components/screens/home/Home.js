@@ -8,6 +8,7 @@ import SectionTheProblem from "./SectionTheProblem";
 import SectionTheSolution from "./SectionTheSolution";
 import SectionOurMission from "./SectionOurMission";
 import SectionFocusAreas from "./SectionFocusAreas";
+import SectionLongForm from "./SectionLongForm";
 
 class Home extends React.Component {
   render() {
@@ -20,6 +21,7 @@ class Home extends React.Component {
         <SectionTheSolution />
         <SectionOurMission />
         <SectionFocusAreas />
+        <SectionLongForm />
       </div>
     );
   }

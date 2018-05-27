@@ -1,0 +1,21 @@
+@import "../../globalVariables.scss";
+
+.container {
+  width: 640px;
+  background-color: white;
+}
+
+.row {
+  padding-left: 48px;
+  padding-right: 96px;
+  padding-top: 48px;
+  padding-bottom: 48px;
+}
+
+.infoText {
+  color: $dark-blue;
+}
+
+.titleText {
+  line-height: 1.2 !important;
+}
