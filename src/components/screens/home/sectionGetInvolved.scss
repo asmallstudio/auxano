@@ -1,0 +1,24 @@
+@import "../../globalVariables.scss";
+
+.container {
+  background-color: white;
+  padding-top: $section-vertical-padding;
+  padding-bottom: $section-vertical-padding;
+  h4 {
+    color: $dark-orange;
+  }
+
+  h3 {
+    color: $light-blue;
+  }
+  composes: container from global;
+}
+
+.row {
+  composes: row from global;
+}
+
+.columnsContainer {
+  padding-top: 48px;
+  padding-bottom: 48px;
+}

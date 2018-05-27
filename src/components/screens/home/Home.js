@@ -13,6 +13,7 @@ import SectionWhatWeDo from "./SectionWhatWeDo";
 import SectionDiagramSolution from "./SectionDiagramSolution";
 import SectionOurPartners from "./SectionOurPartners";
 import SectionCloseTheGap from "./SectionCloseTheGap";
+import SectionGetInvolved from "./SectionGetInvolved";
 
 class Home extends React.Component {
   render() {
@@ -30,6 +31,7 @@ class Home extends React.Component {
         <SectionDiagramSolution />
         <SectionOurPartners />
         <SectionCloseTheGap />
+        <SectionGetInvolved />
       </div>
     );
   }
