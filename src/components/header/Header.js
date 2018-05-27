@@ -29,9 +29,9 @@ class Header extends React.Component {
             <ul className={styles.list}>
               <li>
                 <Link
-                  to="/#who-we-are"
+                  to="/#our-mission"
                   activeClassName={styles.activeLink}
-                  isActive={this._determineHomeHashActive("/", "#who-we-are")}
+                  isActive={this._determineHomeHashActive("/", "#our-mission")}
                 >
                   Our Mission
                 </Link>

@@ -12,6 +12,7 @@ import SectionLongForm from "./SectionLongForm";
 import SectionWhatWeDo from "./SectionWhatWeDo";
 import SectionDiagramSolution from "./SectionDiagramSolution";
 import SectionOurPartners from "./SectionOurPartners";
+import SectionCloseTheGap from "./SectionCloseTheGap";
 
 class Home extends React.Component {
   render() {
@@ -28,6 +29,7 @@ class Home extends React.Component {
         <SectionWhatWeDo />
         <SectionDiagramSolution />
         <SectionOurPartners />
+        <SectionCloseTheGap />
       </div>
     );
   }
