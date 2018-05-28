@@ -4,7 +4,7 @@
 // LAYOUT
 
 $columnNo: 12;
-$gutter: 35px;
+$gutter: 24px;
 $breakpoints: (
   xs: 0px,
   sm: 576px,
@@ -29,11 +29,6 @@ $breakpoints: (
     content: "";
     display: table;
     clear: both;
-  }
-
-  .row {
-    padding-left: 128px;
-    padding-right: 128px;
   }
 
   [class*="col-"] {
@@ -66,6 +61,11 @@ $breakpoints: (
         .col-#{$name}-#{$i} {
           width: $i/$columnNo * 100%;
         }
+      }
+
+      .row {
+        padding-left: #{nth((16, 48, 64, 80, 128), $idx)}px;
+        padding-right: #{nth((16, 48, 64, 80, 128), $idx)}px;
       }
     }
   }
