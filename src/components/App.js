@@ -9,8 +9,6 @@ import Header from "./header/Header";
 import "./globalStyles.scss";
 import appStyles from "./app.scss";
 
-import netlifyIdentity from "netlify-identity-widget";
-
 const App = () => (
   <Router>
     <div>
