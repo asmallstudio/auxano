@@ -19,7 +19,6 @@ import SectionFooter from "./SectionFooter";
 class Home extends React.Component {
   render() {
     const { home } = this.props;
-    console.log(home);
     return (
       <div>
         <SectionHero />
