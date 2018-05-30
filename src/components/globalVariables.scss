@@ -5,5 +5,23 @@ $light-blue: #375bdd;
 $sky-blue: #b2dbff;
 $dark-orange: #ffa516;
 
-$header-height: 112px;
+// $header-height: 112px;
 $section-vertical-padding: 128px;
+$header-height: (
+  80,
+  80,
+  80,
+  80,
+  112
+);
+
+// Grid
+$columnNo: 12;
+$gutter: 24;
+$breakpoints: (
+  xs: 0px,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+);

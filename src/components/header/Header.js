@@ -15,7 +15,7 @@ class Header extends React.Component {
   render() {
     return (
       <div className={styles.container}>
-        <div className={`row ${styles.row}`}>
+        <div className={styles.row}>
           <div className="col-xs-4">
             <a href="#">
               <img

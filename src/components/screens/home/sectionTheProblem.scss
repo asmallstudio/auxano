@@ -25,14 +25,37 @@
   composes: row from global;
 }
 
-.bubbleContainer {
+.bubblesContainer {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
   flex-wrap: wrap;
-  margin-top: 48px;
-  margin-bottom: 48px;
+}
+
+@each $name, $breakpoint in $breakpoints {
+  @media only screen and (min-width: $breakpoint) {
+    $idx: index($breakpoints, ($name $breakpoint));
+
+    .bubblesContainer {
+      justify-content: #{nth(
+          (
+            space-around,
+            space-around,
+            space-around,
+            space-between,
+            space-between
+          ),
+          $idx
+        )};
+
+      flex-direction: #{nth((column, column, column, row, row), $idx)};
+    }
+
+    .bubbleContainer {
+      margin-top: #{nth((24, 24, 24, 48, 48), $idx)}px;
+      margin-bottom: #{nth((24, 24, 24, 48, 48), $idx)}px;
+    }
+  }
 }
 
 .disclaimer {

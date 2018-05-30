@@ -14,6 +14,12 @@ body {
   }
 }
 
-.routesContainer {
-  margin-top: $header-height;
+@each $name, $breakpoint in $breakpoints {
+  @media only screen and (min-width: $breakpoint) {
+    $idx: index($breakpoints, ($name $breakpoint));
+
+    .routesContainer {
+      margin-top: #{nth($header-height, $idx)}px;
+    }
+  }
 }
