@@ -3,6 +3,8 @@ const klaw = require("klaw");
 const path = require("path");
 const matter = require("gray-matter");
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
+const postcssFlexbugsFixes = require("postcss-flexbugs-fixes");
+const autoprefixer = require("autoprefixer");
 
 function getSingleFile(path) {
   const getFiles = () =>
@@ -62,6 +64,25 @@ export default {
                         minimize: false
                       }
                     },
+                    {
+                      loader: "postcss-loader",
+                      options: {
+                        sourceMap: true,
+                        ident: "postcss",
+                        plugins: () => [
+                          postcssFlexbugsFixes,
+                          autoprefixer({
+                            browsers: [
+                              ">1%",
+                              "last 4 versions",
+                              "Firefox ESR",
+                              "not ie < 9" // React doesn't support IE8 anyway
+                            ],
+                            flexbox: "no-2009"
+                          })
+                        ]
+                      }
+                    },
                     { loader: "sass-loader" }
                   ]
                 : ExtractTextPlugin.extract({
@@ -75,6 +96,25 @@ export default {
                           localIdentName: process.env.REACT_STATIC_DEBUG
                             ? "[name]__[local]--[hash:base64:5]"
                             : undefined
+                        }
+                      },
+                      {
+                        loader: "postcss-loader",
+                        options: {
+                          sourceMap: true,
+                          ident: "postcss",
+                          plugins: () => [
+                            postcssFlexbugsFixes,
+                            autoprefixer({
+                              browsers: [
+                                ">1%",
+                                "last 4 versions",
+                                "Firefox ESR",
+                                "not ie < 9" // React doesn't support IE8 anyway
+                              ],
+                              flexbox: "no-2009"
+                            })
+                          ]
                         }
                       },
                       {
