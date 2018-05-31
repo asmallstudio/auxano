@@ -59,6 +59,8 @@ export default {
           href="favicon-16x16.png"
           sizes="16x16"
         />
+        <meta charSet="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         {renderMeta.styleTags}
       </Head>
       <Body>{children}</Body>
