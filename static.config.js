@@ -5,6 +5,7 @@ const matter = require("gray-matter");
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const postcssFlexbugsFixes = require("postcss-flexbugs-fixes");
 const autoprefixer = require("autoprefixer");
+const React = require("react");
 
 function getSingleFile(path) {
   const getFiles = () =>
@@ -43,6 +44,26 @@ export default {
       }
     ];
   },
+  Document: ({ Html, Head, Body, children, renderMeta }) => (
+    <Html>
+      <Head>
+        <link
+          rel="icon"
+          type="image/png"
+          href="favicon-32x32.png"
+          sizes="32x32"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          href="favicon-16x16.png"
+          sizes="16x16"
+        />
+        {renderMeta.styleTags}
+      </Head>
+      <Body>{children}</Body>
+    </Html>
+  ),
   webpack: (config, { defaultLoaders, stage }) => {
     config.module.rules = [
       {
