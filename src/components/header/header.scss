@@ -1,11 +1,6 @@
 @import "../globalVariables.scss";
 
 nav {
-  font-family: "Helvetica Neue", Arial, sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 18px;
-  letter-spacing: 0.02em;
   display: flex;
   justify-content: flex-end;
 }
@@ -15,7 +10,6 @@ nav > ul {
 }
 
 .container {
-  height: $header-height;
   background-color: white;
   position: fixed;
   top: 0px;
@@ -32,6 +26,7 @@ nav > ul {
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: space-between;
 }
 
 .list {
@@ -61,6 +56,10 @@ nav > ul {
       height: #{nth($header-height, $idx)}px;
     }
 
+    .logoContainer {
+      height: #{nth($header-height, $idx)}px;
+    }
+
     .row {
       padding-left: #{nth((32, 32, 32, 32, 128), $idx) - $gutter/2}px;
       padding-right: #{nth((32, 32, 32, 32, 128), $idx) - $gutter/2}px;
@@ -70,4 +69,50 @@ nav > ul {
       width: #{nth((160, 160, 160, 160, 212.7), $idx)}px;
     }
   }
+}
+
+// Mobile
+
+.row {
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  background-color: white;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  padding-left: 0px;
+
+  li {
+    margin-top: 64px;
+    margin-left: 32px;
+    font-size: 32px;
+    font-weight: bold;
+    font-style: normal;
+  }
+}
+
+nav {
+}
+
+.logoContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+nav {
+  justify-content: flex-start;
+  width: 100%;
+  height: 100vh;
+}
+
+.menuToggleContainer {
+  position: absolute;
+  right: 32px;
+  top: 32px;
 }
