@@ -56,61 +56,51 @@ class Header extends React.Component {
               />
             </Link>
           </div>
-          {this.state.showMenu && (
-            <nav>
-              <ul className={styles.list}>
-                <li>
-                  <Link
-                    to="/#our-mission"
-                    activeClassName={styles.activeLink}
-                    isActive={this._determineHomeHashActive(
-                      "/",
-                      "#our-mission"
-                    )}
-                    onClick={this._handleMenuClose}
-                  >
-                    Our Mission
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    to="/#what-we-do"
-                    activeClassName={styles.activeLink}
-                    isActive={this._determineHomeHashActive("/", "#what-we-do")}
-                    onClick={this._handleMenuClose}
-                  >
-                    What We Do
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    to="/#our-partners"
-                    activeClassName={styles.activeLink}
-                    isActive={this._determineHomeHashActive(
-                      "/",
-                      "#our-partners"
-                    )}
-                    onClick={this._handleMenuClose}
-                  >
-                    Our Partners
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    to="/#get-involved"
-                    activeClassName={styles.activeLink}
-                    isActive={this._determineHomeHashActive(
-                      "/",
-                      "#get-involved"
-                    )}
-                    onClick={this._handleMenuClose}
-                  >
-                    Get Involved
-                  </Link>
-                </li>
-              </ul>
-            </nav>
-          )}
+
+          <nav className={this.state.showMenu ? styles.show : styles.hide}>
+            <ul className={styles.list}>
+              <li>
+                <Link
+                  to="/#our-mission"
+                  activeClassName={styles.activeLink}
+                  isActive={this._determineHomeHashActive("/", "#our-mission")}
+                  onClick={this._handleMenuClose}
+                >
+                  Our Mission
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/#what-we-do"
+                  activeClassName={styles.activeLink}
+                  isActive={this._determineHomeHashActive("/", "#what-we-do")}
+                  onClick={this._handleMenuClose}
+                >
+                  What We Do
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/#our-partners"
+                  activeClassName={styles.activeLink}
+                  isActive={this._determineHomeHashActive("/", "#our-partners")}
+                  onClick={this._handleMenuClose}
+                >
+                  Our Partners
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/#get-involved"
+                  activeClassName={styles.activeLink}
+                  isActive={this._determineHomeHashActive("/", "#get-involved")}
+                  onClick={this._handleMenuClose}
+                >
+                  Get Involved
+                </Link>
+              </li>
+            </ul>
+          </nav>
         </div>
       </div>
     );
