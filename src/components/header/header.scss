@@ -81,6 +81,7 @@ nav {
 }
 
 .navContainer {
+  overflow-y: auto;
   display: flex;
   justify-content: flex-start;
   width: 100%;
