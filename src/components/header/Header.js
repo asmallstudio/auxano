@@ -34,18 +34,16 @@ class Header extends React.Component {
 
   render() {
     return (
-      <div className={styles.container}>
+      <div
+        className={`${styles.container} ${this.state.showMenu &&
+          styles.showContainer}`}
+      >
         <div className={styles.row}>
           <div
             className={styles.menuToggleContainer}
             onClick={this._handleToggleMenu}
           >
-            <img
-              src="round-close-24-px.svg"
-              width={28}
-              height={28}
-              alt="close-menu-icon"
-            />
+            <MenuIcon showMenu={this.state.showMenu} />
           </div>
           <div className={styles.logoContainer}>
             <Link to="#">
@@ -57,54 +55,78 @@ class Header extends React.Component {
             </Link>
           </div>
 
-          <nav className={this.state.showMenu ? styles.show : styles.hide}>
-            <ul className={styles.list}>
-              <li>
-                <Link
-                  to="/#our-mission"
-                  activeClassName={styles.activeLink}
-                  isActive={this._determineHomeHashActive("/", "#our-mission")}
-                  onClick={this._handleMenuClose}
-                >
-                  Our Mission
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/#what-we-do"
-                  activeClassName={styles.activeLink}
-                  isActive={this._determineHomeHashActive("/", "#what-we-do")}
-                  onClick={this._handleMenuClose}
-                >
-                  What We Do
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/#our-partners"
-                  activeClassName={styles.activeLink}
-                  isActive={this._determineHomeHashActive("/", "#our-partners")}
-                  onClick={this._handleMenuClose}
-                >
-                  Our Partners
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/#get-involved"
-                  activeClassName={styles.activeLink}
-                  isActive={this._determineHomeHashActive("/", "#get-involved")}
-                  onClick={this._handleMenuClose}
-                >
-                  Get Involved
-                </Link>
-              </li>
-            </ul>
-          </nav>
+          <div
+            className={`${this.state.showMenu ? styles.show : styles.hide} ${
+              styles.navContainer
+            }`}
+          >
+            <nav className={""}>
+              <ul className={styles.list}>
+                <li>
+                  <Link
+                    to="/#our-mission"
+                    activeClassName={styles.activeLink}
+                    isActive={this._determineHomeHashActive(
+                      "/",
+                      "#our-mission"
+                    )}
+                    onClick={this._handleMenuClose}
+                  >
+                    Our Mission
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/#what-we-do"
+                    activeClassName={styles.activeLink}
+                    isActive={this._determineHomeHashActive("/", "#what-we-do")}
+                    onClick={this._handleMenuClose}
+                  >
+                    What We Do
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/#our-partners"
+                    activeClassName={styles.activeLink}
+                    isActive={this._determineHomeHashActive(
+                      "/",
+                      "#our-partners"
+                    )}
+                    onClick={this._handleMenuClose}
+                  >
+                    Our Partners
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/#get-involved"
+                    activeClassName={styles.activeLink}
+                    isActive={this._determineHomeHashActive(
+                      "/",
+                      "#get-involved"
+                    )}
+                    onClick={this._handleMenuClose}
+                  >
+                    Get Involved
+                  </Link>
+                </li>
+              </ul>
+            </nav>
+          </div>
         </div>
       </div>
     );
   }
 }
+
+const MenuIcon = ({ showMenu }) => (
+  <img
+    src={showMenu ? "round-close.svg" : "rounded.svg"}
+    width={showMenu ? 28 : 36}
+    height={showMenu ? 28 : 24}
+    alt="close-toggle-icon"
+  />
+);
 
 export default Header;

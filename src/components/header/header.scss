@@ -41,7 +41,7 @@
 // Mobile
 
 .row {
-  margin: auto;
+  margin: 0 auto 0 auto;
   flex: 1;
   max-width: 1440px;
   display: flex;
@@ -75,27 +75,30 @@
 }
 
 nav {
-  display: flex;
-  justify-content: flex-start;
-  width: 100%;
-  height: 100vh;
-
   ul {
     margin: 0px;
   }
 }
 
+.navContainer {
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+}
+
 .menuToggleContainer {
   position: absolute;
   right: 32px;
-  // top: 32px;
-  top: 50%;
-  transform: translateY(-50%);
+  top: 28px;
   cursor: pointer;
 }
 
 .show {
   display: block;
+}
+
+.showContainer {
+  height: 100%;
 }
 
 .hide {
@@ -104,7 +107,7 @@ nav {
 
 // Desktop
 
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 1200px) {
   .row {
     flex-direction: row;
     align-items: center;
@@ -116,6 +119,10 @@ nav {
 
   .hide {
     display: block;
+  }
+
+  .showContainer {
+    height: unset;
   }
 
   .list {
