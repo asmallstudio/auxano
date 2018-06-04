@@ -4,6 +4,8 @@
   position: relative;
   background-size: cover;
   background-position: center;
+  padding-top: 0px;
+  padding-bottom: 0px;
   composes: container from global;
 }
 

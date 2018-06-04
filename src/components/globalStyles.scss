@@ -118,9 +118,25 @@ p {
         padding-right: #{nth((32, 48, 64, 80, 128), $idx) - $gutter/2}px;
       }
 
+      .container {
+        padding-top: #{nth((32, 32, 64, 128, 128), $idx)}px;
+        padding-bottom: #{nth((32, 32, 64, 128, 128), $idx)}px;
+      }
+
       h1 {
         font-size: #{nth((32, 32, 64, 80, 80), $idx)}px;
         line-height: #{nth((1.5, 1.5, 1.25, 1.2, 1.2), $idx)};
+      }
+
+      h3 {
+        font-size: #{nth((24, 24, 32, 40, 40), $idx)}px;
+        line-height: #{nth((1.67, 1.67, 1.5, 1.62, 1.62), $idx)};
+      }
+
+      h4 {
+        font-size: #{nth((14, 14, 18, 18, 18), $idx)}px;
+        line-height: #{nth((1.71, 1.71, 1.2, 1.2, 1.2), $idx)};
+        margin-bottom: #{nth((16, 16, 24, 32, 32), $idx)}px;
       }
     }
   }
