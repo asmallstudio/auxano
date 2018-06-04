@@ -4,28 +4,18 @@ import styles from "./bubble.scss";
 
 class Bubble extends React.Component {
   render() {
-    const {
-      innerText,
-      bubbleColor,
-      bubbleDiameter,
-      textColor = "black"
-    } = this.props;
+    const { innerText, bubbleColor, bubbleDiameter, bubbleStyle } = this.props;
+
+    console.log("inside bubble", bubbleStyle);
 
     return (
       <div
         style={{
-          height: `${bubbleDiameter}px`,
-          width: `${bubbleDiameter}px`,
           backgroundColor: bubbleColor
         }}
-        className={styles.container}
+        className={`${styles.container} ${bubbleStyle}`}
       >
-        <span
-          className={styles.text}
-          style={{ color: textColor, fontSize: bubbleDiameter / 3.5 }}
-        >
-          {innerText}
-        </span>
+        <span className={styles.text}>{innerText}</span>
       </div>
     );
   }

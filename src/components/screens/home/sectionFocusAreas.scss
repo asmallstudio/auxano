@@ -9,6 +9,10 @@
 }
 
 .row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
   composes: row from global;
 }
 
@@ -17,4 +21,18 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  margin-top: 32px;
+  margin-bottom: 32px;
+}
+
+@each $name, $breakpoint in $breakpoints {
+  @media only screen and (min-width: $breakpoint) {
+    $idx: index($breakpoints, ($name $breakpoint));
+
+    .iconContainer {
+      img {
+        height: #{nth((45, 45, 45, 60, 81), $idx)}px;
+      }
+    }
+  }
 }

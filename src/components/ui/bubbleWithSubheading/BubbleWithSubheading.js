@@ -11,7 +11,8 @@ class BubbleWithSubheading extends React.Component {
       bubbleDiameter,
       textColor = "black",
       subheadingText,
-      subheadingTextColor = "black"
+      subheadingTextColor = "black",
+      bubbleStyle
     } = this.props;
 
     return (
@@ -21,6 +22,7 @@ class BubbleWithSubheading extends React.Component {
           bubbleColor={bubbleColor}
           bubbleDiameter={bubbleDiameter}
           textColor={textColor}
+          bubbleStyle={bubbleStyle}
         />
         <h5
           style={{ color: subheadingTextColor }}

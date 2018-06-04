@@ -28,30 +28,27 @@ class SectionTheProblem extends React.Component {
                   <BubbleWithSubheading
                     innerText="10%"
                     bubbleColor="white"
-                    bubbleDiameter={144}
-                    textColor={theme.darkBlue}
                     subheadingText="Upper Class"
                     subheadingTextColor={theme.darkOrange}
+                    bubbleStyle={styles.whiteBubble}
                   />
                 </div>
                 <div className={styles.bubbleContainer}>
                   <BubbleWithSubheading
                     innerText="28%"
-                    bubbleColor={theme.lightBlue}
-                    bubbleDiameter={329}
-                    textColor={"white"}
                     subheadingText="Lower Class"
+                    bubbleColor={theme.lightBlue}
                     subheadingTextColor={theme.darkOrange}
+                    bubbleStyle={styles.darkBlueBubble}
                   />
                 </div>
                 <div className={styles.bubbleContainer}>
                   <BubbleWithSubheading
                     innerText="17%"
                     bubbleColor={theme.skyBlue}
-                    bubbleDiameter={263}
-                    textColor={theme.darkBlue}
                     subheadingText="Middle Class"
                     subheadingTextColor={theme.darkOrange}
+                    bubbleStyle={styles.skyBlueBubble}
                   />
                 </div>
               </div>

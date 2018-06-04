@@ -57,6 +57,30 @@
     .spacer {
       height: #{nth((24, 24, 24, 64, 128), $idx)}px;
     }
+
+    .whiteBubble {
+      $whiteBubbleHeights: (86, 86, 86, 112, 156);
+      height: #{nth($whiteBubbleHeights, $idx)}px;
+      width: #{nth($whiteBubbleHeights, $idx)}px;
+      font-size: #{nth($whiteBubbleHeights, $idx) / 3.5}px;
+      color: $dark-blue;
+    }
+
+    .darkBlueBubble {
+      $darkBlueBubbleHeights: (180, 180, 180, 238, 329);
+      height: #{nth($darkBlueBubbleHeights, $idx)}px;
+      width: #{nth($darkBlueBubbleHeights, $idx)}px;
+      font-size: #{nth($darkBlueBubbleHeights, $idx) / 3.5}px;
+      color: white;
+    }
+
+    .skyBlueBubble {
+      $skyBlueBubbleHeights: (145, 145, 145, 190, 264);
+      height: #{nth($skyBlueBubbleHeights, $idx)}px;
+      width: #{nth($skyBlueBubbleHeights, $idx)}px;
+      font-size: #{nth($skyBlueBubbleHeights, $idx) / 3.5}px;
+      color: $dark-blue;
+    }
   }
 }
 
