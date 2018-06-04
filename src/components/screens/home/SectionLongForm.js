@@ -28,37 +28,37 @@ class SectionLongForm extends React.Component {
       <div>
         <div className={styles.container} id="info">
           <div className={styles.row}>
-            <div className={`col-xs-12 ${styles.pairContainer} row`}>
+            <div className={`col-xs-12 ${styles.pairContainer}`}>
+              <div
+                className={`${styles.imgContainer} ${styles.right}`}
+                style={{ backgroundImage: "url(/uploads/food-image@3x.jpg)" }}
+              />
               <div
                 className={`${styles.itemLeft} ${styles.itemVerticalCenter}`}
               >
                 <Card title={data.food.title} text={data.food.text} />
               </div>
-              <div className={`${styles.imgContainer} right`}>
-                <img
-                  src="/uploads/food-image@3x.jpg"
-                  width="100%"
-                  className="right"
-                />
-              </div>
             </div>
-            <Spacer height={128} />
-            <div className={`col-xs-12 ${styles.pairContainer} row`}>
+            <Spacer className={styles.spacer} />
+            <div className={`col-xs-12 ${styles.pairContainer}`}>
+              <div
+                className={`${styles.imgContainer}`}
+                style={{ backgroundImage: "url(/uploads/jobs-image@3x.jpg)" }}
+              />
               <div
                 className={`${styles.itemRight} ${styles.itemVerticalCenter}`}
               >
                 <Card title={data.jobs.title} text={data.jobs.text} />
               </div>
-              <div className={`${styles.imgContainer} left`}>
-                <img
-                  src="/uploads/jobs-image@3x.jpg"
-                  width="100%"
-                  className="left"
-                />
-              </div>
             </div>
-            <Spacer height={128} />
-            <div className={`col-xs-12 ${styles.pairContainer} row`}>
+            <Spacer className={styles.spacer} />
+            <div className={`col-xs-12 ${styles.pairContainer}`}>
+              <div
+                className={`${styles.imgContainer} ${styles.right}`}
+                style={{
+                  backgroundImage: "url(/uploads/healthcare-image@3x.jpg)"
+                }}
+              />
               <div
                 className={`${styles.itemLeft} ${styles.itemVerticalCenter}`}
               >
@@ -66,9 +66,6 @@ class SectionLongForm extends React.Component {
                   title={data.healthcare.title}
                   text={data.healthcare.text}
                 />
-              </div>
-              <div className={`${styles.imgContainer} right`}>
-                <img src="/uploads/healthcare-image@3x.jpg" width="100%" />
               </div>
             </div>
           </div>

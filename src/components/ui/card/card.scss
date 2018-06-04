@@ -2,15 +2,11 @@
 
 .container {
   width: 100%;
-  max-width: 640px;
   background-color: white;
 }
 
 .row {
-  padding-left: 48px;
-  padding-right: 96px;
-  padding-top: 48px;
-  padding-bottom: 48px;
+  padding: 32px;
 }
 
 .infoText {
@@ -20,3 +16,22 @@
 .titleText {
   line-height: 1.2 !important;
 }
+
+@media only screen and (min-width: 1200px) {
+  .container {
+    max-width: 640px;
+  }
+
+  .row {
+    padding: 48px 96px 48px 48px;
+  }
+}
+
+// @each $name, $breakpoint in $breakpoints {
+//   @media only screen and (min-width: $breakpoint) {
+//     $idx: index($breakpoints, ($name $breakpoint));
+
+//     .spacer {
+//       height: #{nth((24, 24, 24, 64, 128), $idx)}px;
+//     }
+//   }}
