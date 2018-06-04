@@ -36,7 +36,7 @@ class SectionLongForm extends React.Component {
               </div>
               <div className={`${styles.imgContainer} right`}>
                 <img
-                  src="/uploads/food-image.jpg"
+                  src="/uploads/food-image@3x.jpg"
                   width="100%"
                   className="right"
                 />
@@ -51,7 +51,7 @@ class SectionLongForm extends React.Component {
               </div>
               <div className={`${styles.imgContainer} left`}>
                 <img
-                  src="/uploads/jobs-image.jpg"
+                  src="/uploads/jobs-image@3x.jpg"
                   width="100%"
                   className="left"
                 />
@@ -68,7 +68,7 @@ class SectionLongForm extends React.Component {
                 />
               </div>
               <div className={`${styles.imgContainer} right`}>
-                <img src="/uploads/healthcare-image.jpg" width="100%" />
+                <img src="/uploads/healthcare-image@3x.jpg" width="100%" />
               </div>
             </div>
           </div>
