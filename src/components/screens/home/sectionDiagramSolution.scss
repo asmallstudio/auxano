@@ -1,1 +1,6 @@
 @import "../../globalVariables.scss";
+
+.container {
+  padding: 0px;
+  composes: container from global;
+}
