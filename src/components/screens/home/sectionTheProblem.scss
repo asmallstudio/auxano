@@ -53,6 +53,10 @@
       margin-top: #{nth((24, 24, 24, 48, 48), $idx)}px;
       margin-bottom: #{nth((24, 24, 24, 48, 48), $idx)}px;
     }
+
+    .spacer {
+      height: #{nth((24, 24, 24, 64, 128), $idx)}px;
+    }
   }
 }
 

@@ -19,7 +19,7 @@ class SectionTheProblem extends React.Component {
                 preventing underserved people from getting to the places that
                 matter.
               </h3>
-              <Spacer height={120} />
+              <Spacer className={styles.spacer} />
               <p className={styles.chartTitle}>
                 Percentage of annual income spent on transportation
               </p>
