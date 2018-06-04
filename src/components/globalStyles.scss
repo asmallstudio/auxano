@@ -138,6 +138,11 @@ p {
         line-height: #{nth((1.71, 1.71, 1.2, 1.2, 1.2), $idx)};
         margin-bottom: #{nth((16, 16, 24, 32, 32), $idx)}px;
       }
+
+      p {
+        font-size: #{nth((12, 12, 18, 18, 18), $idx)}px;
+        line-height: #{nth((1.5, 1.5, 1.2, 1.2, 1.2), $idx)};
+      }
     }
   }
 }
