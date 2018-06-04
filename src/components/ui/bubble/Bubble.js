@@ -6,8 +6,6 @@ class Bubble extends React.Component {
   render() {
     const { innerText, bubbleColor, bubbleDiameter, bubbleStyle } = this.props;
 
-    console.log("inside bubble", bubbleStyle);
-
     return (
       <div
         style={{
