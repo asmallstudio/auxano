@@ -1,6 +1,7 @@
 @import "../../globalVariables.scss";
 
 .container {
+  position: relative;
   background-size: cover;
   background-position: center;
   composes: container from global;
@@ -8,7 +9,18 @@
 
 .heroHeader {
   color: $light-blue;
-  margin-top: 117px;
+}
+
+.scrollImageContainer {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
+  padding: 8px 48px;
+
+  img {
+    height: 31px;
+    width: 30px;
+  }
 }
 
 @each $name, $breakpoint in $breakpoints {
@@ -17,6 +29,14 @@
 
     .container {
       height: #{nth((480, 480, 800, 800, 800), $idx)}px;
+    }
+
+    .heroHeader {
+      margin-top: #{nth((32, 32, 78, 78, 117), $idx)}px;
+    }
+
+    .scrollImageContainer {
+      bottom: #{nth((16, 16, 32, 32, 32), $idx)}px;
     }
   }
 }
