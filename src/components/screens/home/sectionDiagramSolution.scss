@@ -2,5 +2,5 @@
 
 .container {
   composes: container from global;
-  padding: 0px;
+  padding: 0px !important;
 }
