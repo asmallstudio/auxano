@@ -15,16 +15,16 @@ class Footer extends React.Component {
             <div className={`col-xs-12 ${styles.contentContainer}`}>
               <p className={styles.copywrite}>Copyright © 2018 Transitus</p>
               <div className={styles.socialContainer}>
-                <a href="#">
+                <a href="/contact-us">
                   <img src="/uploads/facebook-copy.svg" />
                 </a>
-                <a href="#">
+                <a href="/contact-us">
                   <img src="/uploads/twitter-copy.svg" />
                 </a>
-                <a href="#">
+                <a href="/contact-us">
                   <img src="/uploads/instagram-copy.svg" />
                 </a>
-                <a href="#">
+                <a href="/contact-us">
                   <img src="/uploads/linked-in-copy.svg" />
                 </a>
               </div>
