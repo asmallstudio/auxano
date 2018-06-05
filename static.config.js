@@ -47,6 +47,7 @@ export default {
   Document: ({ Html, Head, Body, children, renderMeta }) => (
     <Html>
       <Head>
+        <title>Transitus</title>
         <link
           rel="icon"
           type="image/png"

@@ -16,8 +16,18 @@
   composes: row from global;
 }
 
-.columnText {
-  color: white;
+.copywrite {
+  margin: 0px;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.2;
+  letter-spacing: normal;
+  color: $dark-orange;
+  margin-right: 56px;
+  margin-bottom: 24px;
+  margin-top: 24px;
 }
 
 .socialContainer {
@@ -25,4 +35,38 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  flex: 1;
+  max-width: 400px;
+  min-width: 300px;
+}
+
+.contentContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+@each $name, $breakpoint in $breakpoints {
+  @media only screen and (min-width: $breakpoint) {
+    $idx: index($breakpoints, ($name $breakpoint));
+
+    .copywrite {
+      font-size: #{nth((14, 14, 18, 18, 18), $idx)}px;
+    }
+
+    .container {
+      padding-top: #{nth((32, 32, 48, 48, 48), $idx)}px;
+      padding-bottom: #{nth((32, 32, 48, 48, 48), $idx)}px;
+    }
+
+    .socialContainer {
+      min-width: #{nth((200, 200, 300, 300, 300), $idx)}px;
+
+      img {
+        width: #{nth((16, 16, 24, 24, 48), $idx)}px;
+      }
+    }
+  }
 }

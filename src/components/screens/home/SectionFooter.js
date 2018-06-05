@@ -12,31 +12,23 @@ class SectionFooter extends React.Component {
         <div className={styles.container}>
           <a className="anchor" id="footer" />
           <div className={styles.row}>
-            <ThirdColumn title="© 2018 Transitus">
-              <p className={styles.columnText}>
-                123 Demo Street<br />
-                Manhattan, NY 12345
-              </p>
-            </ThirdColumn>
-            <ThirdColumn title="Contact">
-              <p className={styles.columnText}>contact@transitus.org</p>
-            </ThirdColumn>
-            <ThirdColumn title="Stay In Touch">
+            <div className={`col-xs-12 ${styles.contentContainer}`}>
+              <p className={styles.copywrite}>Copyright © 2018 Transitus</p>
               <div className={styles.socialContainer}>
                 <a href="#">
-                  <img src="/uploads/facebook-copy.svg" width="36px" />
+                  <img src="/uploads/facebook-copy.svg" />
                 </a>
                 <a href="#">
-                  <img src="/uploads/twitter-copy.svg" width="36px" />
+                  <img src="/uploads/twitter-copy.svg" />
                 </a>
                 <a href="#">
-                  <img src="/uploads/instagram-copy.svg" width="36px" />
+                  <img src="/uploads/instagram-copy.svg" />
                 </a>
                 <a href="#">
-                  <img src="/uploads/linked-in-copy.svg" width="36px" />
+                  <img src="/uploads/linked-in-copy.svg" />
                 </a>
               </div>
-            </ThirdColumn>
+            </div>
           </div>
         </div>
       </div>
