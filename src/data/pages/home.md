@@ -10,7 +10,7 @@ whoWeAre:
 theProblem:
   text: >-
     Current transportation system is fragmented and unreliable, preventing
-    underserved people from getting to the places that matter
+    underserved people from getting to the places that matter.
   title: The Problem
 ---
 
