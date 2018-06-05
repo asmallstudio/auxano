@@ -27,6 +27,7 @@ function getSingleFile(path) {
 }
 
 export default {
+  siteRoot: "https://transitus.org",
   getSiteData: () => ({
     title: "Transitus"
   }),
