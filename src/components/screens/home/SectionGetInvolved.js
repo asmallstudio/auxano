@@ -24,7 +24,7 @@ class SectionGetInvolved extends React.Component {
     return (
       <div>
         <div className={styles.container}>
-          <a class="anchor" id="get-involved" />
+          <a className="anchor" id="get-involved" />
           <div className={styles.row}>
             <div className="col-xs-12">
               <h3>Help make our city sustainable, accessible, and vibrant!</h3>

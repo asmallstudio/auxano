@@ -10,7 +10,7 @@ class SectionFooter extends React.Component {
     return (
       <div>
         <div className={styles.container}>
-          <a class="anchor" id="footer" />
+          <a className="anchor" id="footer" />
           <div className={styles.row}>
             <ThirdColumn title="© 2018 Transitus">
               <p className={styles.columnText}>

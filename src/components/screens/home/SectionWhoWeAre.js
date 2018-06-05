@@ -7,7 +7,7 @@ class SectionWhoWeAre extends React.Component {
     return (
       <div>
         <div className={styles.container}>
-          <a class="anchor" id="who-we-are" />
+          <a className="anchor" id="who-we-are" />
           <div className={styles.row}>
             <div className="col-xs-12">
               <h4>Who We Are</h4>

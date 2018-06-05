@@ -27,7 +27,7 @@ class SectionLongForm extends React.Component {
     return (
       <div>
         <div className={styles.container}>
-          <a class="anchor" id="info" />
+          <a className="anchor" id="info" />
           <div className={styles.row}>
             <div className={`col-xs-12 ${styles.pairContainer}`}>
               <div
