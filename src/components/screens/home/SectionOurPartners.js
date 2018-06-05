@@ -20,12 +20,13 @@ class SectionOurPartners extends React.Component {
               <div className={styles.partnerImage}>
                 <picture>
                   <source
-                    srcset="/uploads/partner-logos.jpg"
+                    srcSet="/uploads/partner-logos@3x.jpg"
                     media="(min-width: 768px)"
                   />
                   <img
-                    srcSet="/uploads/partner-logos-narrow.jpg"
+                    srcSet="/uploads/partner-logos-narrow@3x.jpg"
                     alt="our-partners-image"
+                    width="100%"
                   />
                 </picture>
               </div>
