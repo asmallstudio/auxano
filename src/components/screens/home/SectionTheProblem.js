@@ -8,18 +8,17 @@ import theme from "../../../lib/theme";
 
 class SectionTheProblem extends React.Component {
   render() {
+    const {
+      data: { title, text }
+    } = this.props;
     return (
       <div>
         <div className={styles.container}>
           <a className="anchor" id="the-problem" />
           <div className={styles.row}>
             <div className="col-xs-12">
-              <h4>The Problem</h4>
-              <h3>
-                Current transportation system is fragmented and unreliable,
-                preventing underserved people from getting to the places that
-                matter.
-              </h3>
+              <h4>{title}</h4>
+              <h3>{text}</h3>
               <Spacer className={styles.spacer} />
               <p className={styles.chartTitle}>
                 Percentage of annual income spent on transportation

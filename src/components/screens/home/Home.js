@@ -23,8 +23,8 @@ class Home extends React.Component {
     return (
       <div>
         <SectionHero data={data.hero} />
-        <SectionWhoWeAre />
-        <SectionTheProblem />
+        <SectionWhoWeAre data={data.whoWeAre} />
+        <SectionTheProblem data={data.theProblem} />
         <SectionTheSolution />
         <SectionOurMission />
         <SectionFocusAreas />

@@ -13,15 +13,34 @@ collections:
         name: "home"
         file: "src/data/pages/home.md"
         fields:
-          - {label: Title, name: title, widget: string}
-          - {label: Date, name: date, widget: date}
-          - {label: Paragraph 1, name: p1, widget: markdown}
           - label: "Hero"
             name: "hero"
             widget: "object"
             fields: 
-              - {label: "Title", name: "title", widget: "string"}
+              - label: "Title"
+                name: "title"
+                widget: "string"
               - label: "Background Image"
                 name: "image"
                 widget: "image"
+          - label: "Who We Are"
+            name: "whoWeAre"
+            widget: "object"
+            fields:
+              - label: "Title"
+                name: "title"
+                widget: "string"
+              - label: "Text"
+                name: "text"
+                widget: "text"
+          - label: "The Problem"
+            name: "theProblem"
+            widget: "object"
+            fields:
+              - label: "Title"
+                name: "title"
+                widget: "string"
+              - label: "Text"
+                name: "text"
+                widget: "text"
                     

@@ -6,13 +6,13 @@ import styles from "./sectionHero.scss";
 class SectionHero extends React.Component {
   render() {
     const {
-      data: { title }
+      data: { title, image }
     } = this.props;
     return (
       <div>
         <div
           className={styles.container}
-          style={{ backgroundImage: "url(/uploads/hero-image-bridge.jpg)" }}
+          style={{ backgroundImage: `url(${image})` }}
         >
           <a className="anchor" id="hero" />
           <div className={styles.row}>
