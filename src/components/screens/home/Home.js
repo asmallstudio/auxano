@@ -17,11 +17,12 @@ import SectionGetInvolved from "./SectionGetInvolved";
 
 class Home extends React.Component {
   render() {
-    const { home } = this.props;
-    console.log(home);
+    const {
+      home: { data }
+    } = this.props;
     return (
       <div>
-        <SectionHero />
+        <SectionHero data={data.hero} />
         <SectionWhoWeAre />
         <SectionTheProblem />
         <SectionTheSolution />

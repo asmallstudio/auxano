@@ -5,6 +5,9 @@ import styles from "./sectionHero.scss";
 
 class SectionHero extends React.Component {
   render() {
+    const {
+      data: { title }
+    } = this.props;
     return (
       <div>
         <div
@@ -14,9 +17,7 @@ class SectionHero extends React.Component {
           <a className="anchor" id="hero" />
           <div className={styles.row}>
             <div className="col-xs-12">
-              <h1 className={styles.heroHeader}>
-                Getting people to places when it matters most...
-              </h1>
+              <h1 className={styles.heroHeader}>{title}</h1>
               <Link to="#who-we-are">
                 <div className={styles.scrollImageContainer}>
                   <img src="/scroll-down-arrow.svg" alt="scroll-down-arrow" />
