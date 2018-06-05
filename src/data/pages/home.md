@@ -5,7 +5,7 @@ hero:
 whoWeAre:
   text: >-
     A student-created, Ohio non-profit focused on reliable, low-cost mobility
-    options for the underserved
+    options for the underserved.
   title: Who We Are
 theProblem:
   text: >-
