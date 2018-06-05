@@ -35,7 +35,15 @@
     $idx: index($breakpoints, ($name $breakpoint));
 
     .spacer {
-      height: #{nth((32, 32, 64, 64, 128), $idx)}px;
+      height: #{nth((32, 32, 64, 64, 64), $idx)}px;
+    }
+
+    .headerText {
+      font-size: #{nth((14, 14, 18, 18, 18), $idx)}px;
+    }
+
+    .linkText {
+      font-size: #{nth((24, 24, 32, 32, 40), $idx)}px;
     }
   }
 }
