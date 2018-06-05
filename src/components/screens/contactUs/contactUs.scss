@@ -1,0 +1,41 @@
+@import "../../globalVariables.scss";
+
+.container {
+  background-color: white;
+  composes: container from global;
+}
+
+.headerText {
+  color: $dark-orange;
+  font-size: 14px;
+  font-weight: bold;
+  padding-top: 0px;
+  padding-bottom: 8px;
+  display: block;
+}
+
+.linkText {
+  display: block;
+  font-size: 24px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.67;
+  letter-spacing: normal;
+  color: $light-blue;
+  text-decoration: underline;
+}
+
+.row {
+  composes: row from global;
+}
+
+@each $name, $breakpoint in $breakpoints {
+  @media only screen and (min-width: $breakpoint) {
+    $idx: index($breakpoints, ($name $breakpoint));
+
+    .spacer {
+      height: #{nth((32, 32, 64, 64, 128), $idx)}px;
+    }
+  }
+}

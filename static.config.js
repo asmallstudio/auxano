@@ -39,6 +39,13 @@ export default {
         })
       },
       {
+        path: "/contact-us",
+        component: "src/components/screens/contactUs/ContactUs",
+        getData: () => ({
+          data: null // Does not need data for now
+        })
+      },
+      {
         is404: true,
         component: "src/components/screens/404/404"
       }
