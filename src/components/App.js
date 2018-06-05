@@ -5,6 +5,7 @@ import { hot } from "react-hot-loader";
 //
 import Routes from "react-static-routes";
 import Header from "./header/Header";
+import Footer from "./footer/Footer";
 
 import "./globalStyles.scss";
 import appStyles from "./app.scss";
@@ -16,6 +17,7 @@ const App = () => (
       <div className={appStyles.routesContainer}>
         <Routes />
       </div>
+      <Footer />
     </div>
   </Router>
 );

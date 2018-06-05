@@ -1,4 +1,4 @@
-@import "../../globalVariables.scss";
+@import "../globalVariables.scss";
 
 .container {
   background-color: $dark-blue;
@@ -57,8 +57,8 @@
     }
 
     .container {
-      padding-top: #{nth((32, 32, 48, 48, 48), $idx)}px;
-      padding-bottom: #{nth((32, 32, 48, 48, 48), $idx)}px;
+      padding-top: #{nth((32, 32, 48, 48, 48), $idx)}px !important;
+      padding-bottom: #{nth((32, 32, 48, 48, 48), $idx)}px !important;
     }
 
     .socialContainer {

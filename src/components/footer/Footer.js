@@ -1,11 +1,11 @@
 import React from "react";
 
-import styles from "./sectionFooter.scss";
-import theme from "../../../lib/theme";
-import Button from "../../ui/button/Button";
-import ThirdColumn from "../../ui/thirdColumn/ThirdColumn";
+import styles from "./footer.scss";
+import theme from "../../lib/theme";
+import Button from "../ui/button/Button";
+import ThirdColumn from "../ui/thirdColumn/ThirdColumn";
 
-class SectionFooter extends React.Component {
+class Footer extends React.Component {
   render() {
     return (
       <div>
@@ -36,4 +36,4 @@ class SectionFooter extends React.Component {
   }
 }
 
-export default SectionFooter;
+export default Footer;
