@@ -45,7 +45,7 @@ class Header extends React.Component {
             <MenuIcon showMenu={this.state.showMenu} />
           </div>
           <div className={styles.logoContainer}>
-            <Link to="#">
+            <Link to="/">
               <img
                 src="/uploads/logo.png"
                 alt="a small studio logo"

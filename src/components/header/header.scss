@@ -28,8 +28,8 @@
     }
 
     .row {
-      padding-left: #{nth((32, 32, 32, 32, 128), $idx) - $gutter/2}px;
-      padding-right: #{nth((32, 32, 32, 32, 128), $idx) - $gutter/2}px;
+      padding-left: #{nth((32, 32, 32, 32, 128), $idx)}px;
+      padding-right: #{nth((32, 32, 32, 32, 128), $idx)}px;
     }
 
     .logo-image {
