@@ -8,7 +8,8 @@ class SectionOurPartners extends React.Component {
   render() {
     return (
       <div>
-        <div className={styles.container} id="our-partners">
+        <div className={styles.container}>
+          <a class="anchor" id="our-partners" />
           <div className={styles.row}>
             <div className="col-xs-12">
               <h4>Our Partners</h4>

@@ -11,6 +11,7 @@ class SectionHero extends React.Component {
           className={styles.container}
           style={{ backgroundImage: "url(/uploads/hero-image-bridge.jpg)" }}
         >
+          <a class="anchor" id="hero" />
           <div className="row">
             <div className="col-xs-12">
               <h1 className={styles.heroHeader}>

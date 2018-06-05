@@ -9,7 +9,8 @@ class SectionFooter extends React.Component {
   render() {
     return (
       <div>
-        <div className={styles.container} id="get-involved">
+        <div className={styles.container}>
+          <a class="anchor" id="footer" />
           <div className={styles.row}>
             <ThirdColumn title="© 2018 Transitus">
               <p className={styles.columnText}>

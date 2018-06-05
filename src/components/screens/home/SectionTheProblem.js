@@ -11,6 +11,7 @@ class SectionTheProblem extends React.Component {
     return (
       <div>
         <div className={styles.container}>
+          <a class="anchor" id="the-problem" />
           <div className={styles.row}>
             <div className="col-xs-12">
               <h4>The Problem</h4>

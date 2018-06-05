@@ -6,7 +6,8 @@ class SectionWhatWeDo extends React.Component {
   render() {
     return (
       <div>
-        <div className={styles.container} id="what-we-do">
+        <div className={styles.container}>
+          <a class="anchor" id="what-we-do" />
           <div className={styles.row}>
             <div className="col-xs-12">
               <h4>What We Do</h4>

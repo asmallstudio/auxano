@@ -6,7 +6,8 @@ class SectionDiagramSolution extends React.Component {
   render() {
     return (
       <div>
-        <div className={styles.container} id="diagram-solution">
+        <div className={styles.container}>
+          <a class="anchor" id="diagram-solution" />
           <img src="/uploads/diagram-solution.svg" width="100%" />
         </div>
       </div>

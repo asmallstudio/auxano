@@ -6,7 +6,8 @@ class SectionFocusAreas extends React.Component {
   render() {
     return (
       <div>
-        <div className={styles.container} id="the-solution">
+        <div className={styles.container}>
+          <a class="anchor" id="the-solution" />
           <div className={styles.row}>
             <div className="col-xs-12 col-md-7">
               <h1>Focus Areas</h1>
