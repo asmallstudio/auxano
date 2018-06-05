@@ -12,7 +12,7 @@ class SectionHero extends React.Component {
           style={{ backgroundImage: "url(/uploads/hero-image-bridge.jpg)" }}
         >
           <a className="anchor" id="hero" />
-          <div className="row">
+          <div className={styles.row}>
             <div className="col-xs-12">
               <h1 className={styles.heroHeader}>
                 Getting people to places when it matters most...

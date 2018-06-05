@@ -9,6 +9,12 @@
   composes: container from global;
 }
 
+.row {
+  composes: row from global;
+  width: 100%;
+  max-width: unset;
+}
+
 .heroHeader {
   color: $light-blue;
 }
