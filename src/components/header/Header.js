@@ -26,7 +26,6 @@ class Header extends React.Component {
   };
 
   _handleMenuClose = () => {
-    console.log("handle close clicked");
     this.setState({
       showMenu: false
     });
