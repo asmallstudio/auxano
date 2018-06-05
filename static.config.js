@@ -13,10 +13,12 @@ function getSingleFile(path) {
       if (fs.existsSync(path)) {
         const data = fs.readFileSync(path, "utf8");
         const dataObj = matter(data);
-        dataObj.data.slug = dataObj.data.title
-          .toLowerCase()
-          .replace(/ /g, "-")
-          .replace(/[^\w-]+/g, "");
+        if (dataObj.data.title) {
+          dataObj.data.slug = dataObj.data.title
+            .toLowerCase()
+            .replace(/ /g, "-")
+            .replace(/[^\w-]+/g, "");
+        }
         delete dataObj.orig;
         resolve(dataObj);
       }
