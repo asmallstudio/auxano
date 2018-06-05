@@ -110,6 +110,15 @@ class Header extends React.Component {
                     Get Involved
                   </Link>
                 </li>
+                <li>
+                  <Link
+                    to="/contact-us"
+                    activeClassName={styles.activeLink}
+                    onClick={this._handleMenuClose}
+                  >
+                    Contact Us
+                  </Link>
+                </li>
               </ul>
             </nav>
           </div>
