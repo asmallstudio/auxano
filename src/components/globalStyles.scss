@@ -127,7 +127,7 @@ p {
       }
 
       a.anchor {
-        top: -#{nth($header-height, $idx) + 10}px;
+        top: -#{nth($header-height, $idx) + nth((32, 32, 64, 128, 128), $idx) - 5}px;
       }
 
       .row {
