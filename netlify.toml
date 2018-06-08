@@ -4,3 +4,6 @@
 
 [context.deploy-preview]
   command = "yarn stage"
+
+[context.branch-deploy]
+  command = "yarn stage"
