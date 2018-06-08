@@ -58,12 +58,7 @@ class SectionGetInvolved extends React.Component {
           </div>
           <div className={styles.row}>
             <div className="col-xs-12">
-              <Button
-                text="Get Involved"
-                to="/contact-us"
-                backgroundColor={theme.darkOrange}
-                textColor="white"
-              />
+              <Button text="Get Involved" to="/contact-us" textColor="white" />
             </div>
           </div>
         </div>

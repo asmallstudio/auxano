@@ -33,7 +33,6 @@ class SectionOurPartners extends React.Component {
               <Button
                 text="Become a Partner"
                 to="/contact-us"
-                backgroundColor={theme.darkOrange}
                 textColor="white"
               />
             </div>
