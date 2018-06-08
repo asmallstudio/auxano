@@ -3,7 +3,7 @@
 .container {
   background-color: $light-blue;
   h1 {
-    color: $sky-blue;
+    color: white;
   }
   composes: container from global;
 }
