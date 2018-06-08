@@ -46,9 +46,11 @@ const Header = ({ title }) => (
 );
 
 const Link = ({ title, to }) => (
-  <a href={to}>
-    <span className={styles.linkText}>{title}</span>
-  </a>
+  <div>
+    <a href={to}>
+      <span className={styles.linkText}>{title}</span>
+    </a>
+  </div>
 );
 
 export default withRouteData(ContactUs);
