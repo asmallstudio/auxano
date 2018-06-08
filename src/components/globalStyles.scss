@@ -157,7 +157,7 @@ p {
 
       p {
         font-size: #{nth((12, 12, 18, 18, 18), $idx)}px;
-        line-height: #{nth((1.5, 1.5, 1.2, 1.2, 1.2), $idx)};
+        line-height: #{nth((1.5, 1.5, 1.62, 1.62, 1.62), $idx)};
       }
     }
   }
