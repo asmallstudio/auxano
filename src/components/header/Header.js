@@ -46,11 +46,7 @@ class Header extends React.Component {
           </div>
           <div className={styles.logoContainer}>
             <Link to="/#">
-              <img
-                src="/uploads/logo.png"
-                alt="a small studio logo"
-                className={styles["logo-image"]}
-              />
+              <h2>The Next Thing</h2>
             </Link>
           </div>
 
@@ -63,7 +59,7 @@ class Header extends React.Component {
               <ul className={styles.list}>
                 <li>
                   <Link
-                    to="/#our-mission"
+                    to="/#"
                     activeClassName={styles.activeLink}
                     isActive={this._determineHomeHashActive(
                       "/",
@@ -71,52 +67,16 @@ class Header extends React.Component {
                     )}
                     onClick={this._handleMenuClose}
                   >
-                    Our Mission
+                    Home
                   </Link>
                 </li>
                 <li>
                   <Link
-                    to="/#what-we-do"
-                    activeClassName={styles.activeLink}
-                    isActive={this._determineHomeHashActive("/", "#what-we-do")}
-                    onClick={this._handleMenuClose}
-                  >
-                    What We Do
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    to="/#our-partners"
-                    activeClassName={styles.activeLink}
-                    isActive={this._determineHomeHashActive(
-                      "/",
-                      "#our-partners"
-                    )}
-                    onClick={this._handleMenuClose}
-                  >
-                    Our Partners
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    to="/#get-involved"
-                    activeClassName={styles.activeLink}
-                    isActive={this._determineHomeHashActive(
-                      "/",
-                      "#get-involved"
-                    )}
-                    onClick={this._handleMenuClose}
-                  >
-                    Get Involved
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    to="/contact-us"
+                    to="/other-page"
                     activeClassName={styles.activeLink}
                     onClick={this._handleMenuClose}
                   >
-                    Contact Us
+                    Other Page
                   </Link>
                 </li>
               </ul>

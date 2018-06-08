@@ -1,7 +1,0 @@
-@import "../../globalVariables.scss";
-
-.container {
-  composes: container from global;
-  padding: 0px !important;
-  background-color: $dark-blue;
-}

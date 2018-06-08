@@ -42,13 +42,6 @@ export default {
         })
       },
       {
-        path: "/contact-us",
-        component: "src/components/screens/contactUs/ContactUs",
-        getData: () => ({
-          data: null // Does not need data for now
-        })
-      },
-      {
         is404: true,
         component: "src/components/screens/404/404"
       }
@@ -57,19 +50,7 @@ export default {
   Document: ({ Html, Head, Body, children, renderMeta }) => (
     <Html>
       <Head>
-        <title>Transitus</title>
-        <link
-          rel="icon"
-          type="image/png"
-          href="favicon-32x32.png"
-          sizes="32x32"
-        />
-        <link
-          rel="icon"
-          type="image/png"
-          href="favicon-16x16.png"
-          sizes="16x16"
-        />
+        <title>The Next Thing</title>
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         {renderMeta.styleTags}

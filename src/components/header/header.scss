@@ -1,7 +1,7 @@
 @import "../globalVariables.scss";
 
 .container {
-  background-color: white;
+  background-color: #f2f2f2;
   position: fixed;
   top: 0px;
   display: flex;
@@ -11,7 +11,7 @@
 }
 
 .activeLink {
-  color: $dark-orange !important;
+  color: pink !important;
 }
 
 @each $name, $breakpoint in $breakpoints {
@@ -31,7 +31,7 @@
       padding-right: #{nth((32, 32, 32, 32, 128), $idx)}px;
     }
 
-    .logo-image {
+    .logoImage {
       width: #{nth((160, 160, 160, 160, 212.7), $idx)}px;
     }
   }
@@ -47,7 +47,6 @@
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
-  background-color: white;
 }
 
 .list {
@@ -62,10 +61,10 @@
     font-size: 32px;
     font-weight: bold;
     font-style: normal;
-    color: $dark-blue;
+    color: black;
 
     a:hover {
-      color: $dark-orange;
+      color: pink;
     }
   }
 }
