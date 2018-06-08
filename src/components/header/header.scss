@@ -12,7 +12,6 @@
 
 .activeLink {
   color: $dark-orange !important;
-  font-weight: bold;
 }
 
 @each $name, $breakpoint in $breakpoints {
@@ -64,6 +63,10 @@
     font-weight: bold;
     font-style: normal;
     color: $dark-blue;
+
+    a:hover {
+      color: $dark-orange;
+    }
   }
 }
 
