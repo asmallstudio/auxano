@@ -7,13 +7,13 @@ class Button extends React.Component {
   render() {
     const { text, backgroundColor, textColor, to } = this.props;
     return (
-      <button className={styles.button} style={{ backgroundColor }}>
-        <Link to={to}>
+      <Link to={to}>
+        <button className={styles.button} style={{ backgroundColor }}>
           <span className={styles.text} style={{ color: textColor }}>
             {text}
           </span>
-        </Link>
-      </button>
+        </button>
+      </Link>
     );
   }
 }
