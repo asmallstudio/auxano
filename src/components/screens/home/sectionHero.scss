@@ -1,22 +1,23 @@
 @import "../../globalVariables.scss";
 
-.container {
-  position: relative;
-  background-size: cover;
-  background-position: center;
-  padding-top: 0px !important;
-  padding-bottom: 0px;
-  composes: container from global;
-}
-
 .row {
   composes: row from global;
-  width: 100%;
-  max-width: unset !important;
 }
 
 .heroHeader {
   color: $light-blue;
+}
+
+.heroContainer {
+  position: relative;
+}
+
+.heroChildren {
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
 }
 
 .scrollImageContainer {
@@ -35,8 +36,8 @@
   @media only screen and (min-width: $breakpoint) {
     $idx: index($breakpoints, ($name $breakpoint));
 
-    .container {
-      height: #{nth((480, 480, 800, 800, 800), $idx)}px;
+    .parallaxBanner {
+      height: #{nth((480, 480, 800, 800, 800), $idx)}px !important;
     }
 
     .heroHeader {

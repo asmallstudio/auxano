@@ -31,14 +31,29 @@ class SectionGetInvolved extends React.Component {
             </div>
           </div>
           <div className={`${styles.row} ${styles.columnsContainer}`}>
-            <ThirdColumn title={data.ambassadors.title}>
-              <p className={styles.columnText}>{data.ambassadors.text}</p>
+            <ThirdColumn
+              title={data.ambassadors.title}
+              className={styles.columnContainer}
+            >
+              <div className={styles.columnTextContainer}>
+                <p className={styles.columnText}>{data.ambassadors.text}</p>
+              </div>
             </ThirdColumn>
-            <ThirdColumn title={data.drivers.title}>
-              <p className={styles.columnText}>{data.drivers.text}</p>
+            <ThirdColumn
+              title={data.drivers.title}
+              className={styles.columnContainer}
+            >
+              <div className={styles.columnTextContainer}>
+                <p className={styles.columnText}>{data.drivers.text}</p>
+              </div>
             </ThirdColumn>
-            <ThirdColumn title={data.volunteers.title}>
-              <p className={styles.columnText}>{data.volunteers.text}</p>
+            <ThirdColumn
+              title={data.volunteers.title}
+              className={styles.columnContainer}
+            >
+              <div className={styles.columnTextContainer}>
+                <p className={styles.columnText}>{data.volunteers.text}</p>
+              </div>
             </ThirdColumn>
           </div>
           <div className={styles.row}>

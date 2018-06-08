@@ -12,7 +12,6 @@
 
 .activeLink {
   color: $dark-orange !important;
-  font-weight: bold;
 }
 
 @each $name, $breakpoint in $breakpoints {
@@ -64,6 +63,10 @@
     font-weight: bold;
     font-style: normal;
     color: $dark-blue;
+
+    a:hover {
+      color: $dark-orange;
+    }
   }
 }
 
@@ -89,9 +92,14 @@ nav {
 
 .menuToggleContainer {
   position: absolute;
+  width: 40px;
+  height: 40px;
   right: 32px;
-  top: 28px;
+  top: 20px;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .show {
