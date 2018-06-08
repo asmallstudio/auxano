@@ -11,8 +11,6 @@
 
 .row {
   composes: row from global;
-  width: 100%;
-  max-width: unset !important;
 }
 
 .heroHeader {
