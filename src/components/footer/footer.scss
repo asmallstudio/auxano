@@ -65,7 +65,7 @@
       min-width: #{nth((200, 200, 300, 300, 300), $idx)}px;
 
       img {
-        width: #{nth((16, 16, 24, 24, 48), $idx)}px;
+        width: #{nth((16, 16, 24, 24, 32), $idx)}px;
       }
     }
   }
