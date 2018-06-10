@@ -13,7 +13,7 @@ export default () => (
       </div>
 
       <div className="col-xs-15 col-sm-offset-4">
-        <h3>xs 20; sm offset 4</h3>
+        <h3>xs 15; sm offset 4</h3>
       </div>
     </div>
   </div>
