@@ -1,12 +1,13 @@
 // == LAYOUT ==
 
+$max-width: 1440;
 $grid__cols: 20;
 
 $grid__bp-xs: 0;
 $grid__bp-sm: 576;
 $grid__bp-md: 768;
 $grid__bp-lg: 992;
-$grid__bp-xl: 1440;
+$grid__bp-xl: $max-width;
 
 $map-grid-props: (
   "xs": $grid__bp-xs,
