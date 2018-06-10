@@ -6,4 +6,8 @@
 .row {
   background-color: blue;
   composes: row from global;
+
+  > div {
+    background-color: aqua;
+  }
 }
