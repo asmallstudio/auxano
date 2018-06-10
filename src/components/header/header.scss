@@ -26,11 +26,6 @@
       height: #{nth($header-height, $idx)}px;
     }
 
-    .row {
-      padding-left: #{nth((32, 32, 32, 32, 128), $idx)}px;
-      padding-right: #{nth((32, 32, 32, 32, 128), $idx)}px;
-    }
-
     .logoImage {
       width: #{nth((160, 160, 160, 160, 212.7), $idx)}px;
     }
