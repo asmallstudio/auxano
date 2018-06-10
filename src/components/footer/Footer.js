@@ -7,7 +7,7 @@ class Footer extends React.Component {
         <div className="container">
           <a className="anchor" id="footer" />
           <div className="row">
-            <h4>Footer time!</h4>
+            <h4>[Footer]</h4>
           </div>
         </div>
       </div>
