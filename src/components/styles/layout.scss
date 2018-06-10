@@ -14,22 +14,22 @@
 }
 
 // For a breakpoint, this will create all column sizes
-@mixin create-col-classes($modifier, $grid__cols, $breakpoint) {
+@mixin create-col-classes($modifier, $grid-cols, $breakpoint) {
   @include create-mq($breakpoint) {
     // Create base offset of 0 to be able to clear at wider screens
     .col-#{$modifier}-offset-0 {
       margin-left: 0;
     }
 
-    @for $i from 1 through $grid__cols {
+    @for $i from 1 through $grid-cols {
       // Create columns
       .col-#{$modifier}-#{$i} {
-        flex-basis: (100 / ($grid__cols / $i)) * 1%;
+        flex-basis: (100 / ($grid-cols / $i)) * 1%;
       }
 
       // Create margin-left offsets
       .col-#{$modifier}-offset-#{$i} {
-        margin-left: (100 / ($grid__cols / $i)) * 1%;
+        margin-left: (100 / ($grid-cols / $i)) * 1%;
       }
     }
   }
@@ -45,7 +45,7 @@
   }
 
   .container {
-    max-width: $grid__bp-xl * 1px;
+    max-width: $grid-bp-xl * 1px;
     margin: 0 auto;
 
     &--fluid {
@@ -60,12 +60,12 @@
     width: 100%;
   }
 
-  @each $modifier, $breakpoint in $map-grid-props {
-    @include create-col-classes($modifier, $grid__cols, $breakpoint);
+  @each $modifier, $breakpoint in $breakpoints {
+    @include create-col-classes($modifier, $grid-cols, $breakpoint);
   }
 
   // Create hidden classes at each breakpoint
-  @each $modifier, $breakpoint in $map-grid-props {
+  @each $modifier, $breakpoint in $breakpoints {
     @include create-mq($breakpoint - 1, "max") {
       .hidden-#{$modifier}-down {
         display: none !important;

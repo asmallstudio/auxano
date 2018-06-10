@@ -14,9 +14,9 @@
   color: pink !important;
 }
 
-@each $name, $breakpoint in $map-grid-props {
+@each $name, $breakpoint in $breakpoints {
   @media only screen and (min-width: $breakpoint * 1px) {
-    $idx: index($map-grid-props, ($name $breakpoint));
+    $idx: index($breakpoints, ($name $breakpoint));
 
     .container {
       height: #{nth($header-height, $idx)}px;

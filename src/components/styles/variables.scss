@@ -1,20 +1,20 @@
 // == LAYOUT ==
 
 $max-width: 1440;
-$grid__cols: 20;
+$grid-cols: 20;
 
-$grid__bp-xs: 0;
-$grid__bp-sm: 576;
-$grid__bp-md: 768;
-$grid__bp-lg: 992;
-$grid__bp-xl: $max-width;
+$grid-bp-xs: 0;
+$grid-bp-sm: 576;
+$grid-bp-md: 768;
+$grid-bp-lg: 992;
+$grid-bp-xl: $max-width;
 
-$map-grid-props: (
-  "xs": $grid__bp-xs,
-  "sm": $grid__bp-sm,
-  "md": $grid__bp-md,
-  "lg": $grid__bp-lg,
-  "xl": $grid__bp-xl
+$breakpoints: (
+  "xs": $grid-bp-xs,
+  "sm": $grid-bp-sm,
+  "md": $grid-bp-md,
+  "lg": $grid-bp-lg,
+  "xl": $grid-bp-xl
 );
 
 // == HEADER ==

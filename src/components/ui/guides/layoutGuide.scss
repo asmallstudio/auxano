@@ -14,7 +14,8 @@ $orange: #ff9b42;
   composes: row from global;
 
   > div {
-    background-color: $salmon;
+    background-color: $blue;
     border: 1px black solid;
+    color: white;
   }
 }
