@@ -5,6 +5,8 @@
   div-test-b        #layout-test-b
   div-row-c         #layout-row-c
   div-test-c        #layout-test-c
+  div-row-d         #layout-row-d
+  h3-test-d         #layout-test-d
 
 = Layout =
 
@@ -22,6 +24,9 @@
     div-test-c:
       absent
 
+    h3-test-d:
+      css color is "rgba(255, 0, 0, 1)"
+
   @on mobile
     div-test-a:
       width ~75% of div-row/width
@@ -31,6 +36,9 @@
 
     div-test-c:
       absent
+
+    h3-test-d:
+      css color is "rgba(255, 255, 255, 1)"
 
   @on smallTablet
     div-test-a:
@@ -42,6 +50,9 @@
     div-test-c:
       visible
 
+    h3-test-d:
+      css color is "rgba(0, 128, 0, 1)"
+
   @on tablet
     div-test-a:
       width ~50% of div-row/width
@@ -52,6 +63,9 @@
     div-test-c:
       absent
 
+    h3-test-d:
+      css color is "rgba(255, 192, 203, 1)"
+
   @on desktop
     div-test-a:
       width ~25% of div-row/width
@@ -61,3 +75,6 @@
 
     div-test-c:
       absent
+
+    h3-test-d:
+      css color is "rgba(0, 128, 0, 1)"

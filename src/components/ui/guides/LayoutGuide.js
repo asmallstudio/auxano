@@ -28,5 +28,12 @@ export default () => (
         <h3>hi</h3>
       </div>
     </div>
+    <div className={styles.row} id="layout-row-d">
+      <div className="col-xs-20">
+        <h3 className={styles.mqTest} id="layout-test-d">
+          media query test
+        </h3>
+      </div>
+    </div>
   </div>
 );
