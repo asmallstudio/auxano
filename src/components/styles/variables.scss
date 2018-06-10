@@ -1,4 +1,4 @@
-// LAYOUT
+// == LAYOUT ==
 
 $grid__cols: 20;
 
@@ -15,3 +15,7 @@ $map-grid-props: (
   "lg": $grid__bp-lg,
   "xl": $grid__bp-xl
 );
+
+// == HEADER ==
+
+$header-height: (80, 80, 80, 80, 112);

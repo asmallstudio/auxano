@@ -1,4 +1,4 @@
-@import "./globalVariables.scss";
+@import "./styles/variables.scss";
 
 body {
   margin: 0;
@@ -14,9 +14,9 @@ body {
   }
 }
 
-@each $name, $breakpoint in $breakpoints {
-  @media only screen and (min-width: $breakpoint) {
-    $idx: index($breakpoints, ($name $breakpoint));
+@each $name, $breakpoint in $map-grid-props {
+  @media only screen and (min-width: $breakpoint * 1px) {
+    $idx: index($map-grid-props, ($name $breakpoint));
 
     .routesContainer {
       margin-top: #{nth($header-height, $idx)}px;

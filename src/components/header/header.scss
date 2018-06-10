@@ -1,4 +1,4 @@
-@import "../globalVariables.scss";
+@import "../styles/variables.scss";
 
 .container {
   background-color: #f2f2f2;
@@ -14,9 +14,9 @@
   color: pink !important;
 }
 
-@each $name, $breakpoint in $breakpoints {
-  @media only screen and (min-width: $breakpoint) {
-    $idx: index($breakpoints, ($name $breakpoint));
+@each $name, $breakpoint in $map-grid-props {
+  @media only screen and (min-width: $breakpoint * 1px) {
+    $idx: index($map-grid-props, ($name $breakpoint));
 
     .container {
       height: #{nth($header-height, $idx)}px;
