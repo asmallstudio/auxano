@@ -64,6 +64,7 @@
     @include create-col-classes($modifier, $grid__cols, $breakpoint);
   }
 
+  // Create hidden classes at each breakpoint
   @each $modifier, $breakpoint in $map-grid-props {
     @include create-mq($breakpoint - 1, "max") {
       .hidden-#{$modifier}-down {

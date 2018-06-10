@@ -5,8 +5,15 @@ import styles from "./layoutGuide.scss";
 export default () => (
   <div className={styles.container}>
     <div className={styles.row}>
-      <div className="col-xs-4 col-lg-6 col-xs-offset-1 col-lg-offset-0">
-        <h2>Layout Guide</h2>
+      <div className="col-xs-20">
+        <h1>Layout Guide</h1>
+      </div>
+      <div className="col-xs-20 col-sm-15 col-lg-10">
+        <h3>xs 20; sm 15; lg 10;</h3>
+      </div>
+
+      <div className="col-xs-15 col-sm-offset-4">
+        <h3>xs 20; sm offset 4</h3>
       </div>
     </div>
   </div>

@@ -1,13 +1,20 @@
+$beige: #d9e5d6;
+$blue: #00a7e1;
+$cream: #eddea4;
+$salmon: #f7a072;
+$orange: #ff9b42;
+
 .container {
-  background-color: pink;
+  background-color: $beige;
   composes: container from global;
 }
 
 .row {
-  background-color: blue;
+  background-color: $cream;
   composes: row from global;
 
   > div {
-    background-color: aqua;
+    background-color: $salmon;
+    border: 1px black solid;
   }
 }
