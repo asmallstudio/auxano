@@ -1,3 +1,6 @@
+// TO RUN
+// `galen test layout.test.js --htmlreport reports`
+
 var devices = {
   smallMobile: {
     deviceName: "smallMobile",
