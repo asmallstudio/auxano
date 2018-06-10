@@ -1,0 +1,9 @@
+.container {
+  background-color: pink;
+  composes: container from global;
+}
+
+.row {
+  background-color: blue;
+  composes: row from global;
+}

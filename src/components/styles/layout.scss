@@ -1,0 +1,55 @@
+@import "./variables.scss";
+
+// == MIXINS ==
+
+// Creates a media query given a breakpoint
+@mixin create-mq($breakpoint) {
+  @if ($breakpoint == 0) {
+    @content;
+  } @else {
+    @media screen and (min-width: $breakpoint *1px) {
+      @content;
+    }
+  }
+}
+
+// For a breakpoint, this will create all column sizes
+@mixin create-col-classes($modifier, $grid__cols, $breakpoint) {
+  @include create-mq($breakpoint) {
+    @for $i from 1 through $grid__cols {
+      .col#{$modifier}-#{$i} {
+        flex-basis: (100 / ($grid__cols / $i)) * 1%;
+      }
+    }
+  }
+}
+
+:global {
+  *,
+  *:after,
+  *:before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  .container {
+    max-width: $grid__bp-xl * 1px;
+    margin: 0 auto;
+
+    &--fluid {
+      margin: 0;
+      max-width: 100%;
+    }
+  }
+
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  @each $modifier, $breakpoint in $map-grid-props {
+    @include create-col-classes($modifier, $grid__cols, $breakpoint);
+  }
+}
