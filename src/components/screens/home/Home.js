@@ -1,8 +1,8 @@
 import React from "react";
 import { withRouteData } from "react-static";
 
-import DesignGuide from "../../ui/DesignGuide";
-import LayoutGuide from "../../ui/LayoutGuide";
+import DesignGuide from "../../ui/guides/DesignGuide";
+import LayoutGuide from "../../ui/guides/LayoutGuide";
 
 class Home extends React.Component {
   render() {
