@@ -1,6 +1,4 @@
 const fs = require("fs");
-const klaw = require("klaw");
-const path = require("path");
 const matter = require("gray-matter");
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const postcssFlexbugsFixes = require("postcss-flexbugs-fixes");
@@ -47,17 +45,25 @@ export default {
       }
     ];
   },
-  Document: ({ Html, Head, Body, children, renderMeta }) => (
-    <Html>
-      <Head>
-        <title>The Next Thing</title>
-        <meta charSet="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        {renderMeta.styleTags}
-      </Head>
-      <Body>{children}</Body>
-    </Html>
-  ),
+  Document: function createDocument({
+    Html,
+    Head,
+    Body,
+    children,
+    renderMeta
+  }) {
+    return (
+      <Html>
+        <Head>
+          <title>The Next Thing</title>
+          <meta charSet="UTF-8" />
+          <meta name="viewport" content="width=device-width, initial-scale=1" />
+          {renderMeta.styleTags}
+        </Head>
+        <Body>{children}</Body>
+      </Html>
+    );
+  },
   webpack: (config, { defaultLoaders, stage }) => {
     config.module.rules = [
       {
