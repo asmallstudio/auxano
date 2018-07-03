@@ -25,9 +25,8 @@ function getSingleFile(path) {
 }
 
 export default {
-  siteRoot: "https://react-static-boilerplate.netlify.com",
   getSiteData: () => ({
-    title: "Transitus"
+    title: "The Next Thing"
   }),
   getRoutes: async () => {
     const home = await getSingleFile("./src/data/pages/home.md");
