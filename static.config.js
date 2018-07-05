@@ -29,7 +29,7 @@ export default {
     title: "The Next Thing"
   }),
   getRoutes: async () => {
-    const home = await getSingleFile("./src/data/pages/home.md");
+    const home = require("./src/data/pages/home.json");
     return [
       {
         path: "/",

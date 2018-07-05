@@ -6,15 +6,16 @@ import LayoutGuide from "../../ui/guides/LayoutGuide";
 
 class Home extends React.Component {
   render() {
-    const {
-      home: { data }
-    } = this.props;
     return (
       <div>
         <div className="container">
           <div className="row">
-            <h1>Welcome to your Boilerplate</h1>
-            <hr />
+            <div className="col-xs-12">
+              <h1>Welcome to your Boilerplate</h1>
+              <h1>{this.props.home.hero.title}</h1>
+              <h3>{this.props.home.hero.exampleText}</h3>
+              <hr />
+            </div>
           </div>
         </div>
         <DesignGuide />
