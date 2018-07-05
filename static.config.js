@@ -30,12 +30,20 @@ export default {
   }),
   getRoutes: async () => {
     const home = require("./src/data/pages/home.json");
+    const other = require("./src/data/pages/other.json");
     return [
       {
         path: "/",
         component: "src/components/screens/home/Home",
         getData: () => ({
           home
+        })
+      },
+      {
+        path: "/other",
+        component: "src/components/screens/other/Other",
+        getData: () => ({
+          other
         })
       },
       {

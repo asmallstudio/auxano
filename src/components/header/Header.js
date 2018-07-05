@@ -72,7 +72,7 @@ class Header extends React.Component {
                 </li>
                 <li>
                   <Link
-                    to="/other-page"
+                    to="/other"
                     activeClassName={styles.activeLink}
                     onClick={this._handleMenuClose}
                   >

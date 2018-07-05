@@ -26,3 +26,21 @@ collections:
                 label: 'Example text'
                 name: exampleText
                 widget: text
+      -
+        label: 'Other Page'
+        name: other
+        file: src/data/pages/other.json
+        fields:
+          -
+            label: Other
+            name: other
+            widget: object
+            fields:
+              -
+                label: 'Title Other'
+                name: title
+                widget: string
+              -
+                label: 'Text other'
+                name: exampleText
+                widget: text
