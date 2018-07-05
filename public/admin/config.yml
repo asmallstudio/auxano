@@ -1,47 +1,28 @@
 backend:
   name: git-gateway
-  branch: master # Branch to update (optional; defaults to master)
-
-media_folder: "public/uploads" # Media files will be stored in the repo under public/uploads
-public_folder: "/uploads" # Folder path where uploaded files will be accessed, relative to the base of the built site
-publish_mode: editorial_workflow
-
+  branch: master
+media_folder: public/uploads
+public_folder: /uploads
 collections:
-  - label: "Pages"
-    name: "pages"
+  -
+    label: Pages
+    name: pages
     files:
-      - label: "Home Page"
-        name: "home"
-        file: "src/data/pages/home.md"
+      -
+        label: 'Home Page'
+        name: home
+        file: src/data/pages/home.md
         fields:
-          - label: "Hero"
-            name: "hero"
-            widget: "object"
-            fields: 
-              - label: "Title"
-                name: "title"
-                widget: "string"
-              - label: "Background Image"
-                name: "image"
-                widget: "image"
-          - label: "Who We Are"
-            name: "whoWeAre"
-            widget: "object"
+          -
+            label: Hero
+            name: hero
+            widget: object
             fields:
-              - label: "Title"
-                name: "title"
-                widget: "string"
-              - label: "Text"
-                name: "text"
-                widget: "text"
-          - label: "The Problem"
-            name: "theProblem"
-            widget: "object"
-            fields:
-              - label: "Title"
-                name: "title"
-                widget: "string"
-              - label: "Text"
-                name: "text"
-                widget: "text"
-                    
+              -
+                label: Title
+                name: title
+                widget: string
+              -
+                label: 'Example text'
+                name: exampleText
+                widget: text
