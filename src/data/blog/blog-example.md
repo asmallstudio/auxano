@@ -1,4 +1,9 @@
+---
 title: 'Hello I am a string'
-date: 'July 5, 2018 3:30 PM'
+date: 'July 5, 2018 3:48 PM'
 thumbnail: /uploads/test.jpg
-body: "# h1 \n\n Test"
+---
+
+# Body data
+
+Hello
