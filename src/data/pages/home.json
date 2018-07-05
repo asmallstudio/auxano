@@ -1,1 +1,6 @@
-{"hero":{"title":"Hello I am a string","exampleText":"Hello I am a text"}}
+{
+  "hero": {
+    "title": "Hello I am a string - new val",
+    "exampleText": "Hello I am a text - new val"
+  }
+}
