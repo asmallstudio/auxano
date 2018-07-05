@@ -11,7 +11,7 @@ class Home extends React.Component {
         <div className="container">
           <div className="row">
             <div className="col-xs-12">
-              <h1>Welcome to your Boilerplate</h1>
+              <h1>Welcome to your Boilerplate!</h1>
               <h1>{this.props.home.hero.title}</h1>
               <h3>{this.props.home.hero.exampleText}</h3>
               <hr />
