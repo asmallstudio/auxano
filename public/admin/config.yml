@@ -11,7 +11,7 @@ collections:
       -
         label: 'Home Page'
         name: home
-        file: src/data/pages/home.md
+        file: src/data/pages/home.json
         fields:
           -
             label: Hero
