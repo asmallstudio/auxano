@@ -11,7 +11,7 @@ collections:
       -
         label: 'Home Page'
         name: home
-        file: src/data/pages/home.json
+        file: src/data/pages/home.yml
         fields:
           -
             label: Hero
@@ -29,7 +29,7 @@ collections:
       -
         label: 'Other Page'
         name: other
-        file: src/data/pages/other.json
+        file: src/data/pages/other.yml
         fields:
           -
             label: Other

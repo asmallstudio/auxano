@@ -4,6 +4,7 @@ const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const postcssFlexbugsFixes = require("postcss-flexbugs-fixes");
 const autoprefixer = require("autoprefixer");
 const React = require("react");
+const yaml = require("js-yaml");
 
 function getSingleFile(path) {
   const getFiles = () =>
@@ -29,8 +30,12 @@ export default {
     title: "The Next Thing"
   }),
   getRoutes: async () => {
-    const home = require("./src/data/pages/home.json");
-    const other = require("./src/data/pages/other.json");
+    const home = yaml.safeLoad(
+      fs.readFileSync("./src/data/pages/home.yml", "utf8")
+    );
+    const other = yaml.safeLoad(
+      fs.readFileSync("./src/data/pages/other.yml", "utf8")
+    );
     return [
       {
         path: "/",
