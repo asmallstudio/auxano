@@ -39,6 +39,7 @@ class Other extends React.Component {
               <h3>{this.props.other.other.exampleText}</h3>
               <hr />
               <form onSubmit={this.handleSubmit}>
+                <input type="hidden" name="form-name" value="contact" />
                 <p>
                   <label>
                     Your Name:{" "}
