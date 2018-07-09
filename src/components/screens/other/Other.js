@@ -53,7 +53,7 @@ class Other extends React.Component {
                 data-netlify="true"
                 data-netlify-honeypot="bot-field"
               >
-                <p hidden>
+                <p>
                   <label>
                     Don’t fill this out:{" "}
                     <input name="bot-field" onChange={this.handleChange} />
