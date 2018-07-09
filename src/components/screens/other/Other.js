@@ -44,7 +44,14 @@ class Other extends React.Component {
                 name="contact2"
                 netlify="true"
                 data-netlify="true"
+                data-netlify-honeypot="bot-field"
               >
+                <p hidden>
+                  <label>
+                    Don’t fill this out:{" "}
+                    <input name="bot-field" onChange={this.handleChange} />
+                  </label>
+                </p>
                 <p>
                   <label>
                     Your Name:{" "}
