@@ -25,8 +25,6 @@ class Other extends React.Component {
         console.log(response);
       })
       .catch(error => alert(error));
-
-    e.preventDefault();
   };
 
   handleChange = e => this.setState({ [e.target.name]: e.target.value });
