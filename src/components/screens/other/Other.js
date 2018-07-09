@@ -46,16 +46,16 @@ class Other extends React.Component {
                 onSubmit={this.handleSubmit}
                 name="contact2"
                 netlify="true"
-                action="/"
+                action="/contact"
                 data-netlify="true"
-                data-netlify-honeypot="bot-field"
+                // data-netlify-honeypot="bot-field"
               >
-                <p hidden>
+                {/* <p hidden>
                   <label>
                     Don’t fill this out:{" "}
                     <input name="bot-field" onChange={this.handleChange} />
                   </label>
-                </p>
+                </p> */}
                 <p>
                   <label>
                     Your Name:{" "}
