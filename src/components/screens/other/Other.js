@@ -14,10 +14,11 @@ class Other extends React.Component {
   };
 
   handleSubmit = e => {
+    console.log("Sending", this.state);
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: this._encode({ "form-name": "contact", ...this.state })
+      body: this._encode({ "form-name": "contact2", ...this.state })
     })
       .then(() => alert("Success!"))
       .catch(error => alert(error));
@@ -38,12 +39,7 @@ class Other extends React.Component {
               <h1>{this.props.other.other.title}</h1>
               <h3>{this.props.other.other.exampleText}</h3>
               <hr />
-              <form
-                onSubmit={this.handleSubmit}
-                name="contact"
-                data-netlify="true"
-              >
-                <input type="hidden" name="form-name" value="contact" />
+              <form onSubmit={this.handleSubmit}>
                 <p>
                   <label>
                     Your Name:{" "}
