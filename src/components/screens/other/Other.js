@@ -38,7 +38,7 @@ class Other extends React.Component {
               <h1>{this.props.other.other.title}</h1>
               <h3>{this.props.other.other.exampleText}</h3>
               <hr />
-              <form onSubmit={this.handleSubmit} name="contact">
+              <form onSubmit={this.handleSubmit} name="contact" netlify="true">
                 <p>
                   <label>
                     Your Name:{" "}
