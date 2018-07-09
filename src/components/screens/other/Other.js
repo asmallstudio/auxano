@@ -28,6 +28,8 @@ class Other extends React.Component {
         console.log("errored");
         console.log(error);
       });
+
+    e.preventDefault();
   };
 
   handleChange = e => this.setState({ [e.target.name]: e.target.value });
@@ -49,14 +51,14 @@ class Other extends React.Component {
                 netlify="true"
                 action="/other"
                 data-netlify="true"
-                // data-netlify-honeypot="bot-field"
+                data-netlify-honeypot="bot-field"
               >
-                {/* <p hidden>
+                <p hidden>
                   <label>
                     Don’t fill this out:{" "}
                     <input name="bot-field" onChange={this.handleChange} />
                   </label>
-                </p> */}
+                </p>
                 <p>
                   <label>
                     Your Name:{" "}
