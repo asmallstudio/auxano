@@ -24,7 +24,10 @@ class Other extends React.Component {
         console.log("Finished");
         console.log(response);
       })
-      .catch(error => alert(error));
+      .catch(error => {
+        console.log("errored");
+        console.log(error);
+      });
   };
 
   handleChange = e => this.setState({ [e.target.name]: e.target.value });
