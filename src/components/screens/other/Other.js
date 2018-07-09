@@ -20,7 +20,10 @@ class Other extends React.Component {
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: this._encode({ "form-name": "contact2", ...this.state })
     })
-      .then(() => alert("Success!"))
+      .then(response => {
+        console.log("Finished");
+        console.log(response);
+      })
       .catch(error => alert(error));
 
     e.preventDefault();
