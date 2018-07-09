@@ -43,6 +43,7 @@ class Other extends React.Component {
                 onSubmit={this.handleSubmit}
                 name="contact2"
                 netlify="true"
+                action="/"
                 data-netlify="true"
                 data-netlify-honeypot="bot-field"
               >
