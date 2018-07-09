@@ -71,6 +71,7 @@ class Other extends React.Component {
                     />
                   </label>
                 </p>
+                <div data-netlify-recaptcha />
                 <p>
                   <button type="submit">Send</button>
                 </p>
