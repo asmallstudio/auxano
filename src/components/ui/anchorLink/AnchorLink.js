@@ -15,11 +15,9 @@ class AnchorLink extends Component {
     let offset = () => 0;
     if (typeof this.props.offset !== "undefined") {
       if (
-        !!(
-          this.props.offset &&
-          this.props.offset.constructor &&
-          this.props.offset.apply
-        )
+        this.props.offset &&
+        this.props.offset.constructor &&
+        this.props.offset.apply
       ) {
         offset = this.props.offset;
       } else {
