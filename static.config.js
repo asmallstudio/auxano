@@ -1,29 +1,9 @@
 const fs = require("fs");
-const matter = require("gray-matter");
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const postcssFlexbugsFixes = require("postcss-flexbugs-fixes");
 const autoprefixer = require("autoprefixer");
 const React = require("react");
 const yaml = require("js-yaml");
-
-function getSingleFile(path) {
-  const getFiles = () =>
-    new Promise(resolve => {
-      if (fs.existsSync(path)) {
-        const data = fs.readFileSync(path, "utf8");
-        const dataObj = matter(data);
-        if (dataObj.data.title) {
-          dataObj.data.slug = dataObj.data.title
-            .toLowerCase()
-            .replace(/ /g, "-")
-            .replace(/[^\w-]+/g, "");
-        }
-        delete dataObj.orig;
-        resolve(dataObj);
-      }
-    });
-  return getFiles();
-}
 
 export default {
   getSiteData: () => ({
