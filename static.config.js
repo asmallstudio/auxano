@@ -7,7 +7,7 @@ const yaml = require("js-yaml");
 
 export default {
   getSiteData: () => ({
-    title: "The Next Thing"
+    title: "Auxano"
   }),
   getRoutes: async () => {
     const home = yaml.safeLoad(
@@ -47,7 +47,7 @@ export default {
     return (
       <Html>
         <Head>
-          <title>The Next Thing</title>
+          <title>Auxano</title>
           <meta charSet="UTF-8" />
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           {renderMeta.styleTags}
