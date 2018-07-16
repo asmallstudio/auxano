@@ -1,11 +1,6 @@
-# React-Static Boilerplate with Netlify
+# Auxano Advisors
 
-This is a starter boilerplate for a [React-Static](https://react-static.js.org/)
-site that is hosted on [Netlify](https://www.netlify.com/). Features include:
-
-- CSS layout framework similar to Bootstrap (mobile-first design-oriented)
-- Markdown file for data storage
-- Netlify admin panel integrated
+A frontend static site made with React-Static.
 
 ## Installing
 
