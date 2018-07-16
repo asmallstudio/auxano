@@ -1,5 +1,5 @@
 import React from "react";
-import { Router, Link } from "react-static";
+import { Link } from "react-static";
 
 import styles from "./header.scss";
 
