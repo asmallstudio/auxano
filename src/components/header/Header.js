@@ -46,7 +46,7 @@ class Header extends React.Component {
           </div>
           <div className={styles.logoContainer}>
             <Link to="/#">
-              <h2>The Next Thing</h2>
+              <h2>Auxano</h2>
             </Link>
           </div>
 
