@@ -14,20 +14,11 @@ class Other extends React.Component {
   };
 
   handleSubmit = e => {
-    console.log("Sending", this.state);
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: this._encode({ "form-name": "contact2", ...this.state })
-    })
-      .then(response => {
-        console.log("Finished");
-        console.log(response);
-      })
-      .catch(error => {
-        console.log("errored");
-        console.log(error);
-      });
+    });
 
     e.preventDefault();
   };
