@@ -1,9 +1,6 @@
 import React from "react";
 import { withRouteData } from "react-static";
 
-import DesignGuide from "../../ui/guides/DesignGuide";
-import LayoutGuide from "../../ui/guides/LayoutGuide";
-
 class Home extends React.Component {
   render() {
     return (
@@ -18,8 +15,6 @@ class Home extends React.Component {
             </div>
           </div>
         </div>
-        <DesignGuide />
-        <LayoutGuide />
       </div>
     );
   }
