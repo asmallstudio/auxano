@@ -1,9 +1,9 @@
 // NOTE: need to match the variables in the variables.scss
 const theme = {
-  darkBlue: "#092e85",
-  lightBlue: "#375bdd",
-  skyBlue: "#b2dbff",
-  darkOrange: "#ffa516"
+  grey: "#808080",
+  gigas: "#483898",
+  fountainBlue: "#50b8b8",
+  white: "#ffffff"
 };
 
 export default theme;
