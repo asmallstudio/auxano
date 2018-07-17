@@ -1,3 +1,21 @@
-.testStyle {
-  color: teal;
+@import "../../styles/variables.scss";
+
+.titleTextContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.heroTitle {
+  color: $fountain-blue;
+}
+
+.heroSubTitle {
+  color: $grey;
+}
+
+.filler {
+  width: 100%;
+  height: 400px;
+  background-color: rgba($grey, 0.4);
 }
