@@ -58,6 +58,7 @@ yarn serve
   names is to use camelcase instead of dash-case (`myClass` instead of
   `my-class`). The reason is it's much easier to access the variable name when
   referencing it in JavaScript (using dot notation vs. bracket notation)
+  ([reference](https://github.com/css-modules/css-modules#naming))
 
 ### Code formatting
 
