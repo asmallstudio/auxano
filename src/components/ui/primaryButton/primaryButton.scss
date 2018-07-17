@@ -1,0 +1,9 @@
+@import "../../styles/variables.scss";
+
+.button {
+  background-color: rgba($gigas, 0.2);
+
+  span {
+    color: $gigas;
+  }
+}
