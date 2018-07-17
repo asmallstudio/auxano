@@ -2,7 +2,7 @@ import React from "react";
 import { withRouteData } from "react-static";
 
 import DesignGuide from "../../ui/guides/DesignGuide";
-import DefaultButton from "../../ui/defaultButton/DefaultButton";
+import PrimaryButton from "../../ui/primaryButton/PrimaryButton";
 import styles from "./home.scss";
 
 class Home extends React.Component {
@@ -20,7 +20,9 @@ class Home extends React.Component {
                   {`We help clients transcend the traditional definition of wealth
                 so it's used to build a legacy that transforms families,
                 finances, and their future.`}
-                  <DefaultButton>Cta Button</DefaultButton>
+                  <PrimaryButton className={styles.button}>
+                    CTA Button
+                  </PrimaryButton>
                 </p>
               </div>
             </div>
