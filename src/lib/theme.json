@@ -1,7 +1,11 @@
 {
   "grey": "#808080",
+  "filler-bg": "rgba(128, 128, 128, 0.4)",
   "gigas": "#483898",
   "gigas-bg": "rgba(72, 56, 152, 0.1)",
   "fountain-blue": "#50B8B8",
-  "white": "#FFFFFF"
+  "white": "#FFFFFF",
+  "alabaster": "#F9FAFB",
+  "mobile-header-height": "5rem",
+  "desktop-header-height": "7rem"
 }

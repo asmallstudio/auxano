@@ -1,15 +1,14 @@
-@import "../styles/variables.scss";
 @import "../styles/utils.scss";
 
 .container {
-  background-color: #fff;
+  background-color: var(--white);
   position: fixed;
   top: 0px;
   display: flex;
   width: 100%;
   flex-direction: row;
   z-index: 1000;
-  height: $header-height-mobile * 1px;
+  height: calc(--mobile-header-height * 1px);
 }
 
 .activeLink {
@@ -51,7 +50,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
-  height: $header-height-mobile * 1px;
+  height: calc(--mobile-header-height * 1px);
 }
 
 nav {
@@ -128,10 +127,10 @@ nav {
   }
 
   .container {
-    height: $header-height-desktop * 1px;
+    height: var(--desktop-header-height);
   }
 
   .logoContainer {
-    height: $header-height-desktop * 1px;
+    height: var(--desktop-header-height);
   }
 }

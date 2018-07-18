@@ -1,5 +1,3 @@
-@import "../../styles/variables.scss";
-
 .titleTextContainer {
   display: flex;
   flex-direction: column;
@@ -17,5 +15,5 @@
 .filler {
   width: 100%;
   height: 400px;
-  background-color: rgba(var(--grey), 0.4);
+  background-color: var(--filler-bg);
 }
