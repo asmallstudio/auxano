@@ -1,9 +1,9 @@
 @import "../../styles/variables.scss";
 
 .button {
-  background-color: rgba($gigas, 0.1);
+  background-color: var(--gigas-bg);
 
   span {
-    color: $gigas;
+    color: var(--gigas);
   }
 }

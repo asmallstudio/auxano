@@ -7,15 +7,15 @@
 }
 
 .heroTitle {
-  color: $fountain-blue;
+  color: var(--fountain-blue);
 }
 
 .heroSubTitle {
-  color: $grey;
+  color: var(--grey);
 }
 
 .filler {
   width: 100%;
   height: 400px;
-  background-color: rgba($grey, 0.4);
+  background-color: rgba(var(--grey), 0.4);
 }
