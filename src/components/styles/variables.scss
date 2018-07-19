@@ -1,14 +1,21 @@
 // == LAYOUT ==
 
-$max-width: 1048;
-$grid-cols: 12;
-$gutter: 24;
+/*
+Extra small devices, Phone (<md)
+Small devices, Tablet (>=md)
+Medium devices, Desktop (>=lg)
+Large devices, Desktop (>= xl)
+*/
 
 $grid-bp-xs: 0;
-$grid-bp-sm: 576;
-$grid-bp-md: 768;
-$grid-bp-lg: 992;
-$grid-bp-xl: $max-width;
+$grid-bp-sm: 320;
+$grid-bp-md: 736;
+$grid-bp-lg: 1024; // max context width
+$grid-bp-xl: 1200;
+
+$max-width: $grid-bp-lg;
+$grid-cols: 12;
+$gutter: 24;
 
 $breakpoints: (
   "xs": $grid-bp-xs,
@@ -19,4 +26,4 @@ $breakpoints: (
 );
 
 // == COLORS ==
-// Additional variables imported from /src/lib/theme.json. 
+// Additional variables imported from /src/lib/theme.json.
