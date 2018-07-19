@@ -1,7 +1,7 @@
-import fs from 'fs';
-import React from 'react';
-import yaml from 'js-yaml';
-import ExtractTextPlugin from 'extract-text-webpack-plugin';
+import fs from "fs";
+import React from "react";
+import yaml from "js-yaml";
+import ExtractTextPlugin from "extract-text-webpack-plugin";
 
 export default {
   getSiteData: () => ({
