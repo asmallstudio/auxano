@@ -19,7 +19,7 @@ body {
   margin-top: var(--mobile-header-height);
 }
 
-@include respond-above(xl) {
+@include respond-above(lg) {
   .routesContainer {
     margin-top: var(--desktop-header-height);
   }

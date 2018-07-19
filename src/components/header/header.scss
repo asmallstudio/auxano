@@ -92,7 +92,7 @@ nav {
 
 // == DESKTOP ==
 
-@include respond-above(xl) {
+@include respond-above(lg) {
   .row {
     flex-direction: row;
     align-items: center;
