@@ -1,5 +1,100 @@
+@font-face {
+  font-family: "Playfair Display";
+  font-style: normal;
+  font-weight: 700;
+  font-display: fallback;
+  src: url("./fonts/playfair/playfair-display-v13-latin-700.eot"); /* IE9 Compat Modes */
+  src: local("Playfair Display Bold"), local("PlayfairDisplay-Bold"),
+    url("./fonts/playfair/playfair-display-v13-latin-700.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-IE8 */ url("./fonts/playfair/playfair-display-v13-latin-700.woff2")
+      format("woff2"),
+    /* Super Modern Browsers */
+      url("./fonts/playfair/playfair-display-v13-latin-700.woff") format("woff"),
+    /* Modern Browsers */
+      url("./fonts/playfair/playfair-display-v13-latin-700.ttf")
+      format("truetype"),
+    /* Safari, Android, iOS */
+      url("./fonts/playfair/playfair-display-v13-latin-700.svg#PlayfairDisplay")
+      format("svg"); /* Legacy iOS */
+}
+
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-display: fallback;
+  src: url("./fonts/roboto/roboto-v18-latin-regular.eot"); /* IE9 Compat Modes */
+  src: local("Roboto"), local("Roboto-Regular"),
+    url("./fonts/roboto/roboto-v18-latin-regular.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-IE8 */ url("./fonts/roboto/roboto-v18-latin-regular.woff2")
+      format("woff2"),
+    /* Super Modern Browsers */
+      url("./fonts/roboto/roboto-v18-latin-regular.woff") format("woff"),
+    /* Modern Browsers */ url("./fonts/roboto/roboto-v18-latin-regular.ttf")
+      format("truetype"),
+    /* Safari, Android, iOS */
+      url("./fonts/roboto/roboto-v18-latin-regular.svg#Roboto") format("svg"); /* Legacy iOS */
+}
+
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-display: fallback;
+  src: url("./fonts/roboto/roboto-v18-latin-700.eot"); /* IE9 Compat Modes */
+  src: local("Roboto Bold"), local("Roboto-Bold"),
+    url("./fonts/roboto/roboto-v18-latin-700.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-IE8 */ url("./fonts/roboto/roboto-v18-latin-700.woff2")
+      format("woff2"),
+    /* Super Modern Browsers */ url("./fonts/roboto/roboto-v18-latin-700.woff")
+      format("woff"),
+    /* Modern Browsers */ url("./fonts/roboto/roboto-v18-latin-700.ttf")
+      format("truetype"),
+    /* Safari, Android, iOS */
+      url("./fonts/roboto/roboto-v18-latin-700.svg#Roboto") format("svg"); /* Legacy iOS */
+}
+
 :global {
-  * {
+  body {
     font-family: Arial, Helvetica, sans-serif;
+  }
+
+  h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3em;
+    font-weight: 700;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.13;
+    letter-spacing: normal;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  h4 {
+    font-family: Roboto, Helvetica, sans-serif;
+    font-size: 1.5em;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.67;
+    letter-spacing: normal;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  p {
+    font-family: Roboto, Helvetica, sans-serif;
+    font-size: 1.125em;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.56;
+    letter-spacing: normal;
+    margin-top: 0;
+    margin-bottom: 0;
   }
 }

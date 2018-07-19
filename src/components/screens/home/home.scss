@@ -1,3 +1,19 @@
-.testStyle {
-  color: teal;
+.titleTextContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.heroTitle {
+  color: var(--fountain-blue);
+}
+
+.heroSubTitle {
+  color: var(--grey);
+}
+
+.filler {
+  width: 100%;
+  height: 400px;
+  background-color: var(--filler-bg);
 }

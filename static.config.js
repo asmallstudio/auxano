@@ -1,9 +1,7 @@
-const fs = require("fs");
-const ExtractTextPlugin = require("extract-text-webpack-plugin");
-const postcssFlexbugsFixes = require("postcss-flexbugs-fixes");
-const autoprefixer = require("autoprefixer");
-const React = require("react");
-const yaml = require("js-yaml");
+import fs from "fs";
+import React from "react";
+import yaml from "js-yaml";
+import ExtractTextPlugin from "extract-text-webpack-plugin";
 
 export default {
   getSiteData: () => ({
@@ -65,11 +63,12 @@ export default {
             use:
               stage === "dev"
                 ? [
-                    { loader: "style-loader" },
+                    { loader: "style-loader", options: { sourceMap: true } },
                     {
                       loader: "css-loader",
                       options: {
                         modules: true,
+                        importLoaders: 2,
                         localIdentName: "[name]__[local]--[hash:base64:5]",
                         sourceMap: true,
                         namedExport: true,
@@ -77,26 +76,13 @@ export default {
                         minimize: false
                       }
                     },
+                    { loader: "postcss-loader" },
                     {
-                      loader: "postcss-loader",
+                      loader: "sass-loader",
                       options: {
-                        sourceMap: true,
-                        ident: "postcss",
-                        plugins: () => [
-                          postcssFlexbugsFixes,
-                          autoprefixer({
-                            browsers: [
-                              ">1%",
-                              "last 4 versions",
-                              "Firefox ESR",
-                              "not ie < 9" // React doesn't support IE8 anyway
-                            ],
-                            flexbox: "no-2009"
-                          })
-                        ]
+                        sourceMap: true
                       }
-                    },
-                    { loader: "sass-loader" }
+                    }
                   ]
                 : ExtractTextPlugin.extract({
                     use: [
@@ -104,35 +90,21 @@ export default {
                         loader: "css-loader",
                         options: {
                           minimize: true,
-                          sourceMap: process.env.REACT_STATIC_DEBUG,
+                          sourceMap: true,
                           modules: true,
+                          importLoaders: 2,
                           localIdentName: process.env.REACT_STATIC_DEBUG
                             ? "[name]__[local]--[hash:base64:5]"
                             : undefined
                         }
                       },
-                      {
-                        loader: "postcss-loader",
-                        options: {
-                          sourceMap: true,
-                          ident: "postcss",
-                          plugins: () => [
-                            postcssFlexbugsFixes,
-                            autoprefixer({
-                              browsers: [
-                                ">1%",
-                                "last 4 versions",
-                                "Firefox ESR",
-                                "not ie < 9" // React doesn't support IE8 anyway
-                              ],
-                              flexbox: "no-2009"
-                            })
-                          ]
-                        }
-                      },
+                      { loader: "postcss-loader" },
                       {
                         loader: "sass-loader",
-                        options: { includePaths: ["src/"] }
+                        options: {
+                          sourceMap: true,
+                          includePaths: ["src/"]
+                        }
                       }
                     ]
                   })

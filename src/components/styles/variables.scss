@@ -18,10 +18,5 @@ $breakpoints: (
   "xl": $grid-bp-xl
 );
 
-// == HEADER ==
-
-$header-height-desktop: 112;
-$header-height-mobile: 80;
-
 // == COLORS ==
-// NOTE: These need to match the colors in src/lib/theme.js
+// Additional variables imported from /src/lib/theme.json. 

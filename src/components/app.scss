@@ -1,4 +1,3 @@
-@import "./styles/variables.scss";
 @import "./styles/utils.scss";
 
 body {
@@ -13,14 +12,15 @@ body {
   a:hover {
     text-decoration: none;
   }
+  background-color: var(--alabaster);
 }
 
 .routesContainer {
-  margin-top: $header-height-mobile * 1px;
+  margin-top: var(--mobile-header-height);
 }
 
 @include respond-above(xl) {
   .routesContainer {
-    margin-top: $header-height-desktop * 1px;
+    margin-top: var(--desktop-header-height);
   }
 }

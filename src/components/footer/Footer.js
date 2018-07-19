@@ -5,9 +5,10 @@ class Footer extends React.Component {
     return (
       <div>
         <div className="container">
-          <a className="anchor" id="footer" />
           <div className="row">
-            <h4>[Footer]</h4>
+            <div className="col-xs-12">
+              <h4>[Footer]</h4>
+            </div>
           </div>
         </div>
       </div>
