@@ -1,8 +1,12 @@
 {
   "name": "auxano",
   "version": "1.0.1",
-  "main": "index.js",
-  "license": "MIT",
+  "main": "./src/index.js",
+  "license": "UNLICENSED",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/asmallstudio/auxano.git"
+  },
   "scripts": {
     "start": "react-static start",
     "stage": "react-static build --staging",
