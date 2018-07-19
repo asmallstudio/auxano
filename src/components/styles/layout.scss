@@ -39,7 +39,7 @@
   }
 
   .container {
-    max-width: $max-width * 1px;
+    max-width: $max-width / 16 * 1em;
     margin: 0 auto;
 
     &--fluid {
