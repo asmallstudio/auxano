@@ -13,14 +13,18 @@ $grid-bp-md: 736;
 $grid-bp-lg: 1024; // max context width
 $grid-bp-xl: 1200;
 
-$grid-bp-xs-em: $grid-bp-xs * 1em;
-$grid-bp-sm-em: $grid-bp-sm / 16 * 1em;
-$grid-bp-md-em: $grid-bp-md / 16 * 1em;
-$grid-bp-lg-em: $grid-bp-lg / 16 * 1em;
-$grid-bp-xl-em: $grid-bp-xl / 16 * 1em;
+@function px2em($pxsize) {
+  @return ($pxsize / 16) + em;
+}
+
+$grid-bp-xs-em: px2em($grid-bp-xs);
+$grid-bp-sm-em: px2em($grid-bp-sm);
+$grid-bp-md-em: px2em($grid-bp-md);
+$grid-bp-lg-em: px2em($grid-bp-lg);
+$grid-bp-xl-em: px2em($grid-bp-xl);
 
 $max-width: $grid-bp-lg;
-$max-width-em: $grid-bp-lg-em;
+$max-width-em: px2em($max-width);
 $grid-cols: 12;
 $gutter: 24;
 
