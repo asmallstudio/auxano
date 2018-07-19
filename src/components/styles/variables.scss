@@ -13,16 +13,23 @@ $grid-bp-md: 736;
 $grid-bp-lg: 1024; // max context width
 $grid-bp-xl: 1200;
 
+$grid-bp-xs-em: $grid-bp-xs * 1em;
+$grid-bp-sm-em: $grid-bp-sm / 16 * 1em;
+$grid-bp-md-em: $grid-bp-md / 16 * 1em;
+$grid-bp-lg-em: $grid-bp-lg / 16 * 1em;
+$grid-bp-xl-em: $grid-bp-xl / 16 * 1em;
+
 $max-width: $grid-bp-lg;
+$max-width-em: $grid-bp-lg-em;
 $grid-cols: 12;
 $gutter: 24;
 
 $breakpoints: (
-  "xs": $grid-bp-xs,
-  "sm": $grid-bp-sm,
-  "md": $grid-bp-md,
-  "lg": $grid-bp-lg,
-  "xl": $grid-bp-xl
+  "xs": $grid-bp-xs-em,
+  "sm": $grid-bp-sm-em,
+  "md": $grid-bp-md-em,
+  "lg": $grid-bp-lg-em,
+  "xl": $grid-bp-xl-em
 );
 
 // == COLORS ==
