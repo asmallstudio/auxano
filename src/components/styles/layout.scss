@@ -31,13 +31,15 @@
   html {
     box-sizing: border-box;
   }
-  
-  *, *:before, *:after {
+
+  *,
+  *:before,
+  *:after {
     box-sizing: inherit;
   }
 
   .container {
-    max-width: $grid-bp-xl * 1px;
+    max-width: $max-width-em;
     margin: 0 auto;
 
     &--fluid {

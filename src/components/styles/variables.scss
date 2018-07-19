@@ -1,22 +1,40 @@
 // == LAYOUT ==
 
-$max-width: 1048;
+/*
+Extra small devices, Phone (<md)
+Small devices, Tablet (>=md)
+Medium devices, Desktop (>=lg)
+Large devices, Desktop (>= xl)
+*/
+
+$grid-bp-xs: 0;
+$grid-bp-sm: 320;
+$grid-bp-md: 736;
+$grid-bp-lg: 1024; // max context width
+$grid-bp-xl: 1200;
+
+@function px2em($pxsize) {
+  @return ($pxsize / 16) + em;
+}
+
+$grid-bp-xs-em: px2em($grid-bp-xs);
+$grid-bp-sm-em: px2em($grid-bp-sm);
+$grid-bp-md-em: px2em($grid-bp-md);
+$grid-bp-lg-em: px2em($grid-bp-lg);
+$grid-bp-xl-em: px2em($grid-bp-xl);
+
+$max-width: $grid-bp-lg;
+$max-width-em: px2em($max-width);
 $grid-cols: 12;
 $gutter: 24;
 
-$grid-bp-xs: 0;
-$grid-bp-sm: 576;
-$grid-bp-md: 768;
-$grid-bp-lg: 992;
-$grid-bp-xl: $max-width;
-
 $breakpoints: (
-  "xs": $grid-bp-xs,
-  "sm": $grid-bp-sm,
-  "md": $grid-bp-md,
-  "lg": $grid-bp-lg,
-  "xl": $grid-bp-xl
+  "xs": $grid-bp-xs-em,
+  "sm": $grid-bp-sm-em,
+  "md": $grid-bp-md-em,
+  "lg": $grid-bp-lg-em,
+  "xl": $grid-bp-xl-em
 );
 
 // == COLORS ==
-// Additional variables imported from /src/lib/theme.json. 
+// Additional variables imported from /src/lib/theme.json.
