@@ -17,3 +17,11 @@
   height: 400px;
   background-color: var(--filler-bg);
 }
+
+.pullquote {
+  font-family: "Playfair Display", serif;
+  font-size: 2.25em;
+  line-height: 1.56;
+  color: var(--grey);
+  margin: var(--space-l5) 0;
+}
