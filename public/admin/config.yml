@@ -30,6 +30,62 @@ collections:
             label: Pullquote
             name: text
             widget: text
+          -
+            label: 'Three Columns'
+            name: threecol
+            widget: object
+            fields:
+              -
+                label: 'Item 1'
+                name: col1
+                widget: object
+                fields:
+                  -
+                    label: 'Heading'
+                    name: heading
+                    widget: string
+                  -
+                    label: 'Content'
+                    name: text
+                    widget: text
+                  -
+                    label: 'Link'
+                    name: link
+                    widget: string
+              -
+                label: 'Item 2'
+                name: col2
+                widget: object
+                fields:
+                  -
+                    label: 'Heading'
+                    name: heading
+                    widget: string
+                  -
+                    label: 'Content'
+                    name: text
+                    widget: text
+                  -
+                    label: 'Link'
+                    name: link
+                    widget: string
+              -
+                label: 'Item 3'
+                name: col3
+                widget: object
+                fields:
+                  -
+                    label: 'Heading'
+                    name: heading
+                    widget: string
+                  -
+                    label: 'Content'
+                    name: text
+                    widget: text
+                  -
+                    label: 'Link'
+                    name: link
+                    widget: string
       -
         label: 'Other Page'
         name: other
