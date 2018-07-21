@@ -27,5 +27,11 @@
   "black-10": "rgba(36, 36, 36, 0.1)",
 
   "mobile-header-height": "5rem",
-  "desktop-header-height": "7rem"
+  "desktop-header-height": "7rem",
+
+  "space-l1": "0.5rem",
+  "space-l2": "1rem",
+  "space-l3": "2rem",
+  "space-l4": "4rem",
+  "space-l5": "8rem"
 }
