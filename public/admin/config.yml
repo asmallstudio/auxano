@@ -26,6 +26,10 @@ collections:
                 label: 'Example text'
                 name: exampleText
                 widget: text
+          -
+            label: Pullquote
+            name: text
+            widget: text
       -
         label: 'Other Page'
         name: other

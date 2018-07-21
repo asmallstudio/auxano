@@ -28,6 +28,9 @@ class Home extends React.Component {
           <div className="col-xs-12 col-lg-6">
             <div className={styles.filler} />
           </div>
+          <p className={`${styles.pullquote} col-xs-12 col-md-8`}>
+            {this.props.home.pullquote.text}
+          </p>
           <div className="col-xs-12">
             <h1>{this.props.home.hero.title}</h1>
             <h3>{this.props.home.hero.exampleText}</h3>

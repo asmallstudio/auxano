@@ -1,3 +1,5 @@
 hero:
   title: 'Hello I am a string'
   exampleText: 'Hello I am a text'
+pullquote:
+  text: 'Lorem ipsum dolor sit amet, consectetur adipiscing, sed do eiusmod tempor ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostru.'
