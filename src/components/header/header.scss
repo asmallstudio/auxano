@@ -39,8 +39,14 @@
     font-style: normal;
     color: var(--black);
 
+    a {
+      transition: color 0.3s ease;
+      color: inherit;
+      text-decoration: none;
+    }
+
     a:hover {
-      color: pink;
+      color: var(--gigas);
     }
   }
 }
@@ -51,6 +57,11 @@
   align-items: center;
   justify-content: flex-start;
   height: var(--mobile-header-height);
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
 }
 
 nav {
