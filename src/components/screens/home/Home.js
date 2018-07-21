@@ -35,6 +35,7 @@ class Home extends React.Component {
         </div>
         <div className={`${styles.threecols} row`}>
           <div className={`${styles.col} col-xs-12 col-md-4`}>
+            <div className={styles.colIcon} />
             <h2>{this.props.home.threecol.col1.heading}</h2>
             <p>{this.props.home.threecol.col1.text}</p>
             <Link
@@ -45,6 +46,7 @@ class Home extends React.Component {
             </Link>
           </div>
           <div className={`${styles.col} col-xs-12 col-md-4`}>
+            <div className={styles.colIcon} />
             <h2>{this.props.home.threecol.col2.heading}</h2>
             <p>{this.props.home.threecol.col2.text}</p>
             <Link
@@ -55,6 +57,7 @@ class Home extends React.Component {
             </Link>
           </div>
           <div className={`${styles.col} col-xs-12 col-md-4`}>
+            <div className={styles.colIcon} />
             <h2>{this.props.home.threecol.col3.heading}</h2>
             <p>{this.props.home.threecol.col3.text}</p>
             <Link

@@ -42,10 +42,11 @@
 
 .col {
   text-align: center;
-  margin-bottom: var(--space-l2);
+  margin-bottom: var(--space-l4);
 
   @include respond-above(md) {
     text-align: left;
+    margin-bottom: 0;
   }
 
   &:last-child {
@@ -64,6 +65,16 @@
     color: var(--grey);
     margin-bottom: var(--space-l2);
   }
+}
+
+.colIcon {
+  display: inline-block;
+  height: 3rem;
+  width: 3rem;
+  background-color: var(--grey-40);
+  border-radius: 0.5rem;
+  border: none;
+  margin-bottom: var(--space-l2);
 }
 
 .colLearnMore {
