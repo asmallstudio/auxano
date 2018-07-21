@@ -35,29 +35,39 @@ class Home extends React.Component {
             {this.props.home.pullquote.text}
           </p>
         </div>
-        <div className="row">
-          <div className={`${styles.threecols}`}>
-            <div className={`${styles.col} col-xs-12 col-md-4`}>
-              {this.props.home.threecol.col1.heading}
-              {this.props.home.threecol.col1.text}
-              <Link
-                to={this.props.home.threecol.col1.link}
-                className={styles.colLearnMore}
-              >
-                Learn More
-              </Link>
-            </div>
-            <div className={`${styles.col} col-xs-12 col-md-4`}>
-              {this.props.home.threecol.col2.heading}
-              {this.props.home.threecol.col2.text}
-            </div>
-            <div className={`${styles.col} col-xs-12 col-md-4`}>
-              {this.props.home.threecol.col3.heading}
-              {this.props.home.threecol.col3.text}
-            </div>
+        <div className={`${styles.threecols} row`}>
+          <div className={`${styles.col} col-xs-12 col-md-4`}>
+            <h2>{this.props.home.threecol.col1.heading}</h2>
+            <p>{this.props.home.threecol.col1.text}</p>
+            <Link
+              to={this.props.home.threecol.col1.link}
+              className={styles.colLearnMore}
+            >
+              Learn More
+            </Link>
+          </div>
+          <div className={`${styles.col} col-xs-12 col-md-4`}>
+            <h2>{this.props.home.threecol.col2.heading}</h2>
+            <p>{this.props.home.threecol.col2.text}</p>
+            <Link
+              to={this.props.home.threecol.col2.link}
+              className={styles.colLearnMore}
+            >
+              Learn More
+            </Link>
+          </div>
+          <div className={`${styles.col} col-xs-12 col-md-4`}>
+            <h2>{this.props.home.threecol.col3.heading}</h2>
+            <p>{this.props.home.threecol.col3.text}</p>
+            <Link
+              to={this.props.home.threecol.col3.link}
+              className={styles.colLearnMore}
+            >
+              Learn More
+            </Link>
           </div>
         </div>
-        <div className="row col-xs-12">
+        <div className="col-xs-12">
           <h1>{this.props.home.hero.title}</h1>
           <h3>{this.props.home.hero.exampleText}</h3>
           <hr />
