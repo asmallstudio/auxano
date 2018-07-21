@@ -30,10 +30,8 @@ class Home extends React.Component {
             <div className={styles.filler} />
           </div>
         </div>
-        <div className="row">
-          <p className={`${styles.pullquote} col-xs-12 col-md-8`}>
-            {this.props.home.pullquote.text}
-          </p>
+        <div className={`${styles.pullquote} row col-xs-12 col-md-8`}>
+          <p>{this.props.home.pullquote.text}</p>
         </div>
         <div className={`${styles.threecols} row`}>
           <div className={`${styles.col} col-xs-12 col-md-4`}>
