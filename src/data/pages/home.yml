@@ -3,3 +3,16 @@ hero:
   exampleText: 'Hello I am a text'
 pullquote:
   text: 'Lorem ipsum dolor sit amet, consectetur adipiscing, sed do eiusmod tempor ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostru.'
+threecol:
+  col1: 
+    heading: Subheading
+    text: 'Lorem ipsum dolor sit amet, consour adipiscing elit, sed do eiusmo tempor incididunt ut labore et dolore magna aliqua. Luctus venenatis lectus mido magna fringilla. Elit sed vulputate.'
+    link: '#'
+  col2: 
+    heading: Subheading
+    text: 'Lorem ipsum dolor sit amet, consour adipiscing elit, sed do eiusmo tempor incididunt ut labore et dolore magna aliqua. Luctus venenatis lectus mido magna fringilla. Elit sed vulputate.'
+    link: '#'
+  col3: 
+    heading: Subheading
+    text: 'Lorem ipsum dolor sit amet, consour adipiscing elit, sed do eiusmo tempor incididunt ut labore et dolore magna aliqua. Luctus venenatis lectus mido magna fringilla. Elit sed vulputate.'
+    link: '#'
