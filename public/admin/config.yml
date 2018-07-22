@@ -23,8 +23,8 @@ collections:
                 name: title
                 widget: string
               -
-                label: 'Example text'
-                name: exampleText
+                label: 'Subtitle'
+                name: subtitle
                 widget: text
           -
             label: Pullquote

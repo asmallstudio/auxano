@@ -1,8 +1,6 @@
 import React from "react";
 import { withRouteData } from "react-static";
-import { Link } from "react-static";
 
-import DesignGuide from "../../ui/guides/DesignGuide";
 import PrimaryButton from "../../ui/primaryButton/PrimaryButton";
 import OneThirdColumn from "./OneThirdColumn";
 import styles from "./home.scss";
@@ -15,12 +13,10 @@ class Home extends React.Component {
           <div className={`col-xs-12 col-lg-6 ${styles.titleTextContainer}`}>
             <div>
               <h1 className={`${styles.heroTitle} vertSpacerSm`}>
-                Transcending wealth. Transforming lives.
+                {this.props.home.hero.title}
               </h1>
               <p className={`${styles.heroSubTitle} vertSpacerSm`}>
-                {`We help clients transcend the traditional definition of wealth
-                so it's used to build a legacy that transforms families,
-                finances, and their future.`}
+                {this.props.home.hero.subtitle}
               </p>
               <PrimaryButton className={styles.button}>
                 CTA Button
@@ -39,12 +35,6 @@ class Home extends React.Component {
           <OneThirdColumn data={this.props.home.threecol.col2} />
           <OneThirdColumn data={this.props.home.threecol.col3} />
         </div>
-        <div className="col-xs-12">
-          <h1>{this.props.home.hero.title}</h1>
-          <h3>{this.props.home.hero.exampleText}</h3>
-          <hr />
-        </div>
-        <DesignGuide />
       </section>
     );
   }
