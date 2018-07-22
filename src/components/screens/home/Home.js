@@ -4,6 +4,7 @@ import { Link } from "react-static";
 
 import DesignGuide from "../../ui/guides/DesignGuide";
 import PrimaryButton from "../../ui/primaryButton/PrimaryButton";
+import OneThirdColumn from "./OneThirdColumn";
 import styles from "./home.scss";
 
 class Home extends React.Component {
@@ -34,39 +35,9 @@ class Home extends React.Component {
           <p>{this.props.home.pullquote.text}</p>
         </div>
         <div className={`${styles.threecols} row`}>
-          <div className={`${styles.col} col-xs-12 col-md-4`}>
-            <div className={styles.colIcon} />
-            <h2>{this.props.home.threecol.col1.heading}</h2>
-            <p>{this.props.home.threecol.col1.text}</p>
-            <Link
-              to={this.props.home.threecol.col1.link}
-              className={styles.colLearnMore}
-            >
-              Learn More
-            </Link>
-          </div>
-          <div className={`${styles.col} col-xs-12 col-md-4`}>
-            <div className={styles.colIcon} />
-            <h2>{this.props.home.threecol.col2.heading}</h2>
-            <p>{this.props.home.threecol.col2.text}</p>
-            <Link
-              to={this.props.home.threecol.col2.link}
-              className={styles.colLearnMore}
-            >
-              Learn More
-            </Link>
-          </div>
-          <div className={`${styles.col} col-xs-12 col-md-4`}>
-            <div className={styles.colIcon} />
-            <h2>{this.props.home.threecol.col3.heading}</h2>
-            <p>{this.props.home.threecol.col3.text}</p>
-            <Link
-              to={this.props.home.threecol.col3.link}
-              className={styles.colLearnMore}
-            >
-              Learn More
-            </Link>
-          </div>
+          <OneThirdColumn data={this.props.home.threecol.col1} />
+          <OneThirdColumn data={this.props.home.threecol.col2} />
+          <OneThirdColumn data={this.props.home.threecol.col3} />
         </div>
         <div className="col-xs-12">
           <h1>{this.props.home.hero.title}</h1>
