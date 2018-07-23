@@ -42,7 +42,7 @@ class Home extends React.Component {
           <div className={`row ${styles.learnMoreRow}`}>
             <div className="col-xs-12">
               <LinkWithArrow
-                link={this.props.home.learnMore.link}
+                to={this.props.home.learnMore.link}
                 className={styles.learnMoreLink}
               >
                 Learn more about us
