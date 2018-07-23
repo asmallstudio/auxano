@@ -11,7 +11,7 @@ class OneThirdColumn extends React.Component {
         <div className={styles.colIcon} />
         <h2>{data.heading}</h2>
         <p>{data.text}</p>
-        <LinkWithArrow link={data.link} className={styles.colLearnMore}>
+        <LinkWithArrow to={data.link} className={styles.colLearnMore}>
           Learn More
         </LinkWithArrow>
       </div>

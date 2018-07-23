@@ -5,9 +5,9 @@ import styles from "./linkWithArrow.scss";
 
 class LinkWithArrow extends React.Component {
   render() {
-    const { link, children, className = "" } = this.props;
+    const { to, children, className = "" } = this.props;
     return (
-      <Link to={link} className={`${styles.link} ${className}`}>
+      <Link to={to} className={`${styles.link} ${className}`}>
         {children}
       </Link>
     );
