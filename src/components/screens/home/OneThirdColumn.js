@@ -1,6 +1,6 @@
 import React from "react";
-import { Link } from "react-static";
 
+import LinkWithArrow from "../../ui/linkWithArrow/LinkWithArrow";
 import styles from "./oneThirdColumn.scss";
 
 class OneThirdColumn extends React.Component {
@@ -11,9 +11,9 @@ class OneThirdColumn extends React.Component {
         <div className={styles.colIcon} />
         <h2>{data.heading}</h2>
         <p>{data.text}</p>
-        <Link to={data.link} className={styles.colLearnMore}>
+        <LinkWithArrow link={data.link} className={styles.colLearnMore}>
           Learn More
-        </Link>
+        </LinkWithArrow>
       </div>
     );
   }
