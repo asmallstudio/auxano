@@ -4,6 +4,7 @@ import { withRouteData, Link } from "react-static";
 import PrimaryButton from "../../ui/primaryButton/PrimaryButton";
 import OneThirdColumn from "./OneThirdColumn";
 import styles from "./home.scss";
+import LinkWithArrow from "../../ui/linkWithArrow/LinkWithArrow";
 
 class Home extends React.Component {
   render() {
@@ -40,9 +41,12 @@ class Home extends React.Component {
         <div className={`container--fluid ${styles.learnMoreContainer}`}>
           <div className={`row ${styles.learnMoreRow}`}>
             <div className="col-xs-12">
-              <Link to="#" className={styles.learnMoreLink}>
+              <LinkWithArrow
+                link={this.props.home.learnMore.link}
+                className={styles.learnMoreLink}
+              >
                 Learn more about us
-              </Link>
+              </LinkWithArrow>
             </div>
           </div>
         </div>
