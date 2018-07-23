@@ -16,3 +16,5 @@ threecol:
     heading: Subheading
     text: 'Lorem ipsum dolor sit amet, consour adipiscing elit, sed do eiusmo tempor incididunt ut labore et dolore magna aliqua. Luctus venenatis lectus mido magna fringilla. Elit sed vulputate.'
     link: '#'
+learnMore:
+  link: '#'
