@@ -39,3 +39,18 @@
 .threecols {
   margin: var(--space-l5) 0;
 }
+
+.learnMoreContainer {
+  background-color: var(--fountain-blue-10);
+  padding: 6rem 0;
+}
+
+.learnMoreRow {
+  text-align: center;
+}
+
+.learnMoreLink {
+  font-size: 1.5em;
+  line-height: 2;
+  color: var(--fountain-blue);
+}
