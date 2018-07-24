@@ -5,11 +5,12 @@ import PrimaryButton from "../../ui/primaryButton/PrimaryButton";
 import OneThirdColumn from "./OneThirdColumn";
 import styles from "./home.scss";
 import FullWidthSectionActionLink from "../../ui/fullWidthSectionActionLink/FullWidthSectionActionLink";
+import DefaultInput from "../../ui/defaultInput/DefaultInput";
 
 class Home extends React.Component {
   render() {
     return (
-      <div>
+      <React.Fragment>
         <div className="container">
           <div className="row">
             <div className={`col-xs-12 col-lg-6 ${styles.titleTextContainer}`}>
@@ -20,9 +21,7 @@ class Home extends React.Component {
                 <p className={`${styles.heroSubTitle} vertSpacerSm`}>
                   {this.props.home.hero.subtitle}
                 </p>
-                <PrimaryButton className={styles.button}>
-                  CTA Button
-                </PrimaryButton>
+                <PrimaryButton>CTA BUTTON</PrimaryButton>
               </div>
             </div>
             <div className="col-xs-12 col-lg-6">
@@ -42,7 +41,33 @@ class Home extends React.Component {
           linkText="Learn more about us"
           to={this.props.home.learnMore.link}
         />
-      </div>
+        <div className="container">
+          <div className={`row ${styles.subscribeRow}`}>
+            <div
+              className={`col-xs-12 col-lg-5 ${styles.subscribeDescription}`}
+            >
+              <h3>{this.props.home.subscribe.heading}</h3>
+              <p>{this.props.home.subscribe.text}</p>
+            </div>
+            <div
+              className={`col-xs-12 col-md-10 col-md-offset-1 col-lg-6 col-lg-offset-1 ${
+                styles.subscribeAction
+              }`}
+            >
+              <DefaultInput
+                placeholder="Email"
+                type="email"
+                aria-label="newsletter email"
+                autocomplete="email"
+                className={styles.subscribeInput}
+              />
+              <PrimaryButton className={`${styles.subscribeButton}`}>
+                Subscribe
+              </PrimaryButton>
+            </div>
+          </div>
+        </div>
+      </React.Fragment>
     );
   }
 }
