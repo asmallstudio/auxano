@@ -1,10 +1,10 @@
 import React from "react";
-import { withRouteData, Link } from "react-static";
+import { withRouteData } from "react-static";
 
 import PrimaryButton from "../../ui/primaryButton/PrimaryButton";
 import OneThirdColumn from "./OneThirdColumn";
 import styles from "./home.scss";
-import LinkWithArrow from "../../ui/linkWithArrow/LinkWithArrow";
+import FullWidthSectionActionLink from "../../ui/fullWidthSectionActionLink/FullWidthSectionActionLink";
 
 class Home extends React.Component {
   render() {
@@ -38,18 +38,10 @@ class Home extends React.Component {
             <OneThirdColumn data={this.props.home.threecol.col3} />
           </div>
         </div>
-        <div className={`container--fluid ${styles.learnMoreContainer}`}>
-          <div className={`row ${styles.learnMoreRow}`}>
-            <div className="col-xs-12">
-              <LinkWithArrow
-                to={this.props.home.learnMore.link}
-                className={styles.learnMoreLink}
-              >
-                Learn more about us
-              </LinkWithArrow>
-            </div>
-          </div>
-        </div>
+        <FullWidthSectionActionLink
+          linkText="Learn more about us"
+          to={this.props.home.learnMore.link}
+        />
       </div>
     );
   }
