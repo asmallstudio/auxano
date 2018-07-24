@@ -1,6 +1,6 @@
 import React from "react";
-import Flickity from "react-flickity-component";
-// import styles from "./oneThirdColumn.scss";
+import NukaCarousel from "nuka-carousel";
+import styles from "./carousel.scss";
 
 const quotes = [
   {
@@ -26,41 +26,31 @@ const quotes = [
 ];
 
 class Carousel extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      quotes: [
-        {
-          id: 0,
-          name: "Loading..."
-        }
-      ]
-    };
-  }
-
-  componentDidMount() {
-    setTimeout(() => {
-      this.setState({
-        quotes: quotes
-      });
-    }, 2000);
-  }
-
   render() {
-    const flickityOptions = {
-      cellSelector: ".review"
-    };
-
     return (
-      <div className="carousel-holder">
-        <Flickity options={flickityOptions} reloadOnUpdate>
-          {this.state.quotes.map(i => (
-            <div className="review" key={i.id} name={i.name} style={style}>
-              {i.text}
-            </div>
-          ))}
-        </Flickity>
-      </div>
+      <NukaCarousel autoplay={true} swiping={true}>
+        <li className={styles.jsSlide}>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna.
+          </p>
+          <div className={styles.quoteAuthor}>John Smith</div>
+        </li>
+        <li className={styles.jsSlide}>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna.
+          </p>
+          <div className={styles.quoteAuthor}>Jane Doe</div>
+        </li>
+        <li className={styles.jsSlide}>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna.
+          </p>
+          <div className={styles.quoteAuthor}>J.D.</div>
+        </li>
+      </NukaCarousel>
     );
   }
 }
