@@ -20,9 +20,7 @@ class Home extends React.Component {
                 <p className={`${styles.heroSubTitle} vertSpacerSm`}>
                   {this.props.home.hero.subtitle}
                 </p>
-                <PrimaryButton className={styles.button}>
-                  CTA Button
-                </PrimaryButton>
+                <PrimaryButton>CTA BUTTON</PrimaryButton>
               </div>
             </div>
             <div className="col-xs-12 col-lg-6">
@@ -42,6 +40,16 @@ class Home extends React.Component {
           linkText="Learn more about us"
           to={this.props.home.learnMore.link}
         />
+        <div className="container">
+          <div className="row">
+            <div className="col-xs-12">
+              <h3>Keep updated with our latest content and events.</h3>
+              <p>Subscribe to our monthly newsletter.</p>
+              <input placeholder="Email" />
+              <PrimaryButton>Subscribe</PrimaryButton>
+            </div>
+          </div>
+        </div>
       </div>
     );
   }
