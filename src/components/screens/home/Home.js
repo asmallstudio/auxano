@@ -1,6 +1,6 @@
 import React from "react";
 import { withRouteData } from "react-static";
-import Flickity from "react-flickity-component";
+import Carousel from "./Carousel";
 
 import PrimaryButton from "../../ui/primaryButton/PrimaryButton";
 import OneThirdColumn from "./OneThirdColumn";
@@ -31,30 +31,16 @@ class Home extends React.Component {
             </div>
           </div>
         </div>
+        <section className={`${styles.pullquote} row col-xs-12 col-md-8`}>
+          <p>{this.props.home.pullquote.text}</p>
+        </section>
+        <section className={`${styles.threecols} row`}>
+          <OneThirdColumn data={this.props.home.threecol.col1} />
+          <OneThirdColumn data={this.props.home.threecol.col2} />
+          <OneThirdColumn data={this.props.home.threecol.col3} />
+        </section>
         <section>
-          <Flickity className={styles.carousel} elementType={"ul"}>
-            <li className={styles.jsSlide}>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna.
-              </p>
-              <div className={styles.quoteAuthor}>John Smith</div>
-            </li>
-            <li className={styles.jsSlide}>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna.
-              </p>
-              <div className={styles.quoteAuthor}>Jane Doe</div>
-            </li>
-            <li className={styles.jsSlide}>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna.
-              </p>
-              <div className={styles.quoteAuthor}>J.D.</div>
-            </li>
-          </Flickity>
+          <Carousel className={styles.carousel} />
         </section>
         <FullWidthSectionActionLink
           linkText="Learn more about us"
