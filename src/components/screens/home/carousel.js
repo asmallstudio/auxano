@@ -29,27 +29,27 @@ class Carousel extends React.Component {
   render() {
     return (
       <NukaCarousel autoplay={true} swiping={true}>
-        <li className={styles.jsSlide}>
+        <div className={styles.carouselSlide}>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna.
           </p>
           <div className={styles.quoteAuthor}>John Smith</div>
-        </li>
-        <li className={styles.jsSlide}>
+        </div>
+        <div className={styles.carouselSlide}>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna.
           </p>
           <div className={styles.quoteAuthor}>Jane Doe</div>
-        </li>
-        <li className={styles.jsSlide}>
+        </div>
+        <div className={styles.carouselSlide}>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna.
           </p>
           <div className={styles.quoteAuthor}>J.D.</div>
-        </li>
+        </div>
       </NukaCarousel>
     );
   }
