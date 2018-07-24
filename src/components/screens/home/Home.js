@@ -56,6 +56,8 @@ class Home extends React.Component {
             >
               <DefaultInput
                 placeholder="Email"
+                type="email"
+                aria-label="newsletter email"
                 className={styles.subscribeInput}
               />
               <PrimaryButton className={`${styles.subscribeButton}`}>
