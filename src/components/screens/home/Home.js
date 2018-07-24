@@ -10,7 +10,7 @@ import DefaultInput from "../../ui/defaultInput/DefaultInput";
 class Home extends React.Component {
   render() {
     return (
-      <div>
+      <React.Fragment>
         <div className="container">
           <div className="row">
             <div className={`col-xs-12 col-lg-6 ${styles.titleTextContainer}`}>
@@ -64,7 +64,7 @@ class Home extends React.Component {
             </div>
           </div>
         </div>
-      </div>
+      </React.Fragment>
     );
   }
 }
