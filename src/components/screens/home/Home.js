@@ -46,8 +46,8 @@ class Home extends React.Component {
             <div
               className={`col-xs-12 col-lg-5 ${styles.subscribeDescription}`}
             >
-              <h3>Keep updated with our latest content and events.</h3>
-              <p>Subscribe to our monthly newsletter.</p>
+              <h3>{this.props.home.subscribe.heading}</h3>
+              <p>{this.props.home.subscribe.text}</p>
             </div>
             <div
               className={`col-xs-12 col-md-10 col-md-offset-1 col-lg-6 col-lg-offset-1 ${

@@ -95,6 +95,19 @@ collections:
                 label: 'Link'
                 name: link
                 widget: string
+          -
+            label: 'Subscribe'
+            name: subscribe
+            widget: object
+            fields:
+              -
+                label: 'Heading'
+                name: heading
+                widget: string
+              -
+                label: 'Subheading'
+                name: subHeading
+                widget: text
       -
         label: 'Other Page'
         name: other
