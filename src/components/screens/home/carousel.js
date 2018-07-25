@@ -28,23 +28,33 @@ const quotes = [
 class Carousel extends React.Component {
   render() {
     return (
-      <NukaCarousel autoplay={true} swiping={true}>
+      <NukaCarousel
+        autoplay={true}
+        autoplayInterval={5000}
+        swiping={true}
+        wrapAround={true}
+        renderCenterLeftControls={false}
+        renderCenterRightControls={false}
+      >
         <div className={styles.carouselSlide}>
-          <p>
+          <div className={styles.quoteAuthorImg} />
+          <p className={styles.quoteText}>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna.
           </p>
           <div className={styles.quoteAuthor}>John Smith</div>
         </div>
         <div className={styles.carouselSlide}>
-          <p>
+          <div className={styles.quoteAuthorImg} />
+          <p className={styles.quoteText}>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna.
           </p>
           <div className={styles.quoteAuthor}>Jane Doe</div>
         </div>
         <div className={styles.carouselSlide}>
-          <p>
+          <div className={styles.quoteAuthorImg} />
+          <p className={styles.quoteText}>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna.
           </p>

@@ -1,3 +1,28 @@
-.carousel {
-  overflow: hidden;
+@import "../../styles/utils.scss";
+
+.carouselSlide {
+  font-size: 1.35em;
+  text-align: center;
+}
+
+.quoteAuthorImg {
+  height: 3rem;
+  width: 3rem;
+  background-color: var(--grey-40);
+  border-radius: 50%;
+  margin: 0 auto var(--space-l3);
+}
+
+.quoteText {
+  max-width: 35rem;
+  margin: 0 auto;
+}
+
+.quoteAuthor {
+  font-size: 0.75em;
+  color: var(--grey);
+  margin-top: var(--space-l3);
+}
+
+.slider-control-bottomcenter {
 }
