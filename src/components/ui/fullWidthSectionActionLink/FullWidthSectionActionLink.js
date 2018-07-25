@@ -1,7 +1,7 @@
 import React from "react";
 
 import styles from "./fullWidthSectionActionLink.scss";
-import LinkWithArrow from "../../ui/linkWithArrow/LinkWithArrow";
+import LinkWithArrow from "../linkWithArrow/LinkWithArrow";
 
 class FullWidthSectionActionLink extends React.Component {
   render() {
