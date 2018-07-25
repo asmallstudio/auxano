@@ -30,7 +30,7 @@ class Home extends React.Component {
             </div>
           </div>
           <section className={`${styles.pullquote} row col-xs-12 col-md-8`}>
-            <p>{this.props.home.pullquote.text}</p>
+            <p className="style-as-h2">{this.props.home.pullquote.text}</p>
           </section>
           <section className={`${styles.threecols} row`}>
             <OneThirdColumn data={this.props.home.threecol.col1} />
@@ -50,7 +50,9 @@ class Home extends React.Component {
             <div
               className={`col-xs-12 col-lg-5 ${styles.subscribeDescription}`}
             >
-              <h3>{this.props.home.subscribe.heading}</h3>
+              <h2 className="style-as-h3">
+                {this.props.home.subscribe.heading}
+              </h2>
               <p>{this.props.home.subscribe.text}</p>
             </div>
             <div

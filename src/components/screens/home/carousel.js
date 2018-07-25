@@ -38,7 +38,7 @@ class Carousel extends React.Component {
       >
         <div className={styles.carouselSlide}>
           <div className={styles.quoteAuthorImg} />
-          <p className={styles.quoteText}>
+          <p className={`${styles.quoteText} style-as-h3`}>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna.
           </p>
@@ -46,7 +46,7 @@ class Carousel extends React.Component {
         </div>
         <div className={styles.carouselSlide}>
           <div className={styles.quoteAuthorImg} />
-          <p className={styles.quoteText}>
+          <p className={`${styles.quoteText} style-as-h3`}>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna.
           </p>
@@ -54,7 +54,7 @@ class Carousel extends React.Component {
         </div>
         <div className={styles.carouselSlide}>
           <div className={styles.quoteAuthorImg} />
-          <p className={styles.quoteText}>
+          <p className={`${styles.quoteText} style-as-h3`}>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna.
           </p>
