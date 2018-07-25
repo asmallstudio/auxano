@@ -1,6 +1,6 @@
 import React from "react";
 import { withRouteData } from "react-static";
-import Carousel from "./Carousel";
+import AuxanoCarousel from "./Carousel";
 
 import PrimaryButton from "../../ui/primaryButton/PrimaryButton";
 import OneThirdColumn from "./OneThirdColumn";
@@ -38,7 +38,7 @@ class Home extends React.Component {
             <OneThirdColumn data={this.props.home.threecol.col3} />
           </section>
           <section>
-            <Carousel className={styles.carousel} />
+            <AuxanoCarousel />
           </section>
         </div>
         <FullWidthSectionActionLink

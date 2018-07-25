@@ -1,40 +1,20 @@
 import React from "react";
-import NukaCarousel from "nuka-carousel";
+import Carousel, { PagingDots } from "nuka-carousel";
 import styles from "./carousel.scss";
 
-const quotes = [
-  {
-    name: "John Smith",
-    text:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna."
-  },
-  {
-    name: "Jane Smith",
-    text:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna."
-  },
-  {
-    name: "Scott Smith",
-    text:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna."
-  },
-  {
-    name: "J.S.",
-    text:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna."
-  }
-];
-
-class Carousel extends React.Component {
+class AuxanoCarousel extends React.Component {
   render() {
     return (
-      <NukaCarousel
+      <Carousel
+        className={styles.carousel}
         autoplay={true}
         autoplayInterval={5000}
-        swiping={true}
         wrapAround={true}
-        renderCenterLeftControls={false}
-        renderCenterRightControls={false}
+        renderCenterLeftControls={null}
+        renderCenterRightControls={null}
+        renderBottomCenterControls={props => (
+          <PagingDots className={styles.pagingDots} {...props} />
+        )}
       >
         <div className={styles.carouselSlide}>
           <div className={styles.quoteAuthorImg} />
@@ -60,9 +40,9 @@ class Carousel extends React.Component {
           </p>
           <div className={styles.quoteAuthor}>J.D.</div>
         </div>
-      </NukaCarousel>
+      </Carousel>
     );
   }
 }
 
-export default Carousel;
+export default AuxanoCarousel;

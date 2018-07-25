@@ -6,23 +6,35 @@
 }
 
 .quoteAuthorImg {
-  height: 3rem;
-  width: 3rem;
+  height: 4rem;
+  width: 4rem;
   background-color: var(--grey-40);
   border-radius: 50%;
   margin: 0 auto var(--space-l3);
 }
 
 .quoteText {
-  max-width: 35rem;
+  max-width: 50rem;
   margin: 0 auto;
 }
 
 .quoteAuthor {
-  font-size: 0.75em;
+  font-size: 0.8em;
   color: var(--grey);
   margin-top: var(--space-l3);
 }
 
-.slider-control-bottomcenter {
+.carousel {
+  margin: var(--space-l5) 0;
+}
+
+.carousel :global(.slider-control-bottomcenter) {
+  ul {
+    top: -40px !important;
+  }
+  button {
+    color: var(--fountain-blue) !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
 }
