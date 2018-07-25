@@ -16,7 +16,7 @@ class AuxanoCarousel extends React.Component {
         {
           name: "Jane Smith",
           text:
-            "Incididunt adipisicing helvetica normcore selfies dolor hell of farm-to-table pitchfork. Woke direct trade helvetica, whatever keffiyeh adaptogen small batch gastropub."
+            "Incididunt test adipisicing helvetica normcore selfies dolor hell of farm - to - table pitchfork.Woke direct trade helvetica, whatever keffiyeh adaptogen small batch gastropub."
         },
         {
           name: "Scott Smith",
