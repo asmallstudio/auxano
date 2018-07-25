@@ -14,8 +14,12 @@
 }
 
 .quoteText {
-  max-width: 50rem;
+  max-width: 95%;
   margin: 0 auto;
+
+  @include respond-above(md) {
+    max-width: 50rem;
+  }
 }
 
 .quoteAuthor {
@@ -26,12 +30,13 @@
 
 .carousel {
   margin: var(--space-l5) 0;
+
+  ul {
+    cursor: grab !important;
+  }
 }
 
 .carousel :global(.slider-control-bottomcenter) {
-  ul {
-    top: -40px !important;
-  }
   button {
     color: var(--fountain-blue) !important;
     padding-top: 0 !important;
