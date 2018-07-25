@@ -1,4 +1,7 @@
 import React from "react";
+const theme = require("../../../lib/theme.json");
+
+//from: https://github.com/FormidableLabs/nuka-carousel/blob/master/src/default-controls.js#L63
 
 class PagingDots extends React.Component {
   getIndexes(count, inc) {
@@ -13,6 +16,7 @@ class PagingDots extends React.Component {
     return {
       position: "relative",
       margin: 0,
+      marginTop: -20,
       top: -10,
       padding: 0
     };
@@ -29,12 +33,13 @@ class PagingDots extends React.Component {
     return {
       border: 0,
       background: "transparent",
-      color: "black",
+      color: theme["fountain-blue"],
       cursor: "pointer",
       padding: 10,
+      paddingTop: 0,
       outline: 0,
       fontSize: 24,
-      opacity: active ? 1 : 0.5
+      opacity: active ? 1 : 0.4
     };
   }
 

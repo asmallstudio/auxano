@@ -35,11 +35,3 @@
     cursor: grab !important;
   }
 }
-
-.carousel :global(.slider-control-bottomcenter) {
-  button {
-    color: var(--fountain-blue) !important;
-    padding-top: 0 !important;
-    padding-bottom: 0 !important;
-  }
-}
