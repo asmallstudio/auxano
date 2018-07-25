@@ -1,5 +1,6 @@
 import React from "react";
-import Carousel, { PagingDots } from "nuka-carousel";
+import Carousel from "nuka-carousel";
+import PagingDots from "./PagingDots";
 import styles from "./carousel.scss";
 
 class AuxanoCarousel extends React.Component {
