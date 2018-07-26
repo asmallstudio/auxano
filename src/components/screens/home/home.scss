@@ -1,17 +1,32 @@
 @import "../../styles/utils.scss";
 
-.titleTextContainer {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+.heroContainer {
+  padding-top: 6em;
+
+  @include respond-above(md) {
+    padding-bottom: 6em;
+    background: url("http://via.placeholder.com/900x750") no-repeat center;
+    background-position-x: right;
+    background-size: 50% auto;
+  }
 }
 
-.heroTitle {
-  color: var(--fountain-blue);
-}
+.heroTextContainer {
+  text-align: center;
 
-.heroSubTitle {
-  color: var(--grey);
+  h1 {
+    color: var(--fountain-blue);
+    margin-bottom: 0.5em;
+  }
+
+  p {
+    color: var(--grey);
+    margin-bottom: 1.33em;
+  }
+
+  @include respond-above(md) {
+    text-align: left;
+  }
 }
 
 .filler {
