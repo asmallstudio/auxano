@@ -24,6 +24,12 @@
     margin-bottom: 1.33em;
   }
 
+  h1,
+  p {
+    hyphens: auto;
+    overflow-wrap: break-word;
+  }
+
   @include respond-above(md) {
     text-align: left;
   }
@@ -36,14 +42,11 @@
 }
 
 .pullquote {
+  hyphens: auto;
   margin: var(--space-l5) 0;
 
   p {
-    font-family: "Playfair Display", serif;
-    font-size: 2.25em;
-    line-height: 1.56;
     text-align: center;
-    color: var(--grey);
 
     @include respond-above(md) {
       text-align: left;
@@ -108,4 +111,8 @@
 
 .subscribeAction {
   text-align: center;
+}
+
+.carousel {
+  overflow: hidden;
 }

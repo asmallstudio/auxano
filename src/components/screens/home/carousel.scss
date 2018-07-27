@@ -1,0 +1,51 @@
+@import "../../styles/utils.scss";
+:global {
+  @import "./slider-lib.scss";
+}
+
+.carouselSlide {
+  font-size: 1.2em;
+  text-align: center;
+  overflow-wrap: break-word;
+
+  @include respond-above(sm) {
+    font-size: 1.35em;
+  }
+}
+
+.quoteAuthorImg {
+  height: 4rem;
+  width: 4rem;
+  background-color: var(--grey-40);
+  border-radius: 50%;
+  margin: 0 auto var(--space-l3);
+}
+
+.quoteText {
+  max-width: 95%;
+  margin: 0 auto;
+
+  @include respond-above(md) {
+    max-width: 50rem;
+  }
+}
+
+.quoteAuthor {
+  font-size: 0.8em;
+  color: var(--grey);
+  margin-top: var(--space-l3);
+}
+
+.carousel {
+  margin: var(--space-l5) 0;
+
+  ul {
+    cursor: move;
+    cursor: grab;
+    user-select: text;
+
+    &:active {
+      cursor: grabbing;
+    }
+  }
+}
