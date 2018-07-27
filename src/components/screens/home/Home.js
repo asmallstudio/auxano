@@ -26,8 +26,10 @@ class Home extends React.Component {
           </div>
         </div>
         <div className={`container`}>
-          <section className={`${styles.pullquote} row col-xs-12 col-md-8`}>
-            <p className="style-as-h2">{this.props.home.pullquote.text}</p>
+          <section className={`${styles.pullquote} row`}>
+            <div className="col-xs-12 col-md-8">
+              <p className="style-as-h2">{this.props.home.pullquote.text}</p>
+            </div>
           </section>
           <section className={`${styles.threecols} row`}>
             <OneThirdColumn data={this.props.home.threecol.col1} />
