@@ -7,7 +7,7 @@ class FullWidthSectionActionLink extends React.Component {
   render() {
     const { linkText, to } = this.props;
     return (
-      <div className={`container--fluid ${styles.container}`}>
+      <section className={`container--fluid ${styles.container}`}>
         <div className={`row ${styles.row}`}>
           <div className="col-xs-12">
             <LinkWithArrow to={to} className={styles.link}>
@@ -15,7 +15,7 @@ class FullWidthSectionActionLink extends React.Component {
             </LinkWithArrow>
           </div>
         </div>
-      </div>
+      </section>
     );
   }
 }
