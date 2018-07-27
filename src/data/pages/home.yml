@@ -1,3 +1,23 @@
 hero:
-  title: 'Hello I am a string'
-  exampleText: 'Hello I am a text'
+  title: 'Transcending wealth. Transforming lives.'
+  subtitle: "We help clients transcend the traditional definition of wealth so it's used to build a legacy that transforms families, finances, and their future."
+pullquote:
+  text: 'Lorem ipsum dolor sit amet, consectetur adipiscing, sed do eiusmod tempor ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostru.'
+threecol:
+  col1: 
+    heading: Subheading
+    text: 'Lorem ipsum dolor sit amet, consour adipiscing elit, sed do eiusmo tempor incididunt ut labore et dolore magna aliqua. Luctus venenatis lectus mido magna fringilla. Elit sed vulputate.'
+    link: '#'
+  col2: 
+    heading: Subheading
+    text: 'Lorem ipsum dolor sit amet, consour adipiscing elit, sed do eiusmo tempor incididunt ut labore et dolore magna aliqua. Luctus venenatis lectus mido magna fringilla. Elit sed vulputate.'
+    link: '#'
+  col3: 
+    heading: Subheading
+    text: 'Lorem ipsum dolor sit amet, consour adipiscing elit, sed do eiusmo tempor incididunt ut labore et dolore magna aliqua. Luctus venenatis lectus mido magna fringilla. Elit sed vulputate.'
+    link: '#'
+learnMore:
+  link: '#'
+subscribe:
+  heading: 'Keep updated with our latest content and events.'
+  text: 'Subscribe to our monthly newsletter.'

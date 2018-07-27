@@ -1,0 +1,81 @@
+@import "../../styles/utils.scss";
+
+.heroContainer {
+  padding: 6em 0;
+
+  @include respond-above(md) {
+    padding: 9.75em 0;
+    background: url("http://via.placeholder.com/900x750") no-repeat center;
+    background-position-x: right;
+    background-size: 50% auto;
+  }
+}
+
+.heroTextContainer {
+  text-align: center;
+
+  h1 {
+    color: var(--fountain-blue);
+    margin-bottom: 0.5em;
+  }
+
+  p {
+    color: var(--grey);
+  }
+
+  @include respond-above(md) {
+    text-align: left;
+  }
+}
+
+.fullWidthImage1Row {
+  background-image: url("http://via.placeholder.com/1000x800");
+  background-size: cover;
+  background-position: center;
+  height: calc(50vw);
+  min-height: 10em;
+  max-height: 40em;
+  margin-bottom: var(--space-l5);
+}
+
+.infoSection1ColText {
+  text-align: center;
+  margin-bottom: 3em;
+
+  h2 {
+    margin-bottom: 0.67em;
+    color: var(--grey);
+  }
+
+  p {
+    margin-bottom: 1.33em;
+    color: var(--grey);
+  }
+
+  @include respond-above(md) {
+    text-align: left;
+  }
+
+  @include respond-above(lg) {
+    margin-bottom: 0;
+  }
+}
+
+.infoSectionImage {
+  width: 100%;
+  border-radius: 0.5rem;
+}
+
+.infoSectionColImage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.infoSection1Row {
+  margin-bottom: var(--space-l5);
+
+  @include respond-above(lg) {
+    flex-direction: row-reverse;
+  }
+}

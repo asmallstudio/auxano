@@ -1,3 +1,5 @@
+@import "../styles/utils.scss";
+
 @font-face {
   font-family: "Playfair Display";
   font-style: normal;
@@ -16,6 +18,27 @@
       format("truetype"),
     /* Safari, Android, iOS */
       url("./fonts/playfair/playfair-display-v13-latin-700.svg#PlayfairDisplay")
+      format("svg"); /* Legacy iOS */
+}
+
+@font-face {
+  font-family: "Playfair Display";
+  font-style: normal;
+  font-weight: 400;
+  font-display: fallback;
+  src: url("./fonts/playfair/playfair-display-normal-400.eot"); /* IE9 Compat Modes */
+  src: local("Playfair Display Regular"), local("PlayfairDisplay-Regular"),
+    local("Playfair Display"),
+    url("./fonts/playfair/playfair-display-normal-400.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-IE8 */ url("./fonts/playfair/playfair-display-normal-400.woff2")
+      format("woff2"),
+    /* Super Modern Browsers */
+      url("./fonts/playfair/playfair-display-normal-400.woff") format("woff"),
+    /* Modern Browsers */
+      url("./fonts/playfair/playfair-display-normal-400.ttf") format("truetype"),
+    /* Safari, Android, iOS */
+      url("./fonts/playfair/playfair-display-normal-400.svg#PlayfairDisplay")
       format("svg"); /* Legacy iOS */
 }
 
@@ -62,19 +85,44 @@
     font-family: Arial, Helvetica, sans-serif;
   }
 
-  h1 {
-    font-family: 'Playfair Display', serif;
-    font-size: 3em;
+  h1,
+  .style-as-h1 {
+    font-family: "Playfair Display", serif;
+    font-size: 2.75em;
     font-weight: 700;
     font-style: normal;
     font-stretch: normal;
-    line-height: 1.13;
+    line-height: 1.17;
     letter-spacing: normal;
+    color: var(--fountain-blue);
     margin-top: 0;
     margin-bottom: 0;
+
+    @include respond-above(md) {
+      font-size: 3em;
+    }
   }
 
-  h4 {
+  h2,
+  .style-as-h2 {
+    font-family: "Playfair Display", serif;
+    font-size: 2em;
+    font-weight: 400;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.56;
+    letter-spacing: normal;
+    color: var(--grey);
+    margin-top: 0;
+    margin-bottom: 0;
+
+    @include respond-above(md) {
+      font-size: 2.25em;
+    }
+  }
+
+  h3,
+  .style-as-h3 {
     font-family: Roboto, Helvetica, sans-serif;
     font-size: 1.5em;
     font-weight: normal;
@@ -82,11 +130,13 @@
     font-stretch: normal;
     line-height: 1.67;
     letter-spacing: normal;
+    color: var(--gigas);
     margin-top: 0;
     margin-bottom: 0;
   }
 
-  p {
+  p,
+  .style-as-p {
     font-family: Roboto, Helvetica, sans-serif;
     font-size: 1.125em;
     font-weight: normal;
@@ -94,6 +144,7 @@
     font-stretch: normal;
     line-height: 1.56;
     letter-spacing: normal;
+    color: var(--grey);
     margin-top: 0;
     margin-bottom: 0;
   }
