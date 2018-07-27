@@ -28,6 +28,11 @@
   p {
     hyphens: auto;
     overflow-wrap: break-word;
+
+    @include respond-above(md) {
+      hyphens: manual;
+      overflow-wrap: normal;
+    }
   }
 
   @include respond-above(md) {
@@ -42,13 +47,14 @@
 }
 
 .pullquote {
-  hyphens: auto;
   margin: var(--space-l5) 0;
 
   p {
+    hyphens: auto;
     text-align: center;
 
     @include respond-above(md) {
+      hyphens: manual;
       text-align: left;
     }
   }
