@@ -12,23 +12,20 @@ class Home extends React.Component {
   render() {
     return (
       <React.Fragment>
-        <div className="container">
-          <div className="row">
-            <div className={`${styles.titleTextContainer} col-xs-12 col-lg-6`}>
-              <div>
-                <h1 className={`${styles.heroTitle} vertSpacerSm`}>
-                  {this.props.home.hero.title}
-                </h1>
-                <p className={`${styles.heroSubTitle} vertSpacerSm`}>
-                  {this.props.home.hero.subtitle}
-                </p>
-                <PrimaryButton>CTA BUTTON</PrimaryButton>
+        <div className={`container--fluid ${styles.heroContainer}`}>
+          <div className={`container`}>
+            <div className="row">
+              <div className={`col-xs-12 col-md-6 ${styles.heroTextContainer}`}>
+                <h1>{this.props.home.hero.title}</h1>
+                <p>{this.props.home.hero.subtitle}</p>
+                <div>
+                  <PrimaryButton>CTA Button</PrimaryButton>
+                </div>
               </div>
             </div>
-            <div className="col-xs-12 col-lg-6">
-              <div className={styles.filler} />
-            </div>
           </div>
+        </div>
+        <div className={`container`}>
           <section className={`${styles.pullquote} row col-xs-12 col-md-8`}>
             <p className="style-as-h2">{this.props.home.pullquote.text}</p>
           </section>
