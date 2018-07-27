@@ -3,6 +3,7 @@ import { withRouteData } from "react-static";
 
 import styles from "./aboutUs.scss";
 import PrimaryButton from "../../ui/primaryButton/PrimaryButton";
+import FullWidthSectionActionLink from "../../ui/fullWidthSectionActionLink/FullWidthSectionActionLink";
 
 class AboutUs extends React.Component {
   constructor(props) {
@@ -46,6 +47,10 @@ class AboutUs extends React.Component {
             </div>
           </div>
         </section>
+        <FullWidthSectionActionLink
+          linkText={aboutUs.actionBanner.text}
+          to={aboutUs.actionBanner.link}
+        />
       </React.Fragment>
     );
   }

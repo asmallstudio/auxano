@@ -4,7 +4,7 @@
   padding: 6em 0;
 
   @include respond-above(md) {
-    padding-bottom: 6em;
+    padding: 9.75em 0;
     background: url("http://via.placeholder.com/900x750") no-repeat center;
     background-position-x: right;
     background-size: 50% auto;
@@ -73,7 +73,7 @@
 }
 
 .infoSection1Row {
-  margin-bottom: 3em;
+  margin-bottom: var(--space-l5);
 
   @include respond-above(lg) {
     flex-direction: row-reverse;
