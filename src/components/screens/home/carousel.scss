@@ -42,6 +42,7 @@
   ul {
     cursor: move;
     cursor: grab;
+    user-select: text;
 
     &:active {
       cursor: grabbing;
