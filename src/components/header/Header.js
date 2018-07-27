@@ -72,6 +72,15 @@ class Header extends React.Component {
                 </li>
                 <li>
                   <Link
+                    to="/about-us"
+                    activeClassName={styles.activeLink}
+                    onClick={this._handleMenuClose}
+                  >
+                    About Us
+                  </Link>
+                </li>
+                <li>
+                  <Link
                     to="/other"
                     activeClassName={styles.activeLink}
                     onClick={this._handleMenuClose}
