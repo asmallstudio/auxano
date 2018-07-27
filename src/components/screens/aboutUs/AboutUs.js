@@ -24,19 +24,25 @@ class AboutUs extends React.Component {
             </div>
           </div>
         </section>
-        <section
-          className={`container--fluid ${styles.fullWidthImage1Container}`}
-        />
+        <section className={`container--fluid`}>
+          <div className={`row ${styles.fullWidthImage1Row}`} />
+        </section>
         <section className="container">
-          <div className="row">
+          <div className={`row ${styles.infoSection1Row}`}>
             <div
-              className={`col-xs-12 col-md-8 col-lg-6 ${
-                styles.infoSection1Col
+              className={`col-xs-12 col-md-8 col-lg-5 col-lg-offset-1 ${
+                styles.infoSection1ColText
               }`}
             >
               <h2>{aboutUs.infoSection1.heading}</h2>
               <p>{aboutUs.infoSection1.text}</p>
               <PrimaryButton>CTA Button</PrimaryButton>
+            </div>
+            <div className={`col-xs-12 col-lg-6 ${styles.infoSectionColImage}`}>
+              <img
+                className={styles.infoSectionImage}
+                src="http://via.placeholder.com/300x180"
+              />
             </div>
           </div>
         </section>
