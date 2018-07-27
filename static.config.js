@@ -14,12 +14,23 @@ export default {
     const other = yaml.safeLoad(
       fs.readFileSync("./src/data/pages/other.yml", "utf8")
     );
+    const aboutUs = yaml.safeLoad(
+      fs.readFileSync("./src/data/pages/aboutUs.yml", "utf8")
+    );
+
     return [
       {
         path: "/",
         component: "src/components/screens/home/Home",
         getData: () => ({
           home
+        })
+      },
+      {
+        path: "/about-us",
+        component: "src/components/screens/aboutUs/AboutUs",
+        getData: () => ({
+          aboutUs
         })
       },
       {

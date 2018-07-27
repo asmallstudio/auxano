@@ -1,0 +1,11 @@
+hero:
+  title: 'Who We Are'
+  subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing, sed do eiusmod tempor ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostru.'
+fullWidthImage1:
+  image: /uploads/test.jpg
+infoSection1:
+  heading: 'Community ipsum dolor sit'
+  text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.'
+  link: '#'
+actionBanner:
+  link: 'Meet our team'

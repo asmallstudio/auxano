@@ -1,0 +1,30 @@
+@import "../../styles/utils.scss";
+
+.heroContainer {
+  padding-top: 6em;
+
+  @include respond-above(md) {
+    padding-bottom: 6em;
+    background: url("http://via.placeholder.com/900x750") no-repeat center;
+    background-position-x: right;
+    background-size: 50% auto;
+  }
+}
+
+.heroTextContainer {
+  text-align: center;
+
+  h1 {
+    color: var(--fountain-blue);
+    margin-bottom: 0.5em;
+  }
+
+  p {
+    color: var(--grey);
+    margin-bottom: 1.33em;
+  }
+
+  @include respond-above(md) {
+    text-align: left;
+  }
+}

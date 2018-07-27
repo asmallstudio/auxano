@@ -6,19 +6,21 @@ import { Route } from 'react-router-dom'
 import { cleanPath } from 'react-static'
 
 import t_0 from '../../src/components/screens/home/Home'
-import t_1 from '../../src/components/screens/other/Other'
-import t_2 from '../../src/components/screens/404/404'
+import t_1 from '../../src/components/screens/aboutUs/AboutUs'
+import t_2 from '../../src/components/screens/other/Other'
+import t_3 from '../../src/components/screens/404/404'
 
 // Template Map
 global.componentsByTemplateID = global.componentsByTemplateID || [
   t_0,
 t_1,
-t_2
+t_2,
+t_3
 ]
 
 // Template Tree
 global.templateIDsByPath = global.templateIDsByPath || {
-  '404': 2
+  '404': 3
 }
 
 // Get template for given path
