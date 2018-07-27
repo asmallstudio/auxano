@@ -6,14 +6,11 @@
   justify-content: center;
 }
 
-.heroTitle {
-  color: var(--fountain-blue);
-}
-
+.heroTitle,
 .heroSubTitle {
-  color: var(--grey);
+  hyphens: auto;
+  overflow-wrap: break-word;
 }
-
 .filler {
   width: 100%;
   height: 400px;
@@ -21,14 +18,11 @@
 }
 
 .pullquote {
+  hyphens: auto;
   margin: var(--space-l5) 0;
 
   p {
-    font-family: "Playfair Display", serif;
-    font-size: 2.25em;
-    line-height: 1.56;
     text-align: center;
-    color: var(--grey);
 
     @include respond-above(md) {
       text-align: left;
@@ -93,4 +87,8 @@
 
 .subscribeAction {
   text-align: center;
+}
+
+.carousel {
+  overflow: hidden;
 }
