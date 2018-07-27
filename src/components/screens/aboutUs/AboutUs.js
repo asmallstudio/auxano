@@ -2,6 +2,7 @@ import React from "react";
 import { withRouteData } from "react-static";
 
 import styles from "./aboutUs.scss";
+import PrimaryButton from "../../ui/primaryButton/PrimaryButton";
 
 class AboutUs extends React.Component {
   constructor(props) {
@@ -13,7 +14,7 @@ class AboutUs extends React.Component {
 
     return (
       <React.Fragment>
-        <div className={`container--fluid ${styles.heroContainer}`}>
+        <section className={`container--fluid ${styles.heroContainer}`}>
           <div className={`container`}>
             <div className="row">
               <div className={`col-xs-12 col-md-6 ${styles.heroTextContainer}`}>
@@ -22,7 +23,23 @@ class AboutUs extends React.Component {
               </div>
             </div>
           </div>
-        </div>
+        </section>
+        <section
+          className={`container--fluid ${styles.fullWidthImage1Container}`}
+        />
+        <section className="container">
+          <div className="row">
+            <div
+              className={`col-xs-12 col-md-8 col-lg-6 ${
+                styles.infoSection1Col
+              }`}
+            >
+              <h2>{aboutUs.infoSection1.heading}</h2>
+              <p>{aboutUs.infoSection1.text}</p>
+              <PrimaryButton>CTA Button</PrimaryButton>
+            </div>
+          </div>
+        </section>
       </React.Fragment>
     );
   }
