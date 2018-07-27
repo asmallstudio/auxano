@@ -109,6 +109,63 @@ collections:
                 name: subHeading
                 widget: text
       -
+        label: 'About Us'
+        name: aboutUs
+        file: src/data/pages/aboutUs.yml
+        fields:
+          -
+            label: Hero
+            name: hero
+            widget: object
+            fields:
+              -
+                label: Title
+                name: title
+                widget: string
+              -
+                label: 'Subtitle'
+                name: subtitle
+                widget: text
+          -
+            label: "Full width image 1"
+            name: fullWidthImage1
+            widget: object
+            fields:
+              -
+                label: Image
+                name: image
+                widget: image
+          -
+            label: "Info section 1"
+            name: infoSection1
+            widget: object
+            fields:
+              -
+                label: 'Heading'
+                name: heading
+                widget: string
+              -
+                label: 'Content'
+                name: text
+                widget: text
+              -
+                label: 'Link'
+                name: link
+                widget: string
+          -
+            label: 'Action Banner'
+            name: actionBanner
+            widget: object
+            fields:
+              -
+                label: 'Text'
+                name: text
+                widget: string
+              -
+                label: 'Link'
+                name: link
+                widget: string
+      -
         label: 'Other Page'
         name: other
         file: src/data/pages/other.yml
