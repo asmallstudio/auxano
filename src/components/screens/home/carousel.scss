@@ -1,8 +1,16 @@
 @import "../../styles/utils.scss";
+:global {
+  @import "./slider-lib.scss";
+}
 
 .carouselSlide {
-  font-size: 1.35em;
+  font-size: 1.2em;
   text-align: center;
+  overflow-wrap: break-word;
+
+  @include respond-above(sm) {
+    font-size: 1.35em;
+  }
 }
 
 .quoteAuthorImg {
@@ -32,6 +40,11 @@
   margin: var(--space-l5) 0;
 
   ul {
-    cursor: grab !important;
+    cursor: move;
+    cursor: grab;
+
+    &:active {
+      cursor: grabbing;
+    }
   }
 }

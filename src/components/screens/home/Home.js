@@ -14,7 +14,7 @@ class Home extends React.Component {
       <React.Fragment>
         <div className="container">
           <div className="row">
-            <div className={`col-xs-12 col-lg-6 ${styles.titleTextContainer}`}>
+            <div className={`${styles.titleTextContainer} col-xs-12 col-lg-6`}>
               <div>
                 <h1 className={`${styles.heroTitle} vertSpacerSm`}>
                   {this.props.home.hero.title}
