@@ -1,3 +1,5 @@
+@import "../styles/utils.scss";
+
 @font-face {
   font-family: "Playfair Display";
   font-style: normal;
@@ -86,7 +88,7 @@
   h1,
   .style-as-h1 {
     font-family: "Playfair Display", serif;
-    font-size: 3em;
+    font-size: 2.75em;
     font-weight: 700;
     font-style: normal;
     font-stretch: normal;
@@ -95,12 +97,16 @@
     color: var(--fountain-blue);
     margin-top: 0;
     margin-bottom: 0;
+
+    @include respond-above(md) {
+      font-size: 3em;
+    }
   }
 
   h2,
   .style-as-h2 {
     font-family: "Playfair Display", serif;
-    font-size: 2.25em;
+    font-size: 2em;
     font-weight: 400;
     font-style: normal;
     font-stretch: normal;
@@ -109,6 +115,10 @@
     color: var(--grey);
     margin-top: 0;
     margin-bottom: 0;
+
+    @include respond-above(md) {
+      font-size: 2.25em;
+    }
   }
 
   h3,

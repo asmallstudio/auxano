@@ -14,6 +14,10 @@
 .heroTextContainer {
   text-align: center;
 
+  @include respond-above(md) {
+    text-align: left;
+  }
+
   h1 {
     color: var(--fountain-blue);
     margin-bottom: 0.5em;
@@ -22,21 +26,6 @@
   p {
     color: var(--grey);
     margin-bottom: 1.33em;
-  }
-
-  h1,
-  p {
-    hyphens: auto;
-    overflow-wrap: break-word;
-
-    @include respond-above(md) {
-      hyphens: manual;
-      overflow-wrap: normal;
-    }
-  }
-
-  @include respond-above(md) {
-    text-align: left;
   }
 }
 
