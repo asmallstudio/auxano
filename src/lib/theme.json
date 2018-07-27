@@ -26,8 +26,7 @@
   "black-40": "rgba(36, 36, 36, 0.4)",
   "black-10": "rgba(36, 36, 36, 0.1)",
 
-  "mobile-header-height": "5rem",
-  "desktop-header-height": "7rem",
+  "header-height": "6rem",
 
   "space-l1": "0.5rem",
   "space-l2": "1rem",

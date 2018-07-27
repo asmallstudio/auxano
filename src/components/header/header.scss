@@ -8,7 +8,7 @@
   width: 100%;
   flex-direction: row;
   z-index: 1000;
-  height: var(--mobile-header-height);
+  height: var(--header-height);
 }
 
 .activeLink {
@@ -56,7 +56,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
-  height: var(--mobile-header-height);
+  height: var(--header-height);
 
   a {
     color: inherit;
@@ -138,10 +138,10 @@ nav {
   }
 
   .container {
-    height: var(--desktop-header-height);
+    height: var(--header-height);
   }
 
   .logoContainer {
-    height: var(--desktop-header-height);
+    height: var(--header-height);
   }
 }
