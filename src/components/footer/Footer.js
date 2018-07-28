@@ -6,7 +6,7 @@ import styles from "./footer.scss";
 class Footer extends React.Component {
   render() {
     return (
-      <div>
+      <footer>
         <div className={`container ${styles.footerContainer}`}>
           <div className={`col-xs-12 ${styles.rowLink}`}>
             <nav className="">
@@ -31,11 +31,19 @@ class Footer extends React.Component {
           </div>
           <div className="rowInfo">
             <div className="col-xs-12">
-              <n2>Hello This is Info with stuff</n2>
+              <ul className={styles.listInfo}>
+                <li>
+                  <p className={`N2 ${styles.addressText}`}>Address Line 1</p>
+                  <p className={`N2 ${styles.addressText}`}>Address Line 2</p>
+                </li>
+                <li>
+                  <p className="N2">2018 Trademark</p>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
-      </div>
+      </footer>
     );
   }
 }
