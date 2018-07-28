@@ -2,6 +2,7 @@
 
 .footerContainer {
   border-top: 1px solid var(--grey);
+  font-size: 15px;
 }
 
 .activeLink {
@@ -21,7 +22,7 @@
   flex-direction: column;
   list-style-type: none;
   padding-left: 0;
-  text-align: center;
+  align-items: center;
 
   li {
     color: var(--grey);
@@ -36,4 +37,13 @@
       color: var(--gigas);
     }
   }
+}
+
+.listInfo {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  padding-left: 0;
+  align-items: center;
+  color: var(--grey-40);
 }
