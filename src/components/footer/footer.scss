@@ -3,3 +3,37 @@
 .footerContainer {
   border-top: 1px solid var(--grey);
 }
+
+.activeLink {
+  color: var(--gigas) !important;
+}
+
+.rowLink {
+  margin: 0 auto 0 auto;
+  flex: 1;
+  max-width: $max-width-em;
+  display: flex;
+  flex-direction: column;
+}
+
+.listLink {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  padding-left: 0;
+  text-align: center;
+
+  li {
+    color: var(--grey);
+
+    a {
+      transition: color 0.3s ease;
+      color: inherit;
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: var(--gigas);
+    }
+  }
+}
