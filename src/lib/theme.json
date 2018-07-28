@@ -29,6 +29,9 @@
   "mobile-header-height": "5rem",
   "desktop-header-height": "7rem",
 
+  "tablet-footer-height": "10rem",
+  "desktop-footer-height": "16rem",
+
   "space-l1": "0.5rem",
   "space-l2": "1rem",
   "space-l3": "2rem",
