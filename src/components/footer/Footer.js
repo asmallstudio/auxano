@@ -30,9 +30,13 @@ class Footer extends React.Component {
             </nav>
           </div>
           <div className={`col-xs-12 ${styles.infoContainer}`}>
-            <p className="N2">10900 NE 4th Street, Suite 1950</p>
-            <p className="N2"> Bellevue, WA 98004</p>
-            <p className="N2">2018 Trademark</p>
+            <p className={`N2 ${styles.addressText}`}>
+              10900 NE 4th Street, Suite 1950
+            </p>
+            <p className={`N2 ${styles.addressText}`}> Bellevue, WA 98004</p>
+            <p className={`N2 ${styles.copyrightText}`}>
+              © 2018 Auxano Advisors LLC
+            </p>
           </div>
           <div className={`col-xs-12 ${styles.backToTopContainer}`}>
             <ul className={`N2 ${styles.linkList}`}>
