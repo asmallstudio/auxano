@@ -2,15 +2,12 @@
 
 .footerContainer {
   border-top: 1px solid var(--grey);
-}
-
-.activeLink {
-  color: var(--gigas) !important;
+  margin: 0 auto 0 auto;
+  max-width: $max-width-em;
 }
 
 .linkContainer {
-  margin: 0 auto 0 auto;
-  max-width: $max-width-em;
+  margin: 94px 0 0 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -20,8 +17,10 @@
   list-style-type: none;
   padding-left: 0;
   text-align: center;
+  margin: 0 auto 0 auto;
 
   li {
+    margin: 0 0 24px 0;
     color: var(--grey);
 
     a {
@@ -36,9 +35,12 @@
   }
 }
 
+.activeLink {
+  color: var(--gigas) !important;
+}
+
 .infoContainer {
-  margin: 0 auto 0 auto;
-  max-width: $max-width-em;
+  margin: 24px 0 0 0;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -49,11 +51,10 @@
   }
 }
 
-.addressText {
-  //text-align: center;
+.copyrightText {
+  margin: 20px 0 0 0;
 }
 
 .backToTopContainer {
-  margin: 0 auto 0 auto;
-  max-width: $max-width-em;
+  margin: 48px 0 50px 0;
 }
