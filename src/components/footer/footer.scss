@@ -2,27 +2,24 @@
 
 .footerContainer {
   border-top: 1px solid var(--grey);
-  font-size: 15px;
 }
 
 .activeLink {
   color: var(--gigas) !important;
 }
 
-.rowLink {
+.linkContainer {
   margin: 0 auto 0 auto;
-  flex: 1;
   max-width: $max-width-em;
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
-.listLink {
-  display: flex;
-  flex-direction: column;
+.linkList {
   list-style-type: none;
   padding-left: 0;
-  align-items: center;
+  text-align: center;
 
   li {
     color: var(--grey);
@@ -39,11 +36,24 @@
   }
 }
 
-.listInfo {
+.infoContainer {
+  margin: 0 auto 0 auto;
+  max-width: $max-width-em;
   display: flex;
   flex-direction: column;
-  list-style-type: none;
-  padding-left: 0;
+  flex-wrap: wrap;
   align-items: center;
-  color: var(--grey-40);
+
+  p {
+    color: var(--grey-40);
+  }
+}
+
+.addressText {
+  //text-align: center;
+}
+
+.backToTopContainer {
+  margin: 0 auto 0 auto;
+  max-width: $max-width-em;
 }
