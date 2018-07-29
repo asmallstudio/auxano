@@ -6,11 +6,11 @@ body {
 }
 
 .routesContainer {
-  margin-top: var(--mobile-header-height);
+  margin-top: var(--header-height);
 }
 
 @include respond-above(lg) {
   .routesContainer {
-    margin-top: var(--desktop-header-height);
+    margin-top: var(--header-height);
   }
 }
