@@ -6,8 +6,8 @@ import styles from "./footer.scss";
 class Footer extends React.Component {
   render() {
     return (
-      <footer>
-        <div className={`container ${styles.footerContainer}`}>
+      <footer className={styles.footerContainer}>
+        <div className={`container ${styles.footerRow}`}>
           <div className={`col-xs-12 ${styles.linkContainer}`}>
             <nav className="">
               <ul className={`N2 ${styles.linkList}`}>
@@ -26,6 +26,11 @@ class Footer extends React.Component {
                     Privacy & Terms
                   </Link>
                 </li>
+                <li className={styles.backToTopTablet}>
+                  <Link to="/#" activeClassName={styles.activeLink}>
+                    Back to Top
+                  </Link>
+                </li>
               </ul>
             </nav>
           </div>
@@ -38,7 +43,7 @@ class Footer extends React.Component {
               © 2018 Auxano Advisors LLC
             </p>
           </div>
-          <div className={`col-xs-12 ${styles.backToTopContainer}`}>
+          <div className={`col-xs-12 ${styles.backToTopMobile}`}>
             <ul className={`N2 ${styles.linkList}`}>
               <li>
                 <Link to="/#" activeClassName={styles.activeLink}>
