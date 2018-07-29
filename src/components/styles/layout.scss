@@ -15,6 +15,9 @@
       // Create columns
       .col-#{$modifier}-#{$i} {
         flex-basis: (100 / ($grid-cols / $i)) * 1%;
+        // Set max-width equal to flex-basis for IE support
+        // https://github.com/twbs/bootstrap/issues/17310
+        max-width: (100 / ($grid-cols / $i)) * 1%;
       }
 
       // Create margin-left offsets
