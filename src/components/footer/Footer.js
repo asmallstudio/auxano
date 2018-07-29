@@ -8,9 +8,9 @@ class Footer extends React.Component {
     return (
       <footer>
         <div className={`container ${styles.footerContainer}`}>
-          <div className={`col-xs-12 ${styles.rowLink}`}>
+          <div className={`col-xs-12 ${styles.linkContainer}`}>
             <nav className="">
-              <ul className={styles.listLink}>
+              <ul className={`N2 ${styles.linkList}`}>
                 <li>
                   <Link to="/#" activeClassName={styles.activeLink}>
                     News & Resources
@@ -29,18 +29,19 @@ class Footer extends React.Component {
               </ul>
             </nav>
           </div>
-          <div className="rowInfo">
-            <div className="col-xs-12">
-              <ul className={styles.listInfo}>
-                <li>
-                  <p className={`N2 ${styles.addressText}`}>Address Line 1</p>
-                  <p className={`N2 ${styles.addressText}`}>Address Line 2</p>
-                </li>
-                <li>
-                  <p className="N2">2018 Trademark</p>
-                </li>
-              </ul>
-            </div>
+          <div className={`col-xs-12 ${styles.infoContainer}`}>
+            <p className="N2">10900 NE 4th Street, Suite 1950</p>
+            <p className="N2"> Bellevue, WA 98004</p>
+            <p className="N2">2018 Trademark</p>
+          </div>
+          <div className={`col-xs-12 ${styles.backToTopContainer}`}>
+            <ul className={`N2 ${styles.linkList}`}>
+              <li>
+                <Link to="/#" activeClassName={styles.activeLink}>
+                  Back to Top
+                </Link>
+              </li>
+            </ul>
           </div>
         </div>
       </footer>
