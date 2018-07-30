@@ -15,9 +15,9 @@ const App = () => (
   <Router>
     <div>
       <Header />
-      <div className={appStyles.routesContainer}>
+      <main className={appStyles.routesContainer}>
         <Routes />
-      </div>
+      </main>
       <Footer />
     </div>
   </Router>
