@@ -20,11 +20,12 @@ class Header extends React.Component {
     };
   }
 
-  menuToggle() {
+  _menuToggle = () => {
+    // console.log(menuHidden);
     this.setState(prevState => ({
       menuHidden: !prevState.menuHidden
     }));
-  }
+  };
 
   // _handleToggleMenu = () => {
   //   this.setState(prevState => ({
@@ -32,11 +33,11 @@ class Header extends React.Component {
   //   }));
   // };
 
-  // _handleMenuClose = () => {
-  //   this.setState({
-  //     menuHidden: true
-  //   });
-  // };
+  _menuClose = () => {
+    this.setState({
+      menuHidden: true
+    });
+  };
 
   render() {
     return (
@@ -50,23 +51,23 @@ class Header extends React.Component {
               <img alt="Auxano Advisors" src="/assets/auxano-logo.svg" />
             </Link>
           </div>
-          <nav id="navigation" className="{styles.nav}">
+          <nav id="navigation" className={styles.nav}>
             <MenuIcon
               menuHidden={this.state.menuHidden}
-              menuHiddenToggle={this.menuToggle.bind(this)}
+              menuAction={this._menuToggle.bind(this)}
             />
             <ul
               id="header-nav"
               className={styles.list}
-              aria-expanded={this.menuHidden ? "false" : "true"}
-              hidden
+              aria-expanded={this.state.menuHidden ? "false" : "true"}
+              {...this.state.menuHidden && { hidden: true }}
             >
               <li className={`${styles.listItem} style-as-h3`}>
                 <Link
                   to="/#"
                   activeClassName={styles.activeLink}
                   isActive={this._determineHomeHashActive("/", "#our-mission")}
-                  onClick={this._handleMenuClose}
+                  onClick={this._menuClose}
                 >
                   Home
                 </Link>
@@ -75,7 +76,7 @@ class Header extends React.Component {
                 <Link
                   to="/about-us"
                   activeClassName={styles.activeLink}
-                  onClick={this._handleMenuClose}
+                  onClick={this._menuClose}
                 >
                   About Us
                 </Link>
@@ -84,7 +85,7 @@ class Header extends React.Component {
                 <Link
                   to="/other"
                   activeClassName={styles.activeLink}
-                  onClick={this._handleMenuClose}
+                  onClick={this._menuClose}
                 >
                   Other Page
                 </Link>
@@ -100,90 +101,50 @@ class Header extends React.Component {
 class MenuIcon extends React.Component {
   render() {
     let menuIcon;
-    // Show menu if hidden, show x if not.
-    if (this.menuHidden) {
+    // Show navicon if hidden, show x if not.
+    if (this.props.menuHidden) {
       menuIcon = (
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="26"
-          height="22"
-          viewBox="0 0 26 22"
+          height="23"
+          viewBox="0 0 26 23"
         >
-          <path
-            fill="#483898"
-            fill-rule="evenodd"
-            d="M1.34.014h22.667a1.333 1.333 0 1 1 0 2.667H1.34a1.333 1.333 0 0 1 0-2.667zm0 9.333h22.667a1.333 1.333 0 0 1 0 2.667H1.34a1.333 1.333 0 1 1 0-2.667zm0 9.334h22.667a1.333 1.333 0 1 1 0 2.666H1.34a1.333 1.333 0 0 1 0-2.666z"
-          />
+          <g fill="none">
+            <g transform="translate(3 1) rotate(45 .74 3.336)">
+              <rect width="24" height="3" fill="#000" rx="1.5" />
+              <rect width="24" height="3" fill="#483898" rx="1.5" />
+            </g>
+            <g transform="translate(3 1) scale(-1 1) rotate(45 -9.26 -20.806)">
+              <rect width="24" height="3" fill="#000" rx="1.5" />
+              <rect width="24" height="3" fill="#483898" rx="1.5" />
+            </g>
+          </g>
         </svg>
       );
     } else {
       menuIcon = (
         <svg
-          height="33"
-          viewBox="0 0 38 33"
-          width="38"
+          height="23"
+          viewBox="0 0 26 23"
+          width="26"
           xmlns="http://www.w3.org/2000/svg"
-          xmlnsXlink="http://www.w3.org/1999/xlink"
         >
-          <defs>
-            <rect id="a" height="3" rx="1.5" width="24" x="-2" y="9" />
-            <filter
-              id="b"
-              height="1033.3%"
-              width="216.7%"
-              x="-58.3%"
-              y="-333.3%"
-            >
-              <feOffset dy="4" in="SourceAlpha" result="shadowOffsetOuter1" />
-              <feGaussianBlur
-                in="shadowOffsetOuter1"
-                result="shadowBlurOuter1"
-                stdDeviation="4"
-              />
-              <feColorMatrix
-                in="shadowBlurOuter1"
-                values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.08 0"
-              />
-            </filter>
-            <rect id="c" height="3" rx="1.5" width="24" x="-2" y="9" />
-            <filter
-              id="d"
-              height="1033.3%"
-              width="216.7%"
-              x="-58.3%"
-              y="-333.3%"
-            >
-              <feOffset dy="4" in="SourceAlpha" result="shadowOffsetOuter1" />
-              <feGaussianBlur
-                in="shadowOffsetOuter1"
-                result="shadowBlurOuter1"
-                stdDeviation="4"
-              />
-              <feColorMatrix
-                in="shadowBlurOuter1"
-                values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.08 0"
-              />
-            </filter>
-          </defs>
-          <g fill="none">
-            <g transform="matrix(.70710678 .70710678 -.70710678 .70710678 19.353544 -.495588)">
-              <use fill="#000" filter="url(#b)" xlinkHref="#a" />
-              <use fill="#483898" xlinkHref="#a" />
-            </g>
-            <g transform="matrix(-.70710678 .70710678 .70710678 .70710678 18.646415 -.495571)">
-              <use fill="#000" filter="url(#d)" xlinkHref="#c" />
-              <use fill="#483898" xlinkHref="#c" />
-            </g>
-          </g>
+          <path
+            d="m1.34.014h22.667c.4764137-.00000001.9166381.25416366 1.1548449.66674999.2382068.41258634.2382068.92091368 0 1.33350002-.2382068.41258633-.6784312.66675-1.1548449.66674999h-22.667c-.73647171 0-1.3335-.59702829-1.3335-1.3335s.59702829-1.3335 1.3335-1.3335zm0 9.333h22.667c.7364717 0 1.3335.59702829 1.3335 1.3335 0 .7364717-.5970283 1.3335-1.3335 1.3335h-22.667c-.73647171 0-1.3335-.5970283-1.3335-1.3335 0-.73647171.59702829-1.3335 1.3335-1.3335zm0 9.334h22.667c.7361956 0 1.333.5968044 1.333 1.333s-.5968044 1.333-1.333 1.333h-22.667c-.73619557 0-1.333-.5968044-1.333-1.333s.59680443-1.333 1.333-1.333z"
+            fill="#483898"
+            fillRule="evenodd"
+            transform="translate(0 .5)"
+          />
         </svg>
       );
     }
     return (
       <button
-        aria-expanded={this.menuHidden ? "false" : "true"}
+        aria-expanded={this.props.menuHidden ? "false" : "true"}
         aria-controls="header-nav"
         className={styles.menuIcon}
-        onClick={this.props.menuToggle}
+        onClick={this.props.menuAction}
       >
         <span className={styles.srText}>Menu</span>
         {menuIcon}
