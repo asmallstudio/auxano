@@ -9,7 +9,8 @@ class Header extends React.Component {
     super(props);
 
     this.state = {
-      menuHidden: true
+      menuHidden: true,
+      menuPersistent: false
     };
   }
 
@@ -22,16 +23,19 @@ class Header extends React.Component {
   }
 
   _menuToggle = () => {
-    // console.log(menuHidden);
     this.setState(prevState => ({
       menuHidden: !prevState.menuHidden
     }));
   };
 
+  // Close menu, unless menu ought to be persistent (as on large viewports).
   _menuClose = () => {
-    this.setState({
-      menuHidden: true
-    });
+    if (this.state.menuPersistent != true) {
+      // Ensure menu may be closed.
+      this.setState({
+        menuHidden: true
+      });
+    }
   };
 
   _menuOpen = () => {
@@ -40,37 +44,37 @@ class Header extends React.Component {
     });
   };
 
-  _resizeMenu() {
+  _checkMenuPersistence = () => {
     if (window.matchMedia("(min-width: 64em)").matches) {
+      this.setState({
+        menuPersistent: true
+      });
       // Open menu if viewport size is large.
       this._menuOpen();
     } else {
+      this.setState({
+        menuPersistent: false
+      });
       // Close menu if viewport size is less than large.
       this._menuClose();
     }
-  }
+  };
 
   componentDidMount() {
-    // Check width at time of load to prevent hiding menu on large viewports.
-    if (window.matchMedia("(min-width: 64em)").matches) {
-      // Open menu if viewport size is large.
-      this._menuOpen();
-    }
+    // On mounting of component, make sure Menu Persistence is set appropriately.
+    this._checkMenuPersistence();
     // Watch for resize events in order to close menu when appropriate.
-    window.addEventListener("resize", this._resizeMenu.bind(this), false);
+    window.addEventListener("resize", this._checkMenuPersistence, false);
   }
 
   componentWillUnmount() {
-    window.removeEventListener("resize", this._resizeMenu.bind(this), false);
+    window.removeEventListener("resize", this._checkMenuPersistence, false);
   }
 
   render() {
     return (
       <header className={styles.header}>
-        <div
-          className={`${styles.container} ${this.state.showMenu &&
-            styles.showContainer}`}
-        >
+        <div className={styles.container}>
           <div className={styles.logoContainer}>
             <Link to="/">
               <img alt="Auxano Advisors" src="/assets/auxano-logo.svg" />
@@ -79,7 +83,7 @@ class Header extends React.Component {
           <nav id="navigation" className={styles.nav}>
             <MenuIcon
               menuHidden={this.state.menuHidden}
-              menuAction={this._menuToggle.bind(this)}
+              menuAction={this._menuToggle}
             />
             <ul
               id="header-nav"
@@ -87,17 +91,16 @@ class Header extends React.Component {
               aria-expanded={this.state.menuHidden ? "false" : "true"}
               {...this.state.menuHidden && { hidden: true }}
             >
-              <li className={`${styles.listItem} style-as-h3`}>
+              <li className="style-as-h3">
                 <Link
-                  to="/#"
+                  to="/"
                   activeClassName={styles.activeLink}
-                  isActive={this._determineHomeHashActive("/", "#our-mission")}
                   onClick={this._menuClose}
                 >
                   Home
                 </Link>
               </li>
-              <li className={`${styles.listItem} style-as-h3`}>
+              <li className="style-as-h3">
                 <Link
                   to="/about-us"
                   activeClassName={styles.activeLink}
@@ -106,7 +109,7 @@ class Header extends React.Component {
                   About Us
                 </Link>
               </li>
-              <li className={`${styles.listItem} style-as-h3`}>
+              <li className="style-as-h3">
                 <Link
                   to="/other"
                   activeClassName={styles.activeLink}
