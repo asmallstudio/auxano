@@ -62,8 +62,8 @@
   }
 
   [class*="col-"] {
-    padding-left: #{$gutter/2}px;
-    padding-right: #{$gutter/2}px;
+    padding-left: #{$gutter / 2 / 16}rem;
+    padding-right: #{$gutter / 2 / 16}rem;
   }
 
   // Create hidden classes at each breakpoint
