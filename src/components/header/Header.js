@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-static";
+import FullWidthSectionActionLink from "../ui/fullWidthSectionActionLink/FullWidthSectionActionLink";
 
 import styles from "./header.scss";
 
@@ -27,17 +28,41 @@ class Header extends React.Component {
     }));
   };
 
-  // _handleToggleMenu = () => {
-  //   this.setState(prevState => ({
-  //     menuHidden: !prevState.menuHidden
-  //   }));
-  // };
-
   _menuClose = () => {
     this.setState({
       menuHidden: true
     });
   };
+
+  _menuOpen = () => {
+    this.setState({
+      menuHidden: false
+    });
+  };
+
+  _resizeMenu() {
+    if (window.matchMedia("(min-width: 64em)").matches) {
+      // Open menu if viewport size is large.
+      this._menuOpen();
+    } else {
+      // Close menu if viewport size is less than large.
+      this._menuClose();
+    }
+  }
+
+  componentDidMount() {
+    // Check width at time of load to prevent hiding menu on large viewports.
+    if (window.matchMedia("(min-width: 64em)").matches) {
+      // Open menu if viewport size is large.
+      this._menuOpen();
+    }
+    // Watch for resize events in order to close menu when appropriate.
+    window.addEventListener("resize", this._resizeMenu.bind(this), false);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener("resize", this._resizeMenu.bind(this), false);
+  }
 
   render() {
     return (
@@ -90,6 +115,11 @@ class Header extends React.Component {
                   Other Page
                 </Link>
               </li>
+              <FullWidthSectionActionLink
+                className={styles.bottomMenuLink}
+                linkText="Schedule a meeting"
+                to="#"
+              />
             </ul>
           </nav>
         </div>
@@ -103,6 +133,22 @@ class MenuIcon extends React.Component {
     let menuIcon;
     // Show navicon if hidden, show x if not.
     if (this.props.menuHidden) {
+      menuIcon = (
+        <svg
+          height="23"
+          viewBox="0 0 26 23"
+          width="26"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="m1.34.014h22.667c.4764137-.00000001.9166381.25416366 1.1548449.66674999.2382068.41258634.2382068.92091368 0 1.33350002-.2382068.41258633-.6784312.66675-1.1548449.66674999h-22.667c-.73647171 0-1.3335-.59702829-1.3335-1.3335s.59702829-1.3335 1.3335-1.3335zm0 9.333h22.667c.7364717 0 1.3335.59702829 1.3335 1.3335 0 .7364717-.5970283 1.3335-1.3335 1.3335h-22.667c-.73647171 0-1.3335-.5970283-1.3335-1.3335 0-.73647171.59702829-1.3335 1.3335-1.3335zm0 9.334h22.667c.7361956 0 1.333.5968044 1.333 1.333s-.5968044 1.333-1.333 1.333h-22.667c-.73619557 0-1.333-.5968044-1.333-1.333s.59680443-1.333 1.333-1.333z"
+            fill="#483898"
+            fillRule="evenodd"
+            transform="translate(0 .5)"
+          />
+        </svg>
+      );
+    } else {
       menuIcon = (
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -120,22 +166,6 @@ class MenuIcon extends React.Component {
               <rect width="24" height="3" fill="#483898" rx="1.5" />
             </g>
           </g>
-        </svg>
-      );
-    } else {
-      menuIcon = (
-        <svg
-          height="23"
-          viewBox="0 0 26 23"
-          width="26"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="m1.34.014h22.667c.4764137-.00000001.9166381.25416366 1.1548449.66674999.2382068.41258634.2382068.92091368 0 1.33350002-.2382068.41258633-.6784312.66675-1.1548449.66674999h-22.667c-.73647171 0-1.3335-.59702829-1.3335-1.3335s.59702829-1.3335 1.3335-1.3335zm0 9.333h22.667c.7364717 0 1.3335.59702829 1.3335 1.3335 0 .7364717-.5970283 1.3335-1.3335 1.3335h-22.667c-.73647171 0-1.3335-.5970283-1.3335-1.3335 0-.73647171.59702829-1.3335 1.3335-1.3335zm0 9.334h22.667c.7361956 0 1.333.5968044 1.333 1.333s-.5968044 1.333-1.333 1.333h-22.667c-.73619557 0-1.333-.5968044-1.333-1.333s.59680443-1.333 1.333-1.333z"
-            fill="#483898"
-            fillRule="evenodd"
-            transform="translate(0 .5)"
-          />
         </svg>
       );
     }

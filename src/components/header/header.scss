@@ -1,14 +1,13 @@
 @import "../styles/utils.scss";
 
 .header {
-  background-color: var(--white);
+  z-index: 100;
   position: fixed;
   top: 0;
-  display: flex;
   width: 100%;
-  flex-direction: row;
-  z-index: 1000;
   height: var(--header-height);
+  flex-direction: row;
+  background-color: var(--white);
 }
 
 .activeLink {
@@ -28,41 +27,97 @@
 
 .container {
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
   flex: 1;
   max-width: $max-width-em;
   padding: 1.5rem;
   margin: 0 auto;
+
+  @include respond-above(lg) {
+    padding: 1.5rem 0.75rem;
+  }
+}
+
+.logoContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
 }
 
 .nav {
-  width: 100%;
-  height: 100vh;
-  background-color: var(--white);
+  @include respond-above(lg) {
+    width: 100%;
+    max-width: 35rem;
+  }
 }
 
 .menuIcon {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   background: none;
   border: none;
   border: 2px solid translucent;
   border-radius: 50%;
+  cursor: pointer;
+
+  @include respond-above(lg) {
+    display: none;
+  }
 }
 
 .list {
+  flex-direction: column;
+  justify-content: space-between;
+  position: absolute;
+  top: var(--header-height);
+  left: 0;
+  width: 100%;
+  height: calc(100vh - var(--header-height));
   list-style-type: none;
-  padding-left: 0;
   text-align: center;
+  background-color: var(--white);
+  padding-left: 0;
+  padding-top: var(--space-l3);
+  margin: 0;
+
+  &:not([hidden]) {
+    display: flex;
+  }
+
+  @include respond-above(lg) {
+    position: static;
+    flex-direction: row;
+    justify-content: flex-end;
+    height: auto;
+    background-color: transparent;
+    padding-top: 0;
+  }
 
   li {
     display: block;
     color: var(--grey);
 
+    @include respond-above(lg) {
+      display: inline;
+      padding: 0 var(--space-l2);
+    }
+
     a {
       transition: color 0.3s ease;
       color: inherit;
       text-decoration: none;
+
+      @include respond-above(lg) {
+        font-size: 1.125rem;
+      }
     }
 
     a:hover {
@@ -71,51 +126,40 @@
   }
 }
 
-.logoContainer {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: flex-start;
-  height: var(--header-height);
+.bottomMenuLink {
+  padding: 3rem 0;
 
-  a {
-    color: inherit;
-    text-decoration: none;
+  @include respond-above(lg) {
+    display: none;
   }
 }
 
-nav {
-  ul {
-    margin: 0;
-  }
-}
+// .navContainer {
+//   overflow-y: auto;
+//   display: flex;
+//   justify-content: flex-start;
+//   width: 100%;
+// }
 
-.navContainer {
-  overflow-y: auto;
-  display: flex;
-  justify-content: flex-start;
-  width: 100%;
-}
+// .menuToggleContainer {
+//   position: absolute;
+//   width: 40px;
+//   height: 40px;
+//   right: 32px;
+//   top: 20px;
+//   cursor: pointer;
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+// }
 
-.menuToggleContainer {
-  position: absolute;
-  width: 40px;
-  height: 40px;
-  right: 32px;
-  top: 20px;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+// .show {
+//   display: block;
+// }
 
-.show {
-  display: block;
-}
-
-.showContainer {
-  height: 100%;
-}
+// .showContainer {
+//   height: 100%;
+// }
 
 // .debug {
 //   position: absolute;
