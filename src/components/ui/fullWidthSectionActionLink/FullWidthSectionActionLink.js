@@ -1,13 +1,14 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 import styles from "./fullWidthSectionActionLink.scss";
 import LinkWithArrow from "../linkWithArrow/LinkWithArrow";
 
 class FullWidthSectionActionLink extends React.Component {
   render() {
-    const { linkText, to } = this.props;
+    const { linkText, to, className = "" } = this.props;
     return (
-      <section className={`container--fluid ${styles.container}`}>
+      <section className={`container--fluid ${styles.container} ${className}`}>
         <div className={`row ${styles.row}`}>
           <div className="col-xs-12">
             <LinkWithArrow to={to} className={styles.link}>
