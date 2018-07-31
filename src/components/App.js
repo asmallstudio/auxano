@@ -13,13 +13,13 @@ import appStyles from "./app.scss";
 
 const App = () => (
   <Router>
-    <div>
+    <React.Fragment>
       <Header />
       <main className={appStyles.routesContainer}>
         <Routes />
       </main>
       <Footer />
-    </div>
+    </React.Fragment>
   </Router>
 );
 
