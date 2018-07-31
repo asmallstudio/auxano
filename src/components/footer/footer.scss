@@ -62,9 +62,27 @@
   margin-top: 20px;
 }
 
-.backToTopMobile {
+.backToTopContainer {
   margin-top: 48px;
   margin-bottom: 50px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+  a {
+    transition: color 0.3s ease;
+    color: inherit;
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: var(--gigas);
+  }
+}
+
+.backToTopIcon {
+  margin-left: 16px;
 }
 
 // == TABLET ==
@@ -95,9 +113,10 @@
     margin-right: 0 !important;
   }
 
-  .backToTopMobile {
+  .backToTopContainer {
     display: none;
   }
+
   .infoContainer {
     margin-top: 24px;
     flex-direction: row;
