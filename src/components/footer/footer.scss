@@ -6,12 +6,15 @@
 
 .footerRow {
   margin: 0 auto 0 auto;
+  display: flex;
+  flex-direction: column;
 }
 
 .linkContainer {
   margin-top: 94px;
   display: flex;
   flex-direction: column;
+  order: 0;
 }
 
 .linkList {
@@ -52,6 +55,7 @@
   flex-direction: column;
   flex-wrap: wrap;
   align-items: center;
+  order: 1;
 
   p {
     color: var(--grey-40);
@@ -69,6 +73,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  order: 2;
 
   a {
     transition: color 0.3s ease;
@@ -92,14 +97,20 @@
     height: var(--tablet-footer-height);
   }
 
+  .footerRow {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+
   .linkContainer {
     margin-top: 46px;
+    order: 0;
   }
 
   .linkList {
     flex-direction: row;
     display: flex;
-    justify-content: flex-end;
 
     li {
       margin-right: 55px;
@@ -107,19 +118,18 @@
     }
   }
 
-  .backToTopTablet {
-    margin-left: auto;
-    display: block;
-    margin-right: 0 !important;
-  }
-
-  .backToTopContainer {
-    display: none;
-  }
-
   .infoContainer {
     margin-top: 24px;
     flex-direction: row;
+    justify-content: flex-end;
+    order: 2;
+  }
+
+  .backToTopContainer {
+    order: 1;
+    margin-left: auto;
+    margin-top: 46px;
+    margin-bottom: 0;
     justify-content: flex-end;
   }
 

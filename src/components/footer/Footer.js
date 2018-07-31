@@ -8,7 +8,7 @@ class Footer extends React.Component {
     return (
       <footer className={styles.footerContainer}>
         <div className={`container ${styles.footerRow}`}>
-          <div className={`col-xs-12 ${styles.linkContainer}`}>
+          <div className={`col-xs-12 col-md-9 ${styles.linkContainer}`}>
             <nav className="">
               <ul className={`N2 ${styles.linkList}`}>
                 <li>
@@ -26,11 +26,6 @@ class Footer extends React.Component {
                     Privacy & Terms
                   </Link>
                 </li>
-                <li className={styles.backToTopTablet}>
-                  <Link to="/#" activeClassName={styles.activeLink}>
-                    Back to Top
-                  </Link>
-                </li>
               </ul>
             </nav>
           </div>
@@ -43,7 +38,7 @@ class Footer extends React.Component {
               © 2018 Auxano Advisors LLC
             </p>
           </div>
-          <div className={`col-xs-12 ${styles.backToTopContainer}`}>
+          <div className={`col-xs-12 col-md-3 ${styles.backToTopContainer}`}>
             <Link to="/#" activeClassName={styles.activeLink}>
               <span className="N2">Back to Top</span>
             </Link>
