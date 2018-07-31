@@ -101,6 +101,8 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: flex-end;
+    margin-left: 36px;
+    margin-right: 36px;
   }
 
   .linkContainer {
@@ -131,6 +133,12 @@
     margin-top: 46px;
     margin-bottom: 0;
     justify-content: flex-end;
+  }
+
+  .addressText2 {
+    &:before {
+      content: "\00a0 ";
+    }
   }
 
   .copyrightText {
