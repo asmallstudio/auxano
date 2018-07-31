@@ -43,19 +43,26 @@ class Footer extends React.Component {
               © 2018 Auxano Advisors LLC
             </p>
           </div>
-          <div className={`col-xs-12 ${styles.backToTopMobile}`}>
-            <ul className={`N2 ${styles.linkList}`}>
-              <li>
-                <Link to="/#" activeClassName={styles.activeLink}>
-                  Back to Top
-                </Link>
-              </li>
-            </ul>
+          <div className={`col-xs-12 ${styles.backToTopContainer}`}>
+            <Link to="/#" activeClassName={styles.activeLink}>
+              <span className="N2">Back to Top</span>
+            </Link>
+            <BackToTopIcon />
           </div>
         </div>
       </footer>
     );
   }
 }
+
+const BackToTopIcon = () => (
+  <img
+    className={styles.backToTopIcon}
+    src="back-to-top.svg"
+    width="45"
+    height="15"
+    alt="back-to-top-icon"
+  />
+);
 
 export default Footer;
