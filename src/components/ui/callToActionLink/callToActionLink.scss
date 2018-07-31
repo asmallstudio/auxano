@@ -21,5 +21,6 @@
   &:active,
   &:focus {
     border-color: var(--gigas);
+    outline: none;
   }
 }
