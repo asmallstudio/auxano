@@ -1,4 +1,4 @@
-import "babel-polyfill"; // Support older browsers
+import "babel-polyfill"; // Support older browsers (IE 11)
 import React from "react";
 import { Router } from "react-static";
 import { hot } from "react-hot-loader";
