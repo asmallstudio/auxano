@@ -57,7 +57,7 @@
     width: 100%;
   }
 
-  @each $modifier, $breakpoint in $breakpoints {
+  @each $modifier, $breakpoint in $breakpoints-px {
     @include create-col-classes($modifier, $grid-cols, $breakpoint);
   }
 
@@ -67,9 +67,9 @@
   }
 
   // Create hidden classes at each breakpoint
-  @each $modifier, $breakpoint in $breakpoints {
-    $modifiers: map-keys($breakpoints);
-    $i: index($breakpoints, ($modifier $breakpoint));
+  @each $modifier, $breakpoint in $breakpoints-px {
+    $modifiers: map-keys($breakpoints-px);
+    $i: index($breakpoints-px, ($modifier $breakpoint));
 
     @include respond-below(#{nth($modifiers, $i)}) {
       .hidden-#{$modifier}-down {
