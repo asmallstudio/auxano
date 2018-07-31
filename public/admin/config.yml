@@ -26,6 +26,10 @@ collections:
                 label: 'Subtitle'
                 name: subtitle
                 widget: text
+              -
+                label: 'Call to Action Link'
+                name: link
+                widget: string
           -
             label: Pullquote
             name: text

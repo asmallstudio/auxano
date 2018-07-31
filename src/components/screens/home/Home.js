@@ -3,6 +3,7 @@ import { withRouteData } from "react-static";
 import AuxanoCarousel from "./Carousel";
 
 import PrimaryButton from "../../ui/primaryButton/PrimaryButton";
+import CallToActionLink from "../../ui/callToActionLink/CallToActionLink";
 import OneThirdColumn from "./OneThirdColumn";
 import styles from "./home.scss";
 import FullWidthSectionActionLink from "../../ui/fullWidthSectionActionLink/FullWidthSectionActionLink";
@@ -18,9 +19,9 @@ class Home extends React.Component {
               <div className={`col-xs-12 col-md-6 ${styles.heroTextContainer}`}>
                 <h1>{this.props.home.hero.title}</h1>
                 <p>{this.props.home.hero.subtitle}</p>
-                <div>
-                  <PrimaryButton>CTA Button</PrimaryButton>
-                </div>
+                <CallToActionLink to={this.props.home.hero.link}>
+                  CTA Button
+                </CallToActionLink>
               </div>
             </div>
           </div>

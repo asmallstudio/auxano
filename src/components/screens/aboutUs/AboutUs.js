@@ -2,7 +2,7 @@ import React from "react";
 import { withRouteData } from "react-static";
 
 import styles from "./aboutUs.scss";
-import PrimaryButton from "../../ui/primaryButton/PrimaryButton";
+import CallToActionLink from "../../ui/callToActionLink/CallToActionLink";
 import FullWidthSectionActionLink from "../../ui/fullWidthSectionActionLink/FullWidthSectionActionLink";
 
 class AboutUs extends React.Component {
@@ -37,7 +37,9 @@ class AboutUs extends React.Component {
             >
               <h2>{aboutUs.infoSection1.heading}</h2>
               <p>{aboutUs.infoSection1.text}</p>
-              <PrimaryButton>CTA Button</PrimaryButton>
+              <CallToActionLink to={aboutUs.infoSection1.link}>
+                CTA Button
+              </CallToActionLink>
             </div>
             <div className={`col-xs-12 col-lg-6 ${styles.infoSectionColImage}`}>
               <img

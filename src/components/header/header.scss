@@ -46,8 +46,30 @@
   align-items: center;
 
   a {
+    transition: background-color 0.3s ease, border-color 0.3s ease;
     color: inherit;
     text-decoration: none;
+    border: 1px solid transparent;
+    border-radius: 0.5rem;
+
+    &:hover,
+    &:focus {
+      background-color: var(--alabaster);
+
+      img {
+        transform: scale(0.8);
+      }
+    }
+
+    &:focus {
+      border-color: var(--gigas);
+      outline: none;
+    }
+  }
+
+  img {
+    transition: transform 0.3s ease;
+    display: block;
   }
 }
 
