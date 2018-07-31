@@ -1,10 +1,17 @@
 .input {
-  font-size: 1.124em;
-  color: var(--grey-40);
-  height: 3em;
+  transition: border-color 0.3s ease, color 0.3s ease;
+  font-size: 1em;
+  color: var(--grey);
   object-fit: contain;
   border-radius: 0.25em;
   background-color: var(--white);
   border: solid 1px var(--grey-40);
-  padding: 0.625em 1em;
+  padding: 0.85em 1em;
+
+  &:active,
+  &:focus {
+    color: var(--gigas);
+    border-color: var(--gigas);
+    outline: none;
+  }
 }

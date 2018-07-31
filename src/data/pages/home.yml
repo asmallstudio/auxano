@@ -1,6 +1,7 @@
 hero:
   title: 'Transcending wealth. Transforming lives.'
   subtitle: "We help clients transcend the traditional definition of wealth so it's used to build a legacy that transforms families, finances, and their future."
+  link: '#'
 pullquote:
   text: 'Lorem ipsum dolor sit amet, consectetur adipiscing, sed do eiusmod tempor ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostru.'
 threecol:
