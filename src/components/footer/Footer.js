@@ -33,7 +33,7 @@ class Footer extends React.Component {
             <p className={`N2 ${styles.addressText}`}>
               10900 NE 4th Street, Suite 1950
             </p>
-            <p className={`N2 ${styles.addressText}`}> Bellevue, WA 98004</p>
+            <p className={`N2 ${styles.addressText2}`}>Bellevue, WA 98004</p>
             <p className={`N2 ${styles.copyrightText}`}>
               © 2018 Auxano Advisors LLC
             </p>
