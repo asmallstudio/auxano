@@ -65,4 +65,13 @@ yarn serve
 
 ### Code formatting
 
-- Formatting is kept consistent by using [Prettier](https://prettier.io/)
+Formatting is kept consistent by using [Prettier](https://prettier.io/) and listed with ES Lint. If using Visual Studio Code, install Prettier and ES Lint plugins via: `code --install-extension esbenp.prettier-vscode; code --install-extension dbaeumer.vscode-eslint`. Furthermore, here are some recommended workspace settings: 
+
+```json
+{
+  "editor.insertSpaces": true,
+  "editor.tabSize": 2,
+  "editor.formatOnSave": true,
+  "eslint.packageManager": "yarn"
+}
+```
