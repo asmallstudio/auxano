@@ -137,12 +137,32 @@
 
   .addressText2 {
     &:before {
-      content: "\00a0 ";
+      content: ",\00a0 ";
     }
   }
 
   .copyrightText {
     margin-top: 0;
     margin-left: auto;
+  }
+}
+
+// == DESkTOP ==
+
+@include respond-above(lg) {
+  .footerContainer {
+    height: var(--desktop-footer-height);
+  }
+
+  .footerRow {
+    margin: 0 auto 0 auto;
+  }
+
+  .linkContainer {
+    margin-top: 126px;
+  }
+
+  .backToTopContainer {
+    margin-top: 126px;
   }
 }
