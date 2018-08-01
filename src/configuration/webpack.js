@@ -30,7 +30,16 @@ const createWebpackConfig = (config, { defaultLoaders, stage }) => {
                       minimize: false
                     }
                   },
-                  { loader: "postcss-loader" },
+                  {
+                    loader: "postcss-loader",
+                    options: {
+                      config: {
+                        // File must be named in one of these formats:
+                        // https://github.com/michael-ciniawsky/postcss-load-config#usage
+                        path: "src/configuration/"
+                      }
+                    }
+                  },
                   {
                     loader: "sass-loader",
                     options: {
