@@ -1,5 +1,6 @@
 import fs from "fs";
 import React from "react";
+import Helmet from "react-helmet";
 import yaml from "js-yaml";
 import ExtractTextPlugin from "extract-text-webpack-plugin";
 
@@ -53,14 +54,23 @@ export default {
     children,
     renderMeta
   }) {
+    /* <Helmet> replaces <Head> */
     return (
       <Html>
-        <Head>
+        <Helmet>
           <title>Auxano</title>
           <meta charSet="UTF-8" />
           <meta name="viewport" content="width=device-width, initial-scale=1" />
+          <meta name="theme-color" content="#50b8b8" />
+          <link rel="manifest" href="/manifest.webmanifest" />
+          <link rel="icon" href="/assets/favicons/favicon-64.png" />
+          <link
+            rel="mask-icon"
+            href="/assets/favicons/favicons.svg"
+            color="#50b8b8"
+          />
           {renderMeta.styleTags}
-        </Head>
+        </Helmet>
         <Body>{children}</Body>
       </Html>
     );
