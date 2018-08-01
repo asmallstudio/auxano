@@ -1,6 +1,6 @@
 import React from "react";
 import { withRouteData, Head } from "react-static";
-import { getFullPageTitle } from "../../../lib/utils/utils";
+import { getFullPageTitle } from "../../../lib/utils/copy";
 
 import styles from "./aboutUs.scss";
 import CallToActionLink from "../../ui/callToActionLink/CallToActionLink";
