@@ -10,7 +10,11 @@ module.exports = {
   },
   plugins: ["react"],
   parser: "babel-eslint",
-  extends: ["eslint:recommended", "plugin:react/recommended"],
+  extends: [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:prettier/recommended"
+  ],
   rules: {
     "react/prop-types": 0
   },
