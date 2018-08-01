@@ -35,7 +35,4 @@ const getSingleFileMd = path => {
  */
 const getSingleFileYaml = path => yaml.safeLoad(fs.readFileSync(path, "utf8"));
 
-export default {
-  getSingleFileMd: getSingleFileMd,
-  getSingleFileYaml: getSingleFileYaml
-};
+export { getSingleFileMd, getSingleFileYaml };
