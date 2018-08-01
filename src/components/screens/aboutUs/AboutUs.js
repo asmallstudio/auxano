@@ -46,6 +46,7 @@ class AboutUs extends React.Component {
                 className={styles.infoSectionImage}
                 src="http://via.placeholder.com/300x180"
               />
+              <div className={styles.dingusDot} />
             </div>
           </div>
         </section>
