@@ -76,7 +76,7 @@ class Header extends React.Component {
       <header className={styles.header}>
         <div className={styles.container}>
           <div className={styles.logoContainer}>
-            <Link to="/">
+            <Link to="/" onClick={this._menuClose}>
               <img alt="Auxano Advisors" src="/assets/auxano-logo.svg" />
             </Link>
           </div>
