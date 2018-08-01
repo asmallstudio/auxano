@@ -149,9 +149,13 @@
 }
 
 .bottomMenuLink {
-  padding: 3rem 0;
-
   @include respond-above(lg) {
     display: none;
+  }
+
+  :global {
+    .row {
+      padding: 3rem 0;
+    }
   }
 }
