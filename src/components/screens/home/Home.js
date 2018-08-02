@@ -2,12 +2,11 @@ import React from "react";
 import { withRouteData } from "react-static";
 import AuxanoCarousel from "./Carousel";
 
-import PrimaryButton from "../../ui/primaryButton/PrimaryButton";
 import CallToActionLink from "../../ui/callToActionLink/CallToActionLink";
 import OneThirdColumn from "./OneThirdColumn";
 import styles from "./home.scss";
 import FullWidthSectionActionLink from "../../ui/fullWidthSectionActionLink/FullWidthSectionActionLink";
-import DefaultInput from "../../ui/defaultInput/DefaultInput";
+import SubscribeSection from "../../ui/subscribeSection/SubscribeSection";
 
 class Home extends React.Component {
   render() {
@@ -45,34 +44,10 @@ class Home extends React.Component {
           linkText="Learn more about us"
           to={this.props.home.learnMore.link}
         />
-        <div className="container">
-          <div className={`row ${styles.subscribeRow}`}>
-            <div
-              className={`col-xs-12 col-lg-5 ${styles.subscribeDescription}`}
-            >
-              <h2 className="style-as-h3">
-                {this.props.home.subscribe.heading}
-              </h2>
-              <p>{this.props.home.subscribe.text}</p>
-            </div>
-            <div
-              className={`col-xs-12 col-md-10 col-md-offset-1 col-lg-6 col-lg-offset-1 ${
-                styles.subscribeAction
-              }`}
-            >
-              <DefaultInput
-                placeholder="Email"
-                type="email"
-                aria-label="newsletter email"
-                autoComplete="email"
-                className={styles.subscribeInput}
-              />
-              <PrimaryButton className={`${styles.subscribeButton}`}>
-                Subscribe
-              </PrimaryButton>
-            </div>
-          </div>
-        </div>
+        <SubscribeSection
+          heading={this.props.home.subscribe.heading}
+          text={this.props.home.subscribe.text}
+        />
       </React.Fragment>
     );
   }
