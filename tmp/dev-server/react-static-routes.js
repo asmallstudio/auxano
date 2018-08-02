@@ -5,11 +5,11 @@ import { Route } from 'react-router-dom'
 
 import { cleanPath } from 'react-static'
 
-import t_0 from '../../src/components/screens/home/Home'
-import t_1 from '../../src/components/screens/aboutUs/AboutUs'
-import t_2 from '../../src/components/screens/ourApproach/OurApproach'
-import t_3 from '../../src/components/screens/other/Other'
-import t_4 from '../../src/components/screens/404/404'
+import t_0 from '../../src/components/pages/home/Home'
+import t_1 from '../../src/components/pages/aboutUs/AboutUs'
+import t_2 from '../../src/components/pages/ourApproach/OurApproach'
+import t_3 from '../../src/components/pages/other/Other'
+import t_4 from '../../src/components/pages/404/404'
 
 // Template Map
 global.componentsByTemplateID = global.componentsByTemplateID || [
