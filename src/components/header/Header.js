@@ -116,6 +116,15 @@ class Header extends React.Component {
               </li>
               <li className="style-as-h3">
                 <Link
+                  to="/our-approach"
+                  activeClassName={styles.activeLink}
+                  onClick={this._menuClose}
+                >
+                  Our Approach
+                </Link>
+              </li>
+              <li className="style-as-h3">
+                <Link
                   to="/other"
                   activeClassName={styles.activeLink}
                   onClick={this._menuClose}

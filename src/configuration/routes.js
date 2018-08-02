@@ -7,6 +7,7 @@ import { getSingleFileYaml } from "../lib/utils/fileLoading";
 const createRoutes = () => {
   const home = getSingleFileYaml("./src/data/pages/home.yml");
   const aboutUs = getSingleFileYaml("./src/data/pages/aboutUs.yml");
+  const ourApproach = getSingleFileYaml("./src/data/pages/ourApproach.yml");
   const other = getSingleFileYaml("./src/data/pages/other.yml");
   return [
     {
@@ -21,6 +22,13 @@ const createRoutes = () => {
       component: "src/components/screens/aboutUs/AboutUs",
       getData: () => ({
         aboutUs
+      })
+    },
+    {
+      path: "/our-approach",
+      component: "src/components/screens/ourApproach/OurApproach",
+      getData: () => ({
+        ourApproach
       })
     },
     {
