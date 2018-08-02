@@ -12,6 +12,7 @@ collections:
         label: 'Home Page'
         name: home
         file: src/data/pages/home.yml
+        path: /
         fields:
           -
             label: Hero
@@ -32,8 +33,13 @@ collections:
                 widget: string
           -
             label: Pullquote
-            name: text
-            widget: text
+            name: pullquote 
+            widget: object
+            fields:
+              -
+                label: Text
+                name: text
+                widget: text
           -
             label: 'Three Columns'
             name: threecol
@@ -116,6 +122,7 @@ collections:
         label: 'About Us'
         name: aboutUs
         file: src/data/pages/aboutUs.yml
+        path: /about-us
         fields:
           -
             label: Hero
@@ -186,6 +193,7 @@ collections:
         label: 'Other Page'
         name: other
         file: src/data/pages/other.yml
+        path: /other
         fields:
           -
             label: Other
