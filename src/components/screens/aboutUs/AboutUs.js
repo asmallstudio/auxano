@@ -5,6 +5,7 @@ import { getFullPageTitle } from "../../../lib/utils/copy";
 import styles from "./aboutUs.scss";
 import CallToActionLink from "../../ui/callToActionLink/CallToActionLink";
 import FullWidthSectionActionLink from "../../ui/fullWidthSectionActionLink/FullWidthSectionActionLink";
+import SubscribeSection from "../../ui/subscribeSection/SubscribeSection";
 
 class AboutUs extends React.Component {
   constructor(props) {
@@ -57,6 +58,10 @@ class AboutUs extends React.Component {
         <FullWidthSectionActionLink
           linkText={aboutUs.actionBanner.text}
           to={aboutUs.actionBanner.link}
+        />
+        <SubscribeSection
+          heading={aboutUs.subscribe.heading}
+          text={aboutUs.subscribe.text}
         />
       </React.Fragment>
     );
