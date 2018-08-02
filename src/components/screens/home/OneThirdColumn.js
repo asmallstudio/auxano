@@ -5,9 +5,9 @@ import styles from "./oneThirdColumn.scss";
 
 class OneThirdColumn extends React.Component {
   render() {
-    const { data } = this.props;
+    const { data, ...restProps } = this.props;
     return (
-      <div className={`${styles.col} col-xs-12 col-md-4`}>
+      <div className={`${styles.col} col-xs-12 col-md-4`} {...restProps}>
         <div className={styles.colIcon} />
         <h2 className="style-as-h3">{data.heading}</h2>
         <p>{data.text}</p>
