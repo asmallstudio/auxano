@@ -1,5 +1,5 @@
-import constants from "./constants.json";
+import constants from "../constants.json";
 
 const getFullPageTitle = title => `${title} | ${constants.siteMeta.title}`;
 
-export default getFullPageTitle;
+export { getFullPageTitle };
