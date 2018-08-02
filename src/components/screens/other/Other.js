@@ -1,5 +1,6 @@
 import React from "react";
-import { withRouteData } from "react-static";
+import { withRouteData, Head } from "react-static";
+import { getFullPageTitle } from "../../../lib/utils/copy";
 
 class Other extends React.Component {
   constructor(props) {
@@ -7,17 +8,22 @@ class Other extends React.Component {
   }
 
   render() {
+    const { other } = this.props;
+
     return (
-      <div>
+      <React.Fragment>
+        <Head>
+          <title>{getFullPageTitle(other.other.title)}</title>
+        </Head>
         <div className="container">
           <div className="row">
             <div className="col-xs-12">
-              <h1>{this.props.other.other.title}</h1>
-              <h3>{this.props.other.other.exampleText}</h3>
+              <h1>{other.other.title}</h1>
+              <h3>{other.other.exampleText}</h3>
             </div>
           </div>
         </div>
-      </div>
+      </React.Fragment>
     );
   }
 }

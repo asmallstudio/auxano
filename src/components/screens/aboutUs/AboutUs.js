@@ -1,5 +1,6 @@
 import React from "react";
-import { withRouteData } from "react-static";
+import { withRouteData, Head } from "react-static";
+import { getFullPageTitle } from "../../../lib/utils/copy";
 
 import styles from "./aboutUs.scss";
 import CallToActionLink from "../../ui/callToActionLink/CallToActionLink";
@@ -15,6 +16,9 @@ class AboutUs extends React.Component {
 
     return (
       <React.Fragment>
+        <Head>
+          <title>{getFullPageTitle(aboutUs.hero.title)}</title>
+        </Head>
         <section className={`container--fluid ${styles.heroContainer}`}>
           <div className={`container`}>
             <div className="row">

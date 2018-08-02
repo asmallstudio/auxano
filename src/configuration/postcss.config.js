@@ -5,7 +5,7 @@ module.exports = {
   plugins: {
     "postcss-normalize": {},
     "postcss-custom-properties": {
-      variables: require("./src/lib/theme.json"),
+      variables: require("../lib/theme.json"),
       appendVariables: true,
       warnings: true
     },
