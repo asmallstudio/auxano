@@ -7,32 +7,40 @@ import { getSingleFileYaml } from "../lib/utils/fileLoading";
 const createRoutes = () => {
   const home = getSingleFileYaml("./src/data/pages/home.yml");
   const aboutUs = getSingleFileYaml("./src/data/pages/aboutUs.yml");
+  const ourApproach = getSingleFileYaml("./src/data/pages/ourApproach.yml");
   const other = getSingleFileYaml("./src/data/pages/other.yml");
   return [
     {
       path: "/",
-      component: "src/components/screens/home/Home",
+      component: "src/components/pages/home/Home",
       getData: () => ({
         home
       })
     },
     {
       path: "/about-us",
-      component: "src/components/screens/aboutUs/AboutUs",
+      component: "src/components/pages/aboutUs/AboutUs",
       getData: () => ({
         aboutUs
       })
     },
     {
+      path: "/our-approach",
+      component: "src/components/pages/ourApproach/OurApproach",
+      getData: () => ({
+        ourApproach
+      })
+    },
+    {
       path: "/other",
-      component: "src/components/screens/other/Other",
+      component: "src/components/pages/other/Other",
       getData: () => ({
         other
       })
     },
     {
       is404: true,
-      component: "src/components/screens/404/404"
+      component: "src/components/pages/404/404"
     }
   ];
 };

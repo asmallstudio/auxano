@@ -1,0 +1,73 @@
+@import "../../styles/utils.scss";
+
+.infoSectionRow {
+  margin-bottom: var(--space-l5);
+
+  @include respond-above(md) {
+    margin-bottom: var(--space-l4);
+  }
+
+  &:nth-child(even) {
+    flex-direction: row-reverse;
+
+    .dingusDot {
+      left: auto;
+      right: -2rem;
+
+      @include respond-above(lg) {
+        right: -5rem;
+      }
+    }
+  }
+}
+
+.infoSectionColText {
+  text-align: center;
+
+  @include respond-above(md) {
+    text-align: left;
+  }
+
+  h2 {
+    margin: var(--space-l3) 0 var(--space-l2);
+  }
+}
+
+.infoSectionColImage {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.infoSectionImage {
+  z-index: 2;
+  width: 100%;
+  border-radius: 0.5rem;
+}
+
+.dingusDot {
+  z-index: -1;
+  position: absolute;
+  left: -2rem;
+  height: 10rem;
+  width: 10rem;
+  background-color: var(--fountain-blue);
+  border-radius: 50%;
+
+  @include respond-above(lg) {
+    left: -5rem;
+  }
+
+  .infoSectionRow:nth-child(2) & {
+    background-color: var(--gigas);
+  }
+
+  .infoSectionRow:nth-child(3) & {
+    background-color: var(--casablanca);
+  }
+
+  .infoSectionRow:nth-child(4) & {
+    background-color: var(--burnt-sienna);
+  }
+}
