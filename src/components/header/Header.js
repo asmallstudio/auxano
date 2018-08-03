@@ -128,6 +128,15 @@ class Header extends React.Component {
               </li>
               <li className="style-as-h3">
                 <Link
+                  to="/contact"
+                  activeClassName={styles.activeLink}
+                  onClick={this._menuClose}
+                >
+                  Contact
+                </Link>
+              </li>
+              <li className="style-as-h3">
+                <Link
                   to="/other"
                   activeClassName={styles.activeLink}
                   onClick={this._menuClose}
@@ -197,7 +206,7 @@ class MenuIcon extends React.Component {
         className={styles.menuIcon}
         onClick={this.props.menuAction}
       >
-        <span className={styles.srText}>Menu</span>
+        <span className="sr-text">Menu</span>
         {menuIcon}
       </button>
     );
