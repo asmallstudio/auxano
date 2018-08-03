@@ -58,4 +58,16 @@
   @include respond-above(lg) {
     left: -5rem;
   }
+
+  .infoSectionRow:nth-child(2) & {
+    background-color: var(--gigas);
+  }
+
+  .infoSectionRow:nth-child(3) & {
+    background-color: var(--casablanca);
+  }
+
+  .infoSectionRow:nth-child(4) & {
+    background-color: var(--burnt-sienna);
+  }
 }
