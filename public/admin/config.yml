@@ -280,6 +280,33 @@ collections:
                 name: subHeading
                 widget: text
       -
+        label: 'Contact'
+        name: contact
+        file: src/data/pages/contact.yml
+        fields:
+          -
+            label: 'Page Title'
+            name: pageTitle
+            widget: string
+          -
+            label: 'Contact Form'
+            name: form
+            widget: object
+            fields:
+              -
+                label: Title
+                name: title
+                widget: string
+          -
+            label: 'Contact Information'
+            name: info
+            widget: object
+            fields:
+              -
+                label: Title
+                name: title
+                widget: string
+      -
         label: 'Other Page'
         name: other
         file: src/data/pages/other.yml
