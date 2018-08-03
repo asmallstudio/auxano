@@ -1,6 +1,7 @@
 {
   "name": "Auxano Advisors",
   "short_name": "Auxano",
+  "description": "Transcending wealth. Transforming lives.",
   "icons": [
     {
       "src": "/assets/favicons/favicon-16.png",
@@ -38,7 +39,7 @@
       "type": "image/png"
     }
   ],
-  "lang": "en-US",
+  "lang": "en",
   "start_url": "/",
   "display": "browser",
   "background_color": "#F9FAFB",
