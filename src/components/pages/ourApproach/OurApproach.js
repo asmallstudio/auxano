@@ -3,6 +3,7 @@ import { withRouteData, Head } from "react-static";
 import { getFullPageTitle } from "../../../lib/utils/copy";
 
 import styles from "./ourApproach.scss";
+import InfoSectionRow from "./InfoSectionRow";
 import FullWidthSectionActionLink from "../../ui/fullWidthSectionActionLink/FullWidthSectionActionLink";
 import SubscribeSection from "../../ui/subscribeSection/SubscribeSection";
 
@@ -32,74 +33,22 @@ class OurApproach extends React.Component {
           className={`container--fluid ${styles.dingusDotOverflowContainer}`}
         >
           <section className="container">
-            <div className={`row ${styles.infoSectionRow}`}>
-              <div
-                className={`col-xs-12 col-md-6 ${styles.infoSectionColImage}`}
-              >
-                <img
-                  className={styles.infoSectionImage}
-                  src="http://via.placeholder.com/300x180"
-                />
-                <div className={styles.dingusDot} />
-              </div>
-              <div
-                className={`col-xs-12 col-md-6 ${styles.infoSectionColText}`}
-              >
-                <h2>{ourApproach.items.item1.heading}</h2>
-                <p>{ourApproach.items.item1.body}</p>
-              </div>
-            </div>
-            <div className={`row ${styles.infoSectionRow}`}>
-              <div
-                className={`col-xs-12 col-md-6 ${styles.infoSectionColImage}`}
-              >
-                <img
-                  className={styles.infoSectionImage}
-                  src="http://via.placeholder.com/300x180"
-                />
-                <div className={styles.dingusDot} />
-              </div>
-              <div
-                className={`col-xs-12 col-md-6 ${styles.infoSectionColText}`}
-              >
-                <h2>{ourApproach.items.item2.heading}</h2>
-                <p>{ourApproach.items.item2.body}</p>
-              </div>
-            </div>
-            <div className={`row ${styles.infoSectionRow}`}>
-              <div
-                className={`col-xs-12 col-md-6 ${styles.infoSectionColImage}`}
-              >
-                <img
-                  className={styles.infoSectionImage}
-                  src="http://via.placeholder.com/300x180"
-                />
-                <div className={styles.dingusDot} />
-              </div>
-              <div
-                className={`col-xs-12 col-md-6 ${styles.infoSectionColText}`}
-              >
-                <h2>{ourApproach.items.item3.heading}</h2>
-                <p>{ourApproach.items.item3.body}</p>
-              </div>
-            </div>
-            <div className={`row ${styles.infoSectionRow}`}>
-              <div
-                className={`col-xs-12 col-md-6 ${styles.infoSectionColImage}`}
-              >
-                <img
-                  className={styles.infoSectionImage}
-                  src="http://via.placeholder.com/300x180"
-                />
-                <div className={styles.dingusDot} />
-              </div>
-              <div
-                className={`col-xs-12 col-md-6 ${styles.infoSectionColText}`}
-              >
-                <h2>{ourApproach.items.item4.heading}</h2>
-                <p>{ourApproach.items.item4.body}</p>
-              </div>
-            </div>
+            <InfoSectionRow>
+              <h2>{ourApproach.items.item1.heading}</h2>
+              <p>{ourApproach.items.item1.body}</p>
+            </InfoSectionRow>
+            <InfoSectionRow>
+              <h2>{ourApproach.items.item2.heading}</h2>
+              <p>{ourApproach.items.item2.body}</p>
+            </InfoSectionRow>
+            <InfoSectionRow>
+              <h2>{ourApproach.items.item3.heading}</h2>
+              <p>{ourApproach.items.item3.body}</p>
+            </InfoSectionRow>
+            <InfoSectionRow>
+              <h2>{ourApproach.items.item4.heading}</h2>
+              <p>{ourApproach.items.item4.body}</p>
+            </InfoSectionRow>
           </section>
         </div>
         <FullWidthSectionActionLink
