@@ -15,6 +15,9 @@
       // Create columns
       .col-#{$modifier}-#{$i} {
         flex-basis: (100 / ($grid-cols / $i)) * 1%;
+        // Set max-width equal to flex-basis for IE support
+        // https://github.com/twbs/bootstrap/issues/17310
+        max-width: (100 / ($grid-cols / $i)) * 1%;
       }
 
       // Create margin-left offsets
@@ -54,19 +57,19 @@
     width: 100%;
   }
 
-  @each $modifier, $breakpoint in $breakpoints {
+  @each $modifier, $breakpoint in $breakpoints-px {
     @include create-col-classes($modifier, $grid-cols, $breakpoint);
   }
 
   [class*="col-"] {
-    padding-left: #{$gutter/2}px;
-    padding-right: #{$gutter/2}px;
+    padding-left: #{$gutter / 2 / 16}rem;
+    padding-right: #{$gutter / 2 / 16}rem;
   }
 
   // Create hidden classes at each breakpoint
-  @each $modifier, $breakpoint in $breakpoints {
-    $modifiers: map-keys($breakpoints);
-    $i: index($breakpoints, ($modifier $breakpoint));
+  @each $modifier, $breakpoint in $breakpoints-px {
+    $modifiers: map-keys($breakpoints-px);
+    $i: index($breakpoints-px, ($modifier $breakpoint));
 
     @include respond-below(#{nth($modifiers, $i)}) {
       .hidden-#{$modifier}-down {

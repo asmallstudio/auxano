@@ -1,0 +1,21 @@
+hero:
+  title: 'Lorem ipsum dolor sit amet consectetur adipiscing sed do eiusmod tempor.'
+items:
+  item1:
+    heading: 'Ipsum dolor sit bulir'
+    body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.'
+  item2:
+    heading: 'Ipsum dolor sit bulir'
+    body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.'
+  item3:
+    heading: 'Ipsum dolor sit bulir'
+    body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.'
+  item4:
+    heading: 'Ipsum dolor sit bulir'
+    body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.'
+actionBanner:
+  text: 'Contact Us'
+  link: '#'
+subscribe:
+  heading: 'Keep updated with our latest content and events.'
+  text: 'Subscribe to our monthly newsletter.'

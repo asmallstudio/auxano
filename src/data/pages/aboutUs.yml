@@ -10,3 +10,6 @@ infoSection1:
 actionBanner:
   text: 'Meet our team'
   link: '#'
+subscribe:
+  heading: 'Keep updated with our latest content and events.'
+  text: 'Subscribe to our monthly newsletter.'
