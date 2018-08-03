@@ -49,7 +49,7 @@ class AboutUs extends React.Component {
             <div className={`col-xs-12 col-lg-6 ${styles.infoSectionColImage}`}>
               <img
                 className={styles.infoSectionImage}
-                src="http://via.placeholder.com/300x180"
+                src="https://via.placeholder.com/300x180"
               />
               <div className={styles.dingusDot} />
             </div>
