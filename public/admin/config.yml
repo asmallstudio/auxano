@@ -110,7 +110,7 @@ collections:
                 widget: string
               -
                 label: 'Subheading'
-                name: subHeading
+                name: text
                 widget: text
       -
         label: 'About Us'
@@ -180,7 +180,7 @@ collections:
                 widget: string
               -
                 label: 'Subheading'
-                name: subHeading
+                name: text
                 widget: text
       -
         label: 'Our Approach'
@@ -281,7 +281,7 @@ collections:
                 widget: string
               -
                 label: 'Subheading'
-                name: subHeading
+                name: text
                 widget: text
       -
         label: 'Contact'
@@ -310,6 +310,19 @@ collections:
                 label: Title
                 name: title
                 widget: string
+          -
+            label: 'Subscribe'
+            name: subscribe
+            widget: object
+            fields:
+              -
+                label: 'Heading'
+                name: heading
+                widget: string
+              -
+                label: 'Subheading'
+                name: text
+                widget: text
       -
         label: 'Other Page'
         name: other

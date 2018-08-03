@@ -2,6 +2,9 @@ import React from "react";
 import { withRouteData, Head } from "react-static";
 import { getFullPageTitle } from "../../../lib/utils/copy";
 
+import styles from "./contact.scss";
+import SubscribeSection from "../../ui/subscribeSection/SubscribeSection";
+
 class Contact extends React.Component {
   constructor(props) {
     super(props);
@@ -26,6 +29,10 @@ class Contact extends React.Component {
             </div>
           </div>
         </div>
+        <SubscribeSection
+          heading={contact.subscribe.heading}
+          text={contact.subscribe.text}
+        />
       </React.Fragment>
     );
   }

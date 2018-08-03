@@ -3,3 +3,6 @@ form:
   title: 'General Inquiries'
 info:
   title: 'Contact Information'
+subscribe:
+  heading: 'Keep updated with our latest content and events.'
+  text: 'Subscribe to our monthly newsletter.'
