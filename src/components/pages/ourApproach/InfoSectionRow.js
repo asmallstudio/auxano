@@ -5,7 +5,7 @@ import styles from "./infoSectionRow.scss";
 class InfoSectionRow extends React.Component {
   render() {
     const {
-      imgSrc = "http://via.placeholder.com/300x180",
+      imgSrc = "https://via.placeholder.com/300x180",
       imgAlt = "placeholder image",
       children
     } = this.props;
