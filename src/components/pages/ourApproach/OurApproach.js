@@ -18,7 +18,7 @@ class OurApproach extends React.Component {
     return (
       <React.Fragment>
         <Head>
-          <title>{getFullPageTitle(ourApproach.hero.title)}</title>
+          <title>{getFullPageTitle(ourApproach.pageTitle)}</title>
         </Head>
         <section className={`container--fluid ${styles.heroContainer}`}>
           <div className={`container`}>

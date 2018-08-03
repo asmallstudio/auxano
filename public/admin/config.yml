@@ -188,6 +188,10 @@ collections:
         file: src/data/pages/ourApproach.yml
         fields:
           -
+            label: 'Page Title'
+            name: pageTitle
+            widget: string
+          -
             label: Hero
             name: hero
             widget: object
@@ -312,18 +316,17 @@ collections:
         file: src/data/pages/other.yml
         fields:
           -
-            label: Other
-            name: other
-            widget: object
-            fields:
-              -
-                label: 'Title Other'
-                name: title
-                widget: string
-              -
-                label: 'Text other'
-                name: exampleText
-                widget: text
+            label: 'Page Title'
+            name: pageTitle
+            widget: string
+          -
+            label: 'Title Other'
+            name: title
+            widget: string
+          -
+            label: 'Text Other'
+            name: exampleText
+            widget: text
   - label: "Blog"
     name: "blog"
     folder: "src/data/blog"
