@@ -1,0 +1,32 @@
+@import "../../styles/utils.scss";
+
+.contactSection {
+  margin: 6rem 0;
+  text-align: center;
+
+  @include respond-above(md) {
+    text-align: left;
+  }
+}
+
+.contactForm {
+  h2,
+  input {
+    margin-bottom: var(--space-l2);
+  }
+
+  form {
+    text-align: left;
+  }
+
+  label {
+    display: inline-block;
+    color: var(--grey);
+    margin-bottom: var(--space-l1);
+  }
+
+  input,
+  textarea {
+    width: 100%;
+  }
+}
