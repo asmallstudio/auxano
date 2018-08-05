@@ -5,6 +5,7 @@ import { getFullPageTitle } from "../../../lib/utils/copy";
 import styles from "./contact.scss";
 import DefaultInput from "../../ui/defaultInput/DefaultInput";
 import DefaultTextArea from "../../ui/defaultTextArea/DefaultTextArea";
+import PrimaryButton from "../../ui/primaryButton/PrimaryButton";
 import SubscribeSection from "../../ui/subscribeSection/SubscribeSection";
 
 class Contact extends React.Component {
@@ -54,6 +55,9 @@ class Contact extends React.Component {
                 />
                 <label htmlFor="body-input">Your Message</label>
                 <DefaultTextArea id="body-input" className={styles.input} />
+                <div className={styles.submitButtonWrapper}>
+                  <PrimaryButton>Send</PrimaryButton>
+                </div>
               </form>
             </section>
             <section
@@ -62,6 +66,28 @@ class Contact extends React.Component {
               } ${styles.contactInfo}`}
             >
               <h2>{contact.info.title}</h2>
+              <address>
+                <p className={`style-as-h3 ${styles.contactInfoHeader}`}>
+                  Email
+                </p>
+                <a href="mailto:info@auxanoadvisors.com">
+                  info@auxanoadvisors.com
+                </a>
+                <p className={`style-as-h3 ${styles.contactInfoHeader}`}>
+                  Phone
+                </p>
+                <a href="tel:+14258891261">(425) 889-1261</a>
+                <p className={`style-as-h3 ${styles.contactInfoHeader}`}>
+                  Address
+                </p>
+                <p>
+                  10900 NE 4th Street
+                  <br />
+                  Suite 1950
+                  <br />
+                  Bellevue, WA 98004
+                </p>
+              </address>
             </section>
           </div>
         </div>

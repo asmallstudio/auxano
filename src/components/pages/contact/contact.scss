@@ -4,14 +4,23 @@
   margin: 6rem 0;
   text-align: center;
 
+  &:last-child {
+    margin-top: var(--space-l3);
+  }
+
   @include respond-above(md) {
     text-align: left;
+
+    &:last-child {
+      margin-top: 6rem;
+    }
   }
 }
 
 .contactForm {
   h2,
-  input {
+  input,
+  textarea {
     margin-bottom: var(--space-l2);
   }
 
@@ -28,5 +37,30 @@
   input,
   textarea {
     width: 100%;
+  }
+}
+
+.submitButtonWrapper {
+  text-align: center;
+
+  @include respond-above(md) {
+    text-align: left;
+  }
+}
+
+.contactInfo {
+  address a {
+    font-size: 1.125rem;
+    font-style: normal;
+    text-decoration: none;
+    color: var(--grey);
+  }
+
+  .contactInfoHeader {
+    margin-top: var(--space-l3);
+
+    &:first-child {
+      margin-top: var(--space-l2);
+    }
   }
 }
