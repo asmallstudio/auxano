@@ -1,24 +1,28 @@
+import "babel-polyfill"; // Support older browsers (IE 11)
 import React from "react";
-import { Router } from "react-static";
+import { Router, Head } from "react-static";
 import { hot } from "react-hot-loader";
 
-//
 import Routes from "react-static-routes";
 import Header from "./header/Header";
 import Footer from "./footer/Footer";
+import constants from "../lib/constants.json";
 
 import "./styles/main.scss";
 import appStyles from "./app.scss";
 
 const App = () => (
   <Router>
-    <div>
+    <React.Fragment>
+      <Head>
+        <title>{constants.siteMeta.title}</title>
+      </Head>
       <Header />
-      <div className={appStyles.routesContainer}>
+      <main className={appStyles.routesContainer}>
         <Routes />
-      </div>
+      </main>
       <Footer />
-    </div>
+    </React.Fragment>
   </Router>
 );
 

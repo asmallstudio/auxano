@@ -1,9 +1,11 @@
 import React from "react";
-import { withRouteData } from "react-static";
+import { withRouteData, Head } from "react-static";
+import { getFullPageTitle } from "../../../lib/utils/copy";
 
 import styles from "./aboutUs.scss";
-import PrimaryButton from "../../ui/primaryButton/PrimaryButton";
+import CallToActionLink from "../../ui/callToActionLink/CallToActionLink";
 import FullWidthSectionActionLink from "../../ui/fullWidthSectionActionLink/FullWidthSectionActionLink";
+import SubscribeSection from "../../ui/subscribeSection/SubscribeSection";
 
 class AboutUs extends React.Component {
   constructor(props) {
@@ -15,6 +17,9 @@ class AboutUs extends React.Component {
 
     return (
       <React.Fragment>
+        <Head>
+          <title>{getFullPageTitle(aboutUs.hero.title)}</title>
+        </Head>
         <section className={`container--fluid ${styles.heroContainer}`}>
           <div className={`container`}>
             <div className="row">
@@ -37,19 +42,26 @@ class AboutUs extends React.Component {
             >
               <h2>{aboutUs.infoSection1.heading}</h2>
               <p>{aboutUs.infoSection1.text}</p>
-              <PrimaryButton>CTA Button</PrimaryButton>
+              <CallToActionLink to={aboutUs.infoSection1.link}>
+                CTA Button
+              </CallToActionLink>
             </div>
             <div className={`col-xs-12 col-lg-6 ${styles.infoSectionColImage}`}>
               <img
                 className={styles.infoSectionImage}
                 src="http://via.placeholder.com/300x180"
               />
+              <div className={styles.dingusDot} />
             </div>
           </div>
         </section>
         <FullWidthSectionActionLink
           linkText={aboutUs.actionBanner.text}
           to={aboutUs.actionBanner.link}
+        />
+        <SubscribeSection
+          heading={aboutUs.subscribe.heading}
+          text={aboutUs.subscribe.text}
         />
       </React.Fragment>
     );

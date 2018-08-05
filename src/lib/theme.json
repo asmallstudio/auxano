@@ -26,8 +26,10 @@
   "black-40": "rgba(36, 36, 36, 0.4)",
   "black-10": "rgba(36, 36, 36, 0.1)",
 
-  "mobile-header-height": "5rem",
-  "desktop-header-height": "7rem",
+  "header-height": "6rem",
+
+  "tablet-footer-height": "10rem",
+  "desktop-footer-height": "20rem",
 
   "tablet-footer-height": "10rem",
   "desktop-footer-height": "20rem",

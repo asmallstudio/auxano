@@ -61,15 +61,32 @@
   }
 }
 
+.infoSectionColImage {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .infoSectionImage {
+  z-index: 2;
   width: 100%;
   border-radius: 0.5rem;
 }
 
-.infoSectionColImage {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+@include respond-above(md) {
+  .dingusDot {
+    position: absolute;
+    left: -2rem;
+    height: 10rem;
+    width: 10rem;
+    background-color: var(--burnt-sienna);
+    border-radius: 50%;
+
+    @include respond-above(lg) {
+      left: -5rem;
+    }
+  }
 }
 
 .infoSection1Row {

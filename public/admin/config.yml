@@ -26,6 +26,10 @@ collections:
                 label: 'Subtitle'
                 name: subtitle
                 widget: text
+              -
+                label: 'Call to Action Link'
+                name: link
+                widget: string
           -
             label: Pullquote
             name: text
@@ -165,6 +169,116 @@ collections:
                 label: 'Link'
                 name: link
                 widget: string
+          -
+            label: 'Subscribe'
+            name: subscribe
+            widget: object
+            fields:
+              -
+                label: 'Heading'
+                name: heading
+                widget: string
+              -
+                label: 'Subheading'
+                name: subHeading
+                widget: text
+      -
+        label: 'Our Approach'
+        name: ourApproach
+        file: src/data/pages/ourApproach.yml
+        fields:
+          -
+            label: Hero
+            name: hero
+            widget: object
+            fields:
+              -
+                label: Title
+                name: title
+                widget: string
+          -
+            label: 'Items'
+            name: items
+            widget: object
+            fields:
+              -
+                label: 'Item 1'
+                name: item1
+                widget: object
+                fields:
+                  -
+                    label: 'Item Heading'
+                    name: heading
+                    widget: string
+                  -
+                    label: 'Item Heading'
+                    name: body
+                    widget: text
+              -
+                label: 'Item 2'
+                name: item2
+                widget: object
+                fields:
+                  -
+                    label: 'Item Heading'
+                    name: heading
+                    widget: string
+                  -
+                    label: 'Item Heading'
+                    name: body
+                    widget: text
+              -
+                label: 'Item 3'
+                name: item3
+                widget: object
+                fields:
+                  -
+                    label: 'Item Heading'
+                    name: heading
+                    widget: string
+                  -
+                    label: 'Item Heading'
+                    name: body
+                    widget: text
+              -
+                label: 'Item 4'
+                name: item4
+                widget: object
+                fields:
+                  -
+                    label: 'Item Heading'
+                    name: heading
+                    widget: string
+                  -
+                    label: 'Item Heading'
+                    name: body
+                    widget: text
+          -
+            label: 'Action Banner'
+            name: actionBanner
+            widget: object
+            fields:
+              -
+                label: 'Text'
+                name: text
+                widget: string
+              -
+                label: 'Link'
+                name: link
+                widget: string
+          -
+            label: 'Subscribe'
+            name: subscribe
+            widget: object
+            fields:
+              -
+                label: 'Heading'
+                name: heading
+                widget: string
+              -
+                label: 'Subheading'
+                name: subHeading
+                widget: text
       -
         label: 'Other Page'
         name: other

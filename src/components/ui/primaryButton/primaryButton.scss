@@ -1,8 +1,10 @@
 .button {
   background-color: var(--gigas-10);
+  color: var(--gigas);
+  font-weight: 700;
 
-  span {
-    color: var(--gigas);
-    font-weight: 700;
+  &:hover {
+    background-color: var(--gigas-40);
+    color: var(--black);
   }
 }

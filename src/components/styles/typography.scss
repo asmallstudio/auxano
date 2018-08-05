@@ -4,7 +4,7 @@
   font-family: "Playfair Display";
   font-style: normal;
   font-weight: 700;
-  font-display: fallback;
+  font-display: swap;
   src: url("./fonts/playfair/playfair-display-v13-latin-700.eot"); /* IE9 Compat Modes */
   src: local("Playfair Display Bold"), local("PlayfairDisplay-Bold"),
     url("./fonts/playfair/playfair-display-v13-latin-700.eot?#iefix")
@@ -46,7 +46,7 @@
   font-family: "Roboto";
   font-style: normal;
   font-weight: 400;
-  font-display: fallback;
+  font-display: swap;
   src: url("./fonts/roboto/roboto-v18-latin-regular.eot"); /* IE9 Compat Modes */
   src: local("Roboto"), local("Roboto-Regular"),
     url("./fonts/roboto/roboto-v18-latin-regular.eot?#iefix")
@@ -65,7 +65,7 @@
   font-family: "Roboto";
   font-style: normal;
   font-weight: 700;
-  font-display: fallback;
+  font-display: swap;
   src: url("./fonts/roboto/roboto-v18-latin-700.eot"); /* IE9 Compat Modes */
   src: local("Roboto Bold"), local("Roboto-Bold"),
     url("./fonts/roboto/roboto-v18-latin-700.eot?#iefix")
@@ -88,7 +88,7 @@
   h1,
   .style-as-h1 {
     font-family: "Playfair Display", serif;
-    font-size: 2.75em;
+    font-size: 2.75rem;
     font-weight: 700;
     font-style: normal;
     font-stretch: normal;
@@ -106,7 +106,7 @@
   h2,
   .style-as-h2 {
     font-family: "Playfair Display", serif;
-    font-size: 2em;
+    font-size: 2rem;
     font-weight: 400;
     font-style: normal;
     font-stretch: normal;
@@ -124,7 +124,7 @@
   h3,
   .style-as-h3 {
     font-family: Roboto, Helvetica, sans-serif;
-    font-size: 1.5em;
+    font-size: 1.5rem;
     font-weight: normal;
     font-style: normal;
     font-stretch: normal;
@@ -138,7 +138,7 @@
   p,
   .style-as-p {
     font-family: Roboto, Helvetica, sans-serif;
-    font-size: 1.125em;
+    font-size: 1.125rem;
     font-weight: normal;
     font-style: normal;
     font-stretch: normal;
