@@ -44,6 +44,7 @@ class Footer extends React.Component {
               <span itemProp="addressLocality">Bellevue</span>,
               <span itemProp="addressRegion">WA</span>
               <span itemProp="postalCode">98004</span>
+              <meta itemProp="addressCountry" content="US" />
             </p>
             <p className={`N2 ${styles.copyrightText}`}>
               © {new Date().getFullYear()} Auxano Advisors LLC
