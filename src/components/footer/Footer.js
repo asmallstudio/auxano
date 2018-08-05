@@ -29,11 +29,15 @@ class Footer extends React.Component {
               </ul>
             </nav>
           </div>
-          <div className={`col-xs-12 ${styles.infoContainer}`}>
+          <div className={`col-xs-12 ${styles.infoContainer}`} 
+            itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
             <p className={`N2 ${styles.addressText}`}>
-              10900 NE 4th Street, Suite 1950
+              <span itemprop="streetAddress">10900 NE 4th Street, Suite 1950</span>
             </p>
-            <p className={`N2 ${styles.addressText2}`}>Bellevue, WA 98004</p>
+            <p className={`N2 ${styles.addressText2}`}> 
+              <span itemprop="addressLocality">Bellevue</span>, 
+              <span itemprop="addressRegion">WA</span> 
+              <span itemprop="postalCode">98004</span></p>
             <p className={`N2 ${styles.copyrightText}`}>
               © 2018 Auxano Advisors LLC
             </p>
@@ -53,7 +57,7 @@ class Footer extends React.Component {
 const BackToTopIcon = () => (
   <img
     className={styles.backToTopIcon}
-    src="back-to-top.svg"
+    src="./assets/back-to-top.svg"
     width="45"
     height="15"
     alt="back-to-top-icon"
