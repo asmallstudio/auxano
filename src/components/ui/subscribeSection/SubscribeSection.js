@@ -6,9 +6,9 @@ import PrimaryButton from "../primaryButton/PrimaryButton";
 
 class SubscribeSection extends React.Component {
   render() {
-    const { heading, text, ...restProps } = this.props;
+    const { heading, text, className = "", ...restProps } = this.props;
     return (
-      <div className="container" {...restProps}>
+      <div className={`container ${className}`} {...restProps}>
         <div className={`row ${styles.row}`}>
           <div className={`col-xs-12 col-lg-5 ${styles.description}`}>
             <h2 className="style-as-h3">{heading}</h2>
