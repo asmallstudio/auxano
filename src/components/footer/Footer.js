@@ -12,42 +12,50 @@ class Footer extends React.Component {
             <nav className="">
               <ul className={`N2 ${styles.linkList}`}>
                 <li>
-                  <Link to="/#" activeClassName={styles.activeLink}>
+                  <Link to="#" activeClassName={styles.activeLink}>
                     News & Resources
                   </Link>
                 </li>
                 <li>
-                  <Link to="/#" activeClassName={styles.activeLink}>
+                  <Link to="#" activeClassName={styles.activeLink}>
                     Careers
                   </Link>
                 </li>
                 <li>
-                  <Link to="/#" activeClassName={styles.activeLink}>
+                  <Link to="#" activeClassName={styles.activeLink}>
                     Privacy & Terms
                   </Link>
                 </li>
               </ul>
             </nav>
           </div>
-          <div className={`col-xs-12 ${styles.infoContainer}`} 
-            itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+          <div
+            className={`col-xs-12 ${styles.infoContainer}`}
+            itemProp="address"
+            itemScope
+            itemType="http://schema.org/PostalAddress"
+          >
             <p className={`N2 ${styles.addressText}`}>
-              <span itemprop="streetAddress">10900 NE 4th Street, Suite 1950</span>
+              <span itemProp="streetAddress">
+                10900 NE 4th Street, Suite 1950
+              </span>
             </p>
-            <p className={`N2 ${styles.addressText2}`}> 
-              <span itemprop="addressLocality">Bellevue</span>, 
-              <span itemprop="addressRegion">WA</span> 
-              <span itemprop="postalCode">98004</span></p>
+            <p className={`N2 ${styles.addressText2}`}>
+              <span itemProp="addressLocality">Bellevue</span>,
+              <span itemProp="addressRegion">WA</span>
+              <span itemProp="postalCode">98004</span>
+            </p>
             <p className={`N2 ${styles.copyrightText}`}>
-              ©`{new Date().getFullYear()}` Auxano Advisors LLC
+              ©`
+              {new Date().getFullYear()}` Auxano Advisors LLC
             </p>
           </div>
           <div className={`col-xs-12 col-md-3 ${styles.backToTopContainer}`}>
-          <span className="N2">
-            <Link to="/#" activeClassName={styles.activeLink}>
-              Back to Top
-            </Link>
-          </span>
+            <span className="N2">
+              <Link to="#" activeClassName={styles.activeLink}>
+                Back to Top
+              </Link>
+            </span>
             <BackToTopIcon />
           </div>
         </div>
