@@ -1,0 +1,66 @@
+# Javascript Node CircleCI 2.0 configuration file
+#
+# Check https://circleci.com/docs/2.0/language-javascript/ for more details
+#
+version: 2
+# Limit which branches are checked
+general:
+  branches:
+    only:
+      - master
+      - develop
+jobs:
+  build:
+    docker:
+      - image: circleci/node:8
+
+    working_directory: ~/repo
+
+    steps:
+      - checkout
+
+      # Download and cache dependencies
+      - restore_cache:
+          keys:
+          - v1-dependencies-{{ checksum "package.json" }}
+          # fallback to using the latest cache if no exact match is found
+          - v1-dependencies-
+
+      - run: yarn install
+
+      - save_cache:
+          paths:
+            - node_modules
+          key: v1-dependencies-{{ checksum "package.json" }}
+        
+      # Run test script
+      - run: yarn test
+      # Test build
+      - run: yarn build
+      # Serve site
+      - run:
+          command: yarn serve
+          background: true
+
+      # Setup ngrok
+      - run: wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip
+      - run: unzip ngrok-stable-linux-amd64.zip -d /tmp
+      - run: chmod +x /tmp/ngrok
+      - run: /tmp/ngrok authtoken $NGROK_TOKEN
+      - run: 
+          command: /tmp/ngrok http 3000  --log stderr
+          background: true
+
+      # Setup JSON parser
+      - run: wget https://stedolan.github.io/jq/download/linux64/jq
+      - run: chmod +x jq
+
+      # Wait for ngrok server to startup
+      - run: sleep 3
+
+      # Get and store pagespeed results
+      - run: mkdir tmp/results
+      - run: curl "https://www.googleapis.com/pagespeedonline/v4/runPagespeed?url=$(curl 'http://localhost:4040/api/tunnels' | ./jq -r '.tunnels[1].public_url')" > ./tmp/results/desktop.json
+      - store_artifacts:
+          path: ./tmp/results/desktop.json
+      
