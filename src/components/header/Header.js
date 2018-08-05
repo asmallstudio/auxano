@@ -101,6 +101,7 @@ class Header extends React.Component {
                   to="/"
                   activeClassName={styles.activeLink}
                   onClick={this._menuClose}
+                  exact
                 >
                   Home
                 </Link>
@@ -110,8 +111,19 @@ class Header extends React.Component {
                   to="/about-us"
                   activeClassName={styles.activeLink}
                   onClick={this._menuClose}
+                  exact
                 >
                   About Us
+                </Link>
+              </li>
+              <li className="style-as-h3">
+                <Link
+                  to="/our-approach"
+                  activeClassName={styles.activeLink}
+                  onClick={this._menuClose}
+                  exact
+                >
+                  Our Approach
                 </Link>
               </li>
               <li className="style-as-h3">
@@ -119,6 +131,7 @@ class Header extends React.Component {
                   to="/other"
                   activeClassName={styles.activeLink}
                   onClick={this._menuClose}
+                  exact
                 >
                   Other Page
                 </Link>

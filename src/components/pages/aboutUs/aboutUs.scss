@@ -5,7 +5,7 @@
 
   @include respond-above(md) {
     padding: 9.75em 0;
-    background: url("http://via.placeholder.com/900x750") no-repeat center;
+    background: url("https://via.placeholder.com/900x750") no-repeat center;
     background-position-x: right;
     background-size: 50% auto;
   }
@@ -29,7 +29,7 @@
 }
 
 .fullWidthImage1Row {
-  background-image: url("http://via.placeholder.com/1000x800");
+  background-image: url("https://via.placeholder.com/1000x800");
   background-size: cover;
   background-position: center;
   height: calc(50vw);

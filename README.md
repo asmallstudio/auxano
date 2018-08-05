@@ -53,19 +53,40 @@ yarn serve
 
 ### CSS
 
-- The styling uses [Sass (or SCSS)](https://sass-lang.com/) and [CSS Modules](https://github.com/css-modules/css-modules#readme)
-- Since CSS Modules are used, the convention for class names is to use camelcase instead of dash-case (`myClass` instead of
-  `my-class`). The reason is it's much easier to access the variable name when
-  referencing it in JavaScript (using dot notation vs. bracket notation)
+- The styling uses [Sass (or SCSS)](https://sass-lang.com/) and
+  [CSS Modules](https://github.com/css-modules/css-modules#readme)
+- Since CSS Modules are used, the convention for class names is to use camelcase
+  instead of dash-case (`myClass` instead of `my-class`). The reason is it's
+  much easier to access the variable name when referencing it in JavaScript
+  (using dot notation vs. bracket notation)
   ([reference](https://github.com/css-modules/css-modules#naming))
-- [CSS Custom Properties](https://developer.mozilla.org/en-US/docs/Web/CSS/--*) including color, spacing, and typeface are managed in `/src/lib/theme.json`.
-- [Autoprefixer](https://github.com/postcss/autoprefixer) and [Normalize.css](https://necolas.github.io/normalize.css/) are included via [PostCSS](https://postcss.org)
-- A 12-column layout is included and build with Sass syntax. All that is needed to use, however, is an understanding of the class naming scheme. The column names follow the format: `col-xs-12` the first part: `col-` begins the class name, the second `xs-` defines the minimum width the class takes effect (xs begins at 0 px and is thus the base class for most components), and the final part `12`, a number, defines how many columns the object should span out of twelve. 
-- Media Queries are best used via the Sass mixins included in `/src/components/styles/utils.scss`. For example: `@include respond-above(md) {}` creates a `min-width` media query. Also available are `@include respond-below(lg) {}` for `max-width` media queries and `@include respond-between(md, xl) {}` for creating min- and max-width media queries targeting viewports between the breakpoint parameters. Available breakpoint sizes are: `xs`, `sm`, `md`, `lg`, `xl`.
+- [CSS Custom Properties](https://developer.mozilla.org/en-US/docs/Web/CSS/--*)
+  including color, spacing, and typeface are managed in `/src/lib/theme.json`.
+- [Autoprefixer](https://github.com/postcss/autoprefixer) and
+  [Normalize.css](https://necolas.github.io/normalize.css/) are included via
+  [PostCSS](https://postcss.org)
+- A 12-column layout is included and build with Sass syntax. All that is needed
+  to use, however, is an understanding of the class naming scheme. The column
+  names follow the format: `col-xs-12` the first part: `col-` begins the class
+  name, the second `xs-` defines the minimum width the class takes effect (xs
+  begins at 0 px and is thus the base class for most components), and the final
+  part `12`, a number, defines how many columns the object should span out of
+  twelve.
+- Media Queries are best used via the Sass mixins included in
+  `/src/components/styles/utils.scss`. For example:
+  `@include respond-above(md) {}` creates a `min-width` media query. Also
+  available are `@include respond-below(lg) {}` for `max-width` media queries
+  and `@include respond-between(md, xl) {}` for creating min- and max-width
+  media queries targeting viewports between the breakpoint parameters. Available
+  breakpoint sizes are: `xs`, `sm`, `md`, `lg`, `xl`.
 
 ### Code formatting
 
-Formatting is kept consistent by using [Prettier](https://prettier.io/) and linted with [ESLint](https://eslint.org/). If using Visual Studio Code, install Prettier and ESLint plugins via: `code --install-extension esbenp.prettier-vscode; code --install-extension dbaeumer.vscode-eslint`. Furthermore, here are some recommended workspace settings: 
+Formatting is kept consistent by using [Prettier](https://prettier.io/) and
+linted with [ESLint](https://eslint.org/). If using Visual Studio Code, install
+Prettier and ESLint plugins via:
+`code --install-extension esbenp.prettier-vscode; code --install-extension dbaeumer.vscode-eslint`.
+Furthermore, here are some recommended workspace settings:
 
 ```json
 {
@@ -75,3 +96,12 @@ Formatting is kept consistent by using [Prettier](https://prettier.io/) and lint
   "eslint.packageManager": "yarn"
 }
 ```
+
+### Continuous integration
+
+Continuous integration is handled by two sources, Netlify and CircleCI:
+
+- Netlify: Will verify the application build by running `yarn run build`
+- CircleCI: Will verify the tests by running `yarn run test`
+  - The configuration for CircleCI is located in the `.circleci` folder
+  - The branches that will trigger a test are `master` and `develop`
