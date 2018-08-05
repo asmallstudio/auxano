@@ -53,10 +53,9 @@ class Footer extends React.Component {
           <div className={`col-xs-12 col-md-3 ${styles.backToTopContainer}`}>
             <span className="N2">
               <Link to="#" activeClassName={styles.activeLink}>
-                Back to Top
+                Back to Top <BackToTopIcon />
               </Link>
             </span>
-            <BackToTopIcon />
           </div>
         </div>
       </footer>
