@@ -46,8 +46,7 @@ class Footer extends React.Component {
               <span itemProp="postalCode">98004</span>
             </p>
             <p className={`N2 ${styles.copyrightText}`}>
-              ©`
-              {new Date().getFullYear()}` Auxano Advisors LLC
+              © {new Date().getFullYear()} Auxano Advisors LLC
             </p>
           </div>
           <div className={`col-xs-12 col-md-3 ${styles.backToTopContainer}`}>
