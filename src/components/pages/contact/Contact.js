@@ -1,6 +1,7 @@
 import React from "react";
 import { withRouteData, Head } from "react-static";
 import { getFullPageTitle } from "../../../lib/utils/copy";
+import constants from "../../../lib/constants.json";
 
 import styles from "./contact.scss";
 import DefaultInput from "../../ui/defaultInput/DefaultInput";
@@ -66,26 +67,39 @@ class Contact extends React.Component {
               } ${styles.contactInfo}`}
             >
               <h2>{contact.info.title}</h2>
-              <address>
+              <address itemScope itemType="http://schema.org/Organization">
+                <meta itemProp="name" content="Auxano Advisors" />
+                <meta itemProp="url" content={constants.siteMeta.url} />
                 <p className={`style-as-h3 ${styles.contactInfoHeader}`}>
                   Email
                 </p>
-                <a href="mailto:info@auxanoadvisors.com">
+                <a href="mailto:info@auxanoadvisors.com" itemProp="email">
                   info@auxanoadvisors.com
                 </a>
                 <p className={`style-as-h3 ${styles.contactInfoHeader}`}>
                   Phone
                 </p>
-                <a href="tel:+14258891261">(425) 889-1261</a>
+                <a href="tel:+14258891261" itemProp="telephone">
+                  (425) 889-1261
+                </a>
                 <p className={`style-as-h3 ${styles.contactInfoHeader}`}>
                   Address
                 </p>
-                <p>
-                  10900 NE 4th Street
+                <p
+                  itemProp="address"
+                  itemScope
+                  itemType="http://schema.org/PostalAddress"
+                >
+                  <span itemProp="streetAddress">
+                    10900 NE 4th Street
+                    <br />
+                    Suite 1950
+                  </span>
                   <br />
-                  Suite 1950
-                  <br />
-                  Bellevue, WA 98004
+                  <span itemProp="addressLocality">Bellevue</span>,{" "}
+                  <span itemProp="addressRegion">WA</span>{" "}
+                  <span itemProp="postalCode">98004</span>
+                  <meta itemProp="addressCountry" content="US" />
                 </p>
               </address>
             </section>
