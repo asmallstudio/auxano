@@ -10,9 +10,11 @@ After cloning this repo, go into the new folder and run:
 yarn install
 ```
 
-## Running
+## Build Environments
 
 ### Development
+
+Development includes hot reloading and does not minimize built CSS. CSS Module class names are expanded (yet still unique) allowing for easier debugging.
 
 ```sh
 yarn start
@@ -20,12 +22,16 @@ yarn start
 
 ### Staging
 
+Essentially the same as production but allows CSS Modules class names to still be viewed, as in develop.
+
 ```sh
 yarn stage
 yarn serve
 ```
 
 ### Production
+
+The final version of the site for deployment, bundled and minified.
 
 ```sh
 yarn build
@@ -101,7 +107,7 @@ Furthermore, here are some recommended workspace settings:
 
 Continuous integration is handled by two sources, Netlify and CircleCI:
 
-- Netlify: Will verify the application build by running `yarn run build`
+- Netlify: Will verify the application builds by running `yarn run build`
 - CircleCI: Will verify the tests by running `yarn run test`
   - The configuration for CircleCI is located in the `.circleci` folder
-  - The branches that will trigger a test are `master` and `develop`
+  - Pull requests to branches `master` and `develop` will trigger tests
