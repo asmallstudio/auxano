@@ -1,7 +1,7 @@
 @import "../../styles/utils.scss";
 
 .contactSection {
-  margin: 6rem 0;
+  margin-top: 6rem;
   text-align: center;
 
   &:last-child {
@@ -63,4 +63,52 @@
       margin-top: var(--space-l2);
     }
   }
+}
+
+.dingusDotContainer {
+  padding-top: var(--space-l5);
+  overflow-x: hidden;
+}
+
+.dingusDotRelative {
+  position: relative;
+}
+
+.mapEmbed {
+  height: auto !important;
+  min-height: 30vh;
+  border-radius: 0.5rem;
+
+  @include respond-above(md) {
+    min-height: 50vh;
+  }
+
+  @include respond-above(lg) {
+    min-height: 50vh;
+  }
+}
+
+.mapLinks {
+  font-size: 1em;
+  text-align: center;
+  margin-top: var(--space-l1);
+
+  @include respond-above(md) {
+    text-align: left;
+  }
+
+  a {
+    color: var(--grey);
+  }
+}
+
+.dingusDot {
+  position: absolute;
+  z-index: -1;
+  right: -4rem;
+  top: -4rem;
+  height: 10rem;
+  width: 10rem;
+  background-color: var(--fountain-blue);
+  border-radius: 50%;
 }
