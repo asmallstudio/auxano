@@ -18,7 +18,7 @@ class AboutUs extends React.Component {
     return (
       <React.Fragment>
         <Head>
-          <title>{getFullPageTitle(aboutUs.hero.title)}</title>
+          <title>{getFullPageTitle(aboutUs.pageTitle)}</title>
         </Head>
         <section className={`container--fluid ${styles.heroContainer}`}>
           <div className={`container`}>

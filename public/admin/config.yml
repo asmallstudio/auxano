@@ -110,7 +110,7 @@ collections:
                 widget: string
               -
                 label: 'Subheading'
-                name: subHeading
+                name: text
                 widget: text
       -
         label: 'About Us'
@@ -180,13 +180,17 @@ collections:
                 widget: string
               -
                 label: 'Subheading'
-                name: subHeading
+                name: text
                 widget: text
       -
         label: 'Our Approach'
         name: ourApproach
         file: src/data/pages/ourApproach.yml
         fields:
+          -
+            label: 'Page Title'
+            name: pageTitle
+            widget: string
           -
             label: Hero
             name: hero
@@ -277,7 +281,47 @@ collections:
                 widget: string
               -
                 label: 'Subheading'
-                name: subHeading
+                name: text
+                widget: text
+      -
+        label: 'Contact'
+        name: contact
+        file: src/data/pages/contact.yml
+        fields:
+          -
+            label: 'Page Title'
+            name: pageTitle
+            widget: string
+          -
+            label: 'Contact Form'
+            name: form
+            widget: object
+            fields:
+              -
+                label: Title
+                name: title
+                widget: string
+          -
+            label: 'Contact Information'
+            name: info
+            widget: object
+            fields:
+              -
+                label: Title
+                name: title
+                widget: string
+          -
+            label: 'Subscribe'
+            name: subscribe
+            widget: object
+            fields:
+              -
+                label: 'Heading'
+                name: heading
+                widget: string
+              -
+                label: 'Subheading'
+                name: text
                 widget: text
       -
         label: 'Other Page'
@@ -285,18 +329,17 @@ collections:
         file: src/data/pages/other.yml
         fields:
           -
-            label: Other
-            name: other
-            widget: object
-            fields:
-              -
-                label: 'Title Other'
-                name: title
-                widget: string
-              -
-                label: 'Text other'
-                name: exampleText
-                widget: text
+            label: 'Page Title'
+            name: pageTitle
+            widget: string
+          -
+            label: 'Title Other'
+            name: title
+            widget: string
+          -
+            label: 'Text Other'
+            name: exampleText
+            widget: text
   - label: "Blog"
     name: "blog"
     folder: "src/data/blog"
