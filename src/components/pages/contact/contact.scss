@@ -1,0 +1,114 @@
+@import "../../styles/utils.scss";
+
+.contactSection {
+  margin-top: 6rem;
+  text-align: center;
+
+  &:last-child {
+    margin-top: var(--space-l3);
+  }
+
+  @include respond-above(md) {
+    text-align: left;
+
+    &:last-child {
+      margin-top: 6rem;
+    }
+  }
+}
+
+.contactForm {
+  h2,
+  input,
+  textarea {
+    margin-bottom: var(--space-l2);
+  }
+
+  form {
+    text-align: left;
+  }
+
+  label {
+    display: inline-block;
+    color: var(--grey);
+    margin-bottom: var(--space-l1);
+  }
+
+  input,
+  textarea {
+    width: 100%;
+  }
+}
+
+.submitButtonWrapper {
+  text-align: center;
+
+  @include respond-above(md) {
+    text-align: left;
+  }
+}
+
+.contactInfo {
+  address a {
+    font-size: 1.125rem;
+    font-style: normal;
+    text-decoration: none;
+    color: var(--grey);
+  }
+
+  .contactInfoHeader {
+    margin-top: var(--space-l3);
+
+    &:first-child {
+      margin-top: var(--space-l2);
+    }
+  }
+}
+
+.dingusDotContainer {
+  padding-top: var(--space-l5);
+  overflow-x: hidden;
+}
+
+.dingusDotRelative {
+  position: relative;
+}
+
+.mapEmbed {
+  height: auto !important;
+  min-height: 30vh;
+  border-radius: 0.5rem;
+
+  @include respond-above(md) {
+    min-height: 50vh;
+  }
+
+  @include respond-above(lg) {
+    min-height: 50vh;
+  }
+}
+
+.mapLinks {
+  font-size: 1em;
+  text-align: center;
+  margin-top: var(--space-l1);
+
+  @include respond-above(md) {
+    text-align: left;
+  }
+
+  a {
+    color: var(--grey);
+  }
+}
+
+.dingusDot {
+  position: absolute;
+  z-index: -1;
+  right: -4rem;
+  top: -4rem;
+  height: 10rem;
+  width: 10rem;
+  background-color: var(--fountain-blue);
+  border-radius: 50%;
+}

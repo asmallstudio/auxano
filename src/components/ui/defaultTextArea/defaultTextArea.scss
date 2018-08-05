@@ -1,0 +1,19 @@
+.textArea {
+  transition: border-color 0.3s ease, color 0.3s ease;
+  font-family: inherit;
+  font-size: 1em;
+  color: var(--grey);
+  object-fit: contain;
+  resize: vertical;
+  border-radius: 0.25em;
+  background-color: var(--white);
+  border: solid 1px var(--grey-40);
+  padding: 0.85em 1em;
+
+  &:active,
+  &:focus {
+    color: var(--gigas);
+    border-color: var(--gigas);
+    outline: none;
+  }
+}
