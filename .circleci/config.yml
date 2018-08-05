@@ -60,7 +60,7 @@ jobs:
 
       # Get and store pagespeed results
       - run: mkdir tmp/results
-      - run: curl "https://www.googleapis.com/pagespeedonline/v4/runPagespeed?url=$(curl 'http://localhost:4040/api/tunnels' | ./jq -r '.tunnels[1].public_url')" > ./tmp/results/desktop.json
+      - run: curl "https://www.googleapis.com/pagespeedonline/v4/runPagespeed?rule=AvoidLandingPageRedirects&rule=MainResourceServerResponseTime&rule=MinifyCss&rule=MinifyHTML&rule=MinifyJavaScript&rule=MinimizeRenderBlockingResources&rule=OptimizeImages&rule=PrioritizeVisibleContent&url=$(curl 'http://localhost:4040/api/tunnels' | ./jq -r '.tunnels[1].public_url')" > ./tmp/results/desktop.json
       - store_artifacts:
           path: ./tmp/results/desktop.json
       
