@@ -16,8 +16,9 @@ class Home extends React.Component {
           <div className={`container`}>
             <div className="row">
               <div
-                className={`col-xs-12 col-md-6 ${styles.heroTextContainer}`}
-                id="hero"
+                className={`col-xs-12 col-md-6 ${
+                  styles.heroTextContainer
+                } dg-hero`}
               >
                 <h1>{this.props.home.hero.title}</h1>
                 <p>{this.props.home.hero.subtitle}</p>
@@ -30,14 +31,23 @@ class Home extends React.Component {
         </div>
         <div className={`container`}>
           <section className={`${styles.pullquote} row`}>
-            <div className="col-xs-12 col-md-8" id="pullquote">
+            <div className="col-xs-12 col-md-8 dg-pullquote">
               <p className="style-as-h2">{this.props.home.pullquote.text}</p>
             </div>
           </section>
-          <section className={`${styles.threecols} row`} id="threecol">
-            <OneThirdColumn data={this.props.home.threecol.col1} id="col1" />
-            <OneThirdColumn data={this.props.home.threecol.col2} id="col2" />
-            <OneThirdColumn data={this.props.home.threecol.col3} id="col3" />
+          <section className={`${styles.threecols} row dg-threecol`}>
+            <OneThirdColumn
+              data={this.props.home.threecol.col1}
+              className="dg-col1"
+            />
+            <OneThirdColumn
+              data={this.props.home.threecol.col2}
+              className="dg-col2"
+            />
+            <OneThirdColumn
+              data={this.props.home.threecol.col3}
+              className="dg-col3"
+            />
           </section>
           <section>
             <AuxanoCarousel />
@@ -46,12 +56,12 @@ class Home extends React.Component {
         <FullWidthSectionActionLink
           linkText="Learn more about us"
           to={this.props.home.learnMore.link}
-          id="learnMore"
+          className="dg-learnMore"
         />
         <SubscribeSection
           heading={this.props.home.subscribe.heading}
           text={this.props.home.subscribe.text}
-          id="subscribe"
+          className="dg-subscribe"
         />
       </React.Fragment>
     );
