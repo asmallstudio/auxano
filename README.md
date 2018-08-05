@@ -105,7 +105,7 @@ Furthermore, here are some recommended workspace settings:
 
 ### Continuous integration
 
-Continuous integration is handled by two sources, Netlify and CircleCI:
+Continuous integration is handled by two sources, Netlify and [CircleCI](https://circleci.com/):
 
 - Netlify: Will verify the application builds by running `yarn run build`
 - CircleCI: Will verify the tests by running `yarn run test`
