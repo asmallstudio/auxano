@@ -87,7 +87,7 @@ jobs:
       # Test Accessibility (a11y)
       - run: 
           name: Install Puppeteer Dependencies
-          command: sudo apt update || sudo apt install libx11-xcb1 # For Chromium's dependencies
+          command: sudo apt install libx11-xcb1 # For Chromium's dependencies
       - run: 
           name: Pa11y Test
           command: yarn run --silent test-pa11y --json > ./tmp/results/pa11y-desktop.json
