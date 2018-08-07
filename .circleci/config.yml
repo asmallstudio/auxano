@@ -83,6 +83,7 @@ jobs:
             curl "https://www.googleapis.com/pagespeedonline/v4/runPagespeed?rule=AvoidLandingPageRedirects&rule=MainResourceServerResponseTime&rule=MinifyCss&rule=MinifyHTML&rule=MinifyJavaScript&rule=MinimizeRenderBlockingResources&rule=OptimizeImages&rule=PrioritizeVisibleContent&url=$(curl 'http://localhost:4040/api/tunnels' | ./jq -r '.tunnels[1].public_url')" > ./tmp/results/pagespeed-desktop.json
       - store_artifacts:
           path: ./tmp/results/pagespeed-desktop.json
+          destination: pagespeed-desktop.json
       
       # Test Accessibility (a11y)
       - run: 
@@ -90,3 +91,4 @@ jobs:
           command: yarn run --silent test-pa11y --json > ./tmp/results/pa11y-desktop.json
       - store_artifacts:
           path: ./tmp/results/pa11y-desktop.json
+          destination: pa11y-desktop.json
