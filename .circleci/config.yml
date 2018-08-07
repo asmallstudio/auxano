@@ -9,6 +9,8 @@ general:
     only:
       - master
       - develop
+      - /feature\/.*/
+      - /fix\/.*/
 jobs:
   build:
     docker:
@@ -34,33 +36,57 @@ jobs:
           key: v1-dependencies-{{ checksum "package.json" }}
         
       # Run test script
-      - run: yarn test
-      # Test build
-      - run: yarn build
+      - run: 
+          name: ESLint Test
+          command: yarn test-eslint
+      
+          # Test build
+      - run: 
+          name: Install Dependencies
+          command: yarn build
+      
       # Serve site
       - run:
-          command: yarn serve
+          name: Serve Production Site
+          command: yarn serve --no-clipboard
           background: true
 
-      # Setup ngrok
-      - run: wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip
-      - run: unzip ngrok-stable-linux-amd64.zip -d /tmp
-      - run: chmod +x /tmp/ngrok
-      - run: /tmp/ngrok authtoken $NGROK_TOKEN
+      # Set up and run ngrok
+      - run:
+          name: Set up ngrok
+          command: |
+            wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip
+            unzip ngrok-stable-linux-amd64.zip -d /tmp
+            chmod +x /tmp/ngrok
+            /tmp/ngrok authtoken $NGROK_TOKEN
+      
       - run: 
+          name: Run ngrok
           command: /tmp/ngrok http 3000  --log stderr
           background: true
 
-      # Setup JSON parser
-      - run: wget https://stedolan.github.io/jq/download/linux64/jq
-      - run: chmod +x jq
+      # Set up JSON parser
+      - run: 
+          name: Set up JSON parser
+          command: | 
+            wget https://stedolan.github.io/jq/download/linux64/jq
+            chmod +x jq
 
-      # Wait for ngrok server to startup
+      # Wait for ngrok server to start up
       - run: sleep 3
 
-      # Get and store pagespeed results
-      - run: mkdir tmp/results
-      - run: curl "https://www.googleapis.com/pagespeedonline/v4/runPagespeed?rule=AvoidLandingPageRedirects&rule=MainResourceServerResponseTime&rule=MinifyCss&rule=MinifyHTML&rule=MinifyJavaScript&rule=MinimizeRenderBlockingResources&rule=OptimizeImages&rule=PrioritizeVisibleContent&url=$(curl 'http://localhost:4040/api/tunnels' | ./jq -r '.tunnels[1].public_url')" > ./tmp/results/desktop.json
+      # Get and store PageSpeed results
+      - run: 
+          name: Run PageSpeed
+          command: |
+            mkdir tmp/results
+            curl "https://www.googleapis.com/pagespeedonline/v4/runPagespeed?rule=AvoidLandingPageRedirects&rule=MainResourceServerResponseTime&rule=MinifyCss&rule=MinifyHTML&rule=MinifyJavaScript&rule=MinimizeRenderBlockingResources&rule=OptimizeImages&rule=PrioritizeVisibleContent&url=$(curl 'http://localhost:4040/api/tunnels' | ./jq -r '.tunnels[1].public_url')" > ./tmp/results/pagespeed-desktop.json
       - store_artifacts:
-          path: ./tmp/results/desktop.json
+          path: ./tmp/results/pagespeed-desktop.json
       
+      # Test Accessibility (a11y)
+      - run: 
+          name: Pa11y Test
+          command: yarn test-pa11y --json > ./tmp/results/pa11y-desktop.json
+      - store_artifacts:
+          path: ./tmp/results/pa11y-desktop.json
