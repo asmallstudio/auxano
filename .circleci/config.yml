@@ -14,7 +14,7 @@ general:
 jobs:
   build:
     docker:
-      - image: circleci/node:8
+      - image: circleci/node:8-browsers
 
     working_directory: ~/repo
 
@@ -85,9 +85,6 @@ jobs:
           path: ./tmp/results/pagespeed-desktop.json
       
       # Test Accessibility (a11y)
-      - run: 
-          name: Install Puppeteer Dependencies
-          command: sudo apt install libx11-xcb1 # For Chromium's dependencies
       - run: 
           name: Pa11y Test
           command: yarn run --silent test-pa11y --json > ./tmp/results/pa11y-desktop.json
