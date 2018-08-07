@@ -87,6 +87,6 @@ jobs:
       # Test Accessibility (a11y)
       - run: 
           name: Pa11y Test
-          command: yarn test-pa11y --json > ./tmp/results/pa11y-desktop.json
+          command: yarn run --silent test-pa11y --json > ./tmp/results/pa11y-desktop.json
       - store_artifacts:
           path: ./tmp/results/pa11y-desktop.json
