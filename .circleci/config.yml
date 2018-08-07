@@ -9,6 +9,8 @@ general:
     only:
       - master
       - develop
+      - /feature\/.*/
+      - /fix\/.*/
 jobs:
   build:
     docker:
