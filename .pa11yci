@@ -1,0 +1,11 @@
+{
+  "defaults": {
+    "timeout": 5000
+  },
+  "urls": [
+    "http://localhost:3000/",
+    "http://localhost:3000/about-us",
+    "http://localhost:3000/our-approach",
+    "http://localhost:3000/contact"
+  ]
+}

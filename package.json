@@ -12,7 +12,8 @@
     "stage": "react-static build --staging",
     "build": "react-static build",
     "serve": "serve dist -p 3000",
-    "test": "./node_modules/.bin/eslint ./"
+    "test-eslint": "eslint ./",
+    "test-pa11y": "pa11y-ci --threshold 5000"
   },
   "browserslist": [
     "> 1% in US",
