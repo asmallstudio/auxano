@@ -39,10 +39,13 @@ jobs:
           command: yarn test-eslint
       
           # Test build
-      - run: yarn build
+      - run: 
+          name: Install Dependencies
+          command: yarn build
       
       # Serve site
       - run:
+          name: Serve Production Site
           command: yarn serve --no-clipboard
           background: true
 
@@ -70,9 +73,9 @@ jobs:
       # Wait for ngrok server to start up
       - run: sleep 3
 
-      # Get and store pagespeed results
+      # Get and store PageSpeed results
       - run: 
-          name: Run Pagespeed
+          name: Run PageSpeed
           command: |
             mkdir tmp/results
             curl "https://www.googleapis.com/pagespeedonline/v4/runPagespeed?rule=AvoidLandingPageRedirects&rule=MainResourceServerResponseTime&rule=MinifyCss&rule=MinifyHTML&rule=MinifyJavaScript&rule=MinimizeRenderBlockingResources&rule=OptimizeImages&rule=PrioritizeVisibleContent&url=$(curl 'http://localhost:4040/api/tunnels' | ./jq -r '.tunnels[1].public_url')" > ./tmp/results/pagespeed-desktop.json
