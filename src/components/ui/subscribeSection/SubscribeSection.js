@@ -14,7 +14,10 @@ class SubscribeSection extends React.Component {
             <h2 className="style-as-h3">{heading}</h2>
             <p>{text}</p>
           </div>
-          <div
+          <form
+            name="subscribe"
+            method="POST"
+            netlify
             className={`col-xs-12 col-md-10 col-md-offset-1 col-lg-6 col-lg-offset-1 ${
               styles.action
             }`}
@@ -29,7 +32,7 @@ class SubscribeSection extends React.Component {
             <PrimaryButton className={`${styles.button}`}>
               Subscribe
             </PrimaryButton>
-          </div>
+          </form>
         </div>
       </div>
     );

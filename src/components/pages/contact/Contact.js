@@ -32,9 +32,10 @@ class Contact extends React.Component {
               }`}
             >
               <h2>{contact.form.title}</h2>
-              <form>
+              <form name="contact" method="POST" netlify>
                 <label htmlFor="name-input">Name</label>
                 <DefaultInput
+                  name="name"
                   id="name-input"
                   placeholder="Alex Garcia"
                   type="text"
@@ -43,6 +44,7 @@ class Contact extends React.Component {
                 />
                 <label htmlFor="email-input">Email</label>
                 <DefaultInput
+                  name="email"
                   id="email-input"
                   placeholder="alex@example.com"
                   type="email"
@@ -51,12 +53,17 @@ class Contact extends React.Component {
                 />
                 <label htmlFor="subject-input">Subject</label>
                 <DefaultInput
+                  name="subject"
                   id="subject-input"
                   type="text"
                   className={styles.input}
                 />
                 <label htmlFor="body-input">Your Message</label>
-                <DefaultTextArea id="body-input" className={styles.input} />
+                <DefaultTextArea
+                  name="body"
+                  id="body-input"
+                  className={styles.input}
+                />
                 <div className={styles.submitButtonWrapper}>
                   <PrimaryButton>Send</PrimaryButton>
                 </div>
