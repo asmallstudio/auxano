@@ -77,12 +77,11 @@ class ContactForm extends React.Component {
         <label htmlFor="body-input">Your Message</label>
         <DefaultTextArea
           name="body"
+          value={body}
           id="body-input"
           className={styles.input}
           onChange={this.handleChange}
-        >
-          {body}
-        </DefaultTextArea>
+        />
         <div className={styles.submitButtonWrapper}>
           <PrimaryButton>Send</PrimaryButton>
         </div>
