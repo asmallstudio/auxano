@@ -34,7 +34,7 @@ class SubscribeForm extends React.Component {
   render() {
     const { email } = this.state;
     return (
-      <form onSubmit={this.handleSubmit}>
+      <form onSubmit={this.handleSubmit} {...this.props}>
         <DefaultInput
           placeholder="Email"
           type="email"
