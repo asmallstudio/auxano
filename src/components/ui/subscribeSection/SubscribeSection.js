@@ -36,12 +36,13 @@ class SubscribeForm extends React.Component {
     return (
       <form onSubmit={this.handleSubmit} {...this.props}>
         <DefaultInput
+          name="email"
+          value={email}
           placeholder="Email"
           type="email"
           aria-label="newsletter email"
           autoComplete="email"
           className={styles.input}
-          value={email}
           onChange={this.handleChange}
         />
         <PrimaryButton className={`${styles.button}`}>Subscribe</PrimaryButton>
