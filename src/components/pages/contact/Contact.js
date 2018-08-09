@@ -10,6 +10,77 @@ import PrimaryButton from "../../ui/primaryButton/PrimaryButton";
 import IFrame from "react-iframe";
 import SubscribeSection from "../../ui/subscribeSection/SubscribeSection";
 
+const encode = data => {
+  return Object.keys(data)
+    .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+    .join("&");
+};
+
+class ContactForm extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { name: "", email: "", subject: "", body: "" };
+  }
+
+  /* Here’s the juicy bit for posting the form submission */
+  handleSubmit = e => {
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: encode({ "form-name": "contact", ...this.state })
+    })
+      .then(() => alert("Success!"))
+      .catch(error => alert(error));
+
+    e.preventDefault();
+  };
+
+  handleChange = e => this.setState({ [e.target.name]: e.target.value });
+
+  render() {
+    const { name, email, subject, body } = this.state;
+    return (
+      <form onSubmit={this.handleSubmit} {...this.props}>
+        <label htmlFor="name-input">Name</label>
+        <DefaultInput
+          name="name"
+          value={name}
+          id="name-input"
+          placeholder="Alex Garcia"
+          type="text"
+          autoComplete="name"
+          className={styles.input}
+        />
+        <label htmlFor="email-input">Email</label>
+        <DefaultInput
+          name="email"
+          value={email}
+          id="email-input"
+          placeholder="alex@example.com"
+          type="email"
+          autoComplete="email"
+          className={styles.input}
+        />
+        <label htmlFor="subject-input">Subject</label>
+        <DefaultInput
+          name="subject"
+          value={subject}
+          id="subject-input"
+          type="text"
+          className={styles.input}
+        />
+        <label htmlFor="body-input">Your Message</label>
+        <DefaultTextArea name="body" id="body-input" className={styles.input}>
+          {body}
+        </DefaultTextArea>
+        <div className={styles.submitButtonWrapper}>
+          <PrimaryButton>Send</PrimaryButton>
+        </div>
+      </form>
+    );
+  }
+}
+
 class Contact extends React.Component {
   constructor(props) {
     super(props);
@@ -32,42 +103,7 @@ class Contact extends React.Component {
               }`}
             >
               <h2>{contact.form.title}</h2>
-              <form name="contact" method="POST" netlify>
-                <label htmlFor="name-input">Name</label>
-                <DefaultInput
-                  name="name"
-                  id="name-input"
-                  placeholder="Alex Garcia"
-                  type="text"
-                  autoComplete="name"
-                  className={styles.input}
-                />
-                <label htmlFor="email-input">Email</label>
-                <DefaultInput
-                  name="email"
-                  id="email-input"
-                  placeholder="alex@example.com"
-                  type="email"
-                  autoComplete="email"
-                  className={styles.input}
-                />
-                <label htmlFor="subject-input">Subject</label>
-                <DefaultInput
-                  name="subject"
-                  id="subject-input"
-                  type="text"
-                  className={styles.input}
-                />
-                <label htmlFor="body-input">Your Message</label>
-                <DefaultTextArea
-                  name="body"
-                  id="body-input"
-                  className={styles.input}
-                />
-                <div className={styles.submitButtonWrapper}>
-                  <PrimaryButton>Send</PrimaryButton>
-                </div>
-              </form>
+              <ContactForm />
             </section>
             <section
               className={`col-xs-12 col-md-5 col-md-offset-1 ${
