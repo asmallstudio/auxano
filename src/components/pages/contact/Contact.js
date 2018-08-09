@@ -50,6 +50,7 @@ class ContactForm extends React.Component {
           type="text"
           autoComplete="name"
           className={styles.input}
+          onChange={this.handleChange}
         />
         <label htmlFor="email-input">Email</label>
         <DefaultInput
@@ -60,6 +61,7 @@ class ContactForm extends React.Component {
           type="email"
           autoComplete="email"
           className={styles.input}
+          onChange={this.handleChange}
         />
         <label htmlFor="subject-input">Subject</label>
         <DefaultInput
@@ -68,9 +70,15 @@ class ContactForm extends React.Component {
           id="subject-input"
           type="text"
           className={styles.input}
+          onChange={this.handleChange}
         />
         <label htmlFor="body-input">Your Message</label>
-        <DefaultTextArea name="body" id="body-input" className={styles.input}>
+        <DefaultTextArea
+          name="body"
+          id="body-input"
+          className={styles.input}
+          onChange={this.handleChange}
+        >
           {body}
         </DefaultTextArea>
         <div className={styles.submitButtonWrapper}>
