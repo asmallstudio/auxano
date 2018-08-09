@@ -3,10 +3,10 @@
   font-size: 1em;
   color: var(--grey);
   object-fit: contain;
-  border-radius: 0.25em;
   background-color: var(--white);
-  border: solid 1px var(--grey-40);
   padding: 0.85em 1em;
+  border: solid 1px var(--grey-40);
+  border-radius: 0.25em;
 
   &:active,
   &:focus {

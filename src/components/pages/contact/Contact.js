@@ -24,13 +24,21 @@ class ContactForm extends React.Component {
       email: "",
       subject: "",
       body: "",
+      bdaySurprise: "",
       errors: false,
       submitted: false
     };
   }
 
   _clearFormData = ({ submitted }) => {
-    this.setState({ name: "", email: "", subject: "", body: "", submitted });
+    this.setState({
+      name: "",
+      email: "",
+      subject: "",
+      body: "",
+      bdaySurprise: "",
+      submitted
+    });
   };
 
   /* Here’s the juicy bit for posting the form submission */
@@ -71,16 +79,25 @@ class ContactForm extends React.Component {
   _handleChange = e => this.setState({ [e.target.name]: e.target.value });
 
   render() {
-    const { name, email, subject, body, submitted, errors } = this.state;
+    const {
+      name,
+      email,
+      subject,
+      body,
+      bdaySurprise,
+      submitted,
+      errors
+    } = this.state;
     return !submitted ? (
       <form
         data-netlify="true"
-        data-netlify-honeypot="bday-surprise"
+        data-netlify-honeypot="bdaySurprise"
         onSubmit={this._handleSubmit}
         {...this.props}
       >
-        <input
-          name="bday-surprise"
+        <DefaultInput
+          name="bdaySurprise"
+          value={bdaySurprise}
           className="sr-text"
           autoComplete="off"
           onChange={this._handleChange}
@@ -105,6 +122,7 @@ class ContactForm extends React.Component {
           placeholder="alex@example.com"
           type="email"
           autoComplete="email"
+          required
           className={styles.input}
           onChange={this._handleChange}
         />
