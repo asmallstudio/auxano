@@ -10,7 +10,7 @@ import PrimaryButton from "../../ui/primaryButton/PrimaryButton";
 import IFrame from "react-iframe";
 import SubscribeSection from "../../ui/subscribeSection/SubscribeSection";
 
-const encode = data => {
+const _encode = data => {
   return Object.keys(data)
     .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
     .join("&");
@@ -19,30 +19,72 @@ const encode = data => {
 class ContactForm extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { name: "", email: "", subject: "", body: "" };
+    this.state = {
+      name: "",
+      email: "",
+      subject: "",
+      body: "",
+      errors: false,
+      submitted: false
+    };
   }
 
-  /* Here’s the juicy bit for posting the form submission */
-  handleSubmit = e => {
-    fetch("/", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({ "form-name": "contact", ...this.state })
-    })
-      .then(() =>
-        alert("Submitted: " + encode({ "form-name": "contact", ...this.state }))
-      )
-      .catch(error => alert(error));
-
-    e.preventDefault();
+  _clearFormData = ({ submitted }) => {
+    this.setState({ name: "", email: "", subject: "", body: "", submitted });
   };
 
-  handleChange = e => this.setState({ [e.target.name]: e.target.value });
+  /* Here’s the juicy bit for posting the form submission */
+  _handleSubmit = event => {
+    event.preventDefault();
+
+    let errors = false;
+    const data = Object.assign({}, this.state);
+    delete data.submitted;
+    delete data.errors;
+
+    // Form validation
+    if (
+      data.name.length === 0 ||
+      data.email.length === 0 ||
+      data.body.length === 0
+    ) {
+      errors = true;
+      this.setState({ errors: true });
+    } else {
+      errors = false;
+      this.setState({ errors: false });
+    }
+
+    if (!errors) {
+      fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: _encode({ "form-name": "contact", ...data })
+      })
+        .then(() => {
+          this._clearFormData({ submitted: true });
+        })
+        .catch(error => alert(error));
+    }
+  };
+
+  _handleChange = e => this.setState({ [e.target.name]: e.target.value });
 
   render() {
-    const { name, email, subject, body } = this.state;
-    return (
-      <form onSubmit={this.handleSubmit} {...this.props}>
+    const { name, email, subject, body, submitted, errors } = this.state;
+    return !submitted ? (
+      <form
+        data-netlify="true"
+        data-netlify-honeypot="bday-surprise"
+        onSubmit={this._handleSubmit}
+        {...this.props}
+      >
+        <input
+          name="bday-surprise"
+          className="sr-text"
+          autoComplete="off"
+          onChange={this._handleChange}
+        />
         <label htmlFor="name-input">Name</label>
         <DefaultInput
           name="name"
@@ -51,8 +93,9 @@ class ContactForm extends React.Component {
           placeholder="Alex Garcia"
           type="text"
           autoComplete="name"
+          required
           className={styles.input}
-          onChange={this.handleChange}
+          onChange={this._handleChange}
         />
         <label htmlFor="email-input">Email</label>
         <DefaultInput
@@ -63,7 +106,7 @@ class ContactForm extends React.Component {
           type="email"
           autoComplete="email"
           className={styles.input}
-          onChange={this.handleChange}
+          onChange={this._handleChange}
         />
         <label htmlFor="subject-input">Subject</label>
         <DefaultInput
@@ -72,20 +115,31 @@ class ContactForm extends React.Component {
           id="subject-input"
           type="text"
           className={styles.input}
-          onChange={this.handleChange}
+          onChange={this._handleChange}
         />
         <label htmlFor="body-input">Your Message</label>
         <DefaultTextArea
           name="body"
           value={body}
           id="body-input"
+          required
           className={styles.input}
-          onChange={this.handleChange}
+          onChange={this._handleChange}
         />
         <div className={styles.submitButtonWrapper}>
           <PrimaryButton>Send</PrimaryButton>
         </div>
+
+        {errors && (
+          <p className={`${styles.errorText}`}>
+            Please check you have filled out the form correctly.
+          </p>
+        )}
       </form>
+    ) : (
+      <p className={`${styles.successText}`}>
+        Success! We have received your message and will get back to you shortly.
+      </p>
     );
   }
 }
