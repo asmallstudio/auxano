@@ -4,7 +4,7 @@ import styles from "./subscribeSection.scss";
 import DefaultInput from "../defaultInput/DefaultInput";
 import PrimaryButton from "../primaryButton/PrimaryButton";
 
-const encode = data => {
+const _encode = data => {
   return Object.keys(data)
     .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
     .join("&");
@@ -13,28 +13,62 @@ const encode = data => {
 class SubscribeForm extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { email: "" };
+    this.state = { email: "", bdaySurprise: "" };
   }
 
-  /* Here’s the juicy bit for posting the form submission */
-  handleSubmit = e => {
-    fetch("/", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({ "form-name": "subscribe", ...this.state })
-    })
-      .then(() => alert("Success!"))
-      .catch(error => alert(error));
-
-    e.preventDefault();
+  _clearFormData = ({ submitted }) => {
+    this.setState({ email: "", bdaySurprise: "", submitted });
   };
 
-  handleChange = e => this.setState({ [e.target.name]: e.target.value });
+  /* Here’s the juicy bit for posting the form submission */
+  _handleSubmit = event => {
+    event.preventDefault();
+
+    let errors = false;
+    const data = Object.assign({}, this.state);
+    delete data.submitted;
+    delete data.errors;
+
+    // Form validation
+    if (data.email.length === 0) {
+      errors = true;
+      this.setState({ errors: true });
+    } else {
+      errors = false;
+      this.setState({ errors: false });
+    }
+
+    if (!errors) {
+      fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: _encode({ "form-name": "subscribe", ...data })
+      })
+        .then(() => {
+          this._clearFormData({ submitted: true });
+        })
+        .catch(error => alert(error));
+    }
+  };
+
+  _handleChange = e => this.setState({ [e.target.name]: e.target.value });
 
   render() {
-    const { email } = this.state;
-    return (
-      <form onSubmit={this.handleSubmit} {...this.props}>
+    const { email, bdaySurprise, submitted } = this.state;
+    return !submitted ? (
+      <form
+        data-netlify="true"
+        data-netlify-honeypot="bdaySurprise"
+        onSubmit={this._handleSubmit}
+        {...this.props}
+      >
+        <DefaultInput
+          name="bdaySurprise"
+          value={bdaySurprise}
+          className="sr-text"
+          autoComplete="off"
+          onChange={this._handleChange}
+        />
         <DefaultInput
           name="email"
           value={email}
@@ -43,10 +77,14 @@ class SubscribeForm extends React.Component {
           aria-label="newsletter email"
           autoComplete="email"
           className={styles.input}
-          onChange={this.handleChange}
+          onChange={this._handleChange}
         />
         <PrimaryButton className={`${styles.button}`}>Subscribe</PrimaryButton>
       </form>
+    ) : (
+      <p className={`${styles.successText}`}>
+        Thank you! You have been sent a confirmation email to subscribe.
+      </p>
     );
   }
 }
