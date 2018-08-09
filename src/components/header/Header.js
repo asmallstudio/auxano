@@ -72,6 +72,8 @@ class Header extends React.Component {
   }
 
   render() {
+    const { menuHidden } = this.state;
+
     return (
       <header className={styles.header}>
         <div className={styles.container}>
@@ -86,15 +88,12 @@ class Header extends React.Component {
             </Link>
           </div>
           <nav id="navigation" className={styles.nav}>
-            <MenuIcon
-              menuHidden={this.state.menuHidden}
-              menuAction={this._menuToggle}
-            />
+            <MenuIcon menuHidden={menuHidden} menuAction={this._menuToggle} />
             <ul
               id="header-nav"
               className={styles.list}
-              aria-expanded={this.state.menuHidden ? "false" : "true"}
-              {...this.state.menuHidden && { hidden: true }}
+              aria-expanded={menuHidden ? "false" : "true"}
+              {...menuHidden && { hidden: true }}
             >
               <li className="style-as-h3">
                 <Link
@@ -160,9 +159,10 @@ class Header extends React.Component {
 
 class MenuIcon extends React.Component {
   render() {
+    const { menuHidden, menuAction } = this.props;
     let menuIcon;
     // Show navicon if hidden, show x if not.
-    if (this.props.menuHidden) {
+    if (menuHidden) {
       menuIcon = (
         <svg
           height="23"
@@ -201,10 +201,10 @@ class MenuIcon extends React.Component {
     }
     return (
       <button
-        aria-expanded={this.props.menuHidden ? "false" : "true"}
+        aria-expanded={menuHidden ? "false" : "true"}
         aria-controls="header-nav"
         className={styles.menuIcon}
-        onClick={this.props.menuAction}
+        onClick={menuAction}
       >
         <span className="sr-text">Menu</span>
         {menuIcon}
