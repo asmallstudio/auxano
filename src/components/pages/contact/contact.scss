@@ -40,6 +40,11 @@
   }
 }
 
+.errorText,
+.successText {
+  margin-top: var(--space-l3);
+}
+
 .submitButtonWrapper {
   text-align: center;
 

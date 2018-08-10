@@ -1,4 +1,5 @@
 .container {
+  transition: background-color 1s ease;
   background-color: var(--fountain-blue-10);
 }
 
@@ -13,7 +14,15 @@
   color: var(--fountain-blue);
 }
 
-.container:hover .link::after {
-  transition-timing-function: ease-in;
-  transform: rotate(45deg) translate(0.15em, -0.15em);
+.container:hover {
+  background-color: var(--fountain-blue-40);
+
+  .link {
+    color: #296666;
+
+    &::after {
+      transition-timing-function: ease-in;
+      transform: rotate(45deg) translate(0.15em, -0.15em);
+    }
+  }
 }

@@ -41,8 +41,8 @@ class Footer extends React.Component {
               </span>
             </p>
             <p className={`N2 ${styles.addressText2}`}>
-              <span itemProp="addressLocality">Bellevue</span>,
-              <span itemProp="addressRegion">WA</span>
+              <span itemProp="addressLocality">Bellevue</span>,{" "}
+              <span itemProp="addressRegion">WA</span>{" "}
               <span itemProp="postalCode">98004</span>
               <meta itemProp="addressCountry" content="US" />
             </p>

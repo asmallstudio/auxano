@@ -10,6 +10,158 @@ import PrimaryButton from "../../ui/primaryButton/PrimaryButton";
 import IFrame from "react-iframe";
 import SubscribeSection from "../../ui/subscribeSection/SubscribeSection";
 
+const _encode = data => {
+  return Object.keys(data)
+    .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+    .join("&");
+};
+
+class ContactForm extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      name: "",
+      email: "",
+      subject: "",
+      body: "",
+      bdaySurprise: "",
+      errors: false,
+      submitted: false
+    };
+  }
+
+  _clearFormData = ({ submitted }) => {
+    this.setState({
+      name: "",
+      email: "",
+      subject: "",
+      body: "",
+      bdaySurprise: "",
+      submitted
+    });
+  };
+
+  /* Here’s the juicy bit for posting the form submission */
+  _handleSubmit = event => {
+    event.preventDefault();
+
+    let errors = false;
+    const data = Object.assign({}, this.state);
+    delete data.submitted;
+    delete data.errors;
+
+    // Form validation
+    if (
+      data.name.length === 0 ||
+      data.email.length === 0 ||
+      data.body.length === 0
+    ) {
+      errors = true;
+      this.setState({ errors: true });
+    } else {
+      errors = false;
+      this.setState({ errors: false });
+    }
+
+    if (!errors) {
+      fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: _encode({ "form-name": "contact", ...data })
+      })
+        .then(() => {
+          this._clearFormData({ submitted: true });
+        })
+        .catch(error => alert(error));
+    }
+  };
+
+  _handleChange = e => this.setState({ [e.target.name]: e.target.value });
+
+  render() {
+    const {
+      name,
+      email,
+      subject,
+      body,
+      bdaySurprise,
+      submitted,
+      errors
+    } = this.state;
+    return !submitted ? (
+      <form
+        data-netlify="true"
+        data-netlify-honeypot="bdaySurprise"
+        onSubmit={this._handleSubmit}
+        {...this.props}
+      >
+        <DefaultInput
+          name="bdaySurprise"
+          value={bdaySurprise}
+          className="sr-text"
+          autoComplete="off"
+          onChange={this._handleChange}
+        />
+        <label htmlFor="name-input">Name</label>
+        <DefaultInput
+          name="name"
+          value={name}
+          id="name-input"
+          placeholder="Alex Garcia"
+          type="text"
+          autoComplete="name"
+          required
+          className={styles.input}
+          onChange={this._handleChange}
+        />
+        <label htmlFor="email-input">Email</label>
+        <DefaultInput
+          name="email"
+          value={email}
+          id="email-input"
+          placeholder="alex@example.com"
+          type="email"
+          autoComplete="email"
+          required
+          className={styles.input}
+          onChange={this._handleChange}
+        />
+        <label htmlFor="subject-input">Subject</label>
+        <DefaultInput
+          name="subject"
+          value={subject}
+          id="subject-input"
+          type="text"
+          className={styles.input}
+          onChange={this._handleChange}
+        />
+        <label htmlFor="body-input">Your Message</label>
+        <DefaultTextArea
+          name="body"
+          value={body}
+          id="body-input"
+          required
+          className={styles.input}
+          onChange={this._handleChange}
+        />
+        <div className={styles.submitButtonWrapper}>
+          <PrimaryButton>Send</PrimaryButton>
+        </div>
+
+        {errors && (
+          <p className={`${styles.errorText}`}>
+            Please check you have filled out the form correctly.
+          </p>
+        )}
+      </form>
+    ) : (
+      <p className={`${styles.successText}`}>
+        Success! We have received your message and will get back to you shortly.
+      </p>
+    );
+  }
+}
+
 class Contact extends React.Component {
   constructor(props) {
     super(props);
@@ -32,35 +184,7 @@ class Contact extends React.Component {
               }`}
             >
               <h2>{contact.form.title}</h2>
-              <form>
-                <label htmlFor="name-input">Name</label>
-                <DefaultInput
-                  id="name-input"
-                  placeholder="Alex Garcia"
-                  type="text"
-                  autoComplete="name"
-                  className={styles.input}
-                />
-                <label htmlFor="email-input">Email</label>
-                <DefaultInput
-                  id="email-input"
-                  placeholder="alex@example.com"
-                  type="email"
-                  autoComplete="email"
-                  className={styles.input}
-                />
-                <label htmlFor="subject-input">Subject</label>
-                <DefaultInput
-                  id="subject-input"
-                  type="text"
-                  className={styles.input}
-                />
-                <label htmlFor="body-input">Your Message</label>
-                <DefaultTextArea id="body-input" className={styles.input} />
-                <div className={styles.submitButtonWrapper}>
-                  <PrimaryButton>Send</PrimaryButton>
-                </div>
-              </form>
+              <ContactForm />
             </section>
             <section
               className={`col-xs-12 col-md-5 col-md-offset-1 ${
