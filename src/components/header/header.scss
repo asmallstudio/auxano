@@ -116,11 +116,16 @@
   text-align: center;
   background-color: var(--white);
   padding-left: 0;
-  padding-top: var(--space-l3);
   margin: 0;
 
   &:not([hidden]) {
     display: flex;
+  }
+
+  @include respond-below(lg) {
+    @media (min-height: 40em) {
+      padding-top: var(--space-l3);
+    }
   }
 
   @include respond-above(lg) {
@@ -164,7 +169,11 @@
 
   :global {
     .row {
-      padding: 3rem 0;
+      padding: 1rem 0;
+
+      @media (min-height: 40em) {
+        padding: 3rem 0;
+      }
     }
   }
 }
