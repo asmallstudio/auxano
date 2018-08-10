@@ -72,10 +72,12 @@ class SubscribeForm extends React.Component {
         <DefaultInput
           name="email"
           value={email}
+          id="newsletter-email-input"
           placeholder="Email"
           type="email"
           aria-label="newsletter email"
           autoComplete="email"
+          required
           className={styles.input}
           onChange={this._handleChange}
         />
