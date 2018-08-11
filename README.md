@@ -105,9 +105,32 @@ Furthermore, here are some recommended workspace settings:
 
 ### Continuous integration
 
-Continuous integration is handled by two sources, Netlify and [CircleCI](https://circleci.com/):
+Continuous integration is handled by two sources, Netlify and
+[CircleCI](https://circleci.com/).
 
-- Netlify: Will verify the application builds by running `yarn run build`
-- CircleCI: Will verify the tests by running `yarn run test`
-  - The configuration for CircleCI is located in the `.circleci` folder
-  - Pull requests to branches `master` and `develop` will trigger tests
+#### Netlify
+
+Will verify the application builds for production by running `yarn run build`
+
+#### CircleCI
+
+Will verify a suite of tests located in the configuration
+(`.circleci/config.yml`)
+
+- The following branches will trigger tests when pushed: `master`, `develop`,
+  `feature/`, and `fix/`
+
+##### Tests
+
+- ESLint
+  - Validates that the code conforms to the ESLint standards set in
+    `.eslintrc.js`
+  - Command: `yarn run test-eslint`
+- PageSpeed
+  - Checks the Google
+    [PageSpeed](https://developers.google.com/speed/pagespeed/insights/) API to
+    analyze web performance. The results are stored as an artifact inside the CI
+    test results.
+- Pa11y
+  - Validates that the code conforms to accessibility standards. The results are
+    stored as an artifact inside the CI test results.
