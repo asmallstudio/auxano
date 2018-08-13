@@ -1,8 +1,10 @@
-.input {
+.textArea {
   transition: border-color 0.3s ease, color 0.3s ease;
+  font-family: inherit;
   font-size: 1em;
   color: var(--grey);
   object-fit: contain;
+  resize: vertical;
   background-color: var(--white);
   background-clip: padding-box; /* Removes shadow on iOS input. */
   padding: 0.85em 1em;
