@@ -14,7 +14,7 @@
   color: var(--gigas) !important;
 }
 
-.container {
+.headerContainer {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -22,15 +22,8 @@
   flex: 1;
   height: 100%;
   max-width: $max-width-em;
-  padding: 1.5rem;
-  padding: calc(1.5rem + env(safe-area-inset-top))
-    calc(1.5rem + env(safe-area-inset-right)) 1.5rem
-    calc(1.5rem + env(safe-area-inset-left));
+  padding: 1.5rem 0.75rem;
   margin: 0 auto;
-
-  @include respond-above(lg) {
-    padding: 1.5rem 0.75rem;
-  }
 }
 
 .logoContainer {
@@ -38,6 +31,7 @@
   flex-direction: row;
   align-items: center;
   height: 100%;
+  padding-left: env(safe-area-inset-left);
 
   a {
     transition: background-color 0.3s ease, border-color 0.3s ease;
@@ -74,6 +68,8 @@
 }
 
 .nav {
+  padding-right: env(safe-area-inset-right);
+
   @include respond-above(lg) {
     width: 100%;
     max-width: 35rem;
@@ -147,6 +143,10 @@
     @include respond-above(lg) {
       display: inline;
       padding: 0 var(--space-l2);
+    }
+
+    &:last-of-type {
+      padding-right: 0;
     }
 
     a {
