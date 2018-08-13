@@ -38,6 +38,10 @@
   textarea {
     width: 100%;
   }
+
+  input[name="bdaySurprise"] {
+    width: auto;
+  }
 }
 
 .errorText,
