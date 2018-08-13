@@ -13,11 +13,11 @@ const _encode = data => {
 class SubscribeForm extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { email: "", bdaySurprise: "" };
+    this.state = { email: "" };
   }
 
   _clearFormData = ({ submitted }) => {
-    this.setState({ email: "", bdaySurprise: "", submitted });
+    this.setState({ email: "", submitted });
   };
 
   /* Here’s the juicy bit for posting the form submission */
@@ -39,36 +39,16 @@ class SubscribeForm extends React.Component {
     }
 
     if (!errors) {
-      fetch("/", {
-        method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: _encode({ "form-name": "subscribe", ...data })
-      })
-        .then(() => {
-          this._clearFormData({ submitted: true });
-        })
-        .catch(error => alert(error));
+      this._clearFormData({ submitted: true });
     }
   };
 
   _handleChange = e => this.setState({ [e.target.name]: e.target.value });
 
   render() {
-    const { email, bdaySurprise, submitted } = this.state;
+    const { email, submitted } = this.state;
     return !submitted ? (
-      <form
-        data-netlify="true"
-        data-netlify-honeypot="bdaySurprise"
-        onSubmit={this._handleSubmit}
-        {...this.props}
-      >
-        <DefaultInput
-          name="bdaySurprise"
-          value={bdaySurprise}
-          className="sr-text"
-          autoComplete="off"
-          onChange={this._handleChange}
-        />
+      <form onSubmit={this._handleSubmit} {...this.props}>
         <DefaultInput
           name="email"
           value={email}
@@ -78,8 +58,8 @@ class SubscribeForm extends React.Component {
           aria-label="newsletter email"
           autoComplete="email"
           required
-          className={styles.input}
           onChange={this._handleChange}
+          className={styles.input}
         />
         <PrimaryButton className={`${styles.button}`}>Subscribe</PrimaryButton>
       </form>
