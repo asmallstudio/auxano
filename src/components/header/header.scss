@@ -23,6 +23,9 @@
   height: 100%;
   max-width: $max-width-em;
   padding: 1.5rem;
+  padding: calc(1.5rem + env(safe-area-inset-top))
+    calc(1.5rem + env(safe-area-inset-right)) 1.5rem
+    calc(1.5rem + env(safe-area-inset-left));
   margin: 0 auto;
 
   @include respond-above(lg) {
