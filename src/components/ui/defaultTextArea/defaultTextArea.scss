@@ -6,6 +6,7 @@
   object-fit: contain;
   resize: vertical;
   background-color: var(--white);
+  background-clip: padding-box; /* Removes shadow on iOS input. */
   padding: 0.85em 1em;
   border: solid 1px var(--grey-40);
   border-radius: 0.25em;
