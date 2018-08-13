@@ -4,12 +4,6 @@ import styles from "./subscribeSection.scss";
 import DefaultInput from "../defaultInput/DefaultInput";
 import PrimaryButton from "../primaryButton/PrimaryButton";
 
-const _encode = data => {
-  return Object.keys(data)
-    .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
-    .join("&");
-};
-
 class SubscribeForm extends React.Component {
   constructor(props) {
     super(props);
