@@ -12,7 +12,10 @@ const createDocument = ({ Html, Head, Body, children, renderMeta }) => {
     <Html>
       <Head>
         <meta charSet="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1, viewport-fit=cover"
+        />
         <meta name="theme-color" content="#50b8b8" />
         <link rel="manifest" href="/manifest.webmanifest" />
         <link rel="icon" href="/assets/favicons/favicon-64.png" />

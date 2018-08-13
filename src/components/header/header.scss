@@ -170,9 +170,11 @@
   :global {
     .row {
       padding: 1rem 0;
+      padding-bottom: env(safe-area-inset-bottom);
 
       @media (min-height: 40em) {
         padding: 3rem 0;
+        padding-bottom: env(safe-area-inset-bottom);
       }
     }
   }
