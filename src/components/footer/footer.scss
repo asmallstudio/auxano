@@ -123,7 +123,7 @@
   }
 
   .infoContainer {
-    margin-top: 24px;
+    margin-top: 1.5rem; //24px converted to rem
     flex-direction: row;
     justify-content: flex-end;
     order: 2;
@@ -132,7 +132,7 @@
   .backToTopContainer {
     order: 1;
     margin-left: auto;
-    margin-top: 46px;
+    margin-top: 3rem; //46px converted to rem
     margin-bottom: 0;
     justify-content: flex-end;
   }
@@ -161,10 +161,10 @@
   }
 
   .linkContainer {
-    margin-top: 126px;
+    margin-top: 7.875rem; //126px converted to rem
   }
 
   .backToTopContainer {
-    margin-top: 126px;
+    margin-top: 7.875rem; //126px converted to rem
   }
 }
