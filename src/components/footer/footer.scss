@@ -5,9 +5,10 @@
 }
 
 .footerRow {
-  margin: 0 auto 0 auto;
   display: flex;
   flex-direction: column;
+  padding-bottom: env(safe-area-inset-bottom);
+  margin: 0 auto;
 }
 
 .linkContainer {
@@ -149,7 +150,7 @@
   }
 }
 
-// == DESkTOP ==
+// == DESKTOP ==
 
 @include respond-above(lg) {
   .footerContainer {

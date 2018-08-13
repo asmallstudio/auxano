@@ -66,7 +66,7 @@ class Footer extends React.Component {
 const BackToTopIcon = () => (
   <img
     className={styles.backToTopIcon}
-    src="./assets/back-to-top.svg"
+    src="/assets/back-to-top.svg"
     width="45"
     height="15"
     alt="back-to-top-icon"
