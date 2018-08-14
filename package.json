@@ -12,7 +12,8 @@
     "stage": "react-static build --staging",
     "build": "react-static build",
     "serve": "serve dist -p 3000",
-    "test": "./node_modules/.bin/eslint ./"
+    "test-eslint": "eslint ./",
+    "test-pa11y": "pa11y-ci --threshold 5000"
   },
   "browserslist": [
     "> 1% in US",
@@ -21,28 +22,28 @@
     "not IE < 9"
   ],
   "dependencies": {
-    "autoprefixer": "^9.0.2",
+    "autoprefixer": "^9.1.0",
     "babel-polyfill": "^6.26.0",
     "extract-text-webpack-plugin": "^3.0.2",
     "gray-matter": "^4.0.1",
     "js-yaml": "^3.12.0",
-    "klaw": "^2.1.1",
     "moment": "^2.22.2",
     "netlify-identity-widget": "^1.4.12",
     "node-sass": "^4.9.0",
     "postcss-custom-properties": "^7.0.0",
-    "postcss-loader": "^2.1.6",
+    "postcss-loader": "^3.0.0",
     "postcss-normalize": "^6.0.0",
     "postcss-scss": "^2.0.0",
     "react": "^16.4.2",
-    "react-dom": "^16.4.1",
+    "react-dom": "^16.4.2",
     "react-hot-loader": "^4.3.4",
+    "react-iframe": "^1.2.0",
     "react-markdown": "^3.4.1",
     "react-moment": "^0.7.9",
     "react-responsive-carousel": "^3.1.41",
     "react-router": "^4.3.1",
     "react-static": "5.8.1",
-    "sass-loader": "^7.0.3",
+    "sass-loader": "^7.1.0",
     "smoothscroll-polyfill": "^0.4.3"
   },
   "devDependencies": {
@@ -51,6 +52,7 @@
     "eslint-config-react-tools": "1.1.6",
     "eslint-plugin-prettier": "^2.6.2",
     "eslint-plugin-react": "^7.10.0",
+    "pa11y-ci": "^2.1.1",
     "prettier": "^1.14.0",
     "serve": "^9.4.0"
   }

@@ -14,18 +14,7 @@
   color: var(--gigas) !important;
 }
 
-.srText {
-  border: 0;
-  clip: rect(0 0 0 0);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  width: 1px;
-}
-
-.container {
+.headerContainer {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -33,12 +22,8 @@
   flex: 1;
   height: 100%;
   max-width: $max-width-em;
-  padding: 1.5rem;
+  padding: 1.5rem 0.75rem;
   margin: 0 auto;
-
-  @include respond-above(lg) {
-    padding: 1.5rem 0.75rem;
-  }
 }
 
 .logoContainer {
@@ -46,6 +31,7 @@
   flex-direction: row;
   align-items: center;
   height: 100%;
+  padding-left: env(safe-area-inset-left);
 
   a {
     transition: background-color 0.3s ease, border-color 0.3s ease;
@@ -82,6 +68,8 @@
 }
 
 .nav {
+  padding-right: env(safe-area-inset-right);
+
   @include respond-above(lg) {
     width: 100%;
     max-width: 35rem;
@@ -127,11 +115,16 @@
   text-align: center;
   background-color: var(--white);
   padding-left: 0;
-  padding-top: var(--space-l3);
   margin: 0;
 
   &:not([hidden]) {
     display: flex;
+  }
+
+  @include respond-below(lg) {
+    @media (min-height: 40em) {
+      padding-top: var(--space-l3);
+    }
   }
 
   @include respond-above(lg) {
@@ -150,6 +143,10 @@
     @include respond-above(lg) {
       display: inline;
       padding: 0 var(--space-l2);
+    }
+
+    &:last-of-type {
+      padding-right: 0;
     }
 
     a {
@@ -175,7 +172,13 @@
 
   :global {
     .row {
-      padding: 3rem 0;
+      padding: 1rem 0;
+      padding-bottom: env(safe-area-inset-bottom);
+
+      @media (min-height: 40em) {
+        padding: 3rem 0;
+        padding-bottom: env(safe-area-inset-bottom);
+      }
     }
   }
 }

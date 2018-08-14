@@ -10,9 +10,11 @@ After cloning this repo, go into the new folder and run:
 yarn install
 ```
 
-## Running
+## Build Environments
 
 ### Development
+
+Development includes hot reloading and does not minimize built CSS. CSS Module class names are expanded (yet still unique) allowing for easier debugging.
 
 ```sh
 yarn start
@@ -20,12 +22,16 @@ yarn start
 
 ### Staging
 
+Essentially the same as production but allows CSS Modules class names to still be viewed, as in develop.
+
 ```sh
 yarn stage
 yarn serve
 ```
 
 ### Production
+
+The final version of the site for deployment, bundled and minified.
 
 ```sh
 yarn build
@@ -99,9 +105,32 @@ Furthermore, here are some recommended workspace settings:
 
 ### Continuous integration
 
-Continuous integration is handled by two sources, Netlify and CircleCI:
+Continuous integration is handled by two sources, Netlify and
+[CircleCI](https://circleci.com/).
 
-- Netlify: Will verify the application build by running `yarn run build`
-- CircleCI: Will verify the tests by running `yarn run test`
-  - The configuration for CircleCI is located in the `.circleci` folder
-  - The branches that will trigger a test are `master` and `develop`
+#### Netlify
+
+Will verify the application builds for production by running `yarn run build`
+
+#### CircleCI
+
+Will verify a suite of tests located in the configuration
+(`.circleci/config.yml`)
+
+- The following branches will trigger tests when pushed: `master`, `develop`,
+  `feature/`, and `fix/`
+
+##### Tests
+
+- ESLint
+  - Validates that the code conforms to the ESLint standards set in
+    `.eslintrc.js`
+  - Command: `yarn run test-eslint`
+- PageSpeed
+  - Checks the Google
+    [PageSpeed](https://developers.google.com/speed/pagespeed/insights/) API to
+    analyze web performance. The results are stored as an artifact inside the CI
+    test results.
+- Pa11y
+  - Validates that the code conforms to accessibility standards. The results are
+    stored as an artifact inside the CI test results.

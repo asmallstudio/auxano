@@ -13,13 +13,13 @@ class Other extends React.Component {
     return (
       <React.Fragment>
         <Head>
-          <title>{getFullPageTitle(other.other.title)}</title>
+          <title>{getFullPageTitle(other.pageTitle)}</title>
         </Head>
         <div className="container">
           <div className="row">
             <div className="col-xs-12">
-              <h1>{other.other.title}</h1>
-              <h3>{other.other.exampleText}</h3>
+              <h1>{other.title}</h1>
+              <h3>{other.exampleText}</h3>
             </div>
           </div>
         </div>
