@@ -12,7 +12,7 @@
     "stage": "react-static build --staging",
     "build": "react-static build",
     "serve": "serve dist -p 3000",
-    "test-eslint": "eslint ./",
+    "test-eslint": "eslint --ignore-path .gitignore ./",
     "test-pa11y": "pa11y-ci --threshold 5000"
   },
   "browserslist": [
