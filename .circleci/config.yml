@@ -43,6 +43,7 @@ jobs:
       # Test build
       - run:
           name: Install Dependencies
+          command: mkdir -p tmp
           command: yarn build
 
       # Serve site
@@ -78,7 +79,7 @@ jobs:
       # Create temp folder for results
       - run:
           name: Create results folder
-          command: mkdir tmp/results
+          command: mkdir -p tmp/results
 
       # Get and store PageSpeed results
       - run:
