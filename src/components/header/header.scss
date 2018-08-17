@@ -106,11 +106,11 @@
 .list {
   flex-direction: column;
   justify-content: space-between;
-  position: absolute;
+  position: fixed;
   top: var(--header-height);
   left: 0;
+  bottom: 0;
   width: 100%;
-  height: calc(100vh - var(--header-height));
   list-style-type: none;
   text-align: center;
   background-color: var(--white);
