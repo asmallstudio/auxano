@@ -30,7 +30,7 @@ class Header extends React.Component {
 
   // Close menu, unless menu ought to be persistent (as on large viewports).
   _menuClose = () => {
-    if (this.state.menuPersistent != true) {
+    if (this.state.menuPersistent !== true) {
       // Ensure menu may be closed.
       this.setState({
         menuHidden: true
@@ -46,8 +46,10 @@ class Header extends React.Component {
 
   _checkMenuPersistence = () => {
     if (window.matchMedia("(min-width: 64em)").matches) {
+      // Keep menu open on wider viewports.
       this.setState({
-        menuPersistent: true
+        menuPersistent: true,
+        screenSize: "wide"
       });
       // Open menu if viewport size is large.
       this._menuOpen();
@@ -55,8 +57,16 @@ class Header extends React.Component {
       this.setState({
         menuPersistent: false
       });
-      // Close menu if viewport size is less than large.
-      this._menuClose();
+
+      // Do not close menu if menu size is already less than large.
+      if (this.state.screenSize === "wide") {
+        this._menuClose();
+
+        // Allow menu toggle on narrower viewports.
+        this.setState({
+          screenSize: "narrow"
+        });
+      }
     }
   };
 
