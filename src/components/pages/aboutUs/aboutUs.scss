@@ -74,7 +74,7 @@
   border-radius: 0.5rem;
 }
 
-@include respond-above(md) {
+@include respond-above(xs) {
   .dingusDot {
     position: absolute;
     left: -2rem;
