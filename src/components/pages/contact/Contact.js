@@ -1,5 +1,6 @@
 import React from "react";
 import { withRouteData, Head, Link } from "react-static";
+import { pageChange } from "../../../lib/utils/pageChange";
 import { getFullPageTitle } from "../../../lib/utils/copy";
 import constants from "../../../lib/constants.json";
 
@@ -77,6 +78,10 @@ class ContactForm extends React.Component {
   };
 
   _handleChange = e => this.setState({ [e.target.name]: e.target.value });
+
+  componentDidMount() {
+    pageChange();
+  }
 
   render() {
     const {
