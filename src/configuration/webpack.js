@@ -58,7 +58,7 @@ const createWebpackConfig = (config, { defaultLoaders, stage }) => {
                         importLoaders: 2,
                         localIdentName: process.env.REACT_STATIC_DEBUG
                           ? "[name]__[local]--[hash:base64:5]"
-                          : undefined
+                          : null
                       }
                     },
                     {

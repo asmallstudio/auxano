@@ -16,7 +16,28 @@ module.exports = {
     "plugin:prettier/recommended"
   ],
   rules: {
-    "react/prop-types": 0
+    "react/prop-types": 0,
+    "block-scoped-var": "warn",
+    "guard-for-in": "error",
+    "new-cap": "warn",
+    "no-alert": "warn",
+    "no-console": "warn",
+    "no-else-return": "warn",
+    "no-multi-str": "error",
+    "no-param-reassign": "error",
+    "no-undefined": "error",
+    "no-template-curly-in-string": "error",
+    "no-var": "warn",
+    "prefer-const": "warn",
+    "prefer-destructuring": "warn",
+    "prefer-spread": "warn",
+    "prefer-template": "warn",
+    "space-infix-ops": [
+      "error",
+      {
+        int32Hint: true
+      }
+    ]
   },
   env: {
     es6: true,
