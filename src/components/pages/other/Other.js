@@ -1,10 +1,15 @@
 import React from "react";
 import { withRouteData, Head } from "react-static";
+import { pageChange } from "../../../lib/utils/pageChange";
 import { getFullPageTitle } from "../../../lib/utils/copy";
 
 class Other extends React.Component {
   constructor(props) {
     super(props);
+  }
+
+  componentDidMount() {
+    pageChange();
   }
 
   render() {

@@ -1,7 +1,8 @@
 import React from "react";
 import { withRouteData } from "react-static";
-import AuxanoCarousel from "./Carousel";
+import { pageChange } from "../../../lib/utils/pageChange";
 
+import AuxanoCarousel from "./Carousel";
 import CallToActionLink from "../../ui/callToActionLink/CallToActionLink";
 import OneThirdColumn from "./OneThirdColumn";
 import styles from "./home.scss";
@@ -9,6 +10,10 @@ import FullWidthSectionActionLink from "../../ui/fullWidthSectionActionLink/Full
 import SubscribeSection from "../../ui/subscribeSection/SubscribeSection";
 
 class Home extends React.Component {
+  componentDidMount() {
+    pageChange();
+  }
+
   render() {
     return (
       <React.Fragment>
