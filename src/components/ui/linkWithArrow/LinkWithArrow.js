@@ -12,9 +12,8 @@ class LinkWithArrow extends React.Component {
           {children}
         </Link>
       );
-    } else {
-      return <span className={`${styles.link} ${className}`}>{children}</span>;
     }
+    return <span className={`${styles.link} ${className}`}>{children}</span>;
   }
 }
 

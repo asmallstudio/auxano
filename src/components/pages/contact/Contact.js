@@ -13,7 +13,7 @@ import SubscribeSection from "../../ui/subscribeSection/SubscribeSection";
 
 const _encode = data => {
   return Object.keys(data)
-    .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+    .map(key => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`)
     .join("&");
 };
 
@@ -69,11 +69,9 @@ class ContactForm extends React.Component {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: _encode({ "form-name": "contact", ...data })
-      })
-        .then(() => {
-          this._clearFormData({ submitted: true });
-        })
-        .catch(error => alert(error));
+      }).then(() => {
+        this._clearFormData({ submitted: true });
+      });
     }
   };
 
