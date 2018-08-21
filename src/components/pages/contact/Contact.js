@@ -69,11 +69,9 @@ class ContactForm extends React.Component {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: _encode({ "form-name": "contact", ...data })
-      })
-        .then(() => {
-          this._clearFormData({ submitted: true });
-        })
-        .catch(error => alert(error));
+      }).then(() => {
+        this._clearFormData({ submitted: true });
+      });
     }
   };
 
