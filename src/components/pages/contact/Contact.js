@@ -13,7 +13,7 @@ import SubscribeSection from "../../ui/subscribeSection/SubscribeSection";
 
 const _encode = data => {
   return Object.keys(data)
-    .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+    .map(key => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`)
     .join("&");
 };
 
