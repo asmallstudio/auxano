@@ -16,7 +16,7 @@ module.exports = {
     "plugin:prettier/recommended"
   ],
   rules: {
-    "react/prop-types": 0,
+    "react/prop-types": "off",
     "block-scoped-var": "warn",
     "guard-for-in": "error",
     "new-cap": "warn",
