@@ -101,13 +101,16 @@ collections:
               - label: "Subtitle"
                 name: subtitle
                 widget: text
-          - label: "Full width image 1"
-            name: fullWidthImage1
+          - label: "Image Divider"
+            name: imageDivider
             widget: object
             fields:
-              - label: Image
-                name: image
+              - label: "Image"
+                name: src
                 widget: image
+              - label: "Image Description"
+                name: alt
+                widget: string
           - label: "Info section 1"
             name: infoSection1
             widget: object
@@ -125,7 +128,7 @@ collections:
                 name: image
                 widget: object
                 fields:
-                  - label: "Image Source"
+                  - label: "Image"
                     name: src
                     widget: image
                   - label: "Image Description"
@@ -254,7 +257,7 @@ collections:
             name: imageDivider
             widget: object
             fields:
-              - label: "Image Source"
+              - label: "Image"
                 name: src
                 widget: image
               - label: "Image Description"

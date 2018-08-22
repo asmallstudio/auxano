@@ -39,12 +39,11 @@ class AboutUs extends React.Component {
           </div>
         </section>
         <section className={`container--fluid`}>
-          <div
-            className={`row ${styles.fullWidthImage1Row}`}
-            style={{ backgroundImage: `url(${aboutUs.imageDivider.image})` }}
-          >
-            <p className="sr-text">{aboutUs.imageDivider.description}</p>
-          </div>
+          <img
+            className={`row ${styles.imageDivider}`}
+            src={aboutUs.imageDivider.src}
+            alt={aboutUs.imageDivider.alt}
+          />
         </section>
         <section className="container">
           <div className={`row ${styles.infoSection1Row}`}>
