@@ -259,6 +259,13 @@ class Contact extends React.Component {
             </div>
           </div>
         </div>
+        <div className="container--fluid">
+          <img
+            className={styles.imageDivider}
+            src={contact.imageDivider.src}
+            alt={contact.imageDivider.alt}
+          />
+        </div>
         <SubscribeSection
           heading={contact.subscribe.heading}
           text={contact.subscribe.text}
