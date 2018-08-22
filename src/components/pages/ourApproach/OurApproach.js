@@ -38,19 +38,31 @@ class OurApproach extends React.Component {
           className={`container--fluid ${styles.dingusDotOverflowContainer}`}
         >
           <section className="container">
-            <InfoSectionRow>
+            <InfoSectionRow
+              imgSrc={ourApproach.items.item1.image.src}
+              imgAlt={ourApproach.items.item1.image.alt}
+            >
               <h2>{ourApproach.items.item1.heading}</h2>
               <p>{ourApproach.items.item1.body}</p>
             </InfoSectionRow>
-            <InfoSectionRow>
+            <InfoSectionRow
+              imgSrc={ourApproach.items.item2.image.src}
+              imgAlt={ourApproach.items.item2.image.alt}
+            >
               <h2>{ourApproach.items.item2.heading}</h2>
               <p>{ourApproach.items.item2.body}</p>
             </InfoSectionRow>
-            <InfoSectionRow>
+            <InfoSectionRow
+              imgSrc={ourApproach.items.item3.image.src}
+              imgAlt={ourApproach.items.item3.image.alt}
+            >
               <h2>{ourApproach.items.item3.heading}</h2>
               <p>{ourApproach.items.item3.body}</p>
             </InfoSectionRow>
-            <InfoSectionRow>
+            <InfoSectionRow
+              imgSrc={ourApproach.items.item4.image.src}
+              imgAlt={ourApproach.items.item4.image.alt}
+            >
               <h2>{ourApproach.items.item4.heading}</h2>
               <p>{ourApproach.items.item4.body}</p>
             </InfoSectionRow>

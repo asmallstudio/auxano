@@ -182,6 +182,16 @@ collections:
                   - label: "Item Heading"
                     name: body
                     widget: text
+                  - label: "Item Image"
+                    name: image
+                    widget: object
+                    fields:
+                      - label: "Image"
+                        name: src
+                        widget: image
+                      - label: "Image Description"
+                        name: alt
+                        widget: string
               - label: "Item 2"
                 name: item2
                 widget: object
@@ -192,6 +202,16 @@ collections:
                   - label: "Item Heading"
                     name: body
                     widget: text
+                  - label: "Item Image"
+                    name: image
+                    widget: object
+                    fields:
+                      - label: "Image"
+                        name: src
+                        widget: image
+                      - label: "Image Description"
+                        name: alt
+                        widget: string
               - label: "Item 3"
                 name: item3
                 widget: object
@@ -202,6 +222,16 @@ collections:
                   - label: "Item Heading"
                     name: body
                     widget: text
+                  - label: "Item Image"
+                    name: image
+                    widget: object
+                    fields:
+                      - label: "Image"
+                        name: src
+                        widget: image
+                      - label: "Image Description"
+                        name: alt
+                        widget: string
               - label: "Item 4"
                 name: item4
                 widget: object
@@ -212,6 +242,16 @@ collections:
                   - label: "Item Heading"
                     name: body
                     widget: text
+                  - label: "Item Image"
+                    name: image
+                    widget: object
+                    fields:
+                      - label: "Image"
+                        name: src
+                        widget: image
+                      - label: "Image Description"
+                        name: alt
+                        widget: string
           - label: "Action Banner"
             name: actionBanner
             widget: object
