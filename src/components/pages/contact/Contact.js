@@ -93,6 +93,7 @@ class ContactForm extends React.Component {
     } = this.state;
     return !submitted ? (
       <form
+        name="contact"
         data-netlify="true"
         data-netlify-honeypot="bdaySurprise"
         onSubmit={this._handleSubmit}
