@@ -1,16 +1,23 @@
-pageTitle: 'About Us'
+pageTitle: "About Us"
 hero:
-  title: 'Who We Are'
-  subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing, sed do eiusmod tempor ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostru.'
-fullWidthImage1:
-  image: /uploads/test.jpg
+  title: "Who We Are"
+  subtitle:
+    "Lorem ipsum dolor sit amet, consectetur adipiscing, sed do eiusmod tempor ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostru."
+  image: "https://via.placeholder.com/900x750"
+imageDivider:
+  image: "https://via.placeholder.com/1000x800"
+  description: "what is important about this image? what does it communicate?"
 infoSection1:
-  heading: 'Community ipsum dolor sit'
-  text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.'
-  link: '#'
+  heading: "Community ipsum dolor sit"
+  text:
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip."
+  link: "#"
+  image:
+    src: "https://via.placeholder.com/300x180"
+    alt: "what is important about this image? what does it communicate?"
 actionBanner:
-  text: 'Meet our team'
-  link: '#'
+  text: "Meet our team"
+  link: "#"
 subscribe:
-  heading: 'Keep updated with our latest content and events.'
-  text: 'Subscribe to our monthly newsletter.'
+  heading: "Keep updated with our latest content and events."
+  text: "Subscribe to our monthly newsletter."

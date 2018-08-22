@@ -25,7 +25,10 @@ class AboutUs extends React.Component {
         <Head>
           <title>{getFullPageTitle(aboutUs.pageTitle)}</title>
         </Head>
-        <section className={`container--fluid ${styles.heroContainer}`}>
+        <section
+          className={`container--fluid ${styles.heroContainer}`}
+          style={{ backgroundImage: `url(${aboutUs.hero.image})` }}
+        >
           <div className={`container`}>
             <div className="row">
               <div className={`col-xs-12 col-md-6 ${styles.heroTextContainer}`}>
@@ -36,7 +39,12 @@ class AboutUs extends React.Component {
           </div>
         </section>
         <section className={`container--fluid`}>
-          <div className={`row ${styles.fullWidthImage1Row}`} />
+          <div
+            className={`row ${styles.fullWidthImage1Row}`}
+            style={{ backgroundImage: `url(${aboutUs.imageDivider.image})` }}
+          >
+            <p className="sr-text">{aboutUs.imageDivider.description}</p>
+          </div>
         </section>
         <section className="container">
           <div className={`row ${styles.infoSection1Row}`}>
@@ -54,7 +62,8 @@ class AboutUs extends React.Component {
             <div className={`col-xs-12 col-lg-6 ${styles.infoSectionColImage}`}>
               <img
                 className={styles.infoSectionImage}
-                src="https://via.placeholder.com/300x180"
+                src={aboutUs.infoSection1.image.src}
+                alt={aboutUs.infoSection1.image.alt}
               />
               <div className={styles.dingusDot} />
             </div>

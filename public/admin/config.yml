@@ -121,6 +121,16 @@ collections:
               - label: "Link"
                 name: link
                 widget: string
+              - label: "Image"
+                name: image
+                widget: object
+                fields:
+                  - label: "Image Source"
+                    name: src
+                    widget: image
+                  - label: "Image Description"
+                    name: alt
+                    widget: string
           - label: "Action Banner"
             name: actionBanner
             widget: object
@@ -244,7 +254,7 @@ collections:
             name: imageDivider
             widget: object
             fields:
-              - label: "Image"
+              - label: "Image Source"
                 name: src
                 widget: image
               - label: "Image Description"

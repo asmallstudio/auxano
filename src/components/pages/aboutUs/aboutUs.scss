@@ -5,7 +5,7 @@
 
   @include respond-above(md) {
     padding: 9.75em 0;
-    background: url("https://via.placeholder.com/900x750") no-repeat center;
+    background-repeat: no-repeat;
     background-position-x: right;
     background-size: 50% auto;
   }
@@ -29,8 +29,9 @@
 }
 
 .fullWidthImage1Row {
-  background-image: url("https://via.placeholder.com/1000x800");
+  background-color: var(--grey-40);
   background-size: cover;
+  background-repeat: no-repeat;
   background-position: center;
   height: calc(50vw);
   min-height: 10em;
