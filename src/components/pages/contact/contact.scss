@@ -47,6 +47,10 @@
 .errorText,
 .successText {
   margin-top: var(--space-l3);
+
+  a {
+    color: var(--gigas);
+  }
 }
 
 .submitButtonWrapper {
