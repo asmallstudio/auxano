@@ -144,20 +144,10 @@ class Header extends React.Component {
                   Contact
                 </Link>
               </li>
-              <li className="style-as-h3">
-                <Link
-                  to="/other"
-                  activeClassName={styles.activeLink}
-                  onClick={this._menuClose}
-                  exact
-                >
-                  Other Page
-                </Link>
-              </li>
               <FullWidthSectionActionLink
                 className={styles.bottomMenuLink}
                 linkText="Schedule a meeting"
-                to="#"
+                to="/contact"
               />
             </ul>
           </nav>
