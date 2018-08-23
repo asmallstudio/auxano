@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-static";
-import BackToTopIcon from "../../../public/assets/back-to-top";
+import BackToTopIcon from "./BackToTopIcon";
 
 import styles from "./footer.scss";
 
@@ -63,15 +63,5 @@ class Footer extends React.Component {
     );
   }
 }
-
-// const BackToTopIcon = () => (
-//   <img
-//     className={styles.backToTopIcon}
-//     src="/assets/back-to-top.svg"
-//     width="45"
-//     height="15"
-//     alt="back-to-top-icon"
-//   />
-// );
 
 export default Footer;
