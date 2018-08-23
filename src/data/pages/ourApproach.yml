@@ -1,22 +1,43 @@
-pageTitle: 'Our Approach'
+pageTitle: "Our Approach"
 hero:
-  title: 'Lorem ipsum dolor sit amet consectetur adipiscing sed do eiusmod tempor.'
+  title:
+    "Lorem ipsum dolor sit amet consectetur adipiscing sed do eiusmod tempor."
 items:
   item1:
-    heading: 'Ipsum dolor sit bulir'
-    body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.'
+    heading: "Ipsum dolor sit bulir"
+    body:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna."
+    image:
+      src: "https://via.placeholder.com/300x180"
+      alt:
+        "leave empty if this image does not enhance the meaning of the section"
   item2:
-    heading: 'Ipsum dolor sit bulir'
-    body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.'
+    heading: "Ipsum dolor sit bulir"
+    body:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna."
+    image:
+      src: "https://via.placeholder.com/300x180"
+      alt:
+        "leave empty if this image does not enhance the meaning of the section"
   item3:
-    heading: 'Ipsum dolor sit bulir'
-    body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.'
+    heading: "Ipsum dolor sit bulir"
+    body:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna."
+    image:
+      src: "https://via.placeholder.com/300x180"
+      alt:
+        "leave empty if this image does not enhance the meaning of the section"
   item4:
-    heading: 'Ipsum dolor sit bulir'
-    body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.'
+    heading: "Ipsum dolor sit bulir"
+    body:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna."
+    image:
+      src: "https://via.placeholder.com/300x180"
+      alt:
+        "leave empty if this image does not enhance the meaning of the section"
 actionBanner:
-  text: 'Contact Us'
-  link: '#'
+  text: "Contact Us"
+  link: "#"
 subscribe:
-  heading: 'Keep updated with our latest content and events.'
-  text: 'Subscribe to our monthly newsletter.'
+  heading: "Keep updated with our latest content and events."
+  text: "Subscribe to our monthly newsletter."

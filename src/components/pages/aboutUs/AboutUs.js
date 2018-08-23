@@ -1,5 +1,6 @@
 import React from "react";
 import { withRouteData, Head } from "react-static";
+import { pageChange } from "../../../lib/utils/pageChange";
 import { getFullPageTitle } from "../../../lib/utils/copy";
 
 import styles from "./aboutUs.scss";
@@ -12,6 +13,10 @@ class AboutUs extends React.Component {
     super(props);
   }
 
+  componentDidMount() {
+    pageChange();
+  }
+
   render() {
     const { aboutUs } = this.props;
 
@@ -20,7 +25,10 @@ class AboutUs extends React.Component {
         <Head>
           <title>{getFullPageTitle(aboutUs.pageTitle)}</title>
         </Head>
-        <section className={`container--fluid ${styles.heroContainer}`}>
+        <section
+          className={`container--fluid ${styles.heroContainer}`}
+          style={{ backgroundImage: `url(${aboutUs.hero.image})` }}
+        >
           <div className={`container`}>
             <div className="row">
               <div className={`col-xs-12 col-md-6 ${styles.heroTextContainer}`}>
@@ -31,7 +39,11 @@ class AboutUs extends React.Component {
           </div>
         </section>
         <section className={`container--fluid`}>
-          <div className={`row ${styles.fullWidthImage1Row}`} />
+          <img
+            className={`row ${styles.imageDivider}`}
+            src={aboutUs.imageDivider.src}
+            alt={aboutUs.imageDivider.alt}
+          />
         </section>
         <section className="container">
           <div className={`row ${styles.infoSection1Row}`}>
@@ -49,7 +61,8 @@ class AboutUs extends React.Component {
             <div className={`col-xs-12 col-lg-6 ${styles.infoSectionColImage}`}>
               <img
                 className={styles.infoSectionImage}
-                src="https://via.placeholder.com/300x180"
+                src={aboutUs.infoSection1.image.src}
+                alt={aboutUs.infoSection1.image.alt}
               />
               <div className={styles.dingusDot} />
             </div>

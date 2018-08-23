@@ -3,9 +3,13 @@
 .heroContainer {
   padding: 6em 0;
 
+  @include respond-below(md) {
+    background-image: none !important;
+  }
+
   @include respond-above(md) {
     padding: 9.75em 0;
-    background: url("https://via.placeholder.com/900x750") no-repeat center;
+    background-repeat: no-repeat;
     background-position-x: right;
     background-size: 50% auto;
   }
@@ -28,14 +32,15 @@
   }
 }
 
-.fullWidthImage1Row {
-  background-image: url("https://via.placeholder.com/1000x800");
-  background-size: cover;
-  background-position: center;
-  height: calc(50vw);
-  min-height: 10em;
-  max-height: 40em;
+.imageDivider {
   margin-bottom: var(--space-l5);
+
+  @supports (object-fit: cover) {
+    object-fit: cover;
+    height: calc(50vw);
+    min-height: 10em;
+    max-height: 40em;
+  }
 }
 
 .infoSection1ColText {
