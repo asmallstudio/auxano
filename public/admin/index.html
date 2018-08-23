@@ -22,6 +22,21 @@
         }
       });
     }
+
+    const PagePreview = (filename) => createClass({
+      render: function () {
+        return h('div', {},
+          h('img', {
+            src: `/admin/guides/${filename}.jpg`, style: { width: "100%" }, alt: "Visual documentation guide"
+          })
+        );
+      }
+    });
+
+    CMS.registerPreviewTemplate("home", PagePreview("home"));
+    CMS.registerPreviewTemplate("aboutUs", PagePreview("aboutUs"));
+    CMS.registerPreviewTemplate("contact", PagePreview("contact"));
+    CMS.registerPreviewTemplate("ourApproach", PagePreview("ourApproach"));
   </script>
 </body>
 
