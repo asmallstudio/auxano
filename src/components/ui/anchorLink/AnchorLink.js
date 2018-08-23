@@ -19,7 +19,7 @@ class AnchorLink extends Component {
         this.props.offset.constructor &&
         this.props.offset.apply
       ) {
-        offset = this.props.offset;
+        ({ offset } = this.props);
       } else {
         offset = () => parseInt(this.props.offset);
       }

@@ -1,8 +1,11 @@
-pageTitle: 'Contact'
+pageTitle: "Contact"
 form:
-  title: 'General Inquiries'
+  title: "General Inquiries"
 info:
-  title: 'Contact Information'
+  title: "Contact Information"
+imageDivider:
+  src: "https://via.placeholder.com/1000x800"
+  alt: "what is important about this image? what does it communicate?"
 subscribe:
-  heading: 'Keep updated with our latest content and events.'
-  text: 'Subscribe to our monthly newsletter.'
+  heading: "Keep updated with our latest content and events."
+  text: "Subscribe to our monthly newsletter."
