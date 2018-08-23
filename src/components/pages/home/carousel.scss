@@ -13,7 +13,7 @@
   }
 }
 
-.quoteAuthorImg {
+.itemImg {
   height: 4rem;
   width: 4rem;
   background-color: var(--grey-40);
@@ -21,7 +21,7 @@
   margin: 0 auto var(--space-l3);
 }
 
-.quoteText {
+.itemText {
   max-width: 95%;
   margin: 0 auto;
 
@@ -30,7 +30,7 @@
   }
 }
 
-.quoteAuthor {
+.itemSubtext {
   font-size: 0.8em;
   color: var(--grey);
   margin-top: var(--space-l3);

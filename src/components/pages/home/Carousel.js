@@ -3,35 +3,8 @@ import { Carousel } from "react-responsive-carousel";
 import styles from "./carousel.scss";
 
 class AuxanoCarousel extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      quotes: [
-        {
-          name: "John Smith",
-          text:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna."
-        },
-        {
-          name: "Jane Smith",
-          text:
-            "Incididunt test adipisicing helvetica normcore selfies dolor hell of farm - to - table pitchfork.Woke direct trade helvetica, whatever keffiyeh adaptogen small batch gastropub."
-        },
-        {
-          name: "Scott Smith",
-          text:
-            "Food truck minim microdosing man braid meditation vice vinyl master cleanse leggings voluptate schlitz."
-        },
-        {
-          name: "Andrew Garcia",
-          text:
-            " Squid readymade ea paleo, voluptate truffaut post-ironic dolor meh gentrify in cray."
-        }
-      ]
-    };
-  }
-
   render() {
+    const { items } = this.props;
     return (
       <div>
         <Carousel
@@ -45,11 +18,11 @@ class AuxanoCarousel extends React.Component {
           dynamicHeight
           emulateTouch
         >
-          {this.state.quotes.map(quote => (
-            <div className={styles.carouselSlide} key={quote.name}>
-              <div className={styles.quoteAuthorImg} />
-              <p className={`${styles.quoteText} style-as-h3`}>{quote.text}</p>
-              <div className={styles.quoteAuthor}>{quote.name}</div>
+          {items.map((item, i) => (
+            <div className={styles.carouselSlide} key={i}>
+              <div className={styles.itemImg} />
+              <p className={`${styles.itemText} style-as-h3`}>{item.text}</p>
+              <div className={styles.itemSubtext}>{item.subtext}</div>
             </div>
           ))}
         </Carousel>
