@@ -25,8 +25,12 @@ collections:
                 name: link
                 widget: string
           - label: Pullquote
-            name: text
-            widget: text
+            name: pullquote
+            widget: object
+            fields:
+              - label: "Text"
+                name: text
+                widget: text
           - label: "Three Columns"
             name: threecol
             widget: object
