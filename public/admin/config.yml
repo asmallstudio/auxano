@@ -4,340 +4,326 @@ backend:
 media_folder: public/uploads
 public_folder: /uploads
 collections:
-  -
-    label: Pages
+  - label: Pages
     name: pages
     files:
-      -
-        label: 'Home Page'
+      - label: "Home Page"
         name: home
         file: src/data/pages/home.yml
         fields:
-          -
-            label: Hero
+          - label: Hero
             name: hero
             widget: object
             fields:
-              -
-                label: Title
+              - label: Title
                 name: title
                 widget: string
-              -
-                label: 'Subtitle'
+              - label: "Subtitle"
                 name: subtitle
                 widget: text
-              -
-                label: 'Call to Action Link'
+              - label: "Call to Action Link"
                 name: link
                 widget: string
-          -
-            label: Pullquote
+          - label: Pullquote
             name: text
             widget: text
-          -
-            label: 'Three Columns'
+          - label: "Three Columns"
             name: threecol
             widget: object
             fields:
-              -
-                label: 'Item 1'
+              - label: "Item 1"
                 name: col1
                 widget: object
                 fields:
-                  -
-                    label: 'Heading'
+                  - label: "Heading"
                     name: heading
                     widget: string
-                  -
-                    label: 'Content'
+                  - label: "Content"
                     name: text
                     widget: text
-                  -
-                    label: 'Link'
+                  - label: "Link"
                     name: link
                     widget: string
-              -
-                label: 'Item 2'
+              - label: "Item 2"
                 name: col2
                 widget: object
                 fields:
-                  -
-                    label: 'Heading'
+                  - label: "Heading"
                     name: heading
                     widget: string
-                  -
-                    label: 'Content'
+                  - label: "Content"
                     name: text
                     widget: text
-                  -
-                    label: 'Link'
+                  - label: "Link"
                     name: link
                     widget: string
-              -
-                label: 'Item 3'
+              - label: "Item 3"
                 name: col3
                 widget: object
                 fields:
-                  -
-                    label: 'Heading'
+                  - label: "Heading"
                     name: heading
                     widget: string
-                  -
-                    label: 'Content'
+                  - label: "Content"
                     name: text
                     widget: text
-                  -
-                    label: 'Link'
+                  - label: "Link"
                     name: link
                     widget: string
-          -
-            label: 'Learn More'
+          - label: "Learn More"
             name: learnMore
             widget: object
             fields:
-              -
-                label: 'Link'
+              - label: "Link"
                 name: link
                 widget: string
-          -
-            label: 'Subscribe'
+          - label: "Subscribe"
             name: subscribe
             widget: object
             fields:
-              -
-                label: 'Heading'
+              - label: "Heading"
                 name: heading
                 widget: string
-              -
-                label: 'Subheading'
+              - label: "Subheading"
                 name: text
                 widget: text
-      -
-        label: 'About Us'
+      - label: "About Us"
         name: aboutUs
         file: src/data/pages/aboutUs.yml
         fields:
-          -
-            label: Hero
+          - label: Hero
             name: hero
             widget: object
             fields:
-              -
-                label: Title
+              - label: Title
                 name: title
                 widget: string
-              -
-                label: 'Subtitle'
+              - label: "Subtitle"
                 name: subtitle
                 widget: text
-          -
-            label: "Full width image 1"
-            name: fullWidthImage1
+          - label: "Image Divider"
+            name: imageDivider
             widget: object
             fields:
-              -
-                label: Image
-                name: image
+              - label: "Image"
+                name: src
                 widget: image
-          -
-            label: "Info section 1"
+              - label: "Image Description"
+                name: alt
+                widget: string
+          - label: "Info section 1"
             name: infoSection1
             widget: object
             fields:
-              -
-                label: 'Heading'
+              - label: "Heading"
                 name: heading
                 widget: string
-              -
-                label: 'Content'
+              - label: "Content"
                 name: text
                 widget: text
-              -
-                label: 'Link'
+              - label: "Link"
                 name: link
                 widget: string
-          -
-            label: 'Action Banner'
+              - label: "Image"
+                name: image
+                widget: object
+                fields:
+                  - label: "Image"
+                    name: src
+                    widget: image
+                  - label: "Image Description"
+                    name: alt
+                    widget: string
+          - label: "Action Banner"
             name: actionBanner
             widget: object
             fields:
-              -
-                label: 'Text'
+              - label: "Text"
                 name: text
                 widget: string
-              -
-                label: 'Link'
+              - label: "Link"
                 name: link
                 widget: string
-          -
-            label: 'Subscribe'
+          - label: "Subscribe"
             name: subscribe
             widget: object
             fields:
-              -
-                label: 'Heading'
+              - label: "Heading"
                 name: heading
                 widget: string
-              -
-                label: 'Subheading'
+              - label: "Subheading"
                 name: text
                 widget: text
-      -
-        label: 'Our Approach'
+      - label: "Our Approach"
         name: ourApproach
         file: src/data/pages/ourApproach.yml
         fields:
-          -
-            label: 'Page Title'
+          - label: "Page Title"
             name: pageTitle
             widget: string
-          -
-            label: Hero
+          - label: Hero
             name: hero
             widget: object
             fields:
-              -
-                label: Title
+              - label: Title
                 name: title
                 widget: string
-          -
-            label: 'Items'
+          - label: "Items"
             name: items
             widget: object
             fields:
-              -
-                label: 'Item 1'
+              - label: "Item 1"
                 name: item1
                 widget: object
                 fields:
-                  -
-                    label: 'Item Heading'
+                  - label: "Item Heading"
                     name: heading
                     widget: string
-                  -
-                    label: 'Item Heading'
+                  - label: "Item Heading"
                     name: body
                     widget: text
-              -
-                label: 'Item 2'
+                  - label: "Item Image"
+                    name: image
+                    widget: object
+                    fields:
+                      - label: "Image"
+                        name: src
+                        widget: image
+                      - label: "Image Description"
+                        name: alt
+                        widget: string
+              - label: "Item 2"
                 name: item2
                 widget: object
                 fields:
-                  -
-                    label: 'Item Heading'
+                  - label: "Item Heading"
                     name: heading
                     widget: string
-                  -
-                    label: 'Item Heading'
+                  - label: "Item Heading"
                     name: body
                     widget: text
-              -
-                label: 'Item 3'
+                  - label: "Item Image"
+                    name: image
+                    widget: object
+                    fields:
+                      - label: "Image"
+                        name: src
+                        widget: image
+                      - label: "Image Description"
+                        name: alt
+                        widget: string
+              - label: "Item 3"
                 name: item3
                 widget: object
                 fields:
-                  -
-                    label: 'Item Heading'
+                  - label: "Item Heading"
                     name: heading
                     widget: string
-                  -
-                    label: 'Item Heading'
+                  - label: "Item Heading"
                     name: body
                     widget: text
-              -
-                label: 'Item 4'
+                  - label: "Item Image"
+                    name: image
+                    widget: object
+                    fields:
+                      - label: "Image"
+                        name: src
+                        widget: image
+                      - label: "Image Description"
+                        name: alt
+                        widget: string
+              - label: "Item 4"
                 name: item4
                 widget: object
                 fields:
-                  -
-                    label: 'Item Heading'
+                  - label: "Item Heading"
                     name: heading
                     widget: string
-                  -
-                    label: 'Item Heading'
+                  - label: "Item Heading"
                     name: body
                     widget: text
-          -
-            label: 'Action Banner'
+                  - label: "Item Image"
+                    name: image
+                    widget: object
+                    fields:
+                      - label: "Image"
+                        name: src
+                        widget: image
+                      - label: "Image Description"
+                        name: alt
+                        widget: string
+          - label: "Action Banner"
             name: actionBanner
             widget: object
             fields:
-              -
-                label: 'Text'
+              - label: "Text"
                 name: text
                 widget: string
-              -
-                label: 'Link'
+              - label: "Link"
                 name: link
                 widget: string
-          -
-            label: 'Subscribe'
+          - label: "Subscribe"
             name: subscribe
             widget: object
             fields:
-              -
-                label: 'Heading'
+              - label: "Heading"
                 name: heading
                 widget: string
-              -
-                label: 'Subheading'
+              - label: "Subheading"
                 name: text
                 widget: text
-      -
-        label: 'Contact'
+      - label: "Contact"
         name: contact
         file: src/data/pages/contact.yml
         fields:
-          -
-            label: 'Page Title'
+          - label: "Page Title"
             name: pageTitle
             widget: string
-          -
-            label: 'Contact Form'
+          - label: "Contact Form"
             name: form
             widget: object
             fields:
-              -
-                label: Title
+              - label: Title
                 name: title
                 widget: string
-          -
-            label: 'Contact Information'
+          - label: "Contact Information"
             name: info
             widget: object
             fields:
-              -
-                label: Title
+              - label: Title
                 name: title
                 widget: string
-          -
-            label: 'Subscribe'
+          - label: "Image Divider"
+            name: imageDivider
+            widget: object
+            fields:
+              - label: "Image"
+                name: src
+                widget: image
+              - label: "Image Description"
+                name: alt
+                widget: string
+          - label: "Subscribe"
             name: subscribe
             widget: object
             fields:
-              -
-                label: 'Heading'
+              - label: "Heading"
                 name: heading
                 widget: string
-              -
-                label: 'Subheading'
+              - label: "Subheading"
                 name: text
                 widget: text
-      -
-        label: 'Other Page'
+      - label: "Other Page"
         name: other
         file: src/data/pages/other.yml
         fields:
-          -
-            label: 'Page Title'
+          - label: "Page Title"
             name: pageTitle
             widget: string
-          -
-            label: 'Title Other'
+          - label: "Title Other"
             name: title
             widget: string
-          -
-            label: 'Text Other'
+          - label: "Text Other"
             name: exampleText
             widget: text
   - label: "Blog"
@@ -345,7 +331,7 @@ collections:
     folder: "src/data/blog"
     create: true
     fields:
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Featured Image", name: "thumbnail", widget: "image"}
-      - {label: "Body", name: "body", widget: "markdown"}
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Featured Image", name: "thumbnail", widget: "image" }
+      - { label: "Body", name: "body", widget: "markdown" }

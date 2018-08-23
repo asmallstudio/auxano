@@ -47,6 +47,10 @@
 .errorText,
 .successText {
   margin-top: var(--space-l3);
+
+  a {
+    color: var(--gigas);
+  }
 }
 
 .submitButtonWrapper {
@@ -120,4 +124,14 @@
   width: 10rem;
   background-color: var(--fountain-blue);
   border-radius: 50%;
+}
+
+.imageDivider {
+  width: 100%;
+  margin-top: var(--space-l5);
+
+  @supports (object-fit: cover) {
+    object-fit: cover;
+    max-height: 75vh;
+  }
 }
