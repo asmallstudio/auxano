@@ -1,5 +1,6 @@
 import React from "react";
 import { withRouteData, Head, Link } from "react-static";
+import { pageChange } from "../../../lib/utils/pageChange";
 import { getFullPageTitle } from "../../../lib/utils/copy";
 import constants from "../../../lib/constants.json";
 
@@ -12,7 +13,7 @@ import SubscribeSection from "../../ui/subscribeSection/SubscribeSection";
 
 const _encode = data => {
   return Object.keys(data)
-    .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+    .map(key => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`)
     .join("&");
 };
 
@@ -26,6 +27,7 @@ class ContactForm extends React.Component {
       body: "",
       bdaySurprise: "",
       errors: false,
+      submitError: false,
       submitted: false
     };
   }
@@ -37,6 +39,7 @@ class ContactForm extends React.Component {
       subject: "",
       body: "",
       bdaySurprise: "",
+      submitError: false,
       submitted
     });
   };
@@ -72,11 +75,17 @@ class ContactForm extends React.Component {
         .then(() => {
           this._clearFormData({ submitted: true });
         })
-        .catch(error => alert(error));
+        .catch(() => {
+          this.setState({ submitError: true });
+        });
     }
   };
 
   _handleChange = e => this.setState({ [e.target.name]: e.target.value });
+
+  componentDidMount() {
+    pageChange();
+  }
 
   render() {
     const {
@@ -85,78 +94,92 @@ class ContactForm extends React.Component {
       subject,
       body,
       bdaySurprise,
+      submitError,
       submitted,
       errors
     } = this.state;
-    return !submitted ? (
-      <form
-        data-netlify="true"
-        data-netlify-honeypot="bdaySurprise"
-        onSubmit={this._handleSubmit}
-        {...this.props}
-      >
-        <DefaultInput
-          name="bdaySurprise"
-          value={bdaySurprise}
-          className="sr-text"
-          autoComplete="off"
-          onChange={this._handleChange}
-        />
-        <label htmlFor="name-input">Name</label>
-        <DefaultInput
-          name="name"
-          value={name}
-          id="name-input"
-          placeholder="Alex Garcia"
-          type="text"
-          autoComplete="name"
-          required
-          className={styles.input}
-          onChange={this._handleChange}
-        />
-        <label htmlFor="email-input">Email</label>
-        <DefaultInput
-          name="email"
-          value={email}
-          id="email-input"
-          placeholder="alex@example.com"
-          type="email"
-          autoComplete="email"
-          required
-          className={styles.input}
-          onChange={this._handleChange}
-        />
-        <label htmlFor="subject-input">Subject</label>
-        <DefaultInput
-          name="subject"
-          value={subject}
-          id="subject-input"
-          type="text"
-          className={styles.input}
-          onChange={this._handleChange}
-        />
-        <label htmlFor="body-input">Your Message</label>
-        <DefaultTextArea
-          name="body"
-          value={body}
-          id="body-input"
-          required
-          className={styles.input}
-          onChange={this._handleChange}
-        />
-        <div className={styles.submitButtonWrapper}>
-          <PrimaryButton>Send</PrimaryButton>
-        </div>
 
-        {errors && (
-          <p className={`${styles.errorText}`}>
-            Please check you have filled out the form correctly.
-          </p>
-        )}
-      </form>
-    ) : (
-      <p className={`${styles.successText}`}>
-        Success! We have received your message and will get back to you shortly.
+    if (!submitted && !submitError) {
+      return (
+        <form
+          name="contact"
+          data-netlify="true"
+          data-netlify-honeypot="bdaySurprise"
+          onSubmit={this._handleSubmit}
+          {...this.props}
+        >
+          <DefaultInput
+            name="bdaySurprise"
+            value={bdaySurprise}
+            className="sr-text"
+            autoComplete="off"
+            onChange={this._handleChange}
+          />
+          <label htmlFor="name-input">Name</label>
+          <DefaultInput
+            name="name"
+            value={name}
+            id="name-input"
+            placeholder="Alex Garcia"
+            type="text"
+            autoComplete="name"
+            required
+            className={styles.input}
+            onChange={this._handleChange}
+          />
+          <label htmlFor="email-input">Email</label>
+          <DefaultInput
+            name="email"
+            value={email}
+            id="email-input"
+            placeholder="alex@example.com"
+            type="email"
+            autoComplete="email"
+            required
+            className={styles.input}
+            onChange={this._handleChange}
+          />
+          <label htmlFor="subject-input">Subject</label>
+          <DefaultInput
+            name="subject"
+            value={subject}
+            id="subject-input"
+            type="text"
+            className={styles.input}
+            onChange={this._handleChange}
+          />
+          <label htmlFor="body-input">Your Message</label>
+          <DefaultTextArea
+            name="body"
+            value={body}
+            id="body-input"
+            required
+            className={styles.input}
+            onChange={this._handleChange}
+          />
+          <div className={styles.submitButtonWrapper}>
+            <PrimaryButton>Send</PrimaryButton>
+          </div>
+
+          {errors && (
+            <p className={`${styles.errorText}`}>
+              Please check you have filled out the form correctly.
+            </p>
+          )}
+        </form>
+      );
+    } else if (submitted && !submitError) {
+      return (
+        <p className={`${styles.successText}`}>
+          Success! We have received your message and will get back to you
+          shortly.
+        </p>
+      );
+    }
+    return (
+      <p className={`${styles.errorText}`}>
+        Sorry, the form did not submit correctly. Please email us instead at{" "}
+        <a href="mailto:info@auxanoadvisors.com">info@auxanoadvisors.com</a>.
       </p>
     );
   }
@@ -255,6 +278,13 @@ class Contact extends React.Component {
               <div className={styles.dingusDot} />
             </div>
           </div>
+        </div>
+        <div className="container--fluid">
+          <img
+            className={styles.imageDivider}
+            src={contact.imageDivider.src}
+            alt={contact.imageDivider.alt}
+          />
         </div>
         <SubscribeSection
           heading={contact.subscribe.heading}

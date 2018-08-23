@@ -25,6 +25,8 @@
   "black": "#242424",
   "black-40": "rgba(36, 36, 36, 0.4)",
   "black-10": "rgba(36, 36, 36, 0.1)",
+  "dark-purple": "#362a73",
+  "dark-blue": "#3d9898",
 
   "header-height": "6rem",
 

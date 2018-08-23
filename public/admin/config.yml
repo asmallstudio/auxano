@@ -29,7 +29,7 @@ collections:
             name: pullquote
             widget: object
             fields:
-              - label: Text
+              - label: "Text"
                 name: text
                 widget: text
           - label: "Three Columns"
@@ -107,13 +107,16 @@ collections:
               - label: "Subtitle"
                 name: subtitle
                 widget: text
-          - label: "Full width image 1"
-            name: fullWidthImage1
+          - label: "Image Divider"
+            name: imageDivider
             widget: object
             fields:
-              - label: Image
-                name: image
+              - label: "Image"
+                name: src
                 widget: image
+              - label: "Image Description"
+                name: alt
+                widget: string
           - label: "Info section 1"
             name: infoSection1
             widget: object
@@ -127,6 +130,16 @@ collections:
               - label: "Link"
                 name: link
                 widget: string
+              - label: "Image"
+                name: image
+                widget: object
+                fields:
+                  - label: "Image"
+                    name: src
+                    widget: image
+                  - label: "Image Description"
+                    name: alt
+                    widget: string
           - label: "Action Banner"
             name: actionBanner
             widget: object
@@ -175,6 +188,16 @@ collections:
                   - label: "Item Heading"
                     name: body
                     widget: text
+                  - label: "Item Image"
+                    name: image
+                    widget: object
+                    fields:
+                      - label: "Image"
+                        name: src
+                        widget: image
+                      - label: "Image Description"
+                        name: alt
+                        widget: string
               - label: "Item 2"
                 name: item2
                 widget: object
@@ -185,6 +208,16 @@ collections:
                   - label: "Item Heading"
                     name: body
                     widget: text
+                  - label: "Item Image"
+                    name: image
+                    widget: object
+                    fields:
+                      - label: "Image"
+                        name: src
+                        widget: image
+                      - label: "Image Description"
+                        name: alt
+                        widget: string
               - label: "Item 3"
                 name: item3
                 widget: object
@@ -195,6 +228,16 @@ collections:
                   - label: "Item Heading"
                     name: body
                     widget: text
+                  - label: "Item Image"
+                    name: image
+                    widget: object
+                    fields:
+                      - label: "Image"
+                        name: src
+                        widget: image
+                      - label: "Image Description"
+                        name: alt
+                        widget: string
               - label: "Item 4"
                 name: item4
                 widget: object
@@ -205,6 +248,16 @@ collections:
                   - label: "Item Heading"
                     name: body
                     widget: text
+                  - label: "Item Image"
+                    name: image
+                    widget: object
+                    fields:
+                      - label: "Image"
+                        name: src
+                        widget: image
+                      - label: "Image Description"
+                        name: alt
+                        widget: string
           - label: "Action Banner"
             name: actionBanner
             widget: object
@@ -245,6 +298,16 @@ collections:
             fields:
               - label: Title
                 name: title
+                widget: string
+          - label: "Image Divider"
+            name: imageDivider
+            widget: object
+            fields:
+              - label: "Image"
+                name: src
+                widget: image
+              - label: "Image Description"
+                name: alt
                 widget: string
           - label: "Subscribe"
             name: subscribe
