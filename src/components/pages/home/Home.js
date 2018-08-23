@@ -55,7 +55,7 @@ class Home extends React.Component {
             />
           </section>
           <section>
-            <AuxanoCarousel />
+            <AuxanoCarousel items={this.props.home.carousel} />
           </section>
         </div>
         <FullWidthSectionActionLink
