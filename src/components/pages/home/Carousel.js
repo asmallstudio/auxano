@@ -5,6 +5,8 @@ import styles from "./carousel.scss";
 class AuxanoCarousel extends React.Component {
   render() {
     const { items } = this.props;
+
+    if (!items || items.length === 0) return null;
     return (
       <div>
         <Carousel
