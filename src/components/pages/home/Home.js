@@ -42,7 +42,7 @@ class Home extends React.Component {
             <OneThirdColumn data={this.props.home.threecol.col3} />
           </section>
           <section>
-            <AuxanoCarousel />
+            <AuxanoCarousel items={this.props.home.carousel} />
           </section>
         </div>
         <FullWidthSectionActionLink
