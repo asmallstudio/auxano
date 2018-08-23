@@ -79,18 +79,16 @@
   border-radius: 0.5rem;
 }
 
-@include respond-above(md) {
-  .dingusDot {
-    position: absolute;
-    left: -2rem;
-    height: 10rem;
-    width: 10rem;
-    background-color: var(--burnt-sienna);
-    border-radius: 50%;
+.dingusDot {
+  position: absolute;
+  left: -2rem;
+  height: 10rem;
+  width: 10rem;
+  background-color: var(--burnt-sienna);
+  border-radius: 50%;
 
-    @include respond-above(lg) {
-      left: -5rem;
-    }
+  @include respond-above(lg) {
+    left: -5rem;
   }
 }
 
