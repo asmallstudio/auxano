@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-static";
+import BackToTopIcon from "./BackToTopIcon";
 
 import styles from "./footer.scss";
 
@@ -53,7 +54,7 @@ class Footer extends React.Component {
           <div className={`col-xs-12 col-md-3 ${styles.backToTopContainer}`}>
             <span className="N2">
               <Link to="#" activeClassName={styles.activeLink}>
-                Back to Top <BackToTopIcon />
+                Back to Top <BackToTopIcon className={styles.backToTopIcon} />
               </Link>
             </span>
           </div>
@@ -62,15 +63,5 @@ class Footer extends React.Component {
     );
   }
 }
-
-const BackToTopIcon = () => (
-  <img
-    className={styles.backToTopIcon}
-    src="/assets/back-to-top.svg"
-    width="45"
-    height="15"
-    alt="back-to-top-icon"
-  />
-);
 
 export default Footer;

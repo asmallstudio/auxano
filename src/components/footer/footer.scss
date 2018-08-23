@@ -86,6 +86,10 @@
 
   a:hover {
     color: var(--gigas);
+    svg {
+      fill: var(--gigas);
+      transition: fill 0.3s ease;
+    }
   }
 }
 
