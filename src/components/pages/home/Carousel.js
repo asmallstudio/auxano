@@ -8,7 +8,7 @@ class AuxanoCarousel extends React.Component {
 
     if (!items || items.length === 0) return null;
     return (
-      <div>
+      <div className="dg-carousel">
         <Carousel
           className={styles.carousel}
           showArrows={false}
