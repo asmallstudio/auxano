@@ -20,7 +20,13 @@ class AuxanoCarousel extends React.Component {
         >
           {items.map((item, i) => (
             <div className={styles.carouselSlide} key={i}>
-              <div className={styles.itemImg} />
+              <div
+                className={styles.itemImgContainer}
+                style={{
+                  backgroundImage: `url("${item.image.src}")`
+                }}
+                title={item.image.alt}
+              />
               <p className={`${styles.itemText} style-as-h3`}>{item.text}</p>
               <div className={styles.itemSubtext}>{item.subtext}</div>
             </div>

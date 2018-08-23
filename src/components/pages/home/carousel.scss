@@ -13,12 +13,14 @@
   }
 }
 
-.itemImg {
+.itemImgContainer {
   height: 4rem;
   width: 4rem;
   background-color: var(--grey-40);
-  border-radius: 50%;
   margin: 0 auto var(--space-l3);
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
 }
 
 .itemText {
