@@ -58,16 +58,9 @@ collections:
               - label: "Subtitle"
                 name: subtitle
                 widget: text
-          - label: "Image Divider"
-            name: imageDivider
-            widget: object
-            fields:
-              - label: "Image"
-                name: src
-                widget: image
-              - label: "Image Description"
-                name: alt
-                widget: string
+          - label: "Text Pullout"
+            name: textSection
+            widget: text
           - label: "Info section 1"
             name: infoSection1
             widget: object

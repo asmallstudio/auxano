@@ -4,7 +4,7 @@ import { pageChange } from "../../../lib/utils/pageChange";
 import { getFullPageTitle } from "../../../lib/utils/copy";
 
 import styles from "./aboutUs.scss";
-import CallToActionLink from "../../ui/callToActionLink/CallToActionLink";
+import FullWidthSectionText from "../../ui/fullWidthSectionText/FullWidthSectionText";
 import FullWidthSectionActionLink from "../../ui/fullWidthSectionActionLink/FullWidthSectionActionLink";
 import SubscribeSection from "../../ui/subscribeSection/SubscribeSection";
 
@@ -38,13 +38,7 @@ class AboutUs extends React.Component {
             </div>
           </div>
         </section>
-        <section className={`container--fluid`}>
-          <img
-            className={`row ${styles.imageDivider}`}
-            src={aboutUs.imageDivider.src}
-            alt={aboutUs.imageDivider.alt}
-          />
-        </section>
+        <FullWidthSectionText text={aboutUs.textSection} />
         <section className="container">
           <div className={`row ${styles.infoSection1Row}`}>
             <div
