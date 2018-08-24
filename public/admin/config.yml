@@ -54,6 +54,9 @@ collections:
         name: aboutUs
         file: src/data/pages/aboutUs.yml
         fields:
+          - label: "Page Title"
+            name: pageTitle
+            widget: string
           - label: Hero
             name: hero
             widget: object
@@ -64,6 +67,9 @@ collections:
               - label: "Subtitle"
                 name: subtitle
                 widget: text
+              - label: "Hero Image"
+                name: image
+                widget: image
               - label: "Call to Action Text"
                 name: ctaText
                 widget: string
