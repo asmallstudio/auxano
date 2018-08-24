@@ -4,8 +4,8 @@ form:
 info:
   title: "Contact Information"
 imageDivider:
-  src: "https://via.placeholder.com/1000x800"
-  alt: "what is important about this image? what does it communicate?"
+  src: "/uploads/office.jpg"
+  alt: "Office building splash picture"
 subscribe:
   heading: "Keep updated with our latest content and events."
   text: "Subscribe to our monthly newsletter."
