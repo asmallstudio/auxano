@@ -54,9 +54,6 @@ class AboutUs extends React.Component {
             >
               <h2>{aboutUs.infoSection1.heading}</h2>
               <p>{aboutUs.infoSection1.text}</p>
-              <CallToActionLink to={aboutUs.infoSection1.link}>
-                CTA Button
-              </CallToActionLink>
             </div>
             <div className={`col-xs-12 col-lg-6 ${styles.infoSectionColImage}`}>
               <img
