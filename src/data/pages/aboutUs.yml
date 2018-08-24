@@ -1,23 +1,29 @@
-pageTitle: "About Us"
 hero:
-  title: "Who We Are"
-  subtitle:
-    "Our vision is to be a multi-generational wealth management firm that helps clients integrate their vision and values with their wealth. As a fiduciary, we utilize a fee only system as a way to foster relationships with our clients and not with their money. We want stewardship to be at the core of who we are."
-  image: "/uploads/about-us-hero.png"
-  ctaText: "Meet the Team"
-  ctaLink: "#"
-textSection:
-  "Stewardship: the careful and responsible management of something entrusted to one's care. —Merriam-Webster Dictionary"
+  ctaLink: '#'
+  ctaText: Meet the Team
+  subtitle: >-
+    Our vision is to be a multi-generational wealth management firm that helps
+    clients integrate their vision and values with their wealth. As a fiduciary,
+    we utilize a fee only system as a way to foster relationships with our
+    clients and not with their money. We want stewardship to be at the core of
+    who we are.
+  title: ' Stewardship is our core.'
+textSection: >-
+  Stewardship: the careful and responsible management of something entrusted to
+  one's care. —Merriam-Webster Dictionary
 infoSection1:
-  heading: "Community"
-  text:
-    "Because stewardship is fundamental to our culture, we encourage our team to invest their time, talent and treasure into making a positive impact within our community. Here are just a few of the organizations that Auxano has made a difference for:"
+  heading: Community
   image:
-    src: "/uploads/community.png"
-    alt: "what is important about this image? what does it communicate?"
+    alt: what is important about this image? what does it communicate?
+    src: /uploads/community.png
+  text: >-
+    Because stewardship is fundamental to our culture, we encourage our team to
+    invest their time, talent and treasure into making a positive impact within
+    our community. Here are just a few of the organizations that Auxano has made
+    a difference for:
 actionBanner:
-  text: "Our Approach"
-  link: "/our-approach"
+  link: /our-approach
+  text: Our Approach
 subscribe:
-  heading: "Schedule a consultation with an Advisor."
-  text: "All personal information kept private."
+  heading: Schedule a consultation with an Advisor.
+  text: All personal information kept private.
