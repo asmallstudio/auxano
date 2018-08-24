@@ -2,10 +2,9 @@ import React from "react";
 import { withRouteData } from "react-static";
 import { pageChange } from "../../../lib/utils/pageChange";
 
-import AuxanoCarousel from "./Carousel";
 import CallToActionLink from "../../ui/callToActionLink/CallToActionLink";
-import OneThirdColumn from "./OneThirdColumn";
 import styles from "./home.scss";
+import FullWidthSectionText from "../../ui/fullWidthSectionText/FullWidthSectionText";
 import FullWidthSectionActionLink from "../../ui/fullWidthSectionActionLink/FullWidthSectionActionLink";
 import SubscribeSection from "../../ui/subscribeSection/SubscribeSection";
 
@@ -15,43 +14,31 @@ class Home extends React.Component {
   }
 
   render() {
+    const { home } = this.props;
+
     return (
       <React.Fragment>
         <div className={`container--fluid ${styles.heroContainer}`}>
           <div className={`container`}>
             <div className="row">
               <div className={`col-xs-12 col-md-6 ${styles.heroTextContainer}`}>
-                <h1>{this.props.home.hero.title}</h1>
-                <p>{this.props.home.hero.subtitle}</p>
-                <CallToActionLink to={this.props.home.hero.link}>
+                <h1>{home.hero.title}</h1>
+                <p>{home.hero.subtitle}</p>
+                <CallToActionLink to={home.hero.link}>
                   CTA Button
                 </CallToActionLink>
               </div>
             </div>
           </div>
         </div>
-        <div className={`container`}>
-          <section className={`${styles.pullquote} row`}>
-            <div className="col-xs-12 col-md-8">
-              <p className="style-as-h2">{this.props.home.pullquote.text}</p>
-            </div>
-          </section>
-          <section className={`${styles.threecols} row`}>
-            <OneThirdColumn data={this.props.home.threecol.col1} />
-            <OneThirdColumn data={this.props.home.threecol.col2} />
-            <OneThirdColumn data={this.props.home.threecol.col3} />
-          </section>
-          <section>
-            <AuxanoCarousel items={this.props.home.carousel} />
-          </section>
-        </div>
+        <FullWidthSectionText text={home.pullquote} />
         <FullWidthSectionActionLink
-          linkText="Learn more about us"
-          to={this.props.home.learnMore.link}
+          linkText={home.learnMore.text}
+          to={home.learnMore.link}
         />
         <SubscribeSection
-          heading={this.props.home.subscribe.heading}
-          text={this.props.home.subscribe.text}
+          heading={home.subscribe.heading}
+          text={home.subscribe.text}
         />
       </React.Fragment>
     );

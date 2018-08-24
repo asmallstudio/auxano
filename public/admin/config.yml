@@ -26,75 +26,7 @@ collections:
                 widget: string
           - label: Pullquote
             name: pullquote
-            widget: object
-            fields:
-              - label: "Text"
-                name: text
-                widget: text
-          - label: "Three Columns"
-            name: threecol
-            widget: object
-            fields:
-              - label: "Item 1"
-                name: col1
-                widget: object
-                fields:
-                  - label: "Heading"
-                    name: heading
-                    widget: string
-                  - label: "Content"
-                    name: text
-                    widget: text
-                  - label: "Link"
-                    name: link
-                    widget: string
-              - label: "Item 2"
-                name: col2
-                widget: object
-                fields:
-                  - label: "Heading"
-                    name: heading
-                    widget: string
-                  - label: "Content"
-                    name: text
-                    widget: text
-                  - label: "Link"
-                    name: link
-                    widget: string
-              - label: "Item 3"
-                name: col3
-                widget: object
-                fields:
-                  - label: "Heading"
-                    name: heading
-                    widget: string
-                  - label: "Content"
-                    name: text
-                    widget: text
-                  - label: "Link"
-                    name: link
-                    widget: string
-          - label: "Carousel"
-            name: carousel
-            widget: list
-            allow_add: true
-            fields:
-              - label: "Image"
-                name: image
-                widget: object
-                fields:
-                  - label: "Image"
-                    name: src
-                    widget: image
-                  - label: "Image Description"
-                    name: alt
-                    widget: string
-              - label: "Text"
-                name: text
-                widget: text
-              - label: "Subtext"
-                name: subtext
-                widget: string
+            widget: text
           - label: "Learn More"
             name: learnMore
             widget: object
@@ -126,16 +58,9 @@ collections:
               - label: "Subtitle"
                 name: subtitle
                 widget: text
-          - label: "Image Divider"
-            name: imageDivider
-            widget: object
-            fields:
-              - label: "Image"
-                name: src
-                widget: image
-              - label: "Image Description"
-                name: alt
-                widget: string
+          - label: "Text Pullout"
+            name: textSection
+            widget: text
           - label: "Info section 1"
             name: infoSection1
             widget: object

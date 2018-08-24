@@ -1,6 +1,6 @@
 import React from "react";
 
-import LinkWithArrow from "../../ui/linkWithArrow/LinkWithArrow";
+import LinkWithArrow from "../linkWithArrow/LinkWithArrow";
 import styles from "./oneThirdColumn.scss";
 
 class OneThirdColumn extends React.Component {

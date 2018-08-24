@@ -4,9 +4,8 @@ hero:
   subtitle:
     "Lorem ipsum dolor sit amet, consectetur adipiscing, sed do eiusmod tempor ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostru."
   image: "https://via.placeholder.com/900x750"
-imageDivider:
-  src: "https://via.placeholder.com/1000x800"
-  alt: "what is important about this image? what does it communicate?"
+textSection:
+  "Stewardship: the careful and responsible management of something entrusted to one's care. —Merriam-Webster Dictionary"
 infoSection1:
   heading: "Community ipsum dolor sit"
   text:

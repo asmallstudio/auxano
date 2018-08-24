@@ -1,0 +1,21 @@
+@import "../../styles/utils.scss";
+
+.container {
+  background-color: var(--gigas);
+}
+
+.textContainer {
+  text-align: center;
+  padding: 6rem 0;
+  color: var(--white);
+
+  @include respond-above(md) {
+    text-align: left;
+  }
+
+  .text {
+    font-size: 2rem;
+    line-height: 2;
+    color: inherit;
+  }
+}
