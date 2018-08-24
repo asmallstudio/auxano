@@ -34,7 +34,7 @@ collections:
             name: learnMore
             widget: object
             fields:
-              - label: "Link Text
+              - label: "Link Text"
                 name: text
                 widget: string
               - label: "Link"
