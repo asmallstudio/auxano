@@ -13,7 +13,7 @@ infoSection1:
   text:
     "Because stewardship is fundamental to our culture, we encourage our team to invest their time, talent and treasure into making a positive impact within our community. Here are just a few of the organizations that Auxano has made a difference for:"
   image:
-    src: "/uploads/Community.png"
+    src: "/uploads/community.png"
     alt: "what is important about this image? what does it communicate?"
 actionBanner:
   text: "Our Approach"
