@@ -39,9 +39,7 @@ class OurApproach extends React.Component {
           </div>
           <div className={styles.dingusDot} />
         </section>
-        <div
-          className={`container--fluid ${styles.dingusDotOverflowContainer}`}
-        >
+        <div className="container--fluid">
           <section className="container">
             <InfoSectionRow
               imgSrc={ourApproach.items.item1.image.src}

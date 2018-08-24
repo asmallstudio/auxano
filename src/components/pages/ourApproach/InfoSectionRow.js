@@ -16,7 +16,8 @@ class InfoSectionRow extends React.Component {
           <div className={styles.dingusDot} />
         </div>
         <div className={`col-xs-12 col-md-6 ${styles.infoSectionColText}`}>
-          {children}
+          <div className="col-lg-1 hidden-lg-down" />
+          <div className="col-lg-11">{children}</div>
         </div>
       </div>
     );
