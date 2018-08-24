@@ -4,6 +4,7 @@ import { pageChange } from "../../../lib/utils/pageChange";
 import { getFullPageTitle } from "../../../lib/utils/copy";
 
 import styles from "./aboutUs.scss";
+import CallToActionLink from "../../ui/callToActionLink/CallToActionLink";
 import FullWidthSectionText from "../../ui/fullWidthSectionText/FullWidthSectionText";
 import FullWidthSectionActionLink from "../../ui/fullWidthSectionActionLink/FullWidthSectionActionLink";
 import SubscribeSection from "../../ui/subscribeSection/SubscribeSection";
@@ -34,6 +35,9 @@ class AboutUs extends React.Component {
               <div className={`col-xs-12 col-md-6 ${styles.heroTextContainer}`}>
                 <h1>{aboutUs.hero.title}</h1>
                 <p>{aboutUs.hero.subtitle}</p>
+                <CallToActionLink to={aboutUs.hero.ctaLink}>
+                  {aboutUs.hero.ctaText}
+                </CallToActionLink>
               </div>
             </div>
           </div>

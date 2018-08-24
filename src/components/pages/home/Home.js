@@ -2,8 +2,8 @@ import React from "react";
 import { withRouteData } from "react-static";
 import { pageChange } from "../../../lib/utils/pageChange";
 
-import CallToActionLink from "../../ui/callToActionLink/CallToActionLink";
 import styles from "./home.scss";
+import CallToActionLink from "../../ui/callToActionLink/CallToActionLink";
 import FullWidthSectionText from "../../ui/fullWidthSectionText/FullWidthSectionText";
 import FullWidthSectionActionLink from "../../ui/fullWidthSectionActionLink/FullWidthSectionActionLink";
 import SubscribeSection from "../../ui/subscribeSection/SubscribeSection";
@@ -24,8 +24,8 @@ class Home extends React.Component {
               <div className={`col-xs-12 col-md-6 ${styles.heroTextContainer}`}>
                 <h1>{home.hero.title}</h1>
                 <p>{home.hero.subtitle}</p>
-                <CallToActionLink to={home.hero.link}>
-                  CTA Button
+                <CallToActionLink to={home.hero.ctaLink}>
+                  {home.hero.ctaText}
                 </CallToActionLink>
               </div>
             </div>
