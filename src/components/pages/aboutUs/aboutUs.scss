@@ -20,11 +20,12 @@
 
   h1 {
     color: var(--fountain-blue);
-    margin-bottom: 0.5em;
+    margin-bottom: var(--space-l2);
   }
 
   p {
     color: var(--grey);
+    margin-bottom: var(--space-l3);
   }
 
   @include respond-above(md) {

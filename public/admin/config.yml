@@ -21,8 +21,11 @@ collections:
               - label: "Subtitle"
                 name: subtitle
                 widget: text
+              - label: "Call to Action Text"
+                name: ctaText
+                widget: string
               - label: "Call to Action Link"
-                name: link
+                name: ctaLink
                 widget: string
           - label: Pullquote
             name: pullquote
@@ -31,6 +34,9 @@ collections:
             name: learnMore
             widget: object
             fields:
+              - label: "Link Text
+                name: text
+                widget: string
               - label: "Link"
                 name: link
                 widget: string
@@ -58,9 +64,15 @@ collections:
               - label: "Subtitle"
                 name: subtitle
                 widget: text
+              - label: "Call to Action Text"
+                name: ctaText
+                widget: string
+              - label: "Call to Action Link"
+                name: ctaLink
+                widget: string
           - label: "Text Pullout"
             name: textSection
-            widget: text
+            widget: markdown
           - label: "Info section 1"
             name: infoSection1
             widget: object
@@ -71,9 +83,6 @@ collections:
               - label: "Content"
                 name: text
                 widget: text
-              - label: "Link"
-                name: link
-                widget: string
               - label: "Image"
                 name: image
                 widget: object
