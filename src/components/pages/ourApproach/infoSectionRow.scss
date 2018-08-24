@@ -14,15 +14,6 @@
     .infoSectionColText {
       flex-direction: row-reverse;
     }
-
-    .dingusDot {
-      left: auto;
-      right: -2rem;
-
-      @include respond-above(lg) {
-        right: -5rem;
-      }
-    }
   }
 }
 
@@ -62,9 +53,10 @@
   margin: 0 auto;
 }
 
-.dingusDot {
-  z-index: -1;
+.dingusDot::after {
+  content: "";
   position: absolute;
+  z-index: -1;
   top: calc(50% - 5rem);
   left: -3rem;
   height: 10rem;

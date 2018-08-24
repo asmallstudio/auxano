@@ -56,14 +56,15 @@ class AboutUs extends React.Component {
               }`}
             >
               <div
-                className={`${styles.imgContainer} ${styles.dingusDotRelative}`}
+                className={`${styles.imgContainer} ${
+                  styles.dingusDotRelative
+                } ${styles.dingusDot}`}
               >
                 <img
                   className={`${styles.infoSectionImage}`}
                   src={aboutUs.infoSection1.image.src}
                   alt={aboutUs.infoSection1.image.alt}
                 />
-                <div className={styles.dingusDot} />
               </div>
             </div>
           </div>
