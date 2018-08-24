@@ -49,8 +49,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  max-width: 30rem;
-  margin: 0 auto;
 }
 
 .infoSectionImage {
@@ -59,10 +57,16 @@
   border-radius: 0.5rem;
 }
 
+.imgContainer {
+  max-width: 30rem;
+  margin: 0 auto;
+}
+
 .dingusDot {
   z-index: -1;
   position: absolute;
-  left: -2rem;
+  top: calc(50% - 5rem);
+  left: -3rem;
   height: 10rem;
   width: 10rem;
   background-color: var(--burnt-sienna);
@@ -80,4 +84,8 @@
     display: block;
     background-color: var(--burnt-sienna);
   }
+}
+
+.dingusDotRelative {
+  position: relative;
 }

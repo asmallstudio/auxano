@@ -39,8 +39,8 @@ class OurApproach extends React.Component {
           </div>
           <div className={styles.dingusDot} />
         </section>
-        <div className="container--fluid">
-          <section className="container">
+        <section className="container--fluid">
+          <div className="container">
             <InfoSectionRow
               imgSrc={ourApproach.items.item1.image.src}
               imgAlt={ourApproach.items.item1.image.alt}
@@ -69,8 +69,8 @@ class OurApproach extends React.Component {
               <h2>{ourApproach.items.item4.heading}</h2>
               <p>{ourApproach.items.item4.body}</p>
             </InfoSectionRow>
-          </section>
-        </div>
+          </div>
+        </section>
         <FullWidthSectionActionLink
           linkText={ourApproach.actionBanner.text}
           to={ourApproach.actionBanner.link}
