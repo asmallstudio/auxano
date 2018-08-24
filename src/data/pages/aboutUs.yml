@@ -2,21 +2,22 @@ pageTitle: "About Us"
 hero:
   title: "Who We Are"
   subtitle:
-    "Lorem ipsum dolor sit amet, consectetur adipiscing, sed do eiusmod tempor ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostru."
-  image: "https://via.placeholder.com/900x750"
+    "Our vision is to be a multi-generational wealth management firm that helps clients integrate their vision and values with their wealth. As a fiduciary, we utilize a fee only system as a way to foster relationships with our clients and not with their money. We want stewardship to be at the core of who we are."
+  image: "/uploads/about-us-hero.png"
+  ctaText: "Meet the Team"
+  ctaLink: "#"
 textSection:
   "Stewardship: the careful and responsible management of something entrusted to one's care. —Merriam-Webster Dictionary"
 infoSection1:
-  heading: "Community ipsum dolor sit"
+  heading: "Community"
   text:
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip."
-  link: "#"
+    "Because stewardship is fundamental to our culture, we encourage our team to invest their time, talent and treasure into making a positive impact within our community. Here are just a few of the organizations that Auxano has made a difference for:"
   image:
-    src: "https://via.placeholder.com/300x180"
+    src: "/uploads/Community.png"
     alt: "what is important about this image? what does it communicate?"
 actionBanner:
-  text: "Meet our team"
-  link: "#"
+  text: "Our Approach"
+  link: "/our-approach"
 subscribe:
-  heading: "Keep updated with our latest content and events."
-  text: "Subscribe to our monthly newsletter."
+  heading: "Schedule a consultation with an Advisor."
+  text: "All personal information kept private."

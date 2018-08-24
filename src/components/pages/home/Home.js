@@ -2,8 +2,8 @@ import React from "react";
 import { withRouteData } from "react-static";
 import { pageChange } from "../../../lib/utils/pageChange";
 
-import CallToActionLink from "../../ui/callToActionLink/CallToActionLink";
 import styles from "./home.scss";
+import CallToActionLink from "../../ui/callToActionLink/CallToActionLink";
 import FullWidthSectionText from "../../ui/fullWidthSectionText/FullWidthSectionText";
 import FullWidthSectionActionLink from "../../ui/fullWidthSectionActionLink/FullWidthSectionActionLink";
 import SubscribeSection from "../../ui/subscribeSection/SubscribeSection";
