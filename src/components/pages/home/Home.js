@@ -6,6 +6,7 @@ import AuxanoCarousel from "./Carousel";
 import CallToActionLink from "../../ui/callToActionLink/CallToActionLink";
 import OneThirdColumn from "./OneThirdColumn";
 import styles from "./home.scss";
+import FullWidthSectionText from "../../ui/fullWidthSectionText/FullWidthSectionText";
 import FullWidthSectionActionLink from "../../ui/fullWidthSectionActionLink/FullWidthSectionActionLink";
 import SubscribeSection from "../../ui/subscribeSection/SubscribeSection";
 
@@ -30,23 +31,9 @@ class Home extends React.Component {
             </div>
           </div>
         </div>
-        <div className={`container`}>
-          <section className={`${styles.pullquote} row`}>
-            <div className="col-xs-12 col-md-8">
-              <p className="style-as-h2">{this.props.home.pullquote.text}</p>
-            </div>
-          </section>
-          <section className={`${styles.threecols} row`}>
-            <OneThirdColumn data={this.props.home.threecol.col1} />
-            <OneThirdColumn data={this.props.home.threecol.col2} />
-            <OneThirdColumn data={this.props.home.threecol.col3} />
-          </section>
-          <section>
-            <AuxanoCarousel items={this.props.home.carousel} />
-          </section>
-        </div>
+        <FullWidthSectionText text={this.props.home.pullquote} />
         <FullWidthSectionActionLink
-          linkText="Learn more about us"
+          linkText={this.props.home.learnMore.text}
           to={this.props.home.learnMore.link}
         />
         <SubscribeSection
