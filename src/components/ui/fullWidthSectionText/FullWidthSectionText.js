@@ -8,7 +8,9 @@ class fullWidthSectionText extends React.Component {
     return (
       <section className={`container--fluid ${styles.container} ${className}`}>
         <div className={`container ${styles.textContainer}`}>
-          <p className={`style-as-h2 ${styles.text}`}>{text}</p>
+          <div className="row">
+            <p className={`style-as-h2 col-xs-12 ${styles.text}`}>{text}</p>
+          </div>
         </div>
       </section>
     );

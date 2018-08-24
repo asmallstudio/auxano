@@ -45,21 +45,27 @@ class AboutUs extends React.Component {
         <FullWidthSectionText text={aboutUs.textSection} />
         <section className="container">
           <div className={`row ${styles.infoSection1Row}`}>
-            <div
-              className={`col-xs-12 col-md-8 col-lg-5 col-lg-offset-1 ${
-                styles.infoSection1ColText
-              }`}
-            >
+            <div className={`col-xs-12 col-md-6 ${styles.infoSection1ColText}`}>
               <h2>{aboutUs.infoSection1.heading}</h2>
               <p>{aboutUs.infoSection1.text}</p>
             </div>
-            <div className={`col-xs-12 col-lg-6 ${styles.infoSectionColImage}`}>
-              <img
-                className={styles.infoSectionImage}
-                src={aboutUs.infoSection1.image.src}
-                alt={aboutUs.infoSection1.image.alt}
-              />
-              <div className={styles.dingusDot} />
+            <div className="col-lg-1 hidden-lg-down" />
+            <div
+              className={`col-xs-12 col-md-6 col-lg-5 ${
+                styles.infoSectionColImage
+              }`}
+            >
+              <div
+                className={`${styles.imgContainer} ${
+                  styles.dingusDotRelative
+                } ${styles.dingusDot}`}
+              >
+                <img
+                  className={`${styles.infoSectionImage}`}
+                  src={aboutUs.infoSection1.image.src}
+                  alt={aboutUs.infoSection1.image.alt}
+                />
+              </div>
             </div>
           </div>
         </section>
