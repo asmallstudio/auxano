@@ -2,12 +2,13 @@ hero:
   title: "Transcending wealth. Transforming lives."
   subtitle:
     "We help clients transcend the traditional definition of wealth so it's used to build a legacy that transforms families, finances, and their future."
-  link: "#"
+  ctaText: "Schedule a Consultation"
+  ctaLink: "/contact"
 pullquote:
   "As our client, we'll show you the role stewardship plays in all effective wealth transfers, including charitable gift giving, college endowments, and donations to non-profits. "
 learnMore:
   text: "About Us"
-  link: "#"
+  link: "/about-us"
 subscribe:
   heading: "Keep updated with our latest content and events."
   text: "Subscribe to our monthly newsletter."

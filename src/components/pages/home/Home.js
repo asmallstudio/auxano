@@ -24,8 +24,8 @@ class Home extends React.Component {
               <div className={`col-xs-12 col-md-6 ${styles.heroTextContainer}`}>
                 <h1>{home.hero.title}</h1>
                 <p>{home.hero.subtitle}</p>
-                <CallToActionLink to={home.hero.link}>
-                  CTA Button
+                <CallToActionLink to={home.hero.ctaLink}>
+                  {home.hero.ctaText}
                 </CallToActionLink>
               </div>
             </div>
