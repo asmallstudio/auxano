@@ -72,7 +72,7 @@ class SubscribeSection extends React.Component {
       <div className="container">
         <div className={`row ${styles.row}`}>
           <div className={`col-xs-12 col-lg-5 ${styles.description}`}>
-            <h2 className="style-as-h3">{heading}</h2>
+            <h2>{heading}</h2>
             <p>{text}</p>
           </div>
           <SubscribeForm
