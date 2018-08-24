@@ -2,9 +2,7 @@ import React from "react";
 import { withRouteData } from "react-static";
 import { pageChange } from "../../../lib/utils/pageChange";
 
-import AuxanoCarousel from "./Carousel";
 import CallToActionLink from "../../ui/callToActionLink/CallToActionLink";
-import OneThirdColumn from "./OneThirdColumn";
 import styles from "./home.scss";
 import FullWidthSectionText from "../../ui/fullWidthSectionText/FullWidthSectionText";
 import FullWidthSectionActionLink from "../../ui/fullWidthSectionActionLink/FullWidthSectionActionLink";
