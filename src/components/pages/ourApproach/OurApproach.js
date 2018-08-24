@@ -25,7 +25,11 @@ class OurApproach extends React.Component {
         <Head>
           <title>{getFullPageTitle(ourApproach.pageTitle)}</title>
         </Head>
-        <section className={`container--fluid ${styles.heroContainer}`}>
+        <section
+          className={`container--fluid ${styles.dingusDotContainer} ${
+            styles.heroContainer
+          }`}
+        >
           <div className={`container`}>
             <div className="row">
               <div className={`col-xs-12 col-md-8 ${styles.heroTextContainer}`}>
@@ -33,6 +37,7 @@ class OurApproach extends React.Component {
               </div>
             </div>
           </div>
+          <div className={styles.dingusDot} />
         </section>
         <div
           className={`container--fluid ${styles.dingusDotOverflowContainer}`}
