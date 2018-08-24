@@ -12,11 +12,21 @@ class InfoSectionRow extends React.Component {
     return (
       <div className={`row ${styles.infoSectionRow}`}>
         <div className={`col-xs-12 col-md-6 ${styles.infoSectionColImage}`}>
-          <img className={styles.infoSectionImage} src={imgSrc} alt={imgAlt} />
-          <div className={styles.dingusDot} />
+          <div
+            className={`${styles.imgContainer} ${styles.dingusDotRelative} ${
+              styles.dingusDot
+            }`}
+          >
+            <img
+              className={styles.infoSectionImage}
+              src={imgSrc}
+              alt={imgAlt}
+            />
+          </div>
         </div>
         <div className={`col-xs-12 col-md-6 ${styles.infoSectionColText}`}>
-          {children}
+          <div className="col-lg-1 hidden-lg-down" />
+          <div className="col-lg-11">{children}</div>
         </div>
       </div>
     );
