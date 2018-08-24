@@ -55,7 +55,7 @@ class SubscribeForm extends React.Component {
           onChange={this._handleChange}
           className={styles.input}
         />
-        <PrimaryButton className={`${styles.button}`}>Subscribe</PrimaryButton>
+        <PrimaryButton className={`${styles.button}`}>Send</PrimaryButton>
       </form>
     ) : (
       <p className={`${styles.successText}`}>
