@@ -14,29 +14,31 @@ class Home extends React.Component {
   }
 
   render() {
+    const { home } = this.props;
+
     return (
       <React.Fragment>
         <div className={`container--fluid ${styles.heroContainer}`}>
           <div className={`container`}>
             <div className="row">
               <div className={`col-xs-12 col-md-6 ${styles.heroTextContainer}`}>
-                <h1>{this.props.home.hero.title}</h1>
-                <p>{this.props.home.hero.subtitle}</p>
-                <CallToActionLink to={this.props.home.hero.link}>
+                <h1>{home.hero.title}</h1>
+                <p>{home.hero.subtitle}</p>
+                <CallToActionLink to={home.hero.link}>
                   CTA Button
                 </CallToActionLink>
               </div>
             </div>
           </div>
         </div>
-        <FullWidthSectionText text={this.props.home.pullquote} />
+        <FullWidthSectionText text={home.pullquote} />
         <FullWidthSectionActionLink
-          linkText={this.props.home.learnMore.text}
-          to={this.props.home.learnMore.link}
+          linkText={home.learnMore.text}
+          to={home.learnMore.link}
         />
         <SubscribeSection
-          heading={this.props.home.subscribe.heading}
-          text={this.props.home.subscribe.text}
+          heading={home.subscribe.heading}
+          text={home.subscribe.text}
         />
       </React.Fragment>
     );
