@@ -1,4 +1,5 @@
 import React from "react";
+import Markdown from "react-markdown";
 
 import styles from "./fullWidthSectionText.scss";
 
@@ -9,7 +10,9 @@ class fullWidthSectionText extends React.Component {
       <section className={`container--fluid ${styles.container} ${className}`}>
         <div className={`container ${styles.textContainer}`}>
           <div className="row">
-            <p className={`style-as-h2 col-xs-12 ${styles.text}`}>{text}</p>
+            <div className="col-xs-12">
+              <Markdown source={text} />
+            </div>
           </div>
         </div>
       </section>
