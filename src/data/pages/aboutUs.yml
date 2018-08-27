@@ -9,9 +9,8 @@ hero:
   image: "/uploads/about-us-hero.png"
   ctaText: Meet the Team
   ctaLink: "#"
-textSection: >-
-  Stewardship: the careful and responsible management of something entrusted to
-  one's care. —Merriam-Webster Dictionary
+textSection: |-
+  **Stewardship:** the careful and responsible management of something entrusted to one's care. —_Merriam-Webster Dictionary_
 infoSection1:
   heading: Community
   image:
