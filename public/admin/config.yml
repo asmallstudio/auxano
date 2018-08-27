@@ -30,6 +30,7 @@ collections:
           - label: Pullquote
             name: pullquote
             widget: markdown
+            buttons: ["bold", "italic", "link"]
           - label: "Learn More"
             name: learnMore
             widget: object
@@ -79,6 +80,7 @@ collections:
           - label: "Text Pullout"
             name: textSection
             widget: markdown
+            buttons: ["bold", "italic", "link"]
           - label: "Info section 1"
             name: infoSection1
             widget: object
