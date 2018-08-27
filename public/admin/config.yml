@@ -29,7 +29,7 @@ collections:
                 widget: string
           - label: Pullquote
             name: pullquote
-            widget: text
+            widget: markdown
           - label: "Learn More"
             name: learnMore
             widget: object
