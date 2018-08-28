@@ -87,6 +87,7 @@
 .mapEmbed {
   height: auto !important;
   min-height: 8rem;
+  background-color: var(--grey-40);
   border-radius: 0.5rem;
 
   @include respond-above(md) {
