@@ -280,6 +280,41 @@ collections:
               - label: "Subheading"
                 name: text
                 widget: text
+      - label: "Client Services"
+        name: clientServices
+        file: src/data/pages/clientServices.yml
+        fields:
+          - label: "Client Services"
+            name: pageTitle
+            widget: string
+          - label: "Hero"
+            name: hero
+            widget: object
+            fields:
+              - label: "Heading"
+                name: title
+                widget: string
+          - label: "Action Banner"
+            name: actionBanner
+            widget: object
+            fields:
+              - label: "Text"
+                name: text
+                widget: string
+              - label: "Link"
+                name: link
+                widget: string
+          - label: "Subscribe"
+            name: subscribe
+            widget: object
+            fields:
+              - label: "Heading"
+                name: heading
+                widget: string
+              - label: "Subheading"
+                name: text
+                widget: text
+
       - label: "Other Page"
         name: other
         file: src/data/pages/other.yml

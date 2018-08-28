@@ -30,7 +30,7 @@ class OurApproach extends React.Component {
             styles.heroContainer
           }`}
         >
-          <div className={`container`}>
+          <div className="container">
             <div className="row">
               <div className={`col-xs-12 col-md-8 ${styles.heroTextContainer}`}>
                 <h1>{ourApproach.hero.title}</h1>
