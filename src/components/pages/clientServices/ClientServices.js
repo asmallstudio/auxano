@@ -37,13 +37,14 @@ class Other extends React.Component {
             </div>
             <div className={styles.dingusDot} />
           </div>
+        </section>
         <FullWidthSectionActionLink
-          linkText={ourApproach.actionBanner.text}
-          to={ourApproach.actionBanner.link}
+          linkText={clientServices.actionBanner.text}
+          to={clientServices.actionBanner.link}
         />
         <SubscribeSection
-          heading={ourApproach.subscribe.heading}
-          text={ourApproach.subscribe.text}
+          heading={clientServices.subscribe.heading}
+          text={clientServices.subscribe.text}
         />
       </React.Fragment>
     );
