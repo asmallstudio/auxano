@@ -1,12 +1,6 @@
-pageTitle: "Other"
+pageTitle: "Client Services"
 hero:
   title: "Go further than you ever thought possible"
-actionBanner:
-  link: /contact
-  text: Contact Us
-subscribe:
-  heading: Schedule a consultation with an Advisor.
-  text: All personal information kept private.
 services:
   item1:
     icon: "/uploads/personal-finance.svg"
@@ -52,3 +46,9 @@ infoSection:
     src: /uploads/community.png
   text:
     "Charitable giving is often an important part of our clients’ legacy. As stewards, we resonate with this spirit of generosity. We’ll help you align your giving with your estate planning to ensure that you are meeting your goals for giving."
+actionBanner:
+  link: /contact
+  text: Contact Us
+subscribe:
+  heading: Schedule an introduction with an advisor.
+  text: All personal information kept private.
