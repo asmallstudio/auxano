@@ -322,6 +322,9 @@ collections:
                 name: item1
                 widget: object
                 fields:
+                  - label: "Icon"
+                    name: icon
+                    widget: image
                   - label: "Heading"
                     name: heading
                     widget: string
@@ -335,6 +338,9 @@ collections:
                 name: item2
                 widget: object
                 fields:
+                  - label: "Icon"
+                    name: icon
+                    widget: image
                   - label: "Heading"
                     name: heading
                     widget: string
@@ -348,6 +354,9 @@ collections:
                 name: item3
                 widget: object
                 fields:
+                  - label: "Icon"
+                    name: icon
+                    widget: image
                   - label: "Heading"
                     name: heading
                     widget: string
@@ -361,6 +370,9 @@ collections:
                 name: item4
                 widget: object
                 fields:
+                  - label: "Icon"
+                    name: icon
+                    widget: image
                   - label: "Heading"
                     name: heading
                     widget: string
@@ -374,6 +386,9 @@ collections:
                 name: item5
                 widget: object
                 fields:
+                  - label: "Icon"
+                    name: icon
+                    widget: image
                   - label: "Heading"
                     name: heading
                     widget: string
@@ -387,6 +402,9 @@ collections:
                 name: item6
                 widget: object
                 fields:
+                  - label: "Icon"
+                    name: icon
+                    widget: image
                   - label: "Heading"
                     name: heading
                     widget: string
@@ -400,6 +418,9 @@ collections:
             name: infoSection
             widget: object
             fields:
+              - label: "Icon"
+                name: icon
+                widget: image
               - label: "Heading"
                 name: heading
                 widget: string
