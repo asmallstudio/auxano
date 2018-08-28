@@ -314,6 +314,108 @@ collections:
               - label: "Subheading"
                 name: text
                 widget: text
+          - label: "Services"
+            name: services
+            widget: object
+            fields:
+              - label: "Service 1"
+                name: item1
+                widget: object
+                fields:
+                  - label: "Heading"
+                    name: heading
+                    widget: string
+                  - label: "Content"
+                    name: text
+                    widget: text
+                  - label: "Link"
+                    name: link
+                    widget: string
+              - label: "Service 2"
+                name: item2
+                widget: object
+                fields:
+                  - label: "Heading"
+                    name: heading
+                    widget: string
+                  - label: "Content"
+                    name: text
+                    widget: text
+                  - label: "Link"
+                    name: link
+                    widget: string
+              - label: "Service 3"
+                name: item3
+                widget: object
+                fields:
+                  - label: "Heading"
+                    name: heading
+                    widget: string
+                  - label: "Content"
+                    name: text
+                    widget: text
+                  - label: "Link"
+                    name: link
+                    widget: string
+              - label: "Service 4"
+                name: item4
+                widget: object
+                fields:
+                  - label: "Heading"
+                    name: heading
+                    widget: string
+                  - label: "Content"
+                    name: text
+                    widget: text
+                  - label: "Link"
+                    name: link
+                    widget: string
+              - label: "Service 5"
+                name: item5
+                widget: object
+                fields:
+                  - label: "Heading"
+                    name: heading
+                    widget: string
+                  - label: "Content"
+                    name: text
+                    widget: text
+                  - label: "Link"
+                    name: link
+                    widget: string
+              - label: "Service 6"
+                name: item6
+                widget: object
+                fields:
+                  - label: "Heading"
+                    name: heading
+                    widget: string
+                  - label: "Content"
+                    name: text
+                    widget: text
+                  - label: "Link"
+                    name: link
+                    widget: string
+          - label: "Info Section"
+            name: infoSection
+            widget: object
+            fields:
+              - label: "Heading"
+                name: heading
+                widget: string
+              - label: "Content"
+                name: text
+                widget: text
+              - label: "Image"
+                name: image
+                widget: object
+                fields:
+                  - label: "Image"
+                    name: src
+                    widget: image
+                  - label: "Image Description"
+                    name: alt
+                    widget: string
 
       - label: "Other Page"
         name: other
