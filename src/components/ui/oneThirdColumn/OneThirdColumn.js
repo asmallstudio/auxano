@@ -8,7 +8,7 @@ class OneThirdColumn extends React.Component {
     const { data } = this.props;
     return (
       <div className={`${styles.col} col-xs-12 col-md-4`}>
-        <img className={styles.colIcon} src={data.icon} />
+        <img className={styles.colIcon} src={data.icon} alt="" />
         <h2 className="style-as-h3">{data.heading}</h2>
         <p>{data.text}</p>
         <LinkWithArrow to={data.link} className={styles.colLearnMore}>

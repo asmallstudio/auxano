@@ -57,6 +57,7 @@ class Other extends React.Component {
               <img
                 src={clientServices.infoSection.icon}
                 className={styles.infoSectionIcon}
+                alt=""
               />
               <h2>{clientServices.infoSection.heading}</h2>
               <p>{clientServices.infoSection.text}</p>
