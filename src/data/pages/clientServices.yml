@@ -9,43 +9,43 @@ subscribe:
   text: All personal information kept private.
 services:
   item1:
-    icon: "https://via.placeholder.com/60x60"
+    icon: "/uploads/personal-finance.svg"
     heading: "Personal Finance"
     text:
       "We know you have goals for your future. We’ll help you manage your personal finances to meet them."
     link: "#"
   item2:
-    icon: "https://via.placeholder.com/60x60"
+    icon: "/uploads/investments.svg"
     heading: "Investments"
     text:
       "Good investments have the power to transform lives. We’ll help you grow your assets responsibly."
     link: "#"
   item3:
-    icon: "https://via.placeholder.com/60x60"
+    icon: "/uploads/estate-planning.svg"
     heading: "Estate Planning"
     text:
       "Estate planning can often be complex. Our integrated process will help make sure that nothing is missed."
     link: "#"
   item4:
-    icon: "https://via.placeholder.com/60x60"
+    icon: "/uploads/risk-management.svg"
     heading: "Risk Management"
     text:
       "Its important to protect your assets. We can help you manage your financial risks and avoid potential pitfalls."
     link: "#"
   item5:
-    icon: "https://via.placeholder.com/60x60"
+    icon: "/uploads/tax-planning.svg"
     heading: "Tax Planning"
     text:
       "By creating unique tax models, we’ll help you plan ahead and be better prepared for this annual process."
     link: "#"
   item6:
-    icon: "https://via.placeholder.com/60x60"
-    heading: "Tax Planning"
+    icon: "/uploads/business-services.svg"
+    heading: "Business Services"
     text:
       "Lorem ipsum dolor sit amet, consour adipiscing elit, sed do eiusmo tempor incididunt ut labore et dolore magna."
     link: "#"
 infoSection:
-  icon: "https://via.placeholder.com/60x60"
+  icon: "/uploads/giving.svg"
   heading: "Charitable Giving"
   image:
     alt: what is important about this image? what does it communicate?
