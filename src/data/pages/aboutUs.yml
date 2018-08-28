@@ -1,14 +1,14 @@
-pageTitle: "About Us"
+pageTitle: About Us
 hero:
-  title: " Stewardship is our core."
+  ctaLink: '#'
+  ctaText: Meet the Team
+  image: /uploads/about-us-hero.png
   subtitle: >-
     Our vision is to be a multi-generational wealth management firm that helps
     clients integrate their vision and values with their wealth. As a fiduciary,
     we utilize a fee only system as a way to foster relationships with our
     clients and not with their money.
-  image: "/uploads/about-us-hero.png"
-  ctaText: Meet the Team
-  ctaLink: "#"
+  title: ' Stewardship is our core.'
 textSection: >-
   Stewardship: the careful and responsible management of something entrusted to
   one's care. —Merriam-Webster Dictionary
@@ -26,5 +26,5 @@ actionBanner:
   link: /our-approach
   text: Our Approach
 subscribe:
-  heading: Schedule a consultation with an Advisor.
+  heading: Schedule an introduction with an advisor.
   text: All personal information kept private.
