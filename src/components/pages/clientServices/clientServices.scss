@@ -1,0 +1,126 @@
+@import "../../styles/utils.scss";
+
+.heroContainer {
+  padding: 6em 0 0;
+}
+
+.heroTextContainer {
+  text-align: center;
+  position: relative;
+
+  h1 {
+    color: var(--fountain-blue);
+    margin-bottom: 0.5em;
+  }
+
+  p {
+    color: var(--grey);
+  }
+
+  @include respond-above(md) {
+    text-align: left;
+  }
+}
+
+.dingusDotContainer {
+  position: relative;
+  overflow-x: hidden;
+}
+
+.dingusDot1 {
+  display: none;
+  z-index: -1;
+  position: absolute;
+  top: calc(50% - 5rem);
+  height: 10rem;
+  width: 10rem;
+  background-color: var(--casablanca);
+  border-radius: 50%;
+
+  @include respond-above(md) {
+    display: block;
+    right: -5rem;
+  }
+}
+
+.threecols {
+  margin: var(--space-l5) 0;
+}
+
+.infoSectionRow {
+  align-items: center;
+  margin: var(--space-l5) 0;
+
+  @include respond-above(md) {
+    flex-direction: row-reverse;
+  }
+}
+
+.infoSectionColText {
+  text-align: center;
+  margin-bottom: 3em;
+
+  h2 {
+    margin-bottom: 0.67em;
+  }
+
+  p {
+    margin-bottom: 0;
+    color: var(--grey);
+  }
+
+  @include respond-above(md) {
+    text-align: left;
+  }
+
+  @include respond-above(md) {
+    margin-bottom: var(--space-l2);
+  }
+}
+
+.infoSectionColImage {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.5rem;
+}
+
+.imgContainer {
+  max-width: 30rem;
+  margin: 0 auto;
+}
+
+.infoSectionIcon {
+  display: inline-block;
+  height: 3rem;
+  width: 3rem;
+  border-radius: 0.5rem;
+  border: none;
+  margin-bottom: var(--space-l2);
+}
+
+.infoSectionImage {
+  z-index: 2;
+  width: 100%;
+}
+
+.dingusDot2::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: calc(50% - 5rem);
+  left: -3rem;
+  height: 10rem;
+  width: 10rem;
+  background-color: var(--burnt-sienna);
+  border-radius: 50%;
+
+  @include respond-above(lg) {
+    left: -5rem;
+  }
+}
+
+.dingusDotRelative {
+  position: relative;
+}
