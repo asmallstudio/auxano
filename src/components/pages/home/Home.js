@@ -19,7 +19,11 @@ class Home extends React.Component {
     return (
       <React.Fragment>
         <div className={`container--fluid ${styles.heroContainer}`}>
-          <img src={home.hero.image} className={styles.heroImage} alt="" />
+          <div
+            className={`${styles.heroImageContainer} ${styles.dingusDotHero}`}
+          >
+            <img src={home.hero.image} className={styles.heroImage} alt="" />
+          </div>
           <div className="container">
             <div className="row">
               <div className={`col-xs-12 col-md-6 ${styles.heroTextContainer}`}>
