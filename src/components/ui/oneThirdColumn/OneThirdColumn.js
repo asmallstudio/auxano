@@ -8,12 +8,16 @@ class OneThirdColumn extends React.Component {
     const { data, className = "" } = this.props;
     return (
       <div className={`${styles.col} col-xs-12 col-md-4 ${className}`}>
-        <img className={styles.colIcon} src={data.icon} alt="" />
+        {typeof data.icon !== "undefined" && (
+          <img className={styles.colIcon} src={data.icon} alt="" />
+        )}
         <h2>{data.heading}</h2>
         <p>{data.text}</p>
-        <LinkWithArrow to={data.link} className={styles.colLearnMore}>
-          Learn More
-        </LinkWithArrow>
+        {typeof data.link !== "undefined" && (
+          <LinkWithArrow to={data.link} className={styles.colLearnMore}>
+            Learn More
+          </LinkWithArrow>
+        )}
       </div>
     );
   }
