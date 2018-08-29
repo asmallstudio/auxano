@@ -1,6 +1,6 @@
-pageTitle: "About Us"
+pageTitle: About Us
 hero:
-  title: " Stewardship is our core."
+  title: "Stewardship is our core."
   subtitle: >-
     Our vision is to be a multi-generational wealth management firm that helps
     clients integrate their vision and values with their wealth. As a fiduciary,
@@ -25,5 +25,5 @@ actionBanner:
   link: /our-approach
   text: Our Approach
 subscribe:
-  heading: Schedule a consultation with an Advisor.
+  heading: Schedule an introduction with an advisor.
   text: All personal information kept private.
