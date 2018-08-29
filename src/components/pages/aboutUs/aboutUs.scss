@@ -1,17 +1,26 @@
 @import "../../styles/utils.scss";
 
 .heroContainer {
+  position: relative;
+  overflow: hidden;
   padding: 6em 0;
+}
+
+.heroImage {
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 50vw;
+  object-fit: cover;
+  object-position: left;
+  height: 100%;
+  height: calc(100% + 1px);
+  width: 50vw;
 
   @include respond-below(md) {
-    background-image: none !important;
-  }
-
-  @include respond-above(md) {
-    padding: 9.75em 0;
-    background-repeat: no-repeat;
-    background-position-x: right;
-    background-size: 50% auto;
+    display: none;
   }
 }
 

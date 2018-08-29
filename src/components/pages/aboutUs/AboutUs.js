@@ -26,11 +26,9 @@ class AboutUs extends React.Component {
         <Head>
           <title>{getFullPageTitle(aboutUs.pageTitle)}</title>
         </Head>
-        <section
-          className={`container--fluid ${styles.heroContainer}`}
-          style={{ backgroundImage: `url(${aboutUs.hero.image})` }}
-        >
-          <div className={`container`}>
+        <section className={`container--fluid ${styles.heroContainer}`}>
+          <img src={aboutUs.hero.image} className={styles.heroImage} alt="" />
+          <div className="container">
             <div className="row">
               <div className={`col-xs-12 col-md-6 ${styles.heroTextContainer}`}>
                 <h1>{aboutUs.hero.title}</h1>
