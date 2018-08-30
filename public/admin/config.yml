@@ -290,6 +290,7 @@ collections:
       - label: "Client Services"
         name: clientServices
         file: src/data/pages/clientServices.yml
+        path: /client-services
         fields:
           - label: "Client Services"
             name: pageTitle
@@ -444,26 +445,3 @@ collections:
                   - label: "Image Description"
                     name: alt
                     widget: string
-
-      - label: "Other Page"
-        name: other
-        file: src/data/pages/other.yml
-        fields:
-          - label: "Page Title"
-            name: pageTitle
-            widget: string
-          - label: "Title Other"
-            name: title
-            widget: string
-          - label: "Text Other"
-            name: exampleText
-            widget: text
-  - label: "Blog"
-    name: "blog"
-    folder: "src/data/blog"
-    create: true
-    fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Publish Date", name: "date", widget: "datetime" }
-      - { label: "Featured Image", name: "thumbnail", widget: "image" }
-      - { label: "Body", name: "body", widget: "markdown" }
