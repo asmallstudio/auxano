@@ -1,18 +1,15 @@
 import React from "react";
 
-import LinkWithArrow from "../../ui/linkWithArrow/LinkWithArrow";
+import LinkWithArrow from "../linkWithArrow/LinkWithArrow";
 import styles from "./oneThirdColumn.scss";
 
 class OneThirdColumn extends React.Component {
   render() {
-    const { data, className = "", ...restProps } = this.props;
+    const { data, className = "" } = this.props;
     return (
-      <div
-        className={`${styles.col} col-xs-12 col-md-4 ${className}`}
-        {...restProps}
-      >
-        <div className={styles.colIcon} />
-        <h2 className="style-as-h3">{data.heading}</h2>
+      <div className={`${styles.col} col-xs-12 col-md-4 ${className}`}>
+        <img className={styles.colIcon} src={data.icon} alt="" />
+        <h2>{data.heading}</h2>
         <p>{data.text}</p>
         <LinkWithArrow to={data.link} className={styles.colLearnMore}>
           Learn More

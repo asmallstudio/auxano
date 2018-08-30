@@ -22,84 +22,26 @@ collections:
               - label: "Subtitle"
                 name: subtitle
                 widget: text
+              - label: "Hero Image"
+                name: image
+                widget: image
+              - label: "Call to Action Text"
+                name: ctaText
+                widget: string
               - label: "Call to Action Link"
-                name: link
+                name: ctaLink
                 widget: string
           - label: Pullquote
             name: pullquote
-            widget: object
-            fields:
-              - label: "Text"
-                name: text
-                widget: text
-          - label: "Three Columns"
-            name: threecol
-            widget: object
-            fields:
-              - label: "Item 1"
-                name: col1
-                widget: object
-                fields:
-                  - label: "Heading"
-                    name: heading
-                    widget: string
-                  - label: "Content"
-                    name: text
-                    widget: text
-                  - label: "Link"
-                    name: link
-                    widget: string
-              - label: "Item 2"
-                name: col2
-                widget: object
-                fields:
-                  - label: "Heading"
-                    name: heading
-                    widget: string
-                  - label: "Content"
-                    name: text
-                    widget: text
-                  - label: "Link"
-                    name: link
-                    widget: string
-              - label: "Item 3"
-                name: col3
-                widget: object
-                fields:
-                  - label: "Heading"
-                    name: heading
-                    widget: string
-                  - label: "Content"
-                    name: text
-                    widget: text
-                  - label: "Link"
-                    name: link
-                    widget: string
-          - label: "Carousel"
-            name: carousel
-            widget: list
-            allow_add: true
-            fields:
-              - label: "Image"
-                name: image
-                widget: object
-                fields:
-                  - label: "Image"
-                    name: src
-                    widget: image
-                  - label: "Image Description"
-                    name: alt
-                    widget: string
-              - label: "Text"
-                name: text
-                widget: text
-              - label: "Subtext"
-                name: subtext
-                widget: string
+            widget: markdown
+            buttons: ["bold", "italic", "link"]
           - label: "Learn More"
             name: learnMore
             widget: object
             fields:
+              - label: "Link Text"
+                name: text
+                widget: string
               - label: "Link"
                 name: link
                 widget: string
@@ -118,6 +60,9 @@ collections:
         file: src/data/pages/aboutUs.yml
         path: /about-us
         fields:
+          - label: "Page Title"
+            name: pageTitle
+            widget: string
           - label: Hero
             name: hero
             widget: object
@@ -128,16 +73,19 @@ collections:
               - label: "Subtitle"
                 name: subtitle
                 widget: text
-          - label: "Image Divider"
-            name: imageDivider
-            widget: object
-            fields:
-              - label: "Image"
-                name: src
+              - label: "Hero Image"
+                name: image
                 widget: image
-              - label: "Image Description"
-                name: alt
+              - label: "Call to Action Text"
+                name: ctaText
                 widget: string
+              - label: "Call to Action Link"
+                name: ctaLink
+                widget: string
+          - label: "Text Pullout"
+            name: textSection
+            widget: markdown
+            buttons: ["bold", "italic", "link"]
           - label: "Info section 1"
             name: infoSection1
             widget: object
@@ -148,9 +96,6 @@ collections:
               - label: "Content"
                 name: text
                 widget: text
-              - label: "Link"
-                name: link
-                widget: string
               - label: "Image"
                 name: image
                 widget: object
@@ -342,3 +287,183 @@ collections:
               - label: "Subheading"
                 name: text
                 widget: text
+      - label: "Client Services"
+        name: clientServices
+        file: src/data/pages/clientServices.yml
+        fields:
+          - label: "Client Services"
+            name: pageTitle
+            widget: string
+          - label: "Hero"
+            name: hero
+            widget: object
+            fields:
+              - label: "Heading"
+                name: title
+                widget: string
+          - label: "Action Banner"
+            name: actionBanner
+            widget: object
+            fields:
+              - label: "Text"
+                name: text
+                widget: string
+              - label: "Link"
+                name: link
+                widget: string
+          - label: "Subscribe"
+            name: subscribe
+            widget: object
+            fields:
+              - label: "Heading"
+                name: heading
+                widget: string
+              - label: "Subheading"
+                name: text
+                widget: text
+          - label: "Services"
+            name: services
+            widget: object
+            fields:
+              - label: "Service 1"
+                name: item1
+                widget: object
+                fields:
+                  - label: "Icon"
+                    name: icon
+                    widget: image
+                  - label: "Heading"
+                    name: heading
+                    widget: string
+                  - label: "Content"
+                    name: text
+                    widget: text
+                  - label: "Link"
+                    name: link
+                    widget: string
+              - label: "Service 2"
+                name: item2
+                widget: object
+                fields:
+                  - label: "Icon"
+                    name: icon
+                    widget: image
+                  - label: "Heading"
+                    name: heading
+                    widget: string
+                  - label: "Content"
+                    name: text
+                    widget: text
+                  - label: "Link"
+                    name: link
+                    widget: string
+              - label: "Service 3"
+                name: item3
+                widget: object
+                fields:
+                  - label: "Icon"
+                    name: icon
+                    widget: image
+                  - label: "Heading"
+                    name: heading
+                    widget: string
+                  - label: "Content"
+                    name: text
+                    widget: text
+                  - label: "Link"
+                    name: link
+                    widget: string
+              - label: "Service 4"
+                name: item4
+                widget: object
+                fields:
+                  - label: "Icon"
+                    name: icon
+                    widget: image
+                  - label: "Heading"
+                    name: heading
+                    widget: string
+                  - label: "Content"
+                    name: text
+                    widget: text
+                  - label: "Link"
+                    name: link
+                    widget: string
+              - label: "Service 5"
+                name: item5
+                widget: object
+                fields:
+                  - label: "Icon"
+                    name: icon
+                    widget: image
+                  - label: "Heading"
+                    name: heading
+                    widget: string
+                  - label: "Content"
+                    name: text
+                    widget: text
+                  - label: "Link"
+                    name: link
+                    widget: string
+              - label: "Service 6"
+                name: item6
+                widget: object
+                fields:
+                  - label: "Icon"
+                    name: icon
+                    widget: image
+                  - label: "Heading"
+                    name: heading
+                    widget: string
+                  - label: "Content"
+                    name: text
+                    widget: text
+                  - label: "Link"
+                    name: link
+                    widget: string
+          - label: "Info Section"
+            name: infoSection
+            widget: object
+            fields:
+              - label: "Icon"
+                name: icon
+                widget: image
+              - label: "Heading"
+                name: heading
+                widget: string
+              - label: "Content"
+                name: text
+                widget: text
+              - label: "Image"
+                name: image
+                widget: object
+                fields:
+                  - label: "Image"
+                    name: src
+                    widget: image
+                  - label: "Image Description"
+                    name: alt
+                    widget: string
+
+      - label: "Other Page"
+        name: other
+        file: src/data/pages/other.yml
+        fields:
+          - label: "Page Title"
+            name: pageTitle
+            widget: string
+          - label: "Title Other"
+            name: title
+            widget: string
+          - label: "Text Other"
+            name: exampleText
+            widget: text
+  - label: "Blog"
+    name: "blog"
+    folder: "src/data/blog"
+    create: true
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Featured Image", name: "thumbnail", widget: "image" }
+      - { label: "Body", name: "body", widget: "markdown" }

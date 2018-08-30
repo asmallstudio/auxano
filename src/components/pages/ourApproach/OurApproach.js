@@ -25,19 +25,22 @@ class OurApproach extends React.Component {
         <Head>
           <title>{getFullPageTitle(ourApproach.pageTitle)}</title>
         </Head>
-        <section className={`container--fluid ${styles.heroContainer}`}>
-          <div className={`container`}>
+        <section
+          className={`container--fluid ${styles.dingusDotContainer} ${
+            styles.heroContainer
+          }`}
+        >
+          <div className="container">
             <div className="row">
               <div className={`col-xs-12 col-md-8 ${styles.heroTextContainer}`}>
                 <h1>{ourApproach.hero.title}</h1>
               </div>
             </div>
           </div>
+          <div className={styles.dingusDot} />
         </section>
-        <div
-          className={`container--fluid ${styles.dingusDotOverflowContainer}`}
-        >
-          <section className="container">
+        <section className="container--fluid">
+          <div className="container">
             <InfoSectionRow
               imgSrc={ourApproach.items.item1.image.src}
               imgAlt={ourApproach.items.item1.image.alt}
@@ -66,8 +69,8 @@ class OurApproach extends React.Component {
               <h2>{ourApproach.items.item4.heading}</h2>
               <p>{ourApproach.items.item4.body}</p>
             </InfoSectionRow>
-          </section>
-        </div>
+          </div>
+        </section>
         <FullWidthSectionActionLink
           linkText={ourApproach.actionBanner.text}
           to={ourApproach.actionBanner.link}

@@ -1,23 +1,29 @@
-pageTitle: "About Us"
+pageTitle: About Us
 hero:
-  title: "Who We Are"
-  subtitle:
-    "Lorem ipsum dolor sit amet, consectetur adipiscing, sed do eiusmod tempor ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostru."
-  image: "https://via.placeholder.com/900x750"
-imageDivider:
-  src: "https://via.placeholder.com/1000x800"
-  alt: "what is important about this image? what does it communicate?"
+  title: "Stewardship is our core."
+  subtitle: >-
+    Our vision is to be a multi-generational wealth management firm that helps
+    clients integrate their vision and values with their wealth. As a fiduciary,
+    we utilize a fee only system as a way to foster relationships with our
+    clients and not with their money.
+  image: "/uploads/about-us-hero.png"
+  ctaText: Meet the Team
+  ctaLink: "#"
+textSection: |-
+  **Stewardship:** the careful and responsible management of something entrusted to one's care. —_Merriam-Webster Dictionary_
 infoSection1:
-  heading: "Community ipsum dolor sit"
-  text:
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip."
-  link: "#"
+  heading: Community
   image:
-    src: "https://via.placeholder.com/300x180"
-    alt: "what is important about this image? what does it communicate?"
+    alt: what is important about this image? what does it communicate?
+    src: /uploads/community.png
+  text: >-
+    Because stewardship is fundamental to our culture, we encourage our team to
+    invest their time, talent and treasure into making a positive impact within
+    our community. Here are just a few of the organizations that Auxano has made
+    a difference for:
 actionBanner:
-  text: "Meet our team"
-  link: "#"
+  link: /our-approach
+  text: Our Approach
 subscribe:
-  heading: "Keep updated with our latest content and events."
-  text: "Subscribe to our monthly newsletter."
+  heading: Schedule an introduction with an advisor.
+  text: All personal information kept private.

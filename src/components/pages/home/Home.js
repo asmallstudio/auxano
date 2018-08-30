@@ -2,10 +2,9 @@ import React from "react";
 import { withRouteData } from "react-static";
 import { pageChange } from "../../../lib/utils/pageChange";
 
-import AuxanoCarousel from "./Carousel";
-import CallToActionLink from "../../ui/callToActionLink/CallToActionLink";
-import OneThirdColumn from "./OneThirdColumn";
 import styles from "./home.scss";
+import CallToActionLink from "../../ui/callToActionLink/CallToActionLink";
+import FullWidthSectionText from "../../ui/fullWidthSectionText/FullWidthSectionText";
 import FullWidthSectionActionLink from "../../ui/fullWidthSectionActionLink/FullWidthSectionActionLink";
 import SubscribeSection from "../../ui/subscribeSection/SubscribeSection";
 
@@ -15,57 +14,41 @@ class Home extends React.Component {
   }
 
   render() {
+    const { home } = this.props;
+
     return (
       <React.Fragment>
         <div className={`container--fluid ${styles.heroContainer}`}>
-          <div className={`container`}>
+          <div
+            className={`${styles.heroImageContainer} ${styles.dingusDotHero}`}
+          >
+            <img src={home.hero.image} className={styles.heroImage} alt="" />
+          </div>
+          <div className="container">
             <div className="row">
               <div
                 className={`col-xs-12 col-md-6 ${
                   styles.heroTextContainer
                 } dg-hero`}
               >
-                <h1>{this.props.home.hero.title}</h1>
-                <p>{this.props.home.hero.subtitle}</p>
-                <CallToActionLink to={this.props.home.hero.link}>
-                  CTA Button
+                <h1>{home.hero.title}</h1>
+                <p>{home.hero.subtitle}</p>
+                <CallToActionLink to={home.hero.ctaLink}>
+                  {home.hero.ctaText}
                 </CallToActionLink>
               </div>
             </div>
           </div>
         </div>
-        <div className={`container`}>
-          <section className={`${styles.pullquote} row`}>
-            <div className="col-xs-12 col-md-8 dg-pullquote">
-              <p className="style-as-h2">{this.props.home.pullquote.text}</p>
-            </div>
-          </section>
-          <section className={`${styles.threecols} row dg-threecol`}>
-            <OneThirdColumn
-              data={this.props.home.threecol.col1}
-              className="dg-col1"
-            />
-            <OneThirdColumn
-              data={this.props.home.threecol.col2}
-              className="dg-col2"
-            />
-            <OneThirdColumn
-              data={this.props.home.threecol.col3}
-              className="dg-col3"
-            />
-          </section>
-          <section>
-            <AuxanoCarousel items={this.props.home.carousel} />
-          </section>
-        </div>
+        <FullWidthSectionText text={home.pullquote} className="dg-pullquote" />
         <FullWidthSectionActionLink
-          linkText="Learn more about us"
-          to={this.props.home.learnMore.link}
+          linkText={home.learnMore.text}
+          to={home.learnMore.link}
           className="dg-learnMore"
         />
         <SubscribeSection
-          heading={this.props.home.subscribe.heading}
-          text={this.props.home.subscribe.text}
+          heading={home.subscribe.heading}
+          text={home.subscribe.text}
           className="dg-subscribe"
         />
       </React.Fragment>

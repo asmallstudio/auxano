@@ -14,13 +14,13 @@
   background-color: var(--gigas-10);
 
   &:hover {
-    color: var(--black);
+    color: var(--dark-purple);
     background-color: var(--gigas-40);
   }
 
   &:active,
   &:focus {
-    border-color: var(--gigas);
+    border-color: var(--dark-purple);
     outline: none;
   }
 }

@@ -2,6 +2,8 @@ import React from "react";
 import { Carousel } from "react-responsive-carousel";
 import styles from "./carousel.scss";
 
+// yarn add react-responsive-carousel
+
 class AuxanoCarousel extends React.Component {
   render() {
     const { items } = this.props;

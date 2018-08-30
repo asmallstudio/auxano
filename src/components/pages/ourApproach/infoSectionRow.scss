@@ -1,6 +1,7 @@
 @import "../../styles/utils.scss";
 
 .infoSectionRow {
+  align-items: center;
   margin-bottom: var(--space-l5);
 
   @include respond-above(md) {
@@ -10,19 +11,16 @@
   &:nth-child(even) {
     flex-direction: row-reverse;
 
-    .dingusDot {
-      left: auto;
-      right: -2rem;
-
-      @include respond-above(lg) {
-        right: -5rem;
-      }
+    .infoSectionColText {
+      flex-direction: row-reverse;
     }
   }
 }
 
 .infoSectionColText {
+  display: flex;
   text-align: center;
+  margin-bottom: var(--space-l3);
 
   @include respond-above(md) {
     text-align: left;
@@ -30,6 +28,10 @@
 
   h2 {
     margin: var(--space-l3) 0 var(--space-l2);
+
+    @include respond-above(md) {
+      margin-top: 0;
+    }
   }
 }
 
@@ -38,8 +40,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  max-width: 30rem;
-  margin: 0 auto;
 }
 
 .infoSectionImage {
@@ -48,28 +48,36 @@
   border-radius: 0.5rem;
 }
 
-.dingusDot {
-  z-index: -1;
+.imgContainer {
+  max-width: 30rem;
+  margin: 0 auto;
+}
+
+.dingusDot::after {
+  content: "";
   position: absolute;
-  left: -2rem;
+  z-index: -1;
+  top: calc(50% - 5rem);
+  left: -3rem;
   height: 10rem;
   width: 10rem;
-  background-color: var(--fountain-blue);
+  background-color: var(--burnt-sienna);
   border-radius: 50%;
 
   @include respond-above(lg) {
     left: -5rem;
   }
 
-  .infoSectionRow:nth-child(2) & {
-    background-color: var(--gigas);
+  .infoSectionRow & {
+    display: none;
   }
 
   .infoSectionRow:nth-child(3) & {
-    background-color: var(--casablanca);
-  }
-
-  .infoSectionRow:nth-child(4) & {
+    display: block;
     background-color: var(--burnt-sienna);
   }
+}
+
+.dingusDotRelative {
+  position: relative;
 }
