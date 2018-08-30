@@ -21,6 +21,9 @@ collections:
               - label: "Subtitle"
                 name: subtitle
                 widget: text
+              - label: "Hero Image"
+                name: image
+                widget: image
               - label: "Call to Action Text"
                 name: ctaText
                 widget: string
