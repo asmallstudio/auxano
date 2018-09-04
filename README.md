@@ -134,3 +134,63 @@ Will verify a suite of tests located in the configuration
 - Pa11y
   - Validates that the code conforms to accessibility standards. The results are
     stored as an artifact inside the CI test results.
+
+### Admin panel
+
+The admin panel allows users to modify website content via a frontend interface. This is done through [Netlify CMS](https://www.netlifycms.org/), an open source React application. The admin panel can be viewed at `sitedomain.com/admin/`.
+
+> Note the trailing slash, without it the route will fail.
+
+#### Custom preview templates
+
+This site uses [custom preview templates](https://www.netlifycms.org/docs/customization/#registerpreviewtemplate) for each page in the `pages` collection. The custom preview is a screenshot of the website's page with highlighted sections labeled with their matching input field names. For example, for a page with a hero section with a background image and title, the screenshot will have a highlighted section labeled `Hero`. The purpose of these screenshots is to help guide a client / non-technical user in editing the website content.
+
+To add guide images:
+
+##### Generate guide images
+
+The guides are generated using [this repository](https://github.com/asmallstudio/netlify-cms-client-guide-gen).
+
+To use the guide generator, the admin configuation needs a few additions.
+
+> Note: only `object` and `list` type items can be labeled
+
+- Each page needs a `path` field that is the path to the specific webpage.
+- Add a classname to the HTML element that corresponds to the section to be highlighted. The classname will be `dg-<field name>`. So for a `hero` object field, the corresponding classname will be `dg-hero` and can be placed in the container `div` of the hero's content.
+
+Then serve up the website, and run the client guide generator to generate the images.
+
+The resulting image guides are placed in the `/public/admin/guides` folder, where they are accessed by the admin panel.
+
+##### Register the templates in the admin panel
+
+To add the templates to the admin panel, they are registered in `/public/admin/index.html`, like this:
+
+```js
+const PagePreview = filename =>
+  createClass({
+    render: function() {
+      return h(
+        "div",
+        {},
+        h(
+          "p",
+          {
+            style: {
+              color: "rgb(122, 130, 145)",
+              fontWeight: "bold"
+            }
+          },
+          "Note: The image below is for reference only, it may not represent the latest content from your website."
+        ),
+        h("img", {
+          src: `/admin/guides/${filename}.jpg`,
+          style: { width: "100%" },
+          alt: "Visual documentation guide"
+        })
+      );
+    }
+  });
+
+CMS.registerPreviewTemplate("home", PagePreview("home"));
+```
