@@ -67,9 +67,9 @@ class SubscribeForm extends React.Component {
 
 class SubscribeSection extends React.Component {
   render() {
-    const { heading, text } = this.props;
+    const { heading, text, className = "", ...restProps } = this.props;
     return (
-      <div className="container">
+      <div className={`container ${className}`} {...restProps}>
         <div className={`row ${styles.row}`}>
           <div className={`col-xs-12 col-lg-5 ${styles.description}`}>
             <h2>{heading}</h2>

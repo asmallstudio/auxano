@@ -28,7 +28,7 @@ class Other extends React.Component {
         <section
           className={`container--fluid ${styles.dingusDotContainer} ${
             styles.heroContainer
-          }`}
+          } dg-hero`}
         >
           <div className="container">
             <div className="row">
@@ -39,19 +39,37 @@ class Other extends React.Component {
             <div className={styles.dingusDot1} />
           </div>
         </section>
-        <section className="container">
+        <section className="container dg-services">
           <div className={`${styles.threecols} row`}>
-            <OneThirdColumn data={clientServices.services.item1} />
-            <OneThirdColumn data={clientServices.services.item2} />
-            <OneThirdColumn data={clientServices.services.item2} />
+            <OneThirdColumn
+              data={clientServices.services.item1}
+              className="dg-item1"
+            />
+            <OneThirdColumn
+              data={clientServices.services.item2}
+              className="dg-item2"
+            />
+            <OneThirdColumn
+              data={clientServices.services.item2}
+              className="dg-item3"
+            />
           </div>
           <div className={`${styles.threecols} row`}>
-            <OneThirdColumn data={clientServices.services.item4} />
-            <OneThirdColumn data={clientServices.services.item5} />
-            <OneThirdColumn data={clientServices.services.item6} />
+            <OneThirdColumn
+              data={clientServices.services.item4}
+              className="dg-item4"
+            />
+            <OneThirdColumn
+              data={clientServices.services.item5}
+              className="dg-item5"
+            />
+            <OneThirdColumn
+              data={clientServices.services.item6}
+              className="dg-item6"
+            />
           </div>
         </section>
-        <section className="container">
+        <section className="container dg-infoSection">
           <div className={`row ${styles.infoSectionRow}`}>
             <div className={`col-xs-12 col-md-6 ${styles.infoSectionColText}`}>
               <img
@@ -85,10 +103,12 @@ class Other extends React.Component {
         <FullWidthSectionActionLink
           linkText={clientServices.actionBanner.text}
           to={clientServices.actionBanner.link}
+          className="dg-actionBanner"
         />
         <SubscribeSection
           heading={clientServices.subscribe.heading}
           text={clientServices.subscribe.text}
+          className="dg-subscribe"
         />
       </React.Fragment>
     );

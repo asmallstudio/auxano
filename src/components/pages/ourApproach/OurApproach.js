@@ -28,7 +28,7 @@ class OurApproach extends React.Component {
         <section
           className={`container--fluid ${styles.dingusDotContainer} ${
             styles.heroContainer
-          }`}
+          } dg-hero`}
         >
           <div className="container">
             <div className="row">
@@ -44,6 +44,7 @@ class OurApproach extends React.Component {
             <InfoSectionRow
               imgSrc={ourApproach.items.item1.image.src}
               imgAlt={ourApproach.items.item1.image.alt}
+              className="dg-item1"
             >
               <h2>{ourApproach.items.item1.heading}</h2>
               <p>{ourApproach.items.item1.body}</p>
@@ -51,6 +52,7 @@ class OurApproach extends React.Component {
             <InfoSectionRow
               imgSrc={ourApproach.items.item2.image.src}
               imgAlt={ourApproach.items.item2.image.alt}
+              className="dg-item2"
             >
               <h2>{ourApproach.items.item2.heading}</h2>
               <p>{ourApproach.items.item2.body}</p>
@@ -58,6 +60,7 @@ class OurApproach extends React.Component {
             <InfoSectionRow
               imgSrc={ourApproach.items.item3.image.src}
               imgAlt={ourApproach.items.item3.image.alt}
+              className="dg-item3"
             >
               <h2>{ourApproach.items.item3.heading}</h2>
               <p>{ourApproach.items.item3.body}</p>
@@ -65,6 +68,7 @@ class OurApproach extends React.Component {
             <InfoSectionRow
               imgSrc={ourApproach.items.item4.image.src}
               imgAlt={ourApproach.items.item4.image.alt}
+              className="dg-item4"
             >
               <h2>{ourApproach.items.item4.heading}</h2>
               <p>{ourApproach.items.item4.body}</p>
@@ -74,10 +78,12 @@ class OurApproach extends React.Component {
         <FullWidthSectionActionLink
           linkText={ourApproach.actionBanner.text}
           to={ourApproach.actionBanner.link}
+          className="dg-actionBanner"
         />
         <SubscribeSection
           heading={ourApproach.subscribe.heading}
           text={ourApproach.subscribe.text}
+          className="dg-subscribe"
         />
       </React.Fragment>
     );

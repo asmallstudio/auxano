@@ -205,7 +205,7 @@ class Contact extends React.Component {
               <section
                 className={`col-xs-12 col-md-6 ${styles.contactSection} ${
                   styles.contactForm
-                }`}
+                } dg-form`}
               >
                 <h2>{contact.form.title}</h2>
                 <ContactForm />
@@ -213,7 +213,7 @@ class Contact extends React.Component {
               <section
                 className={`col-xs-12 col-md-5 col-md-offset-1 ${
                   styles.contactSection
-                } ${styles.contactInfo}`}
+                } ${styles.contactInfo} dg-info`}
               >
                 <h2>{contact.info.title}</h2>
                 <address itemScope itemType="http://schema.org/Organization">
@@ -281,7 +281,7 @@ class Contact extends React.Component {
           </div>
         </div>
 
-        <div className="container--fluid">
+        <div className="container--fluid dg-imageDivider">
           <img
             className={styles.imageDivider}
             src={contact.imageDivider.src}
@@ -291,6 +291,7 @@ class Contact extends React.Component {
         <SubscribeSection
           heading={contact.subscribe.heading}
           text={contact.subscribe.text}
+          className="dg-subscribe"
         />
       </React.Fragment>
     );
