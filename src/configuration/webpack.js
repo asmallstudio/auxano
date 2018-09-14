@@ -92,6 +92,9 @@ const createWebpackConfig = (config, { defaultLoaders, stage }) => {
       ]
     }
   ];
+  config.plugins.push(
+    new ExtractTextPlugin({ filename: "[name].css", ignoreOrder: true })
+  );
   return config;
 };
 
