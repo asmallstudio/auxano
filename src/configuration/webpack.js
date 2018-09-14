@@ -9,6 +9,11 @@ import ExtractTextPlugin from "extract-text-webpack-plugin";
  * @returns {object} The new Webpack config
  */
 const createWebpackConfig = (config, { defaultLoaders, stage }) => {
+  if (stage === "prod") {
+    config.entry = ["@babel/polyfill", config.entry];
+  } else if (stage === "dev") {
+    config.entry = ["@babel/polyfill", ...config.entry];
+  }
   config.module.rules = [
     {
       oneOf: [
