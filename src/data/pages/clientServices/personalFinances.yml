@@ -1,0 +1,23 @@
+pageTitle: "Personal Finances | Client Services"
+hero:
+  name: "Personal Finances"
+  title: "We know you have goals for your future. We’ll help you manage your personal finances to meet them."
+pullquote: "Mapping out your personal finances is the process of determining which financial steps will best take you from your current situation to fulfilling your life goals."
+serviceInfo:
+  description: "While each component of financial planning is personal to your unique situation, each part is also integrated with other components creating a dynamic and interconnected system. Integrated planning takes a holistic approach to how each component is set into the context of your situation and affects other areas of your finances. This all adds up to assist you in making high quality decisions, today and tomorrow."
+  list:
+    item1:
+      icon:
+      text: Forecast inflow and outflow
+    item2:
+      icon:
+      text: Analyze probability of achieving your goals
+    item3:
+      icon:
+      text: Develop savings targets for retirement and other financial goals
+actionBanner:
+  link: /contact
+  text: Contact Us
+subscribe:
+  heading: Schedule an introduction with an advisor.
+  text: All personal information kept private.

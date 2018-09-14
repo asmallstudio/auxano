@@ -11,6 +11,9 @@ const createRoutes = () => {
   const clientServices = getSingleFileYaml(
     "./src/data/pages/clientServices.yml"
   );
+  const personalFinances = getSingleFileYaml(
+    "./src/data/pages/clientServices/personalFinances.yml"
+  );
   const contact = getSingleFileYaml("./src/data/pages/contact.yml");
   const other = getSingleFileYaml("./src/data/pages/other.yml");
   return [
@@ -40,6 +43,14 @@ const createRoutes = () => {
       component: "src/components/pages/clientServices/ClientServices",
       getData: () => ({
         clientServices
+      })
+    },
+    {
+      path: "/client-services/personal-finances",
+      component:
+        "src/components/pages/clientServices/personalFinances/PersonalFinances",
+      getData: () => ({
+        personalFinances
       })
     },
     {

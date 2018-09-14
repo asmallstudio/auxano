@@ -292,7 +292,7 @@ collections:
         file: src/data/pages/clientServices.yml
         path: /client-services
         fields:
-          - label: "Client Services"
+          - label: "Page Title"
             name: pageTitle
             widget: string
           - label: "Hero"
@@ -445,3 +445,85 @@ collections:
                   - label: "Image Description"
                     name: alt
                     widget: string
+      - label: "Personal Finances"
+        name: personalFinances
+        file: src/data/pages/personalFinances.yml
+        path: /client-services/personalFinances
+        fields:
+          - label: "Page Title"
+            name: pageTitle
+            widget: string
+          - label: "Hero"
+            name: hero
+            widget: object
+            fields:
+              - label: "Service Name"
+                name: name
+                widget: string
+              - label: "Heading"
+                name: title
+                widget: string
+          - label: "Pullquote"
+            name: pullquote
+            widget: text
+          - label: "Service Information"
+            name: serviceInfo
+            widget: object
+            fields:
+              - label: "Service Description"
+                name: description
+                widget: text
+              - label: "Description List"
+                name: list
+                widget: object
+                fields:
+                  - label: "List Item 1"
+                    name: item1
+                    widget: object
+                    fields:
+                      - label: "Icon"
+                        name: icon
+                        widget: image
+                      - label: "Text"
+                        name: text
+                        widget: string
+                  - label: "List Item 2"
+                    name: item2
+                    widget: object
+                    fields:
+                      - label: "Icon"
+                        name: icon
+                        widget: image
+                      - label: "Text"
+                        name: text
+                        widget: string
+                  - label: "List Item 3"
+                    name: item3
+                    widget: object
+                    fields:
+                      - label: "Icon"
+                        name: icon
+                        widget: image
+                      - label: "Text"
+                        name: text
+                        widget: string
+          - label: "Action Banner"
+            name: actionBanner
+            widget: object
+            fields:
+              - label: "Text"
+                name: text
+                widget: string
+              - label: "Link"
+                name: link
+                widget: string
+          - label: "Subscribe"
+            name: subscribe
+            widget: object
+            fields:
+              - label: "Heading"
+                name: heading
+                widget: string
+              - label: "Subheading"
+                name: text
+                widget: text
