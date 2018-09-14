@@ -527,3 +527,148 @@ collections:
               - label: "Subheading"
                 name: text
                 widget: text
+      - label: "Investments"
+        name: investments
+        file: src/data/pages/investments.yml
+        path: /client-services/investments
+        fields:
+          - label: "Page Title"
+            name: pageTitle
+            widget: string
+          - label: "Hero"
+            name: hero
+            widget: object
+            fields:
+              - label: "Service Name"
+                name: name
+                widget: string
+              - label: "Heading"
+                name: title
+                widget: string
+          - label: "Pullquote 1"
+            name: pullquote1
+            widget: text
+          - label: "Info Section"
+            name: infoSection
+            widget: object
+            fields:
+            - label: "Image"
+                name: image
+                widget: object
+                fields:
+                  - label: "Image"
+                    name: src
+                    widget: image
+                  - label: "Image Description"
+                    name: alt
+                    widget: string
+            - label: "Description"
+              name: text
+              widget: string
+            - label: "More Description"
+              name: furtherText
+              widget: string
+          - label: "Pullquote 2"
+            name: pullquote2
+            widget: text
+          - label: "Info Table"
+            name: infoTable
+            widget: object
+            fields:
+            - label: "Table Head"
+              name: tableHead
+              widget: object
+              fields:
+              - label: "Column Heading"
+                name: tableHead1
+                widget: string
+              - label: "Column Heading"
+                name: tableHead2
+                widget: string
+            - label: "Table Row 1"
+              name: tableRow1
+              widget: object
+              fields:
+              - label: "Row Heading"
+                name: tableRowHead
+                widget: string
+              - label: "Cell 1"
+                name: tableCell1
+                widget: text
+              - label: "Cell 2"
+                name: tableCell2
+                widget: text
+            - label: "Table Row 2"
+              name: tableRow2
+              widget: object
+              fields:
+              - label: "Row Heading"
+                name: tableRowHead
+                widget: string
+              - label: "Cell 1"
+                name: tableCell1
+                widget: text
+              - label: "Cell 2"
+                name: tableCell2
+                widget: text
+          - label: "Service Information"
+            name: serviceInfo
+            widget: object
+            fields:
+              - label: "Service Description"
+                name: description
+                widget: text
+              - label: "Description List"
+                name: list
+                widget: object
+                fields:
+                  - label: "List Item 1"
+                    name: item1
+                    widget: object
+                    fields:
+                      - label: "Icon"
+                        name: icon
+                        widget: image
+                      - label: "Text"
+                        name: text
+                        widget: string
+                  - label: "List Item 2"
+                    name: item2
+                    widget: object
+                    fields:
+                      - label: "Icon"
+                        name: icon
+                        widget: image
+                      - label: "Text"
+                        name: text
+                        widget: string
+                  - label: "List Item 3"
+                    name: item3
+                    widget: object
+                    fields:
+                      - label: "Icon"
+                        name: icon
+                        widget: image
+                      - label: "Text"
+                        name: text
+                        widget: string
+          - label: "Action Banner"
+            name: actionBanner
+            widget: object
+            fields:
+              - label: "Text"
+                name: text
+                widget: string
+              - label: "Link"
+                name: link
+                widget: string
+          - label: "Subscribe"
+            name: subscribe
+            widget: object
+            fields:
+              - label: "Heading"
+                name: heading
+                widget: string
+              - label: "Subheading"
+                name: text
+                widget: text
