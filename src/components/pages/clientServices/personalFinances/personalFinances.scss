@@ -12,9 +12,6 @@
     margin-bottom: 0.5em;
   }
 
-  p {
-  }
-
   @include respond-above(md) {
     text-align: left;
   }
