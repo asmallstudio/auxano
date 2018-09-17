@@ -44,7 +44,9 @@ class Other extends React.Component {
             <div className="container">
               <div className={`row ${styles.serviceInfoRow}`}>
                 <div className="col-xs-12">
-                  <p>{estatePlanning.serviceInfo.description1}</p>
+                  <p className="style-as-h2">
+                    {estatePlanning.serviceInfo.description1}
+                  </p>
                 </div>
               </div>
             </div>
@@ -55,6 +57,17 @@ class Other extends React.Component {
                 <div className="col-xs-12">
                   <p className="style-as-h2">
                     {estatePlanning.serviceInfo.description2}
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className={`container--fluid ${styles.serviceInfoContainer}`}>
+            <div className="container">
+              <div className={`row ${styles.serviceInfoRow}`}>
+                <div className="col-xs-12">
+                  <p className="style-as-h2">
+                    {estatePlanning.serviceInfo.description3}
                   </p>
                 </div>
               </div>

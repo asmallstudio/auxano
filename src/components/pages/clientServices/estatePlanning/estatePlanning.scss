@@ -46,12 +46,22 @@
       color: var(--white);
     }
   }
+
+  &:nth-child(2) {
+    p {
+      color: var(--gigas);
+    }
+  }
+
+  &:nth-child(3) {
+    background-color: var(--fountain-blue);
+
+    p {
+      color: var(--white);
+    }
+  }
 }
 
 .serviceInfoRow {
   padding: var(--space-l5) 0;
-
-  p {
-    white-space: pre-wrap;
-  }
 }
