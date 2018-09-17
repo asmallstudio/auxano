@@ -4,7 +4,6 @@ import { pageChange } from "../../../../lib/utils/pageChange";
 import { getFullPageTitle } from "../../../../lib/utils/copy";
 
 import styles from "./estatePlanning.scss";
-import FullWidthSectionText from "../../../ui/fullWidthSectionText/FullWidthSectionText";
 import FullWidthSectionActionLink from "../../../ui/fullWidthSectionActionLink/FullWidthSectionActionLink";
 import SubscribeSection from "../../../ui/subscribeSection/SubscribeSection";
 
