@@ -1,0 +1,23 @@
+pageTitle: "Risk Management | Client Services"
+hero:
+  name: "Risk Management"
+  title: "It’s important to protect your assets. We can help you manage your financial risks and avoid potential pitfalls."
+pullquote: "As a Registered Investment Advisor (RIA), Auxano is committed to act in your best interest as a fiduciary. Our goal is not to sell insurance products, but to identify potential risks in advance, analyze them, and then take steps to reduce those risks. That may involve insurance products for a period of time, but the ultimate goal may be to grow your investments to the point where you don’t need that insurance. Insurance products are sometimes the best course of action, but only an integrated approach to financial planning can determine which risks to avoid, which risks are mitigating, which risks to insure, and which risks are self-insuring."
+serviceInfo:
+  description: "Risk management requires an integrated approach in order to know the potential lost opportunity costs to each course of action."
+  list:
+    item1:
+      icon: /uploads/risk.svg
+      text: Access risks associated with illness, loss of income, long-term care, accident, catastrophic event and litigation
+    item2:
+      icon: /uploads/explore.svg
+      text: Explore optimal ways to insure against risks
+    item3:
+      icon: /uploads/save.svg
+      text: Develop savings targets for retirement and other financial goals
+actionBanner:
+  link: /contact
+  text: Contact Us
+subscribe:
+  heading: Schedule an introduction with an advisor.
+  text: All personal information kept private.
