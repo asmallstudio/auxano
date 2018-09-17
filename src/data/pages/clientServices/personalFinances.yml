@@ -7,13 +7,13 @@ serviceInfo:
   description: "While each component of financial planning is personal to your unique situation, each part is also integrated with other components creating a dynamic and interconnected system. Integrated planning takes a holistic approach to how each component is set into the context of your situation and affects other areas of your finances. This all adds up to assist you in making high quality decisions, today and tomorrow."
   list:
     item1:
-      icon:
+      icon: /uploads/in-out.svg
       text: Forecast inflow and outflow
     item2:
-      icon:
+      icon: /uploads/graph.svg
       text: Analyze probability of achieving your goals
     item3:
-      icon:
+      icon: /uploads/target.svg
       text: Develop savings targets for retirement and other financial goals
 actionBanner:
   link: /contact
