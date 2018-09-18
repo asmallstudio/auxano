@@ -1,0 +1,63 @@
+@import "../../../styles/utils.scss";
+
+.heroContainer {
+  padding: 6rem 0 var(--space-l4);
+}
+
+.heroTextContainer {
+  text-align: center;
+  position: relative;
+
+  h1 {
+    margin-bottom: 0.5em;
+  }
+
+  @include respond-above(md) {
+    text-align: left;
+  }
+}
+
+.dingusDotContainer {
+  position: relative;
+  overflow-x: hidden;
+}
+
+.dingusDot1 {
+  display: none;
+  z-index: -1;
+  position: absolute;
+  top: calc(50% - 5rem);
+  height: 10rem;
+  width: 10rem;
+  background-color: var(--casablanca);
+  border-radius: 50%;
+
+  @include respond-above(md) {
+    display: block;
+    right: -5rem;
+  }
+}
+
+.serviceInfoList {
+  padding: 0;
+  margin: 0 0 var(--space-l5);
+  // list-style-type: none;
+
+  li {
+    display: block;
+    line-height: 3;
+    color: var(--grey);
+
+    &::before {
+      content: "";
+      display: inline-block;
+      position: relative;
+      top: 0.6em;
+      height: 2em;
+      width: 2em;
+      background: url("/uploads/check.svg") no-repeat center;
+      background-size: contain;
+      margin-right: 0.75em;
+    }
+  }
+}

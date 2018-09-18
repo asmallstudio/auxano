@@ -31,7 +31,7 @@ services:
     icon: "/uploads/business-services.svg"
     heading: "Business Services"
     text: "Lorem ipsum dolor sit amet, consour adipiscing elit, sed do eiusmo tempor incididunt ut labore et dolore magna."
-    link: "#"
+    link: "/client-services/business-services/"
 infoSection:
   icon: "/uploads/giving.svg"
   heading: "Charitable Giving"
