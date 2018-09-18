@@ -47,10 +47,6 @@ class Other extends React.Component {
         />
         <section className="container dg-infoSection">
           <div className={`row ${styles.infoSectionRow}`}>
-            <div className={`col-xs-12 col-md-6 ${styles.infoSectionColText}`}>
-              <p>{investments.infoSection.text}</p>
-            </div>
-            <div className="col-lg-1 hidden-lg-down" />
             <div
               className={`col-xs-12 col-md-6 col-lg-5 ${
                 styles.infoSectionColImage
@@ -68,9 +64,16 @@ class Other extends React.Component {
                 />
               </div>
             </div>
+            <div className="col-lg-1 hidden-lg-down" />
+            <div className={`col-xs-12 col-md-6 ${styles.infoSectionColText}`}>
+              <p className="style-as-h2">
+                {investments.infoSection.description1}
+              </p>
+              <p>{investments.infoSection.description2}</p>
+            </div>
             <div className={`row ${styles.infoSectionRow}`}>
               <div className="col-xs-12">
-                <p>{investments.infoSection.furtherText}</p>
+                <p>{investments.infoSection.description3}</p>
               </div>
             </div>
           </div>
