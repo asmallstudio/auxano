@@ -5,9 +5,8 @@ module.exports = {
   plugins: {
     "postcss-normalize": {},
     "postcss-custom-properties": {
-      variables: require("../lib/theme.json"),
-      appendVariables: true,
-      warnings: true
+      importFrom: "./src/lib/theme.json",
+      exportTo: "./src/components/styles/theme.css"
     },
     "postcss-flexbugs-fixes": {},
     autoprefixer: {
