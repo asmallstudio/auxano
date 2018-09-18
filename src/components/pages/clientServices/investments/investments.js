@@ -19,7 +19,6 @@ class Other extends React.Component {
 
   render() {
     const { investments } = this.props;
-    console.log(investments);
 
     return (
       <React.Fragment>
