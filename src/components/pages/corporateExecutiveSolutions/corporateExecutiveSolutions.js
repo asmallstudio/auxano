@@ -4,7 +4,6 @@ import { pageChange } from "../../../lib/utils/pageChange";
 import { getFullPageTitle } from "../../../lib/utils/copy";
 
 import styles from "./corporateExecutiveSolutions.scss";
-import FullWidthSectionText from "../../ui/fullWidthSectionText/FullWidthSectionText";
 import FullWidthSectionActionLink from "../../ui/fullWidthSectionActionLink/FullWidthSectionActionLink";
 import SubscribeSection from "../../ui/subscribeSection/SubscribeSection";
 
@@ -58,10 +57,6 @@ class Other extends React.Component {
             </div>
           </ul>
         </section>
-        <FullWidthSectionText
-          text={corporateExecutiveSolutions.pullquote}
-          className="dg-pullquote"
-        />
         <FullWidthSectionActionLink
           linkText={corporateExecutiveSolutions.actionBanner.text}
           to={corporateExecutiveSolutions.actionBanner.link}
