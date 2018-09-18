@@ -43,14 +43,14 @@ class Other extends React.Component {
         <section className="container dg-serviceInfo">
           <ul className={`row ${styles.serviceInfoList}`}>
             <div className="col-xs-12 col-md-6">
-              <li>{businessServices.serviceInfo.list.item1}</li>
-              <li>{businessServices.serviceInfo.list.item2}</li>
-              <li>{businessServices.serviceInfo.list.item3}</li>
+              <li>{businessServices.serviceInfoList.item1}</li>
+              <li>{businessServices.serviceInfoList.item2}</li>
+              <li>{businessServices.serviceInfoList.item3}</li>
             </div>
             <div className="col-xs-12 col-md-6">
-              <li>{businessServices.serviceInfo.list.item4}</li>
-              <li>{businessServices.serviceInfo.list.item5}</li>
-              <li>{businessServices.serviceInfo.list.item6}</li>
+              <li>{businessServices.serviceInfoList.item4}</li>
+              <li>{businessServices.serviceInfoList.item5}</li>
+              <li>{businessServices.serviceInfoList.item6}</li>
             </div>
           </ul>
         </section>

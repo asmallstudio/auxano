@@ -448,7 +448,7 @@ collections:
       - label: "Personal Finances"
         name: personalFinances
         file: src/data/pages/personalFinances.yml
-        path: /client-services/personalFinances
+        path: /client-services/personal-finances
         fields:
           - label: "Page Title"
             name: pageTitle
@@ -678,7 +678,7 @@ collections:
       - label: "Estate Planning"
         name: estatePlanning
         file: src/data/pages/estatePlanning.yml
-        path: /client-services/estatePlanning
+        path: /client-services/estate-planning
         fields:
           - label: "Page Title"
             name: pageTitle
@@ -726,7 +726,7 @@ collections:
       - label: "Risk Management"
         name: riskManagement
         file: src/data/pages/riskManagement.yml
-        path: /client-services/riskManagement
+        path: /client-services/risk-management
         fields:
           - label: "Page Title"
             name: pageTitle
@@ -808,7 +808,7 @@ collections:
       - label: "Tax Planning"
         name: taxPlanning
         file: src/data/pages/taxPlanning.yml
-        path: /client-services/taxPlanning
+        path: /client-services/tax-planning
         fields:
           - label: "Page Title"
             name: pageTitle
@@ -839,6 +839,135 @@ collections:
               - label: "Description Part 3"
                 name: description3
                 widget: text
+          - label: "Action Banner"
+            name: actionBanner
+            widget: object
+            fields:
+              - label: "Text"
+                name: text
+                widget: string
+              - label: "Link"
+                name: link
+                widget: string
+          - label: "Subscribe"
+            name: subscribe
+            widget: object
+            fields:
+              - label: "Heading"
+                name: heading
+                widget: string
+              - label: "Subheading"
+                name: text
+                widget: text
+      - label: "Business Services"
+        name: businessServices
+        file: src/data/pages/businessServices.yml
+        path: /client-services/business-services
+        fields:
+          - label: "Page Title"
+            name: pageTitle
+            widget: string
+          - label: "Hero"
+            name: hero
+            widget: object
+            fields:
+              - label: "Service Name"
+                name: name
+                widget: string
+              - label: "Heading"
+                name: title
+                widget: string
+          - label: "Service Information"
+            name: serviceInfoList
+            widget: object
+            fields:
+              - label: "Item 1"
+                name: item1
+                widget: string
+              - label: "Item 2"
+                name: item2
+                widget: string
+              - label: "Item 3"
+                name: item3
+                widget: string
+              - label: "Item 4"
+                name: item4
+                widget: string
+              - label: "Item 5"
+                name: item5
+                widget: string
+              - label: "Item 6"
+                name: item6
+                widget: string
+          - label: "Pullquote"
+            name: pullquote
+            widget: text
+          - label: "Action Banner"
+            name: actionBanner
+            widget: object
+            fields:
+              - label: "Text"
+                name: text
+                widget: string
+              - label: "Link"
+                name: link
+                widget: string
+          - label: "Subscribe"
+            name: subscribe
+            widget: object
+            fields:
+              - label: "Heading"
+                name: heading
+                widget: string
+              - label: "Subheading"
+                name: text
+                widget: text
+      - label: "Corporate Executive Solutions"
+        name: corporateExecutiveSolutions
+        file: src/data/pages/corporateExecutiveSolutions.yml
+        path: /corporate-executive-solutions
+        fields:
+          - label: "Page Title"
+            name: pageTitle
+            widget: string
+          - label: "Hero"
+            name: hero
+            widget: object
+            fields:
+              - label: "Title"
+                name: title
+                widget: string
+              - label: "Description"
+                name: description
+                widget: string
+          - label: "Service Information"
+            name: serviceInfoList
+            widget: object
+            fields:
+              - label: "Item 1"
+                name: item1
+                widget: string
+              - label: "Item 2"
+                name: item2
+                widget: string
+              - label: "Item 3"
+                name: item3
+                widget: string
+              - label: "Item 4"
+                name: item4
+                widget: string
+              - label: "Item 5"
+                name: item5
+                widget: string
+              - label: "Item 6"
+                name: item6
+                widget: string
+              - label: "Item 7"
+                name: item7
+                widget: string
+              - label: "Item 8"
+                name: item8
+                widget: string
           - label: "Action Banner"
             name: actionBanner
             widget: object
