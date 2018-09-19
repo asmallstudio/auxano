@@ -10,10 +10,12 @@ module.exports = {
     },
     "postcss-import": {},
     "postcss-normalize": {},
+    /* The previosu instance of postcss-custom-properties moved 
+     * the variables from JSON to CSS for import via postcss-import.
+     * Now, the custom properties need to be processed for fallbacks.
+     */
     // eslint-disable-next-line no-dupe-keys
-    "postcss-custom-properties": {
-      importFrom: "./src/lib/theme.json"
-    },
+    "postcss-custom-properties": {},
     "postcss-flexbugs-fixes": {},
     autoprefixer: {
       flexbox: "no-2009"
