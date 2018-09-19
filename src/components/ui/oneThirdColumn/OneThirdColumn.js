@@ -5,15 +5,19 @@ import styles from "./oneThirdColumn.scss";
 
 class OneThirdColumn extends React.Component {
   render() {
-    const { data } = this.props;
+    const { data, className = "" } = this.props;
     return (
-      <div className={`${styles.col} col-xs-12 col-md-4`}>
-        <div className={styles.colIcon} />
-        <h2 className="style-as-h3">{data.heading}</h2>
+      <div className={`${styles.col} col-xs-12 col-md-4 ${className}`}>
+        {typeof data.icon !== "undefined" && (
+          <img className={styles.colIcon} src={data.icon} alt="" />
+        )}
+        <h2>{data.heading}</h2>
         <p>{data.text}</p>
-        <LinkWithArrow to={data.link} className={styles.colLearnMore}>
-          Learn More
-        </LinkWithArrow>
+        {typeof data.link !== "undefined" && (
+          <LinkWithArrow to={data.link} className={styles.colLearnMore}>
+            Learn More
+          </LinkWithArrow>
+        )}
       </div>
     );
   }

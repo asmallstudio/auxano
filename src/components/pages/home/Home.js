@@ -19,9 +19,18 @@ class Home extends React.Component {
     return (
       <React.Fragment>
         <div className={`container--fluid ${styles.heroContainer}`}>
-          <div className={`container`}>
+          <div
+            className={`${styles.heroImageContainer} ${styles.dingusDotHero}`}
+          >
+            <img src={home.hero.image} className={styles.heroImage} alt="" />
+          </div>
+          <div className="container">
             <div className="row">
-              <div className={`col-xs-12 col-md-6 ${styles.heroTextContainer}`}>
+              <div
+                className={`col-xs-12 col-md-6 ${
+                  styles.heroTextContainer
+                } dg-hero`}
+              >
                 <h1>{home.hero.title}</h1>
                 <p>{home.hero.subtitle}</p>
                 <CallToActionLink to={home.hero.ctaLink}>
@@ -31,14 +40,16 @@ class Home extends React.Component {
             </div>
           </div>
         </div>
-        <FullWidthSectionText text={home.pullquote} />
+        <FullWidthSectionText text={home.pullquote} className="dg-pullquote" />
         <FullWidthSectionActionLink
           linkText={home.learnMore.text}
           to={home.learnMore.link}
+          className="dg-learnMore"
         />
         <SubscribeSection
           heading={home.subscribe.heading}
           text={home.subscribe.text}
+          className="dg-subscribe"
         />
       </React.Fragment>
     );

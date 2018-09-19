@@ -9,6 +9,11 @@ import ExtractTextPlugin from "extract-text-webpack-plugin";
  * @returns {object} The new Webpack config
  */
 const createWebpackConfig = (config, { defaultLoaders, stage }) => {
+  if (stage === "prod") {
+    config.entry = ["@babel/polyfill", config.entry];
+  } else if (stage === "dev") {
+    config.entry = ["@babel/polyfill", ...config.entry];
+  }
   config.module.rules = [
     {
       oneOf: [
@@ -25,9 +30,9 @@ const createWebpackConfig = (config, { defaultLoaders, stage }) => {
                       importLoaders: 2,
                       localIdentName: "[name]__[local]--[hash:base64:5]",
                       sourceMap: true,
+                      minimize: false,
                       namedExport: true,
-                      camelCase: true,
-                      minimize: false
+                      camelCase: true
                     }
                   },
                   {
@@ -52,13 +57,13 @@ const createWebpackConfig = (config, { defaultLoaders, stage }) => {
                     {
                       loader: "css-loader",
                       options: {
-                        minimize: true,
-                        sourceMap: true,
                         modules: true,
                         importLoaders: 2,
                         localIdentName: process.env.REACT_STATIC_DEBUG
                           ? "[name]__[local]--[hash:base64:5]"
-                          : null
+                          : null,
+                        sourceMap: true,
+                        minimize: false
                       }
                     },
                     {
@@ -87,6 +92,9 @@ const createWebpackConfig = (config, { defaultLoaders, stage }) => {
       ]
     }
   ];
+  config.plugins.push(
+    new ExtractTextPlugin({ filename: "[name].css", ignoreOrder: true })
+  );
   return config;
 };
 

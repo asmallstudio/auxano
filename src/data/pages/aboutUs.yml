@@ -1,17 +1,16 @@
 pageTitle: About Us
 hero:
-  ctaLink: '#'
-  ctaText: Meet the Team
-  image: /uploads/about-us-hero.png
+  title: "Stewardship is our core."
   subtitle: >-
     Our vision is to be a multi-generational wealth management firm that helps
     clients integrate their vision and values with their wealth. As a fiduciary,
     we utilize a fee only system as a way to foster relationships with our
     clients and not with their money.
-  title: ' Stewardship is our core.'
-textSection: >-
-  Stewardship: the careful and responsible management of something entrusted to
-  one's care. —Merriam-Webster Dictionary
+  image: "/uploads/about-us-hero.png"
+  ctaText: Meet the Team
+  ctaLink: "#"
+textSection: |-
+  **Stewardship:** the careful and responsible management of something entrusted to one's care. —_Merriam-Webster Dictionary_
 infoSection1:
   heading: Community
   image:

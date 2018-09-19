@@ -2,13 +2,15 @@ import React from "react";
 import { Carousel } from "react-responsive-carousel";
 import styles from "./carousel.scss";
 
+// yarn add react-responsive-carousel
+
 class AuxanoCarousel extends React.Component {
   render() {
     const { items } = this.props;
 
     if (!items || items.length === 0) return null;
     return (
-      <div>
+      <div className="dg-carousel">
         <Carousel
           className={styles.carousel}
           showArrows={false}

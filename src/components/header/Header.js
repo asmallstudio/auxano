@@ -107,16 +107,6 @@ class Header extends React.Component {
             >
               <li className="style-as-h3">
                 <Link
-                  to="/"
-                  activeClassName={styles.activeLink}
-                  onClick={this._menuClose}
-                  exact
-                >
-                  Home
-                </Link>
-              </li>
-              <li className="style-as-h3">
-                <Link
                   to="/about-us"
                   activeClassName={styles.activeLink}
                   onClick={this._menuClose}
@@ -133,6 +123,16 @@ class Header extends React.Component {
                   exact
                 >
                   Our Approach
+                </Link>
+              </li>
+              <li className="style-as-h3">
+                <Link
+                  to="/client-services"
+                  activeClassName={styles.activeLink}
+                  onClick={this._menuClose}
+                  exact
+                >
+                  Client Services
                 </Link>
               </li>
               <li className="style-as-h3">

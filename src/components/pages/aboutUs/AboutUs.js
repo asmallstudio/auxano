@@ -26,11 +26,13 @@ class AboutUs extends React.Component {
         <Head>
           <title>{getFullPageTitle(aboutUs.pageTitle)}</title>
         </Head>
-        <section
-          className={`container--fluid ${styles.heroContainer}`}
-          style={{ backgroundImage: `url(${aboutUs.hero.image})` }}
-        >
-          <div className={`container`}>
+        <section className={`container--fluid ${styles.heroContainer} dg-hero`}>
+          <div
+            className={`${styles.heroImageContainer} ${styles.dingusDotHero}`}
+          >
+            <img src={aboutUs.hero.image} className={styles.heroImage} alt="" />
+          </div>
+          <div className="container">
             <div className="row">
               <div className={`col-xs-12 col-md-6 ${styles.heroTextContainer}`}>
                 <h1>{aboutUs.hero.title}</h1>
@@ -43,7 +45,7 @@ class AboutUs extends React.Component {
           </div>
         </section>
         <FullWidthSectionText text={aboutUs.textSection} />
-        <section className="container">
+        <section className="container dg-infoSection1">
           <div className={`row ${styles.infoSection1Row}`}>
             <div className={`col-xs-12 col-md-6 ${styles.infoSection1ColText}`}>
               <h2>{aboutUs.infoSection1.heading}</h2>
@@ -72,10 +74,12 @@ class AboutUs extends React.Component {
         <FullWidthSectionActionLink
           linkText={aboutUs.actionBanner.text}
           to={aboutUs.actionBanner.link}
+          className="dg-actionBanner"
         />
         <SubscribeSection
           heading={aboutUs.subscribe.heading}
           text={aboutUs.subscribe.text}
+          className="dg-subscribe"
         />
       </React.Fragment>
     );

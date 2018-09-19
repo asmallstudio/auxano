@@ -1,0 +1,47 @@
+pageTitle: "Client Services"
+hero:
+  title: "Go further than you ever thought possible."
+services:
+  item1:
+    icon: "/uploads/personal-finance.svg"
+    heading: "Personal Finance"
+    text: "We know you have goals for your future. We’ll help you manage your personal finances to meet them."
+    link: "/client-services/personal-finances/"
+  item2:
+    icon: "/uploads/investments.svg"
+    heading: "Investments"
+    text: "Good investments have the power to transform lives. We’ll help you grow your assets responsibly."
+    link: "/client-services/investments/"
+  item3:
+    icon: "/uploads/estate-planning.svg"
+    heading: "Estate Planning"
+    text: "Estate planning can often be complex. Our integrated process will help make sure that nothing is missed."
+    link: "/client-services/estate-planning/"
+  item4:
+    icon: "/uploads/risk-management.svg"
+    heading: "Risk Management"
+    text: "Its important to protect your assets. We can help you manage your financial risks and avoid potential pitfalls."
+    link: "/client-services/risk-management/"
+  item5:
+    icon: "/uploads/tax-planning.svg"
+    heading: "Tax Planning"
+    text: "By creating unique tax models, we’ll help you plan ahead and be better prepared for this annual process."
+    link: "/client-services/tax-planning/"
+  item6:
+    icon: "/uploads/business-services.svg"
+    heading: "Business Services"
+    text: "Lorem ipsum dolor sit amet, consour adipiscing elit, sed do eiusmo tempor incididunt ut labore et dolore magna."
+    link: "/client-services/business-services/"
+infoSection:
+  icon: "/uploads/giving.svg"
+  heading: "Charitable Giving"
+  image:
+    alt: what is important about this image? what does it communicate?
+    src: /uploads/charitable-giving.png
+  text: "Charitable giving is often an important part of our clients’ legacy. As stewards, we resonate with this spirit of generosity. We’ll help you align your giving with your estate planning to ensure that you are meeting your goals for giving."
+actionBanner:
+  link: /contact
+  text: Contact Us
+subscribe:
+  heading: Schedule an introduction with an advisor.
+  text: All personal information kept private.

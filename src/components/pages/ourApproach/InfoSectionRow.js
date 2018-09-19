@@ -7,10 +7,11 @@ class InfoSectionRow extends React.Component {
     const {
       imgSrc = "https://via.placeholder.com/300x180",
       imgAlt = "placeholder image",
-      children
+      children,
+      className = ""
     } = this.props;
     return (
-      <div className={`row ${styles.infoSectionRow}`}>
+      <div className={`row ${styles.infoSectionRow} ${className}`}>
         <div className={`col-xs-12 col-md-6 ${styles.infoSectionColImage}`}>
           <div
             className={`${styles.imgContainer} ${styles.dingusDotRelative} ${
