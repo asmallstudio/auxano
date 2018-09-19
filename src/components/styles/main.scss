@@ -1,4 +1,5 @@
 @import-normalize; // https://www.npmjs.com/package/postcss-normalize
-@import "./layout.scss";
-@import "./variables.scss";
-@import "./typography.scss";
+@import "theme.css";
+@import "layout.scss";
+@import "variables.scss";
+@import "typography.scss";

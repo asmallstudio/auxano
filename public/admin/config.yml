@@ -292,7 +292,7 @@ collections:
         file: src/data/pages/clientServices.yml
         path: /client-services
         fields:
-          - label: "Client Services"
+          - label: "Page Title"
             name: pageTitle
             widget: string
           - label: "Hero"
@@ -445,3 +445,546 @@ collections:
                   - label: "Image Description"
                     name: alt
                     widget: string
+      - label: "Personal Finances"
+        name: personalFinances
+        file: src/data/pages/personalFinances.yml
+        path: /client-services/personal-finances
+        fields:
+          - label: "Page Title"
+            name: pageTitle
+            widget: string
+          - label: "Hero"
+            name: hero
+            widget: object
+            fields:
+              - label: "Service Name"
+                name: name
+                widget: string
+              - label: "Heading"
+                name: title
+                widget: string
+          - label: "Pullquote"
+            name: pullquote
+            widget: text
+          - label: "Service Information"
+            name: serviceInfo
+            widget: object
+            fields:
+              - label: "Service Description"
+                name: description
+                widget: text
+              - label: "Description List"
+                name: list
+                widget: object
+                fields:
+                  - label: "List Item 1"
+                    name: item1
+                    widget: object
+                    fields:
+                      - label: "Icon"
+                        name: icon
+                        widget: image
+                      - label: "Text"
+                        name: text
+                        widget: string
+                  - label: "List Item 2"
+                    name: item2
+                    widget: object
+                    fields:
+                      - label: "Icon"
+                        name: icon
+                        widget: image
+                      - label: "Text"
+                        name: text
+                        widget: string
+                  - label: "List Item 3"
+                    name: item3
+                    widget: object
+                    fields:
+                      - label: "Icon"
+                        name: icon
+                        widget: image
+                      - label: "Text"
+                        name: text
+                        widget: string
+          - label: "Action Banner"
+            name: actionBanner
+            widget: object
+            fields:
+              - label: "Text"
+                name: text
+                widget: string
+              - label: "Link"
+                name: link
+                widget: string
+          - label: "Subscribe"
+            name: subscribe
+            widget: object
+            fields:
+              - label: "Heading"
+                name: heading
+                widget: string
+              - label: "Subheading"
+                name: text
+                widget: text
+      - label: "Investments"
+        name: investments
+        file: src/data/pages/investments.yml
+        path: /client-services/investments
+        fields:
+          - label: "Page Title"
+            name: pageTitle
+            widget: string
+          - label: "Hero"
+            name: hero
+            widget: object
+            fields:
+              - label: "Service Name"
+                name: name
+                widget: string
+              - label: "Heading"
+                name: title
+                widget: string
+          - label: "Pullquote 1"
+            name: pullquote1
+            widget: text
+          - label: "Info Section"
+            name: infoSection
+            widget: object
+            fields:
+            - label: "Image"
+                name: image
+                widget: object
+                fields:
+                  - label: "Image"
+                    name: src
+                    widget: image
+                  - label: "Image Description"
+                    name: alt
+                    widget: string
+            - label: "Description 1"
+              name: description1
+              widget: string
+            - label: "Description 2"
+              name: description2
+              widget: string
+            - label: "Description 3"
+              name: description3
+              widget: string
+          - label: "Pullquote 2"
+            name: pullquote2
+            widget: text
+          - label: "Info Table"
+            name: infoTable
+            widget: object
+            fields:
+            - label: "Table Head"
+              name: tableHead
+              widget: object
+              fields:
+              - label: "Column Heading"
+                name: tableHead1
+                widget: string
+              - label: "Column Heading"
+                name: tableHead2
+                widget: string
+            - label: "Table Row 1"
+              name: tableRow1
+              widget: object
+              fields:
+              - label: "Row Heading"
+                name: tableRowHead
+                widget: string
+              - label: "Cell 1"
+                name: tableCell1
+                widget: text
+              - label: "Cell 2"
+                name: tableCell2
+                widget: text
+            - label: "Table Row 2"
+              name: tableRow2
+              widget: object
+              fields:
+              - label: "Row Heading"
+                name: tableRowHead
+                widget: string
+              - label: "Cell 1"
+                name: tableCell1
+                widget: text
+              - label: "Cell 2"
+                name: tableCell2
+                widget: text
+          - label: "Service Information"
+            name: serviceInfo
+            widget: object
+            fields:
+              - label: "Service Description"
+                name: description
+                widget: text
+              - label: "Description List"
+                name: list
+                widget: object
+                fields:
+                  - label: "List Item 1"
+                    name: item1
+                    widget: object
+                    fields:
+                      - label: "Icon"
+                        name: icon
+                        widget: image
+                      - label: "Text"
+                        name: text
+                        widget: string
+                  - label: "List Item 2"
+                    name: item2
+                    widget: object
+                    fields:
+                      - label: "Icon"
+                        name: icon
+                        widget: image
+                      - label: "Text"
+                        name: text
+                        widget: string
+                  - label: "List Item 3"
+                    name: item3
+                    widget: object
+                    fields:
+                      - label: "Icon"
+                        name: icon
+                        widget: image
+                      - label: "Text"
+                        name: text
+                        widget: string
+          - label: "Action Banner"
+            name: actionBanner
+            widget: object
+            fields:
+              - label: "Text"
+                name: text
+                widget: string
+              - label: "Link"
+                name: link
+                widget: string
+          - label: "Subscribe"
+            name: subscribe
+            widget: object
+            fields:
+              - label: "Heading"
+                name: heading
+                widget: string
+              - label: "Subheading"
+                name: text
+                widget: text
+      - label: "Estate Planning"
+        name: estatePlanning
+        file: src/data/pages/estatePlanning.yml
+        path: /client-services/estate-planning
+        fields:
+          - label: "Page Title"
+            name: pageTitle
+            widget: string
+          - label: "Hero"
+            name: hero
+            widget: object
+            fields:
+              - label: "Service Name"
+                name: name
+                widget: string
+              - label: "Heading"
+                name: title
+                widget: string
+          - label: "Service Information"
+            name: serviceInfo
+            widget: object
+            fields:
+              - label: "Description Part 1"
+                name: description1
+                widget: text
+              - label: "Description Part 2"
+                name: description2
+                widget: text
+          - label: "Action Banner"
+            name: actionBanner
+            widget: object
+            fields:
+              - label: "Text"
+                name: text
+                widget: string
+              - label: "Link"
+                name: link
+                widget: string
+          - label: "Subscribe"
+            name: subscribe
+            widget: object
+            fields:
+              - label: "Heading"
+                name: heading
+                widget: string
+              - label: "Subheading"
+                name: text
+                widget: text
+      - label: "Risk Management"
+        name: riskManagement
+        file: src/data/pages/riskManagement.yml
+        path: /client-services/risk-management
+        fields:
+          - label: "Page Title"
+            name: pageTitle
+            widget: string
+          - label: "Hero"
+            name: hero
+            widget: object
+            fields:
+              - label: "Service Name"
+                name: name
+                widget: string
+              - label: "Heading"
+                name: title
+                widget: string
+          - label: "Pullquote"
+            name: pullquote
+            widget: text
+          - label: "Service Information"
+            name: serviceInfo
+            widget: object
+            fields:
+              - label: "Description Part 1"
+                name: description1
+                widget: text
+              - label: "Description List"
+                name: list
+                widget: object
+                fields:
+                  - label: "List Item 1"
+                    name: item1
+                    widget: object
+                    fields:
+                      - label: "Icon"
+                        name: icon
+                        widget: image
+                      - label: "Text"
+                        name: text
+                        widget: string
+                  - label: "List Item 2"
+                    name: item2
+                    widget: object
+                    fields:
+                      - label: "Icon"
+                        name: icon
+                        widget: image
+                      - label: "Text"
+                        name: text
+                        widget: string
+                  - label: "List Item 3"
+                    name: item3
+                    widget: object
+                    fields:
+                      - label: "Icon"
+                        name: icon
+                        widget: image
+                      - label: "Text"
+                        name: text
+                        widget: string
+          - label: "Action Banner"
+            name: actionBanner
+            widget: object
+            fields:
+              - label: "Text"
+                name: text
+                widget: string
+              - label: "Link"
+                name: link
+                widget: string
+          - label: "Subscribe"
+            name: subscribe
+            widget: object
+            fields:
+              - label: "Heading"
+                name: heading
+                widget: string
+              - label: "Subheading"
+                name: text
+                widget: text
+      - label: "Tax Planning"
+        name: taxPlanning
+        file: src/data/pages/taxPlanning.yml
+        path: /client-services/tax-planning
+        fields:
+          - label: "Page Title"
+            name: pageTitle
+            widget: string
+          - label: "Hero"
+            name: hero
+            widget: object
+            fields:
+              - label: "Service Name"
+                name: name
+                widget: string
+              - label: "Heading"
+                name: title
+                widget: string
+          - label: "Pullquote"
+            name: pullquote
+            widget: text
+          - label: "Service Information"
+            name: serviceInfo
+            widget: object
+            fields:
+              - label: "Description Part 1"
+                name: description1
+                widget: text
+              - label: "Description Part 2"
+                name: description2
+                widget: text
+              - label: "Description Part 3"
+                name: description3
+                widget: text
+          - label: "Action Banner"
+            name: actionBanner
+            widget: object
+            fields:
+              - label: "Text"
+                name: text
+                widget: string
+              - label: "Link"
+                name: link
+                widget: string
+          - label: "Subscribe"
+            name: subscribe
+            widget: object
+            fields:
+              - label: "Heading"
+                name: heading
+                widget: string
+              - label: "Subheading"
+                name: text
+                widget: text
+      - label: "Business Services"
+        name: businessServices
+        file: src/data/pages/businessServices.yml
+        path: /client-services/business-services
+        fields:
+          - label: "Page Title"
+            name: pageTitle
+            widget: string
+          - label: "Hero"
+            name: hero
+            widget: object
+            fields:
+              - label: "Service Name"
+                name: name
+                widget: string
+              - label: "Heading"
+                name: title
+                widget: string
+          - label: "Service Information"
+            name: serviceInfoList
+            widget: object
+            fields:
+              - label: "Item 1"
+                name: item1
+                widget: string
+              - label: "Item 2"
+                name: item2
+                widget: string
+              - label: "Item 3"
+                name: item3
+                widget: string
+              - label: "Item 4"
+                name: item4
+                widget: string
+              - label: "Item 5"
+                name: item5
+                widget: string
+              - label: "Item 6"
+                name: item6
+                widget: string
+          - label: "Pullquote"
+            name: pullquote
+            widget: text
+          - label: "Action Banner"
+            name: actionBanner
+            widget: object
+            fields:
+              - label: "Text"
+                name: text
+                widget: string
+              - label: "Link"
+                name: link
+                widget: string
+          - label: "Subscribe"
+            name: subscribe
+            widget: object
+            fields:
+              - label: "Heading"
+                name: heading
+                widget: string
+              - label: "Subheading"
+                name: text
+                widget: text
+      - label: "Corporate Executive Solutions"
+        name: corporateExecutiveSolutions
+        file: src/data/pages/corporateExecutiveSolutions.yml
+        path: /corporate-executive-solutions
+        fields:
+          - label: "Page Title"
+            name: pageTitle
+            widget: string
+          - label: "Hero"
+            name: hero
+            widget: object
+            fields:
+              - label: "Title"
+                name: title
+                widget: string
+              - label: "Description"
+                name: description
+                widget: string
+          - label: "Service Information"
+            name: serviceInfoList
+            widget: object
+            fields:
+              - label: "Item 1"
+                name: item1
+                widget: string
+              - label: "Item 2"
+                name: item2
+                widget: string
+              - label: "Item 3"
+                name: item3
+                widget: string
+              - label: "Item 4"
+                name: item4
+                widget: string
+              - label: "Item 5"
+                name: item5
+                widget: string
+              - label: "Item 6"
+                name: item6
+                widget: string
+              - label: "Item 7"
+                name: item7
+                widget: string
+              - label: "Item 8"
+                name: item8
+                widget: string
+          - label: "Action Banner"
+            name: actionBanner
+            widget: object
+            fields:
+              - label: "Text"
+                name: text
+                widget: string
+              - label: "Link"
+                name: link
+                widget: string
+          - label: "Subscribe"
+            name: subscribe
+            widget: object
+            fields:
+              - label: "Heading"
+                name: heading
+                widget: string
+              - label: "Subheading"
+                name: text
+                widget: text

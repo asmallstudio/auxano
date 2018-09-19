@@ -50,7 +50,7 @@ class Other extends React.Component {
               className="dg-item2"
             />
             <OneThirdColumn
-              data={clientServices.services.item2}
+              data={clientServices.services.item3}
               className="dg-item3"
             />
           </div>

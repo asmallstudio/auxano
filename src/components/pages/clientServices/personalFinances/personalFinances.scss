@@ -1,0 +1,89 @@
+@import "../../../styles/utils.scss";
+
+.heroContainer {
+  padding: 6em 0;
+}
+
+.heroTextContainer {
+  text-align: center;
+  position: relative;
+
+  h1 {
+    margin-bottom: 0.5em;
+  }
+
+  @include respond-above(md) {
+    text-align: left;
+  }
+}
+
+.dingusDotContainer {
+  position: relative;
+  overflow-x: hidden;
+}
+
+.dingusDot1 {
+  display: none;
+  z-index: -1;
+  position: absolute;
+  top: calc(50% - 5rem);
+  height: 10rem;
+  width: 10rem;
+  background-color: var(--casablanca);
+  border-radius: 50%;
+
+  @include respond-above(md) {
+    display: block;
+    right: -5rem;
+  }
+}
+
+.serviceInfoRow {
+  align-items: flex-start;
+  margin: var(--space-l5) 0;
+}
+
+.serviceInfoText {
+  text-align: center;
+  margin-bottom: 3em;
+
+  h2 {
+    margin-bottom: 0.67em;
+  }
+
+  p {
+    margin-bottom: 0;
+  }
+
+  @include respond-above(md) {
+    text-align: left;
+  }
+
+  @include respond-above(md) {
+    margin-bottom: var(--space-l2);
+  }
+}
+
+.serviceInfoList {
+  list-style: none;
+}
+
+.serviceInfoListItem {
+  display: flex;
+  align-items: center;
+  margin-bottom: var(--space-l3);
+
+  p {
+    flex: 1 0;
+    margin-left: var(--space-l2);
+  }
+}
+
+.serviceInfoListItemImage {
+  display: inline-block;
+  height: 3rem;
+  width: 3rem;
+  background-color: var(--grey-40);
+  border-radius: 0.5rem;
+  border: none;
+}
