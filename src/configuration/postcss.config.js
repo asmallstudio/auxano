@@ -10,7 +10,7 @@ module.exports = {
     },
     "postcss-import": {},
     "postcss-normalize": {},
-    /* The previosu instance of postcss-custom-properties moved 
+    /* The previous instance of postcss-custom-properties moved 
      * the variables from JSON to CSS for import via postcss-import.
      * Now, the custom properties need to be processed for fallbacks.
      */
