@@ -30,9 +30,9 @@ const createWebpackConfig = (config, { defaultLoaders, stage }) => {
                       importLoaders: 2,
                       localIdentName: "[name]__[local]--[hash:base64:5]",
                       sourceMap: true,
+                      minimize: false,
                       namedExport: true,
-                      camelCase: true,
-                      minimize: false
+                      camelCase: true
                     }
                   },
                   {
@@ -57,13 +57,13 @@ const createWebpackConfig = (config, { defaultLoaders, stage }) => {
                     {
                       loader: "css-loader",
                       options: {
-                        minimize: true,
-                        sourceMap: true,
                         modules: true,
                         importLoaders: 2,
                         localIdentName: process.env.REACT_STATIC_DEBUG
                           ? "[name]__[local]--[hash:base64:5]"
-                          : null
+                          : null,
+                        sourceMap: true,
+                        minimize: false
                       }
                     },
                     {
