@@ -1,0 +1,32 @@
+.coverSheet {
+  position: relative;
+  z-index: 101;
+  background-color: var(--fountain-blue);
+  padding: var(--space-l3);
+}
+
+.coverSheetContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+}
+
+.text {
+  width: 100%;
+
+  h1 {
+    color: var(--white);
+    white-space: pre-line;
+    max-width: 40rem;
+  }
+
+  p {
+    color: var(--white-40);
+    margin-top: var(--space-l2);
+  }
+}
+
+.arrow {
+  align-self: center;
+}

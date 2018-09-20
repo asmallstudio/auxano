@@ -6,6 +6,7 @@ import Routes from "react-static-routes";
 import Header from "./header/Header";
 import Footer from "./footer/Footer";
 import constants from "../lib/constants.json";
+import CoverSheet from "./ui/coverSheet/CoverSheet";
 
 import "./styles/main.scss";
 import appStyles from "./app.scss";
@@ -16,6 +17,7 @@ const App = () => (
       <Head>
         <title>{constants.siteMeta.title}</title>
       </Head>
+      <CoverSheet />
       <Header />
       <main className={appStyles.routesContainer}>
         <Routes />
