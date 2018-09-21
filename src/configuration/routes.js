@@ -126,7 +126,7 @@ const createRoutes = async () => {
     // Make an index route for every 5 blog posts
     ...makePageRoutes({
       items: newsItems,
-      pageSize: 10,
+      pageSize: 2,
       pageToken: "page", // use page for the prefix, eg. news/page/3
       route: {
         // Use this route as the base route
@@ -143,7 +143,7 @@ const createRoutes = async () => {
         // Make the routes for each blog post
         children: posts.map(post => ({
           path: `${post.slug}`,
-          component: "src/components/pages/news/posts/Posts",
+          component: "src/components/pages/news/post/Post",
           getData: () => ({
             post
           })

@@ -13,7 +13,7 @@ class Footer extends React.Component {
             <nav className="">
               <ul className={`N2 ${styles.linkList}`}>
                 <li>
-                  <Link to="#" activeClassName={styles.activeLink}>
+                  <Link to="/news" activeClassName={styles.activeLink}>
                     News & Resources
                   </Link>
                 </li>

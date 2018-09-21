@@ -3,7 +3,8 @@ import { RouteData, Link, Head } from "react-static";
 import { getFullPageTitle } from "../../../../lib/utils/copy";
 import { pageChange } from "../../../../lib/utils/pageChange";
 
-// import styles from "./index.scss";
+import LinkWithArrow from "../../../ui/linkWithArrow/LinkWithArrow";
+import styles from "./index.scss";
 
 const PaginationLink = ({ ...rest }) => <Link {...rest} />;
 
@@ -26,35 +27,48 @@ class Index extends React.Component {
             </Head>
             <div className="container">
               <div className="row">
-                <div className="col-xs-12">
+                <div className={`col-xs-12 ${styles.articleList}`}>
                   <h1 className="style-as-h3">News & Resources</h1>
                   <ul>
                     {posts.map(post => (
-                      <li key={post.id}>
-                        <Link to={`/news/${post.slug}/`}>{post.title}</Link>
+                      <li key={post.id} className={styles.indexArticle}>
+                        <Link
+                          to={`/news/${post.slug}/`}
+                          className={styles.postTitle}
+                        >
+                          {post.title}
+                        </Link>
+                        <LinkWithArrow
+                          to={`/news/${post.slug}/`}
+                          className={styles.arrowLink}
+                        >
+                          Read more
+                        </LinkWithArrow>
                       </li>
                     ))}
                   </ul>
 
                   {totalPages > 1 && (
-                    <div>
+                    <nav className={styles.pagination}>
                       <h3>Pages</h3>
-                      {Array.from(new Array(totalPages), (d, i) => i).map(
-                        page => {
-                          const nextPage = page + 1;
-                          return (
-                            <span key={nextPage}>
-                              <PaginationLink
-                                to={`/news/page/${nextPage}`}
-                                isCurrent={nextPage === currentPage}
-                              >
-                                {nextPage}
-                              </PaginationLink>
-                            </span>
-                          );
-                        }
-                      )}
-                    </div>
+                      <ul className={styles.pageList}>
+                        {Array.from(new Array(totalPages), (d, i) => i).map(
+                          page => {
+                            const nextPage = page + 1;
+                            return (
+                              <li key={nextPage}>
+                                <PaginationLink
+                                  to={`/news/page/${nextPage}`}
+                                  isCurrent={nextPage === currentPage}
+                                >
+                                  {nextPage}
+                                </PaginationLink>
+                              </li>
+                            );
+                          }
+                        )}
+                      </ul>
+                    </nav>
                   )}
                 </div>
               </div>
