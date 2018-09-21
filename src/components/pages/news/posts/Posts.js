@@ -24,7 +24,7 @@ class Post extends React.Component {
             </Head>
             <div className="container">
               <div className="row">
-                <div className="col-xs-12">
+                <div className="col-xs-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
                   <h1>{post.title}</h1>
                   <p>{post.body}</p>
                 </div>
