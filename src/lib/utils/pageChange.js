@@ -5,6 +5,8 @@
 const pageChange = () => {
   if (document.activeElement.nodeName === "A") {
     document.activeElement.blur();
+    window.localStorage.setItem("showCover", false);
+    console.log("change", window.localStorage.getItem("showCover"));
   }
 };
 
