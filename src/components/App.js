@@ -26,6 +26,22 @@ class App extends React.Component {
     });
   };
 
+  _checkCoverStateOnScroll = () => {
+    if (window.scrollY > window.innerHeight) {
+      this._updateDoNotShowCoverState(true);
+      window.scrollTo(0, 0);
+      window.removeEventListener(
+        "scroll",
+        this._checkCoverStateOnScroll,
+        false
+      );
+    }
+  };
+
+  componentDidMount() {
+    window.addEventListener("scroll", this._checkCoverStateOnScroll, false);
+  }
+
   render() {
     const { doNotShowCover } = this.state;
     return (
@@ -35,9 +51,6 @@ class App extends React.Component {
             <title>{constants.siteMeta.title}</title>
           </Head>
           {doNotShowCover ? null : <CoverSheet />}
-          <button onClick={() => this._updateDoNotShowCoverState(true)}>
-            {"Scrolled past header"}
-          </button>
           <Header />
           <main className={appStyles.routesContainer}>
             <Routes />
