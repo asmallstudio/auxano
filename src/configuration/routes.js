@@ -126,7 +126,7 @@ const createRoutes = async () => {
     // Make an index route for every 5 blog posts
     ...makePageRoutes({
       items: newsItems,
-      pageSize: 2,
+      pageSize: 10,
       pageToken: "page", // use page for the prefix, eg. news/page/3
       route: {
         // Use this route as the base route
