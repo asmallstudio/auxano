@@ -29,8 +29,8 @@ const createRoutes = () => {
   const businessServices = getSingleFileYaml(
     "./src/data/pages/clientServices/businessServices.yml"
   );
-  const corporateExecutiveSolutions = getSingleFileYaml(
-    "./src/data/pages/corporateExecutiveSolutions.yml"
+  const corporateSolutions = getSingleFileYaml(
+    "./src/data/pages/corporateSolutions.yml"
   );
   const contact = getSingleFileYaml("./src/data/pages/contact.yml");
   const other = getSingleFileYaml("./src/data/pages/other.yml");
@@ -114,11 +114,10 @@ const createRoutes = () => {
       ]
     },
     {
-      path: "/corporate-executive-solutions",
-      component:
-        "src/components/pages/corporateExecutiveSolutions/CorporateExecutiveSolutions",
+      path: "/corporate-solutions",
+      component: "src/components/pages/corporateSolutions/CorporateSolutions",
       getData: () => ({
-        corporateExecutiveSolutions
+        corporateSolutions
       })
     },
     {
