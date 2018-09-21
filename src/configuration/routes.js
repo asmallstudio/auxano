@@ -61,53 +61,57 @@ const createRoutes = () => {
       component: "src/components/pages/clientServices/ClientServices",
       getData: () => ({
         clientServices
-      })
-    },
-    {
-      path: "/client-services/personal-finances",
-      component:
-        "src/components/pages/clientServices/personalFinances/PersonalFinances",
-      getData: () => ({
-        personalFinances
-      })
-    },
-    {
-      path: "/client-services/investments",
-      component: "src/components/pages/clientServices/investments/investments",
-      getData: () => ({
-        investments
-      })
-    },
-    {
-      path: "/client-services/estate-planning",
-      component:
-        "src/components/pages/clientServices/estatePlanning/EstatePlanning",
-      getData: () => ({
-        estatePlanning
-      })
-    },
-    {
-      path: "/client-services/risk-management",
-      component:
-        "src/components/pages/clientServices/riskManagement/RiskManagement",
-      getData: () => ({
-        riskManagement
-      })
-    },
-    {
-      path: "/client-services/tax-planning",
-      component: "src/components/pages/clientServices/taxPlanning/TaxPlanning",
-      getData: () => ({
-        taxPlanning
-      })
-    },
-    {
-      path: "/client-services/business-services",
-      component:
-        "src/components/pages/clientServices/businessServices/BusinessServices",
-      getData: () => ({
-        businessServices
-      })
+      }),
+      children: [
+        {
+          path: "/personal-finances",
+          component:
+            "src/components/pages/clientServices/personalFinances/PersonalFinances",
+          getData: () => ({
+            personalFinances
+          })
+        },
+        {
+          path: "/investments",
+          component:
+            "src/components/pages/clientServices/investments/investments",
+          getData: () => ({
+            investments
+          })
+        },
+        {
+          path: "/estate-planning",
+          component:
+            "src/components/pages/clientServices/estatePlanning/EstatePlanning",
+          getData: () => ({
+            estatePlanning
+          })
+        },
+        {
+          path: "/risk-management",
+          component:
+            "src/components/pages/clientServices/riskManagement/RiskManagement",
+          getData: () => ({
+            riskManagement
+          })
+        },
+        {
+          path: "/tax-planning",
+          component:
+            "src/components/pages/clientServices/taxPlanning/TaxPlanning",
+          getData: () => ({
+            taxPlanning
+          })
+        },
+        {
+          path: "/business-services",
+          component:
+            "src/components/pages/clientServices/businessServices/BusinessServices",
+          getData: () => ({
+            businessServices
+          })
+        }
+      ]
     },
     {
       path: "/corporate-executive-solutions",
