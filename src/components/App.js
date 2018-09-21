@@ -15,42 +15,29 @@ class App extends React.Component {
   constructor(props) {
     super(props);
 
-    this.state = {};
+    this.state = {
+      doNotShowCover: false
+    };
   }
 
-  _checkShowCover = () => {
-    const localCoverState = window.localStorage.getItem("showCover");
-    let coverState;
-    if (localCoverState === undefined) {
-      coverState = true;
-    } else if (localCoverState === "false") {
-      coverState = false;
-    } else if (localCoverState === "true") {
-      coverState = true;
-    }
-
-    this.setState({
-      showCover: coverState
+  _updateDoNotShowCoverState = state => {
+    return this.setState({
+      doNotShowCover: state
     });
   };
 
-  componentDidMount() {
-    console.log("mount", window.localStorage.getItem("showCover"));
-    this._checkShowCover();
-    window.localStorage.setItem("showCover", false);
-    // window.addEventListener("click", this._checkCoverHidden, false);
-  }
-
   render() {
-    const { showCover } = this.state;
-    console.log(showCover);
+    const { doNotShowCover } = this.state;
     return (
       <Router>
         <React.Fragment>
           <Head>
             <title>{constants.siteMeta.title}</title>
           </Head>
-          {showCover ? <CoverSheet /> : null}
+          {doNotShowCover ? null : <CoverSheet />}
+          <button onClick={() => this._updateDoNotShowCoverState(true)}>
+            {"Scrolled past header"}
+          </button>
           <Header />
           <main className={appStyles.routesContainer}>
             <Routes />
