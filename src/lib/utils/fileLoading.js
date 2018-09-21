@@ -1,6 +1,8 @@
 import fs from "fs";
 import matter from "gray-matter";
 import yaml from "js-yaml";
+import klaw from "klaw";
+import path from "path";
 
 /**
  * Parses the information of a markdown file with front matter
@@ -35,4 +37,38 @@ const getSingleFileMd = path => {
  */
 const getSingleFileYaml = path => yaml.safeLoad(fs.readFileSync(path, "utf8"));
 
-export { getSingleFileMd, getSingleFileYaml };
+const getFolderCollection = location => {
+  return new Promise((resolve, reject) => {
+    const items = [];
+    if (fs.existsSync(location)) {
+      klaw(location)
+        .on("data", item => {
+          // Filter function to retrieve .md files
+          if (path.extname(item.path) === ".yml") {
+            // If markdown file, read contents
+            const data = getSingleFileYaml(item.path);
+            // Create slug for URL
+            data.slug = data.title
+              .toLowerCase()
+              .replace(/ /g, "-")
+              .replace(/[^\w-]+/g, "");
+            // Push object into items array
+            items.push(data);
+          }
+        })
+        .on("error", e => {
+          reject(e);
+        })
+        .on("end", () => {
+          // Resolve promise for async getRoutes request
+          // posts = items for below routes
+          resolve(items);
+        });
+    } else {
+      // If src/posts directory doesn't exist, return items as empty array
+      resolve(items);
+    }
+  });
+};
+
+export { getSingleFileMd, getSingleFileYaml, getFolderCollection };
