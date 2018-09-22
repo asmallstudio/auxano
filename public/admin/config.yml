@@ -277,6 +277,16 @@ collections:
               - label: "Image Description"
                 name: alt
                 widget: string
+          - label: "Action Banner"
+            name: actionBanner
+            widget: object
+            fields:
+              - label: "Text"
+                name: text
+                widget: string
+              - label: "Link"
+                name: link
+                widget: string
           - label: "Subscribe"
             name: subscribe
             widget: object
@@ -422,29 +432,52 @@ collections:
                   - label: "Link"
                     name: link
                     widget: string
-          - label: "Info Section"
-            name: infoSection
+              - label: "Service 7"
+                name: item7
+                widget: object
+                fields:
+                  - label: "Icon"
+                    name: icon
+                    widget: image
+                  - label: "Heading"
+                    name: heading
+                    widget: string
+                  - label: "Content"
+                    name: text
+                    widget: text
+              - label: "Service 8"
+                name: item8
+                widget: object
+                fields:
+                  - label: "Icon"
+                    name: icon
+                    widget: image
+                  - label: "Heading"
+                    name: heading
+                    widget: string
+                  - label: "Content"
+                    name: text
+                    widget: text
+          - label: "Action Banner"
+            name: actionBanner
             widget: object
             fields:
-              - label: "Icon"
-                name: icon
-                widget: image
+              - label: "Text"
+                name: text
+                widget: string
+              - label: "Link"
+                name: link
+                widget: string
+          - label: "Subscribe"
+            name: subscribe
+            widget: object
+            fields:
               - label: "Heading"
                 name: heading
                 widget: string
-              - label: "Content"
+              - label: "Subheading"
                 name: text
                 widget: text
-              - label: "Image"
-                name: image
-                widget: object
-                fields:
-                  - label: "Image"
-                    name: src
-                    widget: image
-                  - label: "Image Description"
-                    name: alt
-                    widget: string
       - label: "Personal Finances"
         name: personalFinances
         file: src/data/pages/personalFinances.yml
