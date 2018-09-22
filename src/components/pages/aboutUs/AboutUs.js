@@ -14,14 +14,14 @@ class AboutUs extends React.Component {
     super(props);
 
     this.state = {
-      activeOrg: "key-1"
+      activeOrg: 0
     };
   }
 
   _updateListState = i => {
     console.log(i);
     return this.setState({
-      activeOrg: `key-${i}`
+      activeOrg: i
     });
   };
 
@@ -63,14 +63,19 @@ class AboutUs extends React.Component {
               <p>{aboutUs.infoSection.text}</p>
               <ul className={styles.communityOrgs}>
                 {aboutUs.infoSection.items.map((item, i) => (
-                  <li className={`key-${i} ${styles.carouselSlide}`} key={i}>
+                  <li className={`key-${i}`} key={i}>
                     <img
                       src={item.logo}
                       alt=""
-                      //onClick={//this._updateListState(i)}
+                      className={i === this.state.activeOrg && styles.activeOrg}
+                      onClick={() => this._updateListState(i)}
                     />
-                    <div className={styles.itemName}>{item.name}</div>
-                    <p className={styles.itemDesc}>{item.desc}</p>
+                    {i === this.state.activeOrg && (
+                      <div className={styles.itemText}>
+                        <div className={styles.itemName}>{item.name}</div>
+                        <p className={styles.itemDesc}>{item.desc}</p>
+                      </div>
+                    )}
                   </li>
                 ))}
               </ul>
