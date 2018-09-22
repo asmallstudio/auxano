@@ -1,4 +1,6 @@
 import React from "react";
+import Markdown from "react-markdown";
+
 import { RouteData, Link, Head } from "react-static";
 import { pageChange } from "../../../../lib/utils/pageChange";
 import { getFullPageTitle } from "../../../../lib/utils/copy";
@@ -6,10 +8,6 @@ import { getFullPageTitle } from "../../../../lib/utils/copy";
 import styles from "./post.scss";
 
 class Post extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
   componentDidMount() {
     pageChange();
   }
@@ -38,7 +36,7 @@ class Post extends React.Component {
                   }`}
                 >
                   <h1>{post.title}</h1>
-                  <p>{post.body}</p>
+                  <Markdown>{post.body}</Markdown>
                 </article>
               </div>
             </div>
