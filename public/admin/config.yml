@@ -138,8 +138,8 @@ collections:
             name: textSection
             widget: markdown
             buttons: ["bold", "italic", "link"]
-          - label: "Info section 1"
-            name: infoSection1
+          - label: "Information Section"
+            name: infoSection
             widget: object
             fields:
               - label: "Heading"
@@ -158,6 +158,14 @@ collections:
                   - label: "Image Description"
                     name: alt
                     widget: string
+              - label: "Organizations"
+                name: items
+                widget: list
+                allow_add: true
+                fields: 
+                 - {label: Logo, name: logo, widget: image}
+                 - {label: Name, name: name, widget: string}
+                 - {label: Description, name: desc, widget: text}
           - label: "Action Banner"
             name: actionBanner
             widget: object

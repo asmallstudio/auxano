@@ -11,7 +11,7 @@ hero:
   ctaLink: "#"
 textSection: |-
   **Stewardship:** the careful and responsible management of something entrusted to one's care. —_Merriam-Webster Dictionary_
-infoSection1:
+infoSection:
   heading: Community
   image:
     alt: what is important about this image? what does it communicate?
@@ -21,6 +21,22 @@ infoSection1:
     invest their time, talent and treasure into making a positive impact within
     our community. Here are just a few of the organizations that Auxano has made
     a difference for:
+  items:
+    - logo: /uploads/agros.png
+      name: Agros
+      desc: Lorem ipsum…
+    - logo: /uploads/dementia-alliance-of-north-carolina.png
+      name: Dementia Alliance of North Carolina
+      desc: Lorem ipsum…
+    - logo: /uploads/jubilee-reach.png
+      name: Jubilee Reach
+      desc: Lorem ipsum…
+    - logo: /uploads/medical-teams-international.png
+      name: Medical Teams International
+      desc: A humanitarian aid organization that works to provide care to people affected by disaster, conflict and poverty. They empower communities worldwide to live full and healthy lives.
+    - logo: /uploads/walk-to-end-alzheimers.png
+      name: Walk to End Alzheimer's
+      desc: Lorem ipsum…
 actionBanner:
   link: /our-approach
   text: Our Approach
