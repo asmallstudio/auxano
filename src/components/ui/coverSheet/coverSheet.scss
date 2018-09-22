@@ -1,9 +1,15 @@
+@import "../../styles/utils.scss";
+
 .coverSheet {
   position: relative;
   z-index: 101;
   height: 100vh;
   background-color: var(--fountain-blue);
-  padding: var(--space-l3);
+  padding: var(--space-l3) 0;
+
+  @include respond-above(md) {
+    padding: var(--space-l3);
+  }
 }
 
 .coverSheetContent {
@@ -11,6 +17,7 @@
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
+  max-width: $max-width-em;
   padding-top: env(safe-area-inset-top);
   padding-bottom: env(safe-area-inset-bottom);
 }

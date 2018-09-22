@@ -8,7 +8,7 @@ const CoverSheet = ({
   ...restProps
 }) => (
   <section className={`container--fluid ${styles.coverSheet}`} {...restProps}>
-    <div className={`container ${styles.coverSheetContent}`}>
+    <div className={`container col-xs-12 ${styles.coverSheetContent}`}>
       <img
         alt="Auxano Advisors"
         src="/assets/auxano-logo-white.svg"
