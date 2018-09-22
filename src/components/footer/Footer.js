@@ -23,6 +23,11 @@ class Footer extends React.Component {
                   </Link>
                 </li>
                 <li>
+                  <Link to="/content" activeClassName={styles.activeLink}>
+                    Contact
+                  </Link>
+                </li>
+                <li>
                   <Link to="#" activeClassName={styles.activeLink}>
                     Privacy & Terms
                   </Link>
