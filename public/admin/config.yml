@@ -988,3 +988,45 @@ collections:
               - label: "Subheading"
                 name: text
                 widget: text
+      - label: "Careers"
+        name: careers
+        file: src/data/pages/careers.yml
+        path: /careers
+        fields:
+          - label: "Page Title"
+            name: pageTitle
+            widget: string
+          - label: Hero
+            name: hero
+            widget: object
+            fields:
+              - label: Title
+                name: title
+                widget: string
+              - label: "Subtitle"
+                name: subtitle
+                widget: markdown
+                buttons: ["link"]
+              - label: "Hero Image"
+                name: image
+                widget: image
+          - label: "Action Banner"
+            name: actionBanner
+            widget: object
+            fields:
+              - label: "Text"
+                name: text
+                widget: string
+              - label: "Link"
+                name: link
+                widget: string
+          - label: "Subscribe"
+            name: subscribe
+            widget: object
+            fields:
+              - label: "Heading"
+                name: heading
+                widget: string
+              - label: "Subheading"
+                name: text
+                widget: text

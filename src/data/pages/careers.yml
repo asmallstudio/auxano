@@ -1,0 +1,15 @@
+pageTitle: 'Careers'
+hero:
+  title: "Careers."
+  subtitle: |-
+    The Auxano name is synonymous with growth. We believe that hiring exceptional people of distinguished character and capability is key to achieving this. If you are interested in becoming part of our team, we would be delighted to hear from you. 
+
+    Please submit your resume and cover letter to: 
+    [careers@auxanoadvisors.com](mailto:careers@auxanoadvisors.com)
+  image: "/uploads/about-us-hero.png"
+actionBanner:
+  link: /contact
+  text: Contact Us
+subscribe:
+  heading: Schedule an introduction with an advisor.
+  text: All personal information kept private.
