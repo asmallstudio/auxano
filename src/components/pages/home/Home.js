@@ -50,9 +50,9 @@ class Home extends React.Component {
           </div>
         </section>
         <FullWidthSectionActionLink
-          linkText={home.learnMore.text}
-          to={home.learnMore.link}
-          className="dg-learnMore"
+          linkText={home.actionBanner.text}
+          to={home.actionBanner.link}
+          className="dg-actionBanner"
         />
         <SubscribeSection
           heading={home.subscribe.heading}
