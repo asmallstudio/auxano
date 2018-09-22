@@ -2,35 +2,75 @@
 
 .footerContainer {
   border-top: 1px solid var(--grey-40);
+  padding: var(--space-l5) 0;
+
+  @include respond-above(md) {
+    padding: var(--space-l3) 0;
+  }
+
+  @include respond-above(lg) {
+    padding: var(--space-l5) 0;
+  }
+
+  @supports (padding-bottom: env(safe-area-inset-bottom)) {
+    padding-bottom: calc(var(--space-l5) + env(safe-area-inset-bottom));
+  }
 }
 
 .footerRow {
   display: flex;
   flex-direction: column;
-  padding-bottom: env(safe-area-inset-bottom);
   margin: 0 auto;
+
+  @include respond-above(md) {
+    flex-direction: row;
+    align-items: center;
+  }
 }
 
-.linkContainer {
-  margin-top: 6rem; //94px converted to rem
-  display: flex;
-  flex-direction: column;
-  order: 0;
+.activeLink {
+  color: var(--gigas) !important;
 }
 
-.linkList {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  list-style-type: none;
-  padding-left: 0;
+.infoContainer {
   text-align: center;
-  margin-top: 0;
-  margin-bottom: 0;
+
+  @include respond-above(md) {
+    flex-flow: row nowrap;
+    text-align: left;
+
+    &:nth-child(2) {
+      text-align: right;
+    }
+  }
+
+  p,
+  li {
+    line-height: 3;
+
+    @include respond-above(md) {
+      padding: 0 var(--space-l2);
+
+      &:first-child {
+        padding-left: 0;
+      }
+
+      &:last-child {
+        padding-right: 0;
+      }
+    }
+  }
+
+  p {
+    color: var(--grey-40);
+  }
 
   li {
-    margin-bottom: 1.5rem; //24px converted to rem
     color: var(--grey);
+
+    @include respond-above(md) {
+      display: inline;
+    }
 
     a {
       transition: color 0.3s ease;
@@ -44,132 +84,55 @@
   }
 }
 
-.activeLink {
-  color: var(--gigas) !important;
-}
+ul.linkList {
+  list-style-type: none;
+  text-align: inherit;
+  padding: 0;
+  margin: 0 0 var(--space-l3);
 
-.backToTopTablet {
-  display: none;
-}
-
-.infoContainer {
-  margin-top: 1.5rem; //24px converted to rem
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  align-items: center;
-  order: 1;
-
-  p {
-    color: var(--grey-40);
+  @include respond-above(md) {
+    text-align: left;
+    display: inline;
   }
 }
 
-.copyrightText {
-  margin-top: 1.25rem; //20px converted to rem
+@include respond-above(md) {
+  .contactLinks {
+    li {
+      border-right: 1px solid var(--grey-40);
+
+      &:last-child {
+        border-right: none;
+      }
+    }
+  }
 }
 
 .backToTopContainer {
-  margin-top: 3rem; //48px converted to rem
-  margin-bottom: 4.5rem; //74px converted to rem
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  order: 2;
+  span {
+    padding: var(--space-l2);
+
+    @include respond-above(md) {
+      padding: 0;
+    }
+  }
 
   a {
     transition: color 0.3s ease;
     color: inherit;
     text-decoration: none;
-  }
 
-  a:hover {
-    color: var(--gigas);
     svg {
-      fill: var(--gigas);
+      padding-left: var(--space-l1);
       transition: fill 0.3s ease;
     }
-  }
-}
 
-.backToTopIcon {
-  margin-left: 1em; //16px converted to em (relative to text in container)
-}
+    &:hover {
+      color: var(--gigas);
 
-// == TABLET ==
-
-@include respond-above(md) {
-  .footerContainer {
-    height: var(--tablet-footer-height);
-  }
-
-  .footerRow {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: flex-end;
-    margin-left: 2.25rem; //36px converted to rem
-    margin-right: 2.25rem; //36px converted to rem
-  }
-
-  .linkContainer {
-    margin-top: 3rem; //46px converted to rem
-    order: 0;
-  }
-
-  .linkList {
-    flex-direction: row;
-    display: flex;
-
-    li {
-      margin-right: 3.5em; //55px converted to em (relative items in list)
-      margin-bottom: 0;
+      svg {
+        fill: var(--gigas);
+      }
     }
-  }
-
-  .infoContainer {
-    margin-top: 1.5rem; //24px converted to rem
-    flex-direction: row;
-    justify-content: flex-end;
-    order: 2;
-  }
-
-  .backToTopContainer {
-    order: 1;
-    margin-left: auto;
-    margin-top: 3rem; //46px converted to rem
-    margin-bottom: 0;
-    justify-content: flex-end;
-  }
-
-  .addressText2 {
-    &:before {
-      content: ",\00a0 ";
-    }
-  }
-
-  .copyrightText {
-    margin-top: 0;
-    margin-left: auto;
-  }
-}
-
-// == DESKTOP ==
-
-@include respond-above(lg) {
-  .footerContainer {
-    height: var(--desktop-footer-height);
-  }
-
-  .footerRow {
-    margin: 0 auto 0 auto;
-  }
-
-  .linkContainer {
-    margin-top: 7.875rem; //126px converted to rem
-  }
-
-  .backToTopContainer {
-    margin-top: 7.875rem; //126px converted to rem
   }
 }
