@@ -26,7 +26,7 @@ callouts:
     heading: "Our Team"
     text: "Get to know the people who make up Auxano."
     link: "/our-team/"
-learnMore:
+actionBanner:
   link: /about-us
   text: About Us
 subscribe:

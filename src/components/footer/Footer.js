@@ -18,7 +18,7 @@ class Footer extends React.Component {
                   </Link>
                 </li>
                 <li>
-                  <Link to="#" activeClassName={styles.activeLink}>
+                  <Link to="/careers" activeClassName={styles.activeLink}>
                     Careers
                   </Link>
                 </li>

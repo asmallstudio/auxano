@@ -81,7 +81,7 @@
 
   @include respond-above(lg) {
     width: 100%;
-    max-width: 35rem;
+    max-width: 42rem;
   }
 }
 
@@ -122,8 +122,6 @@
   width: 100%;
   list-style-type: none;
   text-align: center;
-
-  // background-color: var(--white);
   padding-left: 0;
   margin: 0;
 
