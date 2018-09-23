@@ -5,14 +5,11 @@ import { pageChange } from "../../../../lib/utils/pageChange";
 
 import LinkWithArrow from "../../../ui/linkWithArrow/LinkWithArrow";
 import styles from "./index.scss";
+import { formatDateStringToFromNow } from "../../../../lib/utils/copy";
 
 const PaginationLink = ({ ...rest }) => <Link {...rest} />;
 
 class Index extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
   componentDidMount() {
     pageChange();
   }
@@ -32,18 +29,23 @@ class Index extends React.Component {
                   <ul>
                     {posts.map(post => (
                       <li key={post.id} className={styles.indexArticle}>
-                        <Link
-                          to={`/news/${post.slug}/`}
-                          className={styles.postTitle}
-                        >
-                          {post.title}
-                        </Link>
-                        <LinkWithArrow
-                          to={`/news/${post.slug}/`}
-                          className={styles.arrowLink}
-                        >
-                          Read more
-                        </LinkWithArrow>
+                        <div className={styles.titleAndLinkContainer}>
+                          <Link
+                            to={`/news/${post.slug}/`}
+                            className={styles.postTitle}
+                          >
+                            {post.title}
+                          </Link>
+                          <LinkWithArrow
+                            to={`/news/${post.slug}/`}
+                            className={styles.arrowLink}
+                          >
+                            Read more
+                          </LinkWithArrow>
+                        </div>
+                        <div className={styles.metaInfoContainer}>
+                          <p>{formatDateStringToFromNow(post.date)}</p>
+                        </div>
                       </li>
                     ))}
                   </ul>

@@ -12,13 +12,24 @@
 }
 
 .indexArticle {
-  display: flex;
-  justify-content: space-between;
   padding: var(--space-l3) 0;
   border-bottom: 1px solid var(--grey-40);
 
   &:first-child {
     border-top: 1px solid var(--grey-40);
+  }
+}
+
+.titleAndLinkContainer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.metaInfoContainer {
+  padding-top: var(--space-l1);
+
+  p {
+    font-size: 0.94em;
   }
 }
 
