@@ -39,54 +39,54 @@ collections:
             name: callouts
             widget: object
             fields:
-            - label: "Item 1"
-              name: item1
-              widget: object
-              fields:
-              - label: "Icon"
-                name: icon
-                widget: image
-              - label: "Heading"
-                name: heading
-                widget: string
-              - label: "Content"
-                name: text
-                widget: text
-              - label: "Link"
-                name: link
-                widget: string
-            - label: "Item 2"
-              name: item2
-              widget: object
-              fields:
-              - label: "Icon"
-                name: icon
-                widget: image
-              - label: "Heading"
-                name: heading
-                widget: string
-              - label: "Content"
-                name: text
-                widget: text
-              - label: "Link"
-                name: link
-                widget: string
-            - label: "Item 3"
-              name: item3
-              widget: object
-              fields:
-              - label: "Icon"
-                name: icon
-                widget: image
-              - label: "Heading"
-                name: heading
-                widget: string
-              - label: "Content"
-                name: text
-                widget: text
-              - label: "Link"
-                name: link
-                widget: string
+              - label: "Item 1"
+                name: item1
+                widget: object
+                fields:
+                  - label: "Icon"
+                    name: icon
+                    widget: image
+                  - label: "Heading"
+                    name: heading
+                    widget: string
+                  - label: "Content"
+                    name: text
+                    widget: text
+                  - label: "Link"
+                    name: link
+                    widget: string
+              - label: "Item 2"
+                name: item2
+                widget: object
+                fields:
+                  - label: "Icon"
+                    name: icon
+                    widget: image
+                  - label: "Heading"
+                    name: heading
+                    widget: string
+                  - label: "Content"
+                    name: text
+                    widget: text
+                  - label: "Link"
+                    name: link
+                    widget: string
+              - label: "Item 3"
+                name: item3
+                widget: object
+                fields:
+                  - label: "Icon"
+                    name: icon
+                    widget: image
+                  - label: "Heading"
+                    name: heading
+                    widget: string
+                  - label: "Content"
+                    name: text
+                    widget: text
+                  - label: "Link"
+                    name: link
+                    widget: string
           - label: "Action Banner"
             name: actionBanner
             widget: object
@@ -162,10 +162,10 @@ collections:
                 name: items
                 widget: list
                 allow_add: true
-                fields: 
-                 - {label: Logo, name: logo, widget: image}
-                 - {label: Name, name: name, widget: string}
-                 - {label: Description, name: desc, widget: text}
+                fields:
+                  - { label: Logo, name: logo, widget: image }
+                  - { label: Name, name: name, widget: string }
+                  - { label: Description, name: desc, widget: text }
           - label: "Action Banner"
             name: actionBanner
             widget: object
@@ -645,7 +645,7 @@ collections:
             name: infoSection
             widget: object
             fields:
-            - label: "Image"
+              - label: "Image"
                 name: image
                 widget: object
                 fields:
@@ -655,15 +655,15 @@ collections:
                   - label: "Image Description"
                     name: alt
                     widget: string
-            - label: "Description 1"
-              name: description1
-              widget: string
-            - label: "Description 2"
-              name: description2
-              widget: string
-            - label: "Description 3"
-              name: description3
-              widget: string
+              - label: "Description 1"
+                name: description1
+                widget: string
+              - label: "Description 2"
+                name: description2
+                widget: string
+              - label: "Description 3"
+                name: description3
+                widget: string
           - label: "Pullquote 2"
             name: pullquote2
             widget: text
@@ -671,42 +671,42 @@ collections:
             name: infoTable
             widget: object
             fields:
-            - label: "Table Head"
-              name: tableHead
-              widget: object
-              fields:
-              - label: "Column Heading"
-                name: tableHead1
-                widget: string
-              - label: "Column Heading"
-                name: tableHead2
-                widget: string
-            - label: "Table Row 1"
-              name: tableRow1
-              widget: object
-              fields:
-              - label: "Row Heading"
-                name: tableRowHead
-                widget: string
-              - label: "Cell 1"
-                name: tableCell1
-                widget: text
-              - label: "Cell 2"
-                name: tableCell2
-                widget: text
-            - label: "Table Row 2"
-              name: tableRow2
-              widget: object
-              fields:
-              - label: "Row Heading"
-                name: tableRowHead
-                widget: string
-              - label: "Cell 1"
-                name: tableCell1
-                widget: text
-              - label: "Cell 2"
-                name: tableCell2
-                widget: text
+              - label: "Table Head"
+                name: tableHead
+                widget: object
+                fields:
+                  - label: "Column Heading"
+                    name: tableHead1
+                    widget: string
+                  - label: "Column Heading"
+                    name: tableHead2
+                    widget: string
+              - label: "Table Row 1"
+                name: tableRow1
+                widget: object
+                fields:
+                  - label: "Row Heading"
+                    name: tableRowHead
+                    widget: string
+                  - label: "Cell 1"
+                    name: tableCell1
+                    widget: text
+                  - label: "Cell 2"
+                    name: tableCell2
+                    widget: text
+              - label: "Table Row 2"
+                name: tableRow2
+                widget: object
+                fields:
+                  - label: "Row Heading"
+                    name: tableRowHead
+                    widget: string
+                  - label: "Cell 1"
+                    name: tableCell1
+                    widget: text
+                  - label: "Cell 2"
+                    name: tableCell2
+                    widget: text
           - label: "Service Information"
             name: serviceInfo
             widget: object
