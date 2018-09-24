@@ -6,8 +6,6 @@ import { pageChange } from "../../../../lib/utils/pageChange";
 import LinkWithArrow from "../../../ui/linkWithArrow/LinkWithArrow";
 import styles from "./index.scss";
 
-const PaginationLink = ({ ...rest }) => <Link {...rest} />;
-
 class Index extends React.Component {
   componentDidMount() {
     pageChange();
@@ -20,7 +18,7 @@ class Index extends React.Component {
   render() {
     return (
       <RouteData
-        render={({ members, currentPage, totalPages }) => (
+        render={({ members }) => (
           <React.Fragment>
             <Head>
               <title>{getFullPageTitle("Team")}</title>
