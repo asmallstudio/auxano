@@ -1192,6 +1192,9 @@ collections:
       - label: "Name"
         name: title
         widget: string
+      - label: "Photo"
+        name: image
+        widget: image
       - label: "Date"
         name: date
         widget: datetime
@@ -1206,7 +1209,7 @@ collections:
       - label: "Email"
         name: email
         widget: string
-      - label: "Extension"
+      - label: "Phone Extension"
         name: extension
         widget: string
       - label: "Bio"
