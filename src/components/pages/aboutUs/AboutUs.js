@@ -19,7 +19,6 @@ class AboutUs extends React.Component {
   }
 
   _updateListState = i => {
-    console.log(i);
     return this.setState({
       activeOrg: i
     });
