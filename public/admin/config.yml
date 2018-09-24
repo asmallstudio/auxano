@@ -563,6 +563,9 @@ collections:
             name: serviceInfo
             widget: object
             fields:
+              - label: "Service Description Lede"
+                name: descriptionLede
+                widget: text
               - label: "Service Description"
                 name: description
                 widget: text
@@ -791,10 +794,30 @@ collections:
             widget: object
             fields:
               - label: "Description Part 1"
-                name: description1
+                name: section1
                 widget: text
-              - label: "Description Part 2"
-                name: description2
+              - label: "Image Section"
+                name: section2
+                widget: object
+                fields:
+                  - label: "Image"
+                    name: image
+                    widget: object
+                    fields:
+                      - label: "Image"
+                        name: src
+                        widget: image
+                      - label: "Image Description"
+                        name: alt
+                        widget: string
+                  - label: "Description Part 2 Lede"
+                    name: descriptionLede
+                    widget: text
+                  - label: "Description Part 2"
+                    name: description
+                    widget: text
+              - label: "Description Part 3"
+                name: section3
                 widget: text
           - label: "Action Banner"
             name: actionBanner
@@ -924,13 +947,27 @@ collections:
             widget: object
             fields:
               - label: "Description Part 1"
-                name: description1
+                name: section1
                 widget: text
-              - label: "Description Part 2"
-                name: description2
-                widget: text
+              - label: "Image Section"
+                name: section2
+                widget: object
+                fields:
+                  - label: "Image"
+                    name: image
+                    widget: object
+                    fields:
+                      - label: "Image"
+                        name: src
+                        widget: image
+                      - label: "Image Description"
+                        name: alt
+                        widget: string
+                  - label: "Description Part 2"
+                    name: description
+                    widget: text
               - label: "Description Part 3"
-                name: description3
+                name: section3
                 widget: text
           - label: "Action Banner"
             name: actionBanner

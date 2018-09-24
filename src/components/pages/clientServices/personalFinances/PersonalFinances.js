@@ -47,6 +47,9 @@ class Other extends React.Component {
         <section className="container dg-serviceInfo">
           <div className={`row ${styles.serviceInfoRow}`}>
             <div className={`col-xs-12 col-md-6 ${styles.serviceInfoText}`}>
+              <p className="style-as-h2">
+                {personalFinances.serviceInfo.descriptionLede}
+              </p>
               <p>{personalFinances.serviceInfo.description}</p>
             </div>
             <div className="col-lg-1 hidden-lg-down" />
