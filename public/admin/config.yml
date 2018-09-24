@@ -1197,9 +1197,11 @@ collections:
         widget: datetime
       - label: "Qualification"
         name: qualification
+        hint: "A comma separated list of qualifications"
         widget: list
       - label: "Position"
         name: position
+        hint: "A comma separated list of positions"
         widget: list
       - label: "Email"
         name: email
