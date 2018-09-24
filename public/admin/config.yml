@@ -1209,7 +1209,7 @@ collections:
       - label: "Email"
         name: email
         widget: string
-      - label: "Extension"
+      - label: "Phone Extension"
         name: extension
         widget: string
       - label: "Bio"
