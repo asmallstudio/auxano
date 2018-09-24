@@ -48,7 +48,7 @@ class Index extends React.Component {
                           to={`/team/${member.slug}/`}
                           className={styles.arrowLink}
                         >
-                          Read bio&hellip;
+                          Read bio
                         </LinkWithArrow>
                       </li>
                     ))}
