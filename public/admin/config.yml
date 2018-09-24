@@ -1123,3 +1123,19 @@ collections:
               - label: "Subheading"
                 name: text
                 widget: text
+  - label: News
+    name: news
+    folder: src/data/news
+    create: true
+    extension: yml
+    format: yml
+    fields:
+      - label: "Title"
+        name: title
+        widget: string
+      - label: "Date"
+        name: date
+        widget: datetime
+      - label: "Body"
+        name: body
+        widget: markdown
