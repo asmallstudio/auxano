@@ -1,7 +1,9 @@
 title: Peter Cline
 date: September 23, 2018 8:30 PM
-qualification: CFP
-position: Founder
+qualification:
+  - CFP
+position:
+  - Founder
 extension: ""
 email: peter@auxanoadvisors.com 
 bio: |-

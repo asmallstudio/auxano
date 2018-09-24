@@ -1186,6 +1186,7 @@ collections:
     create: true
     extension: yml
     format: yml
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
       - label: "Name"
         name: Name

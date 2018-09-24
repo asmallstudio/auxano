@@ -2,7 +2,10 @@ import {
   getSingleFileYaml,
   getFolderCollection
 } from "../lib/utils/fileLoading";
-import { createSlugFromTitleAndDate } from "../lib/utils/copy";
+import {
+  createSlugFromTitleAndDate,
+  createSlugFromTitle
+} from "../lib/utils/copy";
 import { makePageRoutes } from "react-static/node";
 
 /**
@@ -42,7 +45,7 @@ const createRoutes = async () => {
   const other = getSingleFileYaml("./src/data/pages/other.yml");
   const members = await getFolderCollection(
     "./src/data/team",
-    createSlugFromTitleAndDate
+    createSlugFromTitle
   );
   const newsItems = await getFolderCollection(
     "./src/data/news",

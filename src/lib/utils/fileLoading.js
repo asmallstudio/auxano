@@ -45,13 +45,26 @@ const getSingleFileYaml = path => yaml.safeLoad(fs.readFileSync(path, "utf8"));
  */
 const getFolderCollection = (location, createSlug) => {
   return new Promise((resolve, reject) => {
+    const nameMap = {};
+
+    function ensureUniqueSlug(slug, nameMap) {
+      if (nameMap[slug]) {
+        nameMap[slug] = nameMap[slug] + 1;
+        const modifiedSlug = `${slug}-${nameMap[slug]}`;
+        return modifiedSlug;
+      }
+
+      nameMap[slug] = 1;
+      return slug;
+    }
+
     const items = [];
     if (fs.existsSync(location)) {
       klaw(location)
         .on("data", item => {
           if (path.extname(item.path) === ".yml") {
             const data = getSingleFileYaml(item.path);
-            data.slug = createSlug(data);
+            data.slug = ensureUniqueSlug(createSlug(data), nameMap);
             items.push(data);
           }
         })
