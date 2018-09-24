@@ -1195,12 +1195,12 @@ collections:
       - label: "Date"
         name: date
         widget: datetime
-      - label: "Qualification"
-        name: qualification
+      - label: "Qualifications"
+        name: qualifications
         hint: "A comma separated list of qualifications"
         widget: list
-      - label: "Position"
-        name: position
+      - label: "Positions"
+        name: positions
         hint: "A comma separated list of positions"
         widget: list
       - label: "Email"
