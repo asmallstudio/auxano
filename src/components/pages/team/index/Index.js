@@ -13,6 +13,10 @@ class Index extends React.Component {
     pageChange();
   }
 
+  _formatPositions(positions) {
+    return positions.join(" | ");
+  }
+
   render() {
     return (
       <RouteData
@@ -37,6 +41,9 @@ class Index extends React.Component {
                         >
                           {member.title}
                         </Link>
+                        <div className="style-as-p">
+                          {this._formatPositions(member.positions)}
+                        </div>
                         <LinkWithArrow
                           to={`/team/${member.slug}/`}
                           className={styles.arrowLink}
@@ -46,29 +53,6 @@ class Index extends React.Component {
                       </li>
                     ))}
                   </ul>
-
-                  {totalPages > 1 && (
-                    <nav className={styles.pagination}>
-                      <h3>Pages</h3>
-                      <ul className={styles.pageList}>
-                        {Array.from(new Array(totalPages), (d, i) => i).map(
-                          page => {
-                            const nextPage = page + 1;
-                            return (
-                              <li key={nextPage}>
-                                <PaginationLink
-                                  to={`/news/page/${nextPage}`}
-                                  isCurrent={nextPage === currentPage}
-                                >
-                                  {nextPage}
-                                </PaginationLink>
-                              </li>
-                            );
-                          }
-                        )}
-                      </ul>
-                    </nav>
-                  )}
                 </div>
               </div>
             </div>

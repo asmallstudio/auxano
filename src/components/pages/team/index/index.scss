@@ -37,7 +37,6 @@
 
   a {
     display: block;
-    margin-bottom: var(--space-l1);
   }
 
   :global(.style-as-h3) {
@@ -45,11 +44,16 @@
     text-decoration: none;
   }
 
+  :global(.style-as-p) {
+    margin-bottom: var(--space-l2);
+  }
+
   img {
     display: block;
     width: 100%;
     height: auto;
     border-radius: 0.5rem;
+    margin-bottom: var(--space-l2);
   }
 }
 
