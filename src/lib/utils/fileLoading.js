@@ -4,6 +4,8 @@ import yaml from "js-yaml";
 import klaw from "klaw";
 import path from "path";
 
+import { createSlugFromTitleAndDate } from "./copy";
+
 /**
  * Parses the information of a markdown file with front matter
  * in YAML
@@ -48,10 +50,7 @@ const getFolderCollection = location => {
             // If markdown file, read contents
             const data = getSingleFileYaml(item.path);
             // Create slug for URL
-            data.slug = data.title
-              .toLowerCase()
-              .replace(/ /g, "-")
-              .replace(/[^\w-]+/g, "");
+            data.slug = createSlugFromTitleAndDate(data.title, data.date);
             // Push object into items array
             items.push(data);
           }
