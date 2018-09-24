@@ -4,8 +4,6 @@ import yaml from "js-yaml";
 import klaw from "klaw";
 import path from "path";
 
-import { createSlugFromTitleAndDate } from "./copy";
-
 /**
  * Parses the information of a markdown file with front matter
  * in YAML
