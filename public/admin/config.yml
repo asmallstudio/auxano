@@ -1189,13 +1189,22 @@ collections:
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
       - label: "Name"
-        name: Name
-        widget: string
-      - label: "Title"
         name: title
         widget: string
+      - label: "Date"
+        name: date
+        widget: datetime
+      - label: "Qualification"
+        name: qualification
+        widget: list
+      - label: "Position"
+        name: position
+        widget: list
       - label: "Email"
         name: email
+        widget: string
+      - label: "Extension"
+        name: extension
         widget: string
       - label: "Bio"
         name: bio
