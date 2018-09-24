@@ -25,7 +25,7 @@ callouts:
     icon: "/uploads/team.svg"
     heading: "Our Team"
     text: "Get to know the people who make up Auxano."
-    link: "/our-team/"
+    link: "/team/"
 actionBanner:
   link: /about-us
   text: About Us
