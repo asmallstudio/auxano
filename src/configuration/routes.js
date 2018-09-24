@@ -40,6 +40,7 @@ const createRoutes = async () => {
   const contact = getSingleFileYaml("./src/data/pages/contact.yml");
   const other = getSingleFileYaml("./src/data/pages/other.yml");
   const newsItems = await getFolderCollection("./src/data/news");
+  const teamMembers = await getFolderCollection("./src/data/team");
 
   return [
     {
@@ -133,6 +134,20 @@ const createRoutes = async () => {
       getData: () => ({
         careers
       })
+    },
+    {
+      path: "/team",
+      component: "src/components/pages/team/index/Index",
+      getData: () => ({
+        teamMembers
+      }),
+      children: teamMembers.map(member => ({
+        path: `${member.slug}`,
+        component: "src/components/pages/team/member/Member",
+        getData: () => ({
+          member
+        })
+      }))
     },
     // Make an index route for every 5 blog posts
     ...makePageRoutes({

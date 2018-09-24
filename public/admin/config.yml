@@ -1160,7 +1160,7 @@ collections:
               - label: "Subheading"
                 name: text
                 widget: text
-  - label: News
+  - label: News Article
     name: news
     folder: src/data/news
     create: true
@@ -1175,4 +1175,23 @@ collections:
         widget: datetime
       - label: "Body"
         name: body
+        widget: markdown
+  - label: Team Member
+    name: team
+    folder: src/data/team
+    create: true
+    extension: yml
+    format: yml
+    fields:
+      - label: "Name"
+        name: Name
+        widget: string
+      - label: "Title"
+        name: title
+        widget: string
+      - label: "Email"
+        name: email
+        widget: string
+      - label: "Bio"
+        name: bio
         widget: markdown
