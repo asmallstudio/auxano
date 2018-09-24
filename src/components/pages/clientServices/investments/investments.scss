@@ -111,7 +111,7 @@
 
 .infoTable {
   width: 100%;
-  text-align: center;
+  font-size: 1rem;
   table-layout: fixed;
   border-spacing: 0.5rem;
   margin-top: var(--space-l5);
@@ -130,6 +130,8 @@
 
   th,
   td {
+    text-align: center;
+    vertical-align: middle;
     color: var(--grey);
     border-radius: 0.5rem;
   }
@@ -143,23 +145,23 @@
   tbody th {
     writing-mode: vertical-lr;
     text-orientation: sideways;
-    padding: 0 1rem;
+    padding: 0.5rem 1rem;
 
     @include respond-above(md) {
       writing-mode: horizontal-tb;
-      padding: 0 2rem;
+      padding: 0.5rem 2rem;
     }
   }
 
   td {
+    padding: 0.5rem;
     border: 1px solid var(--grey);
 
     @include respond-above(md) {
-      padding: 0 2rem;
+      padding: 0.5rem 2rem;
     }
 
     p {
-      font-size: 1rem;
       white-space: pre-wrap;
     }
   }
