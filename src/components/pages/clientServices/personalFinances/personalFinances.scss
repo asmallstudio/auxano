@@ -47,6 +47,10 @@
   text-align: center;
   margin-bottom: 3em;
 
+  p:global(.style-as-h2) {
+    margin-bottom: 0.67em;
+  }
+
   h2 {
     margin-bottom: 0.67em;
   }
@@ -83,7 +87,6 @@
   display: inline-block;
   height: 3rem;
   width: 3rem;
-  background-color: var(--grey-40);
   border-radius: 0.5rem;
   border: none;
 }

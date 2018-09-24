@@ -45,20 +45,39 @@ class Other extends React.Component {
               <div className={`row ${styles.serviceInfoRow}`}>
                 <div className="col-xs-12">
                   <p className="style-as-h2">
-                    {estatePlanning.serviceInfo.description1}
+                    {estatePlanning.serviceInfo.section1}
                   </p>
                 </div>
               </div>
             </div>
           </div>
-          <div className={`container ${styles.serviceInfoContainer}`}>
-            <div className="container">
-              <div className={`row ${styles.serviceInfoRow}`}>
-                <div className="col-xs-12">
-                  <p className="style-as-h2">
-                    {estatePlanning.serviceInfo.description2}
-                  </p>
+          <div className="container">
+            <div className={`row ${styles.infoSectionRow}`}>
+              <div
+                className={`col-xs-12 col-md-6 col-lg-5 ${
+                  styles.infoSectionColImage
+                }`}
+              >
+                <div
+                  className={`${styles.imgContainer} ${
+                    styles.dingusDotRelative
+                  } ${styles.dingusDot2}`}
+                >
+                  <img
+                    className={`${styles.infoSectionImage}`}
+                    src={estatePlanning.serviceInfo.section2.image.src}
+                    alt={estatePlanning.serviceInfo.section2.image.alt}
+                  />
                 </div>
+              </div>
+              <div className="col-lg-1 hidden-lg-down" />
+              <div
+                className={`col-xs-12 col-md-6 ${styles.infoSectionColText}`}
+              >
+                <p className="style-as-h2">
+                  {estatePlanning.serviceInfo.section2.descriptionLede}
+                </p>
+                <p>{estatePlanning.serviceInfo.section2.description}</p>
               </div>
             </div>
           </div>
@@ -67,7 +86,7 @@ class Other extends React.Component {
               <div className={`row ${styles.serviceInfoRow}`}>
                 <div className="col-xs-12">
                   <p className="style-as-h2">
-                    {estatePlanning.serviceInfo.description3}
+                    {estatePlanning.serviceInfo.section3}
                   </p>
                 </div>
               </div>

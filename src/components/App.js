@@ -6,23 +6,60 @@ import Routes from "react-static-routes";
 import Header from "./header/Header";
 import Footer from "./footer/Footer";
 import constants from "../lib/constants.json";
+import CoverSheet from "./ui/coverSheet/CoverSheet";
 
 import "./styles/main.scss";
 import appStyles from "./app.scss";
 
-const App = () => (
-  <Router>
-    <React.Fragment>
-      <Head>
-        <title>{constants.siteMeta.title}</title>
-      </Head>
-      <Header />
-      <main className={appStyles.routesContainer}>
-        <Routes />
-      </main>
-      <Footer />
-    </React.Fragment>
-  </Router>
-);
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      doNotShowCover: false
+    };
+  }
+
+  _updateDoNotShowCoverState = state => {
+    return this.setState({
+      doNotShowCover: state
+    });
+  };
+
+  _checkCoverStateOnScroll = () => {
+    if (window.scrollY > window.innerHeight) {
+      this._updateDoNotShowCoverState(true);
+      window.scrollTo(0, 0);
+      window.removeEventListener(
+        "scroll",
+        this._checkCoverStateOnScroll,
+        false
+      );
+    }
+  };
+
+  componentDidMount() {
+    window.addEventListener("scroll", this._checkCoverStateOnScroll, false);
+  }
+
+  render() {
+    const { doNotShowCover } = this.state;
+    return (
+      <Router>
+        <React.Fragment>
+          <Head>
+            <title>{constants.siteMeta.title}</title>
+          </Head>
+          {doNotShowCover ? null : <CoverSheet />}
+          <Header />
+          <main className={appStyles.routesContainer}>
+            <Routes />
+          </main>
+          <Footer />
+        </React.Fragment>
+      </Router>
+    );
+  }
+}
 
 export default hot(module)(App);

@@ -3,6 +3,10 @@ backend:
   branch: master
 media_folder: public/uploads
 public_folder: /uploads
+display_url: https://auxanoadvisors.com/
+slug:
+  encoding: "ascii"
+  clean_accents: true
 collections:
   - label: Pages
     name: pages
@@ -35,11 +39,63 @@ collections:
             name: pullquote
             widget: markdown
             buttons: ["bold", "italic", "link"]
-          - label: "Learn More"
-            name: learnMore
+          - label: "Callouts"
+            name: callouts
             widget: object
             fields:
-              - label: "Link Text"
+              - label: "Item 1"
+                name: item1
+                widget: object
+                fields:
+                  - label: "Icon"
+                    name: icon
+                    widget: image
+                  - label: "Heading"
+                    name: heading
+                    widget: string
+                  - label: "Content"
+                    name: text
+                    widget: text
+                  - label: "Link"
+                    name: link
+                    widget: string
+              - label: "Item 2"
+                name: item2
+                widget: object
+                fields:
+                  - label: "Icon"
+                    name: icon
+                    widget: image
+                  - label: "Heading"
+                    name: heading
+                    widget: string
+                  - label: "Content"
+                    name: text
+                    widget: text
+                  - label: "Link"
+                    name: link
+                    widget: string
+              - label: "Item 3"
+                name: item3
+                widget: object
+                fields:
+                  - label: "Icon"
+                    name: icon
+                    widget: image
+                  - label: "Heading"
+                    name: heading
+                    widget: string
+                  - label: "Content"
+                    name: text
+                    widget: text
+                  - label: "Link"
+                    name: link
+                    widget: string
+          - label: "Action Banner"
+            name: actionBanner
+            widget: object
+            fields:
+              - label: "Text"
                 name: text
                 widget: string
               - label: "Link"
@@ -86,8 +142,8 @@ collections:
             name: textSection
             widget: markdown
             buttons: ["bold", "italic", "link"]
-          - label: "Info section 1"
-            name: infoSection1
+          - label: "Information Section"
+            name: infoSection
             widget: object
             fields:
               - label: "Heading"
@@ -106,6 +162,14 @@ collections:
                   - label: "Image Description"
                     name: alt
                     widget: string
+              - label: "Organizations"
+                name: items
+                widget: list
+                allow_add: true
+                fields:
+                  - { label: Logo, name: logo, widget: image }
+                  - { label: Name, name: name, widget: string }
+                  - { label: Description, name: desc, widget: text }
           - label: "Action Banner"
             name: actionBanner
             widget: object
@@ -277,6 +341,16 @@ collections:
               - label: "Image Description"
                 name: alt
                 widget: string
+          - label: "Action Banner"
+            name: actionBanner
+            widget: object
+            fields:
+              - label: "Text"
+                name: text
+                widget: string
+              - label: "Link"
+                name: link
+                widget: string
           - label: "Subscribe"
             name: subscribe
             widget: object
@@ -422,29 +496,52 @@ collections:
                   - label: "Link"
                     name: link
                     widget: string
-          - label: "Info Section"
-            name: infoSection
+              - label: "Service 7"
+                name: item7
+                widget: object
+                fields:
+                  - label: "Icon"
+                    name: icon
+                    widget: image
+                  - label: "Heading"
+                    name: heading
+                    widget: string
+                  - label: "Content"
+                    name: text
+                    widget: text
+              - label: "Service 8"
+                name: item8
+                widget: object
+                fields:
+                  - label: "Icon"
+                    name: icon
+                    widget: image
+                  - label: "Heading"
+                    name: heading
+                    widget: string
+                  - label: "Content"
+                    name: text
+                    widget: text
+          - label: "Action Banner"
+            name: actionBanner
             widget: object
             fields:
-              - label: "Icon"
-                name: icon
-                widget: image
+              - label: "Text"
+                name: text
+                widget: string
+              - label: "Link"
+                name: link
+                widget: string
+          - label: "Subscribe"
+            name: subscribe
+            widget: object
+            fields:
               - label: "Heading"
                 name: heading
                 widget: string
-              - label: "Content"
+              - label: "Subheading"
                 name: text
                 widget: text
-              - label: "Image"
-                name: image
-                widget: object
-                fields:
-                  - label: "Image"
-                    name: src
-                    widget: image
-                  - label: "Image Description"
-                    name: alt
-                    widget: string
       - label: "Personal Finances"
         name: personalFinances
         file: src/data/pages/personalFinances.yml
@@ -470,6 +567,9 @@ collections:
             name: serviceInfo
             widget: object
             fields:
+              - label: "Service Description Lede"
+                name: descriptionLede
+                widget: text
               - label: "Service Description"
                 name: description
                 widget: text
@@ -552,7 +652,7 @@ collections:
             name: infoSection
             widget: object
             fields:
-            - label: "Image"
+              - label: "Image"
                 name: image
                 widget: object
                 fields:
@@ -562,15 +662,15 @@ collections:
                   - label: "Image Description"
                     name: alt
                     widget: string
-            - label: "Description 1"
-              name: description1
-              widget: string
-            - label: "Description 2"
-              name: description2
-              widget: string
-            - label: "Description 3"
-              name: description3
-              widget: string
+              - label: "Description 1"
+                name: description1
+                widget: string
+              - label: "Description 2"
+                name: description2
+                widget: string
+              - label: "Description 3"
+                name: description3
+                widget: string
           - label: "Pullquote 2"
             name: pullquote2
             widget: text
@@ -578,42 +678,42 @@ collections:
             name: infoTable
             widget: object
             fields:
-            - label: "Table Head"
-              name: tableHead
-              widget: object
-              fields:
-              - label: "Column Heading"
-                name: tableHead1
-                widget: string
-              - label: "Column Heading"
-                name: tableHead2
-                widget: string
-            - label: "Table Row 1"
-              name: tableRow1
-              widget: object
-              fields:
-              - label: "Row Heading"
-                name: tableRowHead
-                widget: string
-              - label: "Cell 1"
-                name: tableCell1
-                widget: text
-              - label: "Cell 2"
-                name: tableCell2
-                widget: text
-            - label: "Table Row 2"
-              name: tableRow2
-              widget: object
-              fields:
-              - label: "Row Heading"
-                name: tableRowHead
-                widget: string
-              - label: "Cell 1"
-                name: tableCell1
-                widget: text
-              - label: "Cell 2"
-                name: tableCell2
-                widget: text
+              - label: "Table Head"
+                name: tableHead
+                widget: object
+                fields:
+                  - label: "Column Heading"
+                    name: tableHead1
+                    widget: string
+                  - label: "Column Heading"
+                    name: tableHead2
+                    widget: string
+              - label: "Table Row 1"
+                name: tableRow1
+                widget: object
+                fields:
+                  - label: "Row Heading"
+                    name: tableRowHead
+                    widget: string
+                  - label: "Cell 1"
+                    name: tableCell1
+                    widget: text
+                  - label: "Cell 2"
+                    name: tableCell2
+                    widget: text
+              - label: "Table Row 2"
+                name: tableRow2
+                widget: object
+                fields:
+                  - label: "Row Heading"
+                    name: tableRowHead
+                    widget: string
+                  - label: "Cell 1"
+                    name: tableCell1
+                    widget: text
+                  - label: "Cell 2"
+                    name: tableCell2
+                    widget: text
           - label: "Service Information"
             name: serviceInfo
             widget: object
@@ -698,10 +798,30 @@ collections:
             widget: object
             fields:
               - label: "Description Part 1"
-                name: description1
+                name: section1
                 widget: text
-              - label: "Description Part 2"
-                name: description2
+              - label: "Image Section"
+                name: section2
+                widget: object
+                fields:
+                  - label: "Image"
+                    name: image
+                    widget: object
+                    fields:
+                      - label: "Image"
+                        name: src
+                        widget: image
+                      - label: "Image Description"
+                        name: alt
+                        widget: string
+                  - label: "Description Part 2 Lede"
+                    name: descriptionLede
+                    widget: text
+                  - label: "Description Part 2"
+                    name: description
+                    widget: text
+              - label: "Description Part 3"
+                name: section3
                 widget: text
           - label: "Action Banner"
             name: actionBanner
@@ -831,13 +951,27 @@ collections:
             widget: object
             fields:
               - label: "Description Part 1"
-                name: description1
+                name: section1
                 widget: text
-              - label: "Description Part 2"
-                name: description2
-                widget: text
+              - label: "Image Section"
+                name: section2
+                widget: object
+                fields:
+                  - label: "Image"
+                    name: image
+                    widget: object
+                    fields:
+                      - label: "Image"
+                        name: src
+                        widget: image
+                      - label: "Image Description"
+                        name: alt
+                        widget: string
+                  - label: "Description Part 2"
+                    name: description
+                    widget: text
               - label: "Description Part 3"
-                name: description3
+                name: section3
                 widget: text
           - label: "Action Banner"
             name: actionBanner
@@ -925,7 +1059,7 @@ collections:
       - label: "Corporate Executive Solutions"
         name: corporateExecutiveSolutions
         file: src/data/pages/corporateExecutiveSolutions.yml
-        path: /corporate-executive-solutions
+        path: /corporate-solutions
         fields:
           - label: "Page Title"
             name: pageTitle
@@ -988,3 +1122,96 @@ collections:
               - label: "Subheading"
                 name: text
                 widget: text
+      - label: "Careers"
+        name: careers
+        file: src/data/pages/careers.yml
+        path: /careers
+        fields:
+          - label: "Page Title"
+            name: pageTitle
+            widget: string
+          - label: Hero
+            name: hero
+            widget: object
+            fields:
+              - label: Title
+                name: title
+                widget: string
+              - label: "Subtitle"
+                name: subtitle
+                widget: markdown
+                buttons: ["link"]
+              - label: "Hero Image"
+                name: image
+                widget: image
+          - label: "Action Banner"
+            name: actionBanner
+            widget: object
+            fields:
+              - label: "Text"
+                name: text
+                widget: string
+              - label: "Link"
+                name: link
+                widget: string
+          - label: "Subscribe"
+            name: subscribe
+            widget: object
+            fields:
+              - label: "Heading"
+                name: heading
+                widget: string
+              - label: "Subheading"
+                name: text
+                widget: text
+  - label: News Article
+    name: news
+    folder: src/data/news
+    create: true
+    extension: yml
+    format: yml
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - label: "Title"
+        name: title
+        widget: string
+      - label: "Date"
+        name: date
+        widget: datetime
+      - label: "Body"
+        name: body
+        widget: markdown
+  - label: Team Member
+    name: team
+    folder: src/data/team
+    create: true
+    extension: yml
+    format: yml
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - label: "Name"
+        name: title
+        widget: string
+      - label: "Photo"
+        name: image
+        widget: image
+      - label: "Date"
+        name: date
+        widget: datetime
+      - label: "Qualifications"
+        name: qualifications
+        hint: "A comma separated list of qualifications"
+        widget: list
+      - label: "Positions"
+        name: positions
+        hint: "A comma separated list of positions"
+        widget: list
+      - label: "Email"
+        name: email
+        widget: string
+      - label: "Phone Extension"
+        name: extension
+        widget: string
+      - label: "Bio"
+        name: bio
+        widget: markdown

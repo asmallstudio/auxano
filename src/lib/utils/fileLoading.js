@@ -1,6 +1,8 @@
 import fs from "fs";
 import matter from "gray-matter";
 import yaml from "js-yaml";
+import klaw from "klaw";
+import path from "path";
 
 /**
  * Parses the information of a markdown file with front matter
@@ -35,4 +37,47 @@ const getSingleFileMd = path => {
  */
 const getSingleFileYaml = path => yaml.safeLoad(fs.readFileSync(path, "utf8"));
 
-export { getSingleFileMd, getSingleFileYaml };
+/**
+ * Get folder collection data
+ * @param {string} location Path to folder collection
+ * @param {function} createSlug Function that creates the slug from file data
+ * @returns {array} Array of objects containing file data
+ */
+const getFolderCollection = (location, createSlug) => {
+  return new Promise((resolve, reject) => {
+    const nameMap = {};
+
+    function ensureUniqueSlug(slug, nameMap) {
+      if (nameMap[slug]) {
+        nameMap[slug] = nameMap[slug] + 1;
+        const modifiedSlug = `${slug}-${nameMap[slug]}`;
+        return modifiedSlug;
+      }
+
+      nameMap[slug] = 1;
+      return slug;
+    }
+
+    const items = [];
+    if (fs.existsSync(location)) {
+      klaw(location)
+        .on("data", item => {
+          if (path.extname(item.path) === ".yml") {
+            const data = getSingleFileYaml(item.path);
+            data.slug = ensureUniqueSlug(createSlug(data), nameMap);
+            items.push(data);
+          }
+        })
+        .on("error", e => {
+          reject(e);
+        })
+        .on("end", () => {
+          resolve(items);
+        });
+    } else {
+      resolve(items);
+    }
+  });
+};
+
+export { getSingleFileMd, getSingleFileYaml, getFolderCollection };

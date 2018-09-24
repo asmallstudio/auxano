@@ -30,15 +30,16 @@ services:
   item6:
     icon: "/uploads/business-services.svg"
     heading: "Business Services"
-    text: "Lorem ipsum dolor sit amet, consour adipiscing elit, sed do eiusmo tempor incididunt ut labore et dolore magna."
+    text: "We offer a wide range of services to business owners. Contact us to find out how we can help your business plan for the future. "
     link: "/client-services/business-services/"
-infoSection:
-  icon: "/uploads/giving.svg"
-  heading: "Charitable Giving"
-  image:
-    alt: what is important about this image? what does it communicate?
-    src: /uploads/charitable-giving.png
-  text: "Charitable giving is often an important part of our clients’ legacy. As stewards, we resonate with this spirit of generosity. We’ll help you align your giving with your estate planning to ensure that you are meeting your goals for giving."
+  item7:
+    icon: "/uploads/giving.svg"
+    heading: "Charitable Giving"
+    text: "Giving is often an important part of our clients’ legacy. As stewards, we resonate with this spirit of generosity. We’ll help you determine your charitable objectives, and align them with your financial planning to ensure that you are meeting your goals."
+  item8:
+    icon: "/uploads/star.svg"
+    heading: "Special Projects"
+    text: "Have a financial need that isn’t listed? Contact us to see how we can help."
 actionBanner:
   link: /contact
   text: Contact Us

@@ -1,10 +1,18 @@
-import { getSingleFileYaml } from "../lib/utils/fileLoading";
+import {
+  getSingleFileYaml,
+  getFolderCollection
+} from "../lib/utils/fileLoading";
+import {
+  createSlugFromTitleAndDate,
+  createSlugFromTitle
+} from "../lib/utils/copy";
+import { makePageRoutes } from "react-static/node";
 
 /**
  * Creates the site route pages
  * @returns {array} Array of page information objects
  */
-const createRoutes = () => {
+const createRoutes = async () => {
   const home = getSingleFileYaml("./src/data/pages/home.yml");
   const aboutUs = getSingleFileYaml("./src/data/pages/aboutUs.yml");
   const ourApproach = getSingleFileYaml("./src/data/pages/ourApproach.yml");
@@ -29,11 +37,21 @@ const createRoutes = () => {
   const businessServices = getSingleFileYaml(
     "./src/data/pages/clientServices/businessServices.yml"
   );
-  const corporateExecutiveSolutions = getSingleFileYaml(
-    "./src/data/pages/corporateExecutiveSolutions.yml"
+  const corporateSolutions = getSingleFileYaml(
+    "./src/data/pages/corporateSolutions.yml"
   );
+  const careers = getSingleFileYaml("./src/data/pages/careers.yml");
   const contact = getSingleFileYaml("./src/data/pages/contact.yml");
   const other = getSingleFileYaml("./src/data/pages/other.yml");
+  const members = await getFolderCollection(
+    "./src/data/team",
+    createSlugFromTitle
+  );
+  const newsItems = await getFolderCollection(
+    "./src/data/news",
+    createSlugFromTitleAndDate
+  );
+
   return [
     {
       path: "/",
@@ -61,62 +79,113 @@ const createRoutes = () => {
       component: "src/components/pages/clientServices/ClientServices",
       getData: () => ({
         clientServices
+      }),
+      children: [
+        {
+          path: "/personal-finances",
+          component:
+            "src/components/pages/clientServices/personalFinances/PersonalFinances",
+          getData: () => ({
+            personalFinances
+          })
+        },
+        {
+          path: "/investments",
+          component:
+            "src/components/pages/clientServices/investments/investments",
+          getData: () => ({
+            investments
+          })
+        },
+        {
+          path: "/estate-planning",
+          component:
+            "src/components/pages/clientServices/estatePlanning/EstatePlanning",
+          getData: () => ({
+            estatePlanning
+          })
+        },
+        {
+          path: "/risk-management",
+          component:
+            "src/components/pages/clientServices/riskManagement/RiskManagement",
+          getData: () => ({
+            riskManagement
+          })
+        },
+        {
+          path: "/tax-planning",
+          component:
+            "src/components/pages/clientServices/taxPlanning/TaxPlanning",
+          getData: () => ({
+            taxPlanning
+          })
+        },
+        {
+          path: "/business-services",
+          component:
+            "src/components/pages/clientServices/businessServices/BusinessServices",
+          getData: () => ({
+            businessServices
+          })
+        }
+      ]
+    },
+    {
+      path: "/corporate-solutions",
+      component: "src/components/pages/corporateSolutions/CorporateSolutions",
+      getData: () => ({
+        corporateSolutions
       })
     },
     {
-      path: "/client-services/personal-finances",
-      component:
-        "src/components/pages/clientServices/personalFinances/PersonalFinances",
+      path: "/careers",
+      component: "src/components/pages/careers/Careers",
       getData: () => ({
-        personalFinances
+        careers
       })
     },
     {
-      path: "/client-services/investments",
-      component: "src/components/pages/clientServices/investments/investments",
+      path: "/team",
+      component: "src/components/pages/team/index/Index",
       getData: () => ({
-        investments
-      })
+        members
+      }),
+      children: members.map(member => ({
+        path: `${member.slug}`,
+        component: "src/components/pages/team/member/Member",
+        getData: () => ({
+          member
+        })
+      }))
     },
-    {
-      path: "/client-services/estate-planning",
-      component:
-        "src/components/pages/clientServices/estatePlanning/EstatePlanning",
-      getData: () => ({
-        estatePlanning
+    // Make an index route for every 5 blog posts
+    ...makePageRoutes({
+      items: newsItems,
+      pageSize: 10,
+      pageToken: "page", // use page for the prefix, eg. news/page/3
+      route: {
+        // Use this route as the base route
+        path: "news",
+        component: "src/components/pages/news/index/Index"
+      },
+      decorate: (posts, i, totalPages) => ({
+        // For each page, supply the posts, page and totalPages
+        getData: () => ({
+          posts,
+          currentPage: i,
+          totalPages
+        }),
+        // Make the routes for each blog post
+        children: posts.map(post => ({
+          path: `${post.slug}`,
+          component: "src/components/pages/news/post/Post",
+          getData: () => ({
+            post
+          })
+        }))
       })
-    },
-    {
-      path: "/client-services/risk-management",
-      component:
-        "src/components/pages/clientServices/riskManagement/RiskManagement",
-      getData: () => ({
-        riskManagement
-      })
-    },
-    {
-      path: "/client-services/tax-planning",
-      component: "src/components/pages/clientServices/taxPlanning/TaxPlanning",
-      getData: () => ({
-        taxPlanning
-      })
-    },
-    {
-      path: "/client-services/business-services",
-      component:
-        "src/components/pages/clientServices/businessServices/BusinessServices",
-      getData: () => ({
-        businessServices
-      })
-    },
-    {
-      path: "/corporate-executive-solutions",
-      component:
-        "src/components/pages/corporateExecutiveSolutions/CorporateExecutiveSolutions",
-      getData: () => ({
-        corporateExecutiveSolutions
-      })
-    },
+    }),
     {
       path: "/contact",
       component: "src/components/pages/contact/Contact",

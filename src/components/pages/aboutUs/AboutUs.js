@@ -12,7 +12,17 @@ import SubscribeSection from "../../ui/subscribeSection/SubscribeSection";
 class AboutUs extends React.Component {
   constructor(props) {
     super(props);
+
+    this.state = {
+      activeOrg: 0
+    };
   }
+
+  _updateListState = i => {
+    return this.setState({
+      activeOrg: i
+    });
+  };
 
   componentDidMount() {
     pageChange();
@@ -45,11 +55,29 @@ class AboutUs extends React.Component {
           </div>
         </section>
         <FullWidthSectionText text={aboutUs.textSection} />
-        <section className="container dg-infoSection1">
-          <div className={`row ${styles.infoSection1Row}`}>
-            <div className={`col-xs-12 col-md-6 ${styles.infoSection1ColText}`}>
-              <h2>{aboutUs.infoSection1.heading}</h2>
-              <p>{aboutUs.infoSection1.text}</p>
+        <section className="container dg-infoSection">
+          <div className={`row ${styles.infoSectionRow}`}>
+            <div className={`col-xs-12 col-md-6 ${styles.infoSectionColText}`}>
+              <h2>{aboutUs.infoSection.heading}</h2>
+              <p>{aboutUs.infoSection.text}</p>
+              <ul className={styles.communityOrgs}>
+                {aboutUs.infoSection.items.map((item, i) => (
+                  <li className={`key-${i}`} key={i}>
+                    <img
+                      src={item.logo}
+                      alt=""
+                      className={i === this.state.activeOrg && styles.activeOrg}
+                      onClick={() => this._updateListState(i)}
+                    />
+                    {i === this.state.activeOrg && (
+                      <div className={styles.itemText}>
+                        <div className={styles.itemName}>{item.name}</div>
+                        <p className={styles.itemDesc}>{item.desc}</p>
+                      </div>
+                    )}
+                  </li>
+                ))}
+              </ul>
             </div>
             <div className="col-lg-1 hidden-lg-down" />
             <div
@@ -64,8 +92,8 @@ class AboutUs extends React.Component {
               >
                 <img
                   className={`${styles.infoSectionImage}`}
-                  src={aboutUs.infoSection1.image.src}
-                  alt={aboutUs.infoSection1.image.alt}
+                  src={aboutUs.infoSection.image.src}
+                  alt={aboutUs.infoSection.image.alt}
                 />
               </div>
             </div>
