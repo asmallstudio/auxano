@@ -563,6 +563,9 @@ collections:
             name: serviceInfo
             widget: object
             fields:
+              - label: "Service Description Lede"
+                name: descriptionLede
+                widget: text
               - label: "Service Description"
                 name: description
                 widget: text
