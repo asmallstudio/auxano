@@ -12,19 +12,31 @@ class Post extends React.Component {
     pageChange();
   }
 
+  _createHonorificName(name, qualifications) {
+    if (qualifications.length) {
+      const qualificationsString = qualifications.join(", ");
+      return `${name}, ${qualificationsString}`;
+    }
+    return name;
+  }
+
+  _formatPositions(positions) {
+    return positions.join(" | ");
+  }
+
   render() {
     return (
       <RouteData
         render={({ member }) => (
           <React.Fragment>
             <Head>
-              <title>{getFullPageTitle(member.name)}</title>
+              <title>{getFullPageTitle(member.title)}</title>
             </Head>
             <div className={`container ${styles.memberContainer}`}>
               <div className="row">
                 <div className="col-xs-12">
                   <Link
-                    to="/news"
+                    to="/team"
                     className={`style-as-h3 ${styles.teamIndexLink}`}
                   >
                     Back to Team
@@ -32,8 +44,15 @@ class Post extends React.Component {
                 </div>
                 <aside className={`col-xs-12 col-md-3 ${styles.memberInfo}`}>
                   <img src={member.image} alt="" />
-                  <h1>{member.name}</h1>
-                  <div>{member.title}</div>
+                  <h1 className="style-as-h3">
+                    {this._createHonorificName(
+                      member.title,
+                      member.qualifications
+                    )}
+                  </h1>
+                  <div className="style-as-p">
+                    {this._formatPositions(member.positions)}
+                  </div>
                   <a href={`mailto:${member.email}`}>{member.email}</a>
                 </aside>
                 <article

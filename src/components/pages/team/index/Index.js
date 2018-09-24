@@ -5,7 +5,6 @@ import { pageChange } from "../../../../lib/utils/pageChange";
 
 import LinkWithArrow from "../../../ui/linkWithArrow/LinkWithArrow";
 import styles from "./index.scss";
-import { formatDateStringToFromNow } from "../../../../lib/utils/copy";
 
 const PaginationLink = ({ ...rest }) => <Link {...rest} />;
 
@@ -42,9 +41,6 @@ class Index extends React.Component {
                           >
                             Read more
                           </LinkWithArrow>
-                        </div>
-                        <div className={styles.metaInfoContainer}>
-                          <p>{formatDateStringToFromNow(member.date)}</p>
                         </div>
                       </li>
                     ))}
