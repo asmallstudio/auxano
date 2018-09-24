@@ -1,10 +1,14 @@
-import { getSingleFileYaml } from "../lib/utils/fileLoading";
+import {
+  getSingleFileYaml,
+  getFolderCollection
+} from "../lib/utils/fileLoading";
+import { makePageRoutes } from "react-static/node";
 
 /**
  * Creates the site route pages
  * @returns {array} Array of page information objects
  */
-const createRoutes = () => {
+const createRoutes = async () => {
   const home = getSingleFileYaml("./src/data/pages/home.yml");
   const aboutUs = getSingleFileYaml("./src/data/pages/aboutUs.yml");
   const ourApproach = getSingleFileYaml("./src/data/pages/ourApproach.yml");
@@ -35,6 +39,8 @@ const createRoutes = () => {
   const careers = getSingleFileYaml("./src/data/pages/careers.yml");
   const contact = getSingleFileYaml("./src/data/pages/contact.yml");
   const other = getSingleFileYaml("./src/data/pages/other.yml");
+  const newsItems = await getFolderCollection("./src/data/news");
+
   return [
     {
       path: "/",
@@ -128,6 +134,33 @@ const createRoutes = () => {
         careers
       })
     },
+    // Make an index route for every 5 blog posts
+    ...makePageRoutes({
+      items: newsItems,
+      pageSize: 10,
+      pageToken: "page", // use page for the prefix, eg. news/page/3
+      route: {
+        // Use this route as the base route
+        path: "news",
+        component: "src/components/pages/news/index/Index"
+      },
+      decorate: (posts, i, totalPages) => ({
+        // For each page, supply the posts, page and totalPages
+        getData: () => ({
+          posts,
+          currentPage: i,
+          totalPages
+        }),
+        // Make the routes for each blog post
+        children: posts.map(post => ({
+          path: `${post.slug}`,
+          component: "src/components/pages/news/post/Post",
+          getData: () => ({
+            post
+          })
+        }))
+      })
+    }),
     {
       path: "/contact",
       component: "src/components/pages/contact/Contact",
