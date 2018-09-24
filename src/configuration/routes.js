@@ -40,7 +40,10 @@ const createRoutes = async () => {
   const careers = getSingleFileYaml("./src/data/pages/careers.yml");
   const contact = getSingleFileYaml("./src/data/pages/contact.yml");
   const other = getSingleFileYaml("./src/data/pages/other.yml");
-  const teamMembers = await getFolderCollection("./src/data/team");
+  const members = await getFolderCollection(
+    "./src/data/team",
+    createSlugFromTitleAndDate
+  );
   const newsItems = await getFolderCollection(
     "./src/data/news",
     createSlugFromTitleAndDate
@@ -143,9 +146,9 @@ const createRoutes = async () => {
       path: "/team",
       component: "src/components/pages/team/index/Index",
       getData: () => ({
-        teamMembers
+        members
       }),
-      children: teamMembers.map(member => ({
+      children: members.map(member => ({
         path: `${member.slug}`,
         component: "src/components/pages/team/member/Member",
         getData: () => ({
