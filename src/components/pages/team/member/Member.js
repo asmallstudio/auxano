@@ -5,7 +5,7 @@ import { RouteData, Link, Head } from "react-static";
 import { pageChange } from "../../../../lib/utils/pageChange";
 import { getFullPageTitle } from "../../../../lib/utils/copy";
 
-import styles from "./post.scss";
+import styles from "./member.scss";
 
 class Post extends React.Component {
   componentDidMount() {

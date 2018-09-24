@@ -17,7 +17,7 @@ class Index extends React.Component {
   render() {
     return (
       <RouteData
-        render={({ posts, currentPage, totalPages }) => (
+        render={({ members, currentPage, totalPages }) => (
           <React.Fragment>
             <Head>
               <title>{getFullPageTitle("Team")}</title>
@@ -27,24 +27,24 @@ class Index extends React.Component {
                 <div className={`col-xs-12 ${styles.articleList}`}>
                   <h1 className="style-as-h3">Meet the Team</h1>
                   <ul>
-                    {posts.map(post => (
-                      <li key={post.id} className={styles.indexArticle}>
+                    {members.map(member => (
+                      <li key={member.id} className={styles.indexArticle}>
                         <div className={styles.titleAndLinkContainer}>
                           <Link
-                            to={`/team/${post.slug}/`}
+                            to={`/team/${member.slug}/`}
                             className={styles.postTitle}
                           >
-                            {post.title}
+                            {member.title}
                           </Link>
                           <LinkWithArrow
-                            to={`/team/${post.slug}/`}
+                            to={`/team/${member.slug}/`}
                             className={styles.arrowLink}
                           >
                             Read more
                           </LinkWithArrow>
                         </div>
                         <div className={styles.metaInfoContainer}>
-                          <p>{formatDateStringToFromNow(post.date)}</p>
+                          <p>{formatDateStringToFromNow(member.date)}</p>
                         </div>
                       </li>
                     ))}
