@@ -21,7 +21,7 @@ class Footer extends React.Component {
               <h3 className="sr-text">Site Navigation</h3>
               <ul className={`N2 ${styles.linkList}`}>
                 <li>
-                  <Link to="/news" activeClassName={styles.activeLink}>
+                  <Link to="/news" activeClassName={styles.activeLink} exact>
                     News & Resources
                   </Link>
                 </li>
