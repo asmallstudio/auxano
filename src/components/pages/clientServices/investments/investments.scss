@@ -59,11 +59,7 @@
 
 .infoSectionRow {
   align-items: center;
-  margin: var(--space-l2) 0 var(--space-l5);
-
-  @include respond-above(md) {
-    margin-top: var(--space-l4);
-  }
+  margin: var(--space-l4) 0 var(--space-l5);
 
   p {
     white-space: pre-line;
@@ -114,16 +110,11 @@
 }
 
 .infoTable {
-  display: none;
   width: 100%;
   text-align: center;
   table-layout: fixed;
   border-spacing: 0.5rem;
   margin-top: var(--space-l5);
-
-  @include respond-above(md) {
-    display: table;
-  }
 
   thead tr {
     height: 5rem;
@@ -150,14 +141,25 @@
   }
 
   tbody th {
-    padding: 0 2rem;
+    writing-mode: vertical-lr;
+    text-orientation: sideways;
+    padding: 0 1rem;
+
+    @include respond-above(md) {
+      writing-mode: horizontal-tb;
+      padding: 0 2rem;
+    }
   }
 
   td {
     border: 1px solid var(--grey);
-    padding: 0 2rem;
+
+    @include respond-above(md) {
+      padding: 0 2rem;
+    }
 
     p {
+      font-size: 1rem;
       white-space: pre-wrap;
     }
   }
