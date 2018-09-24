@@ -3,6 +3,9 @@ backend:
   branch: master
 media_folder: public/uploads
 public_folder: /uploads
+slug:
+  encoding: "ascii"
+  clean_accents: true
 collections:
   - label: Pages
     name: pages
@@ -1166,6 +1169,7 @@ collections:
     create: true
     extension: yml
     format: yml
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
       - label: "Title"
         name: title
