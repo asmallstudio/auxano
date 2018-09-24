@@ -52,7 +52,7 @@ class Footer extends React.Component {
                 </Link>
               </li>
               <li>
-                <Link to="facebook.com/auxanoadvisors/" rel="me">
+                <Link to="https://facebook.com/auxanoadvisors/" rel="me">
                   Facebook
                 </Link>
               </li>
