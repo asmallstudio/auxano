@@ -23,25 +23,26 @@ class Index extends React.Component {
             </Head>
             <div className="container">
               <div className="row">
-                <div className={`col-xs-12 ${styles.articleList}`}>
+                <div className={`col-xs-12 ${styles.teamList}`}>
                   <h1 className="style-as-h3">Meet the Team</h1>
                   <ul>
                     {members.map(member => (
-                      <li key={member.id} className={styles.indexArticle}>
-                        <div className={styles.titleAndLinkContainer}>
-                          <Link
-                            to={`/team/${member.slug}/`}
-                            className={styles.postTitle}
-                          >
-                            {member.title}
-                          </Link>
-                          <LinkWithArrow
-                            to={`/team/${member.slug}/`}
-                            className={styles.arrowLink}
-                          >
-                            Read more
-                          </LinkWithArrow>
-                        </div>
+                      <li key={member.id} className={styles.teamMember}>
+                        <Link to={`/team/${member.slug}/`}>
+                          <img src={member.image} alt="" />
+                        </Link>
+                        <Link
+                          to={`/team/${member.slug}/`}
+                          className="style-as-h3"
+                        >
+                          {member.title}
+                        </Link>
+                        <LinkWithArrow
+                          to={`/team/${member.slug}/`}
+                          className={styles.arrowLink}
+                        >
+                          Read bio&hellip;
+                        </LinkWithArrow>
                       </li>
                     ))}
                   </ul>

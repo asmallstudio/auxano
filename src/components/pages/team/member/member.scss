@@ -1,11 +1,12 @@
 @import "../../../styles/utils.scss";
 
 .memberContainer {
-  padding: var(--space-l4) 0;
+  padding: var(--space-l5) 0;
 }
 
 .memberInfo {
   img {
+    display: block;
     max-width: 100%;
     height: auto;
     border-radius: 0.5rem;
@@ -43,16 +44,18 @@
   }
 }
 
+.teamIndexLinkContainer {
+  @include respond-above(md) {
+    padding-bottom: var(--space-l5);
+  }
+}
+
 .teamIndexLink {
   transition: color 0.3s ease;
   display: inline-block;
   text-decoration: none;
   position: relative;
   left: -0.4em;
-
-  @include respond-above(md) {
-    margin-bottom: var(--space-l4);
-  }
 
   &::before {
     transition: transform 0.3s ease-out;

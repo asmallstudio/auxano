@@ -34,7 +34,7 @@ class Post extends React.Component {
             </Head>
             <div className={`container ${styles.memberContainer}`}>
               <div className="row">
-                <div className="col-xs-12">
+                <div className={`col-xs-12 ${styles.teamIndexLinkContainer}`}>
                   <Link
                     to="/team"
                     className={`style-as-h3 ${styles.teamIndexLink}`}
