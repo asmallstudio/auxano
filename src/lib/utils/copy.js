@@ -28,18 +28,23 @@ const formatDateStringToFromNow = LLLDateString => {
 };
 
 /**
+ * Sanitize input string
+ * @param {string} string Input
+ * @returns {string} Sanitized string
+ */
+const sanitizeString = string => {
+  return string
+    .toLowerCase()
+    .replace(/ /g, "-")
+    .replace(/[^\w-]+/g, "");
+};
+
+/**
  * Create slug from title and date
- * @param {string} title
- * @param {string} date Date string in LLL format
  * @returns {string} URL safe slug
  */
-const createSlugFromTitleAndDate = (title, date) => {
-  function sanitizeString(string) {
-    return string
-      .toLowerCase()
-      .replace(/ /g, "-")
-      .replace(/[^\w-]+/g, "");
-  }
+const createSlugFromTitleAndDate = data => {
+  const { title, date } = data;
 
   function formatDate(momentDate) {
     return momentDate.format("YYYY-MM-DD");
@@ -52,8 +57,18 @@ const createSlugFromTitleAndDate = (title, date) => {
   return `${formattedDate}-${sanitizedTitle}`;
 };
 
+/**
+ * Create slug from title
+ * @param {object} data File data
+ * @returns {string} Created Slug
+ */
+const createSlugFromTitle = data => {
+  return sanitizeString(data.title);
+};
+
 export {
   getFullPageTitle,
   formatDateStringToFromNow,
-  createSlugFromTitleAndDate
+  createSlugFromTitleAndDate,
+  createSlugFromTitle
 };
