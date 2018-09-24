@@ -4,8 +4,6 @@ import yaml from "js-yaml";
 import klaw from "klaw";
 import path from "path";
 
-import { createSlugFromTitleAndDate } from "./copy";
-
 /**
  * Parses the information of a markdown file with front matter
  * in YAML
@@ -39,19 +37,34 @@ const getSingleFileMd = path => {
  */
 const getSingleFileYaml = path => yaml.safeLoad(fs.readFileSync(path, "utf8"));
 
-const getFolderCollection = location => {
+/**
+ * Get folder collection data
+ * @param {string} location Path to folder collection
+ * @param {function} createSlug Function that creates the slug from file data
+ * @returns {array} Array of objects containing file data
+ */
+const getFolderCollection = (location, createSlug) => {
   return new Promise((resolve, reject) => {
+    const nameMap = {};
+
+    function ensureUniqueSlug(slug, nameMap) {
+      if (nameMap[slug]) {
+        nameMap[slug] = nameMap[slug] + 1;
+        const modifiedSlug = `${slug}-${nameMap[slug]}`;
+        return modifiedSlug;
+      }
+
+      nameMap[slug] = 1;
+      return slug;
+    }
+
     const items = [];
     if (fs.existsSync(location)) {
       klaw(location)
         .on("data", item => {
-          // Filter function to retrieve .md files
           if (path.extname(item.path) === ".yml") {
-            // If markdown file, read contents
             const data = getSingleFileYaml(item.path);
-            // Create slug for URL
-            data.slug = createSlugFromTitleAndDate(data.title, data.date);
-            // Push object into items array
+            data.slug = ensureUniqueSlug(createSlug(data), nameMap);
             items.push(data);
           }
         })
@@ -59,12 +72,9 @@ const getFolderCollection = location => {
           reject(e);
         })
         .on("end", () => {
-          // Resolve promise for async getRoutes request
-          // posts = items for below routes
           resolve(items);
         });
     } else {
-      // If src/posts directory doesn't exist, return items as empty array
       resolve(items);
     }
   });

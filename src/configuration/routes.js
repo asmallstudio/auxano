@@ -2,6 +2,10 @@ import {
   getSingleFileYaml,
   getFolderCollection
 } from "../lib/utils/fileLoading";
+import {
+  createSlugFromTitleAndDate,
+  createSlugFromTitle
+} from "../lib/utils/copy";
 import { makePageRoutes } from "react-static/node";
 
 /**
@@ -39,7 +43,14 @@ const createRoutes = async () => {
   const careers = getSingleFileYaml("./src/data/pages/careers.yml");
   const contact = getSingleFileYaml("./src/data/pages/contact.yml");
   const other = getSingleFileYaml("./src/data/pages/other.yml");
-  const newsItems = await getFolderCollection("./src/data/news");
+  const members = await getFolderCollection(
+    "./src/data/team",
+    createSlugFromTitle
+  );
+  const newsItems = await getFolderCollection(
+    "./src/data/news",
+    createSlugFromTitleAndDate
+  );
 
   return [
     {
@@ -133,6 +144,20 @@ const createRoutes = async () => {
       getData: () => ({
         careers
       })
+    },
+    {
+      path: "/team",
+      component: "src/components/pages/team/index/Index",
+      getData: () => ({
+        members
+      }),
+      children: members.map(member => ({
+        path: `${member.slug}`,
+        component: "src/components/pages/team/member/Member",
+        getData: () => ({
+          member
+        })
+      }))
     },
     // Make an index route for every 5 blog posts
     ...makePageRoutes({

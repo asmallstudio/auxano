@@ -3,6 +3,10 @@ backend:
   branch: master
 media_folder: public/uploads
 public_folder: /uploads
+display_url: https://auxanoadvisors.com/
+slug:
+  encoding: "ascii"
+  clean_accents: true
 collections:
   - label: Pages
     name: pages
@@ -1160,12 +1164,13 @@ collections:
               - label: "Subheading"
                 name: text
                 widget: text
-  - label: News
+  - label: News Article
     name: news
     folder: src/data/news
     create: true
     extension: yml
     format: yml
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
       - label: "Title"
         name: title
@@ -1175,4 +1180,38 @@ collections:
         widget: datetime
       - label: "Body"
         name: body
+        widget: markdown
+  - label: Team Member
+    name: team
+    folder: src/data/team
+    create: true
+    extension: yml
+    format: yml
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - label: "Name"
+        name: title
+        widget: string
+      - label: "Photo"
+        name: image
+        widget: image
+      - label: "Date"
+        name: date
+        widget: datetime
+      - label: "Qualifications"
+        name: qualifications
+        hint: "A comma separated list of qualifications"
+        widget: list
+      - label: "Positions"
+        name: positions
+        hint: "A comma separated list of positions"
+        widget: list
+      - label: "Email"
+        name: email
+        widget: string
+      - label: "Phone Extension"
+        name: extension
+        widget: string
+      - label: "Bio"
+        name: bio
         widget: markdown
