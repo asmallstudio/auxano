@@ -33,7 +33,9 @@ const formatDateStringToFromNow = LLLDateString => {
  * @param {string} date Date string in LLL format
  * @returns {string} URL safe slug
  */
-const createSlugFromTitleAndDate = (title, date) => {
+const createSlugFromTitleAndDate = data => {
+  const { title, date } = data;
+
   function sanitizeString(string) {
     return string
       .toLowerCase()
