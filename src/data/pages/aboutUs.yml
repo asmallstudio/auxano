@@ -1,42 +1,46 @@
 pageTitle: About Us
 hero:
-  title: "Stewardship is our core."
+  ctaLink: /team
+  ctaText: Meet the Team
+  image: /uploads/about-us-hero.png
   subtitle: >-
     Our vision is to be a multi-generational wealth management firm that helps
     clients integrate their vision and values with their wealth. As a fiduciary,
     we utilize a fee only system as a way to foster relationships with our
     clients and not with their money.
-  image: "/uploads/about-us-hero.png"
-  ctaText: Meet the Team
-  ctaLink: "#"
-textSection: |-
-  **Stewardship:** the careful and responsible management of something entrusted to one's care. —_Merriam-Webster Dictionary_
+  title: Stewardship is our core.
+textSection: >-
+  **Stewardship:** the careful and responsible management of something entrusted
+  to one's care. —_Merriam-Webster Dictionary_
 infoSection:
   heading: Community
   image:
     alt: what is important about this image? what does it communicate?
     src: /uploads/community.png
+  items:
+    - desc: Lorem ipsum…
+      logo: /uploads/agros.png
+      name: Agros
+    - desc: Lorem ipsum…
+      logo: /uploads/dementia-alliance-of-north-carolina.png
+      name: Dementia Alliance of North Carolina
+    - desc: Lorem ipsum…
+      logo: /uploads/jubilee-reach.png
+      name: Jubilee Reach
+    - desc: >-
+        A humanitarian aid organization that works to provide care to people
+        affected by disaster, conflict and poverty. They empower communities
+        worldwide to live full and healthy lives.
+      logo: /uploads/medical-teams-international.png
+      name: Medical Teams International
+    - desc: Lorem ipsum…
+      logo: /uploads/walk-to-end-alzheimers.png
+      name: Walk to End Alzheimer's
   text: >-
     Because stewardship is fundamental to our culture, we encourage our team to
     invest their time, talent and treasure into making a positive impact within
     our community. Here are just a few of the organizations that Auxano has made
     a difference for:
-  items:
-    - logo: /uploads/agros.png
-      name: Agros
-      desc: Lorem ipsum…
-    - logo: /uploads/dementia-alliance-of-north-carolina.png
-      name: Dementia Alliance of North Carolina
-      desc: Lorem ipsum…
-    - logo: /uploads/jubilee-reach.png
-      name: Jubilee Reach
-      desc: Lorem ipsum…
-    - logo: /uploads/medical-teams-international.png
-      name: Medical Teams International
-      desc: A humanitarian aid organization that works to provide care to people affected by disaster, conflict and poverty. They empower communities worldwide to live full and healthy lives.
-    - logo: /uploads/walk-to-end-alzheimers.png
-      name: Walk to End Alzheimer's
-      desc: Lorem ipsum…
 actionBanner:
   link: /our-approach
   text: Our Approach
