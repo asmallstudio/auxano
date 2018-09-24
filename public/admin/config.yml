@@ -1059,7 +1059,7 @@ collections:
       - label: "Corporate Executive Solutions"
         name: corporateExecutiveSolutions
         file: src/data/pages/corporateExecutiveSolutions.yml
-        path: /corporate-executive-solutions
+        path: /corporate-solutions
         fields:
           - label: "Page Title"
             name: pageTitle
