@@ -68,36 +68,15 @@ class Other extends React.Component {
               className="dg-item6"
             />
           </div>
-        </section>
-        <section className="container dg-infoSection">
-          <div className={`row ${styles.infoSectionRow}`}>
-            <div className={`col-xs-12 col-md-6 ${styles.infoSectionColText}`}>
-              <img
-                src={clientServices.infoSection.icon}
-                className={styles.infoSectionIcon}
-                alt=""
-              />
-              <h2>{clientServices.infoSection.heading}</h2>
-              <p>{clientServices.infoSection.text}</p>
-            </div>
-            <div className="col-lg-1 hidden-lg-down" />
-            <div
-              className={`col-xs-12 col-md-6 col-lg-5 ${
-                styles.infoSectionColImage
-              }`}
-            >
-              <div
-                className={`${styles.imgContainer} ${
-                  styles.dingusDotRelative
-                } ${styles.dingusDot2}`}
-              >
-                <img
-                  className={`${styles.infoSectionImage}`}
-                  src={clientServices.infoSection.image.src}
-                  alt={clientServices.infoSection.image.alt}
-                />
-              </div>
-            </div>
+          <div className={`${styles.threecols} row`}>
+            <OneThirdColumn
+              data={clientServices.services.item7}
+              className="dg-item7"
+            />
+            <OneThirdColumn
+              data={clientServices.services.item8}
+              className="dg-item8"
+            />
           </div>
         </section>
         <FullWidthSectionActionLink

@@ -114,11 +114,16 @@
 }
 
 .infoTable {
+  display: none;
   width: 100%;
   text-align: center;
   table-layout: fixed;
   border-spacing: 0.5rem;
   margin-top: var(--space-l5);
+
+  @include respond-above(md) {
+    display: table;
+  }
 
   thead tr {
     height: 5rem;
@@ -199,4 +204,5 @@
   width: 3rem;
   border-radius: 0.5rem;
   border: none;
+  margin-bottom: var(--space-l2);
 }

@@ -62,34 +62,16 @@
 
   p {
     color: var(--grey);
+    white-space: pre-line;
     margin-bottom: var(--space-l3);
+
+    a {
+      color: var(--fountain-blue);
+      text-decoration: none;
+    }
   }
 
   @include respond-above(md) {
     text-align: left;
   }
-}
-
-.filler {
-  width: 100%;
-  height: 400px;
-  background-color: var(--filler-bg);
-}
-
-.pullquote {
-  margin: var(--space-l5) 0;
-
-  p {
-    hyphens: auto;
-    text-align: center;
-
-    @include respond-above(md) {
-      hyphens: manual;
-      text-align: left;
-    }
-  }
-}
-
-.threecols {
-  margin: var(--space-l5) 0;
 }

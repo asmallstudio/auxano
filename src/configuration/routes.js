@@ -33,9 +33,10 @@ const createRoutes = async () => {
   const businessServices = getSingleFileYaml(
     "./src/data/pages/clientServices/businessServices.yml"
   );
-  const corporateExecutiveSolutions = getSingleFileYaml(
-    "./src/data/pages/corporateExecutiveSolutions.yml"
+  const corporateSolutions = getSingleFileYaml(
+    "./src/data/pages/corporateSolutions.yml"
   );
+  const careers = getSingleFileYaml("./src/data/pages/careers.yml");
   const contact = getSingleFileYaml("./src/data/pages/contact.yml");
   const other = getSingleFileYaml("./src/data/pages/other.yml");
   const newsItems = await getFolderCollection("./src/data/news");
@@ -67,60 +68,70 @@ const createRoutes = async () => {
       component: "src/components/pages/clientServices/ClientServices",
       getData: () => ({
         clientServices
+      }),
+      children: [
+        {
+          path: "/personal-finances",
+          component:
+            "src/components/pages/clientServices/personalFinances/PersonalFinances",
+          getData: () => ({
+            personalFinances
+          })
+        },
+        {
+          path: "/investments",
+          component:
+            "src/components/pages/clientServices/investments/investments",
+          getData: () => ({
+            investments
+          })
+        },
+        {
+          path: "/estate-planning",
+          component:
+            "src/components/pages/clientServices/estatePlanning/EstatePlanning",
+          getData: () => ({
+            estatePlanning
+          })
+        },
+        {
+          path: "/risk-management",
+          component:
+            "src/components/pages/clientServices/riskManagement/RiskManagement",
+          getData: () => ({
+            riskManagement
+          })
+        },
+        {
+          path: "/tax-planning",
+          component:
+            "src/components/pages/clientServices/taxPlanning/TaxPlanning",
+          getData: () => ({
+            taxPlanning
+          })
+        },
+        {
+          path: "/business-services",
+          component:
+            "src/components/pages/clientServices/businessServices/BusinessServices",
+          getData: () => ({
+            businessServices
+          })
+        }
+      ]
+    },
+    {
+      path: "/corporate-solutions",
+      component: "src/components/pages/corporateSolutions/CorporateSolutions",
+      getData: () => ({
+        corporateSolutions
       })
     },
     {
-      path: "/client-services/personal-finances",
-      component:
-        "src/components/pages/clientServices/personalFinances/PersonalFinances",
+      path: "/careers",
+      component: "src/components/pages/careers/Careers",
       getData: () => ({
-        personalFinances
-      })
-    },
-    {
-      path: "/client-services/investments",
-      component: "src/components/pages/clientServices/investments/investments",
-      getData: () => ({
-        investments
-      })
-    },
-    {
-      path: "/client-services/estate-planning",
-      component:
-        "src/components/pages/clientServices/estatePlanning/EstatePlanning",
-      getData: () => ({
-        estatePlanning
-      })
-    },
-    {
-      path: "/client-services/risk-management",
-      component:
-        "src/components/pages/clientServices/riskManagement/RiskManagement",
-      getData: () => ({
-        riskManagement
-      })
-    },
-    {
-      path: "/client-services/tax-planning",
-      component: "src/components/pages/clientServices/taxPlanning/TaxPlanning",
-      getData: () => ({
-        taxPlanning
-      })
-    },
-    {
-      path: "/client-services/business-services",
-      component:
-        "src/components/pages/clientServices/businessServices/BusinessServices",
-      getData: () => ({
-        businessServices
-      })
-    },
-    {
-      path: "/corporate-executive-solutions",
-      component:
-        "src/components/pages/corporateExecutiveSolutions/CorporateExecutiveSolutions",
-      getData: () => ({
-        corporateExecutiveSolutions
+        careers
       })
     },
     // Make an index route for every 5 blog posts

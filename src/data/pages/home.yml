@@ -10,7 +10,23 @@ pullquote: |-
   As our client, we'll show you the role stewardship plays in all effective
   wealth transfers, including charitable gift giving, college endowments, and
   donations to non-profits.
-learnMore:
+callouts:
+  item1:
+    icon: "/uploads/approach.svg"
+    heading: "Our Approach"
+    text: "Learn about how Stewardship is at the core of what we do."
+    link: "/our-approach/"
+  item2:
+    icon: "/uploads/services.svg"
+    heading: "Our Services"
+    text: "Find out we can help you reach your goals."
+    link: "/client-services/"
+  item3:
+    icon: "/uploads/team.svg"
+    heading: "Our Team"
+    text: "Get to know the people who make up Auxano."
+    link: "/our-team/"
+actionBanner:
   link: /about-us
   text: About Us
 subscribe:

@@ -1,0 +1,42 @@
+@import "../../styles/utils.scss";
+
+.coverSheet {
+  position: relative;
+  z-index: 101;
+  height: 100vh;
+  background-color: var(--fountain-blue);
+  padding: var(--space-l3) 0;
+
+  @include respond-above(md) {
+    padding: var(--space-l3);
+  }
+}
+
+.coverSheetContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  max-width: $max-width-em;
+  padding-top: env(safe-area-inset-top);
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+.text {
+  width: 100%;
+
+  h1 {
+    color: var(--white);
+    white-space: pre-line;
+    max-width: 40rem;
+  }
+
+  p {
+    color: var(--white-40);
+    margin-top: var(--space-l2);
+  }
+}
+
+.arrow {
+  align-self: center;
+}
