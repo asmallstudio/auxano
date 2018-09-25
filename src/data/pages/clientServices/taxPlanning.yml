@@ -1,15 +1,31 @@
-pageTitle: "Tax Planning | Client Services"
+pageTitle: Tax Planning | Client Services
 hero:
-  name: "Tax Planning"
-  title: "By creating unique tax models, we’ll help you plan ahead and be better prepared for this annual process."
+  name: Tax Planning
+  title: >-
+    By creating unique tax models, we’ll help you plan ahead and be better
+    prepared for this annual process.
+pullquote: ' '
 serviceInfo:
-  section1: "The person who prepares your tax return does so after your taxable events have already occurred. There are only a few changes which can be made after the end of the year and before April 15th. Most of a tax preparer’s job is simply to work within the tax codes. The main savings they can produce come from taking every deduction legally possible. Their primary focus is on minimizing the tax owed by law for the filing year."
-  section2: 
+  section1: >-
+    The person who prepares your tax return does so after your taxable events
+    have already occurred. There are only a few changes which can be made after
+    the end of the year and before April 15th. Most of a tax preparer’s job is
+    simply to work within the tax codes. The main savings they can produce come
+    from taking every deduction legally possible. Their primary focus is on
+    minimizing the tax owed by law for the filing year.
+  section2:
+    description: >-
+      In contrast, integrated financial planning engages in tax planning, the
+      process of modeling many years of tax projections in order to maximize
+      your after-tax net worth.
     image:
-      src: "https://via.placeholder.com/976x640"
-      alt: "placeholder image"
-    description: "In contrast, integrated financial planning engages in tax planning, the process of modeling many years of tax projections in order to maximize your after-tax net worth."
-  section3: "Although it begins with your current tax situation, it models how possible choices will interact with current and future taxes. Different scenarios can have an impact on tax planning and you cannot determine which are best with a simple back-of-the-napkin calculation based on tax paid."
+      alt: placeholder image
+      src: /uploads/tax-planning.jpg
+  section3: >-
+    Although it begins with your current tax situation, it models how possible
+    choices will interact with current and future taxes. Different scenarios can
+    have an impact on tax planning and you cannot determine which are best with
+    a simple back-of-the-napkin calculation based on tax paid.
 actionBanner:
   link: /contact
   text: Contact Us
