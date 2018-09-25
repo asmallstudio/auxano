@@ -118,9 +118,9 @@
   font-size: 1rem;
   border-spacing: 0.5rem;
   margin-top: var(--space-l5);
+  table-layout: fixed;
 
   @include respond-above(md) {
-    table-layout: fixed;
   }
 
   thead tr {
@@ -157,15 +157,25 @@
   }
 
   tbody th:not(:empty) {
-    transform: rotate(180deg);
-    writing-mode: vertical-lr;
-    text-orientation: sideways;
+    // transform: rotate(180deg);
+    // writing-mode: vertical-lr;
+    // text-orientation: sideways;
     padding: 0.5rem 0.5rem;
     box-shadow: 0 -5px 5px var(--grey-10);
 
+    span {
+      display: block;
+      transform: rotate(-90deg) translateX(-2rem);
+
+      @include respond-above(md) {
+        display: inline;
+        transform: none;
+      }
+    }
+
     @include respond-above(md) {
-      transform: none;
-      writing-mode: horizontal-tb;
+      // transform: none;
+      // writing-mode: horizontal-tb;
       padding: 0.5rem 2rem;
       box-shadow: 0 5px 5px var(--grey-10);
     }

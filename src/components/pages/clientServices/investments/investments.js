@@ -92,7 +92,9 @@ class Other extends React.Component {
             </thead>
             <tbody>
               <tr>
-                <th>{investments.infoTable.tableRow1.tableRowHead}</th>
+                <th>
+                  <span>{investments.infoTable.tableRow1.tableRowHead}</span>
+                </th>
                 <td>
                   <p>{investments.infoTable.tableRow1.tableCell1}</p>
                 </td>
@@ -101,7 +103,9 @@ class Other extends React.Component {
                 </td>
               </tr>
               <tr>
-                <th>{investments.infoTable.tableRow2.tableRowHead}</th>
+                <th>
+                  <span>{investments.infoTable.tableRow2.tableRowHead}</span>
+                </th>
                 <td>
                   <p>{investments.infoTable.tableRow2.tableCell1}</p>
                 </td>
