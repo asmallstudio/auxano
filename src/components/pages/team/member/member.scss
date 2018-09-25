@@ -20,7 +20,10 @@
 
   :global(.style-as-p) {
     margin-top: var(--space-l1);
-    margin-bottom: var(--space-l2);
+  }
+
+  .contactInfoItem {
+    margin-top: var(--space-l2);
   }
 
   a {
