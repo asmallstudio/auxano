@@ -674,15 +674,12 @@ collections:
                   - label: "Image Description"
                     name: alt
                     widget: string
-              - label: "Description 1"
-                name: description1
+              - label: "Description Lede"
+                name: descriptionLede
                 widget: string
-              - label: "Description 2"
-                name: description2
-                widget: string
-              - label: "Description 3"
-                name: description3
-                widget: string
+              - label: "Description"
+                name: description
+                widget: text
           - label: "Pullquote 2"
             name: pullquote2
             widget: text

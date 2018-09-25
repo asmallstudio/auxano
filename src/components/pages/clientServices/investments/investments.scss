@@ -221,6 +221,12 @@
   }
 }
 
+.infoSectionDescription {
+  @include respond-above(md) {
+    margin-top: var(--space-l4);
+  }
+}
+
 .serviceInfoList {
   list-style: none;
   padding: 0;
