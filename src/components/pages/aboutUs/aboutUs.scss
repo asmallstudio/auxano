@@ -71,17 +71,13 @@
 }
 
 .infoSectionRow {
-  align-items: center;
+  align-items: flex-start;
   margin: var(--space-l5) 0;
-
-  @include respond-above(md) {
-    flex-direction: row-reverse;
-  }
 }
 
 .infoSectionColText {
   text-align: center;
-  margin-bottom: 3em;
+  margin: var(--space-l3) auto 3em;
 
   h2 {
     margin-bottom: 0.67em;
@@ -97,6 +93,7 @@
   }
 
   @include respond-above(md) {
+    margin-top: 0;
     margin-bottom: var(--space-l2);
   }
 }
@@ -161,7 +158,7 @@
     height: 4rem;
     width: 4rem;
     object-fit: contain;
-    filter: grayscale(100%);
+    filter: grayscale(100%) opacity(75%);
     padding: var(--space-l1);
     border: 1px solid var(--grey-40);
     border-radius: 0.5rem;
@@ -170,7 +167,8 @@
 
     &:hover,
     &.activeOrg {
-      filter: grayscale(0);
+      opacity: 1;
+      filter: grayscale(0) opacity(100%);
       border-color: var(--gigas);
     }
   }

@@ -43,8 +43,6 @@ const createRoutes = async () => {
   );
   const careers = getSingleFileYaml("./src/data/pages/careers.yml");
   const contact = getSingleFileYaml("./src/data/pages/contact.yml");
-  const other = getSingleFileYaml("./src/data/pages/other.yml");
-
   const newsItems = await getFolderCollection(
     "./src/data/news",
     createSlugFromTitleAndDate
@@ -191,13 +189,6 @@ const createRoutes = async () => {
       component: "src/components/pages/contact/Contact",
       getData: () => ({
         contact
-      })
-    },
-    {
-      path: "/other",
-      component: "src/components/pages/other/Other",
-      getData: () => ({
-        other
       })
     },
     {

@@ -56,7 +56,7 @@ class Other extends React.Component {
         </section>
         <FullWidthSectionText
           text={businessServices.pullquote}
-          className="dg-pullquote"
+          className={`${styles.pullquote} dg-pullquote`}
         />
         <FullWidthSectionActionLink
           linkText={businessServices.actionBanner.text}

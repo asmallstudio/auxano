@@ -28,7 +28,7 @@ class Index extends React.Component {
                   <h1 className="style-as-h3">News & Resources</h1>
                   <ul>
                     {posts.map(post => (
-                      <li key={post.id} className={styles.indexArticle}>
+                      <li key={post.slug} className={styles.indexArticle}>
                         <div className={styles.titleAndLinkContainer}>
                           <Link
                             to={`/news/${post.slug}/`}
