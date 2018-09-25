@@ -57,6 +57,24 @@ class AboutUs extends React.Component {
         <FullWidthSectionText text={aboutUs.textSection} />
         <section className="container dg-infoSection">
           <div className={`row ${styles.infoSectionRow}`}>
+            <div
+              className={`col-xs-12 col-md-6 col-lg-5 ${
+                styles.infoSectionColImage
+              }`}
+            >
+              <div
+                className={`${styles.imgContainer} ${
+                  styles.dingusDotRelative
+                } ${styles.dingusDot}`}
+              >
+                <img
+                  className={`${styles.infoSectionImage}`}
+                  src={aboutUs.infoSection.image.src}
+                  alt={aboutUs.infoSection.image.alt}
+                />
+              </div>
+            </div>
+            <div className="col-lg-1 hidden-lg-down" />
             <div className={`col-xs-12 col-md-6 ${styles.infoSectionColText}`}>
               <h2>{aboutUs.infoSection.heading}</h2>
               <p>{aboutUs.infoSection.text}</p>
@@ -78,24 +96,6 @@ class AboutUs extends React.Component {
                   </li>
                 ))}
               </ul>
-            </div>
-            <div className="col-lg-1 hidden-lg-down" />
-            <div
-              className={`col-xs-12 col-md-6 col-lg-5 ${
-                styles.infoSectionColImage
-              }`}
-            >
-              <div
-                className={`${styles.imgContainer} ${
-                  styles.dingusDotRelative
-                } ${styles.dingusDot}`}
-              >
-                <img
-                  className={`${styles.infoSectionImage}`}
-                  src={aboutUs.infoSection.image.src}
-                  alt={aboutUs.infoSection.image.alt}
-                />
-              </div>
             </div>
           </div>
         </section>
