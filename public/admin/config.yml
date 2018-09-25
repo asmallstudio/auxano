@@ -1196,10 +1196,12 @@ collections:
                 name: qualifications
                 hint: "A comma separated list of qualifications"
                 widget: list
+                default: [""]
               - label: "Positions"
                 name: positions
                 hint: "A comma separated list of positions"
                 widget: list
+                default: [""]
               - label: "Email"
                 name: email
                 widget: string
