@@ -50,17 +50,18 @@
 }
 
 .teamIndexLinkContainer {
-  @include respond-above(md) {
-    padding-bottom: var(--space-l5);
-  }
+  padding-bottom: var(--space-l5);
 }
 
 .teamIndexLink {
   transition: color 0.3s ease;
   display: inline-block;
   text-decoration: none;
-  position: relative;
-  left: -0.4em;
+
+  @include respond-above(lg) {
+    position: relative;
+    left: -0.4em;
+  }
 
   &::before {
     transition: transform 0.3s ease-out;
