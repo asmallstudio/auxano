@@ -228,7 +228,7 @@ class Contact extends React.Component {
                   <div className={styles.contactInfoSection}>
                     <h3 className="sr-text">Phone</h3>
                     <a href="tel:+14258891261" itemProp="telephone">
-                      (425) 889-1261
+                      +1 (425) 889-1261
                     </a>
                   </div>
                   <div className={styles.contactInfoSection}>
