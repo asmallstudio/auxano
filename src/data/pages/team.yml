@@ -233,6 +233,7 @@ members:
       and spending time with family and friends.
     email: 'davis@auxanoadvisors.com '
     image: /uploads/davis.jpg
+    extension: ''
     positions:
       - Associate Client Advisor
     qualifications:
