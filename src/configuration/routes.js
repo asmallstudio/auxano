@@ -1,6 +1,7 @@
 import {
   getSingleFileYaml,
-  getFolderCollection
+  getFolderCollection,
+  createSlugsForArray
 } from "../lib/utils/fileLoading";
 import {
   createSlugFromTitleAndDate,
@@ -42,14 +43,12 @@ const createRoutes = async () => {
   );
   const careers = getSingleFileYaml("./src/data/pages/careers.yml");
   const contact = getSingleFileYaml("./src/data/pages/contact.yml");
-  const members = await getFolderCollection(
-    "./src/data/team",
-    createSlugFromTitle
-  );
   const newsItems = await getFolderCollection(
     "./src/data/news",
     createSlugFromTitleAndDate
   );
+  const team = getSingleFileYaml("./src/data/pages/team.yml");
+  team.members = createSlugsForArray(team.members, createSlugFromTitle);
 
   return [
     {
@@ -148,9 +147,9 @@ const createRoutes = async () => {
       path: "/team",
       component: "src/components/pages/team/index/Index",
       getData: () => ({
-        members
+        members: team.members
       }),
-      children: members.map(member => ({
+      children: team.members.map(member => ({
         path: `${member.slug}`,
         component: "src/components/pages/team/member/Member",
         getData: () => ({
