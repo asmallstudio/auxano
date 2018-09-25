@@ -22,7 +22,11 @@ class Post extends React.Component {
             </Head>
             <div className={`container ${styles.articleContainer}`}>
               <div className="row">
-                <div className="col-xs-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
+                <div
+                  className={`col-xs-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2 ${
+                    styles.articleListLinkContainer
+                  }`}
+                >
                   <Link
                     to="/news"
                     className={`style-as-h3 ${styles.articleListLink}`}

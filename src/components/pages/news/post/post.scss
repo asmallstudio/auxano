@@ -1,3 +1,5 @@
+@import "../../../styles/utils.scss";
+
 .articleContainer {
   padding: var(--space-l5) 0;
 }
@@ -31,6 +33,12 @@
 
   li {
     line-height: 1.5;
+  }
+}
+
+.articleListLinkContainer {
+  @include respond-above(md) {
+    padding-bottom: 3rem;
   }
 }
 
