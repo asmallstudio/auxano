@@ -112,6 +112,8 @@
 }
 
 .list {
+  transition: max-height 0 ease;
+  transition-delay: 0.3s;
   flex-direction: column;
   justify-content: space-between;
   position: fixed;
@@ -155,11 +157,16 @@
   }
 
   &[hidden] {
-    // display: flex;
+    display: flex;
+    max-height: 0;
+    overflow: hidden;
   }
 
   &:not([hidden]) {
+    transition-duration: 0s;
+    transition-delay: 0s;
     display: flex;
+    max-height: 100%;
 
     &::before {
       transition-timing-function: ease-out;
