@@ -71,17 +71,13 @@
 }
 
 .infoSectionRow {
-  align-items: center;
+  align-items: flex-start;
   margin: var(--space-l5) 0;
-
-  @include respond-above(md) {
-    flex-direction: row-reverse;
-  }
 }
 
 .infoSectionColText {
   text-align: center;
-  margin-bottom: 3em;
+  margin: var(--space-l3) auto 3em;
 
   h2 {
     margin-bottom: 0.67em;
@@ -97,6 +93,7 @@
   }
 
   @include respond-above(md) {
+    margin-top: 0;
     margin-bottom: var(--space-l2);
   }
 }

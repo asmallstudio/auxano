@@ -26,7 +26,7 @@ class Index extends React.Component {
             <div className="container">
               <div className="row">
                 <div className={`col-xs-12 ${styles.teamList}`}>
-                  <h1 className="style-as-h3">Meet the Team</h1>
+                  <h1>Meet the Team</h1>
                   <ul>
                     {members.map(member => (
                       <li key={member.id} className={styles.teamMember}>

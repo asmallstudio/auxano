@@ -57,29 +57,6 @@ class AboutUs extends React.Component {
         <FullWidthSectionText text={aboutUs.textSection} />
         <section className="container dg-infoSection">
           <div className={`row ${styles.infoSectionRow}`}>
-            <div className={`col-xs-12 col-md-6 ${styles.infoSectionColText}`}>
-              <h2>{aboutUs.infoSection.heading}</h2>
-              <p>{aboutUs.infoSection.text}</p>
-              <ul className={styles.communityOrgs}>
-                {aboutUs.infoSection.items.map((item, i) => (
-                  <li className={`key-${i}`} key={i}>
-                    <img
-                      src={item.logo}
-                      alt=""
-                      className={i === this.state.activeOrg && styles.activeOrg}
-                      onClick={() => this._updateListState(i)}
-                    />
-                    {i === this.state.activeOrg && (
-                      <div className={styles.itemText}>
-                        <div className={styles.itemName}>{item.name}</div>
-                        <p className={styles.itemDesc}>{item.desc}</p>
-                      </div>
-                    )}
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div className="col-lg-1 hidden-lg-down" />
             <div
               className={`col-xs-12 col-md-6 col-lg-5 ${
                 styles.infoSectionColImage
@@ -96,6 +73,31 @@ class AboutUs extends React.Component {
                   alt={aboutUs.infoSection.image.alt}
                 />
               </div>
+            </div>
+            <div className="col-lg-1 hidden-lg-down" />
+            <div className={`col-xs-12 col-md-6 ${styles.infoSectionColText}`}>
+              <h2>{aboutUs.infoSection.heading}</h2>
+              <p>{aboutUs.infoSection.text}</p>
+              <ul className={styles.communityOrgs}>
+                {aboutUs.infoSection.items.map((item, i) => (
+                  <li className={`key-${i}`} key={i}>
+                    <img
+                      src={item.logo}
+                      alt=""
+                      className={
+                        i === this.state.activeOrg ? styles.activeOrg : null
+                      }
+                      onClick={() => this._updateListState(i)}
+                    />
+                    {i === this.state.activeOrg && (
+                      <div className={styles.itemText}>
+                        <div className={styles.itemName}>{item.name}</div>
+                        <p className={styles.itemDesc}>{item.desc}</p>
+                      </div>
+                    )}
+                  </li>
+                ))}
+              </ul>
             </div>
           </div>
         </section>

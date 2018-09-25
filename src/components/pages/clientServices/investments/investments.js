@@ -70,7 +70,7 @@ class Other extends React.Component {
               </p>
               <p>{investments.infoSection.description2}</p>
             </div>
-            <div className={`row ${styles.infoSectionRow}`}>
+            <div className="row">
               <div className="col-xs-12">
                 <p>{investments.infoSection.description3}</p>
               </div>
@@ -92,7 +92,9 @@ class Other extends React.Component {
             </thead>
             <tbody>
               <tr>
-                <th>{investments.infoTable.tableRow1.tableRowHead}</th>
+                <th>
+                  <span>{investments.infoTable.tableRow1.tableRowHead}</span>
+                </th>
                 <td>
                   <p>{investments.infoTable.tableRow1.tableCell1}</p>
                 </td>
@@ -101,7 +103,9 @@ class Other extends React.Component {
                 </td>
               </tr>
               <tr>
-                <th>{investments.infoTable.tableRow2.tableRowHead}</th>
+                <th>
+                  <span>{investments.infoTable.tableRow2.tableRowHead}</span>
+                </th>
                 <td>
                   <p>{investments.infoTable.tableRow2.tableCell1}</p>
                 </td>

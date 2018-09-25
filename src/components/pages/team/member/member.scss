@@ -46,7 +46,7 @@
 
 .teamIndexLinkContainer {
   @include respond-above(md) {
-    padding-bottom: var(--space-l5);
+    padding-bottom: 3rem;
   }
 }
 
