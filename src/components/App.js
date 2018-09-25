@@ -20,15 +20,23 @@ class App extends React.Component {
     };
   }
 
-  _updateDoNotShowCoverState = state => {
-    return this.setState({
-      doNotShowCover: state
+  updateDoNotShowCoverState = state => {
+    return new Promise((resolve, reject) => {
+      this.setState(
+        {
+          doNotShowCover: state
+        },
+        err => {
+          if (err) reject(err);
+          resolve(state);
+        }
+      );
     });
   };
 
   _checkCoverStateOnScroll = () => {
     if (window.scrollY > window.innerHeight) {
-      this._updateDoNotShowCoverState(true);
+      this.updateDoNotShowCoverState(true);
       window.scrollTo(0, 0);
       window.removeEventListener(
         "scroll",
@@ -44,13 +52,18 @@ class App extends React.Component {
 
   render() {
     const { doNotShowCover } = this.state;
+    console.log(this.state);
     return (
       <Router>
         <React.Fragment>
           <Head>
             <title>{constants.siteMeta.title}</title>
           </Head>
-          {doNotShowCover ? null : <CoverSheet />}
+          {doNotShowCover ? null : (
+            <CoverSheet
+              updateDoNotShowCoverState={this.updateDoNotShowCoverState}
+            />
+          )}
           <Header />
           <main className={appStyles.routesContainer}>
             <Routes />
