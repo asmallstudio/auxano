@@ -1,31 +1,31 @@
 hero:
-  title: Transcending wealth. Transforming lives.
+  ctaLink: /contact
+  ctaText: Get Started
+  image: /uploads/home-page-hero.png
   subtitle: >-
     We help clients transcend the traditional definition of wealth so it's used
     to build a legacy that transforms families, finances, and their future.
-  image: "/uploads/home-hero.png"
-  ctaText: Get Started
-  ctaLink: /contact
+  title: Transcending wealth. Transforming lives.®
 pullquote: |-
   As our client, we'll show you the role stewardship plays in all effective
   wealth transfers, including charitable gift giving, college endowments, and
   donations to non-profits.
 callouts:
   item1:
-    icon: "/uploads/approach.svg"
-    heading: "Our Approach"
-    text: "Learn about how Stewardship is at the core of what we do."
-    link: "/our-approach/"
+    heading: Our Approach
+    icon: /uploads/approach.svg
+    link: /our-approach/
+    text: See how Stewardship is at the core of what we do.
   item2:
-    icon: "/uploads/services.svg"
-    heading: "Our Services"
-    text: "Find out we can help you reach your goals."
-    link: "/client-services/"
+    heading: Our Services
+    icon: /uploads/services.svg
+    link: /client-services/
+    text: Find out how we can help you reach your goals.
   item3:
-    icon: "/uploads/team.svg"
-    heading: "Our Team"
-    text: "Get to know the people who make up Auxano."
-    link: "/team/"
+    heading: Our Team
+    icon: /uploads/team.svg
+    link: /team/
+    text: Get to know the people on the Auxano team.
 actionBanner:
   link: /about-us
   text: About Us
