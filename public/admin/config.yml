@@ -544,7 +544,7 @@ collections:
                 widget: text
       - label: "Personal Finances"
         name: personalFinances
-        file: src/data/pages/personalFinances.yml
+        file: src/data/pages/clientServices/personalFinances.yml
         path: /client-services/personal-finances
         fields:
           - label: "Page Title"
@@ -629,7 +629,7 @@ collections:
                 widget: text
       - label: "Investments"
         name: investments
-        file: src/data/pages/investments.yml
+        file: src/data/pages/clientServices/investments.yml
         path: /client-services/investments
         fields:
           - label: "Page Title"
@@ -777,7 +777,7 @@ collections:
                 widget: text
       - label: "Estate Planning"
         name: estatePlanning
-        file: src/data/pages/estatePlanning.yml
+        file: src/data/pages/clientServices/estatePlanning.yml
         path: /client-services/estate-planning
         fields:
           - label: "Page Title"
@@ -845,7 +845,7 @@ collections:
                 widget: text
       - label: "Risk Management"
         name: riskManagement
-        file: src/data/pages/riskManagement.yml
+        file: src/data/pages/clientServices/riskManagement.yml
         path: /client-services/risk-management
         fields:
           - label: "Page Title"
@@ -927,7 +927,7 @@ collections:
                 widget: text
       - label: "Tax Planning"
         name: taxPlanning
-        file: src/data/pages/taxPlanning.yml
+        file: src/data/pages/clientServices/taxPlanning.yml
         path: /client-services/tax-planning
         fields:
           - label: "Page Title"
@@ -995,7 +995,7 @@ collections:
                 widget: text
       - label: "Business Services"
         name: businessServices
-        file: src/data/pages/businessServices.yml
+        file: src/data/pages/clientServices/businessServices.yml
         path: /client-services/business-services
         fields:
           - label: "Page Title"
