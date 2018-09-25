@@ -235,6 +235,8 @@ members:
     image: /uploads/davis.jpg
     positions:
       - Associate Client Advisor
+    qualifications:
+      - ''
     title: Davis Walker
   - bio: >-
       Drew is a Senior Investment Analyst with Auxano Advisors and member of the
