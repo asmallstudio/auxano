@@ -1,7 +1,7 @@
 @import "../../styles/utils.scss";
 
 .infoSectionRow {
-  align-items: center;
+  align-items: flex-start;
   margin-bottom: var(--space-l5);
 
   @include respond-above(md) {

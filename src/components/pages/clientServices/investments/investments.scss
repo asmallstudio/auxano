@@ -59,8 +59,11 @@
 }
 
 .infoSectionRow {
-  align-items: center;
-  margin: var(--space-l4) 0 var(--space-l5);
+  align-items: flex-start;
+  margin: var(--space-l5) 0 var(--space-l5);
+
+  @include respond-above(md) {
+  }
 
   p {
     white-space: pre-line;
@@ -183,7 +186,7 @@
 }
 
 .serviceInfoRow {
-  align-items: flex-start;
+  align-items: center;
   margin: var(--space-l5) 0;
 }
 

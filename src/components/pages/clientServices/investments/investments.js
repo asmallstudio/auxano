@@ -70,7 +70,7 @@ class Other extends React.Component {
               </p>
               <p>{investments.infoSection.description2}</p>
             </div>
-            <div className={`row ${styles.infoSectionRow}`}>
+            <div className="row">
               <div className="col-xs-12">
                 <p>{investments.infoSection.description3}</p>
               </div>
