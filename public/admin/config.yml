@@ -1058,7 +1058,7 @@ collections:
                 widget: text
       - label: "Corporate Executive Solutions"
         name: corporateExecutiveSolutions
-        file: src/data/pages/corporateExecutiveSolutions.yml
+        file: src/data/pages/corporateSolutions.yml
         path: /corporate-solutions
         fields:
           - label: "Page Title"
