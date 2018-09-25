@@ -5,6 +5,7 @@ import { getFullPageTitle } from "../../../lib/utils/copy";
 
 import styles from "./ourApproach.scss";
 import InfoSectionRow from "./InfoSectionRow";
+import LinkWithArrow from "../../ui/linkWithArrow/LinkWithArrow";
 import FullWidthSectionActionLink from "../../ui/fullWidthSectionActionLink/FullWidthSectionActionLink";
 import SubscribeSection from "../../ui/subscribeSection/SubscribeSection";
 
@@ -48,6 +49,14 @@ class OurApproach extends React.Component {
             >
               <h2>{ourApproach.items.item1.heading}</h2>
               <p>{ourApproach.items.item1.body}</p>
+              {typeof ourApproach.items.item1.link !== "undefined" && (
+                <LinkWithArrow
+                  to={ourApproach.items.item1.link}
+                  className={styles.moreLink}
+                >
+                  Learn More
+                </LinkWithArrow>
+              )}
             </InfoSectionRow>
             <InfoSectionRow
               imgSrc={ourApproach.items.item2.image.src}
@@ -56,6 +65,14 @@ class OurApproach extends React.Component {
             >
               <h2>{ourApproach.items.item2.heading}</h2>
               <p>{ourApproach.items.item2.body}</p>
+              {typeof ourApproach.items.item2.link !== "undefined" && (
+                <LinkWithArrow
+                  to={ourApproach.items.item2.link}
+                  className={styles.moreLink}
+                >
+                  Learn More
+                </LinkWithArrow>
+              )}
             </InfoSectionRow>
             <InfoSectionRow
               imgSrc={ourApproach.items.item3.image.src}
@@ -64,6 +81,14 @@ class OurApproach extends React.Component {
             >
               <h2>{ourApproach.items.item3.heading}</h2>
               <p>{ourApproach.items.item3.body}</p>
+              {typeof ourApproach.items.item3.link !== "undefined" && (
+                <LinkWithArrow
+                  to={ourApproach.items.item3.link}
+                  className={styles.moreLink}
+                >
+                  Learn More
+                </LinkWithArrow>
+              )}
             </InfoSectionRow>
             <InfoSectionRow
               imgSrc={ourApproach.items.item4.image.src}
@@ -72,6 +97,14 @@ class OurApproach extends React.Component {
             >
               <h2>{ourApproach.items.item4.heading}</h2>
               <p>{ourApproach.items.item4.body}</p>
+              {typeof ourApproach.items.item4.link !== "undefined" && (
+                <LinkWithArrow
+                  to={ourApproach.items.item4.link}
+                  className={styles.moreLink}
+                >
+                  Learn More
+                </LinkWithArrow>
+              )}
             </InfoSectionRow>
           </div>
         </section>

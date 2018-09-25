@@ -17,7 +17,8 @@ items:
     heading: Integrated Financial Planning
     image:
       alt: leave empty if this image does not enhance the meaning of the section
-      src: /uploads/integrated-financial-planning.jpg
+      src: /uploads/integrated-financial-planning.png
+    link: /client-services
   item3:
     body: >-
       Every plan requires activation. We’ll walk you through the process of

@@ -213,12 +213,15 @@ collections:
                 name: item1
                 widget: object
                 fields:
-                  - label: "Item Heading"
+                  - label: "Heading"
                     name: heading
                     widget: string
-                  - label: "Item Heading"
+                  - label: "Body"
                     name: body
                     widget: text
+                  - label: "Link"
+                    name: link
+                    widget: string
                   - label: "Item Image"
                     name: image
                     widget: object
@@ -233,12 +236,15 @@ collections:
                 name: item2
                 widget: object
                 fields:
-                  - label: "Item Heading"
+                  - label: "Heading"
                     name: heading
                     widget: string
-                  - label: "Item Heading"
+                  - label: "Body"
                     name: body
                     widget: text
+                  - label: "Link"
+                    name: link
+                    widget: string
                   - label: "Item Image"
                     name: image
                     widget: object
@@ -253,12 +259,15 @@ collections:
                 name: item3
                 widget: object
                 fields:
-                  - label: "Item Heading"
+                  - label: "Heading"
                     name: heading
                     widget: string
-                  - label: "Item Heading"
+                  - label: "Body"
                     name: body
                     widget: text
+                  - label: "Link"
+                    name: link
+                    widget: string
                   - label: "Item Image"
                     name: image
                     widget: object
@@ -273,12 +282,15 @@ collections:
                 name: item4
                 widget: object
                 fields:
-                  - label: "Item Heading"
+                  - label: "Heading"
                     name: heading
                     widget: string
-                  - label: "Item Heading"
+                  - label: "Body"
                     name: body
                     widget: text
+                  - label: "Link"
+                    name: link
+                    widget: string
                   - label: "Item Image"
                     name: image
                     widget: object
