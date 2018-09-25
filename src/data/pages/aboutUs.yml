@@ -19,13 +19,6 @@ infoSection:
     src: /uploads/community.png
   items:
     - desc: >-
-        Dementia Alliance of North Carolina provides education, support and
-        services to individuals with dementia, their families, healthcare
-        professionals and the general public while raising awareness and funding
-        research.
-      logo: /uploads/dementia-alliance-of-north-carolina.png
-      name: Dementia Alliance of North Carolina
-    - desc: >-
         Agros’ mission is to see rural, poor families of Central America own
         agricultural land, attain economic self-sufficiency, realize their
         God-given potential, and pass on to future generations the values and
@@ -34,6 +27,13 @@ infoSection:
         individuals to date.
       logo: /uploads/agros.png
       name: Agros
+    - desc: >-
+        Dementia Alliance of North Carolina provides education, support and
+        services to individuals with dementia, their families, healthcare
+        professionals and the general public while raising awareness and funding
+        research.
+      logo: /uploads/dementia-alliance-of-north-carolina.png
+      name: Dementia Alliance of North Carolina
     - desc: >-
         Jubilee REACH meets the needs of the people of Bellevue, Washington by
         focusing on their core values: Relationship, Education, Assistance,
