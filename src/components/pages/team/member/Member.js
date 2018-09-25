@@ -53,7 +53,16 @@ class Post extends React.Component {
                   <div className="style-as-p">
                     {this._formatPositions(member.positions)}
                   </div>
-                  <a href={`mailto:${member.email}`}>{member.email}</a>
+                  {member.extension !== "" && (
+                    <div className={styles.contactInfoItem}>
+                      <a href={`tel:+14258891261;ext=${member.extension}`}>
+                        {`+1 (425) 889-1261; ext: ${member.extension}`}
+                      </a>
+                    </div>
+                  )}
+                  <div className={styles.contactInfoItem}>
+                    <a href={`mailto:${member.email}`}>{member.email}</a>
+                  </div>
                 </aside>
                 <article
                   className={`col-xs-12 col-md-9 col-lg-8 col-lg-offset-1 ${
