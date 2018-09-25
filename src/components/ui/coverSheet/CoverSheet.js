@@ -4,6 +4,7 @@ import styles from "./coverSheet.scss";
 
 class CoverSheet extends React.Component {
   _slideCover = () => {
+    window.removeEventListener("scroll", this._checkCoverStateOnScroll, false);
     window.scrollTo({
       top: window.innerHeight,
       behavior: "smooth"
