@@ -191,7 +191,7 @@ class Contact extends React.Component {
   }
 
   render() {
-    const { contact } = this.props;
+    const { global, contact } = this.props;
 
     return (
       <React.Fragment>
@@ -221,14 +221,17 @@ class Contact extends React.Component {
                     <meta itemProp="name" content="Auxano Advisors" />
                     <meta itemProp="url" content={constants.siteMeta.url} />
                     <h3 className="sr-text">Email</h3>
-                    <a href="mailto:info@auxanoadvisors.com" itemProp="email">
-                      info@auxanoadvisors.com
+                    <a
+                      href={`mailto:${global.companyInfo.email}`}
+                      itemProp="email"
+                    >
+                      {global.companyInfo.email}
                     </a>
                   </div>
                   <div className={styles.contactInfoSection}>
                     <h3 className="sr-text">Phone</h3>
                     <a href="tel:+14258891261" itemProp="telephone">
-                      +1 (425) 889-1261
+                      {global.companyInfo.phone}
                     </a>
                   </div>
                   <div className={styles.contactInfoSection}>
@@ -239,14 +242,21 @@ class Contact extends React.Component {
                       itemType="http://schema.org/PostalAddress"
                     >
                       <span itemProp="streetAddress">
-                        10900 NE 4th Street
+                        {global.companyInfo.address.line1}
                         <br />
-                        Suite 1950
+                        {global.companyInfo.address.line2}
                       </span>
                       <br />
-                      <span itemProp="addressLocality">Bellevue</span>,{" "}
-                      <span itemProp="addressRegion">WA</span>{" "}
-                      <span itemProp="postalCode">98004</span>
+                      <span itemProp="addressLocality">
+                        {global.companyInfo.address.city}
+                      </span>
+                      ,{" "}
+                      <span itemProp="addressRegion">
+                        {global.companyInfo.address.state}
+                      </span>{" "}
+                      <span itemProp="postalCode">
+                        {global.companyInfo.address.zipcode}
+                      </span>
                       <meta itemProp="addressCountry" content="US" />
                     </p>
                   </div>
