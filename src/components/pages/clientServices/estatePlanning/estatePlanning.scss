@@ -72,13 +72,12 @@
   @include respond-above(md) {
     margin-top: 0;
     text-align: left;
-    margin-bottom: var(--space-l3);
   }
 }
 
 .infoSectionRow {
   align-items: flex-start;
-  margin: var(--space-l4) 0 var(--space-l5);
+  margin: var(--space-l5) 0;
 
   p {
     white-space: pre-line;
