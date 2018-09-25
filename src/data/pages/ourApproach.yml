@@ -35,8 +35,8 @@ items:
       alt: leave empty if this image does not enhance the meaning of the section
       src: /uploads/monitor-adjust.jpg
 actionBanner:
-  link: /our-approach
-  text: Our Approach
+  link: /client-services
+  text: Our Services
 subscribe:
   heading: Schedule an introduction with an advisor.
   text: All personal information kept private.
