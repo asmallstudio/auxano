@@ -4,6 +4,7 @@ import { pageChange } from "../../../../lib/utils/pageChange";
 import { getFullPageTitle } from "../../../../lib/utils/copy";
 
 import styles from "./estatePlanning.scss";
+import FullWidthSectionText from "../../../ui/fullWidthSectionText/FullWidthSectionText";
 import FullWidthSectionActionLink from "../../../ui/fullWidthSectionActionLink/FullWidthSectionActionLink";
 import SubscribeSection from "../../../ui/subscribeSection/SubscribeSection";
 
@@ -34,65 +35,45 @@ class Other extends React.Component {
               <div className={`col-xs-12 col-md-8 ${styles.heroTextContainer}`}>
                 <h1 className="style-as-h3">{estatePlanning.hero.name}</h1>
                 <p className="style-as-h1">{estatePlanning.hero.title}</p>
+                <p>{estatePlanning.hero.description}</p>
               </div>
             </div>
             <div className={styles.dingusDot1} />
           </div>
         </section>
-        <section className="dg-serviceInfo">
-          <div className={`container--fluid ${styles.serviceInfoContainer}`}>
-            <div className="container">
-              <div className={`row ${styles.serviceInfoRow}`}>
-                <div className="col-xs-12">
-                  <p className="style-as-h2">
-                    {estatePlanning.serviceInfo.section1}
-                  </p>
-                </div>
+        <FullWidthSectionText
+          text={estatePlanning.pullquote1}
+          className={`${styles.pullquote} dg-pullquote1`}
+        />
+        <section className="container dg-imageRow">
+          <div className={`row ${styles.infoSectionRow}`}>
+            <div
+              className={`col-xs-12 col-md-6 col-lg-5 ${
+                styles.infoSectionColImage
+              }`}
+            >
+              <div
+                className={`${styles.imgContainer} ${
+                  styles.dingusDotRelative
+                } ${styles.dingusDot2}`}
+              >
+                <img
+                  className={`${styles.infoSectionImage}`}
+                  src={estatePlanning.imageRow.image.src}
+                  alt={estatePlanning.imageRow.image.alt}
+                />
               </div>
             </div>
-          </div>
-          <div className="container">
-            <div className={`row ${styles.infoSectionRow}`}>
-              <div
-                className={`col-xs-12 col-md-6 col-lg-5 ${
-                  styles.infoSectionColImage
-                }`}
-              >
-                <div
-                  className={`${styles.imgContainer} ${
-                    styles.dingusDotRelative
-                  } ${styles.dingusDot2}`}
-                >
-                  <img
-                    className={`${styles.infoSectionImage}`}
-                    src={estatePlanning.serviceInfo.section2.image.src}
-                    alt={estatePlanning.serviceInfo.section2.image.alt}
-                  />
-                </div>
-              </div>
-              <div className="col-lg-1 hidden-lg-down" />
-              <div
-                className={`col-xs-12 col-md-6 ${styles.infoSectionColText}`}
-              >
-                <p className="style-as-h2">
-                  {estatePlanning.serviceInfo.section2.descriptionLede}
-                </p>
-                <p>{estatePlanning.serviceInfo.section2.description}</p>
-              </div>
-            </div>
-          </div>
-          <div className={`container--fluid ${styles.serviceInfoContainer}`}>
-            <div className="container">
-              <div className={`row ${styles.serviceInfoRow}`}>
-                <div className="col-xs-12">
-                  <p className="style-as-h2">
-                    {estatePlanning.serviceInfo.section3}
-                  </p>
-                </div>
-              </div>
+            <div className="col-lg-1 hidden-lg-down" />
+            <div className={`col-xs-12 col-md-6 ${styles.infoSectionColText}`}>
+              <p>{estatePlanning.imageRow.description}</p>
             </div>
           </div>
         </section>
+        <FullWidthSectionText
+          text={estatePlanning.pullquote2}
+          className={`${styles.pullquote2} dg-pullquote2`}
+        />
         <FullWidthSectionActionLink
           linkText={estatePlanning.actionBanner.text}
           to={estatePlanning.actionBanner.link}

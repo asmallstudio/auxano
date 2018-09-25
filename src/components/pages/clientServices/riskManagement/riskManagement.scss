@@ -12,6 +12,10 @@
     margin-bottom: 0.5em;
   }
 
+  :global(.style-as-h1) {
+    margin-bottom: var(--space-l3);
+  }
+
   @include respond-above(md) {
     text-align: left;
   }
@@ -45,6 +49,10 @@
 .serviceInfoRow {
   align-items: flex-start;
   margin: var(--space-l5) 0;
+}
+
+p.description1 {
+  color: var(--grey);
 }
 
 .serviceInfoText {
