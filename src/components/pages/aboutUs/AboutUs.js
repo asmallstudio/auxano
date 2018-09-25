@@ -84,7 +84,9 @@ class AboutUs extends React.Component {
                     <img
                       src={item.logo}
                       alt=""
-                      className={i === this.state.activeOrg && styles.activeOrg}
+                      className={
+                        i === this.state.activeOrg ? styles.activeOrg : null
+                      }
                       onClick={() => this._updateListState(i)}
                     />
                     {i === this.state.activeOrg && (
