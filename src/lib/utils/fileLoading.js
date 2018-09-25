@@ -80,4 +80,22 @@ const getFolderCollection = (location, createSlug) => {
   });
 };
 
-export { getSingleFileMd, getSingleFileYaml, getFolderCollection };
+/**
+ * Create slugs for each element in the array
+ * @param {array} dataArray Array of data objects
+ * @param {function} createSlug Takes in a data object and creates a slug
+ * @returns {string} Created slug
+ */
+const createSlugsForArray = (dataArray, createSlug) => {
+  return dataArray.map(dataObj => {
+    dataObj.slug = createSlug(dataObj);
+    return dataObj;
+  });
+};
+
+export {
+  getSingleFileMd,
+  getSingleFileYaml,
+  getFolderCollection,
+  createSlugsForArray
+};
