@@ -52,7 +52,6 @@ class App extends React.Component {
 
   render() {
     const { doNotShowCover } = this.state;
-    console.log(this.state);
     return (
       <Router>
         <React.Fragment>
