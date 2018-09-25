@@ -13,9 +13,11 @@ class Post extends React.Component {
   }
 
   _createHonorificName(name, qualifications) {
-    if (qualifications.length) {
+    if (qualifications && qualifications.length) {
       const qualificationsString = qualifications.join(", ");
-      return `${name}, ${qualificationsString}`;
+      return qualificationsString.length
+        ? `${name}, ${qualificationsString}`
+        : name;
     }
     return name;
   }
