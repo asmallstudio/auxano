@@ -17,6 +17,21 @@
   p {
     margin-bottom: 0.5rem;
   }
+  p,
+  pre,
+  ul,
+  li {
+    color: var(--grey);
+    font-size: 1.125rem;
+  }
+
+  a {
+    color: var(--fountain-blue);
+  }
+
+  li {
+    line-height: 1.5;
+  }
 }
 
 .articleListLink {
