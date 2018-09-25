@@ -930,15 +930,21 @@ collections:
               - label: "Heading"
                 name: title
                 widget: string
+              - label: "Description"
+                name: description
+                widget: text
           - label: "Pullquote"
             name: pullquote
-            widget: text
+            widget: string
           - label: "Service Information"
             name: serviceInfo
             widget: object
             fields:
               - label: "Description Part 1"
                 name: description1
+                widget: text
+              - label: "Description Part 2"
+                name: description2
                 widget: text
               - label: "Description List"
                 name: list

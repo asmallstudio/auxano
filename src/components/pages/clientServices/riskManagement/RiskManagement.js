@@ -35,6 +35,7 @@ class Other extends React.Component {
               <div className={`col-xs-12 col-md-8 ${styles.heroTextContainer}`}>
                 <h1 className="style-as-h3">{riskManagement.hero.name}</h1>
                 <p className="style-as-h1">{riskManagement.hero.title}</p>
+                <p>{riskManagement.hero.description}</p>
               </div>
             </div>
             <div className={styles.dingusDot1} />
@@ -46,9 +47,18 @@ class Other extends React.Component {
         />
         <section className="container dg-serviceInfo">
           <div className={`row ${styles.serviceInfoRow}`}>
+            <div className={`col-xs-12 ${styles.serviceInfoText}`}>
+              <p className={`style-as-h3 ${styles.description1}`}>
+                {riskManagement.serviceInfo.description1}
+              </p>
+            </div>
+          </div>
+        </section>
+        <section className="container dg-serviceInfo">
+          <div className={`row ${styles.serviceInfoRow}`}>
             <div className={`col-xs-12 col-md-6 ${styles.serviceInfoText}`}>
               <p className="style-as-h2">
-                {riskManagement.serviceInfo.description}
+                {riskManagement.serviceInfo.description2}
               </p>
             </div>
             <div className="col-lg-1 hidden-lg-down" />
