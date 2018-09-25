@@ -22,7 +22,7 @@ class Footer extends React.Component {
               <ul className={`N2 ${styles.linkList}`}>
                 <li>
                   <Link to="/team" activeClassName={styles.activeLink}>
-                    Team
+                    Our Team
                   </Link>
                 </li>
                 <li>
