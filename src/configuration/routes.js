@@ -42,7 +42,6 @@ const createRoutes = async () => {
   );
   const careers = getSingleFileYaml("./src/data/pages/careers.yml");
   const contact = getSingleFileYaml("./src/data/pages/contact.yml");
-  const other = getSingleFileYaml("./src/data/pages/other.yml");
   const members = await getFolderCollection(
     "./src/data/team",
     createSlugFromTitle
