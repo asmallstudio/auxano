@@ -194,13 +194,6 @@ const createRoutes = async () => {
       })
     },
     {
-      path: "/other",
-      component: "src/components/pages/other/Other",
-      getData: () => ({
-        other
-      })
-    },
-    {
       is404: true,
       component: "src/components/pages/404/404"
     }
