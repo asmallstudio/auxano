@@ -14,6 +14,7 @@ import { makePageRoutes } from "react-static/node";
  * @returns {array} Array of page information objects
  */
 const createRoutes = async () => {
+  const global = getSingleFileYaml("./src/data/pages/global.yml");
   const home = getSingleFileYaml("./src/data/pages/home.yml");
   const aboutUs = getSingleFileYaml("./src/data/pages/aboutUs.yml");
   const ourApproach = getSingleFileYaml("./src/data/pages/ourApproach.yml");
@@ -42,13 +43,14 @@ const createRoutes = async () => {
     "./src/data/pages/corporateSolutions.yml"
   );
   const careers = getSingleFileYaml("./src/data/pages/careers.yml");
-  const contact = getSingleFileYaml("./src/data/pages/contact.yml");
   const newsItems = await getFolderCollection(
     "./src/data/news",
     createSlugFromTitleAndDate
   );
   const team = getSingleFileYaml("./src/data/pages/team.yml");
   team.members = createSlugsForArray(team.members, createSlugFromTitle);
+  const contact = getSingleFileYaml("./src/data/pages/contact.yml");
+  const privacyTerms = getSingleFileYaml("./src/data/pages/privacyTerms.yml");
 
   return [
     {
@@ -147,12 +149,14 @@ const createRoutes = async () => {
       path: "/team",
       component: "src/components/pages/team/index/Index",
       getData: () => ({
+        global,
         members: team.members
       }),
       children: team.members.map(member => ({
         path: `${member.slug}`,
         component: "src/components/pages/team/member/Member",
         getData: () => ({
+          global,
           member
         })
       }))
@@ -188,7 +192,15 @@ const createRoutes = async () => {
       path: "/contact",
       component: "src/components/pages/contact/Contact",
       getData: () => ({
+        global,
         contact
+      })
+    },
+    {
+      path: "/privacy-terms",
+      component: "src/components/pages/privacyTerms/PrivacyTerms",
+      getData: () => ({
+        privacyTerms
       })
     },
     {

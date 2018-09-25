@@ -11,6 +11,70 @@ collections:
   - label: Pages
     name: pages
     files:
+      - label: "Global"
+        name: global
+        file: src/data/pages/global.yml
+        path: /
+        fields:
+          - label: "Company Info"
+            name: companyInfo
+            widget: object
+            fields:
+              - label: "Contact Email"
+                name: email
+                widget: string
+              - label: "Contact Phone"
+                name: phone
+                widget: string
+              - label: "Address"
+                name: address
+                widget: object
+                fields:
+                  - label: "Line 1"
+                    name: line1
+                    widget: string
+                  - label: "Line 2"
+                    name: line2
+                    widget: string
+                  - label: "City"
+                    name: city
+                    widget: string
+                  - label: "State"
+                    name: state
+                    widget: string
+                  - label: "Zipcode"
+                    name: zipcode
+                    widget: string
+          - label: "Cover Sheet"
+            name: coverSheet
+            widget: object
+            fields:
+              - label: "Hero Text"
+                name: hero
+                widget: string
+              - label: "Tagline"
+                name: tagline
+                widget: string
+          - label: "Action Banner"
+            name: actionBanner
+            widget: object
+            fields:
+              - label: "Text"
+                name: text
+                widget: string
+              - label: "Link"
+                name: link
+                widget: string
+          - label: "Subscribe"
+            name: subscribe
+            widget: object
+            fields:
+              - label: "Heading"
+                name: heading
+                widget: string
+              - label: "Subheading"
+                name: text
+                widget: text
       - label: "Home Page"
         name: home
         file: src/data/pages/home.yml
@@ -674,15 +738,12 @@ collections:
                   - label: "Image Description"
                     name: alt
                     widget: string
-              - label: "Description 1"
-                name: description1
+              - label: "Description Lede"
+                name: descriptionLede
                 widget: string
-              - label: "Description 2"
-                name: description2
-                widget: string
-              - label: "Description 3"
-                name: description3
-                widget: string
+              - label: "Description"
+                name: description
+                widget: text
           - label: "Pullquote 2"
             name: pullquote2
             widget: text
@@ -805,36 +866,32 @@ collections:
               - label: "Heading"
                 name: title
                 widget: string
-          - label: "Service Information"
-            name: serviceInfo
+              - label: "Description"
+                name: description
+                widget: text
+          - label: "Pullquote 1"
+            name: pullquote1
+            widget: string
+          - label: "Pullquote 2"
+            name: pullquote2
+            widget: string
+          - label: "Image Section"
+            name: imageRow
             widget: object
             fields:
-              - label: "Description Part 1"
-                name: section1
+              - label: "Description"
+                name: description
                 widget: text
-              - label: "Image Section"
-                name: section2
+              - label: "Image"
+                name: image
                 widget: object
                 fields:
                   - label: "Image"
-                    name: image
-                    widget: object
-                    fields:
-                      - label: "Image"
-                        name: src
-                        widget: image
-                      - label: "Image Description"
-                        name: alt
-                        widget: string
-                  - label: "Description Part 2 Lede"
-                    name: descriptionLede
-                    widget: text
-                  - label: "Description Part 2"
-                    name: description
-                    widget: text
-              - label: "Description Part 3"
-                name: section3
-                widget: text
+                    name: src
+                    widget: image
+                  - label: "Image Description"
+                    name: alt
+                    widget: string
           - label: "Action Banner"
             name: actionBanner
             widget: object
@@ -873,15 +930,21 @@ collections:
               - label: "Heading"
                 name: title
                 widget: string
+              - label: "Description"
+                name: description
+                widget: text
           - label: "Pullquote"
             name: pullquote
-            widget: text
+            widget: string
           - label: "Service Information"
             name: serviceInfo
             widget: object
             fields:
               - label: "Description Part 1"
                 name: description1
+                widget: text
+              - label: "Description Part 2"
+                name: description2
                 widget: text
               - label: "Description List"
                 name: list

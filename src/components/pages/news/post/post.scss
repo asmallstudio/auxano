@@ -7,7 +7,8 @@
 .newsArticle {
   white-space: pre-line;
 
-  h1 {
+  h1,
+  p {
     margin-bottom: 1rem;
   }
 
@@ -15,10 +16,10 @@
   h3,
   h4,
   h5,
-  h6,
-  p {
+  h6 {
     margin-bottom: 0.5rem;
   }
+
   p,
   pre,
   ul,
@@ -37,17 +38,18 @@
 }
 
 .articleListLinkContainer {
-  @include respond-above(md) {
-    padding-bottom: 3rem;
-  }
+  padding-bottom: 3rem;
 }
 
 .articleListLink {
   transition: color 0.3s ease;
   display: inline-block;
   text-decoration: none;
-  position: relative;
-  left: -0.4em;
+
+  @include respond-above(lg) {
+    position: relative;
+    left: -0.4em;
+  }
 
   &::before {
     transition: transform 0.3s ease-out;

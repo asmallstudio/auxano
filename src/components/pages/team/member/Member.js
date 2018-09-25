@@ -1,9 +1,11 @@
 import React from "react";
-import Markdown from "react-markdown";
-
 import { RouteData, Link, Head } from "react-static";
 import { pageChange } from "../../../../lib/utils/pageChange";
 import { getFullPageTitle } from "../../../../lib/utils/copy";
+
+import Markdown from "react-markdown";
+import FullWidthSectionActionLink from "../../../ui/fullWidthSectionActionLink/FullWidthSectionActionLink";
+import SubscribeSection from "../../../ui/subscribeSection/SubscribeSection";
 
 import styles from "./member.scss";
 
@@ -29,12 +31,12 @@ class Post extends React.Component {
   render() {
     return (
       <RouteData
-        render={({ member }) => (
+        render={({ global, member }) => (
           <React.Fragment>
             <Head>
               <title>{getFullPageTitle(member.title)}</title>
             </Head>
-            <div className={`container ${styles.memberContainer}`}>
+            <section className={`container ${styles.memberContainer}`}>
               <div className="row">
                 <div className={`col-xs-12 ${styles.teamIndexLinkContainer}`}>
                   <Link
@@ -74,7 +76,17 @@ class Post extends React.Component {
                   <Markdown>{member.bio}</Markdown>
                 </article>
               </div>
-            </div>
+            </section>
+            <FullWidthSectionActionLink
+              linkText={global.actionBanner.text}
+              to={global.actionBanner.link}
+              className="dg-actionBanner"
+            />
+            <SubscribeSection
+              heading={global.subscribe.heading}
+              text={global.subscribe.text}
+              className="dg-subscribe"
+            />
           </React.Fragment>
         )}
       />

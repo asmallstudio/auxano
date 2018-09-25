@@ -4,6 +4,9 @@ import { getFullPageTitle } from "../../../../lib/utils/copy";
 import { pageChange } from "../../../../lib/utils/pageChange";
 
 import LinkWithArrow from "../../../ui/linkWithArrow/LinkWithArrow";
+import FullWidthSectionActionLink from "../../../ui/fullWidthSectionActionLink/FullWidthSectionActionLink";
+import SubscribeSection from "../../../ui/subscribeSection/SubscribeSection";
+
 import styles from "./index.scss";
 
 class Index extends React.Component {
@@ -18,12 +21,12 @@ class Index extends React.Component {
   render() {
     return (
       <RouteData
-        render={({ members }) => (
+        render={({ global, members }) => (
           <React.Fragment>
             <Head>
               <title>{getFullPageTitle("Team")}</title>
             </Head>
-            <div className="container">
+            <section className="container">
               <div className="row">
                 <div className={`col-xs-12 ${styles.teamList}`}>
                   <h1>Meet the Team</h1>
@@ -53,7 +56,17 @@ class Index extends React.Component {
                   </ul>
                 </div>
               </div>
-            </div>
+            </section>
+            <FullWidthSectionActionLink
+              linkText={global.actionBanner.text}
+              to={global.actionBanner.link}
+              className="dg-actionBanner"
+            />
+            <SubscribeSection
+              heading={global.subscribe.heading}
+              text={global.subscribe.text}
+              className="dg-subscribe"
+            />
           </React.Fragment>
         )}
       />

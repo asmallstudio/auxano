@@ -3,11 +3,12 @@ import { withRouteData, Head } from "react-static";
 import { pageChange } from "../../../lib/utils/pageChange";
 import { getFullPageTitle } from "../../../lib/utils/copy";
 
-import styles from "./aboutUs.scss";
 import CallToActionLink from "../../ui/callToActionLink/CallToActionLink";
 import FullWidthSectionText from "../../ui/fullWidthSectionText/FullWidthSectionText";
 import FullWidthSectionActionLink from "../../ui/fullWidthSectionActionLink/FullWidthSectionActionLink";
 import SubscribeSection from "../../ui/subscribeSection/SubscribeSection";
+
+import styles from "./aboutUs.scss";
 
 class AboutUs extends React.Component {
   constructor(props) {

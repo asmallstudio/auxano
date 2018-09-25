@@ -157,6 +157,7 @@ class Header extends React.Component {
               <FullWidthSectionActionLink
                 className={styles.bottomMenuLink}
                 linkText="Schedule a meeting"
+                onClick={this._menuClose}
                 to="/contact"
               />
             </ul>

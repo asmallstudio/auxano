@@ -1,0 +1,42 @@
+@import "../../styles/utils.scss";
+
+.articleContainer {
+  padding: var(--space-l5) 0;
+}
+
+.articleTitle {
+  margin-bottom: var(--space-l3);
+}
+
+.articleContent {
+  white-space: pre-line;
+
+  h1,
+  p {
+    margin-bottom: 1rem;
+  }
+
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin-bottom: 0.5rem;
+  }
+
+  p,
+  pre,
+  ul,
+  li {
+    color: var(--grey);
+    font-size: 1.125rem;
+  }
+
+  a {
+    color: var(--fountain-blue);
+  }
+
+  li {
+    line-height: 1.5;
+  }
+}

@@ -66,13 +66,14 @@ class Other extends React.Component {
             <div className="col-lg-1 hidden-lg-down" />
             <div className={`col-xs-12 col-md-6 ${styles.infoSectionColText}`}>
               <p className="style-as-h2">
-                {investments.infoSection.description1}
+                {investments.infoSection.descriptionLede}
               </p>
-              <p>{investments.infoSection.description2}</p>
             </div>
             <div className="row">
               <div className="col-xs-12">
-                <p>{investments.infoSection.description3}</p>
+                <p className={styles.infoSectionDescription}>
+                  {investments.infoSection.description}
+                </p>
               </div>
             </div>
           </div>
