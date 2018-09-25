@@ -19,11 +19,11 @@ infoSection:
     src: /uploads/community.png
   items:
     - desc: Lorem ipsum…
-      logo: /uploads/agros.png
-      name: Agros
-    - desc: Lorem ipsum…
       logo: /uploads/dementia-alliance-of-north-carolina.png
       name: Dementia Alliance of North Carolina
+    - desc: Lorem ipsum…
+      logo: /uploads/agros.png
+      name: Agros
     - desc: Lorem ipsum…
       logo: /uploads/jubilee-reach.png
       name: Jubilee Reach
