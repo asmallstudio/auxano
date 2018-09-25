@@ -866,36 +866,32 @@ collections:
               - label: "Heading"
                 name: title
                 widget: string
-          - label: "Service Information"
-            name: serviceInfo
+              - label: "Description"
+                name: description
+                widget: text
+          - label: "Pullquote 1"
+            name: pullquote1
+            widget: string
+          - label: "Pullquote 2"
+            name: pullquote2
+            widget: string
+          - label: "Image Section"
+            name: imageRow
             widget: object
             fields:
-              - label: "Description Part 1"
-                name: section1
+              - label: "Description"
+                name: description
                 widget: text
-              - label: "Image Section"
-                name: section2
+              - label: "Image"
+                name: image
                 widget: object
                 fields:
                   - label: "Image"
-                    name: image
-                    widget: object
-                    fields:
-                      - label: "Image"
-                        name: src
-                        widget: image
-                      - label: "Image Description"
-                        name: alt
-                        widget: string
-                  - label: "Description Part 2 Lede"
-                    name: descriptionLede
-                    widget: text
-                  - label: "Description Part 2"
-                    name: description
-                    widget: text
-              - label: "Description Part 3"
-                name: section3
-                widget: text
+                    name: src
+                    widget: image
+                  - label: "Image Description"
+                    name: alt
+                    widget: string
           - label: "Action Banner"
             name: actionBanner
             widget: object
