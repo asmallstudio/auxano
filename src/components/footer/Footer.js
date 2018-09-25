@@ -41,7 +41,7 @@ class Footer extends React.Component {
                   </Link>
                 </li>
                 <li>
-                  <Link to="#" activeClassName={styles.activeLink}>
+                  <Link to="/privacy-terms" activeClassName={styles.activeLink}>
                     Privacy & Terms
                   </Link>
                 </li>
