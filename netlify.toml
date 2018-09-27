@@ -7,3 +7,16 @@
 
 [context.branch-deploy]
   command = "yarn stage"
+
+# These redirects are from the pre-2019 Auxano Site.
+[[redirects]]
+  from = "/who-we-are"
+  to = "/about-us"
+
+[[redirects]]
+  from = "/people"
+  to = "/team"
+
+[[redirects]]
+  from = "/investment-management"
+  to = "/client-services"
