@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-static";
+import { withSiteData, Link } from "react-static";
 import BackToTopIcon from "./BackToTopIcon";
 import constants from "../../lib/constants.json";
 
@@ -113,4 +113,4 @@ class Footer extends React.Component {
   }
 }
 
-export default Footer;
+export default withSiteData(Footer);
