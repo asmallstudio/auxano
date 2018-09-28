@@ -52,113 +52,92 @@ const createRoutes = async () => {
   const contact = getSingleFileYaml("./src/data/pages/contact.yml");
   const privacyTerms = getSingleFileYaml("./src/data/pages/privacyTerms.yml");
 
+  /**
+   * @param {object} additionalData Object that has the data to pass along with global
+   * @returns {object} Final data to pass along to component
+   */
+  const withGlobalData = additionalData => () => ({
+    ...additionalData,
+    global
+  });
+
   return [
     {
       path: "/",
       component: "src/components/pages/home/Home",
-      getData: () => ({
-        home
-      })
+      getData: withGlobalData({ home })
     },
     {
       path: "/about-us",
       component: "src/components/pages/aboutUs/AboutUs",
-      getData: () => ({
-        aboutUs
-      })
+      getData: withGlobalData({ aboutUs })
     },
     {
       path: "/our-approach",
       component: "src/components/pages/ourApproach/OurApproach",
-      getData: () => ({
-        ourApproach
-      })
+      getData: withGlobalData({ ourApproach })
     },
     {
       path: "/client-services",
       component: "src/components/pages/clientServices/ClientServices",
-      getData: () => ({
-        clientServices
-      }),
+      getData: withGlobalData({ clientServices }),
       children: [
         {
           path: "/personal-finances",
           component:
             "src/components/pages/clientServices/personalFinances/PersonalFinances",
-          getData: () => ({
-            personalFinances
-          })
+          getData: withGlobalData({ personalFinances })
         },
         {
           path: "/investments",
           component:
             "src/components/pages/clientServices/investments/investments",
-          getData: () => ({
-            investments
-          })
+          getData: withGlobalData({ investments })
         },
         {
           path: "/estate-planning",
           component:
             "src/components/pages/clientServices/estatePlanning/EstatePlanning",
-          getData: () => ({
-            estatePlanning
-          })
+          getData: withGlobalData({ estatePlanning })
         },
         {
           path: "/risk-management",
           component:
             "src/components/pages/clientServices/riskManagement/RiskManagement",
-          getData: () => ({
-            riskManagement
-          })
+          getData: withGlobalData({ riskManagement })
         },
         {
           path: "/tax-planning",
           component:
             "src/components/pages/clientServices/taxPlanning/TaxPlanning",
-          getData: () => ({
-            taxPlanning
-          })
+          getData: withGlobalData({ taxPlanning })
         },
         {
           path: "/business-services",
           component:
             "src/components/pages/clientServices/businessServices/BusinessServices",
-          getData: () => ({
-            businessServices
-          })
+          getData: withGlobalData({ businessServices })
         }
       ]
     },
     {
       path: "/corporate-solutions",
       component: "src/components/pages/corporateSolutions/CorporateSolutions",
-      getData: () => ({
-        corporateSolutions
-      })
+      getData: withGlobalData({ corporateSolutions })
     },
     {
       path: "/careers",
       component: "src/components/pages/careers/Careers",
-      getData: () => ({
-        careers
-      })
+      getData: withGlobalData({ careers })
     },
     {
       path: "/team",
       component: "src/components/pages/team/index/Index",
-      getData: () => ({
-        global,
-        members: team.members
-      }),
+      getData: withGlobalData({ members: team.members }),
       children: team.members.map(member => ({
         path: `${member.slug}`,
         component: "src/components/pages/team/member/Member",
-        getData: () => ({
-          global,
-          member
-        })
+        getData: withGlobalData({ member })
       }))
     },
     // Make an index route for every 5 blog posts
@@ -173,7 +152,7 @@ const createRoutes = async () => {
       },
       decorate: (posts, i, totalPages) => ({
         // For each page, supply the posts, page and totalPages
-        getData: () => ({
+        getData: withGlobalData({
           posts,
           currentPage: i,
           totalPages
@@ -182,26 +161,19 @@ const createRoutes = async () => {
         children: posts.map(post => ({
           path: `${post.slug}`,
           component: "src/components/pages/news/post/Post",
-          getData: () => ({
-            post
-          })
+          getData: withGlobalData({ post })
         }))
       })
     }),
     {
       path: "/contact",
       component: "src/components/pages/contact/Contact",
-      getData: () => ({
-        global,
-        contact
-      })
+      getData: withGlobalData({ contact })
     },
     {
       path: "/privacy-terms",
       component: "src/components/pages/privacyTerms/PrivacyTerms",
-      getData: () => ({
-        privacyTerms
-      })
+      getData: withGlobalData({ privacyTerms })
     },
     {
       is404: true,
