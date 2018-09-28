@@ -1,7 +1,10 @@
 import React from "react";
 import { withRouteData, Head } from "react-static";
 import { pageChange } from "../../../../lib/utils/pageChange";
-import { getFullPageTitle } from "../../../../lib/utils/copy";
+import {
+  getFullPageTitle,
+  pickFirstAvailableString
+} from "../../../../lib/utils/copy";
 
 import styles from "./personalFinances.scss";
 import FullWidthSectionText from "../../../ui/fullWidthSectionText/FullWidthSectionText";
@@ -18,7 +21,7 @@ class Other extends React.Component {
   }
 
   render() {
-    const { personalFinances } = this.props;
+    const { personalFinances, globalData } = this.props;
 
     return (
       <React.Fragment>
@@ -86,13 +89,25 @@ class Other extends React.Component {
           </div>
         </section>
         <FullWidthSectionActionLink
-          linkText={personalFinances.actionBanner.text}
-          to={personalFinances.actionBanner.link}
+          linkText={pickFirstAvailableString(
+            personalFinances.actionBanner.text,
+            globalData.actionBanner.text
+          )}
+          to={pickFirstAvailableString(
+            personalFinances.actionBanner.link,
+            globalData.actionBanner.link
+          )}
           className="dg-actionBanner"
         />
         <SubscribeSection
-          heading={personalFinances.subscribe.heading}
-          text={personalFinances.subscribe.text}
+          heading={pickFirstAvailableString(
+            personalFinances.subscribe.heading,
+            globalData.subscribe.heading
+          )}
+          text={pickFirstAvailableString(
+            personalFinances.subscribe.text,
+            globalData.subscribe.text
+          )}
           className="dg-subscribe"
         />
       </React.Fragment>

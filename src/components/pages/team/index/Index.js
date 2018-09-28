@@ -21,7 +21,7 @@ class Index extends React.Component {
   render() {
     return (
       <RouteData
-        render={({ global, members }) => (
+        render={({ globalData, members }) => (
           <React.Fragment>
             <Head>
               <title>{getFullPageTitle("Team")}</title>
@@ -58,13 +58,13 @@ class Index extends React.Component {
               </div>
             </section>
             <FullWidthSectionActionLink
-              linkText={global.actionBanner.text}
-              to={global.actionBanner.link}
+              linkText={globalData.actionBanner.text}
+              to={globalData.actionBanner.link}
               className="dg-actionBanner"
             />
             <SubscribeSection
-              heading={global.subscribe.heading}
-              text={global.subscribe.text}
+              heading={globalData.subscribe.heading}
+              text={globalData.subscribe.text}
               className="dg-subscribe"
             />
           </React.Fragment>

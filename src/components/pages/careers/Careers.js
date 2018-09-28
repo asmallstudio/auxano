@@ -1,7 +1,10 @@
 import React from "react";
 import { withRouteData, Head } from "react-static";
 import { pageChange } from "../../../lib/utils/pageChange";
-import { getFullPageTitle } from "../../../lib/utils/copy";
+import {
+  getFullPageTitle,
+  pickFirstAvailableString
+} from "../../../lib/utils/copy";
 
 import styles from "./careers.scss";
 import Markdown from "react-markdown";
@@ -18,7 +21,7 @@ class Careers extends React.Component {
   }
 
   render() {
-    const { careers } = this.props;
+    const { careers, globalData } = this.props;
 
     return (
       <React.Fragment>
@@ -43,13 +46,25 @@ class Careers extends React.Component {
           </div>
         </section>
         <FullWidthSectionActionLink
-          linkText={careers.actionBanner.text}
-          to={careers.actionBanner.link}
+          linkText={pickFirstAvailableString(
+            careers.actionBanner.text,
+            globalData.actionBanner.text
+          )}
+          to={pickFirstAvailableString(
+            careers.actionBanner.link,
+            globalData.actionBanner.link
+          )}
           className="dg-actionBanner"
         />
         <SubscribeSection
-          heading={careers.subscribe.heading}
-          text={careers.subscribe.text}
+          heading={pickFirstAvailableString(
+            careers.subscribe.heading,
+            globalData.subscribe.heading
+          )}
+          text={pickFirstAvailableString(
+            careers.subscribe.text,
+            globalData.subscribe.text
+          )}
           className="dg-subscribe"
         />
       </React.Fragment>

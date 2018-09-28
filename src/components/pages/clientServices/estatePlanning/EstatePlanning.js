@@ -1,7 +1,10 @@
 import React from "react";
 import { withRouteData, Head } from "react-static";
 import { pageChange } from "../../../../lib/utils/pageChange";
-import { getFullPageTitle } from "../../../../lib/utils/copy";
+import {
+  getFullPageTitle,
+  pickFirstAvailableString
+} from "../../../../lib/utils/copy";
 
 import styles from "./estatePlanning.scss";
 import FullWidthSectionText from "../../../ui/fullWidthSectionText/FullWidthSectionText";
@@ -18,7 +21,7 @@ class Other extends React.Component {
   }
 
   render() {
-    const { estatePlanning } = this.props;
+    const { estatePlanning, globalData } = this.props;
 
     return (
       <React.Fragment>
@@ -75,13 +78,25 @@ class Other extends React.Component {
           className={`${styles.pullquote2} dg-pullquote2`}
         />
         <FullWidthSectionActionLink
-          linkText={estatePlanning.actionBanner.text}
-          to={estatePlanning.actionBanner.link}
+          linkText={pickFirstAvailableString(
+            estatePlanning.actionBanner.text,
+            globalData.actionBanner.text
+          )}
+          to={pickFirstAvailableString(
+            estatePlanning.actionBanner.link,
+            globalData.actionBanner.link
+          )}
           className="dg-actionBanner"
         />
         <SubscribeSection
-          heading={estatePlanning.subscribe.heading}
-          text={estatePlanning.subscribe.text}
+          heading={pickFirstAvailableString(
+            estatePlanning.subscribe.heading,
+            globalData.subscribe.heading
+          )}
+          text={pickFirstAvailableString(
+            estatePlanning.subscribe.text,
+            globalData.subscribe.text
+          )}
           className="dg-subscribe"
         />
       </React.Fragment>

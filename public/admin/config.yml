@@ -14,7 +14,7 @@ collections:
     files:
       - label: "Global"
         name: global
-        file: src/data/pages/global.yml
+        file: src/data/pages/globalData.yml
         path: /
         fields:
           - label: "Company Info"

@@ -1,7 +1,10 @@
 import React from "react";
 import { withRouteData, Head } from "react-static";
 import { pageChange } from "../../../lib/utils/pageChange";
-import { getFullPageTitle } from "../../../lib/utils/copy";
+import {
+  getFullPageTitle,
+  pickFirstAvailableString
+} from "../../../lib/utils/copy";
 
 import CallToActionLink from "../../ui/callToActionLink/CallToActionLink";
 import FullWidthSectionText from "../../ui/fullWidthSectionText/FullWidthSectionText";
@@ -103,13 +106,25 @@ class AboutUs extends React.Component {
           </div>
         </section>
         <FullWidthSectionActionLink
-          linkText={aboutUs.actionBanner.text}
-          to={aboutUs.actionBanner.link}
+          linkText={pickFirstAvailableString(
+            aboutUs.actionBanner.text,
+            globalData.actionBanner.text
+          )}
+          to={pickFirstAvailableString(
+            aboutUs.actionBanner.link,
+            globalData.actionBanner.link
+          )}
           className="dg-actionBanner"
         />
         <SubscribeSection
-          heading={aboutUs.subscribe.heading}
-          text={aboutUs.subscribe.text}
+          heading={pickFirstAvailableString(
+            aboutUs.subscribe.heading,
+            globalData.subscribe.heading
+          )}
+          text={pickFirstAvailableString(
+            aboutUs.subscribe.text,
+            globalData.subscribe.text
+          )}
           className="dg-subscribe"
         />
       </React.Fragment>

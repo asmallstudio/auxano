@@ -1,7 +1,10 @@
 import React from "react";
 import { withRouteData, Head } from "react-static";
 import { pageChange } from "../../../../lib/utils/pageChange";
-import { getFullPageTitle } from "../../../../lib/utils/copy";
+import {
+  getFullPageTitle,
+  pickFirstAvailableString
+} from "../../../../lib/utils/copy";
 
 import styles from "./businessServices.scss";
 import FullWidthSectionText from "../../../ui/fullWidthSectionText/FullWidthSectionText";
@@ -18,7 +21,7 @@ class Other extends React.Component {
   }
 
   render() {
-    const { businessServices } = this.props;
+    const { businessServices, globalData } = this.props;
 
     return (
       <React.Fragment>
@@ -59,13 +62,25 @@ class Other extends React.Component {
           className={`${styles.pullquote} dg-pullquote`}
         />
         <FullWidthSectionActionLink
-          linkText={businessServices.actionBanner.text}
-          to={businessServices.actionBanner.link}
+          linkText={pickFirstAvailableString(
+            businessServices.actionBanner.text,
+            globalData.actionBanner.text
+          )}
+          to={pickFirstAvailableString(
+            businessServices.actionBanner.link,
+            globalData.actionBanner.link
+          )}
           className="dg-actionBanner"
         />
         <SubscribeSection
-          heading={businessServices.subscribe.heading}
-          text={businessServices.subscribe.text}
+          heading={pickFirstAvailableString(
+            businessServices.subscribe.heading,
+            globalData.subscribe.heading
+          )}
+          text={pickFirstAvailableString(
+            businessServices.subscribe.text,
+            globalData.subscribe.text
+          )}
           className="dg-subscribe"
         />
       </React.Fragment>

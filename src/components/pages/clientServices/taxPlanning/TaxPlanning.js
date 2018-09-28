@@ -1,7 +1,10 @@
 import React from "react";
 import { withRouteData, Head } from "react-static";
 import { pageChange } from "../../../../lib/utils/pageChange";
-import { getFullPageTitle } from "../../../../lib/utils/copy";
+import {
+  getFullPageTitle,
+  pickFirstAvailableString
+} from "../../../../lib/utils/copy";
 
 import styles from "./taxPlanning.scss";
 import FullWidthSectionActionLink from "../../../ui/fullWidthSectionActionLink/FullWidthSectionActionLink";
@@ -17,7 +20,7 @@ class Other extends React.Component {
   }
 
   render() {
-    const { taxPlanning } = this.props;
+    const { taxPlanning, globalData } = this.props;
 
     return (
       <React.Fragment>
@@ -91,13 +94,25 @@ class Other extends React.Component {
           </div>
         </section>
         <FullWidthSectionActionLink
-          linkText={taxPlanning.actionBanner.text}
-          to={taxPlanning.actionBanner.link}
+          linkText={pickFirstAvailableString(
+            taxPlanning.actionBanner.text,
+            globalData.actionBanner.text
+          )}
+          to={pickFirstAvailableString(
+            taxPlanning.actionBanner.link,
+            globalData.actionBanner.link
+          )}
           className="dg-actionBanner"
         />
         <SubscribeSection
-          heading={taxPlanning.subscribe.heading}
-          text={taxPlanning.subscribe.text}
+          heading={pickFirstAvailableString(
+            taxPlanning.subscribe.heading,
+            globalData.subscribe.heading
+          )}
+          text={pickFirstAvailableString(
+            taxPlanning.subscribe.text,
+            globalData.subscribe.text
+          )}
           className="dg-subscribe"
         />
       </React.Fragment>

@@ -1,14 +1,17 @@
 import React from "react";
-import { withRouteData, Head } from "react-static";
+import { withSiteData, withRouteData, Head } from "react-static";
 import { pageChange } from "../../../lib/utils/pageChange";
-import { getFullPageTitle } from "../../../lib/utils/copy";
+import {
+  getFullPageTitle,
+  pickFirstAvailableString
+} from "../../../lib/utils/copy";
 
 import styles from "./clientServices.scss";
 import OneThirdColumn from "../../ui/oneThirdColumn/OneThirdColumn";
 import FullWidthSectionActionLink from "../../ui/fullWidthSectionActionLink/FullWidthSectionActionLink";
 import SubscribeSection from "../../ui/subscribeSection/SubscribeSection";
 
-class Other extends React.Component {
+class ClientServices extends React.Component {
   constructor(props) {
     super(props);
   }
@@ -18,7 +21,7 @@ class Other extends React.Component {
   }
 
   render() {
-    const { clientServices } = this.props;
+    const { clientServices, globalData } = this.props;
 
     return (
       <React.Fragment>
@@ -80,13 +83,25 @@ class Other extends React.Component {
           </div>
         </section>
         <FullWidthSectionActionLink
-          linkText={clientServices.actionBanner.text}
-          to={clientServices.actionBanner.link}
+          linkText={pickFirstAvailableString(
+            clientServices.actionBanner.text,
+            globalData.actionBanner.text
+          )}
+          to={pickFirstAvailableString(
+            clientServices.actionBanner.link,
+            globalData.actionBanner.link
+          )}
           className="dg-actionBanner"
         />
         <SubscribeSection
-          heading={clientServices.subscribe.heading}
-          text={clientServices.subscribe.text}
+          heading={pickFirstAvailableString(
+            clientServices.subscribe.heading,
+            globalData.subscribe.heading
+          )}
+          text={pickFirstAvailableString(
+            clientServices.subscribe.text,
+            globalData.subscribe.text
+          )}
           className="dg-subscribe"
         />
       </React.Fragment>
@@ -94,4 +109,4 @@ class Other extends React.Component {
   }
 }
 
-export default withRouteData(Other);
+export default withSiteData(withRouteData(ClientServices));

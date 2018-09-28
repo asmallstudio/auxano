@@ -1,7 +1,10 @@
 import React from "react";
 import { withRouteData, Head } from "react-static";
 import { pageChange } from "../../../../lib/utils/pageChange";
-import { getFullPageTitle } from "../../../../lib/utils/copy";
+import {
+  getFullPageTitle,
+  pickFirstAvailableString
+} from "../../../../lib/utils/copy";
 
 import styles from "./riskManagement.scss";
 import FullWidthSectionText from "../../../ui/fullWidthSectionText/FullWidthSectionText";
@@ -18,7 +21,7 @@ class Other extends React.Component {
   }
 
   render() {
-    const { riskManagement } = this.props;
+    const { riskManagement, globalData } = this.props;
 
     return (
       <React.Fragment>
@@ -95,13 +98,25 @@ class Other extends React.Component {
           </div>
         </section>
         <FullWidthSectionActionLink
-          linkText={riskManagement.actionBanner.text}
-          to={riskManagement.actionBanner.link}
+          linkText={pickFirstAvailableString(
+            riskManagement.actionBanner.text,
+            globalData.actionBanner.text
+          )}
+          to={pickFirstAvailableString(
+            riskManagement.actionBanner.link,
+            globalData.actionBanner.link
+          )}
           className="dg-actionBanner"
         />
         <SubscribeSection
-          heading={riskManagement.subscribe.heading}
-          text={riskManagement.subscribe.text}
+          heading={pickFirstAvailableString(
+            riskManagement.subscribe.heading,
+            globalData.subscribe.heading
+          )}
+          text={pickFirstAvailableString(
+            riskManagement.subscribe.text,
+            globalData.subscribe.text
+          )}
           className="dg-subscribe"
         />
       </React.Fragment>

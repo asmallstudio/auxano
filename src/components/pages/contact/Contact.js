@@ -1,7 +1,10 @@
 import React from "react";
 import { withRouteData, Head, Link } from "react-static";
 import { pageChange } from "../../../lib/utils/pageChange";
-import { getFullPageTitle } from "../../../lib/utils/copy";
+import {
+  getFullPageTitle,
+  pickFirstAvailableString
+} from "../../../lib/utils/copy";
 import constants from "../../../lib/constants.json";
 
 import styles from "./contact.scss";
@@ -191,7 +194,7 @@ class Contact extends React.Component {
   }
 
   render() {
-    const { global, contact } = this.props;
+    const { globalData, contact } = this.props;
 
     return (
       <React.Fragment>
@@ -222,16 +225,16 @@ class Contact extends React.Component {
                     <meta itemProp="url" content={constants.siteMeta.url} />
                     <h3 className="sr-text">Email</h3>
                     <a
-                      href={`mailto:${global.companyInfo.email}`}
+                      href={`mailto:${globalData.companyInfo.email}`}
                       itemProp="email"
                     >
-                      {global.companyInfo.email}
+                      {globalData.companyInfo.email}
                     </a>
                   </div>
                   <div className={styles.contactInfoSection}>
                     <h3 className="sr-text">Phone</h3>
                     <a href="tel:+14258891261" itemProp="telephone">
-                      {global.companyInfo.phone}
+                      {globalData.companyInfo.phone}
                     </a>
                   </div>
                   <div className={styles.contactInfoSection}>
@@ -242,20 +245,20 @@ class Contact extends React.Component {
                       itemType="http://schema.org/PostalAddress"
                     >
                       <span itemProp="streetAddress">
-                        {global.companyInfo.address.line1}
+                        {globalData.companyInfo.address.line1}
                         <br />
-                        {global.companyInfo.address.line2}
+                        {globalData.companyInfo.address.line2}
                       </span>
                       <br />
                       <span itemProp="addressLocality">
-                        {global.companyInfo.address.city}
+                        {globalData.companyInfo.address.city}
                       </span>
                       ,{" "}
                       <span itemProp="addressRegion">
-                        {global.companyInfo.address.state}
+                        {globalData.companyInfo.address.state}
                       </span>{" "}
                       <span itemProp="postalCode">
-                        {global.companyInfo.address.zipcode}
+                        {globalData.companyInfo.address.zipcode}
                       </span>
                       <meta itemProp="addressCountry" content="US" />
                     </p>
@@ -299,8 +302,14 @@ class Contact extends React.Component {
           />
         </div>
         <SubscribeSection
-          heading={contact.subscribe.heading}
-          text={contact.subscribe.text}
+          heading={pickFirstAvailableString(
+            contact.subscribe.heading,
+            globalData.subscribe.heading
+          )}
+          text={pickFirstAvailableString(
+            contact.subscribe.text,
+            globalData.subscribe.text
+          )}
           className="dg-subscribe"
         />
       </React.Fragment>

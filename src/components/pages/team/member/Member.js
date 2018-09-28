@@ -31,7 +31,7 @@ class Post extends React.Component {
   render() {
     return (
       <RouteData
-        render={({ global, member }) => (
+        render={({ globalData, member }) => (
           <React.Fragment>
             <Head>
               <title>{getFullPageTitle(member.title)}</title>
@@ -78,13 +78,13 @@ class Post extends React.Component {
               </div>
             </section>
             <FullWidthSectionActionLink
-              linkText={global.actionBanner.text}
-              to={global.actionBanner.link}
+              linkText={globalData.actionBanner.text}
+              to={globalData.actionBanner.link}
               className="dg-actionBanner"
             />
             <SubscribeSection
-              heading={global.subscribe.heading}
-              text={global.subscribe.text}
+              heading={globalData.subscribe.heading}
+              text={globalData.subscribe.text}
               className="dg-subscribe"
             />
           </React.Fragment>
