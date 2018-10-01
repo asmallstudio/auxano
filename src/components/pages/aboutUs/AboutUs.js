@@ -33,7 +33,7 @@ class AboutUs extends React.Component {
   }
 
   render() {
-    const { aboutUs } = this.props;
+    const { aboutUs, globalData } = this.props;
 
     return (
       <React.Fragment>
