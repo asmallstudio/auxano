@@ -2,7 +2,6 @@
 
 .row {
   margin: var(--space-l5) 0;
-  align-items: center;
 }
 
 .description {
@@ -10,13 +9,10 @@
 
   h2 {
     margin-bottom: 1.5em;
-    font-size: 1.75rem;
-    color: var(--gigas);
   }
 
   p {
     margin-bottom: 3em;
-    color: var(--grey);
   }
 
   @include respond-above(lg) {
@@ -28,27 +24,74 @@
   }
 }
 
-.input {
-  width: 90%;
-  margin-bottom: 1.5em;
+.form {
+  display: flex;
+  flex-wrap: wrap;
 
-  @include respond-above(md) {
-    width: 50%;
-    margin-right: 1.5em;
+  label {
+    display: block;
+    width: 100%;
+    color: var(--grey);
+    margin-bottom: var(--space-l1);
   }
 
-  @include respond-above(lg) {
-    width: 60%;
-    margin-bottom: 0;
+  input {
+    display: block;
+    width: 100%;
   }
-}
 
-.button {
-  display: inline-block;
-  margin: 0 auto;
+  // input {
+  //   @include respond-above(md) {
+  //     flex: 50%;
+  //     margin-right: 1.5em;
+  //   }
 
-  @include respond-above(md) {
-    margin: 0 0 0 auto;
+  //   @include respond-above(lg) {
+  //     flex: 100%;
+  //     // width: 60%;
+
+  //     // &:last-of-type {
+  //     //   margin-bottom: 0;
+  //     // }
+  //   }
+  // }
+
+  .formBlock {
+    width: 90%;
+    margin: 0 auto 1.5em;
+    text-align: left;
+
+    @include respond-above(md) {
+      width: 47.5%;
+
+      &:first-child {
+        margin-left: 0;
+      }
+
+      &:nth-child(2) {
+        margin-right: 0;
+      }
+
+      &:last-child {
+        align-self: flex-start;
+        width: auto;
+        margin-left: 0;
+      }
+    }
+
+    @include respond-above(lg) {
+      width: 100%;
+    }
+  }
+
+  button {
+    display: block;
+    margin: 0 auto;
+
+    @include respond-above(md) {
+      flex: 100%;
+      margin: 0 0 0 auto;
+    }
   }
 }
 
