@@ -18,7 +18,10 @@ class CoverSheet extends React.Component {
       updateDoNotShowCoverState
     } = this.props;
     return (
-      <section className={`container--fluid ${styles.coverSheet}`}>
+      <section
+        className={`container--fluid ${styles.coverSheet}`}
+        onClick={() => this._slideCover(updateDoNotShowCoverState)}
+      >
         <div className={`container col-xs-12 ${styles.coverSheetContent}`}>
           <img
             alt="Auxano Advisors"
@@ -38,8 +41,8 @@ class CoverSheet extends React.Component {
               className={styles.arrow}
               alt=""
               src="/assets/arrow-down.svg"
-              height="18"
-              width="14"
+              height="22"
+              width="17"
             />
           </button>
         </div>
