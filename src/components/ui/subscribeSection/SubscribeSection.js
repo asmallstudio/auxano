@@ -7,11 +7,11 @@ import PrimaryButton from "../primaryButton/PrimaryButton";
 class SubscribeForm extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { email: "", name: "" };
+    this.state = { name: "", email: "" };
   }
 
   _clearFormData = ({ submitted }) => {
-    this.setState({ email: "", name: "", submitted });
+    this.setState({ name: "", email: "", submitted });
   };
 
   /* Here’s the juicy bit for posting the form submission */
@@ -24,7 +24,7 @@ class SubscribeForm extends React.Component {
     delete data.errors;
 
     // Form validation
-    if (data.email.length === 0) {
+    if (data.email.length === 0 && data.email.length === 0) {
       errors = true;
       this.setState({ errors: true });
     } else {
@@ -40,7 +40,7 @@ class SubscribeForm extends React.Component {
   _handleChange = e => this.setState({ [e.target.name]: e.target.value });
 
   render() {
-    const { email, submitted } = this.state;
+    const { name, email, submitted } = this.state;
     return !submitted ? (
       <form onSubmit={this._handleSubmit} {...this.props}>
         <div className={styles.form}>
