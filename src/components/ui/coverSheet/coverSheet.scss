@@ -44,9 +44,7 @@
 }
 
 .scrollButton {
-  transition: opacity 0.3s ease;
   display: inline-block;
-  // align-self: center;
   background: none;
   width: 35%;
   padding: var(--space-l2) var(--space-l2) 0;
@@ -54,13 +52,16 @@
   margin: 0 auto;
   cursor: pointer;
 
-  &:hover {
+  &:hover .arrow {
     opacity: 0.4;
   }
 
   &:focus {
-    opacity: 0.1;
     outline: none;
+
+    .arrow {
+      opacity: 0.1;
+    }
   }
 
   &::before {
@@ -86,6 +87,7 @@
 }
 
 .arrow {
+  transition: opacity 0.3s ease;
   animation: coverScrollBounce 1s ease-in-out 2.75s infinite;
 }
 
