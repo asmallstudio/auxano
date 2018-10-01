@@ -13,7 +13,7 @@ class CoverSheet extends React.Component {
 
   render() {
     const {
-      hero = "Transcending Wealth Transforming Lives",
+      hero = "Transcending Wealth. Transforming Lives.",
       tagline = "Private Wealth Management",
       updateDoNotShowCoverState
     } = this.props;
