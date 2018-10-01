@@ -60,7 +60,7 @@
     margin-bottom: var(--space-l2);
 
     @include respond-above(lg) {
-      max-width: 84%; // Fix widow at full-width (Based on text: "Stewardship is our core.")
+      max-width: 80%; // Fix widow at full-width (Based on text: "Stewardship is our core.")
     }
   }
 
