@@ -29,6 +29,12 @@
     color: var(--white);
     white-space: pre-line;
     max-width: 40rem;
+
+    &::after {
+      content: "\00ae"; // Registered mark.
+      font-size: 0.5em;
+      vertical-align: super;
+    }
   }
 
   p {
