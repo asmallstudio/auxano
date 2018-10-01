@@ -10,6 +10,10 @@
   @include respond-above(lg) {
     z-index: 101; // Above header menu (z=100)
   }
+
+  :global(.container) {
+    height: 100%;
+  }
 }
 
 .coverSheetContent {
@@ -17,9 +21,16 @@
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
-  max-width: $max-width-em;
   padding-top: env(safe-area-inset-top);
   padding-bottom: env(safe-area-inset-bottom);
+}
+
+.logo {
+  // display: none;
+
+  @include respond-above(lg) {
+    display: block;
+  }
 }
 
 .text {
@@ -46,10 +57,9 @@
 .scrollButton {
   display: inline-block;
   background: none;
-  width: 35%;
-  padding: var(--space-l2) var(--space-l2) 0;
+  padding: 0 var(--space-l2);
   border: none;
-  margin: 0 auto;
+  margin: var(--space-l2) auto 0;
   cursor: pointer;
 
   &:hover .arrow {
