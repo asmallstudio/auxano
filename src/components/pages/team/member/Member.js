@@ -1,5 +1,5 @@
 import React from "react";
-import { RouteData, Link, Head } from "react-static";
+import { withRouteData, Link, Head } from "react-static";
 import { pageChange } from "../../../../lib/utils/pageChange";
 import { getFullPageTitle } from "../../../../lib/utils/copy";
 
@@ -29,69 +29,64 @@ class Post extends React.Component {
   }
 
   render() {
+    const { globalData, member } = this.props;
+
     return (
-      <RouteData
-        render={({ globalData, member }) => (
-          <React.Fragment>
-            <Head>
-              <title>{getFullPageTitle(member.title)}</title>
-            </Head>
-            <section className={`container ${styles.memberContainer}`}>
-              <div className="row">
-                <div className={`col-xs-12 ${styles.teamIndexLinkContainer}`}>
-                  <Link
-                    to="/team"
-                    className={`style-as-h3 ${styles.teamIndexLink}`}
-                  >
-                    Back to Team
-                  </Link>
-                </div>
-                <aside className={`col-xs-12 col-md-3 ${styles.memberInfo}`}>
-                  <img src={member.image} alt="" />
-                  <h1 className="style-as-h3">
-                    {this._createHonorificName(
-                      member.title,
-                      member.qualifications
-                    )}
-                  </h1>
-                  <div className="style-as-p">
-                    {this._formatPositions(member.positions)}
-                  </div>
-                  {member.extension !== "" && (
-                    <div className={styles.contactInfoItem}>
-                      <a href={`tel:+14258891261;ext=${member.extension}`}>
-                        {`+1 (425) 889-1261; ext: ${member.extension}`}
-                      </a>
-                    </div>
-                  )}
-                  <div className={styles.contactInfoItem}>
-                    <a href={`mailto:${member.email}`}>{member.email}</a>
-                  </div>
-                </aside>
-                <article
-                  className={`col-xs-12 col-md-9 col-lg-8 col-lg-offset-1 ${
-                    styles.memberBio
-                  }`}
-                >
-                  <Markdown>{member.bio}</Markdown>
-                </article>
+      <React.Fragment>
+        <Head>
+          <title>{getFullPageTitle(member.title)}</title>
+        </Head>
+        <section className={`container ${styles.memberContainer}`}>
+          <div className="row">
+            <div className={`col-xs-12 ${styles.teamIndexLinkContainer}`}>
+              <Link
+                to="/team"
+                className={`style-as-h3 ${styles.teamIndexLink}`}
+              >
+                Back to Team
+              </Link>
+            </div>
+            <aside className={`col-xs-12 col-md-3 ${styles.memberInfo}`}>
+              <img src={member.image} alt="" />
+              <h1 className="style-as-h3">
+                {this._createHonorificName(member.title, member.qualifications)}
+              </h1>
+              <div className="style-as-p">
+                {this._formatPositions(member.positions)}
               </div>
-            </section>
-            <FullWidthSectionActionLink
-              linkText={globalData.actionBanner.text}
-              to={globalData.actionBanner.link}
-              className="dg-actionBanner"
-            />
-            <SubscribeSection
-              heading={globalData.subscribe.heading}
-              text={globalData.subscribe.text}
-              className="dg-subscribe"
-            />
-          </React.Fragment>
-        )}
-      />
+              {member.extension !== "" && (
+                <div className={styles.contactInfoItem}>
+                  <a href={`tel:+14258891261;ext=${member.extension}`}>
+                    {`+1 (425) 889-1261; ext: ${member.extension}`}
+                  </a>
+                </div>
+              )}
+              <div className={styles.contactInfoItem}>
+                <a href={`mailto:${member.email}`}>{member.email}</a>
+              </div>
+            </aside>
+            <article
+              className={`col-xs-12 col-md-9 col-lg-8 col-lg-offset-1 ${
+                styles.memberBio
+              }`}
+            >
+              <Markdown>{member.bio}</Markdown>
+            </article>
+          </div>
+        </section>
+        <FullWidthSectionActionLink
+          linkText={globalData.actionBanner.text}
+          to={globalData.actionBanner.link}
+          className="dg-actionBanner"
+        />
+        <SubscribeSection
+          heading={globalData.subscribe.heading}
+          text={globalData.subscribe.text}
+          className="dg-subscribe"
+        />
+      </React.Fragment>
     );
   }
 }
 
-export default Post;
+export default withRouteData(Post);
