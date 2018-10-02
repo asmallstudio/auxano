@@ -17,9 +17,6 @@ serviceInfoList:
   - "Net Unrealized Appreciation (NUA)"
   - "Supplemental Executive Retirement Plans"
   - "Executive Tax Strategies"
-actionBanner:
-  link: /contact
-  text: Contact Us
 subscribe:
-  heading: Schedule an introduction with an advisor.
-  text: All personal information kept private.
+  heading: ""
+  text: ""

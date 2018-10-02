@@ -29,3 +29,6 @@ callouts:
 actionBanner:
   link: /about-us
   text: About Us
+subscribe:
+  heading: ""
+  text: ""

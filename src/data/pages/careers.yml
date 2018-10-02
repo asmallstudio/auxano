@@ -7,3 +7,9 @@ hero:
     Please submit your resume and cover letter to: 
     [careers@auxanoadvisors.com](mailto:careers@auxanoadvisors.com)
   image: "/uploads/about-us-hero.png"
+actionBanner:
+  link: ""
+  text: ""
+subscribe:
+  heading: ""
+  text: ""

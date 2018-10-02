@@ -31,8 +31,8 @@ imageRow:
     alt: placeholder image
     src: /uploads/estate-planning.png
 actionBanner:
-  link: /contact
-  text: Contact Us
+  link: ""
+  text: ""
 subscribe:
-  heading: Schedule an introduction with an advisor.
-  text: All personal information kept private.
+  heading: ""
+  text: ""
