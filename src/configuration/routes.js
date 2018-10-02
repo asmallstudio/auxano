@@ -14,7 +14,6 @@ import { makePageRoutes } from "react-static/node";
  * @returns {array} Array of page information objects
  */
 const createRoutes = async () => {
-  const globalData = getSingleFileYaml("./src/data/pages/siteData.yml");
   const home = getSingleFileYaml("./src/data/pages/home.yml");
   const aboutUs = getSingleFileYaml("./src/data/pages/aboutUs.yml");
   const ourApproach = getSingleFileYaml("./src/data/pages/ourApproach.yml");
@@ -52,92 +51,111 @@ const createRoutes = async () => {
   const contact = getSingleFileYaml("./src/data/pages/contact.yml");
   const privacyTerms = getSingleFileYaml("./src/data/pages/privacyTerms.yml");
 
-  /**
-   * @param {object} additionalData Object that has the data to pass along with global
-   * @returns {object} Final data to pass along to component
-   */
-  const withGlobalData = additionalData => () => ({
-    ...additionalData,
-    globalData
-  });
-
   return [
     {
       path: "/",
       component: "src/components/pages/home/Home",
-      getData: withGlobalData({ home })
+      getData: () => ({
+        home
+      })
     },
     {
       path: "/about-us",
       component: "src/components/pages/aboutUs/AboutUs",
-      getData: withGlobalData({ aboutUs })
+      getData: () => ({
+        aboutUs
+      })
     },
     {
       path: "/our-approach",
       component: "src/components/pages/ourApproach/OurApproach",
-      getData: withGlobalData({ ourApproach })
+      getData: () => ({
+        ourApproach
+      })
     },
     {
       path: "/client-services",
       component: "src/components/pages/clientServices/ClientServices",
-      getData: withGlobalData({ clientServices }),
+      getData: () => ({
+        clientServices
+      }),
       children: [
         {
           path: "/personal-finances",
           component:
             "src/components/pages/clientServices/personalFinances/PersonalFinances",
-          getData: withGlobalData({ personalFinances })
+          getData: () => ({
+            personalFinances
+          })
         },
         {
           path: "/investments",
           component:
             "src/components/pages/clientServices/investments/investments",
-          getData: withGlobalData({ investments })
+          getData: () => ({
+            investments
+          })
         },
         {
           path: "/estate-planning",
           component:
             "src/components/pages/clientServices/estatePlanning/EstatePlanning",
-          getData: withGlobalData({ estatePlanning })
+          getData: () => ({
+            estatePlanning
+          })
         },
         {
           path: "/risk-management",
           component:
             "src/components/pages/clientServices/riskManagement/RiskManagement",
-          getData: withGlobalData({ riskManagement })
+          getData: () => ({
+            riskManagement
+          })
         },
         {
           path: "/tax-planning",
           component:
             "src/components/pages/clientServices/taxPlanning/TaxPlanning",
-          getData: withGlobalData({ taxPlanning })
+          getData: () => ({
+            taxPlanning
+          })
         },
         {
           path: "/business-services",
           component:
             "src/components/pages/clientServices/businessServices/BusinessServices",
-          getData: withGlobalData({ businessServices })
+          getData: () => ({
+            businessServices
+          })
         }
       ]
     },
     {
       path: "/corporate-solutions",
       component: "src/components/pages/corporateSolutions/CorporateSolutions",
-      getData: withGlobalData({ corporateSolutions })
+      getData: () => ({
+        corporateSolutions
+      })
     },
     {
       path: "/careers",
       component: "src/components/pages/careers/Careers",
-      getData: withGlobalData({ careers })
+      getData: () => ({
+        careers
+      })
     },
     {
       path: "/team",
       component: "src/components/pages/team/index/Index",
-      getData: withGlobalData({ members: team.members }),
+      getData: () => ({
+        members: team.members
+      }),
       children: team.members.map(member => ({
         path: `${member.slug}`,
         component: "src/components/pages/team/member/Member",
-        getData: withGlobalData({ member })
+        getData: () => ({
+          member
+        })
       }))
     },
     // Make an index route for every 5 blog posts
@@ -152,7 +170,7 @@ const createRoutes = async () => {
       },
       decorate: (posts, i, totalPages) => ({
         // For each page, supply the posts, page and totalPages
-        getData: withGlobalData({
+        getData: () => ({
           posts,
           currentPage: i,
           totalPages
@@ -161,19 +179,25 @@ const createRoutes = async () => {
         children: posts.map(post => ({
           path: `${post.slug}`,
           component: "src/components/pages/news/post/Post",
-          getData: withGlobalData({ post })
+          getData: () => ({
+            post
+          })
         }))
       })
     }),
     {
       path: "/contact",
       component: "src/components/pages/contact/Contact",
-      getData: withGlobalData({ contact })
+      getData: () => ({
+        contact
+      })
     },
     {
       path: "/privacy-terms",
       component: "src/components/pages/privacyTerms/PrivacyTerms",
-      getData: withGlobalData({ privacyTerms })
+      getData: () => ({
+        privacyTerms
+      })
     },
     {
       is404: true,
