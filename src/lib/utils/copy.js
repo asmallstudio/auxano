@@ -1,6 +1,13 @@
 import moment from "moment";
 
 import constants from "../constants.json";
+/**
+ * Strips phone number string of all but + symbold and digits
+ * @param {string} A string representing a phone number
+ * @returns {string} A phone number with no characters besides digits and a +
+ * @link https://www.regexpal.com/?fam=105221
+ */
+const phoneNumberUnformat = phone => phone.replace(/[^+0-9]/g, "");
 
 /**
  * Checks for value in text string.
@@ -82,6 +89,7 @@ const createSlugFromTitle = data => {
 };
 
 export {
+  phoneNumberUnformat,
   pickFirstAvailableString,
   getFullPageTitle,
   formatDateStringToFromNow,

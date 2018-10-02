@@ -1,5 +1,5 @@
 import React from "react";
-import { withRouteData } from "react-static";
+import { withSiteAndRouteData } from "../../../lib/utils/hoc";
 import { pageChange } from "../../../lib/utils/pageChange";
 import { pickFirstAvailableString } from "../../../lib/utils/copy";
 
@@ -77,4 +77,4 @@ class Home extends React.Component {
   }
 }
 
-export default withRouteData(Home);
+export default withSiteAndRouteData(Home);

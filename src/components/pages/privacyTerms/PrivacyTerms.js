@@ -1,7 +1,8 @@
 import React from "react";
-import { withRouteData, Head } from "react-static";
-import { getFullPageTitle } from "../../../lib/utils/copy";
+import { Head } from "react-static";
+import { withSiteAndRouteData } from "../../../lib/utils/hoc";
 import { pageChange } from "../../../lib/utils/pageChange";
+import { getFullPageTitle } from "../../../lib/utils/copy";
 
 import Markdown from "react-markdown";
 import styles from "./privacyTerms.scss";
@@ -34,4 +35,4 @@ class PrivacyTerms extends React.Component {
   }
 }
 
-export default withRouteData(PrivacyTerms);
+export default withSiteAndRouteData(PrivacyTerms);

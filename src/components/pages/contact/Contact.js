@@ -1,10 +1,13 @@
 import React from "react";
-import { withRouteData, Head, Link } from "react-static";
+import { Head, Link } from "react-static";
+import { withSiteAndRouteData } from "../../../lib/utils/hoc";
 import { pageChange } from "../../../lib/utils/pageChange";
 import {
   getFullPageTitle,
-  pickFirstAvailableString
+  pickFirstAvailableString,
+  phoneNumberUnformat
 } from "../../../lib/utils/copy";
+
 import constants from "../../../lib/constants.json";
 
 import styles from "./contact.scss";
@@ -225,16 +228,21 @@ class Contact extends React.Component {
                     <meta itemProp="url" content={constants.siteMeta.url} />
                     <h3 className="sr-text">Email</h3>
                     <a
-                      href={`mailto:${globalData.companyInfo.email}`}
+                      href={`mailto:${global.companyInfo.email}`}
                       itemProp="email"
                     >
-                      {globalData.companyInfo.email}
+                      {global.companyInfo.email}
                     </a>
                   </div>
                   <div className={styles.contactInfoSection}>
                     <h3 className="sr-text">Phone</h3>
-                    <a href="tel:+14258891261" itemProp="telephone">
-                      {globalData.companyInfo.phone}
+                    <a
+                      href={`tel:${phoneNumberUnformat(
+                        global.companyInfo.phone
+                      )}`}
+                      itemProp="telephone"
+                    >
+                      {global.companyInfo.phone}
                     </a>
                   </div>
                   <div className={styles.contactInfoSection}>
@@ -245,20 +253,20 @@ class Contact extends React.Component {
                       itemType="http://schema.org/PostalAddress"
                     >
                       <span itemProp="streetAddress">
-                        {globalData.companyInfo.address.line1}
+                        {global.companyInfo.address.line1}
                         <br />
-                        {globalData.companyInfo.address.line2}
+                        {global.companyInfo.address.line2}
                       </span>
                       <br />
                       <span itemProp="addressLocality">
-                        {globalData.companyInfo.address.city}
+                        {global.companyInfo.address.city}
                       </span>
                       ,{" "}
                       <span itemProp="addressRegion">
-                        {globalData.companyInfo.address.state}
+                        {global.companyInfo.address.state}
                       </span>{" "}
                       <span itemProp="postalCode">
-                        {globalData.companyInfo.address.zipcode}
+                        {global.companyInfo.address.zipcode}
                       </span>
                       <meta itemProp="addressCountry" content="US" />
                     </p>
@@ -317,4 +325,4 @@ class Contact extends React.Component {
   }
 }
 
-export default withRouteData(Contact);
+export default withSiteAndRouteData(Contact);

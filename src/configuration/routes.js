@@ -14,7 +14,7 @@ import { makePageRoutes } from "react-static/node";
  * @returns {array} Array of page information objects
  */
 const createRoutes = async () => {
-  const globalData = getSingleFileYaml("./src/data/pages/globalData.yml");
+  const globalData = getSingleFileYaml("./src/data/pages/siteData.yml");
   const home = getSingleFileYaml("./src/data/pages/home.yml");
   const aboutUs = getSingleFileYaml("./src/data/pages/aboutUs.yml");
   const ourApproach = getSingleFileYaml("./src/data/pages/ourApproach.yml");

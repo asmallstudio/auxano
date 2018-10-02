@@ -1,0 +1,19 @@
+globalData:
+  companyInfo:
+    address:
+      city: Bellevue
+      line1: 10900 NE 4th Street
+      line2: Suite 1950
+      state: WA
+      zipcode: 98004
+    email: info@auxanoadvisors.com
+    phone: +1 (425) 889-1261
+  coverSheet:
+    hero: Transcending Wealth. Transforming Lives.®
+    tagline: Private Wealth Management
+  actionBanner:
+    link: /contact
+    text: Contact Us
+  subscribe:
+    heading: Schedule an introduction with an advisor.
+    text: A team member will follow up with you shortly.

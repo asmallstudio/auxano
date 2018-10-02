@@ -1,5 +1,6 @@
 import React from "react";
-import { withRouteData, Head } from "react-static";
+import { Head } from "react-static";
+import { withSiteAndRouteData } from "../../../lib/utils/hoc";
 import { pageChange } from "../../../lib/utils/pageChange";
 import {
   getFullPageTitle,
@@ -72,4 +73,4 @@ class Careers extends React.Component {
   }
 }
 
-export default withRouteData(Careers);
+export default withSiteAndRouteData(Careers);

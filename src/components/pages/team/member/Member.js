@@ -1,5 +1,6 @@
 import React from "react";
-import { withRouteData, Link, Head } from "react-static";
+import { Link, Head } from "react-static";
+import { withSiteAndRouteData } from "../../../../lib/utils/hoc";
 import { pageChange } from "../../../../lib/utils/pageChange";
 import { getFullPageTitle } from "../../../../lib/utils/copy";
 
@@ -29,7 +30,7 @@ class Post extends React.Component {
   }
 
   render() {
-    const { globalData, member } = this.props;
+    const { member, globalData } = this.props;
 
     return (
       <React.Fragment>
@@ -89,4 +90,4 @@ class Post extends React.Component {
   }
 }
 
-export default withRouteData(Post);
+export default withSiteAndRouteData(Post);

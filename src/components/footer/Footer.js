@@ -3,10 +3,13 @@ import { withSiteData, Link } from "react-static";
 import BackToTopIcon from "./BackToTopIcon";
 import constants from "../../lib/constants.json";
 
+import { phoneNumberUnformat } from "../../lib/utils/copy";
+
 import styles from "./footer.scss";
 
 class Footer extends React.Component {
   render() {
+    const { globalData } = this.props;
     return (
       <footer
         className={styles.footerContainer}
@@ -77,13 +80,21 @@ class Footer extends React.Component {
             <h3 className="sr-text">Contact Info</h3>
             <ul className={`N2 ${styles.linkList}`}>
               <li>
-                <a href="mailto:info@auxanoadvisors.com" itemProp="email">
-                  info@auxanoadvisors.com
+                <a
+                  href={`mailto:${globalData.companyInfo.email}`}
+                  itemProp="email"
+                >
+                  {globalData.companyInfo.email}
                 </a>
               </li>
               <li>
-                <a href="tel:+14258891261" itemProp="telephone">
-                  +1 (425) 889-1261
+                <a
+                  href={`tel:${phoneNumberUnformat(
+                    globalData.companyInfo.phone
+                  )}`}
+                  itemProp="telephone"
+                >
+                  {globalData.companyInfo.phone}
                 </a>
               </li>
             </ul>

@@ -1,7 +1,8 @@
 import React from "react";
-import { withRouteData, Link, Head } from "react-static";
-import { getFullPageTitle } from "../../../../lib/utils/copy";
+import { Link, Head } from "react-static";
+import { withSiteAndRouteData } from "../../../../lib/utils/hoc";
 import { pageChange } from "../../../../lib/utils/pageChange";
+import { getFullPageTitle } from "../../../../lib/utils/copy";
 
 import LinkWithArrow from "../../../ui/linkWithArrow/LinkWithArrow";
 import styles from "./index.scss";
@@ -80,4 +81,4 @@ class Index extends React.Component {
   }
 }
 
-export default withRouteData(Index);
+export default withSiteAndRouteData(Index);

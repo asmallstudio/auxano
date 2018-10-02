@@ -1,7 +1,8 @@
 import React from "react";
-import { withRouteData, Link, Head } from "react-static";
-import { getFullPageTitle } from "../../../../lib/utils/copy";
+import { Link, Head } from "react-static";
+import { withSiteAndRouteData } from "../../../../lib/utils/hoc";
 import { pageChange } from "../../../../lib/utils/pageChange";
+import { getFullPageTitle } from "../../../../lib/utils/copy";
 
 import LinkWithArrow from "../../../ui/linkWithArrow/LinkWithArrow";
 import FullWidthSectionActionLink from "../../../ui/fullWidthSectionActionLink/FullWidthSectionActionLink";
@@ -19,7 +20,7 @@ class Index extends React.Component {
   }
 
   render() {
-    const { globalData, members } = this.props;
+    const { members, globalData } = this.props;
 
     return (
       <React.Fragment>
@@ -69,4 +70,4 @@ class Index extends React.Component {
   }
 }
 
-export default withRouteData(Index);
+export default withSiteAndRouteData(Index);

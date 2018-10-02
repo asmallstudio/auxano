@@ -13,7 +13,7 @@ collections:
     name: pages
     files:
       - label: "Global"
-        name: global
+        name: globalData
         file: src/data/pages/globalData.yml
         path: /
         fields:
@@ -422,16 +422,6 @@ collections:
                 widget: image
               - label: "Image Description"
                 name: alt
-                widget: string
-          - label: "Action Banner"
-            name: actionBanner
-            widget: object
-            fields:
-              - label: "Text"
-                name: text
-                widget: string
-              - label: "Link"
-                name: link
                 widget: string
           - label: "Subscribe"
             name: subscribe

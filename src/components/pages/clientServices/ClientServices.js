@@ -1,5 +1,6 @@
 import React from "react";
-import { withSiteData, withRouteData, Head } from "react-static";
+import { Head } from "react-static";
+import { withSiteAndRouteData } from "../../../lib/utils/hoc";
 import { pageChange } from "../../../lib/utils/pageChange";
 import {
   getFullPageTitle,
@@ -109,4 +110,4 @@ class ClientServices extends React.Component {
   }
 }
 
-export default withSiteData(withRouteData(ClientServices));
+export default withSiteAndRouteData(ClientServices);

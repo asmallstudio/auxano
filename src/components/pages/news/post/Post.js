@@ -1,10 +1,10 @@
 import React from "react";
-import Markdown from "react-markdown";
-
-import { withRouteData, Link, Head } from "react-static";
+import { Link, Head } from "react-static";
+import { withSiteAndRouteData } from "../../../../lib/utils/hoc";
 import { pageChange } from "../../../../lib/utils/pageChange";
 import { getFullPageTitle } from "../../../../lib/utils/copy";
 
+import Markdown from "react-markdown";
 import styles from "./post.scss";
 
 class Post extends React.Component {
@@ -49,4 +49,4 @@ class Post extends React.Component {
   }
 }
 
-export default withRouteData(Post);
+export default withSiteAndRouteData(Post);
