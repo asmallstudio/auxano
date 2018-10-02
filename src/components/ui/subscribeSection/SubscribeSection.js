@@ -24,7 +24,7 @@ class SubscribeForm extends React.Component {
     delete data.errors;
 
     // Form validation
-    if (data.email.length === 0 && data.email.length === 0) {
+    if (data.email.length === 0 || data.email.length === 0) {
       errors = true;
       this.setState({ errors: true });
     } else {
