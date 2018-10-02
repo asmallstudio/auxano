@@ -2,13 +2,17 @@
 
 .coverSheet {
   position: relative;
-  z-index: 101;
+  z-index: 99; // Below header menu (z=100)
   height: 100vh;
   background-color: var(--fountain-blue);
   padding: var(--space-l3) 0;
 
-  @include respond-above(md) {
-    padding: var(--space-l3);
+  @include respond-above(lg) {
+    z-index: 101; // Above header menu (z=100)
+  }
+
+  :global(.container) {
+    height: 100%;
   }
 }
 
@@ -17,9 +21,16 @@
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
-  max-width: $max-width-em;
   padding-top: env(safe-area-inset-top);
   padding-bottom: env(safe-area-inset-bottom);
+}
+
+.logo {
+  // display: none;
+
+  @include respond-above(lg) {
+    display: block;
+  }
 }
 
 .text {
@@ -29,6 +40,12 @@
     color: var(--white);
     white-space: pre-line;
     max-width: 40rem;
+
+    &::after {
+      content: "\00ae"; // Registered mark.
+      font-size: 0.5em;
+      vertical-align: super;
+    }
   }
 
   p {
@@ -38,25 +55,61 @@
 }
 
 .scrollButton {
-  transition: opacity 0.3s ease;
   display: inline-block;
   background: none;
-  width: 35%;
-  padding: var(--space-l2) var(--space-l2) 0;
+  padding: 0 var(--space-l2);
   border: none;
-  margin: 0 auto;
+  margin: var(--space-l2) auto 0;
   cursor: pointer;
 
-  &:hover {
+  &:hover .arrow {
     opacity: 0.4;
   }
 
   &:focus {
-    opacity: 0.1;
     outline: none;
+
+    .arrow {
+      opacity: 0.1;
+    }
+  }
+
+  &::before {
+    animation: coverScrollHintReveal 0.75s ease-out 2s forwards;
+    content: "scroll to continue";
+    display: block;
+    font-size: 1.125rem;
+    color: var(--white-40);
+    opacity: 0;
+    margin-bottom: var(--space-l2);
+  }
+}
+
+@keyframes coverScrollHintReveal {
+  from {
+    transform: translateY(1rem);
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
   }
 }
 
 .arrow {
-  align-self: center;
+  transition: opacity 0.3s ease;
+  animation: coverScrollBounce 1s ease-in-out 2.75s infinite;
+}
+
+@keyframes coverScrollBounce {
+  0%,
+  50%,
+  100% {
+    transform: translateY(0);
+  }
+
+  25%,
+  75% {
+    transform: translateY(0.25rem);
+  }
 }

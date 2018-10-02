@@ -7,11 +7,11 @@ import PrimaryButton from "../primaryButton/PrimaryButton";
 class SubscribeForm extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { email: "" };
+    this.state = { name: "", email: "" };
   }
 
   _clearFormData = ({ submitted }) => {
-    this.setState({ email: "", submitted });
+    this.setState({ name: "", email: "", submitted });
   };
 
   /* Here’s the juicy bit for posting the form submission */
@@ -24,7 +24,7 @@ class SubscribeForm extends React.Component {
     delete data.errors;
 
     // Form validation
-    if (data.email.length === 0) {
+    if (data.email.length === 0 || data.email.length === 0) {
       errors = true;
       this.setState({ errors: true });
     } else {
@@ -40,26 +40,44 @@ class SubscribeForm extends React.Component {
   _handleChange = e => this.setState({ [e.target.name]: e.target.value });
 
   render() {
-    const { email, submitted } = this.state;
+    const { name, email, submitted } = this.state;
     return !submitted ? (
       <form onSubmit={this._handleSubmit} {...this.props}>
-        <DefaultInput
-          name="email"
-          value={email}
-          id="newsletter-email-input"
-          placeholder="Email"
-          type="email"
-          aria-label="newsletter email"
-          autoComplete="email"
-          required
-          onChange={this._handleChange}
-          className={styles.input}
-        />
-        <PrimaryButton className={`${styles.button}`}>Send</PrimaryButton>
+        <div className={styles.form}>
+          <div className={styles.formBlock}>
+            <label htmlFor="newsletter-name-input">Name</label>
+            <DefaultInput
+              name="name"
+              value={name}
+              id="newsletter-name-input"
+              placeholder="Kato Orji"
+              type="text"
+              autoComplete="name"
+              required
+              onChange={this._handleChange}
+            />
+          </div>
+          <div className={styles.formBlock}>
+            <label htmlFor="newsletter-email-input">Email</label>
+            <DefaultInput
+              name="email"
+              value={email}
+              id="newsletter-email-input"
+              placeholder="kato@example.com"
+              type="email"
+              autoComplete="email"
+              required
+              onChange={this._handleChange}
+            />
+          </div>
+          <div className={styles.formBlock}>
+            <PrimaryButton>Send</PrimaryButton>
+          </div>
+        </div>
       </form>
     ) : (
       <p className={`${styles.successText}`}>
-        Thank you! You have been sent a confirmation email to subscribe.
+        Thank you! We will follow up via email shortly.
       </p>
     );
   }
@@ -71,12 +89,12 @@ class SubscribeSection extends React.Component {
     return (
       <div className={`container ${className}`} {...restProps}>
         <div className={`row ${styles.row}`}>
-          <div className={`col-xs-12 col-lg-5 ${styles.description}`}>
+          <div className={`col-xs-12 col-lg-6 ${styles.description}`}>
             <h2>{heading}</h2>
             <p>{text}</p>
           </div>
           <SubscribeForm
-            className={`col-xs-12 col-md-10 col-md-offset-1 col-lg-6 col-lg-offset-1 ${
+            className={`col-xs-12 col-md-10 col-md-offset-1 col-lg-5 col-lg-offset-1 ${
               styles.action
             }`}
           />
