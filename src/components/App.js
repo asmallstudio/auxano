@@ -52,6 +52,8 @@ class App extends React.Component {
 
   render() {
     const { doNotShowCover } = this.state;
+    const { globalData } = this.props;
+
     return (
       <Router>
         <React.Fragment>
@@ -60,6 +62,8 @@ class App extends React.Component {
           </Head>
           {doNotShowCover ? null : (
             <CoverSheet
+              hero={globalData.coverSheet.hero}
+              tagline={globalData.coverSheet.tagline}
               updateDoNotShowCoverState={this.updateDoNotShowCoverState}
             />
           )}
