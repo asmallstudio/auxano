@@ -197,7 +197,7 @@ class Contact extends React.Component {
   }
 
   render() {
-    const { globalData, contact } = this.props;
+    const { contact, globalData } = this.props;
 
     return (
       <React.Fragment>
@@ -228,21 +228,21 @@ class Contact extends React.Component {
                     <meta itemProp="url" content={constants.siteMeta.url} />
                     <h3 className="sr-text">Email</h3>
                     <a
-                      href={`mailto:${global.companyInfo.email}`}
+                      href={`mailto:${globalData.companyInfo.email}`}
                       itemProp="email"
                     >
-                      {global.companyInfo.email}
+                      {globalData.companyInfo.email}
                     </a>
                   </div>
                   <div className={styles.contactInfoSection}>
                     <h3 className="sr-text">Phone</h3>
                     <a
                       href={`tel:${phoneNumberUnformat(
-                        global.companyInfo.phone
+                        globalData.companyInfo.phone
                       )}`}
                       itemProp="telephone"
                     >
-                      {global.companyInfo.phone}
+                      {globalData.companyInfo.phone}
                     </a>
                   </div>
                   <div className={styles.contactInfoSection}>
@@ -253,20 +253,20 @@ class Contact extends React.Component {
                       itemType="http://schema.org/PostalAddress"
                     >
                       <span itemProp="streetAddress">
-                        {global.companyInfo.address.line1}
+                        {globalData.companyInfo.address.line1}
                         <br />
-                        {global.companyInfo.address.line2}
+                        {globalData.companyInfo.address.line2}
                       </span>
                       <br />
                       <span itemProp="addressLocality">
-                        {global.companyInfo.address.city}
+                        {globalData.companyInfo.address.city}
                       </span>
                       ,{" "}
                       <span itemProp="addressRegion">
-                        {global.companyInfo.address.state}
+                        {globalData.companyInfo.address.state}
                       </span>{" "}
                       <span itemProp="postalCode">
-                        {global.companyInfo.address.zipcode}
+                        {globalData.companyInfo.address.zipcode}
                       </span>
                       <meta itemProp="addressCountry" content="US" />
                     </p>
