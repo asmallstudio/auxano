@@ -3,7 +3,7 @@ backend:
   branch: master
 media_folder: public/uploads
 public_folder: /uploads
-display_url: https://auxanoadvisors.com/
+display_url: https://auxanoadvisors.com
 slug:
   encoding: "ascii"
   clean_accents: true
