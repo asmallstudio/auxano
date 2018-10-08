@@ -2,6 +2,7 @@ backend:
   name: git-gateway
   branch: master
 media_folder: public/uploads
+publish_mode: editorial_workflow
 public_folder: /uploads
 display_url: https://auxanoadvisors.com
 slug:
