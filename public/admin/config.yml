@@ -232,9 +232,14 @@ collections:
                 widget: list
                 allow_add: true
                 fields:
-                  - { label: Logo, name: logo, widget: image }
-                  - { label: Name, name: name, widget: string }
-                  - { label: Description, name: desc, widget: text }
+                  - { label: Logo, name: logo, widget: image, required: true }
+                  - { label: Name, name: name, widget: string, required: true }
+                  - {
+                      label: Description,
+                      name: desc,
+                      widget: text,
+                      required: true,
+                    }
           - label: "Action Banner"
             name: actionBanner
             widget: object
@@ -1253,9 +1258,12 @@ collections:
               - label: "Name"
                 name: title
                 widget: string
+                default: ""
+                required: true
               - label: "Photo"
                 name: image
                 widget: image
+                required: true
               - label: "Qualifications"
                 name: qualifications
                 hint: "A comma separated list of qualifications"
@@ -1269,6 +1277,8 @@ collections:
               - label: "Email"
                 name: email
                 widget: string
+                default: ""
+                required: true
               - label: "Phone Extension"
                 name: extension
                 widget: string
@@ -1276,6 +1286,8 @@ collections:
               - label: "Bio"
                 name: bio
                 widget: markdown
+                default: ""
+                required: true
   - label: News Article
     name: news
     folder: src/data/news
@@ -1287,9 +1299,13 @@ collections:
       - label: "Title"
         name: title
         widget: string
+        default: ""
+        required: true
       - label: "Date"
         name: date
         widget: datetime
       - label: "Body"
         name: body
         widget: markdown
+        default: ""
+        required: true
