@@ -157,11 +157,12 @@
   }
 
   tbody th:not(:empty) {
+    // If only text-orientation was more widely supported…
     // transform: rotate(180deg);
     // writing-mode: vertical-lr;
     // text-orientation: sideways;
     padding: 0.5rem 0.5rem;
-    box-shadow: 0 -5px 5px var(--grey-10);
+    box-shadow: 0 5px 5px var(--grey-10);
 
     span {
       display: block;
@@ -177,7 +178,6 @@
       // transform: none;
       // writing-mode: horizontal-tb;
       padding: 0.5rem 2rem;
-      box-shadow: 0 5px 5px var(--grey-10);
     }
   }
 
