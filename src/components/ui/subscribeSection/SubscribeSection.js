@@ -50,7 +50,7 @@ class SubscribeForm extends React.Component {
               name="name"
               value={name}
               id="newsletter-name-input"
-              placeholder="Kato Orji"
+              placeholder="Fist Last"
               type="text"
               autoComplete="name"
               required
@@ -63,7 +63,7 @@ class SubscribeForm extends React.Component {
               name="email"
               value={email}
               id="newsletter-email-input"
-              placeholder="kato@example.com"
+              placeholder="name@example.com"
               type="email"
               autoComplete="email"
               required
