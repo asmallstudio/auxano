@@ -120,7 +120,7 @@ class ContactForm extends React.Component {
             name="name"
             value={name}
             id="name-input"
-            placeholder="Alex Garcia"
+            placeholder="First Last"
             type="text"
             autoComplete="name"
             required
@@ -132,7 +132,7 @@ class ContactForm extends React.Component {
             name="email"
             value={email}
             id="email-input"
-            placeholder="alex@example.com"
+            placeholder="name@example.com"
             type="email"
             autoComplete="email"
             required
