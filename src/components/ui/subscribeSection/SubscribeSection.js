@@ -50,7 +50,7 @@ class SubscribeForm extends React.Component {
               name="name"
               value={name}
               id="newsletter-name-input"
-              placeholder="Fist Last"
+              placeholder="First Last"
               type="text"
               autoComplete="name"
               required
