@@ -1,48 +1,66 @@
-pageTitle: "Client Services"
+pageTitle: Client Services
 hero:
-  title: "Go further than you ever thought possible."
-services:
-  item1:
-    icon: "/uploads/personal-finance.svg"
-    heading: "Personal Finance"
-    text: "We know you have goals for your future. We’ll help you manage your personal finances to meet them."
-    link: "/client-services/personal-finances/"
-  item2:
-    icon: "/uploads/investments.svg"
-    heading: "Investments"
-    text: "Good investments have the power to transform lives. We’ll help you grow your assets responsibly."
-    link: "/client-services/investments/"
-  item3:
-    icon: "/uploads/estate-planning.svg"
-    heading: "Estate Planning"
-    text: "Estate planning can often be complex. Our integrated process will help make sure that nothing is missed."
-    link: "/client-services/estate-planning/"
-  item4:
-    icon: "/uploads/risk-management.svg"
-    heading: "Risk Management"
-    text: "Its important to protect your assets. We can help you manage your financial risks and avoid potential pitfalls."
-    link: "/client-services/risk-management/"
-  item5:
-    icon: "/uploads/tax-planning.svg"
-    heading: "Tax Planning"
-    text: "By creating unique tax models, we’ll help you plan ahead and be better prepared for this annual process."
-    link: "/client-services/tax-planning/"
-  item6:
-    icon: "/uploads/business-services.svg"
-    heading: "Business Services"
-    text: "We offer a wide range of services to business owners. Contact us to find out how we can help your business plan for the future. "
-    link: "/client-services/business-services/"
-  item7:
-    icon: "/uploads/giving.svg"
-    heading: "Charitable Giving"
-    text: "Giving is often an important part of our clients’ legacy. As stewards, we resonate with this spirit of generosity. We’ll help you determine your charitable objectives, and align them with your financial planning to ensure that you are meeting your goals."
-  item8:
-    icon: "/uploads/star.svg"
-    heading: "Special Projects"
-    text: "Have a financial need that isn’t listed? Contact us to see how we can help."
+  title: Go further than you ever thought possible.
 actionBanner:
   link: /contact
   text: Contact Us
 subscribe:
   heading: Schedule an introduction with an advisor.
   text: All personal information kept private.
+services:
+  item1:
+    heading: Personal Finance
+    icon: /uploads/personal-finance.svg
+    link: /client-services/personal-finances/
+    text: >-
+      We know you have goals for your future. We’ll help you manage your
+      personal finances to meet them.
+  item2:
+    heading: Investments
+    icon: /uploads/investments.svg
+    link: /client-services/investments/
+    text: >-
+      Good investments have the power to transform lives. We’ll help you protect
+      and grow your assets responsibly.
+  item3:
+    heading: Estate Planning
+    icon: /uploads/estate-planning.svg
+    link: /client-services/estate-planning/
+    text: >-
+      Estate planning can often be complex. Our integrated process will help
+      make sure that nothing is missed.
+  item4:
+    heading: Risk Management
+    icon: /uploads/risk-management.svg
+    link: /client-services/risk-management/
+    text: >-
+      Its important to protect your assets. We can help you manage your
+      financial risks and avoid potential pitfalls.
+  item5:
+    heading: Tax Planning
+    icon: /uploads/tax-planning.svg
+    link: /client-services/tax-planning/
+    text: >-
+      By creating unique tax models, we’ll help you plan ahead and be better
+      prepared for this annual process.
+  item6:
+    heading: Business Services
+    icon: /uploads/business-services.svg
+    link: /client-services/business-services/
+    text: >-
+      We offer a wide range of services to business owners. Contact us to find
+      out how we can help your business plan for the future. 
+  item7:
+    heading: Charitable Giving
+    icon: /uploads/giving.svg
+    text: >-
+      Giving is often an important part of our clients’ legacy. As stewards, we
+      resonate with this spirit of generosity. We’ll help you determine your
+      charitable objectives, and align them with your financial planning to
+      ensure that you are meeting your goals.
+  item8:
+    heading: Special Projects
+    icon: /uploads/star.svg
+    text: >-
+      Have a financial need that isn’t listed? Contact us to see how we can
+      help.
