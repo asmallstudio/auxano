@@ -54,10 +54,10 @@ services:
     heading: Charitable Giving
     icon: /uploads/giving.svg
     text: >-
-      Giving is often an important part of our clients’ legacy. As stewards, we
-      resonate with this spirit of generosity. We’ll help you determine your
-      charitable objectives, and align them with your financial planning to
-      ensure that you are meeting your goals.
+      Giving is often an important part of your legacy. As stewards, we resonate
+      with this spirit of generosity. We’ll help you determine your charitable
+      objectives, and align them with your financial planning to ensure that you
+      are meeting your goals.
   item8:
     heading: Special Projects
     icon: /uploads/star.svg
