@@ -9,7 +9,7 @@ items:
     heading: Discovery
     image:
       alt: leave empty if this image does not enhance the meaning of the section
-      src: /uploads/discovery.jpg
+      src: /uploads/community.png
   item2:
     body: >-
       We’ll help determine which financial steps will take you from your current
@@ -17,7 +17,7 @@ items:
     heading: Integrated Financial Planning
     image:
       alt: leave empty if this image does not enhance the meaning of the section
-      src: /uploads/integrated-financial-planning.jpg
+      src: /uploads/integrated-financial-planning.png
     link: /client-services
   item3:
     body: >-
@@ -26,7 +26,7 @@ items:
     heading: Implementation
     image:
       alt: leave empty if this image does not enhance the meaning of the section
-      src: /uploads/implementation.jpg
+      src: /uploads/implementation.png
   item4:
     body: >-
       We understand that life can be unpredictable. We’ll work with you to
@@ -34,7 +34,7 @@ items:
     heading: Monitor & Adjust
     image:
       alt: leave empty if this image does not enhance the meaning of the section
-      src: /uploads/monitor-adjust.jpg
+      src: /uploads/monitor-adjust.png
 actionBanner:
   link: /client-services
   text: Our Services
