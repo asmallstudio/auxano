@@ -2,52 +2,65 @@ pageTitle: Investments | Client Services
 hero:
   name: Investments
   title: >-
-    Good investments have the power to transform lives. We’ll help you grow your
-    assets responsibly.
+    Good investments have the power to transform lives. We’ll help you grow and
+    protect your assets responsibly.
 pullquote1: >-
   “Successful investing is about managing risk, not avoiding it.” — **Benjamin
   Graham**, _The Intelligent Investor_
 infoSection:
+  description: >-
+    Speculators allocate to an idea based upon a theory, set of beliefs or a
+    story. Investors, in contrast, allocate capital based upon the prudent
+    application of principles with respect to evidence.
+
+
+    In both cases risk is present.  For the speculator, risk represents a
+    gamble.  For the investor, risk represents a hurdle that may be offset or
+    mitigated by a margin of safety.  The contrast between these two is stark.
+
+
+    Wealth planning that takes on speculative elements can easily lead to
+    risk-seeking behavior.  We believe planning should be patient, focus on
+    stewardship of current resources, and emphasize debt-reduction.
+
+
+    In the wealth management world, when speculative planning and capital
+    allocation are combined, you have the multiplication of risk. At Auxano, we
+    strive to integrate principled advice and investing in such a way that risk
+    is managed and probabilities of success are enhanced.
   descriptionLede: >-
     What separates speculators and investors are the principles which undergird
-    the decision-making process.
-  description: |-
-    Speculators allocate to an idea based upon a theory, set of beliefs or a story. Investors, in contrast, allocate capital based upon the prudent application of principles with respect to evidence.
-
-    In both cases risk is present.  For the speculator, risk represents a gamble.  For the investor, risk represents a hurdle that may be offset or mitigated by a margin of safety.  The contrast between these two is stark.
-
-    Wealth planning that takes on speculative elements can easily lead to risk-seeking behavior.  We believe planning should be patient, focus on stewardship of current resources, and emphasize debt-reduction.
-
-    In the wealth management world, when speculative planning and capital allocation are combined, you have the multiplication of risk. At Auxano, we strive to integrate principled advice and investing in such a way that risk is managed and probabilities of success are enhanced.
+    their decision-making process.
   image:
     alt: leave empty if this image does not enhance the meaning of the section
     src: /uploads/investments.jpg
 pullquote2: >-
-  Our approach centers on the integration of principled planning and investing. We believe this is True Wealth Management and is what Transcending wealth, Transforming lives means to us.
+  We call this True Wealth Management, and it’s apart of what Transcending
+  Wealth. Transforming Lives.® means to us.
 infoTable:
   tableHead:
     tableHead1: Speculative Approach
     tableHead2: Principled Approach
   tableRow1:
     tableCell1: >-
-      Speculation is a bet upon an outcome based upon theory, beliefs or a
-      story.
+      Speculation is a bet upon an outcome based upon theory, beliefs, a story,
+      or simply a hunch.
     tableCell2: >-
       Investment is the process of allocating capital based on the prudent
       application of principles with respect to evidence
-    tableRowHead: Investments
+    tableRowHead: Investment Management
   tableRow2:
     tableCell1: |-
-      Now
+      Live for today
       Living beyond one’s means
       Debt-based consumption
-      Risk seeking
+      Risk-taking
     tableCell2: |-
       Patient
       Faithful in the small things
       Debt-reduction
       Risk management
-    tableRowHead: Planning
+    tableRowHead: Financial Planning
 serviceInfo:
   list:
     item1:
