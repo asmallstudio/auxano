@@ -1,16 +1,20 @@
-pageTitle: "Corporate Executive Solutions | Client Services"
+pageTitle: Corporate Executive Solutions | Client Services
 hero:
-  title: "Corporate Executive Solutions"
-  description: "Our long-standing relationships with corporate executives, leaders and managers of Fortunate 500 companies have given us a depth of knowledge about their benefits and HR offerings. This helps them save time and benefit from our experience and processes."
+  description: >-
+    Our long-standing relationships with corporate executives, leaders and
+    managers of Fortunate 500 companies have given us a depth of knowledge about
+    their benefits and HR offerings. This helps them save time and benefit from
+    our experience and processes.
+  title: Corporate Executive Solutions
 serviceInfoList:
-  item1: "Deferred Compensation"
-  item2: "Executive Benefits"
-  item3: "Stock options / Restricted stock analysis"
-  item4: "Stock Trading Window"
-  item5: "Net Unrealized Appreciation (NUA)"
-  item6: "Benefit Equalization Plan"
-  item7: "Supplemental Executive Retirement Plans"
-  item8: "Executive Tax Strategies"
+  item1: Deferred Compensation
+  item2: Executive Benefits
+  item3: Stock Options / Restricted Stock
+  item4: Stock Trading Window
+  item5: Net Unrealized Appreciation (NUA)
+  item6: Benefit Equalization Plan
+  item7: Supplemental Executive Retirement Plans
+  item8: Executive Tax Strategies
 actionBanner:
   link: /contact
   text: Contact Us
