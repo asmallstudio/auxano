@@ -79,15 +79,15 @@
   margin: var(--space-l2) auto 0;
   cursor: pointer;
 
-  // The padding below the button is a total hack to improve
-  // the chances of the button beling visible on modern iPhones.
-  // @media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (orientation: portrait) {
-  //   padding-bottom: calc(5rem + var(--space-l1));
-  // }
+  // The peadding below in media queries is a total hack to improve
+  // the display of the Cover Sheet on modern iPhones.
+  @media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (orientation: portrait) {
+    padding-bottom: var(--space-l2);
+  }
 
-  // @media only screen and (min-device-width: 414px) and (max-device-width: 896px) and (orientation: portrait) {
-  //   padding-bottom: calc(5rem + var(--space-l1));
-  // }
+  @media only screen and (min-device-width: 414px) and (max-device-width: 896px) and (orientation: portrait) {
+    padding-bottom: var(--space-l2);
+  }
 
   &:hover .arrow {
     opacity: 0.4;
