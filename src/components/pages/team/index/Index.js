@@ -2,10 +2,7 @@ import React from "react";
 import { Link, Head } from "react-static";
 import { withSiteAndRouteData } from "../../../../lib/utils/hoc";
 import { pageChange } from "../../../../lib/utils/pageChange";
-import {
-  getFullPageTitle,
-  pickFirstAvailableString
-} from "../../../../lib/utils/copy";
+import { getFullPageTitle } from "../../../../lib/utils/copy";
 
 import LinkWithArrow from "../../../ui/linkWithArrow/LinkWithArrow";
 import FullWidthSectionActionLink from "../../../ui/fullWidthSectionActionLink/FullWidthSectionActionLink";
