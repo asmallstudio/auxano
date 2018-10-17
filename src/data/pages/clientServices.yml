@@ -65,9 +65,6 @@ services:
     text: >-
       Have a financial need that isn’t listed? Contact us to see how we can
       help.
-actionBanner:
-  link: ""
-  text: ""
 subscribe:
   heading: ""
   text: ""
