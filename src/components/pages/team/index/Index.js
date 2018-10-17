@@ -23,27 +23,21 @@ class Index extends React.Component {
   }
 
   render() {
-    const { pageDescription, members, siteData } = this.props;
+    const { members, siteData } = this.props;
 
     return (
       <React.Fragment>
         <Head>
           <title>{getFullPageTitle("Team")}</title>
-          <meta
-            name="description"
-            content={pickFirstAvailableString(
-              pageDescription,
-              siteData.siteDescription
-            )}
-          />
+          <meta name="description" content={siteData.siteDescription} />
         </Head>
         <section className="container">
           <div className="row">
             <div className={`col-xs-12 ${styles.teamList}`}>
               <h1>Meet the Team</h1>
               <ul>
-                {members.map(member => (
-                  <li key={member.id} className={styles.teamMember}>
+                {members.map((member, i) => (
+                  <li key={i} className={styles.teamMember}>
                     <Link to={`/team/${member.slug}/`}>
                       <img src={member.image} alt="" />
                     </Link>
