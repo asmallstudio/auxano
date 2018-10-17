@@ -6,7 +6,10 @@
   height: calc(100vh - var(--header-height));
   background-color: var(--fountain-blue);
   padding: var(--space-l3) 0;
-  margin-top: var(--header-height);
+
+  &:global(.container--fluid) {
+    margin-top: var(--header-height);
+  }
 
   @include respond-above(lg) {
     height: 100vh;
@@ -67,8 +70,8 @@
 
   // The padding below the button is a total hack to improve
   // the chances of the button beling visible on modern iPhones.
-  @media (width: 375px) and (height: 812px),
-    (width: 414px) and (height: 896px) {
+  @media (width: 375px and (height: 812px)),
+    (width: 414px and (height: 896px)) {
     padding-bottom: calc(5rem + var(--space-l1));
   }
 
@@ -120,6 +123,6 @@
 
   25%,
   75% {
-    transform: translateY(0.25rem);
+    transform: translateY(8%);
   }
 }
