@@ -25,14 +25,6 @@
   padding-bottom: env(safe-area-inset-bottom);
 }
 
-.logo {
-  // display: none;
-
-  @include respond-above(lg) {
-    display: block;
-  }
-}
-
 .text {
   width: 100%;
 
@@ -57,10 +49,16 @@
 .scrollButton {
   display: inline-block;
   background: none;
-  padding: 0 var(--space-l2);
+  padding: 0 var(--space-l2) 5rem;
   border: none;
   margin: var(--space-l2) auto 0;
   cursor: pointer;
+
+  // The padding below the button is a total hack to improve
+  // the chances of the button beling visible on iPhone X.
+  @include respond-above(md) {
+    padding-bottom: 0;
+  }
 
   &:hover .arrow {
     opacity: 0.4;
