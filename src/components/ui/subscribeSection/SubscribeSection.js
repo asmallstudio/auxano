@@ -4,14 +4,20 @@ import styles from "./subscribeSection.scss";
 import DefaultInput from "../defaultInput/DefaultInput";
 import PrimaryButton from "../primaryButton/PrimaryButton";
 
+const _encode = data => {
+  return Object.keys(data)
+    .map(key => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`)
+    .join("&");
+};
+
 class SubscribeForm extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { name: "", email: "" };
+    this.state = { name: "", email: "", bdaySurprise: "" };
   }
 
   _clearFormData = ({ submitted }) => {
-    this.setState({ name: "", email: "", submitted });
+    this.setState({ name: "", email: "", bdaySurprise: "", submitted });
   };
 
   /* Here’s the juicy bit for posting the form submission */
@@ -33,18 +39,41 @@ class SubscribeForm extends React.Component {
     }
 
     if (!errors) {
-      this._clearFormData({ submitted: true });
+      fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: _encode({ "form-name": "leads", ...data })
+      })
+        .then(() => {
+          this._clearFormData({ submitted: true });
+        })
+        .catch(() => {
+          this.setState({ submitError: true });
+        });
     }
   };
 
   _handleChange = e => this.setState({ [e.target.name]: e.target.value });
 
   render() {
-    const { name, email, submitted } = this.state;
+    const { name, email, bdaySurprise, submitted } = this.state;
     return !submitted ? (
-      <form onSubmit={this._handleSubmit} {...this.props}>
+      <form
+        name="leads"
+        data-netlify="true"
+        data-netlify-honeypot="bdaySurprise"
+        onSubmit={this._handleSubmit}
+        {...this.props}
+      >
         <div className={styles.form}>
           <div className={styles.formBlock}>
+            <DefaultInput
+              name="bdaySurprise"
+              value={bdaySurprise}
+              className="sr-text"
+              autoComplete="off"
+              onChange={this._handleChange}
+            />
             <label htmlFor="newsletter-name-input">Name</label>
             <DefaultInput
               name="name"

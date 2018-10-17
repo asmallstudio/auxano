@@ -21,6 +21,7 @@
   object-position: left;
   height: 100%;
   height: calc(100% + 1px);
+  width: 100%;
 
   // Future person, if mask-* syntax is supported widely when you read this, please,
   // make this work dynamically so either linear or conic gradients can mas the image.
@@ -65,7 +66,7 @@
 
     &::after {
       content: "\00ae"; // Registered mark.
-      font-size: 0.5em;
+      font-size: 0.375em;
       vertical-align: super;
     }
   }
