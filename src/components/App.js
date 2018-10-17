@@ -52,7 +52,7 @@ class App extends React.Component {
 
   render() {
     const { doNotShowCover } = this.state;
-    const { globalData } = this.props;
+    const { siteData } = this.props;
 
     return (
       <Router>
@@ -62,8 +62,8 @@ class App extends React.Component {
           </Head>
           {doNotShowCover ? null : (
             <CoverSheet
-              hero={globalData.coverSheet.hero}
-              tagline={globalData.coverSheet.tagline}
+              hero={siteData.coverSheet.hero}
+              tagline={siteData.coverSheet.tagline}
               updateDoNotShowCoverState={this.updateDoNotShowCoverState}
             />
           )}
