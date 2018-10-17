@@ -185,17 +185,16 @@ class ContactForm extends React.Component {
     return (
       <p className={`${styles.errorText}`}>
         Sorry, the form did not submit correctly. Please email us instead at{" "}
-        <a href="mailto:info@auxanoadvisors.com">info@auxanoadvisors.com</a>.
+        <a href={`mailto:${this.props.fallbackEmail}`}>
+          {this.props.fallbackEmail}
+        </a>
+        .
       </p>
     );
   }
 }
 
 class Contact extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
   render() {
     const { contact, siteData } = this.props;
 
@@ -221,7 +220,7 @@ class Contact extends React.Component {
                 } dg-form`}
               >
                 <h2>{contact.form.title}</h2>
-                <ContactForm />
+                <ContactForm fallbackEmail={siteData.companyInfo.email} />
               </section>
               <section
                 className={`col-xs-12 col-md-5 col-md-offset-1 ${
