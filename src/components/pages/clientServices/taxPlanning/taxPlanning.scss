@@ -23,17 +23,17 @@
 }
 
 .dingusDot1 {
-  display: none;
   z-index: -1;
   position: absolute;
-  top: calc(50% - 5rem);
+  top: -5rem;
+  right: -5rem;
   height: 10rem;
   width: 10rem;
   background-color: var(--casablanca);
   border-radius: 50%;
 
   @include respond-above(md) {
-    display: block;
+    top: calc(50% - 5rem);
     right: -5rem;
   }
 }
