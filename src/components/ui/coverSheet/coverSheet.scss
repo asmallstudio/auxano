@@ -3,12 +3,32 @@
 .coverSheet {
   position: relative;
   z-index: 99; // Below header menu (z=100)
-  height: 100vh;
+  height: calc(100vh - var(--header-height));
   background-color: var(--fountain-blue);
   padding: var(--space-l3) 0;
 
+  // The height below in media queries is a total hack to improve
+  // the fit of the Cover Sheet on modern iPhones.
+  // (5 rem is the approximate Safari tab bar height.)
+  @media only screen and (min-device-width: 414px) and (max-device-width: 896px) and (orientation: portrait) {
+    height: calc(100vh - var(--header-height) - 5rem);
+  }
+
+  @media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (orientation: portrait) {
+    height: calc(100vh - var(--header-height) - 5rem);
+  }
+
+  &:global(.container--fluid) {
+    margin-top: var(--header-height);
+  }
+
   @include respond-above(lg) {
+    height: 100vh;
     z-index: 101; // Above header menu (z=100)
+
+    &:global(.container--fluid) {
+      margin-top: 0;
+    }
   }
 
   :global(.container) {
@@ -23,6 +43,14 @@
   height: 100%;
   padding-top: env(safe-area-inset-top);
   padding-bottom: env(safe-area-inset-bottom);
+}
+
+.logo {
+  display: none;
+
+  @include respond-above(lg) {
+    display: block;
+  }
 }
 
 .text {
@@ -49,15 +77,19 @@
 .scrollButton {
   display: inline-block;
   background: none;
-  padding: 0 var(--space-l2) 5rem;
+  padding: 0 var(--space-l2);
   border: none;
   margin: var(--space-l2) auto 0;
   cursor: pointer;
 
-  // The padding below the button is a total hack to improve
-  // the chances of the button beling visible on iPhone X.
-  @include respond-above(md) {
-    padding-bottom: 0;
+  // The peadding below in media queries is a total hack to improve
+  // the display of the Cover Sheet on modern iPhones.
+  @media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (orientation: portrait) {
+    padding-bottom: var(--space-l2);
+  }
+
+  @media only screen and (min-device-width: 414px) and (max-device-width: 896px) and (orientation: portrait) {
+    padding-bottom: var(--space-l2);
   }
 
   &:hover .arrow {
@@ -108,6 +140,6 @@
 
   25%,
   75% {
-    transform: translateY(0.25rem);
+    transform: translateY(8%);
   }
 }

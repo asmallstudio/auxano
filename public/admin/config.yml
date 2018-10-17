@@ -12,70 +12,78 @@ collections:
   - label: Pages
     name: pages
     files:
-      - label: "Global"
-        name: global
-        file: src/data/pages/global.yml
+      - label: "Site Information"
+        name: siteData
+        file: src/data/pages/siteData.yml
         path: /
         fields:
-          - label: "Company Info"
-            name: companyInfo
+          - label: "Site Information"
+            name: siteData
             widget: object
             fields:
-              - label: "Contact Email"
-                name: email
-                widget: string
-              - label: "Contact Phone"
-                name: phone
-                widget: string
-              - label: "Address"
-                name: address
+              - label: "Site Description"
+                name: siteDescription
+                hint: "(For SEO purposes.) Describes the content of the whole website. This is visible in search results."
+                widget: text
+              - label: "Company Info"
+                name: companyInfo
                 widget: object
                 fields:
-                  - label: "Line 1"
-                    name: line1
+                  - label: "Contact Email"
+                    name: email
                     widget: string
-                  - label: "Line 2"
-                    name: line2
+                  - label: "Contact Phone"
+                    name: phone
                     widget: string
-                  - label: "City"
-                    name: city
+                  - label: "Address"
+                    name: address
+                    widget: object
+                    fields:
+                      - label: "Line 1"
+                        name: line1
+                        widget: string
+                      - label: "Line 2"
+                        name: line2
+                        widget: string
+                      - label: "City"
+                        name: city
+                        widget: string
+                      - label: "State"
+                        name: state
+                        widget: string
+                      - label: "Zipcode"
+                        name: zipcode
+                        widget: string
+              - label: "Cover Sheet"
+                name: coverSheet
+                widget: object
+                fields:
+                  - label: "Hero Text"
+                    name: hero
                     widget: string
-                  - label: "State"
-                    name: state
+                  - label: "Tagline"
+                    name: tagline
                     widget: string
-                  - label: "Zipcode"
-                    name: zipcode
+              - label: "Action Banner"
+                name: actionBanner
+                widget: object
+                fields:
+                  - label: "Text"
+                    name: text
                     widget: string
-          - label: "Cover Sheet"
-            name: coverSheet
-            widget: object
-            fields:
-              - label: "Hero Text"
-                name: hero
-                widget: string
-              - label: "Tagline"
-                name: tagline
-                widget: string
-          - label: "Action Banner"
-            name: actionBanner
-            widget: object
-            fields:
-              - label: "Text"
-                name: text
-                widget: string
-              - label: "Link"
-                name: link
-                widget: string
-          - label: "Subscribe"
-            name: subscribe
-            widget: object
-            fields:
-              - label: "Heading"
-                name: heading
-                widget: string
-              - label: "Subheading"
-                name: text
-                widget: text
+                  - label: "Link"
+                    name: link
+                    widget: string
+              - label: "Subscribe"
+                name: subscribe
+                widget: object
+                fields:
+                  - label: "Heading"
+                    name: heading
+                    widget: string
+                  - label: "Subheading"
+                    name: text
+                    widget: text
       - label: "Home Page"
         name: home
         file: src/data/pages/home.yml
@@ -184,6 +192,10 @@ collections:
           - label: "Page Title"
             name: pageTitle
             widget: string
+          - label: "Page Description"
+            name: pageDescription
+            hint: "(For SEO purposes.) Describes the content of the page. This is visible in search results."
+            widget: text
           - label: Hero
             name: hero
             widget: object
@@ -268,6 +280,10 @@ collections:
           - label: "Page Title"
             name: pageTitle
             widget: string
+          - label: "Page Description"
+            name: pageDescription
+            hint: "(For SEO purposes.) Describes the content of the page. This is visible in search results."
+            widget: text
           - label: Hero
             name: hero
             widget: object
@@ -399,6 +415,10 @@ collections:
           - label: "Page Title"
             name: pageTitle
             widget: string
+          - label: "Page Description"
+            name: pageDescription
+            hint: "(For SEO purposes.) Describes the content of the page. This is visible in search results."
+            widget: text
           - label: "Contact Form"
             name: form
             widget: object
@@ -423,16 +443,6 @@ collections:
               - label: "Image Description"
                 name: alt
                 widget: string
-          - label: "Action Banner"
-            name: actionBanner
-            widget: object
-            fields:
-              - label: "Text"
-                name: text
-                widget: string
-              - label: "Link"
-                name: link
-                widget: string
           - label: "Subscribe"
             name: subscribe
             widget: object
@@ -451,6 +461,10 @@ collections:
           - label: "Page Title"
             name: pageTitle
             widget: string
+          - label: "Page Description"
+            name: pageDescription
+            hint: "(For SEO purposes.) Describes the content of the page. This is visible in search results."
+            widget: text
           - label: "Hero"
             name: hero
             widget: object
@@ -632,6 +646,10 @@ collections:
           - label: "Page Title"
             name: pageTitle
             widget: string
+          - label: "Page Description"
+            name: pageDescription
+            hint: "(For SEO purposes.) Describes the content of the page. This is visible in search results."
+            widget: text
           - label: "Hero"
             name: hero
             widget: object
@@ -717,6 +735,10 @@ collections:
           - label: "Page Title"
             name: pageTitle
             widget: string
+          - label: "Page Description"
+            name: pageDescription
+            hint: "(For SEO purposes.) Describes the content of the page. This is visible in search results."
+            widget: text
           - label: "Hero"
             name: hero
             widget: object
@@ -862,6 +884,10 @@ collections:
           - label: "Page Title"
             name: pageTitle
             widget: string
+          - label: "Page Description"
+            name: pageDescription
+            hint: "(For SEO purposes.) Describes the content of the page. This is visible in search results."
+            widget: text
           - label: "Hero"
             name: hero
             widget: object
@@ -926,6 +952,10 @@ collections:
           - label: "Page Title"
             name: pageTitle
             widget: string
+          - label: "Page Description"
+            name: pageDescription
+            hint: "(For SEO purposes.) Describes the content of the page. This is visible in search results."
+            widget: text
           - label: "Hero"
             name: hero
             widget: object
@@ -1014,6 +1044,10 @@ collections:
           - label: "Page Title"
             name: pageTitle
             widget: string
+          - label: "Page Description"
+            name: pageDescription
+            hint: "(For SEO purposes.) Describes the content of the page. This is visible in search results."
+            widget: text
           - label: "Hero"
             name: hero
             widget: object
@@ -1082,6 +1116,10 @@ collections:
           - label: "Page Title"
             name: pageTitle
             widget: string
+          - label: "Page Description"
+            name: pageDescription
+            hint: "(For SEO purposes.) Describes the content of the page. This is visible in search results."
+            widget: text
           - label: "Hero"
             name: hero
             widget: object
@@ -1145,6 +1183,10 @@ collections:
           - label: "Page Title"
             name: pageTitle
             widget: string
+          - label: "Page Description"
+            name: pageDescription
+            hint: "(For SEO purposes.) Describes the content of the page. This is visible in search results."
+            widget: text
           - label: "Hero"
             name: hero
             widget: object
@@ -1191,6 +1233,10 @@ collections:
           - label: "Page Title"
             name: pageTitle
             widget: string
+          - label: "Page Description"
+            name: pageDescription
+            hint: "(For SEO purposes.) Describes the content of the page. This is visible in search results."
+            widget: text
           - label: Hero
             name: hero
             widget: object
@@ -1230,6 +1276,10 @@ collections:
         file: src/data/pages/team.yml
         path: /team
         fields:
+          - label: "Page Description"
+            name: pageDescription
+            hint: "(For SEO purposes.) Describes the content of the page. This is visible in search results."
+            widget: text
           - label: "members"
             name: members
             widget: list

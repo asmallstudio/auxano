@@ -1,11 +1,33 @@
 import moment from "moment";
 
 import constants from "../constants.json";
+/**
+ * Strips phone number string of all but + symbold and digits
+ * @param {string} A string representing a phone number
+ * @returns {string} A phone number with no characters besides digits and a +
+ * @link https://www.regexpal.com/?fam=105221
+ */
+const phoneNumberUnformat = phone => phone.replace(/[^+0-9]/g, "");
+
+/**
+ * Checks for value in text string.
+ * @param {string} text A string that may be empty, meaningless, and devoid of life
+ * @returns {boolean} If string has value, return true
+ */
+const hasTextValue = text => text.trim().length > 0;
+
+/**
+ * Returns first string that is not valueless
+ * @param  {...string} stringArgs strings - may be valueless
+ * @returns {string | undefined} First string that is not valueless, or undefined
+ */
+const pickFirstAvailableString = (...stringArgs) =>
+  stringArgs.find(hasTextValue);
 
 /**
  * Convert date string to moment object
  * @param {string} LLLDateString Date string in LLL format
- * @return {object} Moment object
+ * @returns {object} Moment object
  */
 const createMomentObjectFromLLLDateString = LLLDateString =>
   moment(LLLDateString, "LLL");
@@ -67,6 +89,8 @@ const createSlugFromTitle = data => {
 };
 
 export {
+  phoneNumberUnformat,
+  pickFirstAvailableString,
   getFullPageTitle,
   formatDateStringToFromNow,
   createSlugFromTitleAndDate,

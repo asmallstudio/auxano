@@ -1,7 +1,11 @@
 import React from "react";
-import { withRouteData, Head } from "react-static";
+import { Head } from "react-static";
+import { withSiteAndRouteData } from "../../../lib/utils/hoc";
 import { pageChange } from "../../../lib/utils/pageChange";
-import { getFullPageTitle } from "../../../lib/utils/copy";
+import {
+  getFullPageTitle,
+  pickFirstAvailableString
+} from "../../../lib/utils/copy";
 
 import styles from "./corporateSolutions.scss";
 import FullWidthSectionActionLink from "../../ui/fullWidthSectionActionLink/FullWidthSectionActionLink";
@@ -17,12 +21,19 @@ class corporateSolutions extends React.Component {
   }
 
   render() {
-    const { corporateSolutions } = this.props;
+    const { corporateSolutions, siteData } = this.props;
 
     return (
       <React.Fragment>
         <Head>
           <title>{getFullPageTitle(corporateSolutions.pageTitle)}</title>
+          <meta
+            name="description"
+            content={pickFirstAvailableString(
+              corporateSolutions.pageDescription,
+              siteData.siteDescription
+            )}
+          />
         </Head>
         <section
           className={`container--fluid ${styles.dingusDotContainer} ${
@@ -58,13 +69,25 @@ class corporateSolutions extends React.Component {
           </ul>
         </section>
         <FullWidthSectionActionLink
-          linkText={corporateSolutions.actionBanner.text}
-          to={corporateSolutions.actionBanner.link}
+          linkText={pickFirstAvailableString(
+            corporateSolutions.actionBanner.text,
+            siteData.actionBanner.text
+          )}
+          to={pickFirstAvailableString(
+            corporateSolutions.actionBanner.link,
+            siteData.actionBanner.link
+          )}
           className="dg-actionBanner"
         />
         <SubscribeSection
-          heading={corporateSolutions.subscribe.heading}
-          text={corporateSolutions.subscribe.text}
+          heading={pickFirstAvailableString(
+            corporateSolutions.subscribe.heading,
+            siteData.subscribe.heading
+          )}
+          text={pickFirstAvailableString(
+            corporateSolutions.subscribe.text,
+            siteData.subscribe.text
+          )}
           className="dg-subscribe"
         />
       </React.Fragment>
@@ -72,4 +95,4 @@ class corporateSolutions extends React.Component {
   }
 }
 
-export default withRouteData(corporateSolutions);
+export default withSiteAndRouteData(corporateSolutions);

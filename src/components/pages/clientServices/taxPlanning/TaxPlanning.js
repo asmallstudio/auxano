@@ -1,7 +1,11 @@
 import React from "react";
-import { withRouteData, Head } from "react-static";
+import { Head } from "react-static";
+import { withSiteAndRouteData } from "../../../../lib/utils/hoc";
 import { pageChange } from "../../../../lib/utils/pageChange";
-import { getFullPageTitle } from "../../../../lib/utils/copy";
+import {
+  getFullPageTitle,
+  pickFirstAvailableString
+} from "../../../../lib/utils/copy";
 
 import styles from "./taxPlanning.scss";
 import FullWidthSectionActionLink from "../../../ui/fullWidthSectionActionLink/FullWidthSectionActionLink";
@@ -17,12 +21,19 @@ class Other extends React.Component {
   }
 
   render() {
-    const { taxPlanning } = this.props;
+    const { taxPlanning, siteData } = this.props;
 
     return (
       <React.Fragment>
         <Head>
           <title>{getFullPageTitle(taxPlanning.pageTitle)}</title>
+          <meta
+            name="description"
+            content={pickFirstAvailableString(
+              taxPlanning.pageDescription,
+              siteData.siteDescription
+            )}
+          />
         </Head>
         <section
           className={`container--fluid ${styles.dingusDotContainer} ${
@@ -91,13 +102,25 @@ class Other extends React.Component {
           </div>
         </section>
         <FullWidthSectionActionLink
-          linkText={taxPlanning.actionBanner.text}
-          to={taxPlanning.actionBanner.link}
+          linkText={pickFirstAvailableString(
+            taxPlanning.actionBanner.text,
+            siteData.actionBanner.text
+          )}
+          to={pickFirstAvailableString(
+            taxPlanning.actionBanner.link,
+            siteData.actionBanner.link
+          )}
           className="dg-actionBanner"
         />
         <SubscribeSection
-          heading={taxPlanning.subscribe.heading}
-          text={taxPlanning.subscribe.text}
+          heading={pickFirstAvailableString(
+            taxPlanning.subscribe.heading,
+            siteData.subscribe.heading
+          )}
+          text={pickFirstAvailableString(
+            taxPlanning.subscribe.text,
+            siteData.subscribe.text
+          )}
           className="dg-subscribe"
         />
       </React.Fragment>
@@ -105,4 +128,4 @@ class Other extends React.Component {
   }
 }
 
-export default withRouteData(Other);
+export default withSiteAndRouteData(Other);

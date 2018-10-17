@@ -1,4 +1,5 @@
 pageTitle: Risk Management | Client Services
+pageDescription: ""
 hero:
   name: "Risk Management"
   title: "It's important to protect your assets. We can help you manage your financial risks and avoid potential pitfalls."
@@ -18,8 +19,8 @@ serviceInfo:
       icon: /uploads/save.svg
       text: "Determine the right levels and types of insurance"
 actionBanner:
-  link: /contact
-  text: "Contact Us"
+  link: ""
+  text: ""
 subscribe:
-  heading: "Schedule an introduction with an advisor."
-  text: "All personal information kept private."
+  heading: ""
+  text: ""

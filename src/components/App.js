@@ -1,5 +1,5 @@
 import React from "react";
-import { Router, Head } from "react-static";
+import { Router, Head, withSiteData } from "react-static";
 import { hot } from "react-hot-loader";
 
 import Routes from "react-static-routes";
@@ -52,6 +52,8 @@ class App extends React.Component {
 
   render() {
     const { doNotShowCover } = this.state;
+    const { siteData } = this.props;
+
     return (
       <Router>
         <React.Fragment>
@@ -60,6 +62,8 @@ class App extends React.Component {
           </Head>
           {doNotShowCover ? null : (
             <CoverSheet
+              hero={siteData.coverSheet.hero}
+              tagline={siteData.coverSheet.tagline}
               updateDoNotShowCoverState={this.updateDoNotShowCoverState}
             />
           )}
@@ -74,4 +78,4 @@ class App extends React.Component {
   }
 }
 
-export default hot(module)(App);
+export default hot(module)(withSiteData(App));

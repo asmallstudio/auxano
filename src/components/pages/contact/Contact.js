@@ -1,7 +1,13 @@
 import React from "react";
-import { withRouteData, Head, Link } from "react-static";
+import { Head, Link } from "react-static";
+import { withSiteAndRouteData } from "../../../lib/utils/hoc";
 import { pageChange } from "../../../lib/utils/pageChange";
-import { getFullPageTitle } from "../../../lib/utils/copy";
+import {
+  getFullPageTitle,
+  pickFirstAvailableString,
+  phoneNumberUnformat
+} from "../../../lib/utils/copy";
+
 import constants from "../../../lib/constants.json";
 
 import styles from "./contact.scss";
@@ -191,12 +197,19 @@ class Contact extends React.Component {
   }
 
   render() {
-    const { global, contact } = this.props;
+    const { contact, siteData } = this.props;
 
     return (
       <React.Fragment>
         <Head>
           <title>{getFullPageTitle(contact.pageTitle)}</title>
+          <meta
+            name="description"
+            content={pickFirstAvailableString(
+              contact.pageDescription,
+              siteData.siteDescription
+            )}
+          />
         </Head>
         <div className={`container--fluid ${styles.dingusDotContainer}`}>
           <div className="container">
@@ -222,16 +235,21 @@ class Contact extends React.Component {
                     <meta itemProp="url" content={constants.siteMeta.url} />
                     <h3 className="sr-text">Email</h3>
                     <a
-                      href={`mailto:${global.companyInfo.email}`}
+                      href={`mailto:${siteData.companyInfo.email}`}
                       itemProp="email"
                     >
-                      {global.companyInfo.email}
+                      {siteData.companyInfo.email}
                     </a>
                   </div>
                   <div className={styles.contactInfoSection}>
                     <h3 className="sr-text">Phone</h3>
-                    <a href="tel:+14258891261" itemProp="telephone">
-                      {global.companyInfo.phone}
+                    <a
+                      href={`tel:${phoneNumberUnformat(
+                        siteData.companyInfo.phone
+                      )}`}
+                      itemProp="telephone"
+                    >
+                      {siteData.companyInfo.phone}
                     </a>
                   </div>
                   <div className={styles.contactInfoSection}>
@@ -242,20 +260,20 @@ class Contact extends React.Component {
                       itemType="http://schema.org/PostalAddress"
                     >
                       <span itemProp="streetAddress">
-                        {global.companyInfo.address.line1}
+                        {siteData.companyInfo.address.line1}
                         <br />
-                        {global.companyInfo.address.line2}
+                        {siteData.companyInfo.address.line2}
                       </span>
                       <br />
                       <span itemProp="addressLocality">
-                        {global.companyInfo.address.city}
+                        {siteData.companyInfo.address.city}
                       </span>
                       ,{" "}
                       <span itemProp="addressRegion">
-                        {global.companyInfo.address.state}
+                        {siteData.companyInfo.address.state}
                       </span>{" "}
                       <span itemProp="postalCode">
-                        {global.companyInfo.address.zipcode}
+                        {siteData.companyInfo.address.zipcode}
                       </span>
                       <meta itemProp="addressCountry" content="US" />
                     </p>
@@ -299,8 +317,14 @@ class Contact extends React.Component {
           />
         </div>
         <SubscribeSection
-          heading={contact.subscribe.heading}
-          text={contact.subscribe.text}
+          heading={pickFirstAvailableString(
+            contact.subscribe.heading,
+            siteData.subscribe.heading
+          )}
+          text={pickFirstAvailableString(
+            contact.subscribe.text,
+            siteData.subscribe.text
+          )}
           className="dg-subscribe"
         />
       </React.Fragment>
@@ -308,4 +332,4 @@ class Contact extends React.Component {
   }
 }
 
-export default withRouteData(Contact);
+export default withSiteAndRouteData(Contact);

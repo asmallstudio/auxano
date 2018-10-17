@@ -12,11 +12,7 @@ class CoverSheet extends React.Component {
   };
 
   render() {
-    const {
-      hero = "Transcending Wealth. Transforming Lives.",
-      tagline = "Private Wealth Management",
-      updateDoNotShowCoverState
-    } = this.props;
+    const { hero, tagline, updateDoNotShowCoverState } = this.props;
     return (
       <section
         className={`container--fluid ${styles.coverSheet}`}
