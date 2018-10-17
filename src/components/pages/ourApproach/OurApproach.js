@@ -23,12 +23,19 @@ class OurApproach extends React.Component {
   }
 
   render() {
-    const { ourApproach, globalData } = this.props;
+    const { ourApproach, siteData } = this.props;
 
     return (
       <React.Fragment>
         <Head>
           <title>{getFullPageTitle(ourApproach.pageTitle)}</title>
+          <meta
+            name="description"
+            content={pickFirstAvailableString(
+              ourApproach.pageDescription,
+              siteData.siteDescription
+            )}
+          />
         </Head>
         <section
           className={`container--fluid ${styles.dingusDotContainer} ${
@@ -115,22 +122,22 @@ class OurApproach extends React.Component {
         <FullWidthSectionActionLink
           linkText={pickFirstAvailableString(
             ourApproach.actionBanner.text,
-            globalData.actionBanner.text
+            siteData.actionBanner.text
           )}
           to={pickFirstAvailableString(
             ourApproach.actionBanner.link,
-            globalData.actionBanner.link
+            siteData.actionBanner.link
           )}
           className="dg-actionBanner"
         />
         <SubscribeSection
           heading={pickFirstAvailableString(
             ourApproach.subscribe.heading,
-            globalData.subscribe.heading
+            siteData.subscribe.heading
           )}
           text={pickFirstAvailableString(
             ourApproach.subscribe.text,
-            globalData.subscribe.text
+            siteData.subscribe.text
           )}
           className="dg-subscribe"
         />

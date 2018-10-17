@@ -1,4 +1,5 @@
 import React from "react";
+import { Head } from "react-static";
 import { withSiteAndRouteData } from "../../../lib/utils/hoc";
 import { pageChange } from "../../../lib/utils/pageChange";
 import { pickFirstAvailableString } from "../../../lib/utils/copy";
@@ -16,10 +17,13 @@ class Home extends React.Component {
   }
 
   render() {
-    const { home, globalData } = this.props;
+    const { home, siteData } = this.props;
 
     return (
       <React.Fragment>
+        <Head>
+          <meta name="description" content={siteData.siteDescription} />
+        </Head>
         <div className={`container--fluid ${styles.heroContainer}`}>
           <div
             className={`${styles.heroImageContainer} ${styles.dingusDotHero}`}
@@ -53,22 +57,22 @@ class Home extends React.Component {
         <FullWidthSectionActionLink
           linkText={pickFirstAvailableString(
             home.actionBanner.text,
-            globalData.actionBanner.text
+            siteData.actionBanner.text
           )}
           to={pickFirstAvailableString(
             home.actionBanner.link,
-            globalData.actionBanner.link
+            siteData.actionBanner.link
           )}
           className="dg-actionBanner"
         />
         <SubscribeSection
           heading={pickFirstAvailableString(
             home.subscribe.heading,
-            globalData.subscribe.heading
+            siteData.subscribe.heading
           )}
           text={pickFirstAvailableString(
             home.subscribe.text,
-            globalData.subscribe.text
+            siteData.subscribe.text
           )}
           className="dg-subscribe"
         />

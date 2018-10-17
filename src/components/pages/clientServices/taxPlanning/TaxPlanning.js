@@ -21,12 +21,19 @@ class Other extends React.Component {
   }
 
   render() {
-    const { taxPlanning, globalData } = this.props;
+    const { taxPlanning, siteData } = this.props;
 
     return (
       <React.Fragment>
         <Head>
           <title>{getFullPageTitle(taxPlanning.pageTitle)}</title>
+          <meta
+            name="description"
+            content={pickFirstAvailableString(
+              taxPlanning.pageDescription,
+              siteData.siteDescription
+            )}
+          />
         </Head>
         <section
           className={`container--fluid ${styles.dingusDotContainer} ${
@@ -97,22 +104,22 @@ class Other extends React.Component {
         <FullWidthSectionActionLink
           linkText={pickFirstAvailableString(
             taxPlanning.actionBanner.text,
-            globalData.actionBanner.text
+            siteData.actionBanner.text
           )}
           to={pickFirstAvailableString(
             taxPlanning.actionBanner.link,
-            globalData.actionBanner.link
+            siteData.actionBanner.link
           )}
           className="dg-actionBanner"
         />
         <SubscribeSection
           heading={pickFirstAvailableString(
             taxPlanning.subscribe.heading,
-            globalData.subscribe.heading
+            siteData.subscribe.heading
           )}
           text={pickFirstAvailableString(
             taxPlanning.subscribe.text,
-            globalData.subscribe.text
+            siteData.subscribe.text
           )}
           className="dg-subscribe"
         />

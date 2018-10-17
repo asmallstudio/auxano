@@ -22,12 +22,19 @@ class Careers extends React.Component {
   }
 
   render() {
-    const { careers, globalData } = this.props;
+    const { careers, siteData } = this.props;
 
     return (
       <React.Fragment>
         <Head>
           <title>{getFullPageTitle(careers.pageTitle)}</title>
+          <meta
+            name="description"
+            content={pickFirstAvailableString(
+              careers.pageDescription,
+              siteData.siteDescription
+            )}
+          />
         </Head>
         <section className={`container--fluid ${styles.heroContainer} dg-hero`}>
           <div
@@ -49,22 +56,22 @@ class Careers extends React.Component {
         <FullWidthSectionActionLink
           linkText={pickFirstAvailableString(
             careers.actionBanner.text,
-            globalData.actionBanner.text
+            siteData.actionBanner.text
           )}
           to={pickFirstAvailableString(
             careers.actionBanner.link,
-            globalData.actionBanner.link
+            siteData.actionBanner.link
           )}
           className="dg-actionBanner"
         />
         <SubscribeSection
           heading={pickFirstAvailableString(
             careers.subscribe.heading,
-            globalData.subscribe.heading
+            siteData.subscribe.heading
           )}
           text={pickFirstAvailableString(
             careers.subscribe.text,
-            globalData.subscribe.text
+            siteData.subscribe.text
           )}
           className="dg-subscribe"
         />

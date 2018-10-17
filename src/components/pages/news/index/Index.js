@@ -16,12 +16,13 @@ class Index extends React.Component {
   }
 
   render() {
-    const { posts, currentPage, totalPages } = this.props;
+    const { posts, currentPage, totalPages, siteData } = this.props;
 
     return (
       <React.Fragment>
         <Head>
           <title>{getFullPageTitle("News")}</title>
+          <meta name="description" content={siteData.siteDescription} />
         </Head>
         <div className="container">
           <div className="row">

@@ -13,7 +13,7 @@ collections:
     name: pages
     files:
       - label: "Global"
-        name: globalData
+        name: siteData
         file: src/data/pages/globalData.yml
         path: /
         fields:
@@ -184,6 +184,10 @@ collections:
           - label: "Page Title"
             name: pageTitle
             widget: string
+          - label: "Page Description"
+            name: pageDescription
+            hint: "(For SEO purposes.) Describes the content of the page and visible in search results."
+            widget: text
           - label: Hero
             name: hero
             widget: object
@@ -268,6 +272,10 @@ collections:
           - label: "Page Title"
             name: pageTitle
             widget: string
+          - label: "Page Description"
+            name: pageDescription
+            hint: "(For SEO purposes.) Describes the content of the page and visible in search results."
+            widget: text
           - label: Hero
             name: hero
             widget: object
@@ -399,6 +407,10 @@ collections:
           - label: "Page Title"
             name: pageTitle
             widget: string
+          - label: "Page Description"
+            name: pageDescription
+            hint: "(For SEO purposes.) Describes the content of the page and visible in search results."
+            widget: text
           - label: "Contact Form"
             name: form
             widget: object
@@ -441,6 +453,10 @@ collections:
           - label: "Page Title"
             name: pageTitle
             widget: string
+          - label: "Page Description"
+            name: pageDescription
+            hint: "(For SEO purposes.) Describes the content of the page and visible in search results."
+            widget: text
           - label: "Hero"
             name: hero
             widget: object
@@ -622,6 +638,10 @@ collections:
           - label: "Page Title"
             name: pageTitle
             widget: string
+          - label: "Page Description"
+            name: pageDescription
+            hint: "(For SEO purposes.) Describes the content of the page and visible in search results."
+            widget: text
           - label: "Hero"
             name: hero
             widget: object
@@ -707,6 +727,10 @@ collections:
           - label: "Page Title"
             name: pageTitle
             widget: string
+          - label: "Page Description"
+            name: pageDescription
+            hint: "(For SEO purposes.) Describes the content of the page and visible in search results."
+            widget: text
           - label: "Hero"
             name: hero
             widget: object
@@ -852,6 +876,10 @@ collections:
           - label: "Page Title"
             name: pageTitle
             widget: string
+          - label: "Page Description"
+            name: pageDescription
+            hint: "(For SEO purposes.) Describes the content of the page and visible in search results."
+            widget: text
           - label: "Hero"
             name: hero
             widget: object
@@ -916,6 +944,10 @@ collections:
           - label: "Page Title"
             name: pageTitle
             widget: string
+          - label: "Page Description"
+            name: pageDescription
+            hint: "(For SEO purposes.) Describes the content of the page and visible in search results."
+            widget: text
           - label: "Hero"
             name: hero
             widget: object
@@ -1004,6 +1036,10 @@ collections:
           - label: "Page Title"
             name: pageTitle
             widget: string
+          - label: "Page Description"
+            name: pageDescription
+            hint: "(For SEO purposes.) Describes the content of the page and visible in search results."
+            widget: text
           - label: "Hero"
             name: hero
             widget: object
@@ -1072,6 +1108,10 @@ collections:
           - label: "Page Title"
             name: pageTitle
             widget: string
+          - label: "Page Description"
+            name: pageDescription
+            hint: "(For SEO purposes.) Describes the content of the page and visible in search results."
+            widget: text
           - label: "Hero"
             name: hero
             widget: object
@@ -1135,6 +1175,10 @@ collections:
           - label: "Page Title"
             name: pageTitle
             widget: string
+          - label: "Page Description"
+            name: pageDescription
+            hint: "(For SEO purposes.) Describes the content of the page and visible in search results."
+            widget: text
           - label: "Hero"
             name: hero
             widget: object
@@ -1181,6 +1225,10 @@ collections:
           - label: "Page Title"
             name: pageTitle
             widget: string
+          - label: "Page Description"
+            name: pageDescription
+            hint: "(For SEO purposes.) Describes the content of the page and visible in search results."
+            widget: text
           - label: Hero
             name: hero
             widget: object
@@ -1220,6 +1268,10 @@ collections:
         file: src/data/pages/team.yml
         path: /team
         fields:
+          - label: "Page Description"
+            name: pageDescription
+            hint: "(For SEO purposes.) Describes the content of the page and visible in search results."
+            widget: text
           - label: "members"
             name: members
             widget: list

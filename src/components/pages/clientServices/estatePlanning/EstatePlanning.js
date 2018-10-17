@@ -22,12 +22,19 @@ class Other extends React.Component {
   }
 
   render() {
-    const { estatePlanning, globalData } = this.props;
+    const { estatePlanning, siteData } = this.props;
 
     return (
       <React.Fragment>
         <Head>
           <title>{getFullPageTitle(estatePlanning.pageTitle)}</title>
+          <meta
+            name="description"
+            content={pickFirstAvailableString(
+              estatePlanning.pageDescription,
+              siteData.siteDescription
+            )}
+          />
         </Head>
         <section
           className={`container--fluid ${styles.dingusDotContainer} ${
@@ -81,22 +88,22 @@ class Other extends React.Component {
         <FullWidthSectionActionLink
           linkText={pickFirstAvailableString(
             estatePlanning.actionBanner.text,
-            globalData.actionBanner.text
+            siteData.actionBanner.text
           )}
           to={pickFirstAvailableString(
             estatePlanning.actionBanner.link,
-            globalData.actionBanner.link
+            siteData.actionBanner.link
           )}
           className="dg-actionBanner"
         />
         <SubscribeSection
           heading={pickFirstAvailableString(
             estatePlanning.subscribe.heading,
-            globalData.subscribe.heading
+            siteData.subscribe.heading
           )}
           text={pickFirstAvailableString(
             estatePlanning.subscribe.text,
-            globalData.subscribe.text
+            siteData.subscribe.text
           )}
           className="dg-subscribe"
         />

@@ -2,7 +2,10 @@ import React from "react";
 import { Link, Head } from "react-static";
 import { withSiteAndRouteData } from "../../../../lib/utils/hoc";
 import { pageChange } from "../../../../lib/utils/pageChange";
-import { getFullPageTitle } from "../../../../lib/utils/copy";
+import {
+  getFullPageTitle,
+  pickFirstAvailableString
+} from "../../../../lib/utils/copy";
 
 import LinkWithArrow from "../../../ui/linkWithArrow/LinkWithArrow";
 import FullWidthSectionActionLink from "../../../ui/fullWidthSectionActionLink/FullWidthSectionActionLink";
@@ -20,12 +23,19 @@ class Index extends React.Component {
   }
 
   render() {
-    const { members, globalData } = this.props;
+    const { pageDescription, members, siteData } = this.props;
 
     return (
       <React.Fragment>
         <Head>
           <title>{getFullPageTitle("Team")}</title>
+          <meta
+            name="description"
+            content={pickFirstAvailableString(
+              pageDescription,
+              siteData.siteDescription
+            )}
+          />
         </Head>
         <section className="container">
           <div className="row">
@@ -56,13 +66,13 @@ class Index extends React.Component {
           </div>
         </section>
         <FullWidthSectionActionLink
-          linkText={globalData.actionBanner.text}
-          to={globalData.actionBanner.link}
+          linkText={siteData.actionBanner.text}
+          to={siteData.actionBanner.link}
           className="dg-actionBanner"
         />
         <SubscribeSection
-          heading={globalData.subscribe.heading}
-          text={globalData.subscribe.text}
+          heading={siteData.subscribe.heading}
+          text={siteData.subscribe.text}
           className="dg-subscribe"
         />
       </React.Fragment>

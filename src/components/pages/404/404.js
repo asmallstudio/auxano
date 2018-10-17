@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, Head } from "react-static";
+import { withSiteData, Link, Head } from "react-static";
 import { getFullPageTitle } from "../../../lib/utils/copy";
 import { pageChange } from "../../../lib/utils/pageChange";
 
@@ -11,10 +11,13 @@ class PageNotFound extends React.Component {
   }
 
   render() {
+    const { siteData } = this.props;
+
     return (
       <React.Fragment>
         <Head>
           <title>{getFullPageTitle("Page not found")}</title>
+          <meta name="description" content={siteData.siteDescription} />
         </Head>
         <div className="container">
           <div className="row">
@@ -31,4 +34,4 @@ class PageNotFound extends React.Component {
   }
 }
 
-export default PageNotFound;
+export default withSiteData(PageNotFound);

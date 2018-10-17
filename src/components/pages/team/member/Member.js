@@ -30,12 +30,13 @@ class Post extends React.Component {
   }
 
   render() {
-    const { member, globalData } = this.props;
+    const { member, siteData } = this.props;
 
     return (
       <React.Fragment>
         <Head>
           <title>{getFullPageTitle(member.title)}</title>
+          <meta name="description" content={siteData.siteDescription} />
         </Head>
         <section className={`container ${styles.memberContainer}`}>
           <div className="row">
@@ -76,13 +77,13 @@ class Post extends React.Component {
           </div>
         </section>
         <FullWidthSectionActionLink
-          linkText={globalData.actionBanner.text}
-          to={globalData.actionBanner.link}
+          linkText={siteData.actionBanner.text}
+          to={siteData.actionBanner.link}
           className="dg-actionBanner"
         />
         <SubscribeSection
-          heading={globalData.subscribe.heading}
-          text={globalData.subscribe.text}
+          heading={siteData.subscribe.heading}
+          text={siteData.subscribe.text}
           className="dg-subscribe"
         />
       </React.Fragment>

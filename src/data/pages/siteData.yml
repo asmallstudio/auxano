@@ -1,4 +1,5 @@
-globalData:
+siteData:
+  siteDescription: "We help clients transcend the traditional definition of wealth so it's used to build a legacy that transforms families, finances, and their future."
   companyInfo:
     address:
       city: Bellevue

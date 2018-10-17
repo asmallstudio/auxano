@@ -13,12 +13,13 @@ class Post extends React.Component {
   }
 
   render() {
-    const { post } = this.props;
+    const { post, siteData } = this.props;
 
     return (
       <React.Fragment>
         <Head>
           <title>{getFullPageTitle(post.title)}</title>
+          <meta name="description" content={siteData.siteDescription} />
         </Head>
         <div className={`container ${styles.articleContainer}`}>
           <div className="row">

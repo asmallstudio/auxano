@@ -34,12 +34,19 @@ class AboutUs extends React.Component {
   }
 
   render() {
-    const { aboutUs, globalData } = this.props;
+    const { aboutUs, siteData } = this.props;
 
     return (
       <React.Fragment>
         <Head>
           <title>{getFullPageTitle(aboutUs.pageTitle)}</title>
+          <meta
+            name="description"
+            content={pickFirstAvailableString(
+              aboutUs.pageDescription,
+              siteData.siteDescription
+            )}
+          />
         </Head>
         <section className={`container--fluid ${styles.heroContainer} dg-hero`}>
           <div
@@ -109,22 +116,22 @@ class AboutUs extends React.Component {
         <FullWidthSectionActionLink
           linkText={pickFirstAvailableString(
             aboutUs.actionBanner.text,
-            globalData.actionBanner.text
+            siteData.actionBanner.text
           )}
           to={pickFirstAvailableString(
             aboutUs.actionBanner.link,
-            globalData.actionBanner.link
+            siteData.actionBanner.link
           )}
           className="dg-actionBanner"
         />
         <SubscribeSection
           heading={pickFirstAvailableString(
             aboutUs.subscribe.heading,
-            globalData.subscribe.heading
+            siteData.subscribe.heading
           )}
           text={pickFirstAvailableString(
             aboutUs.subscribe.text,
-            globalData.subscribe.text
+            siteData.subscribe.text
           )}
           className="dg-subscribe"
         />

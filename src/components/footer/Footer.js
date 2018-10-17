@@ -9,7 +9,7 @@ import styles from "./footer.scss";
 
 class Footer extends React.Component {
   render() {
-    const { globalData } = this.props;
+    const { siteData } = this.props;
     return (
       <footer
         className={styles.footerContainer}
@@ -81,20 +81,20 @@ class Footer extends React.Component {
             <ul className={`N2 ${styles.linkList}`}>
               <li>
                 <a
-                  href={`mailto:${globalData.companyInfo.email}`}
+                  href={`mailto:${siteData.companyInfo.email}`}
                   itemProp="email"
                 >
-                  {globalData.companyInfo.email}
+                  {siteData.companyInfo.email}
                 </a>
               </li>
               <li>
                 <a
                   href={`tel:${phoneNumberUnformat(
-                    globalData.companyInfo.phone
+                    siteData.companyInfo.phone
                   )}`}
                   itemProp="telephone"
                 >
-                  {globalData.companyInfo.phone}
+                  {siteData.companyInfo.phone}
                 </a>
               </li>
             </ul>

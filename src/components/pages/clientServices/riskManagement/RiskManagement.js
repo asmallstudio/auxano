@@ -22,12 +22,19 @@ class Other extends React.Component {
   }
 
   render() {
-    const { riskManagement, globalData } = this.props;
+    const { riskManagement, siteData } = this.props;
 
     return (
       <React.Fragment>
         <Head>
           <title>{getFullPageTitle(riskManagement.pageTitle)}</title>
+          <meta
+            name="description"
+            content={pickFirstAvailableString(
+              riskManagement.pageDescription,
+              siteData.siteDescription
+            )}
+          />
         </Head>
         <section
           className={`container--fluid ${styles.dingusDotContainer} ${
@@ -101,22 +108,22 @@ class Other extends React.Component {
         <FullWidthSectionActionLink
           linkText={pickFirstAvailableString(
             riskManagement.actionBanner.text,
-            globalData.actionBanner.text
+            siteData.actionBanner.text
           )}
           to={pickFirstAvailableString(
             riskManagement.actionBanner.link,
-            globalData.actionBanner.link
+            siteData.actionBanner.link
           )}
           className="dg-actionBanner"
         />
         <SubscribeSection
           heading={pickFirstAvailableString(
             riskManagement.subscribe.heading,
-            globalData.subscribe.heading
+            siteData.subscribe.heading
           )}
           text={pickFirstAvailableString(
             riskManagement.subscribe.text,
-            globalData.subscribe.text
+            siteData.subscribe.text
           )}
           className="dg-subscribe"
         />
