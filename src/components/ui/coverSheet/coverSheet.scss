@@ -7,7 +7,14 @@
   background-color: var(--fountain-blue);
   padding: var(--space-l3) 0;
 
+  // The height below in media queries is a total hack to improve
+  // the fit of the Cover Sheet on modern iPhones.
+  // (5 rem is the approximate Safari tab bar height.)
   @media only screen and (min-device-width: 414px) and (max-device-width: 896px) and (orientation: portrait) {
+    height: calc(100vh - var(--header-height) - 5rem);
+  }
+
+  @media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (orientation: portrait) {
     height: calc(100vh - var(--header-height) - 5rem);
   }
 
