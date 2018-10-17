@@ -1157,31 +1157,11 @@ collections:
                 widget: string
           - label: "Service Information"
             name: serviceInfoList
-            widget: object
-            fields:
-              - label: "Item 1"
-                name: item1
-                widget: string
-              - label: "Item 2"
-                name: item2
-                widget: string
-              - label: "Item 3"
-                name: item3
-                widget: string
-              - label: "Item 4"
-                name: item4
-                widget: string
-              - label: "Item 5"
-                name: item5
-                widget: string
-              - label: "Item 6"
-                name: item6
-                widget: string
-              - label: "Item 7"
-                name: item7
-                widget: string
-              - label: "Item 8"
-                name: item8
+            widget: list
+            allow_add: false
+            field:
+              - label: "List Item"
+                name: item
                 widget: string
           - label: "Action Banner"
             name: actionBanner
