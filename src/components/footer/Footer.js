@@ -52,8 +52,11 @@ class Footer extends React.Component {
             <h3 className="sr-text">Social Links</h3>
             <ul className={`N2 ${styles.linkList}`}>
               <li>
-                <Link to="https://twitter.com/auxanoadvisors" rel="me">
-                  Twitter
+                <Link
+                  to="https://www.linkedin.com/company/auxano-advisors-llc/"
+                  rel="me"
+                >
+                  LinkedIn
                 </Link>
               </li>
               <li>
