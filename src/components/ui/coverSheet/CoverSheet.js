@@ -27,8 +27,8 @@ class CoverSheet extends React.Component {
             <img
               alt="Auxano Advisors"
               src="/assets/auxano-logo-white.svg"
-              height="48"
-              width="125"
+              height="64"
+              width="166.66"
               className={styles.logo}
             />
             <div className={styles.text}>
