@@ -131,7 +131,7 @@
   // the table needs basic padding or width
   // to leave space for row headers.
   thead th:first-child {
-    width: 2rem;
+    width: 3.5rem;
 
     @include respond-above(md) {
       width: 20%;
@@ -166,7 +166,7 @@
 
     span {
       display: block;
-      transform: rotate(-90deg) translateX(-2rem);
+      transform: rotate(-90deg) translateX(-75%);
 
       @include respond-above(md) {
         display: inline;
