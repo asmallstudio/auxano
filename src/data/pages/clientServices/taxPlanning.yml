@@ -1,4 +1,5 @@
 pageTitle: Tax Planning | Client Services
+pageDescription: ""
 hero:
   name: Tax Planning
   title: >-
@@ -27,8 +28,8 @@ serviceInfo:
     have an impact on tax planning and you cannot determine which are best with
     a simple back-of-the-napkin calculation based on tax paid.
 actionBanner:
-  link: /contact
-  text: Contact Us
+  link: ""
+  text: ""
 subscribe:
-  heading: Schedule an introduction with an advisor.
-  text: All personal information kept private.
+  heading: ""
+  text: ""

@@ -1,4 +1,5 @@
-pageTitle: Corporate Executive Solutions | Client Services
+pageTitle: "Corporate Executive Solutions | Client Services"
+pageDescription: ""
 hero:
   description: >-
     Our long-standing relationships with corporate executives, leaders and
@@ -7,17 +8,19 @@ hero:
     our experience and processes.
   title: Corporate Executive Solutions
 serviceInfoList:
-  item1: Deferred Compensation
-  item2: Executive Benefits
-  item3: Stock Options / Restricted Stock
-  item4: Stock Trading Window
-  item5: Net Unrealized Appreciation (NUA)
-  item6: Benefit Equalization Plan
-  item7: Supplemental Executive Retirement Plans
-  item8: Executive Tax Strategies
+  - "Equity Risk Management"
+  - "Charitable Techniques for Low-Basis Stock"
+  - "Special Tax 83(b) Elections"
+  - "Deferred Compensation"
+  - "Executive Benefits"
+  - "Stock options / Restricted stock analysis"
+  - "Stock Trading Window"
+  - "Net Unrealized Appreciation (NUA)"
+  - "Supplemental Executive Retirement Plans"
+  - "Executive Tax Strategies"
 actionBanner:
-  link: /contact
-  text: Contact Us
+  link: ""
+  text: ""
 subscribe:
-  heading: Schedule an introduction with an advisor.
-  text: All personal information kept private.
+  heading: ""
+  text: ""

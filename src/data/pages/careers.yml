@@ -1,4 +1,5 @@
 pageTitle: 'Careers'
+pageDescription: ""
 hero:
   title: "Careers"
   subtitle: |-
@@ -8,8 +9,8 @@ hero:
     [careers@auxanoadvisors.com](mailto:careers@auxanoadvisors.com)
   image: "/uploads/about-us-hero.png"
 actionBanner:
-  link: /contact
-  text: Contact Us
+  link: ""
+  text: ""
 subscribe:
-  heading: Schedule an introduction with an advisor.
-  text: All personal information kept private.
+  heading: ""
+  text: ""

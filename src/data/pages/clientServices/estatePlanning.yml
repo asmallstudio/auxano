@@ -1,4 +1,5 @@
 pageTitle: Estate Planning | Client Services
+pageDescription: ""
 hero:
   description: >-
     An estate planning attorney crafts estate planning documents. They often
@@ -31,8 +32,8 @@ imageRow:
     alt: placeholder image
     src: /uploads/estate-planning.png
 actionBanner:
-  link: /contact
-  text: Contact Us
+  link: ""
+  text: ""
 subscribe:
-  heading: Schedule an introduction with an advisor.
-  text: All personal information kept private.
+  heading: ""
+  text: ""

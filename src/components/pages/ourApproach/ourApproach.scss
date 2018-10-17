@@ -28,17 +28,17 @@
 }
 
 .dingusDot {
-  display: none;
   z-index: -1;
   position: absolute;
-  top: calc(50% - 5rem);
+  top: -5rem;
+  right: -5rem;
   height: 10rem;
   width: 10rem;
   background-color: var(--casablanca);
   border-radius: 50%;
 
   @include respond-above(md) {
-    display: block;
+    top: calc(50% - 5rem);
     right: -5rem;
   }
 }
@@ -46,7 +46,6 @@
 .moreLink {
   font-size: 1.125rem;
   color: var(--fountain-blue);
-  margin-top: var(--space-l1);
 
   &::after {
     top: 0.4em;

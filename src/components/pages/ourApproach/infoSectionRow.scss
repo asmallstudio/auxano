@@ -33,6 +33,10 @@
       margin-top: 0;
     }
   }
+
+  p:not(:last-child) {
+    margin-bottom: var(--space-l2);
+  }
 }
 
 .infoSectionColImage {

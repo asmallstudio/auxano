@@ -40,15 +40,19 @@
   content: "";
   position: absolute;
   z-index: -1;
-  top: calc(65% - 5rem - 2.5vw);
-  left: 5rem;
-  height: calc(10rem + 5vw);
-  width: calc(10rem + 5vw);
+  top: -5rem;
+  right: -5rem;
+  height: 10rem;
+  width: 10rem;
   background-color: var(--casablanca);
   border-radius: 50%;
 
-  @include respond-below(md) {
-    display: none;
+  @include respond-above(md) {
+    top: calc(65% - 5rem - 2.5vw);
+    left: 5rem;
+    right: auto;
+    height: calc(10rem + 5vw);
+    width: calc(10rem + 5vw);
   }
 }
 
@@ -58,6 +62,10 @@
   h1 {
     color: var(--fountain-blue);
     margin-bottom: var(--space-l2);
+
+    @include respond-above(lg) {
+      max-width: 80%; // Fix widow at full-width (Based on text: "Stewardship is our core.")
+    }
   }
 
   p {

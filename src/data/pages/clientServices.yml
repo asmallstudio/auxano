@@ -1,12 +1,7 @@
-pageTitle: Client Services
+pageTitle: "Client Services"
+pageDescription: ""
 hero:
   title: Go further than you ever thought possible.
-actionBanner:
-  link: /contact
-  text: Contact Us
-subscribe:
-  heading: Schedule an introduction with an advisor.
-  text: All personal information kept private.
 services:
   item1:
     heading: Personal Finance
@@ -64,3 +59,9 @@ services:
     text: >-
       Have a financial need that isn’t listed? Contact us to see how we can
       help.
+actionBanner:
+  link: ""
+  text: ""
+subscribe:
+  heading: ""
+  text: ""

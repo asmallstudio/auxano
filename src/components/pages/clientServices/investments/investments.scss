@@ -23,17 +23,17 @@
 }
 
 .dingusDot1 {
-  display: none;
   z-index: -1;
   position: absolute;
-  top: calc(50% - 5rem);
+  top: -5rem;
+  right: -5rem;
   height: 10rem;
   width: 10rem;
   background-color: var(--casablanca);
   border-radius: 50%;
 
   @include respond-above(md) {
-    display: block;
+    top: calc(50% - 5rem);
     right: -5rem;
   }
 }
@@ -157,11 +157,12 @@
   }
 
   tbody th:not(:empty) {
+    // If only text-orientation was more widely supported…
     // transform: rotate(180deg);
     // writing-mode: vertical-lr;
     // text-orientation: sideways;
     padding: 0.5rem 0.5rem;
-    box-shadow: 0 -5px 5px var(--grey-10);
+    box-shadow: -2px 5px 5px var(--grey-10);
 
     span {
       display: block;
@@ -177,7 +178,6 @@
       // transform: none;
       // writing-mode: horizontal-tb;
       padding: 0.5rem 2rem;
-      box-shadow: 0 5px 5px var(--grey-10);
     }
   }
 
@@ -191,6 +191,21 @@
 
     p {
       white-space: pre-wrap;
+    }
+  }
+
+  th.highlightCol:not(:empty) {
+    background-color: var(--gigas);
+    color: var(--white);
+  }
+
+  td.highlightCol {
+    background-color: var(--gigas-10);
+    color: var(--gigas);
+    border-color: transparent;
+
+    p {
+      color: inherit;
     }
   }
 }

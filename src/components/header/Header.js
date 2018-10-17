@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-static";
+import { withSiteData, Link } from "react-static";
 import FullWidthSectionActionLink from "../ui/fullWidthSectionActionLink/FullWidthSectionActionLink";
 
 import styles from "./header.scss";
@@ -224,4 +224,4 @@ class MenuIcon extends React.Component {
   }
 }
 
-export default Header;
+export default withSiteData(Header);

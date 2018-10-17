@@ -1,4 +1,5 @@
 pageTitle: About Us
+pageDescription: ""
 hero:
   ctaLink: /team
   ctaText: Meet the Team
@@ -64,5 +65,5 @@ actionBanner:
   link: /our-approach
   text: Our Approach
 subscribe:
-  heading: Schedule an introduction with an advisor.
-  text: All personal information kept private.
+  heading: ""
+  text: ""

@@ -5,6 +5,12 @@
 }
 
 .memberInfo {
+  margin-bottom: var(--space-l3);
+
+  @include respond-above(md) {
+    margin-bottom: 0;
+  }
+
   img {
     display: block;
     max-width: 100%;

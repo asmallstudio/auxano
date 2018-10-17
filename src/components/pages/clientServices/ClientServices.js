@@ -1,14 +1,18 @@
 import React from "react";
-import { withRouteData, Head } from "react-static";
+import { Head } from "react-static";
+import { withSiteAndRouteData } from "../../../lib/utils/hoc";
 import { pageChange } from "../../../lib/utils/pageChange";
-import { getFullPageTitle } from "../../../lib/utils/copy";
+import {
+  getFullPageTitle,
+  pickFirstAvailableString
+} from "../../../lib/utils/copy";
 
 import styles from "./clientServices.scss";
 import OneThirdColumn from "../../ui/oneThirdColumn/OneThirdColumn";
 import FullWidthSectionActionLink from "../../ui/fullWidthSectionActionLink/FullWidthSectionActionLink";
 import SubscribeSection from "../../ui/subscribeSection/SubscribeSection";
 
-class Other extends React.Component {
+class ClientServices extends React.Component {
   constructor(props) {
     super(props);
   }
@@ -18,12 +22,19 @@ class Other extends React.Component {
   }
 
   render() {
-    const { clientServices } = this.props;
+    const { clientServices, siteData } = this.props;
 
     return (
       <React.Fragment>
         <Head>
           <title>{getFullPageTitle(clientServices.pageTitle)}</title>
+          <meta
+            name="description"
+            content={pickFirstAvailableString(
+              clientServices.pageDescription,
+              siteData.siteDescription
+            )}
+          />
         </Head>
         <section
           className={`container--fluid ${styles.dingusDotContainer} ${
@@ -80,13 +91,25 @@ class Other extends React.Component {
           </div>
         </section>
         <FullWidthSectionActionLink
-          linkText={clientServices.actionBanner.text}
-          to={clientServices.actionBanner.link}
+          linkText={pickFirstAvailableString(
+            clientServices.actionBanner.text,
+            siteData.actionBanner.text
+          )}
+          to={pickFirstAvailableString(
+            clientServices.actionBanner.link,
+            siteData.actionBanner.link
+          )}
           className="dg-actionBanner"
         />
         <SubscribeSection
-          heading={clientServices.subscribe.heading}
-          text={clientServices.subscribe.text}
+          heading={pickFirstAvailableString(
+            clientServices.subscribe.heading,
+            siteData.subscribe.heading
+          )}
+          text={pickFirstAvailableString(
+            clientServices.subscribe.text,
+            siteData.subscribe.text
+          )}
           className="dg-subscribe"
         />
       </React.Fragment>
@@ -94,4 +117,4 @@ class Other extends React.Component {
   }
 }
 
-export default withRouteData(Other);
+export default withSiteAndRouteData(ClientServices);

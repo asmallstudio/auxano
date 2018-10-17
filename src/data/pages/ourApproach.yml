@@ -1,4 +1,5 @@
 pageTitle: Our Approach
+pageDescription: ""
 hero:
   title: 'Authentic relationships, candid conversation, and uncompromising integrity.'
 items:
@@ -39,5 +40,5 @@ actionBanner:
   link: /client-services
   text: Our Services
 subscribe:
-  heading: Schedule an introduction with an advisor.
-  text: All personal information kept private.
+  heading: ""
+  text: ""

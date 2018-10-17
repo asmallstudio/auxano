@@ -1,7 +1,11 @@
 import React from "react";
-import { withRouteData, Head } from "react-static";
+import { Head } from "react-static";
+import { withSiteAndRouteData } from "../../../../lib/utils/hoc";
 import { pageChange } from "../../../../lib/utils/pageChange";
-import { getFullPageTitle } from "../../../../lib/utils/copy";
+import {
+  getFullPageTitle,
+  pickFirstAvailableString
+} from "../../../../lib/utils/copy";
 
 import styles from "./estatePlanning.scss";
 import FullWidthSectionText from "../../../ui/fullWidthSectionText/FullWidthSectionText";
@@ -18,12 +22,19 @@ class Other extends React.Component {
   }
 
   render() {
-    const { estatePlanning } = this.props;
+    const { estatePlanning, siteData } = this.props;
 
     return (
       <React.Fragment>
         <Head>
           <title>{getFullPageTitle(estatePlanning.pageTitle)}</title>
+          <meta
+            name="description"
+            content={pickFirstAvailableString(
+              estatePlanning.pageDescription,
+              siteData.siteDescription
+            )}
+          />
         </Head>
         <section
           className={`container--fluid ${styles.dingusDotContainer} ${
@@ -75,13 +86,25 @@ class Other extends React.Component {
           className={`${styles.pullquote2} dg-pullquote2`}
         />
         <FullWidthSectionActionLink
-          linkText={estatePlanning.actionBanner.text}
-          to={estatePlanning.actionBanner.link}
+          linkText={pickFirstAvailableString(
+            estatePlanning.actionBanner.text,
+            siteData.actionBanner.text
+          )}
+          to={pickFirstAvailableString(
+            estatePlanning.actionBanner.link,
+            siteData.actionBanner.link
+          )}
           className="dg-actionBanner"
         />
         <SubscribeSection
-          heading={estatePlanning.subscribe.heading}
-          text={estatePlanning.subscribe.text}
+          heading={pickFirstAvailableString(
+            estatePlanning.subscribe.heading,
+            siteData.subscribe.heading
+          )}
+          text={pickFirstAvailableString(
+            estatePlanning.subscribe.text,
+            siteData.subscribe.text
+          )}
           className="dg-subscribe"
         />
       </React.Fragment>
@@ -89,4 +112,4 @@ class Other extends React.Component {
   }
 }
 
-export default withRouteData(Other);
+export default withSiteAndRouteData(Other);

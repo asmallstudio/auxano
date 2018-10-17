@@ -1,7 +1,11 @@
 import React from "react";
-import { withRouteData, Head } from "react-static";
+import { Head } from "react-static";
+import { withSiteAndRouteData } from "../../../lib/utils/hoc";
 import { pageChange } from "../../../lib/utils/pageChange";
-import { getFullPageTitle } from "../../../lib/utils/copy";
+import {
+  getFullPageTitle,
+  pickFirstAvailableString
+} from "../../../lib/utils/copy";
 
 import styles from "./ourApproach.scss";
 import InfoSectionRow from "./InfoSectionRow";
@@ -19,12 +23,19 @@ class OurApproach extends React.Component {
   }
 
   render() {
-    const { ourApproach } = this.props;
+    const { ourApproach, siteData } = this.props;
 
     return (
       <React.Fragment>
         <Head>
           <title>{getFullPageTitle(ourApproach.pageTitle)}</title>
+          <meta
+            name="description"
+            content={pickFirstAvailableString(
+              ourApproach.pageDescription,
+              siteData.siteDescription
+            )}
+          />
         </Head>
         <section
           className={`container--fluid ${styles.dingusDotContainer} ${
@@ -109,13 +120,25 @@ class OurApproach extends React.Component {
           </div>
         </section>
         <FullWidthSectionActionLink
-          linkText={ourApproach.actionBanner.text}
-          to={ourApproach.actionBanner.link}
+          linkText={pickFirstAvailableString(
+            ourApproach.actionBanner.text,
+            siteData.actionBanner.text
+          )}
+          to={pickFirstAvailableString(
+            ourApproach.actionBanner.link,
+            siteData.actionBanner.link
+          )}
           className="dg-actionBanner"
         />
         <SubscribeSection
-          heading={ourApproach.subscribe.heading}
-          text={ourApproach.subscribe.text}
+          heading={pickFirstAvailableString(
+            ourApproach.subscribe.heading,
+            siteData.subscribe.heading
+          )}
+          text={pickFirstAvailableString(
+            ourApproach.subscribe.text,
+            siteData.subscribe.text
+          )}
           className="dg-subscribe"
         />
       </React.Fragment>
@@ -123,4 +146,4 @@ class OurApproach extends React.Component {
   }
 }
 
-export default withRouteData(OurApproach);
+export default withSiteAndRouteData(OurApproach);

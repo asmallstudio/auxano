@@ -2,8 +2,9 @@ backend:
   name: git-gateway
   branch: master
 media_folder: public/uploads
+publish_mode: editorial_workflow
 public_folder: /uploads
-display_url: https://auxanoadvisors.com/
+display_url: https://auxanoadvisors.com
 slug:
   encoding: "ascii"
   clean_accents: true
@@ -11,70 +12,78 @@ collections:
   - label: Pages
     name: pages
     files:
-      - label: "Global"
-        name: global
-        file: src/data/pages/global.yml
+      - label: "Site Information"
+        name: siteData
+        file: src/data/pages/siteData.yml
         path: /
         fields:
-          - label: "Company Info"
-            name: companyInfo
+          - label: "Site Information"
+            name: siteData
             widget: object
             fields:
-              - label: "Contact Email"
-                name: email
-                widget: string
-              - label: "Contact Phone"
-                name: phone
-                widget: string
-              - label: "Address"
-                name: address
+              - label: "Site Description"
+                name: siteDescription
+                hint: "(For SEO purposes.) Describes the content of the whole website. This is visible in search results."
+                widget: text
+              - label: "Company Info"
+                name: companyInfo
                 widget: object
                 fields:
-                  - label: "Line 1"
-                    name: line1
+                  - label: "Contact Email"
+                    name: email
                     widget: string
-                  - label: "Line 2"
-                    name: line2
+                  - label: "Contact Phone"
+                    name: phone
                     widget: string
-                  - label: "City"
-                    name: city
+                  - label: "Address"
+                    name: address
+                    widget: object
+                    fields:
+                      - label: "Line 1"
+                        name: line1
+                        widget: string
+                      - label: "Line 2"
+                        name: line2
+                        widget: string
+                      - label: "City"
+                        name: city
+                        widget: string
+                      - label: "State"
+                        name: state
+                        widget: string
+                      - label: "Zipcode"
+                        name: zipcode
+                        widget: string
+              - label: "Cover Sheet"
+                name: coverSheet
+                widget: object
+                fields:
+                  - label: "Hero Text"
+                    name: hero
                     widget: string
-                  - label: "State"
-                    name: state
+                  - label: "Tagline"
+                    name: tagline
                     widget: string
-                  - label: "Zipcode"
-                    name: zipcode
+              - label: "Action Banner"
+                name: actionBanner
+                widget: object
+                fields:
+                  - label: "Text"
+                    name: text
                     widget: string
-          - label: "Cover Sheet"
-            name: coverSheet
-            widget: object
-            fields:
-              - label: "Hero Text"
-                name: hero
-                widget: string
-              - label: "Tagline"
-                name: tagline
-                widget: string
-          - label: "Action Banner"
-            name: actionBanner
-            widget: object
-            fields:
-              - label: "Text"
-                name: text
-                widget: string
-              - label: "Link"
-                name: link
-                widget: string
-          - label: "Subscribe"
-            name: subscribe
-            widget: object
-            fields:
-              - label: "Heading"
-                name: heading
-                widget: string
-              - label: "Subheading"
-                name: text
-                widget: text
+                  - label: "Link"
+                    name: link
+                    widget: string
+              - label: "Subscribe"
+                name: subscribe
+                widget: object
+                fields:
+                  - label: "Heading"
+                    name: heading
+                    widget: string
+                  - label: "Subheading"
+                    name: text
+                    widget: text
       - label: "Home Page"
         name: home
         file: src/data/pages/home.yml
@@ -183,6 +192,10 @@ collections:
           - label: "Page Title"
             name: pageTitle
             widget: string
+          - label: "Page Description"
+            name: pageDescription
+            hint: "(For SEO purposes.) Describes the content of the page. This is visible in search results."
+            widget: text
           - label: Hero
             name: hero
             widget: object
@@ -231,9 +244,14 @@ collections:
                 widget: list
                 allow_add: true
                 fields:
-                  - { label: Logo, name: logo, widget: image }
-                  - { label: Name, name: name, widget: string }
-                  - { label: Description, name: desc, widget: text }
+                  - { label: Logo, name: logo, widget: image, required: true }
+                  - { label: Name, name: name, widget: string, required: true }
+                  - {
+                      label: Description,
+                      name: desc,
+                      widget: text,
+                      required: true,
+                    }
           - label: "Action Banner"
             name: actionBanner
             widget: object
@@ -262,6 +280,10 @@ collections:
           - label: "Page Title"
             name: pageTitle
             widget: string
+          - label: "Page Description"
+            name: pageDescription
+            hint: "(For SEO purposes.) Describes the content of the page. This is visible in search results."
+            widget: text
           - label: Hero
             name: hero
             widget: object
@@ -393,6 +415,10 @@ collections:
           - label: "Page Title"
             name: pageTitle
             widget: string
+          - label: "Page Description"
+            name: pageDescription
+            hint: "(For SEO purposes.) Describes the content of the page. This is visible in search results."
+            widget: text
           - label: "Contact Form"
             name: form
             widget: object
@@ -417,16 +443,6 @@ collections:
               - label: "Image Description"
                 name: alt
                 widget: string
-          - label: "Action Banner"
-            name: actionBanner
-            widget: object
-            fields:
-              - label: "Text"
-                name: text
-                widget: string
-              - label: "Link"
-                name: link
-                widget: string
           - label: "Subscribe"
             name: subscribe
             widget: object
@@ -445,6 +461,10 @@ collections:
           - label: "Page Title"
             name: pageTitle
             widget: string
+          - label: "Page Description"
+            name: pageDescription
+            hint: "(For SEO purposes.) Describes the content of the page. This is visible in search results."
+            widget: text
           - label: "Hero"
             name: hero
             widget: object
@@ -626,6 +646,10 @@ collections:
           - label: "Page Title"
             name: pageTitle
             widget: string
+          - label: "Page Description"
+            name: pageDescription
+            hint: "(For SEO purposes.) Describes the content of the page. This is visible in search results."
+            widget: text
           - label: "Hero"
             name: hero
             widget: object
@@ -711,6 +735,10 @@ collections:
           - label: "Page Title"
             name: pageTitle
             widget: string
+          - label: "Page Description"
+            name: pageDescription
+            hint: "(For SEO purposes.) Describes the content of the page. This is visible in search results."
+            widget: text
           - label: "Hero"
             name: hero
             widget: object
@@ -856,6 +884,10 @@ collections:
           - label: "Page Title"
             name: pageTitle
             widget: string
+          - label: "Page Description"
+            name: pageDescription
+            hint: "(For SEO purposes.) Describes the content of the page. This is visible in search results."
+            widget: text
           - label: "Hero"
             name: hero
             widget: object
@@ -920,6 +952,10 @@ collections:
           - label: "Page Title"
             name: pageTitle
             widget: string
+          - label: "Page Description"
+            name: pageDescription
+            hint: "(For SEO purposes.) Describes the content of the page. This is visible in search results."
+            widget: text
           - label: "Hero"
             name: hero
             widget: object
@@ -1008,6 +1044,10 @@ collections:
           - label: "Page Title"
             name: pageTitle
             widget: string
+          - label: "Page Description"
+            name: pageDescription
+            hint: "(For SEO purposes.) Describes the content of the page. This is visible in search results."
+            widget: text
           - label: "Hero"
             name: hero
             widget: object
@@ -1076,6 +1116,10 @@ collections:
           - label: "Page Title"
             name: pageTitle
             widget: string
+          - label: "Page Description"
+            name: pageDescription
+            hint: "(For SEO purposes.) Describes the content of the page. This is visible in search results."
+            widget: text
           - label: "Hero"
             name: hero
             widget: object
@@ -1139,6 +1183,10 @@ collections:
           - label: "Page Title"
             name: pageTitle
             widget: string
+          - label: "Page Description"
+            name: pageDescription
+            hint: "(For SEO purposes.) Describes the content of the page. This is visible in search results."
+            widget: text
           - label: "Hero"
             name: hero
             widget: object
@@ -1151,31 +1199,11 @@ collections:
                 widget: string
           - label: "Service Information"
             name: serviceInfoList
-            widget: object
-            fields:
-              - label: "Item 1"
-                name: item1
-                widget: string
-              - label: "Item 2"
-                name: item2
-                widget: string
-              - label: "Item 3"
-                name: item3
-                widget: string
-              - label: "Item 4"
-                name: item4
-                widget: string
-              - label: "Item 5"
-                name: item5
-                widget: string
-              - label: "Item 6"
-                name: item6
-                widget: string
-              - label: "Item 7"
-                name: item7
-                widget: string
-              - label: "Item 8"
-                name: item8
+            widget: list
+            allow_add: false
+            field:
+              - label: "List Item"
+                name: item
                 widget: string
           - label: "Action Banner"
             name: actionBanner
@@ -1205,6 +1233,10 @@ collections:
           - label: "Page Title"
             name: pageTitle
             widget: string
+          - label: "Page Description"
+            name: pageDescription
+            hint: "(For SEO purposes.) Describes the content of the page. This is visible in search results."
+            widget: text
           - label: Hero
             name: hero
             widget: object
@@ -1244,6 +1276,10 @@ collections:
         file: src/data/pages/team.yml
         path: /team
         fields:
+          - label: "Page Description"
+            name: pageDescription
+            hint: "(For SEO purposes.) Describes the content of the page. This is visible in search results."
+            widget: text
           - label: "members"
             name: members
             widget: list
@@ -1252,9 +1288,12 @@ collections:
               - label: "Name"
                 name: title
                 widget: string
+                default: ""
+                required: true
               - label: "Photo"
                 name: image
                 widget: image
+                required: true
               - label: "Qualifications"
                 name: qualifications
                 hint: "A comma separated list of qualifications"
@@ -1268,6 +1307,8 @@ collections:
               - label: "Email"
                 name: email
                 widget: string
+                default: ""
+                required: true
               - label: "Phone Extension"
                 name: extension
                 widget: string
@@ -1275,6 +1316,8 @@ collections:
               - label: "Bio"
                 name: bio
                 widget: markdown
+                default: ""
+                required: true
   - label: News Article
     name: news
     folder: src/data/news
@@ -1286,9 +1329,13 @@ collections:
       - label: "Title"
         name: title
         widget: string
+        default: ""
+        required: true
       - label: "Date"
         name: date
         widget: datetime
       - label: "Body"
         name: body
         widget: markdown
+        default: ""
+        required: true

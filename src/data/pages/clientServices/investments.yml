@@ -1,4 +1,5 @@
 pageTitle: Investments | Client Services
+pageDescription: ""
 hero:
   name: Investments
   title: >-
@@ -73,8 +74,8 @@ serviceInfo:
       icon: /uploads/explore.svg
       text: Explore equity risk management strategies
 actionBanner:
-  link: /contact
-  text: Contact Us
+  link: ""
+  text: ""
 subscribe:
-  heading: Schedule an introduction with an advisor.
-  text: All personal information kept private.
+  heading: ""
+  text: ""

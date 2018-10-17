@@ -1,7 +1,11 @@
 import React from "react";
-import { withRouteData, Head } from "react-static";
+import { Head } from "react-static";
+import { withSiteAndRouteData } from "../../../lib/utils/hoc";
 import { pageChange } from "../../../lib/utils/pageChange";
-import { getFullPageTitle } from "../../../lib/utils/copy";
+import {
+  getFullPageTitle,
+  pickFirstAvailableString
+} from "../../../lib/utils/copy";
 
 import CallToActionLink from "../../ui/callToActionLink/CallToActionLink";
 import FullWidthSectionText from "../../ui/fullWidthSectionText/FullWidthSectionText";
@@ -30,12 +34,19 @@ class AboutUs extends React.Component {
   }
 
   render() {
-    const { aboutUs } = this.props;
+    const { aboutUs, siteData } = this.props;
 
     return (
       <React.Fragment>
         <Head>
           <title>{getFullPageTitle(aboutUs.pageTitle)}</title>
+          <meta
+            name="description"
+            content={pickFirstAvailableString(
+              aboutUs.pageDescription,
+              siteData.siteDescription
+            )}
+          />
         </Head>
         <section className={`container--fluid ${styles.heroContainer} dg-hero`}>
           <div
@@ -103,13 +114,25 @@ class AboutUs extends React.Component {
           </div>
         </section>
         <FullWidthSectionActionLink
-          linkText={aboutUs.actionBanner.text}
-          to={aboutUs.actionBanner.link}
+          linkText={pickFirstAvailableString(
+            aboutUs.actionBanner.text,
+            siteData.actionBanner.text
+          )}
+          to={pickFirstAvailableString(
+            aboutUs.actionBanner.link,
+            siteData.actionBanner.link
+          )}
           className="dg-actionBanner"
         />
         <SubscribeSection
-          heading={aboutUs.subscribe.heading}
-          text={aboutUs.subscribe.text}
+          heading={pickFirstAvailableString(
+            aboutUs.subscribe.heading,
+            siteData.subscribe.heading
+          )}
+          text={pickFirstAvailableString(
+            aboutUs.subscribe.text,
+            siteData.subscribe.text
+          )}
           className="dg-subscribe"
         />
       </React.Fragment>
@@ -117,4 +140,4 @@ class AboutUs extends React.Component {
   }
 }
 
-export default withRouteData(AboutUs);
+export default withSiteAndRouteData(AboutUs);

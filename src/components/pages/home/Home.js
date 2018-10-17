@@ -1,6 +1,8 @@
 import React from "react";
-import { withRouteData } from "react-static";
+import { Head } from "react-static";
+import { withSiteAndRouteData } from "../../../lib/utils/hoc";
 import { pageChange } from "../../../lib/utils/pageChange";
+import { pickFirstAvailableString } from "../../../lib/utils/copy";
 
 import styles from "./home.scss";
 import CallToActionLink from "../../ui/callToActionLink/CallToActionLink";
@@ -15,10 +17,13 @@ class Home extends React.Component {
   }
 
   render() {
-    const { home } = this.props;
+    const { home, siteData } = this.props;
 
     return (
       <React.Fragment>
+        <Head>
+          <meta name="description" content={siteData.siteDescription} />
+        </Head>
         <div className={`container--fluid ${styles.heroContainer}`}>
           <div
             className={`${styles.heroImageContainer} ${styles.dingusDotHero}`}
@@ -50,13 +55,25 @@ class Home extends React.Component {
           </div>
         </section>
         <FullWidthSectionActionLink
-          linkText={home.actionBanner.text}
-          to={home.actionBanner.link}
+          linkText={pickFirstAvailableString(
+            home.actionBanner.text,
+            siteData.actionBanner.text
+          )}
+          to={pickFirstAvailableString(
+            home.actionBanner.link,
+            siteData.actionBanner.link
+          )}
           className="dg-actionBanner"
         />
         <SubscribeSection
-          heading={home.subscribe.heading}
-          text={home.subscribe.text}
+          heading={pickFirstAvailableString(
+            home.subscribe.heading,
+            siteData.subscribe.heading
+          )}
+          text={pickFirstAvailableString(
+            home.subscribe.text,
+            siteData.subscribe.text
+          )}
           className="dg-subscribe"
         />
       </React.Fragment>
@@ -64,4 +81,4 @@ class Home extends React.Component {
   }
 }
 
-export default withRouteData(Home);
+export default withSiteAndRouteData(Home);

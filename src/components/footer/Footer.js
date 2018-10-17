@@ -1,12 +1,15 @@
 import React from "react";
-import { Link } from "react-static";
+import { withSiteData, Link } from "react-static";
 import BackToTopIcon from "./BackToTopIcon";
 import constants from "../../lib/constants.json";
+
+import { phoneNumberUnformat } from "../../lib/utils/copy";
 
 import styles from "./footer.scss";
 
 class Footer extends React.Component {
   render() {
+    const { siteData } = this.props;
     return (
       <footer
         className={styles.footerContainer}
@@ -52,8 +55,11 @@ class Footer extends React.Component {
             <h3 className="sr-text">Social Links</h3>
             <ul className={`N2 ${styles.linkList}`}>
               <li>
-                <Link to="https://twitter.com/auxanoadvisors" rel="me">
-                  Twitter
+                <Link
+                  to="https://www.linkedin.com/company/auxano-advisors-llc/"
+                  rel="me"
+                >
+                  LinkedIn
                 </Link>
               </li>
               <li>
@@ -74,13 +80,21 @@ class Footer extends React.Component {
             <h3 className="sr-text">Contact Info</h3>
             <ul className={`N2 ${styles.linkList}`}>
               <li>
-                <a href="mailto:info@auxanoadvisors.com" itemProp="email">
-                  info@auxanoadvisors.com
+                <a
+                  href={`mailto:${siteData.companyInfo.email}`}
+                  itemProp="email"
+                >
+                  {siteData.companyInfo.email}
                 </a>
               </li>
               <li>
-                <a href="tel:+14258891261" itemProp="telephone">
-                  +1 (425) 889-1261
+                <a
+                  href={`tel:${phoneNumberUnformat(
+                    siteData.companyInfo.phone
+                  )}`}
+                  itemProp="telephone"
+                >
+                  {siteData.companyInfo.phone}
                 </a>
               </li>
             </ul>
@@ -110,4 +124,4 @@ class Footer extends React.Component {
   }
 }
 
-export default Footer;
+export default withSiteData(Footer);
