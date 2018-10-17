@@ -42,16 +42,18 @@ class corporateSolutions extends React.Component {
         <section className="container dg-serviceInfo">
           <ul className={`row ${styles.serviceInfoList}`}>
             <div className="col-xs-12 col-md-6">
-              <li>{corporateSolutions.serviceInfoList.item1}</li>
-              <li>{corporateSolutions.serviceInfoList.item2}</li>
-              <li>{corporateSolutions.serviceInfoList.item3}</li>
-              <li>{corporateSolutions.serviceInfoList.item4}</li>
+              <li>{corporateSolutions.serviceInfoList[0]}</li>
+              <li>{corporateSolutions.serviceInfoList[1]}</li>
+              <li>{corporateSolutions.serviceInfoList[2]}</li>
+              <li>{corporateSolutions.serviceInfoList[3]}</li>
+              <li>{corporateSolutions.serviceInfoList[4]}</li>
             </div>
             <div className="col-xs-12 col-md-6">
-              <li>{corporateSolutions.serviceInfoList.item5}</li>
-              <li>{corporateSolutions.serviceInfoList.item6}</li>
-              <li>{corporateSolutions.serviceInfoList.item7}</li>
-              <li>{corporateSolutions.serviceInfoList.item8}</li>
+              <li>{corporateSolutions.serviceInfoList[5]}</li>
+              <li>{corporateSolutions.serviceInfoList[6]}</li>
+              <li>{corporateSolutions.serviceInfoList[7]}</li>
+              <li>{corporateSolutions.serviceInfoList[8]}</li>
+              <li>{corporateSolutions.serviceInfoList[9]}</li>
             </div>
           </ul>
         </section>

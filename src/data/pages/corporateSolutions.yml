@@ -3,14 +3,16 @@ hero:
   title: "Corporate Executive Solutions"
   description: "Our long-standing relationships with corporate executives, leaders and managers of Fortunate 500 companies have given us a depth of knowledge about their benefits and HR offerings. This helps them save time and benefit from our experience and processes."
 serviceInfoList:
-  item1: "Deferred Compensation"
-  item2: "Executive Benefits"
-  item3: "Stock options / Restricted stock analysis"
-  item4: "Stock Trading Window"
-  item5: "Net Unrealized Appreciation (NUA)"
-  item6: "Benefit Equalization Plan"
-  item7: "Supplemental Executive Retirement Plans"
-  item8: "Executive Tax Strategies"
+  - "Equity Risk Management"
+  - "Charitable Techniques for Low-Basis Stock"
+  - "Special Tax 83(b) Elections"
+  - "Deferred Compensation"
+  - "Executive Benefits"
+  - "Stock options / Restricted stock analysis"
+  - "Stock Trading Window"
+  - "Net Unrealized Appreciation (NUA)"
+  - "Supplemental Executive Retirement Plans"
+  - "Executive Tax Strategies"
 actionBanner:
   link: /contact
   text: Contact Us
