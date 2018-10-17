@@ -25,7 +25,10 @@
   @include respond-above(lg) {
     height: 100vh;
     z-index: 101; // Above header menu (z=100)
-    margin-top: 0;
+
+    &:global(.container--fluid) {
+      margin-top: 0;
+    }
   }
 
   :global(.container) {
