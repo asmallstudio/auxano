@@ -308,6 +308,7 @@ collections:
                   - label: "Link"
                     name: link
                     widget: string
+                    required: false
                   - label: "Item Image"
                     name: image
                     widget: object
@@ -331,6 +332,7 @@ collections:
                   - label: "Link"
                     name: link
                     widget: string
+                    required: false
                   - label: "Item Image"
                     name: image
                     widget: object
@@ -354,6 +356,7 @@ collections:
                   - label: "Link"
                     name: link
                     widget: string
+                    required: false
                   - label: "Item Image"
                     name: image
                     widget: object
@@ -377,6 +380,7 @@ collections:
                   - label: "Link"
                     name: link
                     widget: string
+                    required: false
                   - label: "Item Image"
                     name: image
                     widget: object
@@ -819,9 +823,6 @@ collections:
             name: serviceInfo
             widget: object
             fields:
-              - label: "Service Description"
-                name: description
-                widget: text
               - label: "Description List"
                 name: list
                 widget: object

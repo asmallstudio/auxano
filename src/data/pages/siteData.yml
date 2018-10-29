@@ -6,7 +6,7 @@ siteData:
       line1: 10900 NE 4th Street
       line2: Suite 1950
       state: WA
-      zipcode: 98004
+      zipcode: "98004"
     email: info@auxanoadvisors.com
     phone: +1 (425) 889-1261
   coverSheet:
