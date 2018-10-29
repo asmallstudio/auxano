@@ -4,6 +4,10 @@
   position: relative;
   overflow: hidden;
   padding: 6em 0;
+
+  :global(.doNotShowCoverSheet--false) & {
+    margin-top: calc(-1 * var(--header-height));
+  }
 }
 
 .heroImageContainer {

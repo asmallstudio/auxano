@@ -68,7 +68,11 @@ class App extends React.Component {
             />
           )}
           <Header />
-          <main className={appStyles.routesContainer}>
+          <main
+            className={`${
+              appStyles.routesContainer
+            } doNotShowCoverSheet--${doNotShowCover}`}
+          >
             <Routes />
           </main>
           <Footer />

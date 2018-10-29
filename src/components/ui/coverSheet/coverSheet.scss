@@ -1,22 +1,15 @@
 @import "../../styles/utils.scss";
 
 .coverSheet {
-  position: relative;
+  position: absolute;
   z-index: 99; // Below header menu (z=100)
-  height: calc(100vh - var(--header-height));
+  top: 0;
+  bottom: 0;
+  left: 0;
+  height: calc(100% - var(--header-height));
+  width: 100%;
   background-color: var(--fountain-blue);
   padding: var(--space-l3) 0;
-
-  // The height below in media queries is a total hack to improve
-  // the fit of the Cover Sheet on modern iPhones.
-  // (5 rem is the approximate Safari tab bar height.)
-  @media only screen and (min-device-width: 414px) and (max-device-width: 896px) and (orientation: portrait) {
-    height: calc(100vh - var(--header-height) - 5rem);
-  }
-
-  @media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (orientation: portrait) {
-    height: calc(100vh - var(--header-height) - 5rem);
-  }
 
   &:global(.container--fluid) {
     margin-top: var(--header-height);
@@ -47,9 +40,16 @@
 
 .logo {
   display: none;
+  visibility: hidden;
+
+  // Center hero text when space allows.
+  @media (min-height: 35rem) {
+    display: block;
+    visibility: hidden;
+  }
 
   @include respond-above(lg) {
-    display: block;
+    visibility: visible;
   }
 }
 
