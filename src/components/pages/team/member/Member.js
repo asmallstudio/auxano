@@ -60,9 +60,11 @@ class Post extends React.Component {
                   </a>
                 </div>
               )}
-              <div className={styles.contactInfoItem}>
-                <a href={`mailto:${member.email}`}>{member.email}</a>
-              </div>
+              {member.email !== "" && (
+                <div className={styles.contactInfoItem}>
+                  <a href={`mailto:${member.email}`}>{member.email}</a>
+                </div>
+              )}
             </aside>
             <article
               className={`col-xs-12 col-md-9 col-lg-8 col-lg-offset-1 ${

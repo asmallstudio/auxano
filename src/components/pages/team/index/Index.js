@@ -22,6 +22,13 @@ class Index extends React.Component {
   render() {
     const { members, siteData } = this.props;
 
+    const fullMembers = members.filter(
+      member => member.isStrategicPartner === false
+    );
+    const strategicPartners = members.filter(
+      member => member.isStrategicPartner === true
+    );
+
     return (
       <React.Fragment>
         <Head>
@@ -33,7 +40,29 @@ class Index extends React.Component {
             <div className={`col-xs-12 ${styles.teamList}`}>
               <h1>Meet the Team</h1>
               <ul>
-                {members.map((member, i) => (
+                {fullMembers.map((member, i) => (
+                  <li key={i} className={styles.teamMember}>
+                    <Link to={`/team/${member.slug}/`}>
+                      <img src={member.image} alt="" />
+                    </Link>
+                    <Link to={`/team/${member.slug}/`} className="style-as-h3">
+                      {member.title}
+                    </Link>
+                    <div className="style-as-p">
+                      {this._formatPositions(member.positions)}
+                    </div>
+                    <LinkWithArrow
+                      to={`/team/${member.slug}/`}
+                      className={styles.arrowLink}
+                    >
+                      Read Bio
+                    </LinkWithArrow>
+                  </li>
+                ))}
+              </ul>
+              <h2>Strategic Partners</h2>
+              <ul>
+                {strategicPartners.map((member, i) => (
                   <li key={i} className={styles.teamMember}>
                     <Link to={`/team/${member.slug}/`}>
                       <img src={member.image} alt="" />

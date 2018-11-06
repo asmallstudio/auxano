@@ -1291,6 +1291,11 @@ collections:
                 widget: string
                 default: ""
                 required: true
+              - label: "Strategic Partner"
+                name: isStrategicPartner
+                widget: boolean
+                default: false
+                required: true
               - label: "Photo"
                 name: image
                 widget: image
