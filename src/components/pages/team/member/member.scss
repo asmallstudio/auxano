@@ -55,13 +55,14 @@
   }
 }
 
-.teamIndexLinkContainer {
+.indexLinkContainer {
   padding-bottom: var(--space-l5);
 }
 
-.teamIndexLink {
+.indexLink {
   transition: color 0.3s ease;
   display: inline-block;
+  color: var(--grey);
   text-decoration: none;
 
   @include respond-above(lg) {

@@ -40,11 +40,8 @@ class Post extends React.Component {
         </Head>
         <section className={`container ${styles.memberContainer}`}>
           <div className="row">
-            <div className={`col-xs-12 ${styles.teamIndexLinkContainer}`}>
-              <Link
-                to="/team"
-                className={`style-as-h3 ${styles.teamIndexLink}`}
-              >
+            <div className={`col-xs-12 ${styles.indexLinkContainer}`}>
+              <Link to="/team" className={`style-as-h3 ${styles.indexLink}`}>
                 Back to Team
               </Link>
             </div>

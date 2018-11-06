@@ -44,6 +44,7 @@
 .articleListLink {
   transition: color 0.3s ease;
   display: inline-block;
+  color: var(--grey);
   text-decoration: none;
 
   @include respond-above(lg) {
