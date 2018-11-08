@@ -1,5 +1,5 @@
 pageTitle: Contact
-pageDescription: ""
+pageDescription: ''
 form:
   title: General Inquiries
 info:
@@ -8,5 +8,5 @@ imageDivider:
   alt: Office building splash picture
   src: /uploads/office.jpg
 subscribe:
-  heading: ""
-  text: ""
+  heading: ''
+  text: ''
