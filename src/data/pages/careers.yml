@@ -1,16 +1,21 @@
-pageTitle: 'Careers'
-pageDescription: ""
+pageTitle: Careers
+pageDescription: ''
 hero:
-  title: "Careers"
-  subtitle: |-
-    The Auxano name is synonymous with growth. We believe that hiring exceptional people of distinguished character and capability is key to achieving this. If you are interested in becoming part of our team, we would be delighted to hear from you. 
+  image: /uploads/careers-hero.png
+  subtitle: >-
+    The Auxano name is synonymous with growth. We believe that hiring
+    exceptional people of distinguished character and capability is key to
+    achieving this. If you are interested in becoming part of our team, we would
+    be delighted to hear from you. 
+
 
     Please submit your resume and cover letter to: 
+
     [careers@auxanoadvisors.com](mailto:careers@auxanoadvisors.com)
-  image: "/uploads/about-us-hero.png"
+  title: Careers
 actionBanner:
-  link: ""
-  text: ""
+  link: ''
+  text: ''
 subscribe:
-  heading: ""
-  text: ""
+  heading: ''
+  text: ''
