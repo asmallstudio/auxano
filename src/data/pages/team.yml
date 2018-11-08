@@ -428,7 +428,7 @@ members:
       - ''
     title: Jon Pinkston
   - bio: I'm not qualified.
-  isStrategicPartner: false
+    isStrategicPartner: false
     email: troy@asmallstudio.co
     image: /uploads/_dsc3385.jpeg
     positions:
