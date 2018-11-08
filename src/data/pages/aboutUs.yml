@@ -1,11 +1,11 @@
 pageTitle: About Us
-pageDescription: ""
+pageDescription: ' '
 hero:
   ctaLink: /team
   ctaText: Meet the Team
   image: /uploads/about-us-hero.png
   subtitle: >-
-    We are a multi-generational private wealth management firm that helps
+    We are a single-generational private wealth management firm that helps
     clients integrate their goals and values with their wealth. As a fiduciary,
     we utilize a fee-only system as a way to foster relationships with our
     clients and not with their money.
@@ -65,5 +65,5 @@ actionBanner:
   link: /our-approach
   text: Our Approach
 subscribe:
-  heading: ""
-  text: ""
+  heading: ''
+  text: ''
