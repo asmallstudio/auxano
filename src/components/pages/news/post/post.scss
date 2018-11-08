@@ -28,6 +28,10 @@
     font-size: 1.125rem;
   }
 
+  hr {
+    border: 1px solid var(--filler-bg);
+  }
+
   a {
     color: var(--fountain-blue);
   }
@@ -44,6 +48,7 @@
 .articleListLink {
   transition: color 0.3s ease;
   display: inline-block;
+  color: var(--grey);
   text-decoration: none;
 
   @include respond-above(lg) {

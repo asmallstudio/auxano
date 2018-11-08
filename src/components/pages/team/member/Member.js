@@ -40,11 +40,8 @@ class Post extends React.Component {
         </Head>
         <section className={`container ${styles.memberContainer}`}>
           <div className="row">
-            <div className={`col-xs-12 ${styles.teamIndexLinkContainer}`}>
-              <Link
-                to="/team"
-                className={`style-as-h3 ${styles.teamIndexLink}`}
-              >
+            <div className={`col-xs-12 ${styles.indexLinkContainer}`}>
+              <Link to="/team" className={`style-as-h3 ${styles.indexLink}`}>
                 Back to Team
               </Link>
             </div>
@@ -63,9 +60,11 @@ class Post extends React.Component {
                   </a>
                 </div>
               )}
-              <div className={styles.contactInfoItem}>
-                <a href={`mailto:${member.email}`}>{member.email}</a>
-              </div>
+              {member.email !== "" && (
+                <div className={styles.contactInfoItem}>
+                  <a href={`mailto:${member.email}`}>{member.email}</a>
+                </div>
+              )}
             </aside>
             <article
               className={`col-xs-12 col-md-9 col-lg-8 col-lg-offset-1 ${

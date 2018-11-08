@@ -1,12 +1,10 @@
 pageDescription: ' '
 members:
-  - bio: >-
+  - bio: |-
       Peter is the Chief Executive Officer, founder, and managing member of
       Auxano Advisors. He provides strategic direction for the entire
       organization and specific leadership for the team of client service
       professionals. 
-
-
 
 
       Peter has over three decades of experience providing strategic financial
@@ -17,14 +15,10 @@ members:
       his career for exemplary service to clients. 
 
 
-
-
       Peter is a Certified Financial Planner (CFP®) and a graduate of the
       College for Financial Planning. He has completed the Executive Education
       program at Harvard University in Investment Decisions and Behavioral
       Finance. 
-
-
 
 
       Peter is active in a number of charitable organizations, some of which
@@ -33,19 +27,18 @@ members:
       shelter in Seattle. 
 
 
-
-
       Peter is married to Linda, and they have three children.
     email: peter@auxanoadvisors.com
     extension: ''
     image: /uploads/Peter.jpg
+    isStrategicPartner: false
     positions:
       - Founder
       - CEO
     qualifications:
       - CFP
     title: Peter Cline
-  - bio: >-
+  - bio: |-
       Alex is a Client Advisor and Member with Auxano Advisors. He serves a wide
       variety of clients including those with multi-generational wealth as well
       as the newly wealthy. He has extensive expertise working with families
@@ -74,6 +67,7 @@ members:
     email: alex@auxanoadvisors.com
     extension: ''
     image: /uploads/Alex.jpg
+    isStrategicPartner: false
     positions:
       - Partner
       - Client Advisor
@@ -82,7 +76,7 @@ members:
       - ChFC
       - CLU
     title: Alexander K. Lee
-  - bio: >-
+  - bio: |-
       Dwight is a Client Advisor and Partner with Auxano Advisors. He combines
       an extensive twenty-year business and engineering background with more
       than a decade in the wealth management profession. Dwight serves a wide
@@ -123,13 +117,14 @@ members:
     email: dwight@auxanoadvisors.com
     extension: ''
     image: /uploads/Dwight.jpg
+    isStrategicPartner: false
     positions:
       - Partner
       - Client Advisor
     qualifications:
       - ''
     title: Dwight S. Whiting
-  - bio: >-
+  - bio: |-
       Brian serves as the Director of Operations at Auxano Advisors. This is an
       essential role to ensure that the business runs smoothly and that we are
       able to provide an outstanding client experience. Brian is responsible for
@@ -152,12 +147,13 @@ members:
     email: brian@auxanoadvisors.com
     extension: ''
     image: /uploads/Brian.jpg
+    isStrategicPartner: false
     positions:
       - Director of Operations
     qualifications:
       - ''
     title: Brian Y. Hill
-  - bio: >-
+  - bio: |-
       Shari is a member of the Client Advisory team at Auxano Advisors. She
       works with the firm’s valued clients to facilitate financial relationships
       and support the operational management needs of the organization.
@@ -183,12 +179,13 @@ members:
     email: shari@auxanoadvisors.com
     extension: ''
     image: /uploads/Shari.jpg
+    isStrategicPartner: false
     positions:
       - Director of Client Services
     qualifications:
       - ''
     title: Shari Bonnell
-  - bio: >-
+  - bio: |-
       Kim is a Client Advisor with Auxano Advisors and joined the firm in 2008.
       She is intimately involved in providing custom-tailored financial, tax,
       estate, retirement and strategic planning advice to affluent clients.
@@ -211,17 +208,16 @@ members:
     email: kim@auxanoadvisors.com
     extension: ''
     image: /uploads/Kim.jpg
+    isStrategicPartner: false
     positions:
       - Client Advisor
     qualifications:
       - CFP
     title: Kimberlee Rankin
-  - bio: >-
+  - bio: |-
       Davis is a member of the Client Advisory team at Auxano Advisors. He works
       with the firm’s valued clients to facilitate financial relationships and
       support the operational management needs of the organization. 
-
-
 
 
       Prior to joining Auxano in 2017, Davis served as an Investment Advisor
@@ -231,12 +227,8 @@ members:
       problems and helping them manage their financial lives. 
 
 
-
-
       Davis earned his Bachelors in Business Administration from the University
       of Washington Bothell. 
-
-
 
 
       Outside of work, Davis enjoys the outdoors, playing and watching sports,
@@ -244,12 +236,124 @@ members:
     email: 'davis@auxanoadvisors.com '
     extension: ''
     image: /uploads/davis.jpg
+    isStrategicPartner: false
     positions:
       - Associate Client Advisor
     qualifications:
       - ''
     title: Davis Walker
-  - bio: >-
+  - bio: |-
+      Rose is a member of the Client Advisory team at Auxano Advisors. She works
+      closely with the firm’s valued clients, facilitating financial
+      transactions and follow-through on mission-critical tasks, ensuring that
+      clients are delighted with their experience. She also leads the marketing
+      division of the firm, building and sustaining Auxano's relationships
+      through digital content and events.
+
+
+      Prior to joining Auxano in 2007, Rose served as a project manager for
+      Nishimura Associates, LLC for four years. In this capacity, Rose assisted
+      in managing significant business relationships with over 30 clients
+      engaged in major commercial development projects. She represented client
+      interests diligently with various city and state leaders in moving
+      projects through the development process.
+    email: rose@auxanoadvisors.com
+    extension: ''
+    image: /uploads/Rose.jpg
+    isStrategicPartner: false
+    positions:
+      - Associate
+    qualifications:
+      - ''
+    title: Rose Kline
+  - bio: |-
+      Jessica is a member of the Client Advisory team at Auxano Advisors. She
+      works directly with the firm’s valued clients to create financial
+      relationships and support the operational and office management needs of
+      the organization.
+
+
+      Prior to joining Auxano in 2018, Jessica has demonstrated exceptional
+      experience in customer service, and takes joy in connecting with clients.
+      She is a people person, who works to exceed clients’ expectations with
+      prompt and responsive assistance. Jessica’s commitment to serve others
+      provides Auxano clients with the highest level of support.
+
+
+      Jessica earned her Bachelor of Arts degree in English from Western
+      Washington University. Outside of work, Jessica enjoys spending time with
+      her family, and exploring the beautiful Pacific Northwest with her
+      husband.
+    email: jessica@auxanoadvisors.com
+    extension: ''
+    image: /uploads/Jessica.jpg
+    isStrategicPartner: false
+    positions:
+      - Associate
+    qualifications:
+      - ''
+    title: Jessica Hanon
+  - bio: |-
+      Gretchen is a member of the Client Advisory team at Auxano Advisors. She
+      works directly with the firm’s valued clients to see them reach their
+      financial and life goals. She also supports the operational and office
+      management needs of the organization.
+
+
+      Prior to joining Auxano in 2013, Gretchen spent 15 years at Symetra
+      Securities (formerly Safeco Mutual Funds). In her most recent role as a
+      key accounts manager in Bellevue for 8 years, she managed all levels of
+      service, investor education and account records for thousands of
+      shareholders with $830 million in assets under management. During her
+      tenure at Symetra and Safeco Mutual Funds, Gretchen served in a number of
+      senior client-facing and operational roles, including working as a
+      retirement specialist and client service trainer. She also assisted the
+      chief compliance officer as a compliance analyst.
+
+
+      Gretchen earned her Bachelor of Arts degree in Business Administration
+      from Seattle Pacific University. Committed to service and volunteering,
+      Gretchen serves as a guest speaker and class facilitator for several
+      non-profit organizations and as a board member of another. She and her
+      husband, Jon, have 3 children and enjoy hiking, snowshoeing and camping. 
+    email: gretchen@auxanoadvisors.com
+    extension: ''
+    image: /uploads/Gretchen.jpg
+    isStrategicPartner: false
+    positions:
+      - Associate
+    qualifications:
+      - ''
+    title: Gretchen E. Curtis
+  - bio: |-
+      Dan is a member of the Client Advisory team at Auxano and assists in
+      creating a unique, individual strategy for the firm’s clients as they
+      confidently achieve their financial goals.
+
+
+      Dan’s experience working with high net worth clients over the last four
+      years and strong customer service background blend with his passion for
+      client satisfaction. He works diligently to provide the most enjoyable and
+      personal experience possible in every step of the financial and investment
+      planning process.
+
+
+      Dan earned a Bachelor of Science degree in Business Administration at
+      Thomas Edison State University.
+
+
+      Dan enjoys music, hiking and outdoor adventures, and any group
+      activities. 
+    email: dan@auxanoadvisors.com
+    extension: ''
+    image: /uploads/Dan.jpg
+    isStrategicPartner: false
+    positions:
+      - Associate
+    qualifications:
+      - ''
+    title: Dan Anderson
+  - bio: |-
       Drew is a Senior Investment Analyst with Auxano Advisors and member of the
       firm’s Investment Policy Committee. He conducts extensive manager and
       asset class research including onsite due diligence, conference calls and
@@ -276,115 +380,28 @@ members:
     email: drew@auxanoadvisors.com
     extension: ''
     image: /uploads/Drew.jpg
+    isStrategicPartner: false
     positions:
       - Senior Investment Analyst
     qualifications:
       - CFA
     title: Drew S. Matzen
-  - bio: >-
-      Rose is a member of the Client Advisory team at Auxano Advisors. She works
-      closely with the firm’s valued clients, facilitating financial
-      transactions and follow-through on mission-critical tasks, ensuring that
-      clients are delighted with their experience. She also leads the marketing
-      division of the firm, building and sustaining Auxano's relationships
-      through digital content and events.
+  - bio: |-
+      Jon Pinkston, Founder of Blue Kayak Partners, LLC, serves as a Senior Investment Strategist to Auxano Advisors, providing market strategy and fundamental research.
 
 
-      Prior to joining Auxano in 2007, Rose served as a project manager for
-      Nishimura Associates, LLC for four years. In this capacity, Rose assisted
-      in managing significant business relationships with over 30 clients
-      engaged in major commercial development projects. She represented client
-      interests diligently with various City and State leaders in moving
-      projects through the development process.
-    email: rose@auxanoadvisors.com
+      Jon has 19 years of investment, research and advisory experience. Prior to founding Blue Kayak Partners in 2008, he served most recently as CIO/COO of Auxano Advisors, and previously as Senior Consultant at Deloitte Consulting, Analyst at SunTrust Equitable Securities, and Portfolio Manager at SunTrust Bank.
+
+
+      Jon received his bachelor’s degree in Economics from Birmingham-Southern College, where he played on the basketball team, and his MBA from the University of California, Los Angeles.
+
+
+      Blue Kayak Partners provides non-discretionary investment research to Auxano Advisors in areas such as asset allocation, manager review, and macro analysis. Blue Kayak’s approach is based on the philosophy that because global capital markets are inefficient, and prices do not always reflect fair value, excess returns can be generated. Investor psychology — particularly overconfidence, pride and the tendency to avoid regret — explains not only the oscillation between fear and greed but also the propensity to avoid value stocks, to sell winners too early, and to hold onto losing positions. Simply put, investors often under- or overreact to new information. Blue Kayak believes that an intelligent combination of quantitative measures and informed judgment may provide opportunity for achieving superior investor returns through a systematic discipline to engage the periodic irrationality of markets.
     extension: ''
-    image: /uploads/Rose.jpg
+    image: /uploads/JonPinkson.jpg
+    isStrategicPartner: true
     positions:
-      - Associate
+      - Blue Kayak Partners, LLC
     qualifications:
       - ''
-    title: Rose Kline
-  - bio: >-
-      Jessica is a member of the Client Advisory team at Auxano Advisors. She
-      works directly with the firm’s valued clients to create financial
-      relationships and support the operational and office management needs of
-      the organization.
-
-
-      Prior to joining Auxano in 2018, Jessica has demonstrated exceptional
-      experience in customer service, and takes joy in connecting with clients.
-      She is a people person, who works to exceed clients’ expectations with
-      prompt and responsive assistance. Jessica’s commitment to serve others
-      provides Auxano clients with the highest level of support.
-
-
-      Jessica earned her Bachelor of Arts degree in English from Western
-      Washington University. Outside of work, Jessica enjoys spending time with
-      her family, and exploring the beautiful Pacific Northwest with her
-      husband.
-    email: jessica@auxanoadvisors.com
-    extension: ''
-    image: /uploads/Jessica.jpg
-    positions:
-      - Associate
-    qualifications:
-      - ''
-    title: Jessica Hanon
-  - bio: >-
-      Gretchen is a member of the Client Advisory team at Auxano Advisors. She
-      works directly with the firm’s valued clients to see them reach their
-      financial and life goals. She also supports the operational and office
-      management needs of the organization.
-
-
-      Prior to joining Auxano in 2013, Gretchen spent 15 years at Symetra
-      Securities (formerly Safeco Mutual Funds). In her most recent role as a
-      key accounts manager in Bellevue for 8 years, she managed all levels of
-      service, investor education and account records for thousands of
-      shareholders with $830 million in assets under management. During her
-      tenure at Symetra and Safeco Mutual Funds, Gretchen served in a number of
-      senior client-facing and operational roles, including working as a
-      retirement specialist and client service trainer. She also assisted the
-      chief compliance officer as a compliance analyst.
-
-
-      Gretchen earned her Bachelor of Arts degree in Business Administration
-      from Seattle Pacific University. Committed to service and volunteering,
-      Gretchen serves as a guest speaker and class facilitator for several
-      non-profit organizations and as a board member of another. She and her
-      husband, Jon, have 3 children and enjoy hiking, snowshoeing and camping. 
-    email: gretchen@auxanoadvisors.com
-    extension: ''
-    image: /uploads/Gretchen.jpg
-    positions:
-      - Associate
-    qualifications:
-      - ''
-    title: Gretchen E. Curtis
-  - bio: >-
-      Dan is a member of the Client Advisory team at Auxano and assists in
-      creating a unique, individual strategy for the firm’s clients as they
-      confidently achieve their financial goals.
-
-
-      Dan’s experience working with high net worth clients over the last four
-      years and strong customer service background blend with his passion for
-      client satisfaction. He works diligently to provide the most enjoyable and
-      personal experience possible in every step of the financial and investment
-      planning process.
-
-
-      Dan earned a Bachelor of Science degree in Business Administration at
-      Thomas Edison State University.
-
-
-      Dan enjoys music, hiking and outdoor adventures, and any group
-      activities. 
-    email: dan@auxanoadvisors.com
-    extension: ''
-    image: /uploads/Dan.jpg
-    positions:
-      - Associate
-    qualifications:
-      - ''
-    title: Dan Anderson
+    title: Jon Pinkston
