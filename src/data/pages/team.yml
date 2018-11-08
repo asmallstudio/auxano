@@ -29,6 +29,7 @@ members:
 
       Peter is married to Linda, and they have three children.
     email: peter@auxanoadvisors.com
+    isStrategicPartner: false
     extension: ''
     image: /uploads/Peter.jpg
     positions:
@@ -64,6 +65,7 @@ members:
       serves as the Treasurer on the endowment Board of Governors for Cascadia
       Community College.
     email: alex@auxanoadvisors.com
+    isStrategicPartner: false
     extension: ''
     image: /uploads/Alex.jpg
     positions:
@@ -113,6 +115,7 @@ members:
       community in Redmond, Washington, and Heron’s Key, a retirement community
       in Gig Harbor, Washington.
     email: dwight@auxanoadvisors.com
+    isStrategicPartner: false
     extension: ''
     image: /uploads/Dwight.jpg
     positions:
@@ -142,6 +145,7 @@ members:
       Planning in pursuit of the Certified Financial Planner (CFP®)
       certification.
     email: brian@auxanoadvisors.com
+    isStrategicPartner: false
     extension: ''
     image: /uploads/Brian.jpg
     positions:
@@ -173,6 +177,7 @@ members:
       goals and further education. Outside of work, she enjoys spending time
       with her daughters rock climbing and paddle boarding. 
     email: shari@auxanoadvisors.com
+    isStrategicPartner: false
     extension: ''
     image: /uploads/Shari.jpg
     positions:
@@ -201,6 +206,7 @@ members:
       in Economics and served as captain of the soccer team on which she was
       named All Ivy League.
     email: kim@auxanoadvisors.com
+    isStrategicPartner: false
     extension: ''
     image: /uploads/Kim.jpg
     positions:
@@ -251,6 +257,7 @@ members:
       interests diligently with various city and state leaders in moving
       projects through the development process.
     email: rose@auxanoadvisors.com
+    isStrategicPartner: false
     extension: ''
     image: /uploads/Rose.jpg
     positions:
@@ -277,6 +284,7 @@ members:
       her family, and exploring the beautiful Pacific Northwest with her
       husband.
     email: jessica@auxanoadvisors.com
+    isStrategicPartner: false
     extension: ''
     image: /uploads/Jessica.jpg
     positions:
@@ -308,6 +316,7 @@ members:
       non-profit organizations and as a board member of another. She and her
       husband, Jon, have 3 children and enjoy hiking, snowshoeing and camping. 
     email: gretchen@auxanoadvisors.com
+    isStrategicPartner: false
     extension: ''
     image: /uploads/Gretchen.jpg
     positions:
@@ -335,6 +344,7 @@ members:
       Dan enjoys music, hiking and outdoor adventures, and any group
       activities. 
     email: dan@auxanoadvisors.com
+    isStrategicPartner: false
     extension: ''
     image: /uploads/Dan.jpg
     positions:
@@ -367,6 +377,7 @@ members:
       has earned the right to use the CFA designation. Drew is also a member of
       the CFA Society of Seattle and the CFA Institute.
     email: drew@auxanoadvisors.com
+    isStrategicPartner: false
     extension: ''
     image: /uploads/Drew.jpg
     positions:
@@ -410,12 +421,14 @@ members:
       engage the periodic irrationality of markets.
     extension: ''
     image: /uploads/JonPinkson.jpg
+    isStrategicPartner: true
     positions:
       - 'Blue Kayak Partners, LLC'
     qualifications:
       - ''
     title: Jon Pinkston
   - bio: I'm not qualified.
+  isStrategicPartner: false
     email: troy@asmallstudio.co
     image: /uploads/_dsc3385.jpeg
     positions:
