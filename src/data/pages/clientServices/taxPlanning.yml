@@ -1,5 +1,5 @@
 pageTitle: Tax Planning | Client Services
-pageDescription: ""
+pageDescription: ''
 hero:
   name: Tax Planning
   title: >-
@@ -21,15 +21,15 @@ serviceInfo:
       your after-tax net worth.
     image:
       alt: placeholder image
-      src: /uploads/tax-planning.png
+      src: /uploads/tax-planning.jpg
   section3: >-
     Although it begins with your current tax situation, it models how possible
     choices will interact with current and future taxes. Different scenarios can
     have an impact on tax planning and you cannot determine which are best with
     a simple back-of-the-napkin calculation based on tax paid.
 actionBanner:
-  link: ""
-  text: ""
+  link: ''
+  text: ''
 subscribe:
-  heading: ""
-  text: ""
+  heading: ''
+  text: ''
