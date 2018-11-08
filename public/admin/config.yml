@@ -1332,6 +1332,7 @@ collections:
                 name: extension
                 widget: string
                 default: ""
+                required: true
               - label: "Bio"
                 name: bio
                 widget: markdown
