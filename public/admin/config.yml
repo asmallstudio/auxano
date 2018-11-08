@@ -194,6 +194,7 @@ collections:
             widget: string
           - label: "Page Description"
             name: pageDescription
+            required: false
             hint: "(For SEO purposes.) Describes the content of the page. This is visible in search results."
             widget: text
           - label: Hero
@@ -282,6 +283,7 @@ collections:
             widget: string
           - label: "Page Description"
             name: pageDescription
+            required: false
             hint: "(For SEO purposes.) Describes the content of the page. This is visible in search results."
             widget: text
           - label: Hero
@@ -421,6 +423,7 @@ collections:
             widget: string
           - label: "Page Description"
             name: pageDescription
+            required: false
             hint: "(For SEO purposes.) Describes the content of the page. This is visible in search results."
             widget: text
           - label: "Contact Form"
@@ -467,6 +470,7 @@ collections:
             widget: string
           - label: "Page Description"
             name: pageDescription
+            required: false
             hint: "(For SEO purposes.) Describes the content of the page. This is visible in search results."
             widget: text
           - label: "Hero"
@@ -652,6 +656,7 @@ collections:
             widget: string
           - label: "Page Description"
             name: pageDescription
+            required: false
             hint: "(For SEO purposes.) Describes the content of the page. This is visible in search results."
             widget: text
           - label: "Hero"
@@ -741,6 +746,7 @@ collections:
             widget: string
           - label: "Page Description"
             name: pageDescription
+            required: false
             hint: "(For SEO purposes.) Describes the content of the page. This is visible in search results."
             widget: text
           - label: "Hero"
@@ -887,6 +893,7 @@ collections:
             widget: string
           - label: "Page Description"
             name: pageDescription
+            required: false
             hint: "(For SEO purposes.) Describes the content of the page. This is visible in search results."
             widget: text
           - label: "Hero"
@@ -955,6 +962,7 @@ collections:
             widget: string
           - label: "Page Description"
             name: pageDescription
+            required: false
             hint: "(For SEO purposes.) Describes the content of the page. This is visible in search results."
             widget: text
           - label: "Hero"
@@ -1047,6 +1055,7 @@ collections:
             widget: string
           - label: "Page Description"
             name: pageDescription
+            required: false
             hint: "(For SEO purposes.) Describes the content of the page. This is visible in search results."
             widget: text
           - label: "Hero"
@@ -1119,6 +1128,7 @@ collections:
             widget: string
           - label: "Page Description"
             name: pageDescription
+            required: false
             hint: "(For SEO purposes.) Describes the content of the page. This is visible in search results."
             widget: text
           - label: "Hero"
@@ -1186,6 +1196,7 @@ collections:
             widget: string
           - label: "Page Description"
             name: pageDescription
+            required: false
             hint: "(For SEO purposes.) Describes the content of the page. This is visible in search results."
             widget: text
           - label: "Hero"
@@ -1236,6 +1247,7 @@ collections:
             widget: string
           - label: "Page Description"
             name: pageDescription
+            required: false
             hint: "(For SEO purposes.) Describes the content of the page. This is visible in search results."
             widget: text
           - label: Hero
@@ -1279,6 +1291,7 @@ collections:
         fields:
           - label: "Page Description"
             name: pageDescription
+            required: false
             hint: "(For SEO purposes.) Describes the content of the page. This is visible in search results."
             widget: text
           - label: "members"
