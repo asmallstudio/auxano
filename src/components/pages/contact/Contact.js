@@ -105,6 +105,8 @@ class ContactForm extends React.Component {
       errors
     } = this.state;
 
+    const { fallbackEmail, ...restProps } = this.props;
+
     if (!submitted && !submitError) {
       return (
         <form
@@ -112,7 +114,7 @@ class ContactForm extends React.Component {
           data-netlify="true"
           data-netlify-honeypot="bdaySurprise"
           onSubmit={this._handleSubmit}
-          {...this.props}
+          {...restProps}
         >
           <DefaultInput
             name="bdaySurprise"
@@ -185,10 +187,7 @@ class ContactForm extends React.Component {
     return (
       <p className={`${styles.errorText}`}>
         Sorry, the form did not submit correctly. Please email us instead at{" "}
-        <a href={`mailto:${this.props.fallbackEmail}`}>
-          {this.props.fallbackEmail}
-        </a>
-        .
+        <a href={`mailto:${fallbackEmail}`}>{fallbackEmail}</a>.
       </p>
     );
   }
