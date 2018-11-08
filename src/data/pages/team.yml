@@ -31,7 +31,6 @@ members:
     email: peter@auxanoadvisors.com
     extension: ''
     image: /uploads/Peter.jpg
-    isStrategicPartner: false
     positions:
       - Founder
       - CEO
@@ -67,7 +66,6 @@ members:
     email: alex@auxanoadvisors.com
     extension: ''
     image: /uploads/Alex.jpg
-    isStrategicPartner: false
     positions:
       - Partner
       - Client Advisor
@@ -117,7 +115,6 @@ members:
     email: dwight@auxanoadvisors.com
     extension: ''
     image: /uploads/Dwight.jpg
-    isStrategicPartner: false
     positions:
       - Partner
       - Client Advisor
@@ -147,7 +144,6 @@ members:
     email: brian@auxanoadvisors.com
     extension: ''
     image: /uploads/Brian.jpg
-    isStrategicPartner: false
     positions:
       - Director of Operations
     qualifications:
@@ -179,7 +175,6 @@ members:
     email: shari@auxanoadvisors.com
     extension: ''
     image: /uploads/Shari.jpg
-    isStrategicPartner: false
     positions:
       - Director of Client Services
     qualifications:
@@ -208,7 +203,6 @@ members:
     email: kim@auxanoadvisors.com
     extension: ''
     image: /uploads/Kim.jpg
-    isStrategicPartner: false
     positions:
       - Client Advisor
     qualifications:
@@ -236,7 +230,6 @@ members:
     email: 'davis@auxanoadvisors.com '
     extension: ''
     image: /uploads/davis.jpg
-    isStrategicPartner: false
     positions:
       - Associate Client Advisor
     qualifications:
@@ -260,7 +253,6 @@ members:
     email: rose@auxanoadvisors.com
     extension: ''
     image: /uploads/Rose.jpg
-    isStrategicPartner: false
     positions:
       - Associate
     qualifications:
@@ -287,7 +279,6 @@ members:
     email: jessica@auxanoadvisors.com
     extension: ''
     image: /uploads/Jessica.jpg
-    isStrategicPartner: false
     positions:
       - Associate
     qualifications:
@@ -319,7 +310,6 @@ members:
     email: gretchen@auxanoadvisors.com
     extension: ''
     image: /uploads/Gretchen.jpg
-    isStrategicPartner: false
     positions:
       - Associate
     qualifications:
@@ -347,7 +337,6 @@ members:
     email: dan@auxanoadvisors.com
     extension: ''
     image: /uploads/Dan.jpg
-    isStrategicPartner: false
     positions:
       - Associate
     qualifications:
@@ -380,28 +369,59 @@ members:
     email: drew@auxanoadvisors.com
     extension: ''
     image: /uploads/Drew.jpg
-    isStrategicPartner: false
     positions:
       - Senior Investment Analyst
     qualifications:
       - CFA
     title: Drew S. Matzen
-  - bio: |-
-      Jon Pinkston, Founder of Blue Kayak Partners, LLC, serves as a Senior Investment Strategist to Auxano Advisors, providing market strategy and fundamental research.
+  - bio: >-
+      Jon Pinkston, Founder of Blue Kayak Partners, LLC, serves as a Senior
+      Investment Strategist to Auxano Advisors, providing market strategy and
+      fundamental research.
 
 
-      Jon has 19 years of investment, research and advisory experience. Prior to founding Blue Kayak Partners in 2008, he served most recently as CIO/COO of Auxano Advisors, and previously as Senior Consultant at Deloitte Consulting, Analyst at SunTrust Equitable Securities, and Portfolio Manager at SunTrust Bank.
+
+      Jon has 19 years of investment, research and advisory experience. Prior to
+      founding Blue Kayak Partners in 2008, he served most recently as CIO/COO
+      of Auxano Advisors, and previously as Senior Consultant at Deloitte
+      Consulting, Analyst at SunTrust Equitable Securities, and Portfolio
+      Manager at SunTrust Bank.
 
 
-      Jon received his bachelor’s degree in Economics from Birmingham-Southern College, where he played on the basketball team, and his MBA from the University of California, Los Angeles.
+
+      Jon received his bachelor’s degree in Economics from Birmingham-Southern
+      College, where he played on the basketball team, and his MBA from the
+      University of California, Los Angeles.
 
 
-      Blue Kayak Partners provides non-discretionary investment research to Auxano Advisors in areas such as asset allocation, manager review, and macro analysis. Blue Kayak’s approach is based on the philosophy that because global capital markets are inefficient, and prices do not always reflect fair value, excess returns can be generated. Investor psychology — particularly overconfidence, pride and the tendency to avoid regret — explains not only the oscillation between fear and greed but also the propensity to avoid value stocks, to sell winners too early, and to hold onto losing positions. Simply put, investors often under- or overreact to new information. Blue Kayak believes that an intelligent combination of quantitative measures and informed judgment may provide opportunity for achieving superior investor returns through a systematic discipline to engage the periodic irrationality of markets.
+
+      Blue Kayak Partners provides non-discretionary investment research to
+      Auxano Advisors in areas such as asset allocation, manager review, and
+      macro analysis. Blue Kayak’s approach is based on the philosophy that
+      because global capital markets are inefficient, and prices do not always
+      reflect fair value, excess returns can be generated. Investor psychology —
+      particularly overconfidence, pride and the tendency to avoid regret —
+      explains not only the oscillation between fear and greed but also the
+      propensity to avoid value stocks, to sell winners too early, and to hold
+      onto losing positions. Simply put, investors often under- or overreact to
+      new information. Blue Kayak believes that an intelligent combination of
+      quantitative measures and informed judgment may provide opportunity for
+      achieving superior investor returns through a systematic discipline to
+      engage the periodic irrationality of markets.
     extension: ''
     image: /uploads/JonPinkson.jpg
-    isStrategicPartner: true
     positions:
-      - Blue Kayak Partners, LLC
+      - 'Blue Kayak Partners, LLC'
     qualifications:
       - ''
     title: Jon Pinkston
+  - bio: I'm not qualified.
+    email: troy@asmallstudio.co
+    image: /uploads/_dsc3385.jpeg
+    positions:
+      - Pawn
+    qualifications:
+      - None
+      - Nada
+      - Zilch
+    title: Troy Thomas
