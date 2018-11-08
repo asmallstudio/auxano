@@ -1,5 +1,5 @@
 pageTitle: Estate Planning | Client Services
-pageDescription: ""
+pageDescription: ''
 hero:
   description: >-
     An estate planning attorney crafts estate planning documents. They often
@@ -30,10 +30,10 @@ imageRow:
     beneficiary designations for your IRAs.
   image:
     alt: placeholder image
-    src: /uploads/estate-planning.png
+    src: /uploads/estate-planning.jpg
 actionBanner:
-  link: ""
-  text: ""
+  link: ''
+  text: ''
 subscribe:
-  heading: ""
-  text: ""
+  heading: ''
+  text: ''
