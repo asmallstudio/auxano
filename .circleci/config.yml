@@ -28,7 +28,9 @@ jobs:
             # fallback to using the latest cache if no exact match is found
             - v1-dependencies-
 
-      - run: yarn install
+      - run:
+          name: Install Dependencies
+          command: yarn install
 
       - save_cache:
           paths:
@@ -42,7 +44,7 @@ jobs:
 
       # Test build
       - run:
-          name: Install Dependencies
+          name: Build Site
           command: mkdir -p tmp
           command: yarn build
 
