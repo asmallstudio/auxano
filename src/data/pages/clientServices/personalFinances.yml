@@ -1,24 +1,23 @@
 pageTitle: Personal Finance | Client Services
-pageDescription: ""
+pageDescription: ''
 hero:
   name: Personal Finance
   title: >-
-    We know you have goals for your future. We’ll help you manage your personal
-    finances to meet them.
+    Each day you make decisions that affect your ability to reach your goals.
+    We’ll help ensure those decisions are thoroughly informed.
 pullquote: >-
-  Mapping out your personal finances is the process of determining which
-  financial steps will best take you from your current situation to fulfilling
-  your life goals.
+  Financial planning is at the core of what we do. As with all of our services,
+  we take a holistic view of the planning process, viewing your day-to-day
+  financial decisions in the context of how they affect your larger goals.
 serviceInfo:
   description: >-
-    Integrated planning takes a holistic approach to how each aspect​ is set
-    into the context of your situation and affects other areas of your finances.
-    This all adds up to assist you in making high-quality decisions, today and
-    tomorrow.
+    With Auxano’s wealth management and personal finance expertise, you’ll gain
+    all the tools, knowledge and context you need to take control of your cash
+    flow... so you can keep your eye on your goals and dreams.
   descriptionLede: >-
-    While each component of financial planning is unique to your personal
-    situation, each part is also integrated with other components creating a
-    dynamic and interconnected system.
+    Through a prudent approach that applies guiding principles to available
+    evidence, we’ll empower you to make personal finance decisions that are as
+    informed and forward-looking as possible.
   list:
     item1:
       icon: /uploads/in-out.svg
@@ -32,8 +31,8 @@ serviceInfo:
         Develop spending and saving targets for retirement and other financial
         goals
 actionBanner:
-  link: ""
-  text: ""
+  link: ''
+  text: ''
 subscribe:
-  heading: ""
-  text: ""
+  heading: ''
+  text: ''
