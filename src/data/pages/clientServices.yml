@@ -1,15 +1,21 @@
-pageTitle: "Client Services"
-pageDescription: ""
+pageTitle: Client Services
+pageDescription: ''
 hero:
   title: Go further than you ever thought possible.
+actionBanner:
+  link: ''
+  text: ''
+subscribe:
+  heading: ''
+  text: ''
 services:
   item1:
     heading: Personal Finance
     icon: /uploads/personal-finance.svg
     link: /client-services/personal-finances/
     text: >-
-      We know you have goals for your future. We’ll help you manage your
-      personal finances to meet them.
+      Each day you make decisions that affect your ability to reach your goals.
+      We’ll help ensure those decisions are thoroughly informed.
   item2:
     heading: Investments
     icon: /uploads/investments.svg
@@ -36,8 +42,8 @@ services:
     icon: /uploads/tax-planning.svg
     link: /client-services/tax-planning/
     text: >-
-      By creating unique tax models, we’ll help you plan ahead and be better
-      prepared for this annual process.
+      By always considering the tax implications of your financial decisions, we
+      help to protect value over time.
   item6:
     heading: Business Services
     icon: /uploads/business-services.svg
@@ -59,9 +65,3 @@ services:
     text: >-
       Have a financial need that isn’t listed? Contact us to see how we can
       help.
-actionBanner:
-  link: ""
-  text: ""
-subscribe:
-  heading: ""
-  text: ""
