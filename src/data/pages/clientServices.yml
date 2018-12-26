@@ -21,22 +21,22 @@ services:
     icon: /uploads/investments.svg
     link: /client-services/investments/
     text: >-
-      Good investments have the power to transform lives. We’ll help you protect
-      and grow your assets responsibly.
+      When your investment strategy fits your goals and dreams, it can transform
+      your life and those of others.
   item3:
     heading: Estate Planning
     icon: /uploads/estate-planning.svg
     link: /client-services/estate-planning/
     text: >-
-      Estate planning can often be complex. Our integrated process will help
-      make sure that nothing is missed.
+      Integrating your estate and financial plans ensures that those you care
+      about will benefit from your legacy exactly as you wish.
   item4:
     heading: Risk Management
     icon: /uploads/risk-management.svg
     link: /client-services/risk-management/
     text: >-
-      Its important to protect your assets. We can help you manage your
-      financial risks and avoid potential pitfalls.
+      On any journey, the unexpected can happen. The road to achieving your
+      goals and dreams is no exception. 
   item5:
     heading: Tax Planning
     icon: /uploads/tax-planning.svg
