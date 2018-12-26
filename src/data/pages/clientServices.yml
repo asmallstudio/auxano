@@ -14,8 +14,8 @@ services:
     icon: /uploads/personal-finance.svg
     link: /client-services/personal-finances/
     text: >-
-      We know you have goals for your future. We’ll help you manage your
-      personal finances to meet them.
+      Each day you make decisions that affect your ability to reach your goals.
+      We’ll help ensure those decisions are thoroughly informed.
   item2:
     heading: Investments
     icon: /uploads/investments.svg
