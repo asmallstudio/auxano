@@ -36,12 +36,10 @@ infoTable:
     tableHead1: Speculative Approach
     tableHead2: Principled Approach
   tableRow1:
-    tableCell1: >-
-      Speculation is betting upon an outcome based on theories, beliefs, or
-      guesses
+    tableCell1: 'Betting upon an outcome based on theories, beliefs, or guesses'
     tableCell2: >-
-      The Principled approach is the process of allocating capital by prudently
-      integrating guiding principles with available evidence
+      Allocating capital by prudently integrating guiding principles with
+      available evidence
     tableRowHead: Investment Management
   tableRow2:
     tableCell1: >-
