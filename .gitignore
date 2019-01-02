@@ -6,7 +6,7 @@
 
 # production
 /dist
-/tmp
+/tmp/**
 /src/components/styles/theme.css
 
 # misc
