@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-static";
+import { Link } from "@reach/router";
 
 import styles from "./fullWidthSectionActionLink.scss";
 import LinkWithArrow from "../linkWithArrow/LinkWithArrow";
