@@ -198,10 +198,6 @@ const createRoutes = async () => {
       getData: () => ({
         privacyTerms
       })
-    },
-    {
-      is404: true,
-      component: "src/components/pages/404/404"
     }
   ];
 };

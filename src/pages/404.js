@@ -1,7 +1,8 @@
 import React from "react";
-import { withSiteData, Link, Head } from "react-static";
-import { getFullPageTitle } from "../../../lib/utils/copy";
-import { pageChange } from "../../../lib/utils/pageChange";
+import { withSiteData, Head } from "react-static";
+import { Link } from "@reach/router";
+import { getFullPageTitle } from "../lib/utils/copy";
+import { pageChange } from "../lib/utils/pageChange";
 
 import styles from "./404.scss";
 

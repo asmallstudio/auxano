@@ -1,8 +1,25 @@
 import React from "react";
-import { withSiteData, Link } from "react-static";
+import { Link } from "@reach/router";
+import { withSiteData } from "react-static";
 import FullWidthSectionActionLink from "../ui/fullWidthSectionActionLink/FullWidthSectionActionLink";
 
 import styles from "./header.scss";
+
+const NavLink = props => {
+  const { activeClassName, ...restProps } = props;
+  return (
+    <Link
+      {...restProps}
+      getProps={({ isCurrent }) => {
+        // the object returned here is passed to the
+        // anchor element's props
+        return {
+          className: isCurrent ? activeClassName : null
+        };
+      }}
+    />
+  );
+};
 
 class Header extends React.Component {
   constructor(props) {
@@ -88,9 +105,9 @@ class Header extends React.Component {
       <header className={styles.header}>
         <div className={styles.headerContainer}>
           <div className={styles.logoContainer}>
-            <Link to="/">
+            <NavLink to="/">
               <AuxanoLogo alt="Auxano Advisors" height="48" width="125" />
-            </Link>
+            </NavLink>
           </div>
           <nav id="navigation" className={styles.nav}>
             <MenuIcon menuHidden={menuHidden} menuAction={this._menuToggle} />
@@ -101,53 +118,53 @@ class Header extends React.Component {
               {...menuHidden && { hidden: true }}
             >
               <li className="style-as-h3">
-                <Link
+                <NavLink
                   to="/about-us"
                   activeClassName={styles.activeLink}
                   onClick={this._menuClose}
                   exact
                 >
                   About Us
-                </Link>
+                </NavLink>
               </li>
               <li className="style-as-h3">
-                <Link
+                <NavLink
                   to="/our-approach"
                   activeClassName={styles.activeLink}
                   onClick={this._menuClose}
                   exact
                 >
                   Our Approach
-                </Link>
+                </NavLink>
               </li>
               <li className="style-as-h3">
-                <Link
+                <NavLink
                   to="/client-services"
                   activeClassName={styles.activeLink}
                   onClick={this._menuClose}
                   exact
                 >
                   Client Services
-                </Link>
+                </NavLink>
               </li>
               <li className="style-as-h3">
-                <Link
+                <NavLink
                   to="/corporate-solutions"
                   activeClassName={styles.activeLink}
                   onClick={this._menuClose}
                   exact
                 >
                   Corporate Solutions
-                </Link>
+                </NavLink>
               </li>
               <li className="style-as-h3">
-                <Link
+                <NavLink
                   to="/contact"
                   activeClassName={styles.activeLink}
                   onClick={this._menuClose}
                 >
                   Contact
-                </Link>
+                </NavLink>
               </li>
               <FullWidthSectionActionLink
                 className={styles.bottomMenuLink}
