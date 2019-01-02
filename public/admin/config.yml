@@ -4,7 +4,7 @@ backend:
 media_folder: public/uploads
 publish_mode: editorial_workflow
 public_folder: /uploads
-display_url: https://auxanoadvisors.com
+display_url: https://tomorrow.auxanoadvisors.com
 slug:
   encoding: "ascii"
   clean_accents: true
