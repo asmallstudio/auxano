@@ -2,22 +2,22 @@
 
 .coverSheet {
   position: absolute;
-  z-index: 99; // Below header menu (z=100)
+  z-index: 101; // Above header menu (z=100)
   top: 0;
   bottom: 0;
   left: 0;
-  height: calc(100% - var(--header-height));
+  height: 100%;
+  // height: calc(100% - var(--header-height));
   width: 100%;
   background-color: var(--fountain-blue);
   padding: var(--space-l3) 0;
 
   &:global(.container--fluid) {
-    margin-top: var(--header-height);
+    // margin-top: var(--header-height);
   }
 
   @include respond-above(lg) {
     height: 100vh;
-    z-index: 101; // Above header menu (z=100)
 
     &:global(.container--fluid) {
       margin-top: 0;
@@ -39,22 +39,26 @@
 }
 
 .logo {
-  display: none;
-  visibility: hidden;
+  display: block;
+}
 
-  // Center hero text when space allows.
-  @media (min-height: 35rem) {
-    display: block;
-    visibility: hidden;
-  }
+.definition {
+  font-size: 1rem;
+  color: var(--white);
+  padding-top: var(--space-l2);
+}
 
-  @include respond-above(lg) {
-    visibility: visible;
-  }
+.defineItalic {
+  font-style: italic;
 }
 
 .text {
   width: 100%;
+  padding-bottom: var(--space-l5);
+
+  @include respond-above(lg) {
+    padding-bottom: 0;
+  }
 
   h1 {
     color: var(--white);
@@ -69,7 +73,7 @@
   }
 
   p {
-    color: var(--white-40);
+    color: var(--white);
     margin-top: var(--space-l2);
   }
 }
@@ -108,8 +112,8 @@
     animation: coverScrollHintReveal 0.75s ease-out 2s forwards;
     content: "scroll to continue";
     display: block;
-    font-size: 1.125rem;
-    color: var(--white-40);
+    font-size: 1.25rem;
+    color: var(--white);
     opacity: 0;
     margin-bottom: var(--space-l2);
   }

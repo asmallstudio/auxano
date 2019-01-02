@@ -42,12 +42,22 @@ class CoverSheet extends React.Component {
       >
         <div className="container">
           <div className={`col-xs-12 ${styles.coverSheetContent}`}>
-            <AuxanoLogoWhite
-              alt="Auxano Advisors"
-              height="64"
-              width="166.66"
-              className={styles.logo}
-            />
+            <div>
+              <AuxanoLogoWhite
+                alt="Auxano Advisors"
+                height="70"
+                width="182.21"
+                className={styles.logo}
+              />
+              <p className={styles.definition}>
+                auxano&nbsp;
+                <span className={styles.defineItalic}>
+                  (aux &bull; ah &bull; no):&nbsp;
+                  <br />
+                </span>
+                to bring growth or increase
+              </p>
+            </div>
             <div className={styles.text}>
               <h1>{hero}</h1>
               <p>{tagline}</p>
