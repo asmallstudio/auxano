@@ -13,12 +13,11 @@ class OneThirdColumn extends React.Component {
           typeof data.link === "undefined" && (
             <img className={styles.colIcon} src={data.icon} alt="" />
           )}
-        {typeof data.icon !== "undefined" &&
-          typeof data.link !== "undefined" && (
-            <Link to={data.link}>
-              <img className={styles.colIcon} src={data.icon} alt="" />
-            </Link>
-          )}
+        {typeof data.icon !== "undefined" && typeof data.link !== "undefined" && (
+          <Link to={data.link}>
+            <img className={styles.colIcon} src={data.icon} alt="" />
+          </Link>
+        )}
         <h2>{data.heading}</h2>
         <p>{data.text}</p>
         {typeof data.link !== "undefined" && (
