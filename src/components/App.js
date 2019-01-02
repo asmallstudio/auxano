@@ -1,8 +1,6 @@
 import React from "react";
-import { Router, Head, withSiteData } from "react-static";
-import { hot } from "react-hot-loader";
+import { Root, Routes, Head, withSiteData } from "react-static";
 
-import Routes from "react-static-routes";
 import Header from "./header/Header";
 import Footer from "./footer/Footer";
 import constants from "../lib/constants.json";
@@ -55,7 +53,7 @@ class App extends React.Component {
     const { siteData } = this.props;
 
     return (
-      <Router>
+      <Root>
         <React.Fragment>
           <Head>
             <title>{constants.siteMeta.title}</title>
@@ -77,9 +75,9 @@ class App extends React.Component {
           </main>
           <Footer />
         </React.Fragment>
-      </Router>
+      </Root>
     );
   }
 }
 
-export default hot(module)(withSiteData(App));
+export default withSiteData(App);

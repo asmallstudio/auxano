@@ -1,5 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import { AppContainer } from "react-hot-loader";
 
 // Your top level component
 import App from "./components/App";
@@ -16,9 +17,20 @@ if (typeof document !== "undefined") {
     ? ReactDOM.render
     : ReactDOM.hydrate || ReactDOM.render;
   const render = Comp => {
-    renderMethod(<Comp />, document.getElementById("root"));
+    renderMethod(
+      <AppContainer>
+        <Comp />
+      </AppContainer>,
+      document.getElementById("root")
+    );
   };
 
   // Render!
   render(App);
+  // Hot Module Replacement
+  if (module.hot) {
+    module.hot.accept("./components/App", () =>
+      render(require("./components/App").default)
+    );
+  }
 }
