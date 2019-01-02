@@ -173,6 +173,7 @@
     width: 4rem;
     object-fit: contain;
     filter: grayscale(100%) opacity(75%);
+    background-color: var(--white);
     padding: var(--space-l1);
     border: 1px solid var(--grey-40);
     border-radius: 0.5rem;
