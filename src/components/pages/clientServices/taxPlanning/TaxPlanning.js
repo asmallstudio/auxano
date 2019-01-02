@@ -12,7 +12,7 @@ import styles from "./taxPlanning.scss";
 import FullWidthSectionActionLink from "../../../ui/fullWidthSectionActionLink/FullWidthSectionActionLink";
 import SubscribeSection from "../../../ui/subscribeSection/SubscribeSection";
 
-class Other extends React.Component {
+class TaxPlanning extends React.Component {
   constructor(props) {
     super(props);
   }
@@ -36,7 +36,11 @@ class Other extends React.Component {
             )}
           />
         </Head>
-        <section className={`container ${styles.indexLinkContainer}`}>
+        <section
+          className={`container ${styles.indexLinkContainer} ${
+            styles.dingusDotContainer
+          }`}
+        >
           <div className="row">
             <div className="col-xs-12">
               <Link
@@ -47,12 +51,9 @@ class Other extends React.Component {
               </Link>
             </div>
           </div>
+          <div className={styles.dingusDot1} />
         </section>
-        <section
-          className={`container--fluid ${styles.dingusDotContainer} ${
-            styles.heroContainer
-          } dg-hero`}
-        >
+        <section className={`container--fluid ${styles.heroContainer} dg-hero`}>
           <div className="container">
             <div className="row">
               <div className={`col-xs-12 col-md-8 ${styles.heroTextContainer}`}>
@@ -60,7 +61,6 @@ class Other extends React.Component {
                 <p className="style-as-h1">{taxPlanning.hero.title}</p>
               </div>
             </div>
-            <div className={styles.dingusDot1} />
           </div>
         </section>
         <section className="dg-serviceInfo">
@@ -141,4 +141,4 @@ class Other extends React.Component {
   }
 }
 
-export default withSiteAndRouteData(Other);
+export default withSiteAndRouteData(TaxPlanning);
