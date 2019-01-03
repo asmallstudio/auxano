@@ -2,23 +2,17 @@ import React from "react";
 import { Link } from "@reach/router";
 
 class AmbiLink extends React.Component {
-  parseTo(to) {
-    const parser = document.createElement("a");
-    parser.href = to;
-    return parser;
-  }
-
-  isInternal(toLocation) {
-    return window.location.host === toLocation.host;
+  isInternal(to) {
+    if (typeof to !== "string") return true;
+    return !to.match(/^#/) && !to.match(/^[a-z]{1,10}:\/\//);
   }
 
   render() {
     const { to, children, ...rest } = this.props;
-    const toLocation = this.parseTo(to);
-    const isInternal = this.isInternal(toLocation);
+    const isInternal = this.isInternal(to);
     if (isInternal) {
       return (
-        <Link to={toLocation.pathname} {...rest}>
+        <Link to={to} {...rest}>
           {children}
         </Link>
       );
