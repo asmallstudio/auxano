@@ -38,7 +38,7 @@ class BusinessServices extends React.Component {
           />
         </Head>
         <section
-          className={`container ${styles.indexLinkContainer}  ${
+          className={`container ${styles.indexLinkContainer} ${
             styles.dingusDotContainer
           }`}
         >
@@ -52,9 +52,13 @@ class BusinessServices extends React.Component {
               </Link>
             </div>
           </div>
-          <div className={styles.dingusDot1} />
+          <div className={`${styles.dingusDot1} hidden-md-up`} />
         </section>
-        <section className={`container--fluid ${styles.heroContainer} dg-hero`}>
+        <section
+          className={`container--fluid ${styles.heroContainer} ${
+            styles.dingusDotContainer
+          } dg-hero`}
+        >
           <div className="container">
             <div className="row">
               <div className={`col-xs-12 col-md-8 ${styles.heroTextContainer}`}>
@@ -62,6 +66,7 @@ class BusinessServices extends React.Component {
                 <p className="style-as-h1">{businessServices.hero.title}</p>
               </div>
             </div>
+            <div className={`${styles.dingusDot1} hidden-md-down`} />
           </div>
         </section>
         <section className="container dg-serviceInfo">

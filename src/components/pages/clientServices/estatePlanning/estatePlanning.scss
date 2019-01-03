@@ -52,11 +52,6 @@ a.indexLink {
   color: var(--grey);
   text-decoration: none;
 
-  @include respond-above(lg) {
-    position: relative;
-    left: -0.4em;
-  }
-
   &::before {
     transition: transform 0.3s ease-out;
     content: "";

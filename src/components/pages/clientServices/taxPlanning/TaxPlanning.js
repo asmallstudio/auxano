@@ -51,9 +51,13 @@ class TaxPlanning extends React.Component {
               </Link>
             </div>
           </div>
-          <div className={styles.dingusDot1} />
+          <div className={`${styles.dingusDot1} hidden-md-up`} />
         </section>
-        <section className={`container--fluid ${styles.heroContainer} dg-hero`}>
+        <section
+          className={`container--fluid ${styles.heroContainer} ${
+            styles.dingusDotContainer
+          } dg-hero`}
+        >
           <div className="container">
             <div className="row">
               <div className={`col-xs-12 col-md-8 ${styles.heroTextContainer}`}>
@@ -62,6 +66,7 @@ class TaxPlanning extends React.Component {
               </div>
             </div>
           </div>
+          <div className={`${styles.dingusDot1} hidden-md-down`} />
         </section>
         <section className="dg-serviceInfo">
           <div className={`container--fluid ${styles.serviceInfoContainer}`}>
