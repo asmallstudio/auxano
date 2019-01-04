@@ -83,18 +83,23 @@ const sanitizeString = string => {
 };
 
 /**
+ * Create date string from JS date instance
+ * @param {object} date JS date instance
+ * @returns {string} YYYY-MM-DD string
+ */
+const formatDateObjectToYYYYMMDD = date => {
+  return [date.getFullYear(), date.getMonth() + 1, date.getDate()].join("-"); // getMonth() is 0 based index
+};
+
+/**
  * Create slug from title and date
  * @returns {string} URL safe slug
  */
 const createSlugFromTitleAndDate = data => {
   const { title, date } = data;
 
-  function formatDate(momentDate) {
-    return momentDate.format("YYYY-MM-DD");
-  }
-
-  const momentDate = createMomentObjectFromLLLDateString(date);
-  const formattedDate = formatDate(momentDate);
+  const dateObj = new Date(date);
+  const formattedDate = formatDateObjectToYYYYMMDD(dateObj);
   const sanitizedTitle = sanitizeString(title);
 
   return `${formattedDate}-${sanitizedTitle}`;
