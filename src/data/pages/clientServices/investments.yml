@@ -50,10 +50,24 @@ infoTable:
       management
     tableRowHead: Financial Planning
 serviceList:
-  description: Placeholder description
+  description: >-
+    Our Offerings
+
+
+    Thanks to our extensive history in investment management, we can provide you
+    with access to some of the most experienced institutional managers, both
+    traditional and nontraditional. These relationships often enable us to
+    obtain institutional pricing—savings we pass along to you. Look to us for:
   items:
-    - Service 1
-    - Service 2
+    - Alternative Investment Strategies
+    - Cash Management
+    - Private Equity
+    - Public Equity
+    - Real Assets
+    - Real Estate
+    - Strategic Asset Allocation
+    - Taxable & Municipal Bond Management
+    - Venture Capital
 serviceInfo:
   list:
     - icon: /uploads/target.svg
