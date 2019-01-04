@@ -49,16 +49,18 @@ infoTable:
       Taking a long-term view, applying wisdom and prudence to debt and risk
       management
     tableRowHead: Financial Planning
+serviceList:
+  description: Placeholder description
+  items:
+    - Service 1
+    - Service 2
 serviceInfo:
   list:
-    item1:
-      icon: /uploads/target.svg
+    - icon: /uploads/target.svg
       text: 'Build portfolios based on your values, goals and risk profile'
-    item2:
-      icon: /uploads/adjust.svg
+    - icon: /uploads/adjust.svg
       text: Monitor your portfolio and make adjustments
-    item3:
-      icon: /uploads/explore.svg
+    - icon: /uploads/explore.svg
       text: Explore equity risk management strategies
 actionBanner:
   link: ''

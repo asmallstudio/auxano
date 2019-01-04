@@ -84,6 +84,10 @@ collections:
                   - label: "Subheading"
                     name: text
                     widget: text
+              - label: "Compliance Info"
+                name: complianceInfo
+                widget: markdown
+                buttons: ["bold", "italic", "link"]
       - label: "Home Page"
         name: home
         file: src/data/pages/home.yml
@@ -825,44 +829,32 @@ collections:
                   - label: "Cell 2"
                     name: tableCell2
                     widget: text
+          - label: "Service List"
+            name: serviceList
+            widget: object
+            fields:
+              - label: "Description"
+                name: description
+                widget: text
+              - label: "List"
+                name: items
+                allow_add: true
+                widget: list
           - label: "Service Information"
             name: serviceInfo
             widget: object
             fields:
               - label: "Description List"
                 name: list
-                widget: object
+                widget: list
+                allow_add: false
                 fields:
-                  - label: "List Item 1"
-                    name: item1
-                    widget: object
-                    fields:
-                      - label: "Icon"
-                        name: icon
-                        widget: image
-                      - label: "Text"
-                        name: text
-                        widget: string
-                  - label: "List Item 2"
-                    name: item2
-                    widget: object
-                    fields:
-                      - label: "Icon"
-                        name: icon
-                        widget: image
-                      - label: "Text"
-                        name: text
-                        widget: string
-                  - label: "List Item 3"
-                    name: item3
-                    widget: object
-                    fields:
-                      - label: "Icon"
-                        name: icon
-                        widget: image
-                      - label: "Text"
-                        name: text
-                        widget: string
+                  - label: "Icon"
+                    name: icon
+                    widget: image
+                  - label: "Text"
+                    name: text
+                    widget: string
           - label: "Action Banner"
             name: actionBanner
             widget: object
@@ -1206,9 +1198,15 @@ collections:
               - label: "Title"
                 name: title
                 widget: string
-              - label: "Description"
-                name: description
+              - label: "Heading"
+                name: heading
                 widget: string
+              - label: "Description 1"
+                name: description1
+                widget: text
+              - label: "Description 2"
+                name: description2
+                widget: text
           - label: "Service Information"
             name: serviceInfoList
             widget: list

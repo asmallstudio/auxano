@@ -241,6 +241,21 @@ a.indexLink {
   }
 }
 
+.serviceList {
+  margin: var(--space-l5) 0;
+
+  ul {
+    padding-left: 1em;
+  }
+
+  li {
+    font-size: 1.125rem;
+    padding-left: 0.35em;
+    color: var(--grey);
+    margin-bottom: 0.5em;
+  }
+}
+
 .serviceInfoRow {
   align-items: center;
   margin: var(--space-l5) 0;

@@ -1,5 +1,6 @@
 import React from "react";
 import { withSiteData } from "react-static";
+import Markdown from "react-markdown";
 import BackToTopIcon from "./BackToTopIcon";
 import constants from "../../lib/constants.json";
 
@@ -41,14 +42,6 @@ const Footer = props => {
               <li>
                 <AmbiLink to="/contact" activeClassName={styles.activeLink}>
                   Contact
-                </AmbiLink>
-              </li>
-              <li>
-                <AmbiLink
-                  to="/privacy-terms"
-                  activeClassName={styles.activeLink}
-                >
-                  Privacy & Terms
                 </AmbiLink>
               </li>
             </ul>
@@ -113,6 +106,18 @@ const Footer = props => {
               Back to Top <BackToTopIcon className={styles.backToTopIcon} />
             </AmbiLink>
           </span>
+        </div>
+      </div>
+
+      <div className={`container ${styles.footerRow}`}>
+        <div
+          className={`col-xs-12 ${styles.infoContainer} ${
+            styles.complianceInfo
+          }`}
+        >
+          <div className={`N2 ${styles.complianceInfo}`}>
+            <Markdown source={siteData.complianceInfo} />
+          </div>
         </div>
       </div>
     </footer>

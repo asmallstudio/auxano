@@ -148,6 +148,18 @@ class Investments extends React.Component {
             </tbody>
           </table>
         </section>
+        <section className="container dg-serviceList">
+          <div className={`row ${styles.serviceList}`}>
+            <div className="col-xs-12">
+              <p>{investments.serviceList.description}</p>
+              <ul>
+                {investments.serviceList.items.map((item, i) => (
+                  <li key={i}>{item}</li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </section>
         <section className="container dg-serviceInfo">
           <div className={styles.serviceInfoRow}>
             <ul className={`row ${styles.serviceInfoList}`}>
@@ -156,30 +168,30 @@ class Investments extends React.Component {
               >
                 <img
                   className={`${styles.serviceInfoListItemImage}`}
-                  src={investments.serviceInfo.list.item1.icon}
+                  src={investments.serviceInfo.list[0].icon}
                   alt=""
                 />
-                <p>{investments.serviceInfo.list.item1.text}</p>
+                <p>{investments.serviceInfo.list[0].text}</p>
               </li>
               <li
                 className={`col-xs-12 col-md-4 ${styles.serviceInfoListItem}`}
               >
                 <img
                   className={`${styles.serviceInfoListItemImage}`}
-                  src={investments.serviceInfo.list.item2.icon}
+                  src={investments.serviceInfo.list[1].icon}
                   alt=""
                 />
-                <p>{investments.serviceInfo.list.item2.text}</p>
+                <p>{investments.serviceInfo.list[1].text}</p>
               </li>
               <li
                 className={`col-xs-12 col-md-4 ${styles.serviceInfoListItem}`}
               >
                 <img
                   className={`${styles.serviceInfoListItemImage}`}
-                  src={investments.serviceInfo.list.item3.icon}
+                  src={investments.serviceInfo.list[2].icon}
                   alt=""
                 />
-                <p>{investments.serviceInfo.list.item3.text}</p>
+                <p>{investments.serviceInfo.list[2].text}</p>
               </li>
             </ul>
           </div>
