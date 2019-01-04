@@ -25,14 +25,6 @@ const pickFirstAvailableString = (...stringArgs) =>
   stringArgs.find(hasTextValue);
 
 /**
- * Convert date string to moment object
- * @param {string} LLLDateString Date string in LLL format
- * @returns {object} Moment object
- */
-const createMomentObjectFromLLLDateString = LLLDateString =>
-  moment(LLLDateString, "LLL");
-
-/**
  * Create complete page title
  * @param {string} title Page title
  * @returns Full page title
