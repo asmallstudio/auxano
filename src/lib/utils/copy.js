@@ -1,5 +1,3 @@
-import moment from "moment";
-
 import constants from "../constants.json";
 /**
  * Strips phone number string of all but + symbold and digits
