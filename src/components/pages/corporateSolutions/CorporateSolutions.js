@@ -44,7 +44,9 @@ class corporateSolutions extends React.Component {
             <div className="row">
               <div className={`col-xs-12 col-md-8 ${styles.heroTextContainer}`}>
                 <h1>{corporateSolutions.hero.title}</h1>
-                <p>{corporateSolutions.hero.description}</p>
+                <h2>{corporateSolutions.hero.heading}</h2>
+                <p>{corporateSolutions.hero.description1}</p>
+                <p>{corporateSolutions.hero.description2}</p>
               </div>
             </div>
             <div className={styles.dingusDot1} />

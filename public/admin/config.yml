@@ -1209,9 +1209,15 @@ collections:
               - label: "Title"
                 name: title
                 widget: string
-              - label: "Description"
-                name: description
+              - label: "Heading"
+                name: heading
                 widget: string
+              - label: "Description 1"
+                name: description1
+                widget: text
+              - label: "Description 2"
+                name: description2
+                widget: text
           - label: "Service Information"
             name: serviceInfoList
             widget: list
