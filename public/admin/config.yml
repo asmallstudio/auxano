@@ -84,6 +84,9 @@ collections:
                   - label: "Subheading"
                     name: text
                     widget: text
+              - label: "Compliance Info"
+                name: complianceInfo
+                widget: text
       - label: "Home Page"
         name: home
         file: src/data/pages/home.yml
