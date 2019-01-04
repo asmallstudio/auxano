@@ -40,6 +40,8 @@
 
 .logo {
   display: block;
+  height: auto;
+  max-width: 80%;
 }
 
 .definition {
@@ -54,23 +56,28 @@
 
 .text {
   width: 100%;
-  padding-bottom: var(--space-l5);
   margin-top: var(--space-l3);
 
   @include respond-above(lg) {
-    padding-bottom: 0;
+    // padding-bottom: var(--space-l5);
+    // padding-bottom: 0;
   }
 
   h1 {
     color: var(--white);
+    font-size: 2.25rem;
     white-space: pre-line;
-    max-width: 40rem;
+    max-width: 35rem;
 
     &::after {
       content: "\00ae"; // Registered mark.
       font-size: 0.375em;
       vertical-align: super;
     }
+  }
+
+  @include respond-above(md) {
+    font-size: 2.5rem;
   }
 
   p {

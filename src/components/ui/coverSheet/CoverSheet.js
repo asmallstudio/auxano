@@ -45,8 +45,8 @@ class CoverSheet extends React.Component {
             <div>
               <AuxanoLogoWhite
                 alt="Auxano Advisors"
-                height="70"
-                width="182.21"
+                height="128"
+                width="333.17"
                 className={styles.logo}
               />
               <p className={styles.definition}>
