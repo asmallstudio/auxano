@@ -86,7 +86,8 @@ collections:
                     widget: text
               - label: "Compliance Info"
                 name: complianceInfo
-                widget: text
+                widget: markdown
+                buttons: ["bold", "italic", "link"]
       - label: "Home Page"
         name: home
         file: src/data/pages/home.yml
