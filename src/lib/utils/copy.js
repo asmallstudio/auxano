@@ -1,5 +1,3 @@
-import moment from "moment";
-
 import constants from "../constants.json";
 /**
  * Strips phone number string of all but + symbold and digits
@@ -25,14 +23,6 @@ const pickFirstAvailableString = (...stringArgs) =>
   stringArgs.find(hasTextValue);
 
 /**
- * Convert date string to moment object
- * @param {string} LLLDateString Date string in LLL format
- * @returns {object} Moment object
- */
-const createMomentObjectFromLLLDateString = LLLDateString =>
-  moment(LLLDateString, "LLL");
-
-/**
  * Create complete page title
  * @param {string} title Page title
  * @returns Full page title
@@ -40,13 +30,34 @@ const createMomentObjectFromLLLDateString = LLLDateString =>
 const getFullPageTitle = title => `${title} | ${constants.siteMeta.title}`;
 
 /**
- * Create from now copy from date string
- * @param {string} LLLDateString Date string in LLL format
- * @returns {string} From now string
+ * Create a relative (e.g. 3 days ago) date string from current and previous date
+ * @param {string} dateString Date string, parsable by Date.parse()
+ * @returns {string} Relative date string
  */
-const formatDateStringToFromNow = LLLDateString => {
-  const momentDate = createMomentObjectFromLLLDateString(LLLDateString);
-  return momentDate.fromNow();
+const formatRelativeDateString = dateString => {
+  // Demo: https://jsfiddle.net/shooter/YXUwF/
+  const current = Date.now();
+  const previous = Date.parse(dateString);
+  const msPerMinute = 60 * 1000;
+  const msPerHour = msPerMinute * 60;
+  const msPerDay = msPerHour * 24;
+  const msPerMonth = msPerDay * 30;
+  const msPerYear = msPerDay * 365;
+
+  const elapsed = current - previous;
+
+  if (elapsed < msPerMinute) {
+    return `${Math.round(elapsed / 1000)} seconds ago`;
+  } else if (elapsed < msPerHour) {
+    return `${Math.round(elapsed / msPerMinute)} minutes ago`;
+  } else if (elapsed < msPerDay) {
+    return `${Math.round(elapsed / msPerHour)} hours ago`;
+  } else if (elapsed < msPerMonth) {
+    return `${Math.round(elapsed / msPerDay)} days ago`;
+  } else if (elapsed < msPerYear) {
+    return `${Math.round(elapsed / msPerMonth)} months ago`;
+  }
+  return `${Math.round(elapsed / msPerYear)} years ago`;
 };
 
 /**
@@ -62,18 +73,23 @@ const sanitizeString = string => {
 };
 
 /**
+ * Create date string from JS date instance
+ * @param {object} date JS date instance
+ * @returns {string} YYYY-MM-DD string
+ */
+const formatDateObjectToYYYYMMDD = date => {
+  return [date.getFullYear(), date.getMonth() + 1, date.getDate()].join("-"); // getMonth() is 0 based index
+};
+
+/**
  * Create slug from title and date
  * @returns {string} URL safe slug
  */
 const createSlugFromTitleAndDate = data => {
   const { title, date } = data;
 
-  function formatDate(momentDate) {
-    return momentDate.format("YYYY-MM-DD");
-  }
-
-  const momentDate = createMomentObjectFromLLLDateString(date);
-  const formattedDate = formatDate(momentDate);
+  const dateObj = new Date(date);
+  const formattedDate = formatDateObjectToYYYYMMDD(dateObj);
   const sanitizedTitle = sanitizeString(title);
 
   return `${formattedDate}-${sanitizedTitle}`;
@@ -92,7 +108,7 @@ export {
   phoneNumberUnformat,
   pickFirstAvailableString,
   getFullPageTitle,
-  formatDateStringToFromNow,
+  formatRelativeDateString,
   createSlugFromTitleAndDate,
   createSlugFromTitle
 };
