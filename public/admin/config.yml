@@ -112,10 +112,14 @@ collections:
               - label: "Call to Action Link"
                 name: ctaLink
                 widget: string
+          - label: Definition
+            name: definition
+            widget: markdown
+            buttons: ["bold", "italic"]
           - label: Pullquote
             name: pullquote
             widget: markdown
-            buttons: ["bold", "italic", "link"]
+            buttons: ["bold", "italic"]
           - label: "Callouts"
             name: callouts
             widget: object
