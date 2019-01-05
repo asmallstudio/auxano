@@ -49,14 +49,6 @@ class CoverSheet extends React.Component {
                 width="333.17"
                 className={styles.logo}
               />
-              <p className={styles.definition}>
-                auxano&nbsp;
-                <span className={styles.defineItalic}>
-                  (aux &bull; ah &bull; no):&nbsp;
-                  <br />
-                </span>
-                to bring growth or increase
-              </p>
             </div>
             <div className={styles.text}>
               <h1>{hero}</h1>

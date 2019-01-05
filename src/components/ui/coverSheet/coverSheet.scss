@@ -44,24 +44,9 @@
   max-width: 80%;
 }
 
-.definition {
-  font-size: 1rem;
-  color: var(--white);
-  padding-top: var(--space-l2);
-}
-
-.defineItalic {
-  font-style: italic;
-}
-
 .text {
   width: 100%;
   margin-top: var(--space-l3);
-
-  @include respond-above(lg) {
-    // padding-bottom: var(--space-l5);
-    // padding-bottom: 0;
-  }
 
   h1 {
     color: var(--white);

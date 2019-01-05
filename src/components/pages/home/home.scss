@@ -85,23 +85,11 @@
   }
 }
 
-.filler {
-  width: 100%;
-  height: 400px;
-  background-color: var(--filler-bg);
-}
-
-.pullquote {
-  margin: var(--space-l5) 0;
+section.pullquote {
+  background-color: var(--grey-10);
 
   p {
-    hyphens: auto;
-    text-align: center;
-
-    @include respond-above(md) {
-      hyphens: manual;
-      text-align: left;
-    }
+    color: var(--grey);
   }
 }
 
