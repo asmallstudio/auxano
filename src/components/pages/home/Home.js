@@ -46,7 +46,14 @@ class Home extends React.Component {
             </div>
           </div>
         </div>
-        <FullWidthSectionText text={home.pullquote} className="dg-pullquote" />
+        <FullWidthSectionText
+          text={home.definition}
+          className="dg-definition"
+        />
+        <FullWidthSectionText
+          text={home.pullquote}
+          className={`${styles.pullquote} dg-pullquote`}
+        />
         <section className="container dg-services">
           <div className={`${styles.threecols} row`}>
             <OneThirdColumn data={home.callouts.item1} className="dg-item1" />
