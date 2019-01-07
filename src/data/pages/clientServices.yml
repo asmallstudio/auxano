@@ -49,8 +49,9 @@ services:
     icon: /uploads/business-services.svg
     link: /client-services/business-services/
     text: >-
-      We offer a wide range of services to business owners. Contact us to find
-      out how we can help your business plan for the future. 
+      Business owners have unique needs and complexities related to their
+      business.  Contact us to find out how we can help you and your business
+      plan for the future.
   item7:
     heading: Charitable Giving
     icon: /uploads/giving.svg
