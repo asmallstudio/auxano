@@ -1,19 +1,19 @@
-pageTitle: "Business Services | Client Services"
-pageDescription: ""
+pageTitle: Business Services | Client Services
+pageDescription: ''
 hero:
-  name: "Business Services"
-  title: "We offer a wide range of services to business owners."
+  name: Business Services
+  title: We understand and guide business owners through a myriad of complex issues.
 serviceInfoList:
-  item1: "Valuation Maximization & Exit Strategies"
-  item2: "Succession Planning"
-  item3: "Sales of Businesses"
-  item4: "Optimization of Tax Structure"
-  item5: "Company Benefits Offering"
-  item6: "Retirement Plans"
-pullquote: "Contact us to find out how we can help your business plan for the future."
+  item1: Valuation Maximization & Exit Strategies
+  item2: Succession Planning
+  item3: Consult on Sale of Business
+  item4: Optimization of Tax Structure
+  item5: Company Benefit Programs
+  item6: Corporate Retirement Plans
+pullquote: Contact us to find out how we can help your business plan for the future.
 actionBanner:
-  link: ""
-  text: ""
+  link: ''
+  text: ''
 subscribe:
-  heading: ""
-  text: ""
+  heading: ''
+  text: ''
