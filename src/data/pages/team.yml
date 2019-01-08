@@ -236,6 +236,7 @@ members:
     email: 'davis@auxanoadvisors.com '
     extension: ''
     image: /uploads/davis.jpg
+    isStrategicPartner: false
     positions:
       - Associate Client Advisor
     qualifications:
