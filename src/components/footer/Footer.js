@@ -44,6 +44,14 @@ const Footer = props => {
                   Contact
                 </AmbiLink>
               </li>
+              <li>
+                <AmbiLink
+                  to="/privacy-terms"
+                  activeClassName={styles.activeLink}
+                >
+                  Privacy & Terms
+                </AmbiLink>
+              </li>
             </ul>
           </nav>
         </div>

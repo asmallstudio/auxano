@@ -49,6 +49,7 @@ const createRoutes = async () => {
   const team = getSingleFileYaml("./src/data/pages/team.yml");
   team.members = createSlugsForArray(team.members, createSlugFromTitle);
   const contact = getSingleFileYaml("./src/data/pages/contact.yml");
+  const privacyTerms = getSingleFileYaml("./src/data/pages/privacyTerms.yml");
 
   return [
     {
@@ -189,6 +190,13 @@ const createRoutes = async () => {
       component: "src/components/pages/contact/Contact",
       getData: () => ({
         contact
+      })
+    },
+    {
+      path: "/privacy-terms",
+      component: "src/components/pages/privacyTerms/PrivacyTerms",
+      getData: () => ({
+        privacyTerms
       })
     }
   ];
