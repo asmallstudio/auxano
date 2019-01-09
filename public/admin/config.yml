@@ -1360,6 +1360,25 @@ collections:
                 widget: markdown
                 default: ""
                 required: true
+      - label: "Disclosures"
+        name: team
+        file: src/data/pages/disclosures.yml
+        path: /disclosures
+        fields:
+          - label: "Page Title"
+            name: pageTitle
+            widget: string
+          - label: "Page Description"
+            name: pageDescription
+            required: false
+            hint: "(For SEO purposes.) Describes the content of the page. This is visible in search results."
+            widget: text
+          - label: "Header"
+            name: title
+            widget: string
+          - label: "Content"
+            name: content
+            widget: markdown
   - label: News Article
     name: news
     folder: src/data/news
