@@ -19,13 +19,6 @@ infoSection:
     src: /uploads/community.jpg
   items:
     - desc: >-
-        Dementia Alliance of North Carolina provides education, support and
-        services to individuals with dementia, their families, healthcare
-        professionals and the general public while raising awareness and funding
-        research.
-      logo: /uploads/dementia-alliance-of-north-carolina.jpg
-      name: Dementia Alliance of North Carolina
-    - desc: >-
         Agros’ mission is to see rural, poor families of Central America own
         agricultural land, attain economic self-sufficiency, realize their
         God-given potential, and pass on to future generations the values and
@@ -55,6 +48,13 @@ infoSection:
         raise awareness and funds for Alzheimer’s care, support and research. 
       logo: /uploads/walk-to-end-alzheimers.jpg
       name: Pacific Northwest Walk to End Alzheimer’s
+    - desc: >-
+        Dementia Alliance of North Carolina provides education, support and
+        services to individuals with dementia, their families, healthcare
+        professionals and the general public while raising awareness and funding
+        research.
+      logo: /uploads/dementia-alliance-of-north-carolina.jpg
+      name: Dementia Alliance of North Carolina
   text: >-
     Because stewardship is fundamental to our culture, we encourage our team to
     invest their time, talent and treasure into making a positive impact within
