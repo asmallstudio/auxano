@@ -32,8 +32,11 @@ collections:
                   - label: "Contact Email"
                     name: email
                     widget: string
-                  - label: "Contact Phone"
-                    name: phone
+                  - label: "Office Phone"
+                    name: phone1
+                    widget: string
+                  - label: "Toll-free Phone"
+                    name: phone2
                     widget: string
                   - label: "Address"
                     name: address
@@ -54,6 +57,20 @@ collections:
                       - label: "Zipcode"
                         name: zipcode
                         widget: string
+              - label: Footer Navigation
+                name: footerNav
+                widget: list
+                allow_add: true
+                fields:
+                  - { label: Title, name: title, widget: string }
+                  - { label: Link, name: link, widget: string }
+              - label: Header Navigation
+                name: headerNav
+                widget: list
+                allow_add: true
+                fields:
+                  - { label: Title, name: title, widget: string }
+                  - { label: Link, name: link, widget: string }
               - label: "Cover Sheet"
                 name: coverSheet
                 widget: object
@@ -448,6 +465,9 @@ collections:
               - label: Title
                 name: title
                 widget: string
+              - label: Parking Info
+                name: parkingInfo
+                widget: text
           - label: "Image Divider"
             name: imageDivider
             widget: object

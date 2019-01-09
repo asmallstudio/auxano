@@ -90,10 +90,18 @@ const Footer = props => {
             </li>
             <li>
               <a
-                href={`tel:${phoneNumberUnformat(siteData.companyInfo.phone)}`}
+                href={`tel:${phoneNumberUnformat(siteData.companyInfo.phone1)}`}
                 itemProp="telephone"
               >
-                {siteData.companyInfo.phone}
+                {siteData.companyInfo.phone1}
+              </a>
+            </li>
+            <li>
+              <a
+                href={`tel:${phoneNumberUnformat(siteData.companyInfo.phone2)}`}
+                itemProp="telephone"
+              >
+                {siteData.companyInfo.phone2}
               </a>
             </li>
           </ul>

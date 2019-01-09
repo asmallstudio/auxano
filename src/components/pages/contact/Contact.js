@@ -240,14 +240,24 @@ const Contact = props => {
                   </a>
                 </div>
                 <div className={styles.contactInfoSection}>
-                  <h3 className="sr-text">Phone</h3>
+                  <h3 className="sr-text">Office Phone</h3>
                   <a
                     href={`tel:${phoneNumberUnformat(
-                      siteData.companyInfo.phone
+                      siteData.companyInfo.phone1
                     )}`}
                     itemProp="telephone"
                   >
-                    {siteData.companyInfo.phone}
+                    {siteData.companyInfo.phone1}
+                  </a>
+                  <br />
+                  <h3 className="sr-text">Toll-free Phone</h3>
+                  <a
+                    href={`tel:${phoneNumberUnformat(
+                      siteData.companyInfo.phone2
+                    )}`}
+                    itemProp="telephone"
+                  >
+                    {siteData.companyInfo.phone2}
                   </a>
                 </div>
                 <div className={styles.contactInfoSection}>
