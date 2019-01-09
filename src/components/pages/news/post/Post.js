@@ -6,6 +6,7 @@ import { pageChange } from "../../../../lib/utils/pageChange";
 import { getFullPageTitle } from "../../../../lib/utils/copy";
 
 import Markdown from "react-markdown";
+import ReactMarkdownLink from "../../../ui/reactMarkdownLink/ReactMarkdownLink";
 import styles from "./post.scss";
 
 class Post extends React.Component {
@@ -42,7 +43,9 @@ class Post extends React.Component {
               }`}
             >
               <h1>{post.title}</h1>
-              <Markdown>{post.body}</Markdown>
+              <Markdown renderers={{ link: ReactMarkdownLink }}>
+                {post.body}
+              </Markdown>
             </article>
           </div>
         </div>

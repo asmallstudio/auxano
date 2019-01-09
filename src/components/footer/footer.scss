@@ -28,7 +28,10 @@
 .footerRow {
   display: flex;
   flex-direction: column;
-  margin: 0 auto;
+
+  &:global(.container) {
+    margin: 0 auto var(--space-l2);
+  }
 
   @include respond-above(md) {
     flex-direction: row;
@@ -70,13 +73,15 @@
   }
 
   .complianceInfo {
-    margin-top: var(--space-l3);
-
     p {
       font-size: 0.9375rem;
       line-height: 1.2;
       padding: 0;
       margin-bottom: var(--space-l1);
+
+      a {
+        color: var(--grey-40);
+      }
     }
   }
 

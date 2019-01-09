@@ -287,6 +287,9 @@ const Contact = props => {
                   </p>
                 </div>
               </address>
+              <p className={styles.contactInfoSection}>
+                {contact.info.parkingInfo}
+              </p>
               <section className={`col-xs-12 ${styles.mapSection}`} />
               <div
                 className={`${styles.contactInfoSection} ${

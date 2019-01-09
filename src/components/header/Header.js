@@ -99,6 +99,7 @@ class Header extends React.Component {
   }
 
   render() {
+    const { siteData } = this.props;
     const { menuHidden } = this.state;
 
     return (
@@ -117,55 +118,18 @@ class Header extends React.Component {
               aria-expanded={menuHidden ? "false" : "true"}
               {...menuHidden && { hidden: true }}
             >
-              <li className="style-as-h3">
-                <NavLink
-                  to="/about-us"
-                  activeClassName={styles.activeLink}
-                  onClick={this._menuClose}
-                  exact
-                >
-                  About Us
-                </NavLink>
-              </li>
-              <li className="style-as-h3">
-                <NavLink
-                  to="/our-approach"
-                  activeClassName={styles.activeLink}
-                  onClick={this._menuClose}
-                  exact
-                >
-                  Our Approach
-                </NavLink>
-              </li>
-              <li className="style-as-h3">
-                <NavLink
-                  to="/client-services"
-                  activeClassName={styles.activeLink}
-                  onClick={this._menuClose}
-                  exact
-                >
-                  Client Services
-                </NavLink>
-              </li>
-              <li className="style-as-h3">
-                <NavLink
-                  to="/corporate-solutions"
-                  activeClassName={styles.activeLink}
-                  onClick={this._menuClose}
-                  exact
-                >
-                  Corporate Solutions
-                </NavLink>
-              </li>
-              <li className="style-as-h3">
-                <NavLink
-                  to="/contact"
-                  activeClassName={styles.activeLink}
-                  onClick={this._menuClose}
-                >
-                  Contact
-                </NavLink>
-              </li>
+              {siteData.headerNav.map((navItem, i) => (
+                <li key={i} className="style-as-h3">
+                  <NavLink
+                    to={navItem.link}
+                    activeClassName={styles.activeLink}
+                    onClick={this._menuClose}
+                    exact
+                  >
+                    {navItem.title}
+                  </NavLink>
+                </li>
+              ))}
               <FullWidthSectionActionLink
                 className={styles.bottomMenuLink}
                 linkText="Schedule a meeting"

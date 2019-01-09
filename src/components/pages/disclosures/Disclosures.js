@@ -8,24 +8,24 @@ import {
 } from "../../../lib/utils/copy";
 
 import Markdown from "react-markdown";
-import styles from "./privacyTerms.scss";
+import styles from "./disclosures.scss";
 
-class PrivacyTerms extends React.Component {
+class Disclosures extends React.Component {
   componentDidMount() {
     pageChange();
   }
 
   render() {
-    const { privacyTerms, siteData } = this.props;
+    const { disclosures, siteData } = this.props;
 
     return (
       <React.Fragment>
         <Head>
-          <title>{getFullPageTitle(privacyTerms.pageTitle)}</title>
+          <title>{getFullPageTitle(disclosures.pageTitle)}</title>
           <meta
             name="description"
             content={pickFirstAvailableString(
-              privacyTerms.pageDescription,
+              disclosures.pageDescription,
               siteData.siteDescription
             )}
           />
@@ -33,9 +33,9 @@ class PrivacyTerms extends React.Component {
         <div className={`container ${styles.articleContainer}`}>
           <div className="row">
             <article className="col-xs-12">
-              <h1 className={styles.articleTitle}>{privacyTerms.title}</h1>
+              <h1 className={styles.articleTitle}>{disclosures.title}</h1>
               <div className={styles.articleContent}>
-                <Markdown>{privacyTerms.content}</Markdown>
+                <Markdown>{disclosures.content}</Markdown>
               </div>
             </article>
           </div>
@@ -45,4 +45,4 @@ class PrivacyTerms extends React.Component {
   }
 }
 
-export default withSiteAndRouteData(PrivacyTerms);
+export default withSiteAndRouteData(Disclosures);

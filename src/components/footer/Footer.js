@@ -9,6 +9,10 @@ import AmbiLink from "../ui/ambiLink/AmbiLink";
 
 import styles from "./footer.scss";
 
+const ReactMarkdownLink = props => (
+  <AmbiLink to={props.href}>{props.children}</AmbiLink>
+);
+
 const Footer = props => {
   const { siteData } = props;
   return (
@@ -24,34 +28,11 @@ const Footer = props => {
           <nav>
             <h3 className="sr-text">Site Navigation</h3>
             <ul className={`N2 ${styles.linkList}`}>
-              <li>
-                <AmbiLink to="/team" activeClassName={styles.activeLink}>
-                  Our Team
-                </AmbiLink>
-              </li>
-              <li>
-                <AmbiLink to="/news" activeClassName={styles.activeLink} exact>
-                  News & Resources
-                </AmbiLink>
-              </li>
-              <li>
-                <AmbiLink to="/careers" activeClassName={styles.activeLink}>
-                  Careers
-                </AmbiLink>
-              </li>
-              <li>
-                <AmbiLink to="/contact" activeClassName={styles.activeLink}>
-                  Contact
-                </AmbiLink>
-              </li>
-              <li>
-                <AmbiLink
-                  to="/privacy-terms"
-                  activeClassName={styles.activeLink}
-                >
-                  Privacy & Terms
-                </AmbiLink>
-              </li>
+              {siteData.footerNav.map((navItem, i) => (
+                <li key={i}>
+                  <AmbiLink to={navItem.link}>{navItem.title}</AmbiLink>
+                </li>
+              ))}
             </ul>
           </nav>
         </div>
@@ -110,6 +91,36 @@ const Footer = props => {
 
       <div className={`container ${styles.footerRow}`}>
         <div className={`col-xs-12 col-md-9 ${styles.infoContainer}`}>
+          <h3 className="sr-text">Address</h3>
+          <div
+            itemProp="address"
+            itemScope
+            itemType="http://schema.org/PostalAddress"
+            className="N2"
+          >
+            <span itemProp="streetAddress">
+              {siteData.companyInfo.address.line1}
+              {", "}
+              {siteData.companyInfo.address.line2}
+            </span>
+            <br />
+            <span itemProp="addressLocality">
+              {siteData.companyInfo.address.city}
+            </span>
+            ,{" "}
+            <span itemProp="addressRegion">
+              {siteData.companyInfo.address.state}
+            </span>{" "}
+            <span itemProp="postalCode">
+              {siteData.companyInfo.address.zipcode}
+            </span>
+            <meta itemProp="addressCountry" content="US" />
+          </div>
+        </div>
+      </div>
+
+      <div className={`container ${styles.footerRow}`}>
+        <div className={`col-xs-12 col-md-9 ${styles.infoContainer}`}>
           <p className="N2">© {new Date().getFullYear()} Auxano Advisors LLC</p>
         </div>
         <div
@@ -132,7 +143,10 @@ const Footer = props => {
           }`}
         >
           <div className={`N2 ${styles.complianceInfo}`}>
-            <Markdown source={siteData.complianceInfo} />
+            <Markdown
+              source={siteData.complianceInfo}
+              renderers={{ link: ReactMarkdownLink }}
+            />
           </div>
         </div>
       </div>
