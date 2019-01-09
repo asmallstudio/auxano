@@ -57,15 +57,15 @@ collections:
                       - label: "Zipcode"
                         name: zipcode
                         widget: string
-              - label: Footer Navigation
-                name: footerNav
+              - label: Header Navigation
+                name: headerNav
                 widget: list
                 allow_add: true
                 fields:
                   - { label: Title, name: title, widget: string }
                   - { label: Link, name: link, widget: string }
-              - label: Header Navigation
-                name: headerNav
+              - label: Footer Navigation
+                name: footerNav
                 widget: list
                 allow_add: true
                 fields:
@@ -101,7 +101,7 @@ collections:
                   - label: "Subheading"
                     name: text
                     widget: text
-              - label: "Compliance Info"
+              - label: "Footer Compliance info"
                 name: complianceInfo
                 widget: markdown
                 buttons: ["bold", "italic", "link"]
