@@ -43,12 +43,17 @@ const Footer = props => {
               <AmbiLink
                 to="https://www.linkedin.com/company/auxano-advisors-llc/"
                 rel="me"
+                target="_blank"
               >
                 LinkedIn
               </AmbiLink>
             </li>
             <li>
-              <AmbiLink to="https://facebook.com/auxanoadvisors/" rel="me">
+              <AmbiLink
+                to="https://facebook.com/auxanoadvisors/"
+                rel="me"
+                target="_blank"
+              >
                 Facebook
               </AmbiLink>
             </li>
