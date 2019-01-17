@@ -88,6 +88,10 @@ class ClientServices extends React.Component {
               data={clientServices.services[7]}
               className="dg-item8"
             />
+            <OneThirdColumn
+              data={clientServices.services[8]}
+              className="dg-item8"
+            />
           </div>
         </section>
         <FullWidthSectionActionLink
