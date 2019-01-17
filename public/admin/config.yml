@@ -1355,3 +1355,14 @@ collections:
         widget: markdown
         default: ""
         required: true
+        buttons:
+          [
+            "bold",
+            "italic",
+            "link",
+            "heading-one",
+            "heading-two",
+            "quote",
+            "bulleted-list",
+            "numbered-list",
+          ]
