@@ -74,6 +74,12 @@ class Index extends React.Component {
                     <div className="style-as-p">
                       {this._formatPositions(member.positions)}
                     </div>
+                    {typeof member.partnerCompany !== "undefined" &&
+                      member.partnerCompany !== "" && (
+                        <div className="style-as-p">
+                          {member.partnerCompany}
+                        </div>
+                      )}
                     <LinkWithArrow
                       to={`/team/${member.slug}/`}
                       className={styles.arrowLink}

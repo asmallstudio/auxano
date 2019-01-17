@@ -1281,11 +1281,6 @@ collections:
                 widget: string
                 default: ""
                 required: true
-              - label: "Strategic Partner"
-                name: isStrategicPartner
-                widget: boolean
-                default: false
-                required: true
               - label: "Photo"
                 name: image
                 widget: image
@@ -1300,6 +1295,17 @@ collections:
                 hint: "A comma separated list of positions"
                 widget: list
                 default: [""]
+              - label: "Strategic Partner"
+                name: isStrategicPartner
+                widget: boolean
+                default: false
+                required: true
+              - label: "Partner Company"
+                name: partnerCompany
+                hint: "If the person is a strategic partner, a company name can be displayed."
+                widget: string
+                default: ""
+                required: false
               - label: "Email"
                 name: email
                 widget: string
