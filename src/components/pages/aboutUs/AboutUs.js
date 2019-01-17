@@ -1,7 +1,6 @@
 import React from "react";
 import { Head } from "react-static";
 import { withSiteAndRouteData } from "../../../lib/utils/hoc";
-import { pageChange } from "../../../lib/utils/pageChange";
 import {
   getFullPageTitle,
   pickFirstAvailableString
@@ -28,10 +27,6 @@ class AboutUs extends React.Component {
       activeOrg: i
     });
   };
-
-  componentDidMount() {
-    pageChange();
-  }
 
   render() {
     const { aboutUs, siteData } = this.props;
