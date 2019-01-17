@@ -1,25 +1,23 @@
 import React from "react";
-import { Link } from "@reach/router";
 import { withSiteData } from "react-static";
+
+import AmbiLink from "../ui/ambiLink/AmbiLink";
 import FullWidthSectionActionLink from "../ui/fullWidthSectionActionLink/FullWidthSectionActionLink";
 
 import styles from "./header.scss";
 
-const NavLink = props => {
-  const { activeClassName, ...restProps } = props;
-  return (
-    <Link
-      {...restProps}
-      getProps={({ isCurrent }) => {
-        // the object returned here is passed to the
-        // anchor element's props
-        return {
-          className: isCurrent ? activeClassName : null
-        };
-      }}
-    />
-  );
-};
+const NavLink = ({ activeClassName, ...restProps }) => (
+  <AmbiLink
+    {...restProps}
+    getProps={({ isCurrent }) => {
+      // the object returned here is passed to the
+      // anchor element's props
+      return {
+        className: isCurrent ? activeClassName : null
+      };
+    }}
+  />
+);
 
 class Header extends React.Component {
   constructor(props) {
@@ -124,7 +122,6 @@ class Header extends React.Component {
                     to={navItem.link}
                     activeClassName={styles.activeLink}
                     onClick={this._menuClose}
-                    exact
                   >
                     {navItem.title}
                   </NavLink>
