@@ -530,130 +530,21 @@ collections:
                 widget: text
           - label: "Services"
             name: services
-            widget: object
+            widget: list
+            allow_add: false
             fields:
-              - label: "Service 1"
-                name: item1
-                widget: object
-                fields:
-                  - label: "Icon"
-                    name: icon
-                    widget: image
-                  - label: "Heading"
-                    name: heading
-                    widget: string
-                  - label: "Content"
-                    name: text
-                    widget: text
-                  - label: "Link"
-                    name: link
-                    widget: string
-              - label: "Service 2"
-                name: item2
-                widget: object
-                fields:
-                  - label: "Icon"
-                    name: icon
-                    widget: image
-                  - label: "Heading"
-                    name: heading
-                    widget: string
-                  - label: "Content"
-                    name: text
-                    widget: text
-                  - label: "Link"
-                    name: link
-                    widget: string
-              - label: "Service 3"
-                name: item3
-                widget: object
-                fields:
-                  - label: "Icon"
-                    name: icon
-                    widget: image
-                  - label: "Heading"
-                    name: heading
-                    widget: string
-                  - label: "Content"
-                    name: text
-                    widget: text
-                  - label: "Link"
-                    name: link
-                    widget: string
-              - label: "Service 4"
-                name: item4
-                widget: object
-                fields:
-                  - label: "Icon"
-                    name: icon
-                    widget: image
-                  - label: "Heading"
-                    name: heading
-                    widget: string
-                  - label: "Content"
-                    name: text
-                    widget: text
-                  - label: "Link"
-                    name: link
-                    widget: string
-              - label: "Service 5"
-                name: item5
-                widget: object
-                fields:
-                  - label: "Icon"
-                    name: icon
-                    widget: image
-                  - label: "Heading"
-                    name: heading
-                    widget: string
-                  - label: "Content"
-                    name: text
-                    widget: text
-                  - label: "Link"
-                    name: link
-                    widget: string
-              - label: "Service 6"
-                name: item6
-                widget: object
-                fields:
-                  - label: "Icon"
-                    name: icon
-                    widget: image
-                  - label: "Heading"
-                    name: heading
-                    widget: string
-                  - label: "Content"
-                    name: text
-                    widget: text
-                  - label: "Link"
-                    name: link
-                    widget: string
-              - label: "Service 7"
-                name: item7
-                widget: object
-                fields:
-                  - label: "Icon"
-                    name: icon
-                    widget: image
-                  - label: "Heading"
-                    name: heading
-                    widget: string
-                  - label: "Content"
-                    name: text
-                    widget: text
-              - label: "Service 8"
-                name: item8
-                widget: object
-                fields:
-                  - label: "Icon"
-                    name: icon
-                    widget: image
-                  - label: "Heading"
-                    name: heading
-                    widget: string
-                  - label: "Content"
-                    name: text
-                    widget: text
+              - label: "Icon"
+                name: icon
+                widget: image
+              - label: "Heading"
+                name: heading
+                widget: string
+              - label: "Content"
+                name: text
+                widget: text
+              - label: "Link"
+                name: link
+                widget: string
           - label: "Action Banner"
             name: actionBanner
             widget: object
@@ -1202,10 +1093,10 @@ collections:
               - label: "Subheading"
                 name: text
                 widget: text
-      - label: "Corporate Executive Solutions"
-        name: corporateExecutiveSolutions
-        file: src/data/pages/corporateSolutions.yml
-        path: /corporate-solutions
+      - label: "Corporate Benefits Planning"
+        name: corporateBenefitsPlanning
+        file: src/data/pages/clientServices/corporateBenefitsPlanning.yml
+        path: /corporate-benefits-planning
         fields:
           - label: "Page Title"
             name: pageTitle
@@ -1225,11 +1116,8 @@ collections:
               - label: "Heading"
                 name: heading
                 widget: string
-              - label: "Description 1"
-                name: description1
-                widget: text
-              - label: "Description 2"
-                name: description2
+              - label: "Description"
+                name: description
                 widget: text
           - label: "Service Information"
             name: serviceInfoList
@@ -1286,6 +1174,50 @@ collections:
               - label: "Hero Image"
                 name: image
                 widget: image
+          - label: "Action Banner"
+            name: actionBanner
+            widget: object
+            fields:
+              - label: "Text"
+                name: text
+                widget: string
+              - label: "Link"
+                name: link
+                widget: string
+          - label: "Subscribe"
+            name: subscribe
+            widget: object
+            fields:
+              - label: "Heading"
+                name: heading
+                widget: string
+              - label: "Subheading"
+                name: text
+                widget: text
+      - label: "Generations"
+        name: generations
+        file: src/data/pages/generations.yml
+        path: /generations
+        fields:
+          - label: "Page Title"
+            name: pageTitle
+            widget: string
+          - label: "Page Description"
+            name: pageDescription
+            required: false
+            hint: "(For SEO purposes.) Describes the content of the page. This is visible in search results."
+            widget: text
+          - label: Hero
+            name: hero
+            widget: object
+            fields:
+              - label: Title
+                name: title
+                widget: string
+              - label: "Subtitle"
+                name: subtitle
+                widget: markdown
+                buttons: ["link"]
           - label: "Action Banner"
             name: actionBanner
             widget: object

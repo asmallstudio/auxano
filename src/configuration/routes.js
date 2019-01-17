@@ -38,9 +38,10 @@ const createRoutes = async () => {
   const businessServices = getSingleFileYaml(
     "./src/data/pages/clientServices/businessServices.yml"
   );
-  const corporateSolutions = getSingleFileYaml(
-    "./src/data/pages/corporateSolutions.yml"
+  const corporateBenefitsPlanning = getSingleFileYaml(
+    "./src/data/pages/clientServices/corporateBenefitsPlanning.yml"
   );
+  const generations = getSingleFileYaml("./src/data/pages/generations.yml");
   const careers = getSingleFileYaml("./src/data/pages/careers.yml");
   const newsItems = await getFolderCollection(
     "./src/data/news",
@@ -120,10 +121,12 @@ const createRoutes = async () => {
             taxManagement
           })
         },
+        {
+          path: "/corporate-benefits-planning",
           component:
-            "src/components/pages/clientServices/taxPlanning/TaxPlanning",
+            "src/components/pages/clientServices/corporateBenefitsPlanning/CorporateBenefitsPlanning",
           getData: () => ({
-            taxPlanning
+            corporateBenefitsPlanning
           })
         },
         {
@@ -137,10 +140,10 @@ const createRoutes = async () => {
       ]
     },
     {
-      path: "/corporate-solutions",
-      component: "src/components/pages/corporateSolutions/CorporateSolutions",
+      path: "/generations",
+      component: "src/components/pages/generations/Generations",
       getData: () => ({
-        corporateSolutions
+        generations
       })
     },
     {
