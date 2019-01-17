@@ -4,7 +4,11 @@ import { Link } from "@reach/router";
 class AmbiLink extends React.Component {
   isInternal(to) {
     if (typeof to !== "string") return true;
-    return !to.match(/^#/) && !to.match(/^[a-z]{1,10}:\/\//);
+    return (
+      !to.match(/^#/) &&
+      !to.match(/^[a-z]{1,10}:\/\//) &&
+      !to.match(/^mailto:|^tel:/)
+    );
   }
 
   render() {

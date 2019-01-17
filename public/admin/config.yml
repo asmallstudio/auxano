@@ -1216,8 +1216,7 @@ collections:
                 widget: string
               - label: "Subtitle"
                 name: subtitle
-                widget: markdown
-                buttons: ["link"]
+                widget: text
           - label: "Action Banner"
             name: actionBanner
             widget: object
