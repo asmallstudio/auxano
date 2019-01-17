@@ -49,8 +49,18 @@ class Generations extends React.Component {
         <section className="container">
           <div className="row">
             <div className={`col-xs-12 col-md-8 ${styles.pageBody}`}>
-              <Markdown source={generations.body} />
+              <Markdown source={generations.body.description} />
             </div>
+            <h2>{generations.body.options.heading}</h2>
+            <ul>
+              {generations.body.options.list.map((item, i) => (
+                <li key={i}>
+                  <Markdown allowedTypes={["text", "emphasis", "strong"]} />
+                  {item}
+                </li>
+              ))}
+            </ul>
+            <p>{generations.body.closing}</p>
           </div>
         </section>
         <FullWidthSectionActionLink
