@@ -1217,6 +1217,30 @@ collections:
               - label: "Subtitle"
                 name: subtitle
                 widget: text
+          - label: Body
+            name: body
+            widget: object
+            fields:
+              - label: "Description 1"
+                name: description1
+                widget: text
+              - label: "Description 2"
+                name: description1
+                widget: markdown
+                buttons: ["bold", "italic"]
+              - label: Options
+                name: options
+                widget: object
+                fields:
+                  - label: Heading
+                    name: heading
+                    widget: string
+                  - label: Options
+                    name: list
+                    widget: list
+              - label: "Closing"
+                name: closing
+                widget: text
           - label: "Action Banner"
             name: actionBanner
             widget: object
