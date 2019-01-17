@@ -1,17 +1,17 @@
 import React from "react";
 import { Head } from "react-static";
-import { withSiteAndRouteData } from "../../../lib/utils/hoc";
-import { pageChange } from "../../../lib/utils/pageChange";
+import { withSiteAndRouteData } from "../../../../lib/utils/hoc";
+import { pageChange } from "../../../../lib/utils/pageChange";
 import {
   getFullPageTitle,
   pickFirstAvailableString
-} from "../../../lib/utils/copy";
+} from "../../../../lib/utils/copy";
 
-import styles from "./corporateSolutions.scss";
-import FullWidthSectionActionLink from "../../ui/fullWidthSectionActionLink/FullWidthSectionActionLink";
-import SubscribeSection from "../../ui/subscribeSection/SubscribeSection";
+import styles from "./corporateBenefitsPlanning.scss";
+import FullWidthSectionActionLink from "../../../ui/fullWidthSectionActionLink/FullWidthSectionActionLink";
+import SubscribeSection from "../../../ui/subscribeSection/SubscribeSection";
 
-class corporateSolutions extends React.Component {
+class corporateBenefitsPlanning extends React.Component {
   constructor(props) {
     super(props);
   }
@@ -21,16 +21,16 @@ class corporateSolutions extends React.Component {
   }
 
   render() {
-    const { corporateSolutions, siteData } = this.props;
+    const { corporateBenefitsPlanning, siteData } = this.props;
 
     return (
       <React.Fragment>
         <Head>
-          <title>{getFullPageTitle(corporateSolutions.pageTitle)}</title>
+          <title>{getFullPageTitle(corporateBenefitsPlanning.pageTitle)}</title>
           <meta
             name="description"
             content={pickFirstAvailableString(
-              corporateSolutions.pageDescription,
+              corporateBenefitsPlanning.pageDescription,
               siteData.siteDescription
             )}
           />
@@ -43,10 +43,9 @@ class corporateSolutions extends React.Component {
           <div className="container">
             <div className="row">
               <div className={`col-xs-12 col-md-8 ${styles.heroTextContainer}`}>
-                <h1>{corporateSolutions.hero.title}</h1>
-                <h2>{corporateSolutions.hero.heading}</h2>
-                <p>{corporateSolutions.hero.description1}</p>
-                <p>{corporateSolutions.hero.description2}</p>
+                <h1>{corporateBenefitsPlanning.hero.title}</h1>
+                <h2>{corporateBenefitsPlanning.hero.heading}</h2>
+                <p>{corporateBenefitsPlanning.hero.description}</p>
               </div>
             </div>
             <div className={styles.dingusDot1} />
@@ -55,39 +54,34 @@ class corporateSolutions extends React.Component {
         <section className="container dg-serviceInfo">
           <ul className={`row ${styles.serviceInfoList}`}>
             <div className="col-xs-12 col-md-6">
-              <li>{corporateSolutions.serviceInfoList[0]}</li>
-              <li>{corporateSolutions.serviceInfoList[1]}</li>
-              <li>{corporateSolutions.serviceInfoList[2]}</li>
-              <li>{corporateSolutions.serviceInfoList[3]}</li>
-              <li>{corporateSolutions.serviceInfoList[4]}</li>
+              <li>{corporateBenefitsPlanning.serviceInfoList[0]}</li>
+              <li>{corporateBenefitsPlanning.serviceInfoList[1]}</li>
+              <li>{corporateBenefitsPlanning.serviceInfoList[2]}</li>
             </div>
             <div className="col-xs-12 col-md-6">
-              <li>{corporateSolutions.serviceInfoList[5]}</li>
-              <li>{corporateSolutions.serviceInfoList[6]}</li>
-              <li>{corporateSolutions.serviceInfoList[7]}</li>
-              <li>{corporateSolutions.serviceInfoList[8]}</li>
-              <li>{corporateSolutions.serviceInfoList[9]}</li>
+              <li>{corporateBenefitsPlanning.serviceInfoList[3]}</li>
+              <li>{corporateBenefitsPlanning.serviceInfoList[4]}</li>
             </div>
           </ul>
         </section>
         <FullWidthSectionActionLink
           linkText={pickFirstAvailableString(
-            corporateSolutions.actionBanner.text,
+            corporateBenefitsPlanning.actionBanner.text,
             siteData.actionBanner.text
           )}
           to={pickFirstAvailableString(
-            corporateSolutions.actionBanner.link,
+            corporateBenefitsPlanning.actionBanner.link,
             siteData.actionBanner.link
           )}
           className="dg-actionBanner"
         />
         <SubscribeSection
           heading={pickFirstAvailableString(
-            corporateSolutions.subscribe.heading,
+            corporateBenefitsPlanning.subscribe.heading,
             siteData.subscribe.heading
           )}
           text={pickFirstAvailableString(
-            corporateSolutions.subscribe.text,
+            corporateBenefitsPlanning.subscribe.text,
             siteData.subscribe.text
           )}
           className="dg-subscribe"
@@ -97,4 +91,4 @@ class corporateSolutions extends React.Component {
   }
 }
 
-export default withSiteAndRouteData(corporateSolutions);
+export default withSiteAndRouteData(corporateBenefitsPlanning);
