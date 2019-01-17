@@ -88,11 +88,12 @@
 
 .textList {
   list-style: none;
-  padding: 0;
+  padding-top: 0;
+  padding-bottom: 0;
   margin: 0 0 var(--space-l4);
 
   li {
-    padding-left: var(--space-l4);
+    padding-left: var(--space-l3);
     margin-bottom: var(--space-l2);
 
     &::before {
@@ -100,12 +101,20 @@
       display: block;
       position: relative;
       top: 1.9em;
-      left: calc(-1 * var(--space-l4));
+      left: calc(-1 * var(--space-l3));
       height: 2em;
       width: 2em;
       background: url("/assets/check.svg") no-repeat center;
       background-size: contain;
       margin-right: 0.75em;
+    }
+
+    @include respond-above(md) {
+      padding-left: var(--space-l4);
+
+      &::before {
+        left: calc(-1 * var(--space-l4));
+      }
     }
   }
 }
