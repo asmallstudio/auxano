@@ -1061,10 +1061,10 @@ collections:
               - label: "Subheading"
                 name: text
                 widget: text
-      - label: "Tax Planning"
-        name: taxPlanning
-        file: src/data/pages/clientServices/taxPlanning.yml
-        path: /client-services/tax-planning
+      - label: "Tax Management"
+        name: taxManagement
+        file: src/data/pages/clientServices/taxManagement.yml
+        path: /client-services/tax-management
         fields:
           - label: "Page Title"
             name: pageTitle

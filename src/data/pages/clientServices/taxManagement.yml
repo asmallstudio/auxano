@@ -1,7 +1,7 @@
-pageTitle: Tax Planning | Client Services
+pageTitle: Tax Management | Client Services
 pageDescription: ''
 hero:
-  name: Tax Planning
+  name: Tax Management
   title: >-
     By always considering the tax implications of your financial decisions, we
     help to protect value over time.
@@ -21,7 +21,7 @@ serviceInfo:
       plan. 
     image:
       alt: placeholder image
-      src: /uploads/tax-planning.jpg
+      src: /uploads/tax-management.jpg
   section3: >-
     We’ll proactively work with your own tax advisor—not only during tax season,
     but year-round—to optimize your tax situation, bringing unique wisdom and

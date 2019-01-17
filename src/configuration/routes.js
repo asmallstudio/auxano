@@ -32,8 +32,8 @@ const createRoutes = async () => {
   const riskManagement = getSingleFileYaml(
     "./src/data/pages/clientServices/riskManagement.yml"
   );
-  const taxPlanning = getSingleFileYaml(
-    "./src/data/pages/clientServices/taxPlanning.yml"
+  const taxManagement = getSingleFileYaml(
+    "./src/data/pages/clientServices/taxManagement.yml"
   );
   const businessServices = getSingleFileYaml(
     "./src/data/pages/clientServices/businessServices.yml"
@@ -113,7 +113,13 @@ const createRoutes = async () => {
           })
         },
         {
-          path: "/tax-planning",
+          path: "/tax-management",
+          component:
+            "src/components/pages/clientServices/taxManagement/TaxManagement",
+          getData: () => ({
+            taxManagement
+          })
+        },
           component:
             "src/components/pages/clientServices/taxPlanning/TaxPlanning",
           getData: () => ({
