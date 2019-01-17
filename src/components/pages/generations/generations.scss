@@ -93,7 +93,7 @@
   margin: 0 0 var(--space-l4);
 
   li {
-    padding-left: var(--space-l3);
+    padding-left: calc(2rem + var(--space-l1));
     margin-bottom: var(--space-l2);
 
     &::before {
@@ -101,7 +101,7 @@
       display: block;
       position: relative;
       top: 1.9em;
-      left: calc(-1 * var(--space-l3));
+      left: calc(-2rem + -1 * var(--space-l1));
       height: 2em;
       width: 2em;
       background: url("/assets/check.svg") no-repeat center;
