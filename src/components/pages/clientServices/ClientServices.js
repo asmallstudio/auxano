@@ -52,46 +52,19 @@ class ClientServices extends React.Component {
         </section>
         <section className="container dg-services">
           <div className={`${styles.threecols} row`}>
-            <OneThirdColumn
-              data={clientServices.services[0]}
-              className="dg-item1"
-            />
-            <OneThirdColumn
-              data={clientServices.services[1]}
-              className="dg-item2"
-            />
-            <OneThirdColumn
-              data={clientServices.services[2]}
-              className="dg-item3"
-            />
+            <OneThirdColumn data={clientServices.services[0]} />
+            <OneThirdColumn data={clientServices.services[1]} />
+            <OneThirdColumn data={clientServices.services[2]} />
           </div>
           <div className={`${styles.threecols} row`}>
-            <OneThirdColumn
-              data={clientServices.services[3]}
-              className="dg-item4"
-            />
-            <OneThirdColumn
-              data={clientServices.services[4]}
-              className="dg-item5"
-            />
-            <OneThirdColumn
-              data={clientServices.services[5]}
-              className="dg-item6"
-            />
+            <OneThirdColumn data={clientServices.services[3]} />
+            <OneThirdColumn data={clientServices.services[4]} />
+            <OneThirdColumn data={clientServices.services[5]} />
           </div>
           <div className={`${styles.threecols} row`}>
-            <OneThirdColumn
-              data={clientServices.services[6]}
-              className="dg-item7"
-            />
-            <OneThirdColumn
-              data={clientServices.services[7]}
-              className="dg-item8"
-            />
-            <OneThirdColumn
-              data={clientServices.services[8]}
-              className="dg-item8"
-            />
+            <OneThirdColumn data={clientServices.services[6]} />
+            <OneThirdColumn data={clientServices.services[7]} />
+            <OneThirdColumn data={clientServices.services[8]} />
           </div>
         </section>
         <FullWidthSectionActionLink

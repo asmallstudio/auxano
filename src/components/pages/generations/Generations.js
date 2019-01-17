@@ -49,7 +49,7 @@ class Generations extends React.Component {
         </section>
         <FullWidthSectionText
           text={generations.body.description1}
-          className={`dg-body ${styles.pageBody}`}
+          className={`dg-description1 ${styles.pageBody}`}
         />
         <section className="container">
           <div className="row">
@@ -71,7 +71,7 @@ class Generations extends React.Component {
               </h2>
             </div>
             <div className="row">
-              <ul className={`col-xs-12 ${styles.textList}`}>
+              <ul className={`col-xs-12 ${styles.textList} dg-list`}>
                 {generations.body.options.list.map((item, i) => (
                   <li key={i} className="style-as-p">
                     <Markdown allowedTypes={["text", "emphasis", "strong"]} />
@@ -84,7 +84,7 @@ class Generations extends React.Component {
         </section>
         <FullWidthSectionText
           text={generations.body.closing}
-          className={styles.pageBodyClosing}
+          className={`${styles.pageBodyClosing} dg-closing`}
         />
         <FullWidthSectionActionLink
           linkText={pickFirstAvailableString(

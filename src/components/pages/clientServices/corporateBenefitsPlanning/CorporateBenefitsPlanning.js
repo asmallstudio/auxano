@@ -51,7 +51,7 @@ class corporateBenefitsPlanning extends React.Component {
             <div className={styles.dingusDot1} />
           </div>
         </section>
-        <section className="container dg-serviceInfo">
+        <section className="container dg-serviceInfoList">
           <ul className={`row ${styles.serviceInfoList}`}>
             <div className="col-xs-12 col-md-6">
               <li>{corporateBenefitsPlanning.serviceInfoList[0]}</li>
