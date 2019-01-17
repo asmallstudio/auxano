@@ -45,14 +45,14 @@ class CoverSheet extends React.Component {
             <div>
               <AuxanoLogoWhite
                 alt="Auxano Advisors"
-                height="128"
-                width="333.17"
+                height="179.2"
+                width="466.438"
                 className={styles.logo}
               />
+              <p>{tagline}</p>
             </div>
             <div className={styles.text}>
               <h1>{hero}</h1>
-              <p>{tagline}</p>
             </div>
             <button
               onClick={() => this._slideCover(updateDoNotShowCoverState)}

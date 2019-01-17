@@ -32,15 +32,16 @@ const createRoutes = async () => {
   const riskManagement = getSingleFileYaml(
     "./src/data/pages/clientServices/riskManagement.yml"
   );
-  const taxPlanning = getSingleFileYaml(
-    "./src/data/pages/clientServices/taxPlanning.yml"
+  const taxManagement = getSingleFileYaml(
+    "./src/data/pages/clientServices/taxManagement.yml"
   );
   const businessServices = getSingleFileYaml(
     "./src/data/pages/clientServices/businessServices.yml"
   );
-  const corporateSolutions = getSingleFileYaml(
-    "./src/data/pages/corporateSolutions.yml"
+  const corporateBenefitsPlanning = getSingleFileYaml(
+    "./src/data/pages/clientServices/corporateBenefitsPlanning.yml"
   );
+  const generations = getSingleFileYaml("./src/data/pages/generations.yml");
   const careers = getSingleFileYaml("./src/data/pages/careers.yml");
   const newsItems = await getFolderCollection(
     "./src/data/news",
@@ -113,11 +114,19 @@ const createRoutes = async () => {
           })
         },
         {
-          path: "/tax-planning",
+          path: "/tax-management",
           component:
-            "src/components/pages/clientServices/taxPlanning/TaxPlanning",
+            "src/components/pages/clientServices/taxManagement/TaxManagement",
           getData: () => ({
-            taxPlanning
+            taxManagement
+          })
+        },
+        {
+          path: "/corporate-benefits-planning",
+          component:
+            "src/components/pages/clientServices/corporateBenefitsPlanning/CorporateBenefitsPlanning",
+          getData: () => ({
+            corporateBenefitsPlanning
           })
         },
         {
@@ -131,10 +140,10 @@ const createRoutes = async () => {
       ]
     },
     {
-      path: "/corporate-solutions",
-      component: "src/components/pages/corporateSolutions/CorporateSolutions",
+      path: "/generations",
+      component: "src/components/pages/generations/Generations",
       getData: () => ({
-        corporateSolutions
+        generations
       })
     },
     {

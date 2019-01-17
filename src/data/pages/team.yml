@@ -403,6 +403,7 @@ members:
     extension: ''
     image: /uploads/jon-pinkston.jpg
     isStrategicPartner: true
+    partnerCompany: "Blue Kayak Partners, LLC"
     positions:
       - Consultant - Sr. Investment Strategist
     qualifications:

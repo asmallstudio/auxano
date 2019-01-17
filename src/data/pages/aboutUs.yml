@@ -2,7 +2,7 @@ pageTitle: About Us
 pageDescription: ' '
 hero:
   ctaLink: /team
-  ctaText: Meet the Team
+  ctaText: Meet Our Team
   image: /uploads/about-us-hero.png
   subtitle: >-
     We are a multi-generational private wealth management firm that helps
@@ -18,6 +18,13 @@ infoSection:
     alt: what is important about this image? what does it communicate?
     src: /uploads/community.jpg
   items:
+    - desc: >-
+        Medical Teams International is a humanitarian aid organization that
+        works to provide care to people affected by disaster, conflict and
+        poverty. They empower communities worldwide to live full and healthy
+        lives.
+      logo: /uploads/medical-teams-international.jpg
+      name: Medical Teams International
     - desc: >-
         Agros’ mission is to see rural, poor families of Central America own
         agricultural land, attain economic self-sufficiency, realize their
@@ -35,13 +42,6 @@ infoSection:
         and other area nonprofits to step in the gap for those in need.
       logo: /uploads/jubilee-reach.jpg
       name: Jubilee Reach
-    - desc: >-
-        Medical Teams International is a humanitarian aid organization that
-        works to provide care to people affected by disaster, conflict and
-        poverty. They empower communities worldwide to live full and healthy
-        lives.
-      logo: /uploads/medical-teams-international.jpg
-      name: Medical Teams International
     - desc: >-
         Held annually in more than 600 communities nationwide, the Alzheimer's
         Association Walk to End Alzheimer’s® is the world’s largest event to

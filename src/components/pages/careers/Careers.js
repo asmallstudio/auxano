@@ -9,6 +9,7 @@ import {
 
 import styles from "./careers.scss";
 import Markdown from "react-markdown";
+import ReactMarkdownLink from "../../ui/reactMarkdownLink/ReactMarkdownLink";
 import FullWidthSectionActionLink from "../../ui/fullWidthSectionActionLink/FullWidthSectionActionLink";
 import SubscribeSection from "../../ui/subscribeSection/SubscribeSection";
 
@@ -47,7 +48,11 @@ class Careers extends React.Component {
               <div className={`col-xs-12 col-md-6 ${styles.heroTextContainer}`}>
                 <h1>{careers.hero.title}</h1>
                 <p>
-                  <Markdown source={careers.hero.subtitle} />
+                  <Markdown
+                    allowedTypes={["text", "paragraph", "link"]}
+                    renderers={{ link: ReactMarkdownLink }}
+                    source={careers.hero.subtitle}
+                  />
                 </p>
               </div>
             </div>

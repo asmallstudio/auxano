@@ -39,7 +39,7 @@ class Index extends React.Component {
         <section className="container">
           <div className="row">
             <div className={`col-xs-12 ${styles.teamList}`}>
-              <h1>Meet the Team</h1>
+              <h1>Meet Our Team</h1>
               <ul>
                 {fullMembers.map((member, i) => (
                   <li key={i} className={styles.teamMember}>
@@ -74,6 +74,12 @@ class Index extends React.Component {
                     <div className="style-as-p">
                       {this._formatPositions(member.positions)}
                     </div>
+                    {typeof member.partnerCompany !== "undefined" &&
+                      member.partnerCompany !== "" && (
+                        <div className="style-as-p">
+                          {member.partnerCompany}
+                        </div>
+                      )}
                     <LinkWithArrow
                       to={`/team/${member.slug}/`}
                       className={styles.arrowLink}

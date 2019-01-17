@@ -8,11 +8,11 @@ import {
   pickFirstAvailableString
 } from "../../../../lib/utils/copy";
 
-import styles from "./taxPlanning.scss";
+import styles from "./taxManagement.scss";
 import FullWidthSectionActionLink from "../../../ui/fullWidthSectionActionLink/FullWidthSectionActionLink";
 import SubscribeSection from "../../../ui/subscribeSection/SubscribeSection";
 
-class TaxPlanning extends React.Component {
+class TaxManagement extends React.Component {
   constructor(props) {
     super(props);
   }
@@ -22,16 +22,16 @@ class TaxPlanning extends React.Component {
   }
 
   render() {
-    const { taxPlanning, siteData } = this.props;
+    const { taxManagement, siteData } = this.props;
 
     return (
       <React.Fragment>
         <Head>
-          <title>{getFullPageTitle(taxPlanning.pageTitle)}</title>
+          <title>{getFullPageTitle(taxManagement.pageTitle)}</title>
           <meta
             name="description"
             content={pickFirstAvailableString(
-              taxPlanning.pageDescription,
+              taxManagement.pageDescription,
               siteData.siteDescription
             )}
           />
@@ -61,8 +61,8 @@ class TaxPlanning extends React.Component {
           <div className="container">
             <div className="row">
               <div className={`col-xs-12 col-md-8 ${styles.heroTextContainer}`}>
-                <h1 className="style-as-h3">{taxPlanning.hero.name}</h1>
-                <p className="style-as-h1">{taxPlanning.hero.title}</p>
+                <h1 className="style-as-h3">{taxManagement.hero.name}</h1>
+                <p className="style-as-h1">{taxManagement.hero.title}</p>
               </div>
             </div>
           </div>
@@ -73,7 +73,7 @@ class TaxPlanning extends React.Component {
             <div className="container">
               <div className={`row ${styles.serviceInfoRow}`}>
                 <div className="col-xs-12">
-                  <p>{taxPlanning.serviceInfo.section1}</p>
+                  <p>{taxManagement.serviceInfo.section1}</p>
                 </div>
               </div>
             </div>
@@ -92,8 +92,8 @@ class TaxPlanning extends React.Component {
                 >
                   <img
                     className={`${styles.infoSectionImage}`}
-                    src={taxPlanning.serviceInfo.section2.image.src}
-                    alt={taxPlanning.serviceInfo.section2.image.alt}
+                    src={taxManagement.serviceInfo.section2.image.src}
+                    alt={taxManagement.serviceInfo.section2.image.alt}
                   />
                 </div>
               </div>
@@ -102,7 +102,7 @@ class TaxPlanning extends React.Component {
                 className={`col-xs-12 col-md-6 ${styles.infoSectionColText}`}
               >
                 <p className="style-as-h2">
-                  {taxPlanning.serviceInfo.section2.description}
+                  {taxManagement.serviceInfo.section2.description}
                 </p>
               </div>
             </div>
@@ -112,7 +112,7 @@ class TaxPlanning extends React.Component {
               <div className={`row ${styles.serviceInfoRow}`}>
                 <div className="col-xs-12">
                   <p className="style-as-h2">
-                    {taxPlanning.serviceInfo.section3}
+                    {taxManagement.serviceInfo.section3}
                   </p>
                 </div>
               </div>
@@ -121,22 +121,22 @@ class TaxPlanning extends React.Component {
         </section>
         <FullWidthSectionActionLink
           linkText={pickFirstAvailableString(
-            taxPlanning.actionBanner.text,
+            taxManagement.actionBanner.text,
             siteData.actionBanner.text
           )}
           to={pickFirstAvailableString(
-            taxPlanning.actionBanner.link,
+            taxManagement.actionBanner.link,
             siteData.actionBanner.link
           )}
           className="dg-actionBanner"
         />
         <SubscribeSection
           heading={pickFirstAvailableString(
-            taxPlanning.subscribe.heading,
+            taxManagement.subscribe.heading,
             siteData.subscribe.heading
           )}
           text={pickFirstAvailableString(
-            taxPlanning.subscribe.text,
+            taxManagement.subscribe.text,
             siteData.subscribe.text
           )}
           className="dg-subscribe"
@@ -146,4 +146,4 @@ class TaxPlanning extends React.Component {
   }
 }
 
-export default withSiteAndRouteData(TaxPlanning);
+export default withSiteAndRouteData(TaxManagement);

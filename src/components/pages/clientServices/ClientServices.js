@@ -53,39 +53,43 @@ class ClientServices extends React.Component {
         <section className="container dg-services">
           <div className={`${styles.threecols} row`}>
             <OneThirdColumn
-              data={clientServices.services.item1}
+              data={clientServices.services[0]}
               className="dg-item1"
             />
             <OneThirdColumn
-              data={clientServices.services.item2}
+              data={clientServices.services[1]}
               className="dg-item2"
             />
             <OneThirdColumn
-              data={clientServices.services.item3}
+              data={clientServices.services[2]}
               className="dg-item3"
             />
           </div>
           <div className={`${styles.threecols} row`}>
             <OneThirdColumn
-              data={clientServices.services.item4}
+              data={clientServices.services[3]}
               className="dg-item4"
             />
             <OneThirdColumn
-              data={clientServices.services.item5}
+              data={clientServices.services[4]}
               className="dg-item5"
             />
             <OneThirdColumn
-              data={clientServices.services.item6}
+              data={clientServices.services[5]}
               className="dg-item6"
             />
           </div>
           <div className={`${styles.threecols} row`}>
             <OneThirdColumn
-              data={clientServices.services.item7}
+              data={clientServices.services[6]}
               className="dg-item7"
             />
             <OneThirdColumn
-              data={clientServices.services.item8}
+              data={clientServices.services[7]}
+              className="dg-item8"
+            />
+            <OneThirdColumn
+              data={clientServices.services[8]}
               className="dg-item8"
             />
           </div>
