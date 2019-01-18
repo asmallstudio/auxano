@@ -66,7 +66,7 @@ class corporateBenefitsPlanning extends React.Component {
                 <p>{corporateBenefitsPlanning.hero.description}</p>
               </div>
             </div>
-            <div className={styles.dingusDot1} />
+            <div className={`${styles.dingusDot1} hidden-md-down`} />
           </div>
         </section>
         <section className="container dg-serviceInfoList">
