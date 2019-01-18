@@ -544,6 +544,7 @@ collections:
                 widget: text
               - label: "Link"
                 name: link
+                required: false
                 widget: string
           - label: "Action Banner"
             name: actionBanner
@@ -1310,7 +1311,7 @@ collections:
                 name: email
                 widget: string
                 default: ""
-                required: true
+                required: false
               - label: "Phone Extension"
                 name: extension
                 widget: string
