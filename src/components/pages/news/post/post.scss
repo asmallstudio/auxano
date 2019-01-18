@@ -29,7 +29,8 @@
   }
 
   hr {
-    border: 1px solid var(--filler-bg);
+    border: none;
+    border-top: 1px solid var(--filler-bg);
   }
 
   a {
@@ -38,6 +39,12 @@
 
   li {
     line-height: 1.5;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+    margin: var(--space-l1) 0;
   }
 }
 
