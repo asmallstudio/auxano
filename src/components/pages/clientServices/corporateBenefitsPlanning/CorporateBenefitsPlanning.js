@@ -1,5 +1,6 @@
 import React from "react";
 import { Head } from "react-static";
+import { Link } from "@reach/router";
 import { withSiteAndRouteData } from "../../../../lib/utils/hoc";
 import { pageChange } from "../../../../lib/utils/pageChange";
 import {
@@ -35,6 +36,23 @@ class corporateBenefitsPlanning extends React.Component {
             )}
           />
         </Head>
+        <section
+          className={`container ${styles.indexLinkContainer} ${
+            styles.dingusDotContainer
+          }`}
+        >
+          <div className="row">
+            <div className="col-xs-12">
+              <Link
+                to="/client-services"
+                className={`style-as-h3 ${styles.indexLink}`}
+              >
+                Back to Client Services
+              </Link>
+            </div>
+          </div>
+          <div className={`${styles.dingusDot1} hidden-md-up`} />
+        </section>
         <section
           className={`container--fluid ${styles.dingusDotContainer} ${
             styles.heroContainer
