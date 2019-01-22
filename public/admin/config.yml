@@ -78,9 +78,6 @@ collections:
                   - label: "Hero Text"
                     name: hero
                     widget: string
-                  - label: "Tagline"
-                    name: tagline
-                    widget: string
               - label: "Action Banner"
                 name: actionBanner
                 widget: object
