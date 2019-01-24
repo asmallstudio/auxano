@@ -41,7 +41,9 @@ const createRoutes = async () => {
   const corporateBenefitsPlanning = getSingleFileYaml(
     "./src/data/pages/clientServices/corporateBenefitsPlanning.yml"
   );
-  const generations = getSingleFileYaml("./src/data/pages/generations.yml");
+  const legacyPlanning = getSingleFileYaml(
+    "./src/data/pages/legacyPlanning.yml"
+  );
   const careers = getSingleFileYaml("./src/data/pages/careers.yml");
   const newsItems = await getFolderCollection(
     "./src/data/news",
@@ -140,10 +142,10 @@ const createRoutes = async () => {
       ]
     },
     {
-      path: "/generations",
-      component: "src/components/pages/generations/Generations",
+      path: "/legacy-planning",
+      component: "src/components/pages/legacyPlanning/LegacyPlanning",
       getData: () => ({
-        generations
+        legacyPlanning
       })
     },
     {

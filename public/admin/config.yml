@@ -1192,10 +1192,10 @@ collections:
               - label: "Subheading"
                 name: text
                 widget: text
-      - label: "Generations"
-        name: generations
-        file: src/data/pages/generations.yml
-        path: /generations
+      - label: "Legacy Planning"
+        name: legacyPlanning
+        file: src/data/pages/legacyPlanning.yml
+        path: /legacy-planning
         fields:
           - label: "Page Title"
             name: pageTitle
@@ -1215,6 +1215,9 @@ collections:
               - label: "Subtitle"
                 name: subtitle
                 widget: text
+              - label: "Hero Description"
+                name: text
+                widget: text
           - label: Body
             name: body
             widget: object
@@ -1223,7 +1226,7 @@ collections:
                 name: description1
                 widget: text
               - label: "Description 2"
-                name: description1
+                name: description2
                 widget: markdown
                 buttons: ["bold", "italic"]
               - label: Options
@@ -1236,6 +1239,9 @@ collections:
                   - label: Options
                     name: list
                     widget: list
+                    field:
+                      widget: markdown
+                      buttons: ["bold", "italic"]
               - label: "Closing"
                 name: closing
                 widget: text

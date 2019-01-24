@@ -65,6 +65,10 @@
     margin-bottom: var(--space-l2);
   }
 
+  p + p {
+    margin-top: var(--space-l3);
+  }
+
   @include respond-above(md) {
     text-align: left;
   }
@@ -79,7 +83,7 @@
 }
 
 .textPlain {
-  margin: var(--space-l4) 0;
+  margin: var(--space-l4) 0 0;
 }
 
 .optionsHeader {

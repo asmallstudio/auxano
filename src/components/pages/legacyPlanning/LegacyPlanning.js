@@ -7,13 +7,13 @@ import {
   pickFirstAvailableString
 } from "../../../lib/utils/copy";
 
-import styles from "./generations.scss";
+import styles from "./legacyPlanning.scss";
 import Markdown from "react-markdown";
 import FullWidthSectionText from "../../ui/fullWidthSectionText/FullWidthSectionText";
 import FullWidthSectionActionLink from "../../ui/fullWidthSectionActionLink/FullWidthSectionActionLink";
 import SubscribeSection from "../../ui/subscribeSection/SubscribeSection";
 
-class Generations extends React.Component {
+class LegacyPlanning extends React.Component {
   constructor(props) {
     super(props);
   }
@@ -23,16 +23,16 @@ class Generations extends React.Component {
   }
 
   render() {
-    const { generations, siteData } = this.props;
+    const { legacyPlanning, siteData } = this.props;
 
     return (
       <React.Fragment>
         <Head>
-          <title>{getFullPageTitle(generations.pageTitle)}</title>
+          <title>{getFullPageTitle(legacyPlanning.pageTitle)}</title>
           <meta
             name="description"
             content={pickFirstAvailableString(
-              generations.pageDescription,
+              legacyPlanning.pageDescription,
               siteData.siteDescription
             )}
           />
@@ -41,14 +41,15 @@ class Generations extends React.Component {
           <div className="container">
             <div className="row">
               <div className={`col-xs-12 col-md-9 ${styles.heroTextContainer}`}>
-                <h1>{generations.hero.title}</h1>
-                <p className="style-as-h2">{generations.hero.subtitle}</p>
+                <h1>{legacyPlanning.hero.title}</h1>
+                <p className="style-as-h2">{legacyPlanning.hero.subtitle}</p>
+                <p>{legacyPlanning.hero.text}</p>
               </div>
             </div>
           </div>
         </section>
         <FullWidthSectionText
-          text={generations.body.description1}
+          text={legacyPlanning.body.description1}
           className={`dg-description1 ${styles.pageBody}`}
         />
         <section className="container">
@@ -58,7 +59,7 @@ class Generations extends React.Component {
                 allowedTypes={["text", "paragraph", "emphasis", "strong"]}
                 className={styles.pageBody}
               >
-                {generations.body.description2}
+                {legacyPlanning.body.description2}
               </Markdown>
             </div>
           </div>
@@ -67,43 +68,54 @@ class Generations extends React.Component {
           <div className="row">
             <div className="col-xs-12">
               <h2 className={styles.optionsHeader}>
-                {generations.body.options.heading}
+                {legacyPlanning.body.options.heading}
               </h2>
             </div>
             <div className="row">
               <ul className={`col-xs-12 ${styles.textList} dg-list`}>
-                {generations.body.options.list.map((item, i) => (
+                {legacyPlanning.body.options.list.map((item, i) => (
                   <li key={i} className="style-as-p">
-                    <Markdown allowedTypes={["text", "emphasis", "strong"]} />
-                    {item}
+                    <Markdown
+                      allowedTypes={["text", "emphasis", "strong"]}
+                      unwrapDisallowed={true}
+                    >
+                      {item}
+                    </Markdown>
                   </li>
                 ))}
               </ul>
             </div>
+            <div className="row">
+              <div className={`col-xs-12 ${styles.textPlain}`}>
+                <p className={styles.optionsHeader}>
+                  {legacyPlanning.body.coda}
+                </p>
+              </div>
+            </div>
           </div>
         </section>
         <FullWidthSectionText
-          text={generations.body.closing}
+          text={legacyPlanning.body.closing}
           className={`${styles.pageBodyClosing} dg-closing`}
         />
         <FullWidthSectionActionLink
           linkText={pickFirstAvailableString(
-            generations.actionBanner.text,
+            legacyPlanning.actionBanner.text,
             siteData.actionBanner.text
           )}
           to={pickFirstAvailableString(
-            generations.actionBanner.link,
+            legacyPlanning.actionBanner.link,
             siteData.actionBanner.link
           )}
           className="dg-actionBanner"
         />
         <SubscribeSection
           heading={pickFirstAvailableString(
-            generations.subscribe.heading,
+            legacyPlanning.subscribe.heading,
             siteData.subscribe.heading
           )}
           text={pickFirstAvailableString(
-            generations.subscribe.text,
+            legacyPlanning.subscribe.text,
             siteData.subscribe.text
           )}
           className="dg-subscribe"
@@ -113,4 +125,4 @@ class Generations extends React.Component {
   }
 }
 
-export default withSiteAndRouteData(Generations);
+export default withSiteAndRouteData(LegacyPlanning);
