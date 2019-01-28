@@ -75,7 +75,7 @@ members:
       - CFP
       - ChFC
       - CLU
-    title: Alexander K. Lee
+    title: Alexander Lee
   - bio: |-
       Dwight is a Client Advisor and Partner with Auxano Advisors. He combines
       an extensive twenty-year business and engineering background with more
@@ -152,7 +152,7 @@ members:
       - Director of Operations
     qualifications:
       - ''
-    title: Brian Y. Hill
+    title: Brian Hill
   - bio: |-
       Shari is a member of the Client Advisory team at Auxano Advisors. She
       works with the firm’s valued clients to facilitate financial relationships
@@ -324,7 +324,7 @@ members:
       - Associate
     qualifications:
       - ''
-    title: Gretchen E. Curtis
+    title: Gretchen Curtis
   - bio: |-
       Dan is a member of the Client Advisory team at Auxano and assists in
       creating a unique, individual strategy for the firm’s clients as they
@@ -385,7 +385,7 @@ members:
       - Senior Investment Analyst
     qualifications:
       - CFA
-    title: Drew S. Matzen
+    title: Drew Matzen
   - bio: >-
       Blue Kayak Partners, founded by Jon Pinkston, provides non-discretionary
       investment research to Auxano Advisors in areas such as asset allocation,
@@ -403,7 +403,7 @@ members:
     extension: ''
     image: /uploads/jon-pinkston.jpg
     isStrategicPartner: true
-    partnerCompany: "Blue Kayak Partners, LLC"
+    partnerCompany: 'Blue Kayak Partners, LLC'
     positions:
       - Consultant - Sr. Investment Strategist
     qualifications:
