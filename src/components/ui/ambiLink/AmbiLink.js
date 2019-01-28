@@ -12,7 +12,7 @@ class AmbiLink extends React.Component {
   }
 
   render() {
-    const { to, children, ...rest } = this.props;
+    const { to = "", children, ...rest } = this.props;
     const isInternal = this.isInternal(to);
     if (isInternal) {
       return (
