@@ -52,6 +52,6 @@
     "eslint-plugin-react": "^7.12.2",
     "pa11y-ci": "latest",
     "prettier": "^1.16.0",
-    "serve": "latest"
+    "serve": "^10.1.1"
   }
 }

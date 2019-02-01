@@ -25,12 +25,10 @@ const AuxanoLogoWhite = (props = {}) => (
 class CoverSheet extends React.Component {
   constructor(props) {
     super(props);
-
-    // this._slideCover = this._slideCover.bind(this);
-    smoothscroll.polyfill();
   }
 
   _slideCover = () => {
+    smoothscroll.polyfill();
     window.removeEventListener("scroll", this._checkCoverStateOnScroll, false);
     window.scrollTo({
       top: window.innerHeight,
