@@ -1,4 +1,5 @@
 import React from "react";
+import smoothscroll from "smoothscroll-polyfill";
 
 import styles from "./coverSheet.scss";
 
@@ -25,10 +26,10 @@ class CoverSheet extends React.Component {
   constructor(props) {
     super(props);
 
-    this._onReady = this._onReady.bind(this);
-    this._onPause = this._onPause.bind(this);
-    this._onEnd = this._onEnd.bind(this);
+    // this._slideCover = this._slideCover.bind(this);
+    smoothscroll.polyfill();
   }
+
   _slideCover = () => {
     window.removeEventListener("scroll", this._checkCoverStateOnScroll, false);
     window.scrollTo({
@@ -58,10 +59,7 @@ class CoverSheet extends React.Component {
               <h1>{hero}</h1>
             </div>
             <button
-              onClick={() => {
-                console.log("slideCover");
-                this._slideCover(updateDoNotShowCoverState);
-              }}
+              onClick={() => this._slideCover(updateDoNotShowCoverState)}
               className={styles.scrollButton}
             >
               <DownArrow className={styles.arrow} height="22" width="17" />
