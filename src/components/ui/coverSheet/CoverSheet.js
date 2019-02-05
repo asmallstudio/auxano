@@ -1,4 +1,5 @@
 import React from "react";
+import smoothscroll from "smoothscroll-polyfill";
 
 import styles from "./coverSheet.scss";
 
@@ -22,7 +23,12 @@ const AuxanoLogoWhite = (props = {}) => (
 );
 
 class CoverSheet extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+
   _slideCover = () => {
+    smoothscroll.polyfill();
     window.removeEventListener("scroll", this._checkCoverStateOnScroll, false);
     window.scrollTo({
       top: window.innerHeight,
