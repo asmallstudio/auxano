@@ -6,7 +6,7 @@ import getSiteData from "./src/configuration/getSiteData";
 const isCI = () => process.env.CI === "true";
 
 export default {
-  plugins: ["asmallstudio-css-modules-postcss-sass"],
+  plugins: ["@asmallstudio/plugin-react-static-css-modules-postcss-sass"],
   siteRoot: constants.siteMeta.url,
   getSiteData: getSiteData,
   getRoutes: createRoutes,
