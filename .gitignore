@@ -6,6 +6,7 @@
 
 # production
 /dist
+/artifacts
 /tmp/**
 /src/components/styles/theme.css
 
