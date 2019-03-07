@@ -1319,7 +1319,7 @@ collections:
                 name: extension
                 widget: string
                 default: ""
-                required: true
+                required: false
               - label: "Bio"
                 name: bio
                 widget: markdown
