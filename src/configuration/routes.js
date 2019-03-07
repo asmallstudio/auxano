@@ -1,12 +1,12 @@
 import {
+  createSlugFromTitle,
+  createSlugFromTitleAndDate
+} from "@asmallstudio/utilities";
+import {
   getSingleFileYaml,
   getFolderCollection,
   createSlugsForArray
-} from "../lib/utils/fileLoading";
-import {
-  createSlugFromTitleAndDate,
-  createSlugFromTitle
-} from "../lib/utils/copy";
+} from "@asmallstudio/utilities/node";
 import { makePageRoutes } from "react-static/node";
 
 /**
@@ -14,45 +14,51 @@ import { makePageRoutes } from "react-static/node";
  * @returns {array} Array of page information objects
  */
 const createRoutes = async () => {
-  const home = getSingleFileYaml("./src/data/pages/home.yml");
-  const aboutUs = getSingleFileYaml("./src/data/pages/aboutUs.yml");
-  const ourApproach = getSingleFileYaml("./src/data/pages/ourApproach.yml");
-  const clientServices = getSingleFileYaml(
+  const home = await getSingleFileYaml("./src/data/pages/home.yml");
+  const aboutUs = await getSingleFileYaml("./src/data/pages/aboutUs.yml");
+  const ourApproach = await getSingleFileYaml(
+    "./src/data/pages/ourApproach.yml"
+  );
+  const clientServices = await getSingleFileYaml(
     "./src/data/pages/clientServices.yml"
   );
-  const personalFinances = getSingleFileYaml(
+  const personalFinances = await getSingleFileYaml(
     "./src/data/pages/clientServices/personalFinances.yml"
   );
-  const investments = getSingleFileYaml(
+  const investments = await getSingleFileYaml(
     "./src/data/pages/clientServices/investments.yml"
   );
-  const estatePlanning = getSingleFileYaml(
+  const estatePlanning = await getSingleFileYaml(
     "./src/data/pages/clientServices/estatePlanning.yml"
   );
-  const riskManagement = getSingleFileYaml(
+  const riskManagement = await getSingleFileYaml(
     "./src/data/pages/clientServices/riskManagement.yml"
   );
-  const taxManagement = getSingleFileYaml(
+  const taxManagement = await getSingleFileYaml(
     "./src/data/pages/clientServices/taxManagement.yml"
   );
-  const businessServices = getSingleFileYaml(
+  const businessServices = await getSingleFileYaml(
     "./src/data/pages/clientServices/businessServices.yml"
   );
-  const corporateBenefitsPlanning = getSingleFileYaml(
+  const corporateBenefitsPlanning = await getSingleFileYaml(
     "./src/data/pages/clientServices/corporateBenefitsPlanning.yml"
   );
-  const legacyPlanning = getSingleFileYaml(
+  const legacyPlanning = await getSingleFileYaml(
     "./src/data/pages/legacyPlanning.yml"
   );
-  const careers = getSingleFileYaml("./src/data/pages/careers.yml");
+  const careers = await getSingleFileYaml("./src/data/pages/careers.yml");
   const newsItems = await getFolderCollection(
     "./src/data/news",
+    "yml",
+    getSingleFileYaml,
     createSlugFromTitleAndDate
   );
-  const team = getSingleFileYaml("./src/data/pages/team.yml");
+  const team = await getSingleFileYaml("./src/data/pages/team.yml");
   team.members = createSlugsForArray(team.members, createSlugFromTitle);
-  const contact = getSingleFileYaml("./src/data/pages/contact.yml");
-  const disclosures = getSingleFileYaml("./src/data/pages/disclosures.yml");
+  const contact = await getSingleFileYaml("./src/data/pages/contact.yml");
+  const disclosures = await getSingleFileYaml(
+    "./src/data/pages/disclosures.yml"
+  );
 
   return [
     {

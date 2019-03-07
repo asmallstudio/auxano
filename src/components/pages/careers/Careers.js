@@ -1,15 +1,16 @@
 import React from "react";
 import { Head } from "react-static";
-import { withSiteAndRouteData } from "../../../lib/utils/hoc";
-import { pageChange } from "../../../lib/utils/pageChange";
 import {
   getFullPageTitle,
   pickFirstAvailableString
-} from "../../../lib/utils/copy";
+} from "@asmallstudio/utilities";
+import { ReactMarkdownLink } from "@asmallstudio/components";
+import { withSiteAndRouteData } from "../../../lib/utils/hoc";
+import { pageChange } from "../../../lib/utils/pageChange";
+import constants from "../../../lib/constants.json";
 
 import styles from "./careers.scss";
 import Markdown from "react-markdown";
-import ReactMarkdownLink from "../../ui/reactMarkdownLink/ReactMarkdownLink";
 import FullWidthSectionActionLink from "../../ui/fullWidthSectionActionLink/FullWidthSectionActionLink";
 import SubscribeSection from "../../ui/subscribeSection/SubscribeSection";
 
@@ -28,7 +29,9 @@ class Careers extends React.Component {
     return (
       <React.Fragment>
         <Head>
-          <title>{getFullPageTitle(careers.pageTitle)}</title>
+          <title>
+            {getFullPageTitle(careers.pageTitle, constants.siteMeta.title)}
+          </title>
           <meta
             name="description"
             content={pickFirstAvailableString(

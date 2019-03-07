@@ -1,12 +1,12 @@
 import React from "react";
 import { Head } from "react-static";
-import { Link } from "@reach/router";
-import { withSiteAndRouteData } from "../../../../lib/utils/hoc";
-import { pageChange } from "../../../../lib/utils/pageChange";
+import { AmbiLink } from "@asmallstudio/components";
 import {
   getFullPageTitle,
   pickFirstAvailableString
-} from "../../../../lib/utils/copy";
+} from "@asmallstudio/utilities";
+import { withSiteAndRouteData } from "../../../../lib/utils/hoc";
+import { pageChange } from "../../../../lib/utils/pageChange";
 
 import styles from "./personalFinances.scss";
 import FullWidthSectionText from "../../../ui/fullWidthSectionText/FullWidthSectionText";
@@ -44,12 +44,12 @@ class PersonalFinances extends React.Component {
         >
           <div className="row">
             <div className="col-xs-12">
-              <Link
+              <AmbiLink
                 to="/client-services"
                 className={`style-as-h3 ${styles.indexLink}`}
               >
                 Back to Client Services
-              </Link>
+              </AmbiLink>
             </div>
           </div>
           <div className={`${styles.dingusDot1} hidden-md-up`} />

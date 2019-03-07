@@ -4,8 +4,8 @@ import Markdown from "react-markdown";
 import BackToTopIcon from "./BackToTopIcon";
 import constants from "../../lib/constants.json";
 
-import AmbiLink from "../ui/ambiLink/AmbiLink";
-import { phoneNumberUnformat } from "../../lib/utils/copy";
+import { AmbiLink } from "@asmallstudio/components";
+import { phoneNumberUnformat } from "@asmallstudio/utilities";
 
 import styles from "./footer.scss";
 

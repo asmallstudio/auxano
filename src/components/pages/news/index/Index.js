@@ -1,15 +1,17 @@
 import React from "react";
 import { Head } from "react-static";
-import { Link } from "@reach/router";
+import {
+  getFullPageTitle,
+  formatRelativeDateString
+} from "@asmallstudio/utilities";
+import { AmbiLink } from "@asmallstudio/components";
 import { withSiteAndRouteData } from "../../../../lib/utils/hoc";
 import { pageChange } from "../../../../lib/utils/pageChange";
-import { getFullPageTitle } from "../../../../lib/utils/copy";
 
 import LinkWithArrow from "../../../ui/linkWithArrow/LinkWithArrow";
 import styles from "./index.scss";
-import { formatRelativeDateString } from "../../../../lib/utils/copy";
 
-const PaginationLink = ({ ...rest }) => <Link {...rest} />;
+const PaginationLink = ({ ...rest }) => <AmbiLink {...rest} />;
 
 class Index extends React.Component {
   componentDidMount() {
@@ -33,12 +35,12 @@ class Index extends React.Component {
                 {posts.map(post => (
                   <li key={post.slug} className={styles.indexArticle}>
                     <div className={styles.titleAndLinkContainer}>
-                      <Link
+                      <AmbiLink
                         to={`/news/${post.slug}/`}
                         className={styles.postTitle}
                       >
                         {post.title}
-                      </Link>
+                      </AmbiLink>
                       <LinkWithArrow
                         to={`/news/${post.slug}/`}
                         className={styles.arrowLink}

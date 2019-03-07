@@ -23,7 +23,9 @@
     "not IE < 11"
   ],
   "dependencies": {
+    "@asmallstudio/components": "^0.1.6",
     "@asmallstudio/plugin-react-static-css-modules-postcss-sass": "^0.1.2",
+    "@asmallstudio/utilities": "^0.3.5",
     "@babel/polyfill": "^7.2.5",
     "@reach/router": "^1.2.1",
     "autoprefixer": "^9.4.9",
@@ -45,7 +47,7 @@
     "smoothscroll-polyfill": "^0.4.3"
   },
   "devDependencies": {
-    "eslint": "^5.14.1",
+    "eslint": "^5.15.1",
     "eslint-config-prettier": "^4.1.0",
     "eslint-config-react-tools": "^1.1.6",
     "eslint-plugin-prettier": "^3.0.1",

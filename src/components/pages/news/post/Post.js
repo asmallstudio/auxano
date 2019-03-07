@@ -1,12 +1,11 @@
 import React from "react";
 import { Head } from "react-static";
-import { Link } from "@reach/router";
+import { getFullPageTitle } from "@asmallstudio/utilities";
+import { AmbiLink, ReactMarkdownLink } from "@asmallstudio/components";
 import { withSiteAndRouteData } from "../../../../lib/utils/hoc";
 import { pageChange } from "../../../../lib/utils/pageChange";
-import { getFullPageTitle } from "../../../../lib/utils/copy";
 
 import Markdown from "react-markdown";
-import ReactMarkdownLink from "../../../ui/reactMarkdownLink/ReactMarkdownLink";
 import styles from "./post.scss";
 
 class Post extends React.Component {
@@ -30,12 +29,12 @@ class Post extends React.Component {
                 styles.articleListLinkContainer
               }`}
             >
-              <Link
+              <AmbiLink
                 to="/news"
                 className={`style-as-h3 ${styles.articleListLink}`}
               >
                 News & Resources
-              </Link>
+              </AmbiLink>
             </div>
             <article
               className={`col-xs-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2 ${

@@ -1,17 +1,17 @@
 import React from "react";
 import { Head } from "react-static";
-import { withSiteAndRouteData } from "../../../lib/utils/hoc";
-import { pageChange } from "../../../lib/utils/pageChange";
 import {
   getFullPageTitle,
   pickFirstAvailableString,
   phoneNumberUnformat
-} from "../../../lib/utils/copy";
+} from "@asmallstudio/utilities";
+import { AmbiLink } from "@asmallstudio/components";
+import { withSiteAndRouteData } from "../../../lib/utils/hoc";
+import { pageChange } from "../../../lib/utils/pageChange";
 
 import constants from "../../../lib/constants.json";
 
 import styles from "./contact.scss";
-import AmbiLink from "../../ui/ambiLink/AmbiLink";
 import DefaultInput from "../../ui/defaultInput/DefaultInput";
 import DefaultTextArea from "../../ui/defaultTextArea/DefaultTextArea";
 import PrimaryButton from "../../ui/primaryButton/PrimaryButton";

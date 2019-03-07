@@ -1,9 +1,9 @@
 import React from "react";
 import { Head } from "react-static";
-import { Link } from "@reach/router";
+import { getFullPageTitle } from "@asmallstudio/utilities";
+import { AmbiLink } from "@asmallstudio/components";
 import { withSiteAndRouteData } from "../../../../lib/utils/hoc";
 import { pageChange } from "../../../../lib/utils/pageChange";
-import { getFullPageTitle } from "../../../../lib/utils/copy";
 
 import Markdown from "react-markdown";
 import FullWidthSectionActionLink from "../../../ui/fullWidthSectionActionLink/FullWidthSectionActionLink";
@@ -42,9 +42,12 @@ class Post extends React.Component {
         <section className={`container ${styles.memberContainer}`}>
           <div className="row">
             <div className={`col-xs-12 ${styles.indexLinkContainer}`}>
-              <Link to="/team" className={`style-as-h3 ${styles.indexLink}`}>
+              <AmbiLink
+                to="/team"
+                className={`style-as-h3 ${styles.indexLink}`}
+              >
                 Back to Team
-              </Link>
+              </AmbiLink>
             </div>
             <aside className={`col-xs-12 col-md-3 ${styles.memberInfo}`}>
               <img src={member.image} alt="" />

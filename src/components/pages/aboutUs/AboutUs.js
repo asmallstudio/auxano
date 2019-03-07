@@ -1,10 +1,11 @@
 import React from "react";
 import { Head } from "react-static";
-import { withSiteAndRouteData } from "../../../lib/utils/hoc";
 import {
   getFullPageTitle,
   pickFirstAvailableString
-} from "../../../lib/utils/copy";
+} from "@asmallstudio/utilities";
+import { withSiteAndRouteData } from "../../../lib/utils/hoc";
+import constants from "../../../lib/constants.json";
 
 import CallToActionLink from "../../ui/callToActionLink/CallToActionLink";
 import FullWidthSectionText from "../../ui/fullWidthSectionText/FullWidthSectionText";
@@ -34,7 +35,9 @@ class AboutUs extends React.Component {
     return (
       <React.Fragment>
         <Head>
-          <title>{getFullPageTitle(aboutUs.pageTitle)}</title>
+          <title>
+            {getFullPageTitle(aboutUs.pageTitle, constants.siteMeta.title)}
+          </title>
           <meta
             name="description"
             content={pickFirstAvailableString(

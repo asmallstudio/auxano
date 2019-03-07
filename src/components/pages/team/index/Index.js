@@ -1,9 +1,9 @@
 import React from "react";
 import { Head } from "react-static";
-import { Link } from "@reach/router";
+import { getFullPageTitle } from "@asmallstudio/utilities";
+import { AmbiLink } from "@asmallstudio/components";
 import { withSiteAndRouteData } from "../../../../lib/utils/hoc";
 import { pageChange } from "../../../../lib/utils/pageChange";
-import { getFullPageTitle } from "../../../../lib/utils/copy";
 
 import LinkWithArrow from "../../../ui/linkWithArrow/LinkWithArrow";
 import FullWidthSectionActionLink from "../../../ui/fullWidthSectionActionLink/FullWidthSectionActionLink";
@@ -43,12 +43,15 @@ class Index extends React.Component {
               <ul>
                 {fullMembers.map((member, i) => (
                   <li key={i} className={styles.teamMember}>
-                    <Link to={`/team/${member.slug}/`}>
+                    <AmbiLink to={`/team/${member.slug}/`}>
                       <img src={member.image} alt="" />
-                    </Link>
-                    <Link to={`/team/${member.slug}/`} className="style-as-h3">
+                    </AmbiLink>
+                    <AmbiLink
+                      to={`/team/${member.slug}/`}
+                      className="style-as-h3"
+                    >
                       {member.title}
-                    </Link>
+                    </AmbiLink>
                     <div className="style-as-p">
                       {this._formatPositions(member.positions)}
                     </div>
@@ -65,12 +68,15 @@ class Index extends React.Component {
               <ul>
                 {strategicPartners.map((member, i) => (
                   <li key={i} className={styles.teamMember}>
-                    <Link to={`/team/${member.slug}/`}>
+                    <AmbiLink to={`/team/${member.slug}/`}>
                       <img src={member.image} alt="" />
-                    </Link>
-                    <Link to={`/team/${member.slug}/`} className="style-as-h3">
+                    </AmbiLink>
+                    <AmbiLink
+                      to={`/team/${member.slug}/`}
+                      className="style-as-h3"
+                    >
                       {member.title}
-                    </Link>
+                    </AmbiLink>
                     <div className="style-as-p">
                       {this._formatPositions(member.positions)}
                     </div>

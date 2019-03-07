@@ -1,10 +1,9 @@
 import React from "react";
+import { AmbiLink } from "@asmallstudio/components";
 
 import styles from "./linkWithArrow.scss";
-import AmbiLink from "../ambiLink/AmbiLink";
 
-const LinkWithArrow = props => {
-  const { to, children, className = "" } = props;
+const LinkWithArrow = ({ to, children, className = "" }) => {
   if (to) {
     return (
       <AmbiLink to={to} className={`${styles.link} ${className}`}>

@@ -3,7 +3,7 @@ import createDocument from "./src/configuration/document";
 import createRoutes from "./src/configuration/routes";
 import getSiteData from "./src/configuration/getSiteData";
 
-const isCI = () => process.env.CI === "true";
+const isCI = process.env.CI === "true";
 
 export default {
   plugins: ["@asmallstudio/plugin-react-static-css-modules-postcss-sass"],
@@ -11,5 +11,5 @@ export default {
   getSiteData: getSiteData,
   getRoutes: createRoutes,
   Document: createDocument,
-  maxThreads: isCI ? 6 : Infinity
+  maxThreads: isCI && 6
 };

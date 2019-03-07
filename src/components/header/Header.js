@@ -1,7 +1,7 @@
 import React from "react";
 import { withSiteData } from "react-static";
+import { AmbiLink } from "@asmallstudio/components";
 
-import AmbiLink from "../ui/ambiLink/AmbiLink";
 import FullWidthSectionActionLink from "../ui/fullWidthSectionActionLink/FullWidthSectionActionLink";
 
 import styles from "./header.scss";
@@ -131,7 +131,7 @@ class Header extends React.Component {
                 className={styles.bottomMenuLink}
                 linkText="Schedule a meeting"
                 onClick={this._menuClose}
-                to="/contact"
+                to="/contact/"
               />
             </ul>
           </nav>

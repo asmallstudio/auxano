@@ -1,3 +1,3 @@
-import { getSingleFileYaml } from "../lib/utils/fileLoading";
+import { getSingleFileYaml } from "@asmallstudio/utilities/node";
 
 export default () => getSingleFileYaml("./src/data/pages/siteData.yml");
