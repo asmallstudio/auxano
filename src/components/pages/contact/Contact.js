@@ -8,7 +8,6 @@ import {
 import { AmbiLink } from "@asmallstudio/components";
 import { withSiteAndRouteData } from "../../../lib/utils/hoc";
 import { pageChange } from "../../../lib/utils/pageChange";
-
 import constants from "../../../lib/constants.json";
 
 import styles from "./contact.scss";
@@ -200,7 +199,9 @@ const Contact = props => {
   return (
     <React.Fragment>
       <Head>
-        <title>{getFullPageTitle(contact.pageTitle)}</title>
+        <title>
+          {getFullPageTitle(contact.pageTitle, constants.siteMeta.title)}
+        </title>
         <meta
           name="description"
           content={pickFirstAvailableString(

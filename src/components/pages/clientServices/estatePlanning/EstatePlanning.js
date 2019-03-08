@@ -7,6 +7,7 @@ import {
 } from "@asmallstudio/utilities";
 import { withSiteAndRouteData } from "../../../../lib/utils/hoc";
 import { pageChange } from "../../../../lib/utils/pageChange";
+import constants from "../../../../lib/constants.json";
 
 import styles from "./estatePlanning.scss";
 import FullWidthSectionText from "../../../ui/fullWidthSectionText/FullWidthSectionText";
@@ -28,7 +29,12 @@ class EstatePlanning extends React.Component {
     return (
       <React.Fragment>
         <Head>
-          <title>{getFullPageTitle(estatePlanning.pageTitle)}</title>
+          <title>
+            {getFullPageTitle(
+              estatePlanning.pageTitle,
+              constants.siteMeta.title
+            )}
+          </title>
           <meta
             name="description"
             content={pickFirstAvailableString(

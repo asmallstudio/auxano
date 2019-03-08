@@ -6,6 +6,7 @@ import {
 } from "@asmallstudio/utilities";
 import { withSiteAndRouteData } from "../../../lib/utils/hoc";
 import { pageChange } from "../../../lib/utils/pageChange";
+import constants from "../../../lib/constants.json";
 
 import styles from "./legacyPlanning.scss";
 import Markdown from "react-markdown";
@@ -28,7 +29,12 @@ class LegacyPlanning extends React.Component {
     return (
       <React.Fragment>
         <Head>
-          <title>{getFullPageTitle(legacyPlanning.pageTitle)}</title>
+          <title>
+            {getFullPageTitle(
+              legacyPlanning.pageTitle,
+              constants.siteMeta.title
+            )}
+          </title>
           <meta
             name="description"
             content={pickFirstAvailableString(

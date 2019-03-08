@@ -4,6 +4,7 @@ import { getFullPageTitle } from "@asmallstudio/utilities";
 import { AmbiLink } from "@asmallstudio/components";
 import { withSiteAndRouteData } from "../../../../lib/utils/hoc";
 import { pageChange } from "../../../../lib/utils/pageChange";
+import constants from "../../../../lib/constants.json";
 
 import Markdown from "react-markdown";
 import FullWidthSectionActionLink from "../../../ui/fullWidthSectionActionLink/FullWidthSectionActionLink";
@@ -36,7 +37,9 @@ class Post extends React.Component {
     return (
       <React.Fragment>
         <Head>
-          <title>{getFullPageTitle(member.title)}</title>
+          <title>
+            {getFullPageTitle(member.title, constants.siteMeta.title)}
+          </title>
           <meta name="description" content={siteData.siteDescription} />
         </Head>
         <section className={`container ${styles.memberContainer}`}>

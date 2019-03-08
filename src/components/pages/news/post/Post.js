@@ -4,6 +4,7 @@ import { getFullPageTitle } from "@asmallstudio/utilities";
 import { AmbiLink, ReactMarkdownLink } from "@asmallstudio/components";
 import { withSiteAndRouteData } from "../../../../lib/utils/hoc";
 import { pageChange } from "../../../../lib/utils/pageChange";
+import constants from "../../../../lib/constants.json";
 
 import Markdown from "react-markdown";
 import styles from "./post.scss";
@@ -19,7 +20,9 @@ class Post extends React.Component {
     return (
       <React.Fragment>
         <Head>
-          <title>{getFullPageTitle(post.title)}</title>
+          <title>
+            {getFullPageTitle(post.title, constants.siteMeta.title)}
+          </title>
           <meta name="description" content={siteData.siteDescription} />
         </Head>
         <div className={`container ${styles.articleContainer}`}>

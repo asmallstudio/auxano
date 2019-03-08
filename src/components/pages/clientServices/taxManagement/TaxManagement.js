@@ -7,6 +7,7 @@ import {
 import { AmbiLink } from "@asmallstudio/components";
 import { withSiteAndRouteData } from "../../../../lib/utils/hoc";
 import { pageChange } from "../../../../lib/utils/pageChange";
+import constants from "../../../../lib/constants.json";
 
 import styles from "./taxManagement.scss";
 import FullWidthSectionActionLink from "../../../ui/fullWidthSectionActionLink/FullWidthSectionActionLink";
@@ -27,7 +28,12 @@ class TaxManagement extends React.Component {
     return (
       <React.Fragment>
         <Head>
-          <title>{getFullPageTitle(taxManagement.pageTitle)}</title>
+          <title>
+            {getFullPageTitle(
+              taxManagement.pageTitle,
+              constants.siteMeta.title
+            )}
+          </title>
           <meta
             name="description"
             content={pickFirstAvailableString(

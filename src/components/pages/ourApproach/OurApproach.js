@@ -6,6 +6,7 @@ import {
 } from "@asmallstudio/utilities";
 import { withSiteAndRouteData } from "../../../lib/utils/hoc";
 import { pageChange } from "../../../lib/utils/pageChange";
+import constants from "../../../lib/constants.json";
 
 import styles from "./ourApproach.scss";
 import InfoSectionRow from "./InfoSectionRow";
@@ -28,7 +29,9 @@ class OurApproach extends React.Component {
     return (
       <React.Fragment>
         <Head>
-          <title>{getFullPageTitle(ourApproach.pageTitle)}</title>
+          <title>
+            {getFullPageTitle(ourApproach.pageTitle, constants.siteMeta.title)}
+          </title>
           <meta
             name="description"
             content={pickFirstAvailableString(

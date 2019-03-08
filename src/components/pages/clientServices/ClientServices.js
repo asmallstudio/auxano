@@ -6,6 +6,7 @@ import {
 } from "@asmallstudio/utilities";
 import { withSiteAndRouteData } from "../../../lib/utils/hoc";
 import { pageChange } from "../../../lib/utils/pageChange";
+import constants from "../../../lib/constants.json";
 
 import styles from "./clientServices.scss";
 import OneThirdColumn from "../../ui/oneThirdColumn/OneThirdColumn";
@@ -27,7 +28,12 @@ class ClientServices extends React.Component {
     return (
       <React.Fragment>
         <Head>
-          <title>{getFullPageTitle(clientServices.pageTitle)}</title>
+          <title>
+            {getFullPageTitle(
+              clientServices.pageTitle,
+              constants.siteMeta.title
+            )}
+          </title>
           <meta
             name="description"
             content={pickFirstAvailableString(

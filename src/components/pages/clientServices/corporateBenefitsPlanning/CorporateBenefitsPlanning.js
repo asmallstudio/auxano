@@ -7,6 +7,7 @@ import {
 } from "@asmallstudio/utilities";
 import { withSiteAndRouteData } from "../../../../lib/utils/hoc";
 import { pageChange } from "../../../../lib/utils/pageChange";
+import constants from "../../../../lib/constants.json";
 
 import styles from "./corporateBenefitsPlanning.scss";
 import FullWidthSectionActionLink from "../../../ui/fullWidthSectionActionLink/FullWidthSectionActionLink";
@@ -27,7 +28,12 @@ class corporateBenefitsPlanning extends React.Component {
     return (
       <React.Fragment>
         <Head>
-          <title>{getFullPageTitle(corporateBenefitsPlanning.pageTitle)}</title>
+          <title>
+            {getFullPageTitle(
+              corporateBenefitsPlanning.pageTitle,
+              constants.siteMeta.title
+            )}
+          </title>
           <meta
             name="description"
             content={pickFirstAvailableString(

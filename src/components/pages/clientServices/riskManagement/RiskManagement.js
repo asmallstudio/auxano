@@ -7,6 +7,7 @@ import {
 } from "@asmallstudio/utilities";
 import { withSiteAndRouteData } from "../../../../lib/utils/hoc";
 import { pageChange } from "../../../../lib/utils/pageChange";
+import constants from "../../../../lib/constants.json";
 
 import styles from "./riskManagement.scss";
 import FullWidthSectionText from "../../../ui/fullWidthSectionText/FullWidthSectionText";
@@ -28,7 +29,12 @@ class RiskManagement extends React.Component {
     return (
       <React.Fragment>
         <Head>
-          <title>{getFullPageTitle(riskManagement.pageTitle)}</title>
+          <title>
+            {getFullPageTitle(
+              riskManagement.pageTitle,
+              constants.siteMeta.title
+            )}
+          </title>
           <meta
             name="description"
             content={pickFirstAvailableString(

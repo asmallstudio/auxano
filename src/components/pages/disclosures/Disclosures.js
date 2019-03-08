@@ -6,6 +6,7 @@ import {
 } from "@asmallstudio/utilities";
 import { withSiteAndRouteData } from "../../../lib/utils/hoc";
 import { pageChange } from "../../../lib/utils/pageChange";
+import constants from "../../../lib/constants.json";
 
 import Markdown from "react-markdown";
 import styles from "./disclosures.scss";
@@ -21,7 +22,9 @@ class Disclosures extends React.Component {
     return (
       <React.Fragment>
         <Head>
-          <title>{getFullPageTitle(disclosures.pageTitle)}</title>
+          <title>
+            {getFullPageTitle(disclosures.pageTitle, constants.siteMeta.title)}
+          </title>
           <meta
             name="description"
             content={pickFirstAvailableString(

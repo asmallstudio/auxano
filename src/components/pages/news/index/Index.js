@@ -7,6 +7,7 @@ import {
 import { AmbiLink } from "@asmallstudio/components";
 import { withSiteAndRouteData } from "../../../../lib/utils/hoc";
 import { pageChange } from "../../../../lib/utils/pageChange";
+import constants from "../../../../lib/constants.json";
 
 import LinkWithArrow from "../../../ui/linkWithArrow/LinkWithArrow";
 import styles from "./index.scss";
@@ -24,7 +25,7 @@ class Index extends React.Component {
     return (
       <React.Fragment>
         <Head>
-          <title>{getFullPageTitle("News")}</title>
+          <title>{getFullPageTitle("News", constants.siteMeta.title)}</title>
           <meta name="description" content={siteData.siteDescription} />
         </Head>
         <div className="container">
