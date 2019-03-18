@@ -11,6 +11,7 @@ slug:
   clean_accents: true
 collections:
   - label: Pages
+    label_singular: Page
     name: pages
     preview_path: "{{slug}}"
     files:
@@ -1346,7 +1347,8 @@ collections:
           - label: "Content"
             name: content
             widget: markdown
-  - label: News Article
+  - label: News Articles
+    label_singular: News Article
     name: news
     folder: src/data/news
     create: true
