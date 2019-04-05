@@ -3,6 +3,7 @@ import { withSiteData, Head } from "react-static";
 import { AmbiLink } from "@asmallstudio/components";
 import { getFullPageTitle } from "@asmallstudio/utilities";
 import { pageChange } from "../lib/utils/pageChange";
+import constants from "../lib/constants.json";
 
 import styles from "./404.scss";
 
@@ -17,7 +18,9 @@ class PageNotFound extends React.Component {
     return (
       <React.Fragment>
         <Head>
-          <title>{getFullPageTitle("Page not found")}</title>
+          <title>
+            {getFullPageTitle("Page not found", constants.siteMeta.title)}
+          </title>
           <meta name="description" content={siteData.siteDescription} />
         </Head>
         <div className="container">
