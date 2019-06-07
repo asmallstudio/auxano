@@ -12,7 +12,7 @@
     "stage": "react-static build --staging",
     "build": "react-static build",
     "serve": "serve dist -p 3000",
-    "test": "yarn run --silent test-eslint; yarn run test-pa11y",
+    "test": "npm run test-eslint --silent; npm run test-pa11y",
     "test-eslint": "eslint --ignore-path .gitignore ./",
     "test-pa11y": "pa11y-ci --threshold 5000"
   },

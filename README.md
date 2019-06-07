@@ -7,7 +7,7 @@ A frontend static site made with [React Static](https://react-static.js.org/).
 After cloning this repo, go into the new folder and run:
 
 ```sh
-yarn install
+npm install
 ```
 
 ## Build Environments
@@ -17,7 +17,7 @@ yarn install
 Development includes hot reloading and does not minimize built CSS. CSS Module class names are expanded (yet still unique) allowing for easier debugging.
 
 ```sh
-yarn start
+npm run start
 ```
 
 ### Staging
@@ -25,8 +25,8 @@ yarn start
 Essentially the same as production but allows CSS Modules class names to still be viewed, as in develop.
 
 ```sh
-yarn stage
-yarn serve
+npm run stage
+npm run serve
 ```
 
 ### Production
@@ -34,8 +34,8 @@ yarn serve
 The final version of the site for deployment, bundled and minified.
 
 ```sh
-yarn build
-yarn serve
+npm run build
+npm run serve
 ```
 
 ## Notes
@@ -55,7 +55,7 @@ yarn serve
 - All pushes to `master` will autodeploy to production
 - Any pull requests to `develop` will create a deployment preview that can be
   viewed via the link in the pull request (after the build pipeline finishes).
-  Note, the build command for a deployment preview is `yarn stage`
+  Note, the build command for a deployment preview is `npm run stage`
 
 ### CSS
 
@@ -99,7 +99,7 @@ Furthermore, here are some recommended workspace settings:
   "editor.insertSpaces": true,
   "editor.tabSize": 2,
   "editor.formatOnSave": true,
-  "eslint.packageManager": "yarn"
+  "eslint.packageManager": "npm"
 }
 ```
 
@@ -110,7 +110,7 @@ Continuous integration is handled by two sources, Netlify and
 
 #### Netlify
 
-Will verify the application builds for production by running `yarn run build`
+Will verify the application builds for production by running `npm run build`
 
 #### CircleCI
 
@@ -125,7 +125,7 @@ Will verify a suite of tests located in the configuration
 - ESLint
   - Validates that the code conforms to the ESLint standards set in
     `.eslintrc.js`
-  - Command: `yarn run test-eslint`
+  - Command: `npm run test-eslint`
 - PageSpeed
   - Checks the Google
     [PageSpeed](https://developers.google.com/speed/pagespeed/insights/) API to

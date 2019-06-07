@@ -30,7 +30,7 @@ jobs:
 
       - run:
           name: Install Dependencies
-          command: yarn install
+          command: npm ci
 
       - save_cache:
           paths:
@@ -40,18 +40,18 @@ jobs:
       # Run test script
       - run:
           name: ESLint Test
-          command: yarn test-eslint
+          command: npm run test-eslint
 
       # Test build
       - run:
           name: Build Site
           command: mkdir -p tmp
-          command: yarn build
+          command: npm run build
 
       # Serve site
       - run:
           name: Serve Production Site
-          command: yarn serve --no-clipboard
+          command: npm run serve -- --no-clipboard
           background: true
 
       # Set up and run ngrok
@@ -102,7 +102,7 @@ jobs:
       # Test Accessibility (a11y)
       - run:
           name: Pa11y Test
-          command: yarn run --silent test-pa11y --json >
+          command: npm run test-pa11y --silent -- --json >
             ./tmp/results/pa11y-desktop.json
       - store_artifacts:
           path: ./tmp/results/pa11y-desktop.json

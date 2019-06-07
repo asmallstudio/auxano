@@ -1,12 +1,12 @@
 [build]
   publish = "dist"
-  command = "yarn build"
+  command = "npm run build"
 
 [context.deploy-preview]
-  command = "yarn stage"
+  command = "npm run stage"
 
 [context.branch-deploy]
-  command = "yarn stage"
+  command = "npm run stage"
 
 # These redirects are from the pre-2019 Auxano Site.
 [[redirects]]
