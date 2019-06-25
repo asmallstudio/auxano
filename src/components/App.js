@@ -1,5 +1,6 @@
 import React from "react";
 import { Root, Routes, Head, withSiteData } from "react-static";
+import { Match } from "@reach/router";
 
 import Header from "./header/Header";
 import Footer from "./footer/Footer";
@@ -8,6 +9,16 @@ import CoverSheet from "./ui/coverSheet/CoverSheet";
 
 import "./styles/main.scss";
 import appStyles from "./app.scss";
+
+const ScrollRestoration = () => {
+  React.useEffect(() => {
+    if (window.location.hash) {
+      return;
+    }
+    window.scrollTo(0, 0);
+  });
+  return null;
+};
 
 class App extends React.Component {
   constructor(props) {
@@ -59,19 +70,34 @@ class App extends React.Component {
             <title>{constants.siteMeta.title}</title>
           </Head>
           {doNotShowCover ? null : (
-            <CoverSheet
-              hero={siteData.coverSheet.hero}
-              tagline={siteData.coverSheet.tagline}
-              updateDoNotShowCoverState={this.updateDoNotShowCoverState}
-            />
+            <React.Suspense fallback={<span>Loading Cover…</span>}>
+              <CoverSheet
+                hero={siteData.coverSheet.hero}
+                tagline={siteData.coverSheet.tagline}
+                updateDoNotShowCoverState={this.updateDoNotShowCoverState}
+              />
+            </React.Suspense>
           )}
-          <Header />
+          <React.Suspense fallback={<span>Loading Header…</span>}>
+            <Header />
+          </React.Suspense>
           <main
             className={`${appStyles.routesContainer} doNotShowCoverSheet--${doNotShowCover}`}
           >
-            <Routes />
+            <React.Suspense fallback={<span>Loading…</span>}>
+              <Match path="">
+                {props => (
+                  <>
+                    <ScrollRestoration {...props} />
+                  </>
+                )}
+              </Match>
+              <Routes />
+            </React.Suspense>
           </main>
-          <Footer />
+          <React.Suspense fallback={<span>Loading Footer…</span>}>
+            <Footer />
+          </React.Suspense>
         </React.Fragment>
       </Root>
     );

@@ -7,7 +7,7 @@ import React from "react";
  * @returns {object} React element representing the root document
  * of the website
  */
-const createDocument = ({ Html, Head, Body, children, renderMeta }) => {
+const createDocument = ({ Html, Head, Body, children }) => {
   return (
     <Html>
       <Head>
@@ -24,7 +24,6 @@ const createDocument = ({ Html, Head, Body, children, renderMeta }) => {
           href="/assets/favicons/favicons.svg"
           color="#50b8b8"
         />
-        {renderMeta.styleTags}
       </Head>
       <Body>{children}</Body>
     </Html>

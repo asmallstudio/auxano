@@ -63,35 +63,35 @@ const createRoutes = async () => {
   return [
     {
       path: "/",
-      component: "src/components/pages/home/Home",
+      template: "src/components/pages/home/Home",
       getData: () => ({
         home
       })
     },
     {
       path: "/about-us",
-      component: "src/components/pages/aboutUs/AboutUs",
+      template: "src/components/pages/aboutUs/AboutUs",
       getData: () => ({
         aboutUs
       })
     },
     {
       path: "/our-approach",
-      component: "src/components/pages/ourApproach/OurApproach",
+      template: "src/components/pages/ourApproach/OurApproach",
       getData: () => ({
         ourApproach
       })
     },
     {
       path: "/client-services",
-      component: "src/components/pages/clientServices/ClientServices",
+      template: "src/components/pages/clientServices/ClientServices",
       getData: () => ({
         clientServices
       }),
       children: [
         {
           path: "/personal-finances",
-          component:
+          template:
             "src/components/pages/clientServices/personalFinances/PersonalFinances",
           getData: () => ({
             personalFinances
@@ -99,7 +99,7 @@ const createRoutes = async () => {
         },
         {
           path: "/investments",
-          component:
+          template:
             "src/components/pages/clientServices/investments/investments",
           getData: () => ({
             investments
@@ -107,7 +107,7 @@ const createRoutes = async () => {
         },
         {
           path: "/estate-planning",
-          component:
+          template:
             "src/components/pages/clientServices/estatePlanning/EstatePlanning",
           getData: () => ({
             estatePlanning
@@ -115,7 +115,7 @@ const createRoutes = async () => {
         },
         {
           path: "/risk-management",
-          component:
+          template:
             "src/components/pages/clientServices/riskManagement/RiskManagement",
           getData: () => ({
             riskManagement
@@ -123,7 +123,7 @@ const createRoutes = async () => {
         },
         {
           path: "/tax-management",
-          component:
+          template:
             "src/components/pages/clientServices/taxManagement/TaxManagement",
           getData: () => ({
             taxManagement
@@ -131,7 +131,7 @@ const createRoutes = async () => {
         },
         {
           path: "/corporate-benefits-planning",
-          component:
+          template:
             "src/components/pages/clientServices/corporateBenefitsPlanning/CorporateBenefitsPlanning",
           getData: () => ({
             corporateBenefitsPlanning
@@ -139,7 +139,7 @@ const createRoutes = async () => {
         },
         {
           path: "/business-services",
-          component:
+          template:
             "src/components/pages/clientServices/businessServices/BusinessServices",
           getData: () => ({
             businessServices
@@ -149,27 +149,27 @@ const createRoutes = async () => {
     },
     {
       path: "/legacy-planning",
-      component: "src/components/pages/legacyPlanning/LegacyPlanning",
+      template: "src/components/pages/legacyPlanning/LegacyPlanning",
       getData: () => ({
         legacyPlanning
       })
     },
     {
       path: "/careers",
-      component: "src/components/pages/careers/Careers",
+      template: "src/components/pages/careers/Careers",
       getData: () => ({
         careers
       })
     },
     {
       path: "/team",
-      component: "src/components/pages/team/index/Index",
+      template: "src/components/pages/team/index/Index",
       getData: () => ({
         members: team.members
       }),
       children: team.members.map(member => ({
         path: `${member.slug}`,
-        component: "src/components/pages/team/member/Member",
+        template: "src/components/pages/team/member/Member",
         getData: () => ({
           member
         })
@@ -183,7 +183,7 @@ const createRoutes = async () => {
       route: {
         // Use this route as the base route
         path: "news",
-        component: "src/components/pages/news/index/Index"
+        template: "src/components/pages/news/index/Index"
       },
       decorate: (posts, i, totalPages) => ({
         // For each page, supply the posts, page and totalPages
@@ -195,7 +195,7 @@ const createRoutes = async () => {
         // Make the routes for each blog post
         children: posts.map(post => ({
           path: `${post.slug}`,
-          component: "src/components/pages/news/post/Post",
+          template: "src/components/pages/news/post/Post",
           getData: () => ({
             post
           })
@@ -204,14 +204,14 @@ const createRoutes = async () => {
     }),
     {
       path: "/contact",
-      component: "src/components/pages/contact/Contact",
+      template: "src/components/pages/contact/Contact",
       getData: () => ({
         contact
       })
     },
     {
       path: "/disclosures",
-      component: "src/components/pages/disclosures/Disclosures",
+      template: "src/components/pages/disclosures/Disclosures",
       getData: () => ({
         disclosures
       })
