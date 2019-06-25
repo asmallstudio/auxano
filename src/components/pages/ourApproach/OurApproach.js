@@ -41,9 +41,7 @@ class OurApproach extends React.Component {
           />
         </Head>
         <section
-          className={`container--fluid ${styles.dingusDotContainer} ${
-            styles.heroContainer
-          } dg-hero`}
+          className={`container--fluid ${styles.dingusDotContainer} ${styles.heroContainer} dg-hero`}
         >
           <div className="container">
             <div className="row">

@@ -44,9 +44,7 @@ class EstatePlanning extends React.Component {
           />
         </Head>
         <section
-          className={`container ${styles.indexLinkContainer} ${
-            styles.dingusDotContainer
-          }`}
+          className={`container ${styles.indexLinkContainer} ${styles.dingusDotContainer}`}
         >
           <div className="row">
             <div className="col-xs-12">
@@ -61,9 +59,7 @@ class EstatePlanning extends React.Component {
           <div className={`${styles.dingusDot1} hidden-md-up`} />
         </section>
         <section
-          className={`container--fluid ${styles.heroContainer} ${
-            styles.dingusDotContainer
-          } dg-hero`}
+          className={`container--fluid ${styles.heroContainer} ${styles.dingusDotContainer} dg-hero`}
         >
           <div className="container">
             <div className="row">
@@ -83,14 +79,10 @@ class EstatePlanning extends React.Component {
         <section className="container dg-imageRow">
           <div className={`row ${styles.infoSectionRow}`}>
             <div
-              className={`col-xs-12 col-md-6 col-lg-5 ${
-                styles.infoSectionColImage
-              }`}
+              className={`col-xs-12 col-md-6 col-lg-5 ${styles.infoSectionColImage}`}
             >
               <div
-                className={`${styles.imgContainer} ${
-                  styles.dingusDotRelative
-                } ${styles.dingusDot2}`}
+                className={`${styles.imgContainer} ${styles.dingusDotRelative} ${styles.dingusDot2}`}
               >
                 <img
                   className={`${styles.infoSectionImage}`}

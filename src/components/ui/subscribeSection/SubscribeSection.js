@@ -123,9 +123,7 @@ class SubscribeSection extends React.Component {
             <p>{text}</p>
           </div>
           <SubscribeForm
-            className={`col-xs-12 col-md-10 col-md-offset-1 col-lg-5 col-lg-offset-1 ${
-              styles.action
-            }`}
+            className={`col-xs-12 col-md-10 col-md-offset-1 col-lg-5 col-lg-offset-1 ${styles.action}`}
           />
         </div>
       </div>

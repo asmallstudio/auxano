@@ -68,14 +68,10 @@ class AboutUs extends React.Component {
         <section className="container dg-infoSection">
           <div className={`row ${styles.infoSectionRow}`}>
             <div
-              className={`col-xs-12 col-md-6 col-lg-5 ${
-                styles.infoSectionColImage
-              }`}
+              className={`col-xs-12 col-md-6 col-lg-5 ${styles.infoSectionColImage}`}
             >
               <div
-                className={`${styles.imgContainer} ${
-                  styles.dingusDotRelative
-                } ${styles.dingusDot}`}
+                className={`${styles.imgContainer} ${styles.dingusDotRelative} ${styles.dingusDot}`}
               >
                 <img
                   className={`${styles.infoSectionImage}`}

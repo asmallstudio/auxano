@@ -79,9 +79,7 @@ class Post extends React.Component {
               )}
             </aside>
             <article
-              className={`col-xs-12 col-md-9 col-lg-8 col-lg-offset-1 ${
-                styles.memberBio
-              }`}
+              className={`col-xs-12 col-md-9 col-lg-8 col-lg-offset-1 ${styles.memberBio}`}
             >
               <Markdown>{member.bio}</Markdown>
             </article>

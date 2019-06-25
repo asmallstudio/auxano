@@ -76,9 +76,7 @@ const Footer = ({ siteData }) => (
 
     <div className={`container ${styles.footerRow}`}>
       <div
-        className={`col-xs-12 col-md-9 ${styles.infoContainer} ${
-          styles.contactLinks
-        }`}
+        className={`col-xs-12 col-md-9 ${styles.infoContainer} ${styles.contactLinks}`}
       >
         <h3 className="sr-text">Contact Info</h3>
         <ul className={`N2 ${styles.linkList}`}>
@@ -142,9 +140,7 @@ const Footer = ({ siteData }) => (
         <p className="N2">© {new Date().getFullYear()} Auxano Advisors LLC</p>
       </div>
       <div
-        className={`col-xs-12 col-md-3 ${styles.infoContainer} ${
-          styles.backToTopContainer
-        }`}
+        className={`col-xs-12 col-md-3 ${styles.infoContainer} ${styles.backToTopContainer}`}
       >
         <span className="N2">
           <AmbiLink to="#">

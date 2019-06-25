@@ -114,7 +114,7 @@ class Header extends React.Component {
               id="header-nav"
               className={styles.list}
               aria-expanded={menuHidden ? "false" : "true"}
-              {...menuHidden && { hidden: true }}
+              {...(menuHidden && { hidden: true })}
             >
               {siteData.headerNav.map((navItem, i) => (
                 <li key={i} className="style-as-h3">

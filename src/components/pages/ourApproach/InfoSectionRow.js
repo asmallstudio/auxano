@@ -11,9 +11,7 @@ const InfoSectionRow = ({
   <div className={`row ${styles.infoSectionRow} ${className}`}>
     <div className={`col-xs-12 col-md-6 ${styles.infoSectionColImage}`}>
       <div
-        className={`${styles.imgContainer} ${styles.dingusDotRelative} ${
-          styles.dingusDot
-        }`}
+        className={`${styles.imgContainer} ${styles.dingusDotRelative} ${styles.dingusDot}`}
       >
         <img className={styles.infoSectionImage} src={imgSrc} alt={imgAlt} />
       </div>

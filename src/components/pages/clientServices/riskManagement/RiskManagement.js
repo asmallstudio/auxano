@@ -44,9 +44,7 @@ class RiskManagement extends React.Component {
           />
         </Head>
         <section
-          className={`container ${styles.indexLinkContainer} ${
-            styles.dingusDotContainer
-          }`}
+          className={`container ${styles.indexLinkContainer} ${styles.dingusDotContainer}`}
         >
           <div className="row">
             <div className="col-xs-12">
@@ -61,9 +59,7 @@ class RiskManagement extends React.Component {
           <div className={`${styles.dingusDot1} hidden-md-up`} />
         </section>
         <section
-          className={`container--fluid ${styles.heroContainer} ${
-            styles.dingusDotContainer
-          } dg-hero`}
+          className={`container--fluid ${styles.heroContainer} ${styles.dingusDotContainer} dg-hero`}
         >
           <div className="container">
             <div className="row">
@@ -98,9 +94,7 @@ class RiskManagement extends React.Component {
             </div>
             <div className="col-lg-1 hidden-lg-down" />
             <ul
-              className={`col-xs-12 col-md-6 col-lg-5 ${
-                styles.serviceInfoList
-              }`}
+              className={`col-xs-12 col-md-6 col-lg-5 ${styles.serviceInfoList}`}
             >
               <li className={styles.serviceInfoListItem}>
                 <img

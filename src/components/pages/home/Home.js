@@ -33,9 +33,7 @@ class Home extends React.Component {
           <div className="container">
             <div className="row">
               <div
-                className={`col-xs-12 col-md-6 ${
-                  styles.heroTextContainer
-                } dg-hero`}
+                className={`col-xs-12 col-md-6 ${styles.heroTextContainer} dg-hero`}
               >
                 <h1>{home.hero.title}</h1>
                 <p>{home.hero.subtitle}</p>

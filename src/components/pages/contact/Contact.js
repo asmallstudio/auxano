@@ -215,17 +215,13 @@ const Contact = props => {
           <h1 className="sr-text">{contact.pageTitle}</h1>
           <div className="row">
             <section
-              className={`col-xs-12 col-md-6 ${styles.contactSection} ${
-                styles.contactForm
-              } dg-form`}
+              className={`col-xs-12 col-md-6 ${styles.contactSection} ${styles.contactForm} dg-form`}
             >
               <h2>{contact.form.title}</h2>
               <ContactForm fallbackEmail={siteData.companyInfo.email} />
             </section>
             <section
-              className={`col-xs-12 col-md-5 col-md-offset-1 ${
-                styles.contactSection
-              } ${styles.contactInfo} dg-info`}
+              className={`col-xs-12 col-md-5 col-md-offset-1 ${styles.contactSection} ${styles.contactInfo} dg-info`}
             >
               <h2>{contact.info.title}</h2>
               <address itemScope itemType="http://schema.org/Organization">
@@ -293,9 +289,7 @@ const Contact = props => {
               </p>
               <section className={`col-xs-12 ${styles.mapSection}`} />
               <div
-                className={`${styles.contactInfoSection} ${
-                  styles.dingusDotRelative
-                }`}
+                className={`${styles.contactInfoSection} ${styles.dingusDotRelative}`}
               >
                 <IFrame
                   url="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2689.6162509396745!2d-122.19616678423552!3d47.61415107918512!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54906c89d25fcd9b%3A0x2b68c721fc3f0f59!2sAuxano+Advisors%2C+LLC!5e0!3m2!1sen!2sus!4v1533505977008"

@@ -28,9 +28,7 @@ class Post extends React.Component {
         <div className={`container ${styles.articleContainer}`}>
           <div className="row">
             <div
-              className={`col-xs-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2 ${
-                styles.articleListLinkContainer
-              }`}
+              className={`col-xs-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2 ${styles.articleListLinkContainer}`}
             >
               <AmbiLink
                 to="/news"
@@ -40,9 +38,7 @@ class Post extends React.Component {
               </AmbiLink>
             </div>
             <article
-              className={`col-xs-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2 ${
-                styles.newsArticle
-              }`}
+              className={`col-xs-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2 ${styles.newsArticle}`}
             >
               <h1>{post.title}</h1>
               <Markdown renderers={{ link: ReactMarkdownLink }}>
