@@ -87,9 +87,11 @@ collections:
                 fields:
                   - label: "Text"
                     name: text
+                    required: false
                     widget: string
                   - label: "Link"
                     name: link
+                    required: false
                     widget: string
               - label: "Subscribe"
                 name: subscribe
@@ -97,9 +99,11 @@ collections:
                 fields:
                   - label: "Heading"
                     name: heading
+                    required: false
                     widget: string
                   - label: "Subheading"
                     name: text
+                    required: false
                     widget: text
               - label: "Footer Compliance info"
                 name: complianceInfo
@@ -195,9 +199,11 @@ collections:
             fields:
               - label: "Text"
                 name: text
+                required: false
                 widget: string
               - label: "Link"
                 name: link
+                required: false
                 widget: string
           - label: "Subscribe"
             name: subscribe
@@ -205,9 +211,11 @@ collections:
             fields:
               - label: "Heading"
                 name: heading
+                required: false
                 widget: string
               - label: "Subheading"
                 name: text
+                required: false
                 widget: text
       - label: "About Us"
         name: aboutUs
@@ -284,9 +292,11 @@ collections:
             fields:
               - label: "Text"
                 name: text
+                required: false
                 widget: string
               - label: "Link"
                 name: link
+                required: false
                 widget: string
           - label: "Subscribe"
             name: subscribe
@@ -294,9 +304,11 @@ collections:
             fields:
               - label: "Heading"
                 name: heading
+                required: false
                 widget: string
               - label: "Subheading"
                 name: text
+                required: false
                 widget: text
       - label: "Our Approach"
         name: ourApproach
@@ -424,9 +436,11 @@ collections:
             fields:
               - label: "Text"
                 name: text
+                required: false
                 widget: string
               - label: "Link"
                 name: link
+                required: false
                 widget: string
           - label: "Subscribe"
             name: subscribe
@@ -434,9 +448,11 @@ collections:
             fields:
               - label: "Heading"
                 name: heading
+                required: false
                 widget: string
               - label: "Subheading"
                 name: text
+                required: false
                 widget: text
       - label: "Contact"
         name: contact
@@ -484,9 +500,11 @@ collections:
             fields:
               - label: "Heading"
                 name: heading
+                required: false
                 widget: string
               - label: "Subheading"
                 name: text
+                required: false
                 widget: text
       - label: "Client Services"
         name: clientServices
@@ -514,9 +532,11 @@ collections:
             fields:
               - label: "Text"
                 name: text
+                required: false
                 widget: string
               - label: "Link"
                 name: link
+                required: false
                 widget: string
           - label: "Subscribe"
             name: subscribe
@@ -524,9 +544,11 @@ collections:
             fields:
               - label: "Heading"
                 name: heading
+                required: false
                 widget: string
               - label: "Subheading"
                 name: text
+                required: false
                 widget: text
           - label: "Services"
             name: services
@@ -552,9 +574,11 @@ collections:
             fields:
               - label: "Text"
                 name: text
+                required: false
                 widget: string
               - label: "Link"
                 name: link
+                required: false
                 widget: string
           - label: "Subscribe"
             name: subscribe
@@ -562,9 +586,11 @@ collections:
             fields:
               - label: "Heading"
                 name: heading
+                required: false
                 widget: string
               - label: "Subheading"
                 name: text
+                required: false
                 widget: text
       - label: "Personal Finances"
         name: personalFinances
@@ -642,9 +668,11 @@ collections:
             fields:
               - label: "Text"
                 name: text
+                required: false
                 widget: string
               - label: "Link"
                 name: link
+                required: false
                 widget: string
           - label: "Subscribe"
             name: subscribe
@@ -652,9 +680,11 @@ collections:
             fields:
               - label: "Heading"
                 name: heading
+                required: false
                 widget: string
               - label: "Subheading"
                 name: text
+                required: false
                 widget: text
       - label: "Investments"
         name: investments
@@ -777,9 +807,11 @@ collections:
             fields:
               - label: "Text"
                 name: text
+                required: false
                 widget: string
               - label: "Link"
                 name: link
+                required: false
                 widget: string
           - label: "Subscribe"
             name: subscribe
@@ -787,9 +819,11 @@ collections:
             fields:
               - label: "Heading"
                 name: heading
+                required: false
                 widget: string
               - label: "Subheading"
                 name: text
+                required: false
                 widget: text
       - label: "Estate Planning"
         name: estatePlanning
@@ -939,9 +973,11 @@ collections:
             fields:
               - label: "Text"
                 name: text
+                required: false
                 widget: string
               - label: "Link"
                 name: link
+                required: false
                 widget: string
           - label: "Subscribe"
             name: subscribe
@@ -949,9 +985,11 @@ collections:
             fields:
               - label: "Heading"
                 name: heading
+                required: false
                 widget: string
               - label: "Subheading"
                 name: text
+                required: false
                 widget: text
       - label: "Tax Management"
         name: taxManagement
@@ -1012,9 +1050,11 @@ collections:
             fields:
               - label: "Text"
                 name: text
+                required: false
                 widget: string
               - label: "Link"
                 name: link
+                required: false
                 widget: string
           - label: "Subscribe"
             name: subscribe
@@ -1022,9 +1062,11 @@ collections:
             fields:
               - label: "Heading"
                 name: heading
+                required: false
                 widget: string
               - label: "Subheading"
                 name: text
+                required: false
                 widget: text
       - label: "Business Services"
         name: businessServices
@@ -1080,9 +1122,11 @@ collections:
             fields:
               - label: "Text"
                 name: text
+                required: false
                 widget: string
               - label: "Link"
                 name: link
+                required: false
                 widget: string
           - label: "Subscribe"
             name: subscribe
@@ -1090,9 +1134,11 @@ collections:
             fields:
               - label: "Heading"
                 name: heading
+                required: false
                 widget: string
               - label: "Subheading"
                 name: text
+                required: false
                 widget: text
       - label: "Corporate Benefits Planning"
         name: corporateBenefitsPlanning
@@ -1134,9 +1180,11 @@ collections:
             fields:
               - label: "Text"
                 name: text
+                required: false
                 widget: string
               - label: "Link"
                 name: link
+                required: false
                 widget: string
           - label: "Subscribe"
             name: subscribe
@@ -1144,9 +1192,11 @@ collections:
             fields:
               - label: "Heading"
                 name: heading
+                required: false
                 widget: string
               - label: "Subheading"
                 name: text
+                required: false
                 widget: text
       - label: "Careers"
         name: careers
@@ -1181,9 +1231,11 @@ collections:
             fields:
               - label: "Text"
                 name: text
+                required: false
                 widget: string
               - label: "Link"
                 name: link
+                required: false
                 widget: string
           - label: "Subscribe"
             name: subscribe
@@ -1191,9 +1243,11 @@ collections:
             fields:
               - label: "Heading"
                 name: heading
+                required: false
                 widget: string
               - label: "Subheading"
                 name: text
+                required: false
                 widget: text
       - label: "Legacy Planning"
         name: legacyPlanning
@@ -1254,9 +1308,11 @@ collections:
             fields:
               - label: "Text"
                 name: text
+                required: false
                 widget: string
               - label: "Link"
                 name: link
+                required: false
                 widget: string
           - label: "Subscribe"
             name: subscribe
@@ -1264,9 +1320,11 @@ collections:
             fields:
               - label: "Heading"
                 name: heading
+                required: false
                 widget: string
               - label: "Subheading"
                 name: text
+                required: false
                 widget: text
       - label: "Team"
         name: team
