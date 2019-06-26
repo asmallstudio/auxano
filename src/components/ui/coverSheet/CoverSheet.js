@@ -1,4 +1,5 @@
 import React from "react";
+import { useSiteData } from "react-static";
 import smoothscroll from "smoothscroll-polyfill";
 
 import styles from "./coverSheet.scss";
@@ -22,51 +23,42 @@ const AuxanoLogoWhite = (props = {}) => (
   </svg>
 );
 
-class CoverSheet extends React.Component {
-  constructor(props) {
-    super(props);
-  }
+const CoverSheet = ({ setDoNotShowCover }) => {
+  const siteData = useSiteData();
 
-  _slideCover = () => {
+  const _slideCover = () => {
     smoothscroll.polyfill();
-    window.removeEventListener("scroll", this._checkCoverStateOnScroll, false);
     window.scrollTo({
       top: window.innerHeight,
       behavior: "smooth"
     });
+    // setDoNotShowCover(true);
   };
-
-  render() {
-    const { hero, updateDoNotShowCoverState } = this.props;
-    return (
-      <section
-        className={`container--fluid ${styles.coverSheet}`}
-        onClick={() => this._slideCover(updateDoNotShowCoverState)}
-      >
-        <div className="container">
-          <div className={`col-xs-12 ${styles.coverSheetContent}`}>
-            <div className={styles.logoContainer}>
-              <AuxanoLogoWhite
-                alt="Auxano Advisors"
-                height="208.66"
-                width="450"
-                className={styles.logo}
-              />
-            </div>
-            <div className={styles.text}>
-              <h1>{hero}</h1>
-            </div>
-            <button
-              onClick={() => this._slideCover(updateDoNotShowCoverState)}
-              className={styles.scrollButton}
-            >
-              <DownArrow className={styles.arrow} height="22" width="17" />
-            </button>
+  return (
+    <section
+      className={`container--fluid ${styles.coverSheet}`}
+      onClick={() => _slideCover()}
+    >
+      <div className="container">
+        <div className={`col-xs-12 ${styles.coverSheetContent}`}>
+          <div className={styles.logoContainer}>
+            <AuxanoLogoWhite
+              alt="Auxano Advisors"
+              height="208.66"
+              width="450"
+              className={styles.logo}
+            />
           </div>
+          <div className={styles.text}>
+            <h1>{siteData.siteData.coverSheet.hero}</h1>
+          </div>
+          <button onClick={() => _slideCover()} className={styles.scrollButton}>
+            <DownArrow className={styles.arrow} height="22" width="17" />
+          </button>
         </div>
-      </section>
-    );
-  }
-}
+      </div>
+    </section>
+  );
+};
 
 export default CoverSheet;

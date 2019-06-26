@@ -1,5 +1,5 @@
 import React from "react";
-import { Root, Routes, Head, withSiteData } from "react-static";
+import { Root, Routes, Head } from "react-static";
 import { Match } from "@reach/router";
 
 import Header from "./header/Header";
@@ -20,65 +20,42 @@ const ScrollRestoration = () => {
   return null;
 };
 
-class App extends React.Component {
-  constructor(props) {
-    super(props);
+const App = () => {
+  const [doNotShowCover, setDoNotShowCover] = React.useState(false);
 
-    this.state = {
-      doNotShowCover: false
-    };
-  }
-
-  updateDoNotShowCoverState = state => {
-    return new Promise((resolve, reject) => {
-      this.setState(
-        {
-          doNotShowCover: state
-        },
-        err => {
-          if (err) reject(err);
-          resolve(state);
-        }
-      );
-    });
-  };
-
-  _checkCoverStateOnScroll = () => {
+  function checkCoverStateOnScroll() {
     if (window.scrollY > window.innerHeight) {
-      this.updateDoNotShowCoverState(true);
-      window.scrollTo(0, 0);
-      window.removeEventListener(
-        "scroll",
-        this._checkCoverStateOnScroll,
-        false
-      );
+      setDoNotShowCover(true);
+      if (doNotShowCover === true) {
+        window.scrollTo(0, 0);
+      }
     }
-  };
-
-  componentDidMount() {
-    window.addEventListener("scroll", this._checkCoverStateOnScroll, false);
   }
 
-  render() {
-    const { doNotShowCover } = this.state;
-    const { siteData } = this.props;
+  React.useEffect(() => {
+    window.addEventListener("scroll", checkCoverStateOnScroll, false);
 
-    return (
-      <Root>
+    return () => {
+      window.removeEventListener("scroll", checkCoverStateOnScroll, false);
+    };
+  }, []);
+
+  return (
+    <Root>
+      <React.Suspense fallback={<span>Loading…</span>}>
         <React.Fragment>
           <Head>
             <title>{constants.siteMeta.title}</title>
+            <meta name="title" content={constants.siteMeta.title} />
+            <meta name="og:title" content={constants.siteMeta.title} />
           </Head>
+
           {doNotShowCover ? null : (
             <React.Suspense fallback={<span>Loading Cover…</span>}>
-              <CoverSheet
-                hero={siteData.coverSheet.hero}
-                tagline={siteData.coverSheet.tagline}
-                updateDoNotShowCoverState={this.updateDoNotShowCoverState}
-              />
+              <CoverSheet setDoNotShowCover={setDoNotShowCover} />
             </React.Suspense>
           )}
-          <React.Suspense fallback={<span>Loading Header…</span>}>
+          <React.Suspense fallback={<span>Loading Heading…</span>}>
             <Header />
           </React.Suspense>
           <main
@@ -99,9 +76,9 @@ class App extends React.Component {
             <Footer />
           </React.Suspense>
         </React.Fragment>
-      </Root>
-    );
-  }
-}
+      </React.Suspense>
+    </Root>
+  );
+};
 
-export default withSiteData(App);
+export default App;
