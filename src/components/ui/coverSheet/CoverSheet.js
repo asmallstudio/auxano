@@ -23,7 +23,7 @@ const AuxanoLogoWhite = (props = {}) => (
   </svg>
 );
 
-const CoverSheet = ({ setDoNotShowCover }) => {
+const CoverSheet = () => {
   const siteData = useSiteData();
 
   const _slideCover = () => {
@@ -32,7 +32,6 @@ const CoverSheet = ({ setDoNotShowCover }) => {
       top: window.innerHeight,
       behavior: "smooth"
     });
-    // setDoNotShowCover(true);
   };
   return (
     <section

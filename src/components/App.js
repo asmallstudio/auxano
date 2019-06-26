@@ -52,7 +52,7 @@ const App = () => {
 
           {doNotShowCover ? null : (
             <React.Suspense fallback={<span>Loading Cover…</span>}>
-              <CoverSheet setDoNotShowCover={setDoNotShowCover} />
+              <CoverSheet />
             </React.Suspense>
           )}
           <React.Suspense fallback={<span>Loading Heading…</span>}>
