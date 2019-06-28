@@ -23,9 +23,9 @@
     "not IE < 11"
   ],
   "dependencies": {
-    "@asmallstudio/components": "^0.1.12",
-    "@asmallstudio/plugin-react-static-css-modules-postcss-sass": "^0.2.1",
-    "@asmallstudio/utilities": "^0.3.11",
+    "@asmallstudio/components": "^0.1.13",
+    "@asmallstudio/plugin-react-static-css-modules-postcss-sass": "^0.2.2",
+    "@asmallstudio/utilities": "^0.3.12",
     "@babel/polyfill": "^7.4.4",
     "@reach/router": "^1.2.1",
     "autoprefixer": "^9.6.0",
