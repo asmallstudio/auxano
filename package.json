@@ -28,11 +28,11 @@
     "@asmallstudio/utilities": "^0.3.12",
     "@babel/polyfill": "^7.4.4",
     "@reach/router": "^1.2.1",
-    "autoprefixer": "^9.6.0",
+    "autoprefixer": "^9.6.1",
     "cssnano": "^4.1.10",
     "netlify-identity-widget": "^1.5.5",
     "node-sass": "^4.12.0",
-    "postcss-custom-properties": "^9.0.1",
+    "postcss-custom-properties": "^9.0.2",
     "postcss-import": "^12.0.1",
     "postcss-loader": "^3.0.0",
     "postcss-normalize": "^8.0.1",
@@ -47,13 +47,13 @@
     "smoothscroll-polyfill": "^0.4.4"
   },
   "devDependencies": {
-    "eslint": "^6.0.1",
+    "eslint": "^6.1.0",
     "eslint-config-prettier": "^6.0.0",
     "eslint-config-react-tools": "^1.1.7",
     "eslint-plugin-prettier": "^3.1.0",
-    "eslint-plugin-react": "^7.14.2",
+    "eslint-plugin-react": "^7.14.3",
     "pa11y-ci": "^2.3.0",
     "prettier": "^1.18.2",
-    "serve": "^11.0.2"
+    "serve": "^11.1.0"
   }
 }
