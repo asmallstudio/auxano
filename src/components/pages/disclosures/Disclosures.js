@@ -11,41 +11,37 @@ import constants from "../../../lib/constants.json";
 import Markdown from "react-markdown";
 import styles from "./disclosures.scss";
 
-class Disclosures extends React.Component {
-  componentDidMount() {
+const Disclosures = ({ siteData, disclosures }) => {
+  React.useEffect(() => {
     pageChange();
-  }
+  });
 
-  render() {
-    const { disclosures, siteData } = this.props;
-
-    return (
-      <React.Fragment>
-        <Head>
-          <title>
-            {getFullPageTitle(disclosures.pageTitle, constants.siteMeta.title)}
-          </title>
-          <meta
-            name="description"
-            content={pickFirstAvailableString(
-              disclosures.pageDescription,
-              siteData.siteDescription
-            )}
-          />
-        </Head>
-        <div className={`container ${styles.articleContainer}`}>
-          <div className="row">
-            <article className="col-xs-12">
-              <h1 className={styles.articleTitle}>{disclosures.title}</h1>
-              <div className={styles.articleContent}>
-                <Markdown>{disclosures.content}</Markdown>
-              </div>
-            </article>
-          </div>
+  return (
+    <>
+      <Head>
+        <title>
+          {getFullPageTitle(disclosures.pageTitle, constants.siteMeta.title)}
+        </title>
+        <meta
+          name="description"
+          content={pickFirstAvailableString(
+            disclosures.pageDescription,
+            siteData.siteDescription
+          )}
+        />
+      </Head>
+      <div className={`container ${styles.articleContainer}`}>
+        <div className="row">
+          <article className="col-xs-12">
+            <h1 className={styles.articleTitle}>{disclosures.title}</h1>
+            <div className={styles.articleContent}>
+              <Markdown>{disclosures.content}</Markdown>
+            </div>
+          </article>
         </div>
-      </React.Fragment>
-    );
-  }
+      </div>
+    </>
+  );
 }
 
 export default withSiteAndRouteData(Disclosures);

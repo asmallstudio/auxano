@@ -33,7 +33,7 @@ class AboutUs extends React.Component {
     const { aboutUs, siteData } = this.props;
 
     return (
-      <React.Fragment>
+      <>
         <Head>
           <title>
             {getFullPageTitle(aboutUs.pageTitle, constants.siteMeta.title)}
@@ -129,7 +129,7 @@ class AboutUs extends React.Component {
           )}
           className="dg-subscribe"
         />
-      </React.Fragment>
+      </>
     );
   }
 }
