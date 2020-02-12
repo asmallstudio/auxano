@@ -54,9 +54,21 @@ class Post extends React.Component {
             </div>
             <aside className={`col-xs-12 col-md-3 ${styles.memberInfo}`}>
               <img src={member.image} alt="" />
-              <h1 className="style-as-h3">
-                {this._createHonorificName(member.title, member.qualifications)}
-              </h1>
+              {typeof member.qualifications !== "undefined" &&
+                member.qualifications !== "" && (
+                  <h1 className="style-as-h3">
+                    {this._createHonorificName(
+                      member.title,
+                      member.qualifications
+                    )}
+                  </h1>
+                )}
+              {typeof member.qualifications === "undefined" && (
+                <h1 className="style-as-h3">{member.title}</h1>
+              )}
+              {member.qualifications === "" && (
+                <h1 className="style-as-h3">{member.title}</h1>
+              )}
               <div className="style-as-p">
                 {this._formatPositions(member.positions)}
               </div>

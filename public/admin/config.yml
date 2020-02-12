@@ -1354,6 +1354,7 @@ collections:
                 name: qualifications
                 hint: "A comma separated list of qualifications"
                 widget: list
+                required: false
                 default: [""]
               - label: "Positions"
                 name: positions
