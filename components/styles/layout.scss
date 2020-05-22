@@ -1,0 +1,107 @@
+@import "./variables.scss";
+@import "./utils.scss";
+
+// == MIXINS ==
+
+// For a breakpoint, this will create all column sizes
+@mixin create-col-classes($modifier, $grid-cols, $breakpoint) {
+	@include respond-above($modifier) {
+		// Create base offset of 0 to be able to clear at wider screens
+		.col-#{$modifier}-offset-0 {
+			margin-left: 0;
+		}
+
+		@for $i from 1 through $grid-cols {
+			// Create columns
+			.col-#{$modifier}-#{$i} {
+				flex-basis: (100 / ($grid-cols / $i)) * 1%;
+				// Set max-width equal to flex-basis for IE support
+				// https://github.com/twbs/bootstrap/issues/17310
+				max-width: (100 / ($grid-cols / $i)) * 1%;
+			}
+
+			// Create margin-left offsets
+			.col-#{$modifier}-offset-#{$i} {
+				margin-left: (100 / ($grid-cols / $i)) * 1%;
+			}
+		}
+	}
+}
+
+// == LAYOUT ==
+
+.sr-only:not(:focus):not(:active) {
+	clip: rect(0 0 0 0);
+	clip-path: inset(100%);
+	height: 1px;
+	overflow: hidden;
+	position: absolute;
+	white-space: nowrap;
+	width: 1px;
+}
+
+html {
+	box-sizing: border-box;
+}
+
+body {
+	background-color: var(--alabaster);
+	margin: 0;
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+}
+
+.container {
+	max-width: $max-width-em;
+	padding-left: env(safe-area-inset-left);
+	padding-right: env(safe-area-inset-right);
+	margin: 0 auto;
+
+	&--fluid {
+		margin: 0;
+		max-width: 100%;
+	}
+}
+
+.row {
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+}
+
+@each $modifier, $breakpoint in $breakpoints-px {
+	@include create-col-classes($modifier, $grid-cols, $breakpoint);
+}
+
+[class*="col-"] {
+	padding-left: #{$gutter / 2 / 16}rem;
+	padding-right: #{$gutter / 2 / 16}rem;
+}
+
+// Create hidden classes at each breakpoint
+@each $modifier, $breakpoint in $breakpoints-px {
+	$modifiers: map-keys($breakpoints-px);
+	$i: index($breakpoints-px, ($modifier $breakpoint));
+
+	@include respond-below(#{nth($modifiers, $i)}) {
+		.hidden-#{$modifier}-down {
+			display: none !important;
+		}
+	}
+
+	@include respond-above($modifier) {
+		.hidden-#{$modifier}-up {
+			display: none !important;
+		}
+	}
+}
+
+// == SPACING ==
+
+.vertSpacerSm {
+	margin-bottom: 24px;
+}

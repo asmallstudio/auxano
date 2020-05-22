@@ -1,0 +1,49 @@
+{
+	"pageTitle": "About Us",
+	"pageDescription": "",
+	"hero": {
+		"ctaLink": "/team",
+		"ctaText": "Meet Our Team",
+		"image": "/uploads/about-us-hero.png",
+		"subtitle": "We are a multi-generational private wealth management firm that helps clients integrate their goals and values with their wealth. As a fiduciary, we build relationships with our clients and not with their money.",
+		"title": "Stewardship is our core."
+	},
+	"textSection": "**Stewardship:** the careful and responsible management of something entrusted to one's care. — _Merriam-Webster Dictionary_",
+	"infoSection": {
+		"heading": "Community",
+		"image": {
+			"alt": "what is important about this image? what does it communicate?",
+			"src": "/uploads/community.jpg"
+		},
+		"items": [
+			{
+				"desc": "Medical Teams International is a humanitarian aid organization that works to provide care to people affected by disaster, conflict and poverty. They empower communities worldwide to live full and healthy lives.",
+				"logo": "/uploads/medical-teams-international.jpg",
+				"name": "Medical Teams International"
+			},
+			{
+				"desc": "Agros’ mission is to see rural, poor families of Central America own agricultural land, attain economic self-sufficiency, realize their God-given potential, and pass on to future generations the values and resources that enable them to flourish. Agros partners with a variety of national and international organizations and has helped more than 10,000 individuals to date.",
+				"logo": "/uploads/agros.jpg",
+				"name": "Agros"
+			},
+			{
+				"desc": "Jubilee REACH meets the needs of the people of Bellevue, Washington by focusing on their core values: Relationship, Education, Assistance, Community and Hospitality. A non-profit organization, Jubilee REACH partners with local businesses, churches, the Bellevue School District and other area nonprofits to step in the gap for those in need.",
+				"logo": "/uploads/jubilee-reach.jpg",
+				"name": "Jubilee Reach"
+			},
+			{
+				"desc": "Held annually in more than 600 communities nationwide, the Alzheimer's Association Walk to End Alzheimer’s® is the world’s largest event to raise awareness and funds for Alzheimer’s care, support and research.",
+				"logo": "/uploads/walk-to-end-alzheimers.jpg",
+				"name": "Pacific Northwest Walk to End Alzheimer’s"
+			},
+			{
+				"desc": "Dementia Alliance of North Carolina provides education, support and services to individuals with dementia, their families, healthcare professionals and the general public while raising awareness and funding research.",
+				"logo": "/uploads/dementia-alliance-of-north-carolina.jpg",
+				"name": "Dementia Alliance of North Carolina"
+			}
+		],
+		"text": "Because stewardship is fundamental to our culture, we encourage our team to invest their time, talent and treasure into making a positive impact within our community. Here are just a few of the organizations that Auxano has made a difference for:"
+	},
+	"actionBanner": { "link": "/our-approach", "text": "Our Approach" },
+	"subscribe": { "heading": "", "text": "" }
+}

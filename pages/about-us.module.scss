@@ -1,0 +1,204 @@
+@import "../components/styles/utils.scss";
+
+.heroContainer {
+	position: relative;
+	overflow: hidden;
+	padding: 6em 0;
+
+	:global(.doNotShowCoverSheet--false) & {
+		margin-top: calc(-1 * var(--header-height));
+	}
+}
+
+.heroImageContainer {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 50vw;
+	height: 100%;
+	width: 50vw;
+}
+
+.heroImage {
+	z-index: -1;
+	object-fit: cover;
+	object-position: left;
+	height: 100%;
+	height: calc(100% + 1px);
+	width: 100%;
+
+	// Future person, if mask-* syntax is supported widely when you read this, please,
+	// make this work dynamically so either linear or conic gradients can mas the image.
+
+	// mask-image: linear-gradient(black, black),
+	//   linear-gradient(to bottom left, transparent 49.999%, black 50%);
+	// mask-repeat: no-repeat;
+	// mask-size: cover, calc(100% / 1.73) auto;
+	// mask-composite: subtract;
+
+	@include respond-below(md) {
+		display: none;
+	}
+}
+
+.dingusDotHero::after {
+	content: "";
+	position: absolute;
+	z-index: -1;
+	top: -5rem;
+	right: -5rem;
+	height: 10rem;
+	width: 10rem;
+	background-color: var(--casablanca);
+	border-radius: 50%;
+
+	@include respond-above(md) {
+		top: calc(65% - 5rem - 2.5vw);
+		left: 5rem;
+		right: auto;
+		height: calc(10rem + 5vw);
+		width: calc(10rem + 5vw);
+	}
+}
+
+.heroTextContainer {
+	text-align: center;
+
+	h1 {
+		color: var(--fountain-blue);
+		margin-bottom: var(--space-l2);
+
+		@include respond-above(lg) {
+			max-width: 80%; // Fix widow at full-width (Based on text: "Stewardship is our core.")
+		}
+	}
+
+	p {
+		color: var(--grey);
+		margin-bottom: var(--space-l3);
+	}
+
+	@include respond-above(md) {
+		text-align: left;
+	}
+}
+
+.infoSectionRow {
+	align-items: flex-start;
+	margin: var(--space-l5) 0;
+}
+
+.infoSectionColText {
+	text-align: center;
+	margin: var(--space-l3) auto 3em;
+
+	h2 {
+		margin-bottom: 0.67em;
+	}
+
+	p {
+		margin-bottom: 0;
+		color: var(--grey);
+	}
+
+	@include respond-above(md) {
+		text-align: left;
+	}
+
+	@include respond-above(md) {
+		margin-top: 0;
+		margin-bottom: var(--space-l2);
+	}
+}
+
+.infoSectionColImage {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 0.5rem;
+}
+
+.imgContainer {
+	max-width: 30rem;
+	margin: 0 auto;
+}
+
+.infoSectionImage {
+	z-index: 2;
+	width: 100%;
+	border-radius: 0.5rem;
+}
+
+.dingusDot::after {
+	content: "";
+	position: absolute;
+	z-index: -1;
+	top: calc(50% - 5rem);
+	left: -3rem;
+	height: 10rem;
+	width: 10rem;
+	background-color: var(--burnt-sienna);
+	border-radius: 50%;
+
+	@include respond-above(lg) {
+		left: -5rem;
+	}
+}
+
+.dingusDotRelative {
+	position: relative;
+}
+
+.communityOrgs {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	align-items: center;
+	position: relative;
+	list-style-type: none;
+	max-width: 30rem;
+	padding: 0;
+	margin: var(--space-l2) auto calc(2 * var(--space-l5));
+
+	@include respond-above(md) {
+		flex-wrap: nowrap;
+		align-items: flex-start;
+		margin-bottom: var(--space-l5);
+	}
+
+	img {
+		transition: border-color 0.3s ease, filter 0.3s ease;
+		height: 4rem;
+		width: 4rem;
+		object-fit: contain;
+		filter: grayscale(100%) opacity(75%);
+		background-color: var(--white);
+		padding: var(--space-l1);
+		border: 1px solid var(--grey-40);
+		border-radius: 0.5rem;
+		margin-bottom: var(--space-l1);
+		cursor: pointer;
+
+		&:hover,
+		&.activeOrg {
+			opacity: 1;
+			filter: grayscale(0) opacity(100%);
+			border-color: var(--gigas);
+		}
+	}
+}
+
+.itemText {
+	position: absolute;
+	width: 100%;
+	top: 100%;
+	left: 0;
+	margin-top: var(--space-l2);
+}
+
+.itemName {
+	font-size: 1.125rem;
+	color: var(--gigas);
+	margin-bottom: 0.5rem;
+}

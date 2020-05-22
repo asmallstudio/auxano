@@ -1,0 +1,123 @@
+@import "../../components/styles/utils.scss";
+
+.heroContainer {
+	padding: 6em 0;
+}
+
+.heroTextContainer {
+	text-align: center;
+	position: relative;
+
+	h1 {
+		margin-bottom: 0.5em;
+	}
+
+	@include respond-above(md) {
+		text-align: left;
+	}
+}
+
+.dingusDotContainer {
+	position: relative;
+	overflow-x: hidden;
+}
+
+.dingusDot1 {
+	z-index: -1;
+	position: absolute;
+	top: -5rem;
+	right: -5rem;
+	height: 10rem;
+	width: 10rem;
+	background-color: var(--casablanca);
+	border-radius: 50%;
+
+	@include respond-above(md) {
+		top: calc(50% - 5rem);
+		right: -5rem;
+	}
+}
+
+.indexLinkContainer {
+	padding-top: var(--space-l5);
+}
+
+a.indexLink {
+	transition: color 0.3s ease;
+	display: inline-block;
+	color: var(--grey);
+	text-decoration: none;
+
+	&::before {
+		transition: transform 0.3s ease-out;
+		content: "";
+		display: inline-block;
+		position: relative;
+		left: -0.15em;
+		top: 0.625em;
+		height: 0.45em;
+		width: 0.45em;
+		transform: rotate(-135deg);
+		vertical-align: top;
+		border-style: solid;
+		border-width: 0.1em 0.1em 0 0;
+	}
+
+	&:hover::before {
+		transition-timing-function: ease-in;
+		transform: rotate(-135deg) translate(0.1em, -0.1em);
+	}
+}
+
+.serviceInfoRow {
+	align-items: flex-start;
+	margin: var(--space-l5) 0;
+}
+
+.serviceInfoText {
+	text-align: center;
+	margin-bottom: 3em;
+
+	p:global(.style-as-h2) {
+		margin-bottom: 0.67em;
+	}
+
+	h2 {
+		margin-bottom: 0.67em;
+	}
+
+	p {
+		margin-bottom: 0;
+	}
+
+	@include respond-above(md) {
+		text-align: left;
+	}
+
+	@include respond-above(md) {
+		margin-bottom: var(--space-l2);
+	}
+}
+
+.serviceInfoList {
+	list-style: none;
+}
+
+.serviceInfoListItem {
+	display: flex;
+	align-items: center;
+	margin-bottom: var(--space-l3);
+
+	p {
+		flex: 1 0;
+		margin-left: var(--space-l2);
+	}
+}
+
+.serviceInfoListItemImage {
+	display: inline-block;
+	height: 3rem;
+	width: 3rem;
+	border-radius: 0.5rem;
+	border: none;
+}

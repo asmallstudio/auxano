@@ -1,6 +1,6 @@
 # Auxano Advisors
 
-A frontend static site made with [React Static](https://react-static.js.org/).
+A frontend static site made with [Next.js](https://nextjs.org).
 
 ## Installing
 
@@ -96,10 +96,10 @@ Furthermore, here are some recommended workspace settings:
 
 ```json
 {
-  "editor.insertSpaces": true,
-  "editor.tabSize": 2,
-  "editor.formatOnSave": true,
-  "eslint.packageManager": "npm"
+	"editor.insertSpaces": true,
+	"editor.tabSize": 2,
+	"editor.formatOnSave": true,
+	"eslint.packageManager": "npm"
 }
 ```
 
@@ -167,30 +167,30 @@ The resulting image guides are placed in the `/public/admin/guides` folder, wher
 To add the templates to the admin panel, they are registered in `/public/admin/index.html`, like this:
 
 ```js
-const PagePreview = filename =>
-  createClass({
-    render: function() {
-      return h(
-        "div",
-        {},
-        h(
-          "p",
-          {
-            style: {
-              color: "rgb(122, 130, 145)",
-              fontWeight: "bold"
-            }
-          },
-          "Note: The image below is for reference only, it may not represent the latest content from your website."
-        ),
-        h("img", {
-          src: `/admin/guides/${filename}.jpg`,
-          style: { width: "100%" },
-          alt: "Visual documentation guide"
-        })
-      );
-    }
-  });
+const PagePreview = (filename) =>
+	createClass({
+		render: function () {
+			return h(
+				"div",
+				{},
+				h(
+					"p",
+					{
+						style: {
+							color: "rgb(122, 130, 145)",
+							fontWeight: "bold",
+						},
+					},
+					"Note: The image below is for reference only, it may not represent the latest content from your website."
+				),
+				h("img", {
+					src: `/admin/guides/${filename}.jpg`,
+					style: { width: "100%" },
+					alt: "Visual documentation guide",
+				})
+			);
+		},
+	});
 
 CMS.registerPreviewTemplate("home", PagePreview("home"));
 ```

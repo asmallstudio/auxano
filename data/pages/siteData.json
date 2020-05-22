@@ -1,0 +1,71 @@
+{
+	"actionBanner": {
+		"link": "/contact",
+		"text": "Contact Us"
+	},
+	"companyInfo": {
+		"address": {
+			"city": "Bellevue",
+			"line1": "10900 NE 4th Street",
+			"line2": "Suite 1950",
+			"state": "WA",
+			"zipcode": "98004"
+		},
+		"email": "info@auxanoadvisors.com",
+		"phone1": "(425) 889-1261",
+		"phone2": "(800) 642-1341"
+	},
+	"complianceInfo": "Compliance info may be found on our [General Disclosures](/disclosures) page.",
+	"coverSheet": {
+		"hero": "Transcending Wealth. Transforming Lives."
+	},
+	"footerNav": [
+		{
+			"title": "Our Team",
+			"link": "/team"
+		},
+		{
+			"title": "News & Resources",
+			"link": "/news"
+		},
+		{
+			"title": "Careers",
+			"link": "/careers"
+		},
+		{
+			"title": "Contact",
+			"link": "/contact"
+		},
+		{
+			"title": "Disclosures",
+			"link": "/disclosures"
+		}
+	],
+	"headerNav": [
+		{
+			"title": "About Us",
+			"link": "/about-us"
+		},
+		{
+			"title": "Our Approach",
+			"link": "/our-approach"
+		},
+		{
+			"title": "Client Services",
+			"link": "/client-services"
+		},
+		{
+			"title": "Legacy Planning",
+			"link": "/legacy-planning"
+		},
+		{
+			"title": "Contact",
+			"link": "/contact"
+		}
+	],
+	"siteDescription": "We help clients transcend the traditional definition of wealth so it's used to build a legacy that transforms families, finances, and their future.",
+	"subscribe": {
+		"heading": "Schedule an introduction with an advisor.",
+		"text": "A team member will follow up with you shortly."
+	}
+}
