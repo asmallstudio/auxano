@@ -14,7 +14,7 @@ general:
 jobs:
   build:
     docker:
-      - image: circleci/node:10-browsers
+      - image: circleci/node:12-browsers
 
     working_directory: ~/repo
 
@@ -45,8 +45,9 @@ jobs:
       # Test build
       - run:
           name: Build Site
-          command: mkdir -p tmp
-          command: npm run build
+          command: |
+            mkdir -p tmp
+            npm run export
 
       # Serve site
       - run:
