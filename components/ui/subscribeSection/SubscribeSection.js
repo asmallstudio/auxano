@@ -106,10 +106,10 @@ class SubscribeForm extends React.Component {
         </div>
       </form>
     ) : (
-        <p className={`${styles.successText}`}>
-          Thank you! We will follow up via email shortly.
-        </p>
-      );
+      <p className={`${styles.successText}`}>
+        Thank you! We will follow up via email shortly.
+      </p>
+    );
   }
 }
 

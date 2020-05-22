@@ -48,7 +48,11 @@ function CoverSheet({ siteData }) {
           <div className={styles.text}>
             <h1>{siteData.coverSheet.hero}</h1>
           </div>
-          <button aria-label="click to scroll to content" onClick={() => _slideCover()} className={styles.scrollButton}>
+          <button
+            aria-label="click to scroll to content"
+            onClick={() => _slideCover()}
+            className={styles.scrollButton}
+          >
             <DownArrow className={styles.arrow} height="22" width="17" />
           </button>
         </div>

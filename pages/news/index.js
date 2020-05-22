@@ -12,11 +12,11 @@ import constants from "lib/constants.json";
 import LinkWithArrow from "components/ui/linkWithArrow/LinkWithArrow";
 import styles from "./index.module.scss";
 
-function PaginationLink({ ...rest }) {
-  return <NextAmbiLink {...rest} />;
-}
+// function PaginationLink({ ...rest }) {
+//   return <NextAmbiLink {...rest} />;
+// }
 
-export default function Index({ siteData, posts, currentPage, totalPages }) {
+export default function Index({ siteData, posts }) {
   return (
     <>
       <Head>

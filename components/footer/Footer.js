@@ -34,7 +34,7 @@ function NavLink({ children, ...props }) {
     if (props.activeClassName) {
       childProps.className = `${childProps.className || ""} ${
         props.activeClassName
-        }`.trim();
+      }`.trim();
     }
     childProps["aria-current"] = "page";
   }

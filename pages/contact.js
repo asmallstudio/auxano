@@ -6,7 +6,6 @@ import {
   phoneNumberUnformat,
 } from "@asmallstudio/utilities";
 import { NextAmbiLink } from "@asmallstudio/components";
-import { pageChange } from "lib/utils/pageChange";
 import constants from "lib/constants.json";
 
 import styles from "./contact.module.scss";
