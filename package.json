@@ -17,7 +17,8 @@
 		"serve": "serve ./out -p 3000",
 		"test": "npm run test-eslint --silent; npm run test-pa11y",
 		"test-eslint": "eslint --ignore-path .gitignore ./",
-		"test-pa11y": "pa11y-ci --threshold 5000"
+		"test-pa11y": "pa11y-ci --threshold 5000",
+		"analyze": "ANALYZE=true npm run build"
 	},
 	"browserslist": [
 		"> 2.5% in US",
