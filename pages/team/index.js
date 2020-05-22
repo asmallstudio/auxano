@@ -86,8 +86,8 @@ export default function Index({ siteData, team }) {
                       <div className="style-as-p">{member.partnerCompany}</div>
                     )}
                   <LinkWithArrow
-                    as="/team/[member]"
-                    to={`/team/${member.slug}`}
+                    as={`/team/${member.slug}`}
+                    to="/team/[member]"
                     className={styles.arrowLink}
                   >
                     Read Bio
