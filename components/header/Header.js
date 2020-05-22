@@ -207,7 +207,7 @@ function MenuIcon({ menuHidden, menuAction }) {
       className={styles.menuIcon}
       onClick={menuAction}
     >
-      <span className="sr-text">Menu</span>
+      <span className="sr-only">Menu</span>
       {menuIcon}
     </button>
   );

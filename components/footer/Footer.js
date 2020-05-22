@@ -68,7 +68,7 @@ export default function Footer({ siteData }) {
       <div className={`container ${styles.footerRow}`}>
         <div className={`col-xs-12 col-md-9 ${styles.infoContainer}`}>
           <nav>
-            <h3 className="sr-text">Site Navigation</h3>
+            <h3 className="sr-only">Site Navigation</h3>
             <ul className={`N2 ${styles.linkList}`}>
               {siteData.footerNav.map((navItem, i) => (
                 <li key={i}>
@@ -81,7 +81,7 @@ export default function Footer({ siteData }) {
           </nav>
         </div>
         <div className={`col-xs-12 col-md-3 ${styles.infoContainer}`}>
-          <h3 className="sr-text">Social Links</h3>
+          <h3 className="sr-only">Social Links</h3>
           <ul className={`N2 ${styles.linkList}`}>
             <li>
               <NextAmbiLink
@@ -109,7 +109,7 @@ export default function Footer({ siteData }) {
         <div
           className={`col-xs-12 col-md-9 ${styles.infoContainer} ${styles.contactLinks}`}
         >
-          <h3 className="sr-text">Contact Info</h3>
+          <h3 className="sr-only">Contact Info</h3>
           <ul className={`N2 ${styles.linkList}`}>
             <li>
               <a href={`mailto:${siteData.companyInfo.email}`} itemProp="email">
@@ -138,7 +138,7 @@ export default function Footer({ siteData }) {
 
       <div className={`container ${styles.footerRow}`}>
         <div className={`col-xs-12 col-md-9 ${styles.infoContainer}`}>
-          <h3 className="sr-text">Address</h3>
+          <h3 className="sr-only">Address</h3>
           <div
             itemProp="address"
             itemScope

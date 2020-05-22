@@ -114,7 +114,7 @@ class ContactForm extends React.Component {
           <DefaultInput
             name="bdaySurprise"
             value={bdaySurprise}
-            className="sr-text"
+            className="sr-only"
             autoComplete="off"
             onChange={this._handleChange}
           />
@@ -205,7 +205,7 @@ export default function Contact({ siteData, contact }) {
       </Head>
       <div className={`container--fluid ${styles.dingusDotContainer}`}>
         <div className="container">
-          <h1 className="sr-text">{contact.pageTitle}</h1>
+          <h1 className="sr-only">{contact.pageTitle}</h1>
           <div className="row">
             <section
               className={`col-xs-12 col-md-6 ${styles.contactSection} ${styles.contactForm} dg-form`}
@@ -221,7 +221,7 @@ export default function Contact({ siteData, contact }) {
                 <div className={styles.contactInfoSection}>
                   <meta itemProp="name" content="Auxano Advisors" />
                   <meta itemProp="url" content={constants.siteMeta.url} />
-                  <h3 className="sr-text">Email</h3>
+                  <h3 className="sr-only">Email</h3>
                   <a
                     href={`mailto:${siteData.companyInfo.email}`}
                     itemProp="email"
@@ -230,7 +230,7 @@ export default function Contact({ siteData, contact }) {
                   </a>
                 </div>
                 <div className={styles.contactInfoSection}>
-                  <h3 className="sr-text">Office Phone</h3>
+                  <h3 className="sr-only">Office Phone</h3>
                   <a
                     href={`tel:${phoneNumberUnformat(
                       siteData.companyInfo.phone1
@@ -240,7 +240,7 @@ export default function Contact({ siteData, contact }) {
                     {siteData.companyInfo.phone1}
                   </a>
                   <br />
-                  <h3 className="sr-text">Toll-free Phone</h3>
+                  <h3 className="sr-only">Toll-free Phone</h3>
                   <a
                     href={`tel:${phoneNumberUnformat(
                       siteData.companyInfo.phone2
@@ -251,7 +251,7 @@ export default function Contact({ siteData, contact }) {
                   </a>
                 </div>
                 <div className={styles.contactInfoSection}>
-                  <h3 className="sr-text">Address</h3>
+                  <h3 className="sr-only">Address</h3>
                   <p
                     itemProp="address"
                     itemScope

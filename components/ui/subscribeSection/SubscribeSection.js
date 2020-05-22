@@ -70,7 +70,7 @@ class SubscribeForm extends React.Component {
             <DefaultInput
               name="bdaySurprise"
               value={bdaySurprise}
-              className="sr-text"
+              className="sr-only"
               autoComplete="off"
               onChange={this._handleChange}
             />
