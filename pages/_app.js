@@ -9,7 +9,7 @@ import constants from "lib/constants.json";
 import siteData from "data/pages/siteData.json";
 
 import "components/styles/main.scss";
-import styles from "./_app.module.scss";
+import "./_app.scss";
 
 export default function App({ Component, pageProps }) {
   const [doNotShowCover, setDoNotShowCover] = React.useState(false);
@@ -55,7 +55,7 @@ export default function App({ Component, pageProps }) {
       </Head>
       {doNotShowCover ? null : <CoverSheet siteData={siteData} />}
       <Header siteData={siteData} />
-      <main className={`${styles.routesContainer} doNotShowCoverSheet--${doNotShowCover}`} >
+      <main className={`routesContainer doNotShowCoverSheet--${doNotShowCover}`} >
         <Component siteData={siteData} {...pageProps} />
       </main>
       <Footer siteData={siteData} />
