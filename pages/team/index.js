@@ -44,7 +44,7 @@ export default function Index({ siteData, team }) {
                   <NextAmbiLink
                     as={`/team/${member.slug}`}
                     href="/team/[member]"
-                    className="style-as-h3"
+                    className={`style-as-h3 ${styles.memberTitle}`}
                   >
                     {member.title}
                   </NextAmbiLink>
@@ -74,7 +74,7 @@ export default function Index({ siteData, team }) {
                   <NextAmbiLink
                     as={`/team/${member.slug}`}
                     href="/team/[member]"
-                    className="style-as-h3"
+                    className={`style-as-h3 ${styles.memberTitle}`}
                   >
                     {member.title}
                   </NextAmbiLink>
