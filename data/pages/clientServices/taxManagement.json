@@ -1,0 +1,22 @@
+{
+	"pageTitle": "Tax Management | Client Services",
+	"pageDescription": "",
+	"hero": {
+		"name": "Tax Management",
+		"title": "By always considering the tax implications of your financial decisions, we help to protect value over time."
+	},
+	"pullquote": " ",
+	"serviceInfo": {
+		"section1": "One underappreciated key to optimizing your financial plan is wise tax planning. Without it, taxes can become a significant impediment on the path to achieving your goals and dreams.  At Auxano, we are extremely cognizant of how taxes can create inefficiencies in your financial situation, and how they can cost you in the long-term. Our principled strategies are designed to lessen the impact.",
+		"section2": {
+			"description": "We partner with knowledgeable tax professionals who have a keen understanding of how to integrate their expertise with your financial plan.",
+			"image": {
+				"alt": "placeholder image",
+				"src": "/uploads/tax-management.jpg"
+			}
+		},
+		"section3": "We’ll proactively work with your own tax advisor—not only during tax season, but year-round—to optimize your tax situation, bringing unique wisdom and insight that can make a world of difference over time."
+	},
+	"actionBanner": { "link": "", "text": "" },
+	"subscribe": { "heading": "", "text": "" }
+}

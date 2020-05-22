@@ -1,0 +1,40 @@
+:root {
+	--filler-bg: rgb(128 128 128 / 40%);
+	--alabaster: #f9fafb;
+	--ocean-green: #50b078;
+	--ocean-green-10: rgb(80 176 120 / 10%);
+	--ocean-green-40: rgb(80 176 120 / 40%);
+	--fountain-blue: #50b8b8;
+	--fountain-blue-10: rgb(80 184 184 / 10%);
+	--fountain-blue-40: rgb(80 184 184 / 40%);
+	--gigas: #483898;
+	--gigas-10: rgb(72 56 152 / 10%);
+	--gigas-40: rgb(72 56 152 / 40%);
+	--casablanca: #f8b050;
+	--casablanca-10: rgb(248 176 80 / 10%);
+	--casablanca-40: rgb(248 176 80 / 40%);
+	--burnt-sienna: #f07850;
+	--burnt-sienna-10: rgb(240 120 80 / 10%);
+	--burnt-sienna-40: rgb(240 120 80 / 40%);
+	--white: #ffffff;
+	--white-40: rgb(255 255 255 / 40%);
+	--white-10: rgb(255 255 255 / 10%);
+	--grey: #808080;
+	--grey-40: rgb(128 128 128 / 40%);
+	--grey-10: rgb(128 128 128 / 10%);
+	--black: #242424;
+	--black-40: rgba(36 36 36 / 40%);
+	--black-10: rgba(36 36 36 / 10%);
+	--dark-purple: #362a73;
+	--dark-blue: #3d9898;
+
+	--header-height: 6rem;
+	--tablet-footer-height: 10rem;
+	--desktop-footer-height: 20rem;
+
+	--space-l1: 0.5rem;
+	--space-l2: 1rem;
+	--space-l3: 2rem;
+	--space-l4: 4rem;
+	--space-l5: 8rem;
+}

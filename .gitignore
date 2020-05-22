@@ -5,10 +5,10 @@
 /coverage
 
 # production
+.next
+/out
 /dist
-/artifacts
-/tmp/**
-/src/components/styles/theme.css
+/tmp
 
 # misc
 .DS_Store
@@ -17,6 +17,8 @@
 .env.test.local
 .env.production.local
 .vscode
+.now
+.vercel
 
 npm-debug.log*
 yarn-debug.log*

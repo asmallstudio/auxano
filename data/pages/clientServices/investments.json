@@ -1,0 +1,66 @@
+{
+	"pageTitle": "Investments | Client Services",
+	"pageDescription": "",
+	"hero": {
+		"name": "Investments",
+		"title": "When your investment strategy fits your goals and dreams, it can transform your life and those of others."
+	},
+	"pullquote1": "“Successful investing is about managing risk, not avoiding it.” — **Benjamin Graham**, _The Intelligent Investor_",
+	"infoSection": {
+		"description": "At Auxano we believe that investing without a larger context is like playing a game without a scoring system. Taking a holistic view, we start by defining what long-term success means to you. We then build a strategy that integrates principled advice and prudent investing so you can achieve that success, however you define it.\n\nAlong the way, we allocate capital by applying a set of guiding principles to established evidence. We manage risk and investments based on factors we can control, while being mindful of the things we cannot. It’s a patient, disciplined approach focused on your goals and dreams, not the fluctuations of the market.",
+		"descriptionLede": "Achieving long-term success isn’t just about generating returns. It’s about where those returns are taking you.",
+		"image": {
+			"alt": "leave empty if this image does not enhance the meaning of the section",
+			"src": "/uploads/investments.jpg"
+		}
+	},
+	"pullquote2": "Through careful application of this strategy, you can support all that you hope to achieve in life and in your legacy.",
+	"infoTable": {
+		"tableHead": {
+			"tableHead1": "Speculative Approach",
+			"tableHead2": "Principled Approach"
+		},
+		"tableRow1": {
+			"tableCell1": "Betting upon an outcome based on theories, beliefs, or guesses",
+			"tableCell2": "Allocating capital by prudently integrating guiding principles with available evidence",
+			"tableRowHead": "Investment Management"
+		},
+		"tableRow2": {
+			"tableCell1": "Living for today or living beyond one’s means; debt-based consumption and risk-taking",
+			"tableCell2": "Taking a long-term view, applying wisdom and prudence to debt and risk management",
+			"tableRowHead": "Financial Planning"
+		}
+	},
+	"serviceList": {
+		"description": "Thanks to our extensive history in investment management, we can provide you with access to some of the most experienced institutional managers, both traditional and nontraditional. These relationships often enable us to obtain institutional pricing—savings we pass along to you. Look to us for:",
+		"items": [
+			"Alternative Investment Strategies",
+			"Cash Management",
+			"Private Equity",
+			"Public Equity",
+			"Real Assets",
+			"Real Estate",
+			"Strategic Asset Allocation",
+			"Taxable & Municipal Bond Management",
+			"Venture Capital"
+		]
+	},
+	"serviceInfo": {
+		"list": [
+			{
+				"icon": "/uploads/target.svg",
+				"text": "Build portfolios based on your values, goals and risk profile"
+			},
+			{
+				"icon": "/uploads/adjust.svg",
+				"text": "Monitor your portfolio and make adjustments"
+			},
+			{
+				"icon": "/uploads/explore.svg",
+				"text": "Explore equity risk management strategies"
+			}
+		]
+	},
+	"actionBanner": { "link": "", "text": "" },
+	"subscribe": { "heading": "", "text": "" }
+}

@@ -17,101 +17,97 @@ collections:
     files:
       - label: "Site Information"
         name: siteData
-        file: src/data/pages/siteData.yml
+        file: data/pages/siteData.json
         path: /
         fields:
-          - label: "Site Information"
-            name: siteData
+          - label: "Site Description"
+            name: siteDescription
+            hint: "(For SEO purposes.) Describes the content of the whole website. This is visible in search results."
+            widget: text
+          - label: "Company Info"
+            name: companyInfo
             widget: object
             fields:
-              - label: "Site Description"
-                name: siteDescription
-                hint: "(For SEO purposes.) Describes the content of the whole website. This is visible in search results."
+              - label: "Contact Email"
+                name: email
+                widget: string
+              - label: "Office Phone"
+                name: phone1
+                widget: string
+              - label: "Toll-free Phone"
+                name: phone2
+                widget: string
+              - label: "Address"
+                name: address
+                widget: object
+                fields:
+                  - label: "Line 1"
+                    name: line1
+                    widget: string
+                  - label: "Line 2"
+                    name: line2
+                    widget: string
+                  - label: "City"
+                    name: city
+                    widget: string
+                  - label: "State"
+                    name: state
+                    widget: string
+                  - label: "Zipcode"
+                    name: zipcode
+                    widget: string
+          - label: Header Navigation
+            name: headerNav
+            widget: list
+            allow_add: true
+            fields:
+              - { label: Title, name: title, widget: string }
+              - { label: Link, name: link, widget: string }
+          - label: Footer Navigation
+            name: footerNav
+            widget: list
+            allow_add: true
+            fields:
+              - { label: Title, name: title, widget: string }
+              - { label: Link, name: link, widget: string }
+          - label: "Cover Sheet"
+            name: coverSheet
+            widget: object
+            fields:
+              - label: "Hero Text"
+                name: hero
+                widget: string
+          - label: "Action Banner"
+            name: actionBanner
+            widget: object
+            fields:
+              - label: "Text"
+                name: text
+                required: false
+                widget: string
+              - label: "Link"
+                name: link
+                required: false
+                widget: string
+          - label: "Subscribe"
+            name: subscribe
+            widget: object
+            fields:
+              - label: "Heading"
+                name: heading
+                required: false
+                widget: string
+              - label: "Subheading"
+                name: text
+                required: false
                 widget: text
-              - label: "Company Info"
-                name: companyInfo
-                widget: object
-                fields:
-                  - label: "Contact Email"
-                    name: email
-                    widget: string
-                  - label: "Office Phone"
-                    name: phone1
-                    widget: string
-                  - label: "Toll-free Phone"
-                    name: phone2
-                    widget: string
-                  - label: "Address"
-                    name: address
-                    widget: object
-                    fields:
-                      - label: "Line 1"
-                        name: line1
-                        widget: string
-                      - label: "Line 2"
-                        name: line2
-                        widget: string
-                      - label: "City"
-                        name: city
-                        widget: string
-                      - label: "State"
-                        name: state
-                        widget: string
-                      - label: "Zipcode"
-                        name: zipcode
-                        widget: string
-              - label: Header Navigation
-                name: headerNav
-                widget: list
-                allow_add: true
-                fields:
-                  - { label: Title, name: title, widget: string }
-                  - { label: Link, name: link, widget: string }
-              - label: Footer Navigation
-                name: footerNav
-                widget: list
-                allow_add: true
-                fields:
-                  - { label: Title, name: title, widget: string }
-                  - { label: Link, name: link, widget: string }
-              - label: "Cover Sheet"
-                name: coverSheet
-                widget: object
-                fields:
-                  - label: "Hero Text"
-                    name: hero
-                    widget: string
-              - label: "Action Banner"
-                name: actionBanner
-                widget: object
-                fields:
-                  - label: "Text"
-                    name: text
-                    required: false
-                    widget: string
-                  - label: "Link"
-                    name: link
-                    required: false
-                    widget: string
-              - label: "Subscribe"
-                name: subscribe
-                widget: object
-                fields:
-                  - label: "Heading"
-                    name: heading
-                    required: false
-                    widget: string
-                  - label: "Subheading"
-                    name: text
-                    required: false
-                    widget: text
-              - label: "Footer Compliance info"
-                name: complianceInfo
-                widget: markdown
-                buttons: ["bold", "italic", "link"]
+          - label: "Footer Compliance info"
+            name: complianceInfo
+            widget: markdown
+            buttons: ["bold", "italic", "link"]
       - label: "Home Page"
         name: home
-        file: src/data/pages/home.yml
+        file: data/pages/home.json
         path: /
         fields:
           - label: Hero
@@ -219,7 +215,7 @@ collections:
                 widget: text
       - label: "About Us"
         name: aboutUs
-        file: src/data/pages/aboutUs.yml
+        file: data/pages/aboutUs.json
         path: /about-us
         fields:
           - label: "Page Title"
@@ -313,7 +309,7 @@ collections:
       - label: "Our Approach"
         name: ourApproach
         path: /our-approach
-        file: src/data/pages/ourApproach.yml
+        file: data/pages/ourApproach.json
         fields:
           - label: "Page Title"
             name: pageTitle
@@ -456,7 +452,7 @@ collections:
                 widget: text
       - label: "Contact"
         name: contact
-        file: src/data/pages/contact.yml
+        file: data/pages/contact.json
         path: /contact
         fields:
           - label: "Page Title"
@@ -508,7 +504,7 @@ collections:
                 widget: text
       - label: "Client Services"
         name: clientServices
-        file: src/data/pages/clientServices.yml
+        file: data/pages/clientServices.json
         path: /client-services
         fields:
           - label: "Page Title"
@@ -594,7 +590,7 @@ collections:
                 widget: text
       - label: "Personal Finances"
         name: personalFinances
-        file: src/data/pages/clientServices/personalFinances.yml
+        file: data/pages/clientServices/personalFinances.json
         path: /client-services/personal-finances
         fields:
           - label: "Page Title"
@@ -688,7 +684,7 @@ collections:
                 widget: text
       - label: "Investments"
         name: investments
-        file: src/data/pages/clientServices/investments.yml
+        file: data/pages/clientServices/investments.json
         path: /client-services/investments
         fields:
           - label: "Page Title"
@@ -827,7 +823,7 @@ collections:
                 widget: text
       - label: "Estate Planning"
         name: estatePlanning
-        file: src/data/pages/clientServices/estatePlanning.yml
+        file: data/pages/clientServices/estatePlanning.json
         path: /client-services/estate-planning
         fields:
           - label: "Page Title"
@@ -896,7 +892,7 @@ collections:
                 widget: text
       - label: "Risk Management"
         name: riskManagement
-        file: src/data/pages/clientServices/riskManagement.yml
+        file: data/pages/clientServices/riskManagement.json
         path: /client-services/risk-management
         fields:
           - label: "Page Title"
@@ -993,7 +989,7 @@ collections:
                 widget: text
       - label: "Tax Management"
         name: taxManagement
-        file: src/data/pages/clientServices/taxManagement.yml
+        file: data/pages/clientServices/taxManagement.json
         path: /client-services/tax-management
         fields:
           - label: "Page Title"
@@ -1070,7 +1066,7 @@ collections:
                 widget: text
       - label: "Business Services"
         name: businessServices
-        file: src/data/pages/clientServices/businessServices.yml
+        file: data/pages/clientServices/businessServices.json
         path: /client-services/business-services
         fields:
           - label: "Page Title"
@@ -1142,7 +1138,7 @@ collections:
                 widget: text
       - label: "Corporate Benefits Planning"
         name: corporateBenefitsPlanning
-        file: src/data/pages/clientServices/corporateBenefitsPlanning.yml
+        file: data/pages/clientServices/corporateBenefitsPlanning.json
         path: /corporate-benefits-planning
         fields:
           - label: "Page Title"
@@ -1200,7 +1196,7 @@ collections:
                 widget: text
       - label: "Careers"
         name: careers
-        file: src/data/pages/careers.yml
+        file: data/pages/careers.json
         path: /careers
         fields:
           - label: "Page Title"
@@ -1251,7 +1247,7 @@ collections:
                 widget: text
       - label: "Legacy Planning"
         name: legacyPlanning
-        file: src/data/pages/legacyPlanning.yml
+        file: data/pages/legacyPlanning.json
         path: /legacy-planning
         fields:
           - label: "Page Title"
@@ -1328,7 +1324,7 @@ collections:
                 widget: text
       - label: "Team"
         name: team
-        file: src/data/pages/team.yml
+        file: data/pages/team.json
         path: /team
         fields:
           - label: "Page Description"
@@ -1389,7 +1385,7 @@ collections:
                 required: true
       - label: "Disclosures"
         name: disclosures
-        file: src/data/pages/disclosures.yml
+        file: data/pages/disclosures.json
         path: /disclosures
         fields:
           - label: "Page Title"
@@ -1409,11 +1405,11 @@ collections:
   - label: News Articles
     label_singular: News Article
     name: news
-    folder: src/data/news
+    folder: data/news
     create: true
     preview: false
-    extension: yml
-    format: yml
+    extension: json
+    format: json
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     preview_path: "news/{{slug}}"
     fields:

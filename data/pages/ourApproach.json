@@ -1,0 +1,44 @@
+{
+	"pageTitle": "Our Approach",
+	"pageDescription": "",
+	"hero": {
+		"title": "Authentic relationships, candid conversation, and uncompromising integrity."
+	},
+	"items": {
+		"item1": {
+			"body": "We start our process by listening to your values and life goals. We want to hear what’s most important to you.",
+			"heading": "Discovery",
+			"image": {
+				"alt": "leave empty if this image does not enhance the meaning of the section",
+				"src": "/uploads/discovery.jpg"
+			}
+		},
+		"item2": {
+			"body": "We’ll help determine which financial steps will take you from your current situation to the fulfillment of your goals.",
+			"heading": "Integrated Financial Planning",
+			"image": {
+				"alt": "leave empty if this image does not enhance the meaning of the section",
+				"src": "/uploads/integrated-financial-planning.jpg"
+			},
+			"link": "/client-services"
+		},
+		"item3": {
+			"body": "Every plan requires activation. We’ll walk you through the process of implementation, every step of the way.",
+			"heading": "Implementation",
+			"image": {
+				"alt": "leave empty if this image does not enhance the meaning of the section",
+				"src": "/uploads/implementation.jpg"
+			}
+		},
+		"item4": {
+			"body": "We understand that life is always full of twists and turns. We’ll work with you to adjust your plan as you encounter challenges and set new goals.",
+			"heading": "Monitor & Adjust",
+			"image": {
+				"alt": "leave empty if this image does not enhance the meaning of the section",
+				"src": "/uploads/monitor-adjust.jpg"
+			}
+		}
+	},
+	"actionBanner": { "link": "/client-services", "text": "Our Services" },
+	"subscribe": { "heading": "", "text": "" }
+}

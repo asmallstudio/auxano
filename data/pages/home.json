@@ -1,0 +1,33 @@
+{
+	"hero": {
+		"ctaLink": "/our-approach",
+		"ctaText": "Get Started",
+		"image": "/uploads/home-page-hero.png",
+		"subtitle": "Look to us for wealth creation and preservation, through principled stewardship of every facet of your wealth. With Auxano, you can transform a good life into a life truly well lived. Let us walk alongside you as a trusted advisor every step of the way.",
+		"title": "Transcending Wealth. Transforming Lives."
+	},
+	"definition": "**auxano** *(aux&nbsp;•&nbsp;ah&nbsp;•&nbsp;no):&nbsp;* \nto bring growth or increase",
+	"pullquote": "**Stewardship is a journey of continual progress and responsibility. ** We’ll guide you in that journey so you make wise choices with your wealth to move towards all your goals and dreams in a prudent and responsible manner.  We’ll also work with you to ensure that your wealth, wisdom and prudence is transferred to the loved ones, institutions and causes that mean so much to you.",
+	"callouts": {
+		"item1": {
+			"heading": "Our Approach",
+			"icon": "/uploads/approach.svg",
+			"link": "/our-approach/",
+			"text": "See how stewardship is at the core of what we do."
+		},
+		"item2": {
+			"heading": "Our Services",
+			"icon": "/uploads/services.svg",
+			"link": "/client-services/",
+			"text": "Find out how we can help you reach your goals."
+		},
+		"item3": {
+			"heading": "Our Team",
+			"icon": "/uploads/team.svg",
+			"link": "/team/",
+			"text": "Get to know the people on the Auxano team."
+		}
+	},
+	"actionBanner": { "link": "/about-us", "text": "About Us" },
+	"subscribe": { "heading": "", "text": "" }
+}

@@ -1,0 +1,14 @@
+{
+	"pageTitle": "Contact",
+	"pageDescription": "",
+	"form": { "title": "General Inquiries" },
+	"info": {
+		"title": "Contact Information",
+		"parkingInfo": "You can find parking by pulling into the Skyline Parking Garage off of 110th Ave. NE."
+	},
+	"imageDivider": {
+		"alt": "Office building splash picture",
+		"src": "/uploads/office.jpg"
+	},
+	"subscribe": { "heading": "", "text": "" }
+}

@@ -1,12 +1,12 @@
 [build]
-  publish = "dist"
-  command = "npm run build"
+  publish = "out"
+  command = "npm run export"
 
 [context.deploy-preview]
-  command = "npm run stage"
+  command = "npm run export"
 
 [context.branch-deploy]
-  command = "npm run stage"
+  command = "npm run export"
 
 # These redirects are from the pre-2019 Auxano Site.
 [[redirects]]
