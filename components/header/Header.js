@@ -50,7 +50,7 @@ function NavListItems({ siteData, ...props }) {
   return (
     <>
       {siteData.headerNav.map((navItem, i) => (
-        <li key={i} {...props}>
+        <li key={i} className="style-as-h3" {...props}>
           <NavLink href={navItem.link} activeClassName={styles.activeLink}>
             <a>{navItem.title}</a>
           </NavLink>
