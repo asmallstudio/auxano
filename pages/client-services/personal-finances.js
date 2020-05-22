@@ -3,7 +3,7 @@ import Head from "next/head";
 import { NextAmbiLink } from "@asmallstudio/components";
 import {
   getFullPageTitle,
-  pickFirstAvailableString
+  pickFirstAvailableString,
 } from "@asmallstudio/utilities";
 import constants from "lib/constants.json";
 
@@ -40,7 +40,7 @@ export default function PersonalFinances({ siteData, personalFinances }) {
               className={`style-as-h3 ${styles.indexLink}`}
             >
               Back to Client Services
-              </NextAmbiLink>
+            </NextAmbiLink>
           </div>
         </div>
         <div className={`${styles.dingusDot1} hidden-md-up`} />
@@ -128,7 +128,9 @@ export default function PersonalFinances({ siteData, personalFinances }) {
 }
 
 export async function getStaticProps() {
-  const personalFinances = await import("data/pages/clientServices/personalFinances.json");
+  const personalFinances = await import(
+    "data/pages/clientServices/personalFinances.json"
+  );
 
   return {
     props: { personalFinances: personalFinances.default },

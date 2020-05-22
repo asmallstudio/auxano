@@ -3,7 +3,7 @@ import Head from "next/head";
 import { NextAmbiLink } from "@asmallstudio/components";
 import {
   getFullPageTitle,
-  pickFirstAvailableString
+  pickFirstAvailableString,
 } from "@asmallstudio/utilities";
 import constants from "lib/constants.json";
 
@@ -17,10 +17,7 @@ export default function EstatePlanning({ siteData, estatePlanning }) {
     <>
       <Head>
         <title>
-          {getFullPageTitle(
-            estatePlanning.pageTitle,
-            constants.siteMeta.title
-          )}
+          {getFullPageTitle(estatePlanning.pageTitle, constants.siteMeta.title)}
         </title>
         <meta
           name="description"
@@ -40,7 +37,7 @@ export default function EstatePlanning({ siteData, estatePlanning }) {
               className={`style-as-h3 ${styles.indexLink}`}
             >
               Back to Client Services
-              </NextAmbiLink>
+            </NextAmbiLink>
           </div>
         </div>
         <div className={`${styles.dingusDot1} hidden-md-up`} />
@@ -115,7 +112,9 @@ export default function EstatePlanning({ siteData, estatePlanning }) {
 }
 
 export async function getStaticProps() {
-  const estatePlanning = await import("data/pages/clientServices/estatePlanning.json");
+  const estatePlanning = await import(
+    "data/pages/clientServices/estatePlanning.json"
+  );
 
   return {
     props: { estatePlanning: estatePlanning.default },

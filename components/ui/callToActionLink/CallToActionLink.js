@@ -7,7 +7,11 @@ import styles from "./callToActionLink.module.scss";
  * Extends the Link component
  */
 const CallToActionLink = ({ to, children, className = "", ...restProps }) => (
-  <NextAmbiLink href={to} className={`${styles.link} ${className}`} {...restProps}>
+  <NextAmbiLink
+    href={to}
+    className={`${styles.link} ${className}`}
+    {...restProps}
+  >
     {children}
   </NextAmbiLink>
 );

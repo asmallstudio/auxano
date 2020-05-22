@@ -3,7 +3,7 @@ import Head from "next/head";
 import {
   getFullPageTitle,
   pickFirstAvailableString,
-  phoneNumberUnformat
+  phoneNumberUnformat,
 } from "@asmallstudio/utilities";
 import { NextAmbiLink } from "@asmallstudio/components";
 import { pageChange } from "lib/utils/pageChange";
@@ -16,9 +16,9 @@ import PrimaryButton from "components/ui/primaryButton/PrimaryButton";
 import IFrame from "react-iframe";
 import SubscribeSection from "components/ui/subscribeSection/SubscribeSection";
 
-const _encode = data => {
+const _encode = (data) => {
   return Object.keys(data)
-    .map(key => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`)
+    .map((key) => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`)
     .join("&");
 };
 
@@ -33,7 +33,7 @@ class ContactForm extends React.Component {
       bdaySurprise: "",
       errors: false,
       submitError: false,
-      submitted: false
+      submitted: false,
     };
   }
 
@@ -45,12 +45,12 @@ class ContactForm extends React.Component {
       body: "",
       bdaySurprise: "",
       submitError: false,
-      submitted
+      submitted,
     });
   };
 
   /* Here’s the juicy bit for posting the form submission */
-  _handleSubmit = event => {
+  _handleSubmit = (event) => {
     event.preventDefault();
 
     let errors = false;
@@ -75,7 +75,7 @@ class ContactForm extends React.Component {
       fetch("/", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: _encode({ "form-name": "contact", ...data })
+        body: _encode({ "form-name": "contact", ...data }),
       })
         .then(() => {
           this._clearFormData({ submitted: true });
@@ -86,7 +86,7 @@ class ContactForm extends React.Component {
     }
   };
 
-  _handleChange = e => this.setState({ [e.target.name]: e.target.value });
+  _handleChange = (e) => this.setState({ [e.target.name]: e.target.value });
 
   render() {
     const {
@@ -97,7 +97,7 @@ class ContactForm extends React.Component {
       bdaySurprise,
       submitError,
       submitted,
-      errors
+      errors,
     } = this.state;
 
     const { fallbackEmail, ...restProps } = this.props;

@@ -2,7 +2,7 @@ import React from "react";
 import Head from "next/head";
 import {
   getFullPageTitle,
-  pickFirstAvailableString
+  pickFirstAvailableString,
 } from "@asmallstudio/utilities";
 import constants from "lib/constants.json";
 
@@ -13,8 +13,6 @@ import FullWidthSectionActionLink from "components/ui/fullWidthSectionActionLink
 import SubscribeSection from "components/ui/subscribeSection/SubscribeSection";
 
 export default function OurApproach({ siteData, ourApproach }) {
-
-
   return (
     <>
       <Head>

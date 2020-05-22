@@ -55,7 +55,9 @@ export default function App({ Component, pageProps }) {
       </Head>
       {doNotShowCover ? null : <CoverSheet siteData={siteData} />}
       <Header siteData={siteData} />
-      <main className={`routesContainer doNotShowCoverSheet--${doNotShowCover}`} >
+      <main
+        className={`routesContainer doNotShowCoverSheet--${doNotShowCover}`}
+      >
         <Component siteData={siteData} {...pageProps} />
       </main>
       <Footer siteData={siteData} />

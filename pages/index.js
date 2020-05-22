@@ -9,19 +9,14 @@ import OneThirdColumn from "components/ui/oneThirdColumn/OneThirdColumn";
 import FullWidthSectionActionLink from "components/ui/fullWidthSectionActionLink/FullWidthSectionActionLink";
 import SubscribeSection from "components/ui/subscribeSection/SubscribeSection";
 
-
 export default function Home({ siteData, home }) {
-
-
   return (
     <>
       <Head>
         <meta name="description" content={siteData.siteDescription} />
       </Head>
       <div className={`container--fluid ${styles.heroContainer}`}>
-        <div
-          className={`${styles.heroImageContainer} ${styles.dingusDotHero}`}
-        >
+        <div className={`${styles.heroImageContainer} ${styles.dingusDotHero}`}>
           <img src={home.hero.image} className={styles.heroImage} alt="" />
         </div>
         <div className="container">
@@ -38,10 +33,7 @@ export default function Home({ siteData, home }) {
           </div>
         </div>
       </div>
-      <FullWidthSectionText
-        text={home.definition}
-        className="dg-definition"
-      />
+      <FullWidthSectionText text={home.definition} className="dg-definition" />
       <FullWidthSectionText
         text={home.pullquote}
         className={`${styles.pullquote} dg-pullquote`}

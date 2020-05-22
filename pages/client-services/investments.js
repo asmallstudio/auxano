@@ -3,7 +3,7 @@ import Head from "next/head";
 import { NextAmbiLink } from "@asmallstudio/components";
 import {
   getFullPageTitle,
-  pickFirstAvailableString
+  pickFirstAvailableString,
 } from "@asmallstudio/utilities";
 import constants from "lib/constants.json";
 
@@ -37,7 +37,7 @@ export default function Investments({ siteData, investments }) {
               className={`style-as-h3 ${styles.indexLink}`}
             >
               Back to Client Services
-              </NextAmbiLink>
+            </NextAmbiLink>
           </div>
         </div>
         <div className={`${styles.dingusDot1} hidden-md-up`} />
@@ -145,9 +145,7 @@ export default function Investments({ siteData, investments }) {
       <section className="container dg-serviceInfo">
         <div className={styles.serviceInfoRow}>
           <ul className={`row ${styles.serviceInfoList}`}>
-            <li
-              className={`col-xs-12 col-md-4 ${styles.serviceInfoListItem}`}
-            >
+            <li className={`col-xs-12 col-md-4 ${styles.serviceInfoListItem}`}>
               <img
                 className={`${styles.serviceInfoListItemImage}`}
                 src={investments.serviceInfo.list[0].icon}
@@ -155,9 +153,7 @@ export default function Investments({ siteData, investments }) {
               />
               <p>{investments.serviceInfo.list[0].text}</p>
             </li>
-            <li
-              className={`col-xs-12 col-md-4 ${styles.serviceInfoListItem}`}
-            >
+            <li className={`col-xs-12 col-md-4 ${styles.serviceInfoListItem}`}>
               <img
                 className={`${styles.serviceInfoListItemImage}`}
                 src={investments.serviceInfo.list[1].icon}
@@ -165,9 +161,7 @@ export default function Investments({ siteData, investments }) {
               />
               <p>{investments.serviceInfo.list[1].text}</p>
             </li>
-            <li
-              className={`col-xs-12 col-md-4 ${styles.serviceInfoListItem}`}
-            >
+            <li className={`col-xs-12 col-md-4 ${styles.serviceInfoListItem}`}>
               <img
                 className={`${styles.serviceInfoListItemImage}`}
                 src={investments.serviceInfo.list[2].icon}
@@ -205,7 +199,9 @@ export default function Investments({ siteData, investments }) {
 }
 
 export async function getStaticProps() {
-  const investments = await import("data/pages/clientServices/investments.json");
+  const investments = await import(
+    "data/pages/clientServices/investments.json"
+  );
 
   return {
     props: { investments: investments.default },

@@ -3,7 +3,7 @@ import Head from "next/head";
 import { NextAmbiLink } from "@asmallstudio/components";
 import {
   getFullPageTitle,
-  pickFirstAvailableString
+  pickFirstAvailableString,
 } from "@asmallstudio/utilities";
 import constants from "lib/constants.json";
 
@@ -11,7 +11,10 @@ import styles from "./corporate-benefits-planning.module.scss";
 import FullWidthSectionActionLink from "components/ui/fullWidthSectionActionLink/FullWidthSectionActionLink";
 import SubscribeSection from "components/ui/subscribeSection/SubscribeSection";
 
-export default function CorporateBenefitsPlanning({ siteData, corporateBenefitsPlanning }) {
+export default function CorporateBenefitsPlanning({
+  siteData,
+  corporateBenefitsPlanning,
+}) {
   return (
     <>
       <Head>
@@ -39,7 +42,7 @@ export default function CorporateBenefitsPlanning({ siteData, corporateBenefitsP
               className={`style-as-h3 ${styles.indexLink}`}
             >
               Back to Client Services
-              </NextAmbiLink>
+            </NextAmbiLink>
           </div>
         </div>
         <div className={`${styles.dingusDot1} hidden-md-up`} />
@@ -98,7 +101,9 @@ export default function CorporateBenefitsPlanning({ siteData, corporateBenefitsP
 }
 
 export async function getStaticProps() {
-  const corporateBenefitsPlanning = await import("data/pages/clientServices/corporateBenefitsPlanning.json");
+  const corporateBenefitsPlanning = await import(
+    "data/pages/clientServices/corporateBenefitsPlanning.json"
+  );
 
   return {
     props: { corporateBenefitsPlanning: corporateBenefitsPlanning.default },

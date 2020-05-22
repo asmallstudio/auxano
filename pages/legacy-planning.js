@@ -2,7 +2,7 @@ import React from "react";
 import Head from "next/head";
 import {
   getFullPageTitle,
-  pickFirstAvailableString
+  pickFirstAvailableString,
 } from "@asmallstudio/utilities";
 import constants from "lib/constants.json";
 
@@ -13,16 +13,11 @@ import FullWidthSectionActionLink from "components/ui/fullWidthSectionActionLink
 import SubscribeSection from "components/ui/subscribeSection/SubscribeSection";
 
 export default function LegacyPlanning({ siteData, legacyPlanning }) {
-
-
   return (
     <>
       <Head>
         <title>
-          {getFullPageTitle(
-            legacyPlanning.pageTitle,
-            constants.siteMeta.title
-          )}
+          {getFullPageTitle(legacyPlanning.pageTitle, constants.siteMeta.title)}
         </title>
         <meta
           name="description"
@@ -82,9 +77,7 @@ export default function LegacyPlanning({ siteData, legacyPlanning }) {
           </div>
           <div className="row">
             <div className={`col-xs-12 ${styles.textPlain}`}>
-              <p className={styles.optionsHeader}>
-                {legacyPlanning.body.coda}
-              </p>
+              <p className={styles.optionsHeader}>{legacyPlanning.body.coda}</p>
             </div>
           </div>
         </div>

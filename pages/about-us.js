@@ -2,7 +2,7 @@ import React from "react";
 import Head from "next/head";
 import {
   getFullPageTitle,
-  pickFirstAvailableString
+  pickFirstAvailableString,
 } from "@asmallstudio/utilities";
 import constants from "lib/constants.json";
 
@@ -31,9 +31,7 @@ export default function AboutUs({ siteData, aboutUs }) {
         />
       </Head>
       <section className={`container--fluid ${styles.heroContainer} dg-hero`}>
-        <div
-          className={`${styles.heroImageContainer} ${styles.dingusDotHero}`}
-        >
+        <div className={`${styles.heroImageContainer} ${styles.dingusDotHero}`}>
           <img src={aboutUs.hero.image} className={styles.heroImage} alt="" />
         </div>
         <div className="container">
@@ -74,9 +72,7 @@ export default function AboutUs({ siteData, aboutUs }) {
                   <img
                     src={item.logo}
                     alt=""
-                    className={
-                      i === activeOrg ? styles.activeOrg : null
-                    }
+                    className={i === activeOrg ? styles.activeOrg : null}
                     onClick={() => setActiveOrg(i)}
                   />
                   {i === activeOrg && (

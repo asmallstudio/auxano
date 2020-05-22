@@ -3,7 +3,7 @@ import Head from "next/head";
 import {
   getFullPageTitle,
   formatRelativeDateString,
-  createSlugFromTitleAndDate
+  createSlugFromTitleAndDate,
 } from "@asmallstudio/utilities";
 import { getDirectory, getSingleFileJson } from "@asmallstudio/utilities/node";
 import { NextAmbiLink } from "@asmallstudio/components";
@@ -12,7 +12,9 @@ import constants from "lib/constants.json";
 import LinkWithArrow from "components/ui/linkWithArrow/LinkWithArrow";
 import styles from "./index.module.scss";
 
-function PaginationLink({ ...rest }) { return <NextAmbiLink {...rest} />; }
+function PaginationLink({ ...rest }) {
+  return <NextAmbiLink {...rest} />;
+}
 
 export default function Index({ siteData, posts, currentPage, totalPages }) {
   return (
@@ -26,7 +28,7 @@ export default function Index({ siteData, posts, currentPage, totalPages }) {
           <div className={`col-xs-12 ${styles.articleList}`}>
             <h1 className="style-as-h3">News & Resources</h1>
             <ul>
-              {posts.map(post => (
+              {posts.map((post) => (
                 <li key={post.slug} className={styles.indexArticle}>
                   <div className={styles.titleAndLinkContainer}>
                     <NextAmbiLink
@@ -42,7 +44,7 @@ export default function Index({ siteData, posts, currentPage, totalPages }) {
                       className={styles.arrowLink}
                     >
                       Read more
-                      </LinkWithArrow>
+                    </LinkWithArrow>
                   </div>
                   <div className={styles.metaInfoContainer}>
                     <p>{formatRelativeDateString(post.date)}</p>

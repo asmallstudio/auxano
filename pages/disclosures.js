@@ -2,7 +2,7 @@ import React from "react";
 import Head from "next/head";
 import {
   getFullPageTitle,
-  pickFirstAvailableString
+  pickFirstAvailableString,
 } from "@asmallstudio/utilities";
 import constants from "lib/constants.json";
 
@@ -10,8 +10,6 @@ import Markdown from "react-markdown";
 import styles from "./disclosures.module.scss";
 
 export default function Disclosures({ siteData, disclosures }) {
-
-
   return (
     <>
       <Head>

@@ -12,5 +12,6 @@ export default function DefaultTextArea({
       rows="5"
       className={`${styles.textArea} ${className}`}
       {...restProps}
-    />);
+    />
+  );
 }

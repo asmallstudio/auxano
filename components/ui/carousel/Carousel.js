@@ -25,7 +25,7 @@ class AuxanoCarousel extends React.Component {
               <div
                 className={styles.itemImgContainer}
                 style={{
-                  backgroundImage: `url("${item.image.src}")`
+                  backgroundImage: `url("${item.image.src}")`,
                 }}
                 title={item.image.alt}
               />

@@ -30,7 +30,7 @@ function NavLink({ children, ...props }) {
     if (props.activeClassName) {
       childProps.className = `${childProps.className || ""} ${
         props.activeClassName
-        }`.trim();
+      }`.trim();
     }
     childProps["aria-current"] = "page";
   }
@@ -58,7 +58,7 @@ function NavListItems({ siteData, ...props }) {
       ))}
     </>
   );
-};
+}
 
 function Header({ siteData }) {
   const _menuToggle = () => {
@@ -135,7 +135,9 @@ function Header({ siteData }) {
       <div className={styles.headerContainer}>
         <div className={styles.logoContainer}>
           <NavLink href="/">
-            <a><AuxanoLogo alt="Auxano Advisors" height="48" width="125" /></a>
+            <a onClick={_menuClose}>
+              <AuxanoLogo alt="Auxano Advisors" height="48" width="125" />
+            </a>
           </NavLink>
         </div>
         <nav id="navigation" className={styles.nav}>
@@ -211,7 +213,7 @@ function MenuIcon({ menuHidden, menuAction }) {
       {menuIcon}
     </button>
   );
-};
+}
 
 function AuxanoLogo(props = {}) {
   return (

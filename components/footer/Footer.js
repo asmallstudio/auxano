@@ -34,7 +34,7 @@ function NavLink({ children, ...props }) {
     if (props.activeClassName) {
       childProps.className = `${childProps.className || ""} ${
         props.activeClassName
-        }`.trim();
+      }`.trim();
     }
     childProps["aria-current"] = "page";
   }
@@ -51,9 +51,7 @@ function NavLink({ children, ...props }) {
 }
 
 function NextMarkdownLink(props) {
-  return (
-    <NextAmbiLink href={props.href}>{props.children}</NextAmbiLink>
-  );
+  return <NextAmbiLink href={props.href}>{props.children}</NextAmbiLink>;
 }
 
 export default function Footer({ siteData }) {
@@ -72,7 +70,10 @@ export default function Footer({ siteData }) {
             <ul className={`N2 ${styles.linkList}`}>
               {siteData.footerNav.map((navItem, i) => (
                 <li key={i}>
-                  <NavLink href={navItem.link} activeClassName={styles.activeLink}>
+                  <NavLink
+                    href={navItem.link}
+                    activeClassName={styles.activeLink}
+                  >
                     <a>{navItem.title}</a>
                   </NavLink>
                 </li>
@@ -90,7 +91,7 @@ export default function Footer({ siteData }) {
                 target="_blank"
               >
                 LinkedIn
-            </NextAmbiLink>
+              </NextAmbiLink>
             </li>
             <li>
               <NextAmbiLink
@@ -99,7 +100,7 @@ export default function Footer({ siteData }) {
                 target="_blank"
               >
                 Facebook
-            </NextAmbiLink>
+              </NextAmbiLink>
             </li>
           </ul>
         </div>
@@ -154,7 +155,7 @@ export default function Footer({ siteData }) {
             <span itemProp="addressLocality">
               {siteData.companyInfo.address.city}
             </span>
-          ,{" "}
+            ,{" "}
             <span itemProp="addressRegion">
               {siteData.companyInfo.address.state}
             </span>{" "}

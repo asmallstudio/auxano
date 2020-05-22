@@ -4,9 +4,9 @@ import styles from "./subscribeSection.module.scss";
 import DefaultInput from "../defaultInput/DefaultInput";
 import PrimaryButton from "../primaryButton/PrimaryButton";
 
-const _encode = data => {
+const _encode = (data) => {
   return Object.keys(data)
-    .map(key => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`)
+    .map((key) => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`)
     .join("&");
 };
 
@@ -21,7 +21,7 @@ class SubscribeForm extends React.Component {
   };
 
   /* Here’s the juicy bit for posting the form submission */
-  _handleSubmit = event => {
+  _handleSubmit = (event) => {
     event.preventDefault();
 
     let errors = false;
@@ -42,7 +42,7 @@ class SubscribeForm extends React.Component {
       fetch("/", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: _encode({ "form-name": "leads", ...data })
+        body: _encode({ "form-name": "leads", ...data }),
       })
         .then(() => {
           this._clearFormData({ submitted: true });
@@ -53,7 +53,7 @@ class SubscribeForm extends React.Component {
     }
   };
 
-  _handleChange = e => this.setState({ [e.target.name]: e.target.value });
+  _handleChange = (e) => this.setState({ [e.target.name]: e.target.value });
 
   render() {
     const { name, email, bdaySurprise, submitted } = this.state;
@@ -105,10 +105,10 @@ class SubscribeForm extends React.Component {
         </div>
       </form>
     ) : (
-        <p className={`${styles.successText}`}>
-          Thank you! We will follow up via email shortly.
-        </p>
-      );
+      <p className={`${styles.successText}`}>
+        Thank you! We will follow up via email shortly.
+      </p>
+    );
   }
 }
 

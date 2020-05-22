@@ -25,7 +25,6 @@ function _formatPositions(positions) {
 }
 
 export default function Member({ siteData, member }) {
-
   return (
     <>
       <Head>
@@ -42,17 +41,14 @@ export default function Member({ siteData, member }) {
               className={`style-as-h3 ${styles.indexLink}`}
             >
               Back to Team
-              </NextAmbiLink>
+            </NextAmbiLink>
           </div>
           <aside className={`col-xs-12 col-md-3 ${styles.memberInfo}`}>
             <img src={member.image} alt="" />
             {typeof member.qualifications !== "undefined" &&
               member.qualifications !== "" && (
                 <h1 className="style-as-h3">
-                  {_createHonorificName(
-                    member.title,
-                    member.qualifications
-                  )}
+                  {_createHonorificName(member.title, member.qualifications)}
                 </h1>
               )}
             {typeof member.qualifications === "undefined" && (
@@ -128,15 +124,18 @@ export async function getStaticPaths() {
     teamWithSlugs.members[index].slug = createSlugFromTitle(member);
   });
 
-  const directoryPaths = teamWithSlugs.members.reduce((pathsAccumulator, page) => {
-    pathsAccumulator.push({
-      params: {
-        member: page.slug,
-      },
-    });
+  const directoryPaths = teamWithSlugs.members.reduce(
+    (pathsAccumulator, page) => {
+      pathsAccumulator.push({
+        params: {
+          member: page.slug,
+        },
+      });
 
-    return pathsAccumulator;
-  }, []);
+      return pathsAccumulator;
+    },
+    []
+  );
 
   return {
     fallback: false,

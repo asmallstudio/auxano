@@ -12,8 +12,6 @@ import FullWidthSectionActionLink from "components/ui/fullWidthSectionActionLink
 import SubscribeSection from "components/ui/subscribeSection/SubscribeSection";
 
 export default function ClientServices({ siteData, clientServices }) {
-
-
   return (
     <>
       <Head>

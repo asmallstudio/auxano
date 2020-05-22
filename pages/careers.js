@@ -2,7 +2,7 @@ import React from "react";
 import Head from "next/head";
 import {
   getFullPageTitle,
-  pickFirstAvailableString
+  pickFirstAvailableString,
 } from "@asmallstudio/utilities";
 import { NextMarkdownLink } from "@asmallstudio/components";
 import constants from "lib/constants.json";
@@ -13,8 +13,6 @@ import FullWidthSectionActionLink from "components/ui/fullWidthSectionActionLink
 import SubscribeSection from "components/ui/subscribeSection/SubscribeSection";
 
 export default function Careers({ siteData, careers }) {
-
-
   return (
     <>
       <Head>
@@ -30,9 +28,7 @@ export default function Careers({ siteData, careers }) {
         />
       </Head>
       <section className={`container--fluid ${styles.heroContainer} dg-hero`}>
-        <div
-          className={`${styles.heroImageContainer} ${styles.dingusDotHero}`}
-        >
+        <div className={`${styles.heroImageContainer} ${styles.dingusDotHero}`}>
           <img src={careers.hero.image} className={styles.heroImage} alt="" />
         </div>
         <div className="container">
