@@ -8,6 +8,9 @@
 [context.branch-deploy]
   command = "npm run export"
 
+[[plugins]]
+package = "netlify-plugin-cache-nextjs"
+
 # These redirects are from the pre-2019 Auxano Site.
 [[redirects]]
   from = "/who-we-are"
