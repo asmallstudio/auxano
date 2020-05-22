@@ -34,7 +34,7 @@ function NavLink({ children, ...props }) {
     if (props.activeClassName) {
       childProps.className = `${childProps.className || ""} ${
         props.activeClassName
-      }`.trim();
+        }`.trim();
     }
     childProps["aria-current"] = "page";
   }
@@ -87,7 +87,7 @@ export default function Footer({ siteData }) {
             <li>
               <NextAmbiLink
                 href="https://www.linkedin.com/company/auxano-advisors-llc/"
-                rel="me"
+                rel="noreferrer"
                 target="_blank"
               >
                 LinkedIn
@@ -96,7 +96,7 @@ export default function Footer({ siteData }) {
             <li>
               <NextAmbiLink
                 href="https://facebook.com/auxanoadvisors/"
-                rel="me"
+                rel="noreferrer"
                 target="_blank"
               >
                 Facebook

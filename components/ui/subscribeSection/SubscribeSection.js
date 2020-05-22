@@ -69,6 +69,7 @@ class SubscribeForm extends React.Component {
           <div className={styles.formBlock}>
             <DefaultInput
               name="bdaySurprise"
+              aria-label="ignore input"
               value={bdaySurprise}
               className="sr-only"
               autoComplete="off"
@@ -105,10 +106,10 @@ class SubscribeForm extends React.Component {
         </div>
       </form>
     ) : (
-      <p className={`${styles.successText}`}>
-        Thank you! We will follow up via email shortly.
-      </p>
-    );
+        <p className={`${styles.successText}`}>
+          Thank you! We will follow up via email shortly.
+        </p>
+      );
   }
 }
 

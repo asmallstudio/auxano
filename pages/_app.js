@@ -51,7 +51,6 @@ export default function App({ Component, pageProps }) {
           href="/assets/favicons/favicons.svg"
           color="#50b8b8"
         />
-        <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
       </Head>
       {doNotShowCover ? null : <CoverSheet siteData={siteData} />}
       <Header siteData={siteData} />
