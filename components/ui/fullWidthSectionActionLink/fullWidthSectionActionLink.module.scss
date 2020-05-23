@@ -1,28 +1,32 @@
 .container {
-  transition: background-color 1s ease;
-  background-color: var(--fountain-blue-10);
+	transition: background-color 1s ease;
+	background-color: var(--fountain-blue-10);
+
+	> a {
+		text-decoration: none;
+	}
 }
 
 .row {
-  text-align: center;
-  padding: 6rem 0;
+	text-align: center;
+	padding: 6rem 0;
 }
 
 .link {
-  font-size: 1.5em;
-  line-height: 2;
-  color: var(--fountain-blue);
+	font-size: 1.5em;
+	line-height: 2;
+	color: var(--fountain-blue);
 }
 
 .container:hover {
-  background-color: var(--fountain-blue-40);
+	background-color: var(--fountain-blue-40);
 
-  .link {
-    color: var(--dark-blue);
+	.link {
+		color: var(--dark-blue);
 
-    &::after {
-      transition-timing-function: ease-in;
-      transform: rotate(45deg) translate(0.15em, -0.15em);
-    }
-  }
+		&::after {
+			transition-timing-function: ease-in;
+			transform: rotate(45deg) translate(0.15em, -0.15em);
+		}
+	}
 }

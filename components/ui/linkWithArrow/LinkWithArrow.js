@@ -6,15 +6,15 @@ import styles from "./linkWithArrow.module.scss";
 export default function LinkWithArrow({
   to,
   children,
-  as = false,
   className = "",
+  ...props
 }) {
   if (to) {
     return (
-      <NextAmbiLink href={to} as={as} className={`${styles.link} ${className}`}>
+      <NextAmbiLink href={to} className={`${styles.link} ${className}`} {...props}>
         {children}
       </NextAmbiLink>
     );
   }
-  return <span className={`${styles.link} ${className}`}>{children}</span>;
+  return <span className={`${styles.link} ${className}`} {...props}>{children}</span>;
 }
