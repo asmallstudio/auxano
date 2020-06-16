@@ -1383,25 +1383,34 @@ collections:
                 widget: markdown
                 default: ""
                 required: true
-      - label: "Disclosures"
-        name: disclosures
-        file: data/pages/disclosures.json
-        path: /disclosures
-        fields:
-          - label: "Page Title"
-            name: pageTitle
-            widget: string
-          - label: "Page Description"
-            name: pageDescription
-            required: false
-            hint: "(For SEO purposes.) Describes the content of the page. This is visible in search results."
-            widget: text
-          - label: "Header"
-            name: title
-            widget: string
-          - label: "Content"
-            name: content
-            widget: markdown
+  - label: "Miscellaneous"
+    name: "misc"
+    folder: "data/misc"
+    create: true
+    preview: false
+    extension: json
+    format: json
+    slug: "{{slug}}"
+    preview_path: "/{{slug}}"
+    fields:
+      - label: "Page Title"
+        name: pageTitle
+        widget: string
+      - label: "Page Description"
+        name: pageDescription
+        required: false
+        hint: "(For SEO purposes.) Describes the content of the page. This is visible in search results."
+        widget: text
+      - label: "Header"
+        name: title
+        widget: string
+      - label: Path
+        name: path
+        hint: "Must be a URL beginning with a slash (/)."
+        widget: string
+      - label: "Content"
+        name: content
+        widget: markdown
   - label: News Articles
     label_singular: News Article
     name: news
