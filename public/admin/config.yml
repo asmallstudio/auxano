@@ -522,30 +522,6 @@ collections:
               - label: "Heading"
                 name: title
                 widget: string
-          - label: "Action Banner"
-            name: actionBanner
-            widget: object
-            fields:
-              - label: "Text"
-                name: text
-                required: false
-                widget: string
-              - label: "Link"
-                name: link
-                required: false
-                widget: string
-          - label: "Subscribe"
-            name: subscribe
-            widget: object
-            fields:
-              - label: "Heading"
-                name: heading
-                required: false
-                widget: string
-              - label: "Subheading"
-                name: text
-                required: false
-                widget: text
           - label: "Services"
             name: services
             widget: list
