@@ -1143,9 +1143,9 @@ collections:
             widget: list
             allow_add: false
             field:
-              - label: "List Item"
-                name: item
-                widget: string
+              label: "List Item"
+              name: item
+              widget: string
           - label: "Action Banner"
             name: actionBanner
             widget: object
@@ -1270,6 +1270,7 @@ collections:
                     widget: list
                     field:
                       widget: markdown
+                      name: item
                       buttons: ["bold", "italic"]
               - label: "Closing"
                 name: closing
