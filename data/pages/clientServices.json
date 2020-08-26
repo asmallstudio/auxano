@@ -1,61 +1,69 @@
 {
-	"pageTitle": "Client Services",
-	"pageDescription": "",
-	"hero": { "title": "Go further than you ever thought possible." },
-	"actionBanner": { "link": "", "text": "" },
-	"subscribe": { "heading": "", "text": "" },
-	"services": [
-		{
-			"heading": "Personal Finance",
-			"icon": "/uploads/personal-finance.svg",
-			"link": "/client-services/personal-finances/",
-			"text": "Each day you make decisions that affect your ability to reach your goals. We’ll help ensure those decisions are thoroughly informed."
-		},
-		{
-			"heading": "Investments",
-			"icon": "/uploads/investments.svg",
-			"link": "/client-services/investments/",
-			"text": "When your investment strategy fits your goals and dreams, it can transform your life and those of others."
-		},
-		{
-			"heading": "Estate Planning",
-			"icon": "/uploads/estate-planning.svg",
-			"link": "/client-services/estate-planning/",
-			"text": "Integrating your estate and financial plans ensures that those you care about will benefit from your legacy exactly as you wish."
-		},
-		{
-			"heading": "Risk Management",
-			"icon": "/uploads/risk-management.svg",
-			"link": "/client-services/risk-management/",
-			"text": "On any journey, the unexpected can happen. The road to achieving your goals and dreams is no exception."
-		},
-		{
-			"heading": "Tax Management",
-			"icon": "/uploads/tax-management.svg",
-			"link": "/client-services/tax-management/",
-			"text": "By always considering the tax implications of your financial decisions, we help to protect value over time."
-		},
-		{
-			"heading": "Corporate Benefits Planning",
-			"icon": "/uploads/corporate-benefits-planning.svg",
-			"link": "/client-services/corporate-benefits-planning/",
-			"text": "Your workplace may have benefits in addition to your base salary that may help enhance and secure your financial journey. The proper utilization of those benefits can make a world of difference for you and your financial security."
-		},
-		{
-			"heading": "Charitable Giving",
-			"icon": "/uploads/giving.svg",
-			"text": "Giving is often an important part of your legacy. As stewards, we resonate with this spirit of generosity. We’ll help you determine your charitable objectives, and align them with your financial planning to ensure that you are meeting your goals."
-		},
-		{
-			"heading": "Business Services",
-			"icon": "/uploads/business-services.svg",
-			"link": "/client-services/business-services/",
-			"text": "Business owners have unique needs and complexities related to their business.  Contact us to find out how we can help you and your business plan for the future."
-		},
-		{
-			"heading": "Special Projects",
-			"icon": "/uploads/star.svg",
-			"text": "Have a financial need that isn’t listed? Contact us to see how we can help."
-		}
-	]
+  "pageTitle": "Client Services",
+  "pageDescription": "",
+  "hero": {
+    "title": "Go further than you ever thought possible."
+  },
+  "actionBanner": {
+    "link": "",
+    "text": ""
+  },
+  "subscribe": {
+    "heading": "",
+    "text": ""
+  },
+  "services": [
+    {
+      "heading": "Personal Finance",
+      "icon": "/uploads/personal-finance.svg",
+      "link": "/client-services/personal-finances/",
+      "text": "Each day you make decisions that affect your ability to reach your goals. We’ll help ensure those decisions are thoroughly informed."
+    },
+    {
+      "heading": "Investments",
+      "icon": "/uploads/investments.svg",
+      "link": "/client-services/investments/",
+      "text": "When your investment strategy fits your goals and dreams, it can transform your life and those of others."
+    },
+    {
+      "heading": "Estate Planning",
+      "icon": "/uploads/estate-planning.svg",
+      "link": "/client-services/estate-planning/",
+      "text": "Integrating your estate and financial plans ensures that those you care about will benefit from your legacy exactly as you wish."
+    },
+    {
+      "heading": "Risk Management",
+      "icon": "/uploads/risk-management.svg",
+      "link": "/client-services/risk-management/",
+      "text": "On any journey, the unexpected can happen. The road to achieving your goals and dreams is no exception."
+    },
+    {
+      "heading": "Tax Management",
+      "icon": "/uploads/tax-management.svg",
+      "link": "/client-services/tax-management/",
+      "text": "By always considering the tax implications of your financial decisions, we help to protect value over time."
+    },
+    {
+      "heading": "Corporate Benefits Planning",
+      "icon": "/uploads/corporate-benefits-planning.svg",
+      "link": "/corporatebenefitsplanning/",
+      "text": "Your workplace may have benefits in addition to your base salary that may help enhance and secure your financial journey. The proper utilization of those benefits can make a world of difference for you and your financial security."
+    },
+    {
+      "heading": "Charitable Giving",
+      "icon": "/uploads/giving.svg",
+      "text": "Giving is often an important part of your legacy. As stewards, we resonate with this spirit of generosity. We’ll help you determine your charitable objectives, and align them with your financial planning to ensure that you are meeting your goals."
+    },
+    {
+      "heading": "Business Services",
+      "icon": "/uploads/business-services.svg",
+      "link": "/client-services/business-services/",
+      "text": "Business owners have unique needs and complexities related to their business.  Contact us to find out how we can help you and your business plan for the future."
+    },
+    {
+      "heading": "Special Projects",
+      "icon": "/uploads/star.svg",
+      "text": "Have a financial need that isn’t listed? Contact us to see how we can help."
+    }
+  ]
 }
