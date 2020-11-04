@@ -2,12 +2,15 @@
 
 .header {
   z-index: 100;
-  position: fixed;
-  top: 0;
+  position: sticky;
   width: 100%;
   height: var(--header-height);
   flex-direction: row;
   background-color: var(--white);
+}
+
+header + .header {
+  top: 2.5rem;
 }
 
 .activeLink {

@@ -1,0 +1,30 @@
+@import "../styles/utils.scss";
+
+.banner {
+  z-index: 101;
+  position: sticky;
+  top: 0;
+  height: 2.5rem;
+  width: 100%;
+  flex-direction: row;
+  background-color: var(--gigas);
+
+  p,
+  a {
+    font-size: 0.95rem;
+    color: var(--white);
+    margin: 0;
+  }
+}
+
+.bannerContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  height: 100%;
+  max-width: $max-width-em;
+  padding: 0 0.75rem;
+  margin: 0 auto;
+}

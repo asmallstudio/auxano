@@ -1,6 +1,7 @@
 import React from "react";
 import Head from "next/head";
 
+import Banner from "components/banner/Banner";
 import Header from "components/header/Header";
 import Footer from "components/footer/Footer";
 import CoverSheet from "components/ui/coverSheet/CoverSheet";
@@ -12,11 +13,19 @@ import "components/styles/main.scss";
 import "./_app.scss";
 
 export default function App({ Component, pageProps }) {
-  const [doNotShowCover, setDoNotShowCover] = React.useState(false);
+  let initialState = [];
+  if (typeof window !== "undefined") {
+    initialState =
+      window.localStorage.getItem("doNotShowCover") === "true" || false;
+  }
+  const [doNotShowCover, setDoNotShowCover] = React.useState(initialState);
 
   function checkCoverStateOnScroll() {
     if (window.scrollY > window.innerHeight) {
       setDoNotShowCover(true);
+      if (typeof window !== "undefined") {
+        window.localStorage.setItem("doNotShowCover", "true");
+      }
       if (doNotShowCover === true) {
         window.scrollTo(0, 0);
       }
@@ -53,6 +62,7 @@ export default function App({ Component, pageProps }) {
         />
       </Head>
       {doNotShowCover ? null : <CoverSheet siteData={siteData} />}
+      <Banner siteData={siteData} />
       <Header siteData={siteData} />
       <main
         className={`routesContainer doNotShowCoverSheet--${doNotShowCover}`}

@@ -6,54 +6,40 @@ import {
   createSlugFromTitleAndDate,
 } from "@asmallstudio/utilities";
 import { getDirectory, getSingleFileJson } from "@asmallstudio/utilities/node";
-import { NextAmbiLink } from "@asmallstudio/components";
+// import { NextAmbiLink } from "@asmallstudio/components";
 import constants from "lib/constants.json";
 
-import LinkWithArrow from "components/ui/linkWithArrow/LinkWithArrow";
+import JournalEntryItem from "components/ui/journalEntryItem/JournalEntryItem";
+// import LinkWithArrow from "components/ui/linkWithArrow/LinkWithArrow";
 import styles from "./index.module.scss";
-
-// function PaginationLink({ ...rest }) {
-//   return <NextAmbiLink {...rest} />;
-// }
 
 export default function Index({ siteData, posts }) {
   return (
     <>
       <Head>
-        <title>{getFullPageTitle("News", constants.siteMeta.title)}</title>
+        <title>{getFullPageTitle("Articles", constants.siteMeta.title)}</title>
         <meta name="description" content={siteData.siteDescription} />
       </Head>
-      <div className="container">
+      <div className={`container ${styles.articlePage}`}>
         <div className="row">
-          <div className={`col-xs-12 ${styles.articleList}`}>
-            <h1 className="style-as-h3">News & Resources</h1>
-            <ul>
-              {posts.map((post) => (
-                <li key={post.slug} className={styles.indexArticle}>
-                  <div className={styles.titleAndLinkContainer}>
-                    <NextAmbiLink
-                      href="/news/[post]"
-                      as={`/news/${post.slug}`}
-                      className={styles.postTitle}
-                    >
-                      {post.title}
-                    </NextAmbiLink>
-                    <LinkWithArrow
-                      to="/news/[post]"
-                      as={`/news/${post.slug}`}
-                      className={styles.arrowLink}
-                    >
-                      Read more
-                    </LinkWithArrow>
-                  </div>
-                  <div className={styles.metaInfoContainer}>
-                    <p>{formatRelativeDateString(post.date)}</p>
-                  </div>
-                </li>
-              ))}
-            </ul>
+          <div className="col-xs-12">
+            <h1 className="style-as-h3">Articles</h1>
+          </div>
+        </div>
+        <ul className={`row ${styles.articleList}`}>
+          {posts.map((post) => (
+            <JournalEntryItem
+              key={post.date}
+              name={post.title}
+              date={formatRelativeDateString(post.date)}
+              link={`/news/${post.slug}/`}
+              imgSrc={post.thumbnail}
+              className={styles.indexArticle}
+            />
+          ))}
+        </ul>
 
-            {/* totalPages > 1 && (
+        {/* totalPages > 1 && (
               <nav className={styles.pagination}>
                 <h3>Pages</h3>
                 <ul className={styles.pageList}>
@@ -75,8 +61,6 @@ export default function Index({ siteData, posts }) {
                 </ul>
               </nav>
             ) */}
-          </div>
-        </div>
       </div>
     </>
   );
