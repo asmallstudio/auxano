@@ -70,6 +70,24 @@ collections:
             fields:
               - { label: Title, name: title, widget: string }
               - { label: Link, name: link, widget: string }
+          - label: Banner
+            name: banner
+            widget: object
+            fields:
+              - {
+                  label: Text,
+                  name: text,
+                  required: false,
+                  default: "",
+                  widget: string,
+                }
+              - {
+                  label: Link,
+                  name: link,
+                  required: false,
+                  default: "",
+                  widget: string,
+                }
           - label: "Cover Sheet"
             name: coverSheet
             widget: object
@@ -1388,8 +1406,8 @@ collections:
       - label: "Content"
         name: content
         widget: markdown
-  - label: News Articles
-    label_singular: News Article
+  - label: Articles
+    label_singular: Article
     name: news
     folder: data/news
     create: true
@@ -1407,6 +1425,9 @@ collections:
       - label: "Date"
         name: date
         widget: datetime
+      - label: "Thumbnail"
+        name: thumbnail
+        widget: image
       - label: "Body"
         name: body
         widget: markdown

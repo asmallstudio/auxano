@@ -9,12 +9,9 @@ import { getDirectory, getSingleFileJson } from "@asmallstudio/utilities/node";
 import { NextAmbiLink } from "@asmallstudio/components";
 import constants from "lib/constants.json";
 
+// import JournalEntryItem from "components/ui/journalEntryItem/JournalEntryItem";
 import LinkWithArrow from "components/ui/linkWithArrow/LinkWithArrow";
 import styles from "./index.module.scss";
-
-// function PaginationLink({ ...rest }) {
-//   return <NextAmbiLink {...rest} />;
-// }
 
 export default function Index({ siteData, posts }) {
   return (
@@ -23,7 +20,7 @@ export default function Index({ siteData, posts }) {
         <title>{getFullPageTitle("News", constants.siteMeta.title)}</title>
         <meta name="description" content={siteData.siteDescription} />
       </Head>
-      <div className="container">
+      <div className={`container ${styles.articlePage}`}>
         <div className="row">
           <div className={`col-xs-12 ${styles.articleList}`}>
             <h1 className="style-as-h3">News & Resources</h1>
@@ -54,6 +51,51 @@ export default function Index({ siteData, posts }) {
             </ul>
 
             {/* totalPages > 1 && (
+            <nav className={styles.pagination}>
+              <h3>Pages</h3>
+              <ul className={styles.pageList}>
+                {Array.from(new Array(totalPages), (d, i) => i).map(
+                  page => {
+                    const nextPage = page + 1;
+                    return (
+                      <li key={nextPage}>
+                        <PaginationLink
+                          to={`/news/page/${nextPage}`}
+                          isCurrent={nextPage === currentPage}
+                        >
+                          {nextPage}
+                        </PaginationLink>
+                      </li>
+                    );
+                  }
+                )}
+              </ul>
+            </nav>
+          ) */}
+          </div>
+        </div>
+      </div>
+      {/* 
+      <div className={`container ${styles.articlePage}`}>
+        <div className="row">
+          <div className="col-xs-12">
+            <h1 className="style-as-h3">Articles</h1>
+          </div>
+        </div>
+        <ul className={`row ${styles.articleList}`}>
+          {posts.map((post) => (
+            <JournalEntryItem
+              key={post.date}
+              name={post.title}
+              date={formatRelativeDateString(post.date)}
+              link={`/news/${post.slug}/`}
+              imgSrc={post.thumbnail}
+              className={styles.indexArticle}
+            />
+          ))}
+        </ul>
+
+        totalPages > 1 && (
               <nav className={styles.pagination}>
                 <h3>Pages</h3>
                 <ul className={styles.pageList}>
@@ -74,10 +116,9 @@ export default function Index({ siteData, posts }) {
                   )}
                 </ul>
               </nav>
-            ) */}
-          </div>
-        </div>
+            )
       </div>
+      */}
     </>
   );
 }

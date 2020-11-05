@@ -1,76 +1,93 @@
+@import "../../components/styles/utils.scss";
+
+.articlePage {
+  // (articles update) margin: var(--space-l5) auto 0;
+
+  h1 {
+    margin-bottom: 3rem;
+  }
+
+  ul {
+    padding: 0;
+    list-style-type: none;
+  }
+}
+
 .articleList {
-	margin: var(--space-l5) 0;
-
-	h1 {
-		margin-bottom: 3rem;
-	}
-
-	ul {
-		padding: 0;
-		list-style-type: none;
-	}
+  margin: var(--space-l5) 0; // remove for articles
+  // (articles update) margin-bottom: var(--space-l4);
 }
 
+// Delete for articles update
 .indexArticle {
-	padding: var(--space-l3) 0;
-	border-bottom: 1px solid var(--grey-40);
+  padding: var(--space-l3) 0;
+  border-bottom: 1px solid var(--grey-40);
 
-	&:first-child {
-		border-top: 1px solid var(--grey-40);
-	}
+  &:first-child {
+    border-top: 1px solid var(--grey-40);
+  }
 }
+
+// Uncomment for articles update
+// .indexArticle + .indexArticle {
+//   margin-top: var(--space-l3);
+//
+//   @include respond-above(md) {
+//     margin-top: 0;
+//   }
+// }
 
 .titleAndLinkContainer {
-	display: flex;
-	justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
 .metaInfoContainer {
-	padding-top: var(--space-l1);
+  padding-top: var(--space-l1);
 
-	p {
-		font-size: 0.94em;
-	}
+  p {
+    font-size: 0.94em;
+  }
 }
 
 .arrowLink {
-	position: relative;
-	left: -0.4em;
-	color: var(--fountain-blue);
+  position: relative;
+  left: -0.4em;
+  color: var(--fountain-blue);
 
-	&::after {
-		left: 0.2em;
-		top: 0.4em;
-	}
+  &::after {
+    left: 0.2em;
+    top: 0.4em;
+  }
 }
 
 .postTitle {
-	font-weight: 700;
-	text-decoration: none;
-	color: var(--grey);
+  font-weight: 700;
+  text-decoration: none;
+  color: var(--grey);
 }
 
 .pagination {
-	margin-top: var(--space-l3);
+  margin-top: var(--space-l3);
 }
 
 .pageList {
-	list-style: none;
-	padding: 0;
-	text-align: center;
+  list-style: none;
+  padding: 0;
+  text-align: center;
 
-	li {
-		display: inline;
-		padding: 0 var(--space-l1);
+  li {
+    display: inline;
+    padding: 0 var(--space-l1);
 
-		a {
-			color: var(--grey);
-			text-decoration: none;
+    a {
+      color: var(--grey);
+      text-decoration: none;
 
-			&:global(.active) {
-				font-weight: 700;
-				color: var(--gigas);
-			}
-		}
-	}
+      &:global(.active) {
+        font-weight: 700;
+        color: var(--gigas);
+      }
+    }
+  }
 }
