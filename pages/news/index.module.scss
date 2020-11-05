@@ -1,7 +1,7 @@
 @import "../../components/styles/utils.scss";
 
 .articlePage {
-  margin: var(--space-l5) auto 0;
+  // (articles update) margin: var(--space-l5) auto 0;
 
   h1 {
     margin-bottom: 3rem;
@@ -14,16 +14,28 @@
 }
 
 .articleList {
-  margin-bottom: var(--space-l4);
+  margin: var(--space-l5) 0; // remove for articles
+  // (articles update) margin-bottom: var(--space-l4);
 }
 
-.indexArticle + .indexArticle {
-  margin-top: var(--space-l3);
+// Delete for articles update
+.indexArticle {
+  padding: var(--space-l3) 0;
+  border-bottom: 1px solid var(--grey-40);
 
-  @include respond-above(md) {
-    margin-top: 0;
+  &:first-child {
+    border-top: 1px solid var(--grey-40);
   }
 }
+
+// Uncomment for articles update
+// .indexArticle + .indexArticle {
+//   margin-top: var(--space-l3);
+//
+//   @include respond-above(md) {
+//     margin-top: 0;
+//   }
+// }
 
 .titleAndLinkContainer {
   display: flex;

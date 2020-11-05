@@ -27,7 +27,7 @@ export default function Post({ siteData, post }) {
               href="/news"
               className={`style-as-h3 ${styles.articleListLink}`}
             >
-              Articles
+              News & Resources
             </NextAmbiLink>
           </div>
           <article
