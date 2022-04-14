@@ -118,20 +118,6 @@
       "extension": ""
     },
     {
-      "bio": "Anam is our newest member of the Client Advisory Team at Auxano Advisors. She works closely with the firm's valued clients, facilitating financial transactions and follow-through on mission-critical tasks, ensuring that clients are delighted with their experience. \n\nPrior to joining Auxano, Anam previously worked as an Executive Administrative Assistant at Churchome. She worked alongside teams to assist in planning, organizing and executing the heart and vision of the organization. She is passionate about customer service and building relationships and looks forward to meeting clients and helping them on their financial journey at Auxano Advisors.\n\nAnam enjoys playing volleyball, reading historical fiction novels, makeup artistry and spending time with her family and friends.",
-      "email": "anam@auxanoadvisors.com",
-      "extension": "",
-      "image": "/uploads/anam-masih-11192021-13854-squared.jpg",
-      "isStrategicPartner": false,
-      "positions": [
-        "Associate"
-      ],
-      "qualifications": [
-        ""
-      ],
-      "title": "Anam Masih"
-    },
-    {
       "bio": "Dan is a member of the Client Advisory team at Auxano and assists in\ncreating a unique, individual strategy for the firm’s clients as they\nconfidently achieve their financial goals.\n\n\nDan’s experience working with high net worth clients over the last four\nyears and strong customer service background blend with his passion for\nclient satisfaction. He works diligently to provide the most enjoyable and\npersonal experience possible in every step of the financial and investment\nplanning process.\n\n\nDan earned a Bachelor of Science degree in Business Administration at\nThomas Edison State University.\n\n\nDan enjoys music, hiking and outdoor adventures, and any group\nactivities.",
       "email": "daniel@auxanoadvisors.com",
       "extension": "",
@@ -158,6 +144,35 @@
       "title": "Lesley Johnson",
       "image": "/uploads/lesley.jpg",
       "email": "lesley@auxanoadvisors.com",
+      "extension": ""
+    },
+    {
+      "bio": "Anam is our newest member of the Client Advisory Team at Auxano Advisors. She works closely with the firm's valued clients, facilitating financial transactions and follow-through on mission-critical tasks, ensuring that clients are delighted with their experience. \n\nPrior to joining Auxano, Anam previously worked as an Executive Administrative Assistant at Churchome. She worked alongside teams to assist in planning, organizing and executing the heart and vision of the organization. She is passionate about customer service and building relationships and looks forward to meeting clients and helping them on their financial journey at Auxano Advisors.\n\nAnam enjoys playing volleyball, reading historical fiction novels, makeup artistry and spending time with her family and friends.",
+      "email": "anam@auxanoadvisors.com",
+      "extension": "",
+      "image": "/uploads/anam-masih-11192021-13854-squared.jpg",
+      "isStrategicPartner": false,
+      "positions": [
+        "Associate"
+      ],
+      "qualifications": [
+        ""
+      ],
+      "title": "Anam Masih"
+    },
+    {
+      "qualifications": [
+        ""
+      ],
+      "bio": "Grayson is a member of the Client Advisory Team at Auxano and helps support the operations at our Firm. Grayson works alongside our Client Advisors to help find practical solutions for our client's financial life planning. He enjoys designing financial plans for clients that streamline their lives and transform their future.\n\nPrior to joining Auxano, Grayson worked as a Technical Consultant to Microsoft, Tableau and Google.\n\nIn his free time, Grayson enjoys coding, woodworking, welding and hiking.",
+      "positions": [
+        ""
+      ],
+      "isStrategicPartner": false,
+      "partnerCompany": "",
+      "title": "Grayson Unger",
+      "image": "/uploads/grayson-unger2-oct2021-jennyjimenez-squared.jpg",
+      "email": "",
       "extension": ""
     },
     {
@@ -188,21 +203,6 @@
         ""
       ],
       "title": "Jon Pinkston"
-    },
-    {
-      "qualifications": [
-        ""
-      ],
-      "bio": "Grayson is a member of the Client Advisory Team at Auxano and helps support the operations at our Firm. Grayson works alongside our Client Advisors to help find practical solutions for our client's financial life planning. He enjoys designing financial plans for clients that streamline their lives and transform their future.\n\nPrior to joining Auxano, Grayson worked as a Technical Consultant to Microsoft, Tableau and Google.\n\nIn his free time, Grayson enjoys coding, woodworking, welding and hiking.",
-      "positions": [
-        ""
-      ],
-      "isStrategicPartner": false,
-      "partnerCompany": "",
-      "title": "Grayson Unger",
-      "image": "/uploads/grayson-unger2-oct2021-jennyjimenez-squared.jpg",
-      "email": "",
-      "extension": ""
     }
   ]
 }
