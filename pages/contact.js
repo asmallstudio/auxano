@@ -1,11 +1,11 @@
 import React from "react";
 import Head from "next/head";
+import Link from "next/link";
 import {
   getFullPageTitle,
   pickFirstAvailableString,
   phoneNumberUnformat,
 } from "@asmallstudio/utilities";
-import { NextAmbiLink } from "@asmallstudio/components";
 import constants from "lib/constants.json";
 
 import styles from "./contact.module.scss";
@@ -292,13 +292,13 @@ export default function Contact({ siteData, contact }) {
                   style={{ border: 0 }}
                 />
                 <p className={styles.mapLinks}>
-                  <NextAmbiLink href="https://goo.gl/maps/y3WodKyfL7w">
+                  <Link href="https://goo.gl/maps/y3WodKyfL7w">
                     Open in Google Maps
-                  </NextAmbiLink>
+                  </Link>
                   <br />
-                  <NextAmbiLink href="https://maps.apple.com/?address=10900%20NE%204th%20St,%20Unit%201950,%20Bellevue,%20WA%20%2098004,%20United%20States&auid=4419463368018388351&ll=47.614058,-122.194218&lsp=9902&q=Auxano%20Advisors&t=m">
+                  <Link href="https://maps.apple.com/?address=10900%20NE%204th%20St,%20Unit%201950,%20Bellevue,%20WA%20%2098004,%20United%20States&auid=4419463368018388351&ll=47.614058,-122.194218&lsp=9902&q=Auxano%20Advisors&t=m">
                     Open in Apple Maps
-                  </NextAmbiLink>
+                  </Link>
                 </p>
                 <div className={styles.dingusDot} />
               </div>

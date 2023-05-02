@@ -1,7 +1,7 @@
 import React from "react";
 import Head from "next/head";
+import Link from "next/link";
 import { getFullPageTitle, createSlugFromTitle } from "@asmallstudio/utilities";
-import { NextAmbiLink } from "@asmallstudio/components";
 import constants from "lib/constants.json";
 
 import Markdown from "react-markdown";
@@ -36,12 +36,12 @@ export default function Member({ siteData, member }) {
       <section className={`container ${styles.memberContainer}`}>
         <div className="row">
           <div className={`col-xs-12 ${styles.indexLinkContainer}`}>
-            <NextAmbiLink
+            <Link
               href="/team"
               className={`style-as-h3 ${styles.indexLink}`}
             >
               Back to Team
-            </NextAmbiLink>
+            </Link>
           </div>
           <aside className={`col-xs-12 col-md-3 ${styles.memberInfo}`}>
             <img src={member.image} alt="" />

@@ -13,7 +13,7 @@ export default function Banner({ siteData }) {
 			<div className={styles.bannerContainer}>
 				<p>
 					{typeof siteData.banner.link !== "undefined" && siteData.banner.link !== "" && (
-						<Link href={siteData.banner.link}><a>{siteData.banner.text}</a></Link>
+						<Link href={siteData.banner.link}>{siteData.banner.text}</Link>
 					)}
 					{siteData.banner.link === "" && (
 						siteData.banner.text

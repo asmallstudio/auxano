@@ -1,15 +1,19 @@
 import React from "react";
 import Head from "next/head";
+import Link from "next/link";
 import {
   getFullPageTitle,
   createSlugFromTitleAndDate,
 } from "@asmallstudio/utilities";
 import { getDirectory, getSingleFileJson } from "@asmallstudio/utilities/node";
-import { NextAmbiLink, NextMarkdownLink } from "@asmallstudio/components";
 import constants from "lib/constants.json";
 
 import Markdown from "react-markdown";
 import styles from "./post.module.scss";
+
+function NextMarkdownLink(props) {
+  return <Link href={props.href}>{props.children}</Link>;
+}
 
 export default function Post({ siteData, post }) {
   return (
@@ -23,18 +27,18 @@ export default function Post({ siteData, post }) {
           <div
             className={`col-xs-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2 ${styles.articleListLinkContainer}`}
           >
-            <NextAmbiLink
+            <Link
               href="/news"
               className={`style-as-h3 ${styles.articleListLink}`}
             >
               News & Resources
-            </NextAmbiLink>
+            </Link>
           </div>
           <article
             className={`col-xs-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2 ${styles.newsArticle}`}
           >
             <h1>{post.title}</h1>
-            <Markdown renderers={{ link: NextMarkdownLink }}>
+            <Markdown components={{ a: NextMarkdownLink }}>
               {post.body}
             </Markdown>
           </article>

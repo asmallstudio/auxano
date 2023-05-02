@@ -2,12 +2,8 @@ module.exports = {
   plugins: {
     "postcss-normalize": {},
     "postcss-import": {},
-    "postcss-custom-media": {
-      importFrom: "components/styles/theme.css",
-    }, // This depends on variables imported by postcss-import
-    "postcss-custom-properties": {
-      importFrom: "components/styles/theme.css",
-    }, // This depends on variables imported by postcss-import
+    "postcss-custom-media": {}, // This depends on variables imported by postcss-import
+    "postcss-custom-properties": {}, // This depends on variables imported by postcss-import
     "postcss-color-rgb": {},
     autoprefixer: {
       flexbox: "no-2009",

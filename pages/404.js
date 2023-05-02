@@ -22,7 +22,7 @@ export default function PageNotFound({ siteData }) {
             <p className={styles.explainer}>
               Try going{" "}
               <Link href="/">
-                <a>home</a>
+                home
               </Link>
               .
             </p>

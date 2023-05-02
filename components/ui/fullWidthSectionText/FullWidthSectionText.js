@@ -16,7 +16,8 @@ export default function FullWidthSectionText({
       <div className={`container ${styles.textContainer}`}>
         <div className="row">
           <div className="col-xs-12">
-            <Markdown source={text} />
+            {/* eslint-disable-next-line react/no-children-prop */}
+            <Markdown children={text} />
           </div>
         </div>
       </div>

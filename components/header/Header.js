@@ -52,7 +52,7 @@ function NavListItems({ siteData, ...props }) {
       {siteData.headerNav.map((navItem, i) => (
         <li key={i} className="style-as-h3" {...props}>
           <NavLink href={navItem.link} activeClassName={styles.activeLink}>
-            <a>{navItem.title}</a>
+            <>{navItem.title}</>
           </NavLink>
         </li>
       ))}
@@ -134,10 +134,8 @@ function Header({ siteData }) {
     <header className={styles.header}>
       <div className={styles.headerContainer}>
         <div className={styles.logoContainer}>
-          <NavLink href="/">
-            <a onClick={_menuClose}>
+          <NavLink href="/" onClick={_menuClose}>
               <AuxanoLogo alt="Auxano Advisors" height="48" width="125" />
-            </a>
           </NavLink>
         </div>
         <nav id="navigation" className={styles.nav}>

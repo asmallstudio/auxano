@@ -1,7 +1,7 @@
 import React from "react";
 import Head from "next/head";
+import Link from "next/link";
 import { getFullPageTitle, createSlugFromTitle } from "@asmallstudio/utilities";
-import { NextAmbiLink } from "@asmallstudio/components";
 import constants from "lib/constants.json";
 
 import LinkWithArrow from "components/ui/linkWithArrow/LinkWithArrow";
@@ -35,19 +35,19 @@ export default function Index({ siteData, team }) {
             <ul>
               {fullMembers.map((member, i) => (
                 <li key={i} className={styles.teamMember}>
-                  <NextAmbiLink
+                  <Link
                     as={`/team/${member.slug}`}
                     href="/team/[member]"
                   >
                     <img src={member.image} alt="" />
-                  </NextAmbiLink>
-                  <NextAmbiLink
+                  </Link>
+                  <Link
                     as={`/team/${member.slug}`}
                     href="/team/[member]"
                     className={`style-as-h3 ${styles.memberTitle}`}
                   >
                     {member.title}
-                  </NextAmbiLink>
+                  </Link>
                   <div className="style-as-p">
                     {_formatPositions(member.positions)}
                   </div>
@@ -65,19 +65,19 @@ export default function Index({ siteData, team }) {
             <ul>
               {strategicPartners.map((member, i) => (
                 <li key={i} className={styles.teamMember}>
-                  <NextAmbiLink
+                  <Link
                     as={`/team/${member.slug}`}
                     href="/team/[member]"
                   >
                     <img src={member.image} alt="" />
-                  </NextAmbiLink>
-                  <NextAmbiLink
+                  </Link>
+                  <Link
                     as={`/team/${member.slug}`}
                     href="/team/[member]"
                     className={`style-as-h3 ${styles.memberTitle}`}
                   >
                     {member.title}
-                  </NextAmbiLink>
+                  </Link>
                   <div className="style-as-p">
                     {_formatPositions(member.positions)}
                   </div>

@@ -1,10 +1,10 @@
 import React from "react";
 import Head from "next/head";
+import Link from "next/link";
 import {
   getFullPageTitle,
   pickFirstAvailableString,
 } from "@asmallstudio/utilities";
-import { NextAmbiLink } from "@asmallstudio/components";
 import constants from "lib/constants.json";
 
 import styles from "./tax-management.module.scss";
@@ -31,12 +31,12 @@ export default function TaxManagement({ siteData, taxManagement }) {
       >
         <div className="row">
           <div className="col-xs-12">
-            <NextAmbiLink
+            <Link
               href="/client-services"
               className={`style-as-h3 ${styles.indexLink}`}
             >
               Back to Client Services
-            </NextAmbiLink>
+            </Link>
           </div>
         </div>
         <div className={`${styles.dingusDot1} hidden-md-up`} />

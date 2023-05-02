@@ -21,23 +21,23 @@ export default function App({ Component, pageProps }) {
   const [doNotShowCover, setDoNotShowCover] = React.useState(initialState);
   let resetScroll = !doNotShowCover;
 
-  function checkCoverStateOnScroll() {
-    if (typeof window !== "undefined") {
-      // Check if scroll length is at least the height of the viewport, same as the cover sheet.
-      if (window.scrollY > window.innerHeight) {
-        // If so, the cover sheet has been scrolled by, reset scroll to top and set cover to not display.
-        setDoNotShowCover(true);
-        window.localStorage.setItem("doNotShowCover", "true");
-
-        if (resetScroll) {
-          window.scrollTo(0, 0);
-          resetScroll = false;
+  React.useEffect(() => {
+    function checkCoverStateOnScroll() {
+      if (typeof window !== "undefined") {
+        // Check if scroll length is at least the height of the viewport, same as the cover sheet.
+        if (window.scrollY > window.innerHeight) {
+          // If so, the cover sheet has been scrolled by, reset scroll to top and set cover to not display.
+          setDoNotShowCover(true);
+          window.localStorage.setItem("doNotShowCover", "true");
+    
+          if (resetScroll) {
+            window.scrollTo(0, 0);
+            resetScroll = false;
+          }
         }
       }
     }
-  }
-
-  React.useEffect(() => {
+    
     window.addEventListener("scroll", checkCoverStateOnScroll, false);
 
     return () => {

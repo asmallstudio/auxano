@@ -5,7 +5,6 @@ import Markdown from "react-markdown";
 import BackToTopIcon from "./BackToTopIcon";
 import constants from "../../lib/constants.json";
 
-import { NextAmbiLink } from "@asmallstudio/components";
 import { phoneNumberUnformat } from "@asmallstudio/utilities";
 
 import styles from "./footer.module.scss";
@@ -51,7 +50,7 @@ function NavLink({ children, ...props }) {
 }
 
 function NextMarkdownLink(props) {
-  return <NextAmbiLink href={props.href}>{props.children}</NextAmbiLink>;
+  return <Link href={props.href}>{props.children}</Link>;
 }
 
 export default function Footer({ siteData }) {
@@ -74,7 +73,7 @@ export default function Footer({ siteData }) {
                     href={navItem.link}
                     activeClassName={styles.activeLink}
                   >
-                    <a>{navItem.title}</a>
+                    <>{navItem.title}</>
                   </NavLink>
                 </li>
               ))}
@@ -85,22 +84,22 @@ export default function Footer({ siteData }) {
           <h3 className="sr-only">Social Links</h3>
           <ul className={`N2 ${styles.linkList}`}>
             <li>
-              <NextAmbiLink
+              <Link
                 href="https://www.linkedin.com/company/auxano-advisors-llc/"
                 rel="noreferrer"
                 target="_blank"
               >
                 LinkedIn
-              </NextAmbiLink>
+              </Link>
             </li>
             <li>
-              <NextAmbiLink
+              <Link
                 href="https://facebook.com/auxanoadvisors/"
                 rel="noreferrer"
                 target="_blank"
               >
                 Facebook
-              </NextAmbiLink>
+              </Link>
             </li>
           </ul>
         </div>
@@ -175,9 +174,9 @@ export default function Footer({ siteData }) {
           className={`col-xs-12 col-md-3 ${styles.infoContainer} ${styles.backToTopContainer}`}
         >
           <span className="N2">
-            <NextAmbiLink href="#">
+            <Link href="#">
               Back to Top <BackToTopIcon className={styles.backToTopIcon} />
-            </NextAmbiLink>
+            </Link>
           </span>
         </div>
       </div>
@@ -188,8 +187,8 @@ export default function Footer({ siteData }) {
         >
           <div className={`N2 ${styles.complianceInfo}`}>
             <Markdown
-              source={siteData.complianceInfo}
-              renderers={{ link: NextMarkdownLink }}
+              children={siteData.complianceInfo} // eslint-disable-line react/no-children-prop
+              components={{ a: NextMarkdownLink }}
             />
           </div>
         </div>

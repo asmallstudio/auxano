@@ -37,9 +37,9 @@ export default function Careers({ siteData, careers }) {
               <h1>{careers.hero.title}</h1>
               <p>
                 <Markdown
-                  allowedTypes={["text", "paragraph", "link"]}
-                  renderers={{ link: NextMarkdownLink }}
-                  source={careers.hero.subtitle}
+                  allowedElements={["text", "p", "a"]}
+                  components={{ a: NextMarkdownLink }}
+                  children={careers.hero.subtitle} // eslint-disable-line react/no-children-prop
                 />
               </p>
             </div>

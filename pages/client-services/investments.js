@@ -1,6 +1,6 @@
 import React from "react";
 import Head from "next/head";
-import { NextAmbiLink } from "@asmallstudio/components";
+import Link from "next/link";
 import {
   getFullPageTitle,
   pickFirstAvailableString,
@@ -32,12 +32,12 @@ export default function Investments({ siteData, investments }) {
       >
         <div className="row">
           <div className="col-xs-12">
-            <NextAmbiLink
+            <Link
               href="/client-services"
               className={`style-as-h3 ${styles.indexLink}`}
             >
               Back to Client Services
-            </NextAmbiLink>
+            </Link>
           </div>
         </div>
         <div className={`${styles.dingusDot1} hidden-md-up`} />

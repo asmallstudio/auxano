@@ -1,5 +1,5 @@
 import React from "react";
-import { NextAmbiLink } from "@asmallstudio/components";
+import Link from "next/link";
 
 import styles from "./linkWithArrow.module.scss";
 
@@ -11,9 +11,9 @@ export default function LinkWithArrow({
 }) {
   if (to) {
     return (
-      <NextAmbiLink href={to} className={`${styles.link} ${className}`} {...props}>
+      <Link href={to} className={`${styles.link} ${className}`} {...props}>
         {children}
-      </NextAmbiLink>
+      </Link>
     );
   }
   return <span className={`${styles.link} ${className}`} {...props}>{children}</span>;

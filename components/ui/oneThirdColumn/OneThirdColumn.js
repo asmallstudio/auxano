@@ -1,5 +1,5 @@
 import React from "react";
-import { NextAmbiLink } from "@asmallstudio/components";
+import Link from "next/link";
 
 import LinkWithArrow from "../linkWithArrow/LinkWithArrow";
 import styles from "./oneThirdColumn.module.scss";
@@ -11,9 +11,9 @@ export default function OneThirdColumn({ data, className = "" }) {
         <img className={styles.colIcon} src={data.icon} alt="" />
       )}
       {typeof data.icon !== "undefined" && typeof data.link !== "undefined" && (
-        <NextAmbiLink href={data.link}>
+        <Link href={data.link}>
           <img className={styles.colIcon} src={data.icon} alt="" />
-        </NextAmbiLink>
+        </Link>
       )}
       <h2>{data.heading}</h2>
       <p>{data.text}</p>

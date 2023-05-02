@@ -14,7 +14,7 @@ export default function Home({ siteData, home }) {
     <>
       <Head>
         <meta name="description" content={siteData.siteDescription} />
-        <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+        <script defer src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
       </Head>
       <div className={`container--fluid ${styles.heroContainer}`}>
         <div className={`${styles.heroImageContainer} ${styles.dingusDotHero}`}>

@@ -6,7 +6,7 @@ import {
   createSlugFromTitleAndDate,
 } from "@asmallstudio/utilities";
 import { getDirectory, getSingleFileJson } from "@asmallstudio/utilities/node";
-import { NextAmbiLink } from "@asmallstudio/components";
+import Link from "next/link";
 import constants from "lib/constants.json";
 
 // import JournalEntryItem from "components/ui/journalEntryItem/JournalEntryItem";
@@ -28,13 +28,13 @@ export default function Index({ siteData, posts }) {
               {posts.map((post) => (
                 <li key={post.slug} className={styles.indexArticle}>
                   <div className={styles.titleAndLinkContainer}>
-                    <NextAmbiLink
+                    <Link
                       href="/news/[post]"
                       as={`/news/${post.slug}`}
                       className={styles.postTitle}
                     >
                       {post.title}
-                    </NextAmbiLink>
+                    </Link>
                     <LinkWithArrow
                       to="/news/[post]"
                       as={`/news/${post.slug}`}

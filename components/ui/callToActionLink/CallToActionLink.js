@@ -1,5 +1,5 @@
 import React from "react";
-import { NextAmbiLink } from "@asmallstudio/components";
+import Link from "next/link";
 
 import styles from "./callToActionLink.module.scss";
 
@@ -7,13 +7,13 @@ import styles from "./callToActionLink.module.scss";
  * Extends the Link component
  */
 const CallToActionLink = ({ to, children, className = "", ...restProps }) => (
-  <NextAmbiLink
+  <Link
     href={to}
     className={`${styles.link} ${className}`}
     {...restProps}
   >
     {children}
-  </NextAmbiLink>
+  </Link>
 );
 
 export default CallToActionLink;

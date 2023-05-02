@@ -1,5 +1,5 @@
 import React from "react";
-import { NextAmbiLink } from "@asmallstudio/components";
+import Link from "next/link";
 
 import styles from "./fullWidthSectionActionLink.module.scss";
 import LinkWithArrow from "../linkWithArrow/LinkWithArrow";
@@ -14,13 +14,13 @@ const FullWidthSectionActionLink = ({
     className={`container--fluid ${styles.container} ${className}`}
     {...restProps}
   >
-    <NextAmbiLink href={to}>
+    <Link href={to}>
       <div className={`row ${styles.row}`}>
         <div className="col-xs-12">
           <LinkWithArrow className={styles.link}>{linkText}</LinkWithArrow>
         </div>
       </div>
-    </NextAmbiLink>
+    </Link>
   </section>
 );
 

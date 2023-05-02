@@ -46,7 +46,7 @@ export default function LegacyPlanning({ siteData, legacyPlanning }) {
         <div className="row">
           <div className={`col-xs-12 ${styles.textPlain}`}>
             <Markdown
-              allowedTypes={["text", "paragraph", "emphasis", "strong"]}
+              allowedElements={["text", "p", "em", "strong"]}
               className={styles.pageBody}
             >
               {legacyPlanning.body.description2}
@@ -66,7 +66,7 @@ export default function LegacyPlanning({ siteData, legacyPlanning }) {
               {legacyPlanning.body.options.list.map((item, i) => (
                 <li key={i} className="style-as-p">
                   <Markdown
-                    allowedTypes={["text", "emphasis", "strong"]}
+                    allowedElements={["text", "em", "strong"]}
                     unwrapDisallowed={true}
                   >
                     {item}
