@@ -2,8 +2,8 @@ backend:
   name: git-gateway
   branch: master
 media_folder: public/uploads
-publish_mode: editorial_workflow
 public_folder: /uploads
+publish_mode: editorial_workflow
 site_url: https://auxanoadvisors.com
 logo_url: https://auxanoadvisors.com/assets/auxano-logo.svg
 slug:
