@@ -147,7 +147,7 @@
       "extension": ""
     },
     {
-      "bio": "Anam is our newest member of the Client Advisory Team at Auxano Advisors. She works closely with the firm's valued clients, facilitating financial transactions and follow-through on mission-critical tasks, ensuring that clients are delighted with their experience. \n\nPrior to joining Auxano, Anam previously worked as an Executive Administrative Assistant at Churchome. She worked alongside teams to assist in planning, organizing and executing the heart and vision of the organization. She is passionate about customer service and building relationships and looks forward to meeting clients and helping them on their financial journey at Auxano Advisors.\n\nAnam enjoys playing volleyball, reading historical fiction novels, makeup artistry and spending time with her family and friends.",
+      "bio": "Anam is a member of the Client Advisory Team at Auxano Advisors. She works closely with the firm's valued clients, facilitating financial transactions and follow-through on mission-critical tasks, ensuring that clients are delighted with their experience. \n\nPrior to joining Auxano, Anam previously worked as an Executive Administrative Assistant at Churchome. She worked alongside teams to assist in planning, organizing and executing the heart and vision of the organization. She is passionate about customer service and building relationships and looks forward to meeting clients and helping them on their financial journey at Auxano Advisors.\n\nAnam enjoys playing volleyball, reading historical fiction novels, makeup artistry and spending time with her family and friends.",
       "email": "anam@auxanoadvisors.com",
       "extension": "",
       "image": "/uploads/anam-masih-11192021-13854-squared.jpg",
@@ -232,6 +232,21 @@
       "title": "Anthony Scherrer",
       "image": "/uploads/anthony-cropped-for-website.jpg",
       "email": "anthony@auxanoadvisors.com",
+      "extension": ""
+    },
+    {
+      "qualifications": [
+        ""
+      ],
+      "bio": "Hanna is the newest member of the Client Advisory Team at Auxano Advisors. She plays a key role in supporting the firm's valued clients by coordinating financial transactions and overseeing essential tasks, ensuring a seamless and exceptional client experience.\n\nPrior to joining Auxano, Hanna previously worked as an Executive Administrative Assistant at Olson Investment Advisors, LLC. She provided attentive, detail-oriented support to clients and played a key role in managing day-to-day office operations. Her responsibilities included shared oversight of administrative functions, ensuring organizational efficiency, and responding proactively to evolving business needs. Hanna is passionate about serving clients with care, professionalism, and a commitment to building lasting relationships.\n\nHanna holds a Bachelor of Arts in Psychology with concentrations in Industrial and Organizational Psychology, Counseling, and Marriage and Family Counseling from Northwest University in Kirkland. Outside of work, she enjoys spending quality time with family and friends, reading, and exploring new places through travel.",
+      "positions": [
+        "Associate"
+      ],
+      "isStrategicPartner": false,
+      "partnerCompany": "",
+      "title": "Hanna Chernenko",
+      "image": "/uploads/hanna-chernenko-cropped-for-website.jpg",
+      "email": "hanna@auxanoadvisors.com",
       "extension": ""
     }
   ]
