@@ -134,9 +134,9 @@ export default function App({ Component, pageProps }) {
             onClick={(e) => e.stopPropagation()}
           >
             <div style={{ display: "flex", justifyContent: "space-between", gap: 12 }}>
-              <h2 style={{ margin: 0, fontSize: 22, lineHeight: 1.2 }}>
-                Olson Investments has moved
-              </h2>
+              // <h2 style={{ margin: 0, fontSize: 22, lineHeight: 1.2 }}>
+              //   Olson Investments has moved
+              // </h2>
               <button
                 type="button"
                 onClick={closeOlsonModal}
