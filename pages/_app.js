@@ -152,10 +152,25 @@ export default function App({ Component, pageProps }) {
                 ✕
               </button>
             </div>
+              
+              <p
+                style={{
+                  marginTop: 12,
+                  marginBottom: 0,
+                  fontSize: 16,
+                  lineHeight: 1.5,
+                }}
+              >
+                We’re so glad you’re here. If you were redirected from Olson Investment Advisors, welcome. Our team is excited to continue supporting you on your financial journey.
+                <br /><br />
+                At Auxano Advisors, we believe wealth management is about more than numbers – it’s about building a relationship you can trust and creating a plan that supports your values and life goals. We invite you to explore our resources, meet our team, and see how we can help you move forward with clarity and confidence.
+                <br /><br />
+                If you’d like to start a conversation, we’d love to hear from you.
+                <br /><br />
+                <strong>(800) 642-1341</strong><br />
+                <a href="mailto:info@auxanoadvisors.com">info@auxanoadvisors.com</a>
+              </p>
 
-            <p style={{ marginTop: 12, marginBottom: 0, fontSize: 16, lineHeight: 1.5 }}>
-              You were redirected from olson-investments.com. You are now on Auxano Advisors.
-            </p>
 
             <div style={{ marginTop: 16, display: "flex", justifyContent: "flex-end" }}>
               <button
